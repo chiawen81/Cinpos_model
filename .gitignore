@@ -1,0 +1,69 @@
+# ===============================
+# 🧩 Python / uv project ignore
+# ===============================
+
+# 虛擬環境
+.venv/
+env/
+venv/
+
+# Python 編譯與快取檔案
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# 分析暫存或中間檔案
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Jupyter Notebook checkpoint
+.ipynb_checkpoints/
+
+# ===============================
+# 🧰 Project structure
+# ===============================
+
+# 原始資料與中間處理資料
+data/raw/
+data/processed/
+
+# 日誌
+logs/
+
+# 臨時輸出（若有自動生成的報表或圖檔）
+outputs/
+reports/
+results/
+
+# ===============================
+# 🧠 IDE / 系統相關
+# ===============================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm / JetBrains
+.idea/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===============================
+# 📦 uv / build system
+# ===============================
+
+# uv lock 檔（若只在本地使用，可選）
+# 如果你打算一起版本控制，請註解掉這行
+uv.lock
+
+# 打包產物
+build/
+dist/
+*.egg-info/

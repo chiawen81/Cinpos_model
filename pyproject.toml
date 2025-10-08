@@ -1,0 +1,46 @@
+[project]
+name = "cinpos-model"
+version = "0.1.0"
+description = "A Python-based movie recommendation and trend analysis system."
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [
+    { name = "chiawen81", email = "fangchiawen@gmail.com" }
+]
+license = { text = "MIT" }
+
+# 主要依賴套件
+dependencies = [
+    "requests",             # 網路請求
+    "beautifulsoup4",       # HTML 解析
+    "pandas",               # 資料處理
+    "lxml",                 # 解析器加速
+    "pyyaml",               # 讀取設定檔 (config/settings.yaml)
+]
+
+# uv 設定區塊
+[tool.uv]
+# 指定主要原始碼目錄（讓 uv 及 IDE 知道 import 來源）
+src = "src"
+
+# 可選：自動啟用 .venv
+venv = ".venv"
+
+# 建置設定
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# 可選：開發階段工具設定（建議保留）
+[tool.black]
+line-length = 100
+target-version = ['py313']
+
+[tool.isort]
+profile = "black"
+src_paths = ["src"]
+
+[tool.ruff]
+target-version = "py313"
+select = ["E", "F", "I"]
+ignore = ["E501"]

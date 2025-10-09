@@ -27,9 +27,9 @@ __pycache__/
 # 🧰 Project structure
 # ===============================
 
-# 原始資料與中間處理資料
-data/raw/
-data/processed/
+# # 原始資料與中間處理資料
+# data/raw/
+# data/processed/
 
 # 日誌
 logs/

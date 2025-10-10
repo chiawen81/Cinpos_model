@@ -11,20 +11,13 @@ license = { text = "MIT" }
 
 # 主要依賴套件
 dependencies = [
-    "requests",             # 網路請求
-    "beautifulsoup4",       # HTML 解析
-    "pandas",               # 資料處理
-    "lxml",                 # 解析器加速
-    "pyyaml",               # 讀取設定檔 (config/settings.yaml)
+    "requests", # 網路請求
+    "beautifulsoup4", # HTML 解析
+    "pandas", # 資料處理
+    "lxml", # 解析器加速
+    "pyyaml", # 讀取設定檔 (config/settings.yaml)
+    "datetime>=5.5",
 ]
-
-# uv 設定區塊
-[tool.uv]
-# 指定主要原始碼目錄（讓 uv 及 IDE 知道 import 來源）
-src = "src"
-
-# 可選：自動啟用 .venv
-venv = ".venv"
 
 # 建置設定
 [build-system]

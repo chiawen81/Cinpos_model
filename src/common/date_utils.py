@@ -4,6 +4,7 @@
 """
 
 from datetime import datetime, timedelta
+import re
 
 
 # -------------------------------
@@ -61,3 +62,40 @@ def format_week_date_range(date_range):
     date = f"{date_range['startDate'][-5:-3]}{date_range['startDate'][-2:]}-{date_range['endDate'][-5:-3]}{date_range['endDate'][-2:]}"
     print("date", date)
     return date
+
+
+# -------------------------------
+# 統一日期格式
+# -------------------------------
+def normalize_date(date_str: str) -> str | None:
+    """
+    將日期統一轉為 ISO 8601 格式（YYYY-MM-DD）。
+    支援來源格式：
+        - 2025/10/23
+        - 2025-10-23
+        - 2025/6/5 或 2025-6-5（自動補零）
+    """
+    if not date_str or not isinstance(date_str, str):
+        return None
+
+    # 移除多餘空白
+    date_str = date_str.strip()
+
+    # 將 / 轉為 -，確保一致
+    date_str = date_str.replace("/", "-")
+
+    # 若是簡短格式（例如 2025-6-5），自動補零
+    parts = re.split(r"[-]", date_str)
+    if len(parts) == 3:
+        y, m, d = parts
+        if len(m) == 1:
+            m = f"0{m}"
+        if len(d) == 1:
+            d = f"0{d}"
+        date_str = f"{y}-{m}-{d}"
+
+    # 驗證格式正確性
+    try:
+        return datetime.strptime(date_str, "%Y-%m-%d").strftime("%Y-%m-%d")
+    except ValueError:
+        return None

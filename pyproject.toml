@@ -17,6 +17,7 @@ dependencies = [
     "lxml", # 解析器加速
     "pyyaml", # 讀取設定檔 (config/settings.yaml)
     "datetime>=5.5",
+    "rapidfuzz>=3.14.1",
 ]
 
 # 建置設定

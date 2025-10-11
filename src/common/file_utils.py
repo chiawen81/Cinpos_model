@@ -11,10 +11,11 @@ import os
 import json
 import pandas as pd
 from datetime import datetime
+import re
 
 
 # --------------------------------------------------------
-# 資料夾相關
+# 檔案、資料夾相關
 # --------------------------------------------------------
 # 檢查資料夾是否存在
 def ensure_dir(path: str) -> None:
@@ -22,9 +23,16 @@ def ensure_dir(path: str) -> None:
     os.makedirs(path, exist_ok=True)
 
 
+# 移除檔名中不合法字元
+def clean_filename(name: str) -> str:
+    """移除檔名中不合法字元"""
+    return re.sub(r'[\\/*?:"<>|]', "_", name)
+
+
 # --------------------------------------------------------
 # 儲存與讀取 JSON
 # --------------------------------------------------------
+# 儲存 JSON 檔
 def save_json(data: dict, dir_path: str, filename: str) -> str:
     """儲存 JSON 檔，回傳實際儲存路徑。"""
     ensure_dir(dir_path)
@@ -38,6 +46,7 @@ def save_json(data: dict, dir_path: str, filename: str) -> str:
     return file_path
 
 
+# 讀取 JSON 檔
 def load_json(file_path: str) -> dict:
     """讀取 JSON 檔，若檔案不存在則回傳空字典。"""
     if not os.path.exists(file_path):

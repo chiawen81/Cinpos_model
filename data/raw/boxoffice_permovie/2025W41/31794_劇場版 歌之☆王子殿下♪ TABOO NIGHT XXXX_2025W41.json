@@ -1,0 +1,115 @@
+{
+  "data": {
+    "movieId": "31794",
+    "name": "劇場版『鏈鋸人 蕾潔篇』",
+    "originalName": "Chainsaw Man – The Movie: Reze Arc",
+    "region": "日本",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-09-19",
+    "publisher": "美商台灣索尼影業發行股份有限公司台灣分公司",
+    "amountInThisWeek": 97303567.0,
+    "totalAmount": 97303567.0,
+    "filmClasses": null,
+    "filmLength": 5940,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82466,
+        "typeName": "導演",
+        "name": "吉原達矢",
+        "originalName": "Tatsuya Yoshihara"
+      },
+      {
+        "id": 82467,
+        "typeName": "演員",
+        "name": "戶谷菊之介",
+        "originalName": "Kikunosuke Toya"
+      },
+      {
+        "id": 82468,
+        "typeName": "演員",
+        "name": "菲魯茲藍",
+        "originalName": "Ai Fairouz"
+      },
+      {
+        "id": 82469,
+        "typeName": "演員",
+        "name": "坂田將吾",
+        "originalName": "Shogo Sakata"
+      },
+      {
+        "id": 82470,
+        "typeName": "演員",
+        "name": "楠木燈",
+        "originalName": "Tomori Kusunoki"
+      },
+      {
+        "id": 29941,
+        "typeName": "演員",
+        "name": "上田麗奈",
+        "originalName": "Reina Ueda"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 136850.0,
+        "tickets": 391,
+        "totalAmount": 136850.0,
+        "totalTickets": 391,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 35293733.0,
+        "tickets": 113602,
+        "totalAmount": 35430583.0,
+        "totalTickets": 113993,
+        "rate": 256.90086225794664,
+        "theaterCount": 94
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 22463031.0,
+        "tickets": 71778,
+        "totalAmount": 57893614.0,
+        "totalTickets": 185771,
+        "rate": -0.3635405186524191,
+        "theaterCount": 93
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 136850.0,
+        "tickets": 391,
+        "totalAmount": 136850.0,
+        "totalTickets": 391,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 49455153.0,
+        "tickets": 160513,
+        "totalAmount": 49592003.0,
+        "totalTickets": 160904,
+        "rate": 360.3821921812203,
+        "theaterCount": 94
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 47711564.0,
+        "tickets": 154049,
+        "totalAmount": 97303567.0,
+        "totalTickets": 314953,
+        "rate": -0.035255962103686145,
+        "theaterCount": 94
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

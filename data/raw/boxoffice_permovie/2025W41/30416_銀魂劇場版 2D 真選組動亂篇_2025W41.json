@@ -1,0 +1,132 @@
+{
+  "data": {
+    "movieId": "30416",
+    "name": "銀魂劇場版 2D 金魂篇",
+    "originalName": "GINTAMA ON THEATER 2D Kintama-Arc",
+    "region": "日本",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-04-16",
+    "publisher": "薩摩亞商羚邦(亞洲)有限公司台灣分公司",
+    "amountInThisWeek": 1709140.0,
+    "totalAmount": 1709140.0,
+    "filmClasses": null,
+    "filmLength": 5760,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-04-18~2025-04-20",
+        "amount": 752255.0,
+        "tickets": 3051,
+        "totalAmount": 752255.0,
+        "totalTickets": 3051,
+        "rate": 0,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-04-25~2025-04-27",
+        "amount": 358571.0,
+        "tickets": 1277,
+        "totalAmount": 1110826.0,
+        "totalTickets": 4328,
+        "rate": -0.5233384955899263,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-05-02~2025-05-04",
+        "amount": 85064.0,
+        "tickets": 303,
+        "totalAmount": 1195890.0,
+        "totalTickets": 4631,
+        "rate": -0.762769437573033,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-05-09~2025-05-11",
+        "amount": 10524.0,
+        "tickets": 40,
+        "totalAmount": 1206414.0,
+        "totalTickets": 4671,
+        "rate": -0.8762813881312894,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-05-16~2025-05-18",
+        "amount": 280.0,
+        "tickets": 1,
+        "totalAmount": 1206694.0,
+        "totalTickets": 4672,
+        "rate": -0.9733941467122768,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-05-23~2025-05-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 1206694.0,
+        "totalTickets": 4672,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-04-14~2025-04-20",
+        "amount": 786755.0,
+        "tickets": 3201,
+        "totalAmount": 786755.0,
+        "totalTickets": 3201,
+        "rate": 0,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-04-21~2025-04-27",
+        "amount": 632035.0,
+        "tickets": 2293,
+        "totalAmount": 1418790.0,
+        "totalTickets": 5494,
+        "rate": -0.19665588397912948,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-04-28~2025-05-04",
+        "amount": 221856.0,
+        "tickets": 808,
+        "totalAmount": 1640646.0,
+        "totalTickets": 6302,
+        "rate": -0.6489814646340788,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-05-05~2025-05-11",
+        "amount": 61449.0,
+        "tickets": 221,
+        "totalAmount": 1702095.0,
+        "totalTickets": 6523,
+        "rate": -0.7230230419731718,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-05-12~2025-05-18",
+        "amount": 6825.0,
+        "tickets": 28,
+        "totalAmount": 1708920.0,
+        "totalTickets": 6551,
+        "rate": -0.8889322853097691,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-05-19~2025-05-25",
+        "amount": 220.0,
+        "tickets": 1,
+        "totalAmount": 1709140.0,
+        "totalTickets": 6552,
+        "rate": -0.9677655677655678,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

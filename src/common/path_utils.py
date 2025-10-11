@@ -44,16 +44,17 @@ BOXOFFICE_RAW = os.path.join(RAW_DIR, "boxoffice_weekly")
 BOXOFFICE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_weekly")
 
 # 單一電影票房資料
-PERMOVIE_RAW = os.path.join(RAW_DIR, "boxoffice_permovie")
-PERMOVIE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_permovie")
+BOXOFFICE_PERMOVIE_RAW = os.path.join(RAW_DIR, "boxoffice_permovie")
+BOXOFFICE_PERMOVIE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_permovie")
+MOVIEINFO_GOV_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_gov")
 
 # 開眼電影網 - 首輪電影名單
 FIRSTRUN_RAW = os.path.join(RAW_DIR, "firstRunFilm_list")
 FIRSTRUN_PROCESSED = os.path.join(PROCESSED_DIR, "firstRunFilm_list")
 
 # OMDb / IMDb 電影資訊
-MOVIEINFO_RAW = os.path.join(RAW_DIR, "movieInfo_omdb")
-MOVIEINFO_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_omdb")
+MOVIEINFO_OMDb_RAW = os.path.join(RAW_DIR, "movieInfo_omdb")
+MOVIEINFO_OMDb_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_omdb")
 
 
 # -----------------------------

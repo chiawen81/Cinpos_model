@@ -1,0 +1,67 @@
+{
+  "data": {
+    "movieId": "31863",
+    "name": "他年她日",
+    "originalName": "MEASURE IN LOVE",
+    "region": "香港",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-09-29",
+    "publisher": "香港商甲上娛樂有限公司台灣分公司",
+    "amountInThisWeek": 5288331.0,
+    "totalAmount": 5288331.0,
+    "filmClasses": null,
+    "filmLength": 6720,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 22473,
+        "typeName": "演員",
+        "name": "陳澤耀",
+        "originalName": "Jack Tan"
+      },
+      {
+        "id": 75321,
+        "typeName": "演員",
+        "name": "許光漢",
+        "originalName": "Greg Han Hsu"
+      },
+      {
+        "id": 32535,
+        "typeName": "演員",
+        "name": "袁澧林",
+        "originalName": "Angela Yuen"
+      },
+      {
+        "id": 82502,
+        "typeName": "導演",
+        "name": "龔兆平",
+        "originalName": "Siu-Ping Kung"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 3591527.0,
+        "tickets": 13573,
+        "totalAmount": 3591527.0,
+        "totalTickets": 13573,
+        "rate": 0,
+        "theaterCount": 98
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 5288331.0,
+        "tickets": 19310,
+        "totalAmount": 5288331.0,
+        "totalTickets": 19310,
+        "rate": 0,
+        "theaterCount": 98
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

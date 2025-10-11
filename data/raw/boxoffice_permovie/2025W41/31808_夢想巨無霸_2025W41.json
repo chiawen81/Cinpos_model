@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "31808",
+    "name": "夢想巨無霸",
+    "originalName": "Jumbo",
+    "region": "印尼",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-03",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 724163.0,
+    "totalAmount": 724163.0,
+    "filmClasses": null,
+    "filmLength": 6120,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82510,
+        "typeName": "導演",
+        "name": "瑞安阿德里安迪",
+        "originalName": "Ryan Adriandhy"
+      },
+      {
+        "id": 82510,
+        "typeName": "編劇",
+        "name": "瑞安阿德里安迪",
+        "originalName": "Ryan Adriandhy"
+      },
+      {
+        "id": 82519,
+        "typeName": "演員",
+        "name": "葛拉西艾拉艾比蓋兒",
+        "originalName": "Graciella Abigail"
+      },
+      {
+        "id": 82520,
+        "typeName": "演員",
+        "name": "尤素夫奧茲坎",
+        "originalName": "Yusuf Ozkan"
+      },
+      {
+        "id": 82521,
+        "typeName": "演員",
+        "name": "普林斯波艾提雷",
+        "originalName": "Prince Poetiray"
+      },
+      {
+        "id": 82522,
+        "typeName": "演員",
+        "name": "奎因薩爾曼",
+        "originalName": "Quinn Salman"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 724163.0,
+        "tickets": 2811,
+        "totalAmount": 724163.0,
+        "totalTickets": 2811,
+        "rate": 0,
+        "theaterCount": 42
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 724163.0,
+        "tickets": 2811,
+        "totalAmount": 724163.0,
+        "totalTickets": 2811,
+        "rate": 0,
+        "theaterCount": 42
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

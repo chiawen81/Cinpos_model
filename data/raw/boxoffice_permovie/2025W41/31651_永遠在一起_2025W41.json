@@ -1,0 +1,85 @@
+{
+  "data": {
+    "movieId": "31651",
+    "name": "永遠在一起",
+    "originalName": "TOGETHER",
+    "region": "美國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-09-26",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 1987983.0,
+    "totalAmount": 1987983.0,
+    "filmClasses": null,
+    "filmLength": 6060,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82478,
+        "typeName": "編劇",
+        "name": "麥可山克斯",
+        "originalName": "Michael Shanks"
+      },
+      {
+        "id": 82478,
+        "typeName": "導演",
+        "name": "麥可山克斯",
+        "originalName": "Michael Shanks"
+      },
+      {
+        "id": 10628,
+        "typeName": "演員",
+        "name": "戴夫法蘭科",
+        "originalName": "Dave Franco"
+      },
+      {
+        "id": 10371,
+        "typeName": "演員",
+        "name": "愛莉森布里",
+        "originalName": "Alison Brie"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 992501.0,
+        "tickets": 3822,
+        "totalAmount": 992501.0,
+        "totalTickets": 3822,
+        "rate": 0,
+        "theaterCount": 60
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 320033.0,
+        "tickets": 1207,
+        "totalAmount": 1312534.0,
+        "totalTickets": 5029,
+        "rate": -0.6775489394972902,
+        "theaterCount": 50
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 992501.0,
+        "tickets": 3822,
+        "totalAmount": 992501.0,
+        "totalTickets": 3822,
+        "rate": 0,
+        "theaterCount": 60
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 995482.0,
+        "tickets": 3805,
+        "totalAmount": 1987983.0,
+        "totalTickets": 7627,
+        "rate": 0.003003523422142648,
+        "theaterCount": 61
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -1,0 +1,42 @@
+{
+  "data": {
+    "movieId": "31748",
+    "name": "卡夫卡最後的愛",
+    "originalName": "The Glory of Life",
+    "region": "德國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-09-27",
+    "publisher": "海鵬影業有限公司",
+    "amountInThisWeek": 4960.0,
+    "totalAmount": 4960.0,
+    "filmClasses": null,
+    "filmLength": 5880,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 4960.0,
+        "tickets": 31,
+        "totalAmount": 4960.0,
+        "totalTickets": 31,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 4960.0,
+        "tickets": 31,
+        "totalAmount": 4960.0,
+        "totalTickets": 31,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

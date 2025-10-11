@@ -1,0 +1,42 @@
+{
+  "data": {
+    "movieId": "22894",
+    "name": "一一",
+    "originalName": "YIYI-A ONE AND A TWO",
+    "region": "中華民國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-01",
+    "publisher": "傳影互動股份有限公司",
+    "amountInThisWeek": 575167.0,
+    "totalAmount": 575167.0,
+    "filmClasses": null,
+    "filmLength": 10380,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 376844.0,
+        "tickets": 1372,
+        "totalAmount": 376844.0,
+        "totalTickets": 1372,
+        "rate": 0,
+        "theaterCount": 18
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 575167.0,
+        "tickets": 2124,
+        "totalAmount": 575167.0,
+        "totalTickets": 2124,
+        "rate": 0,
+        "theaterCount": 23
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

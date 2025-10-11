@@ -1,0 +1,186 @@
+{
+  "data": {
+    "movieId": "15505",
+    "name": "我不流行二十年",
+    "originalName": "Ga-Tau Chang",
+    "region": "中華民國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2020-03-20",
+    "publisher": "韶光電影有限公司",
+    "amountInThisWeek": 381686.0,
+    "totalAmount": 381686.0,
+    "filmClasses": null,
+    "filmLength": 6000,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2020-03-20~2020-03-22",
+        "amount": 148200.0,
+        "tickets": 677,
+        "totalAmount": 148200.0,
+        "totalTickets": 677,
+        "rate": 0,
+        "theaterCount": 5
+      },
+      {
+        "date": "2020-03-27~2020-03-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 148200.0,
+        "totalTickets": 677,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-04-03~2020-04-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 148200.0,
+        "totalTickets": 677,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-04-10~2020-04-12",
+        "amount": 41648.0,
+        "tickets": 156,
+        "totalAmount": 189848.0,
+        "totalTickets": 833,
+        "rate": 0,
+        "theaterCount": 5
+      },
+      {
+        "date": "2020-04-17~2020-04-19",
+        "amount": 28271.0,
+        "tickets": 111,
+        "totalAmount": 218119.0,
+        "totalTickets": 944,
+        "rate": -0.3211918939684979,
+        "theaterCount": 8
+      },
+      {
+        "date": "2020-04-24~2020-04-26",
+        "amount": 15088.0,
+        "tickets": 57,
+        "totalAmount": 233207.0,
+        "totalTickets": 1001,
+        "rate": -0.4663082310494853,
+        "theaterCount": 5
+      },
+      {
+        "date": "2020-05-01~2020-05-03",
+        "amount": 6921.0,
+        "tickets": 28,
+        "totalAmount": 240128.0,
+        "totalTickets": 1029,
+        "rate": -0.5412910922587487,
+        "theaterCount": 3
+      },
+      {
+        "date": "2020-05-08~2020-05-10",
+        "amount": 7000.0,
+        "tickets": 25,
+        "totalAmount": 247128.0,
+        "totalTickets": 1054,
+        "rate": 0.011414535471752637,
+        "theaterCount": 3
+      },
+      {
+        "date": "2020-05-15~2020-05-17",
+        "amount": 13008.0,
+        "tickets": 43,
+        "totalAmount": 260136.0,
+        "totalTickets": 1097,
+        "rate": 0.8582857142857143,
+        "theaterCount": 2
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2020-03-16~2020-03-22",
+        "amount": 148200.0,
+        "tickets": 677,
+        "totalAmount": 148200.0,
+        "totalTickets": 677,
+        "rate": 0,
+        "theaterCount": 5
+      },
+      {
+        "date": "2020-03-23~2020-03-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 148200.0,
+        "totalTickets": 677,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-03-30~2020-04-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 148200.0,
+        "totalTickets": 677,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-04-06~2020-04-12",
+        "amount": 41648.0,
+        "tickets": 156,
+        "totalAmount": 189848.0,
+        "totalTickets": 833,
+        "rate": 0,
+        "theaterCount": 5
+      },
+      {
+        "date": "2020-04-13~2020-04-19",
+        "amount": 76791.0,
+        "tickets": 308,
+        "totalAmount": 266639.0,
+        "totalTickets": 1141,
+        "rate": 0.8438100268920476,
+        "theaterCount": 8
+      },
+      {
+        "date": "2020-04-20~2020-04-26",
+        "amount": 53763.0,
+        "tickets": 210,
+        "totalAmount": 320402.0,
+        "totalTickets": 1351,
+        "rate": -0.299878892057663,
+        "theaterCount": 8
+      },
+      {
+        "date": "2020-04-27~2020-05-03",
+        "amount": 27311.0,
+        "tickets": 109,
+        "totalAmount": 347713.0,
+        "totalTickets": 1460,
+        "rate": -0.49201123449212286,
+        "theaterCount": 4
+      },
+      {
+        "date": "2020-05-04~2020-05-10",
+        "amount": 18505.0,
+        "tickets": 67,
+        "totalAmount": 366218.0,
+        "totalTickets": 1527,
+        "rate": -0.32243418402841345,
+        "theaterCount": 3
+      },
+      {
+        "date": "2020-05-11~2020-05-17",
+        "amount": 15468.0,
+        "tickets": 52,
+        "totalAmount": 381686.0,
+        "totalTickets": 1579,
+        "rate": -0.16411780599837883,
+        "theaterCount": 3
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

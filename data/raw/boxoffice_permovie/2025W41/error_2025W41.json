@@ -1,0 +1,90 @@
+[
+  {
+    "atmovies_id": "ften36604188",
+    "title_zh": "創：戰神",
+    "release_date": "2025/10/9",
+    "screen_count": 93,
+    "source_url": "https://www.atmovies.com.tw/movie/ften36604188/",
+    "errorType": "notFoundData"
+  },
+  {
+    "atmovies_id": "fshk44968738",
+    "title_zh": "風林火山",
+    "release_date": "2025/10/9",
+    "screen_count": 82,
+    "source_url": "https://www.atmovies.com.tw/movie/fshk44968738/",
+    "errorType": "notFoundID"
+  },
+  {
+    "atmovies_id": "fnko41527793",
+    "title_zh": "徵人啟弒",
+    "release_date": "2025/10/9",
+    "screen_count": 73,
+    "source_url": "https://www.atmovies.com.tw/movie/fnko41527793/",
+    "errorType": "notFoundID"
+  },
+  {
+    "atmovies_id": "fcen34581826",
+    "title_zh": "狼來了",
+    "release_date": "2025/10/9",
+    "screen_count": 62,
+    "source_url": "https://www.atmovies.com.tw/movie/fcen34581826/",
+    "errorType": "notFoundID"
+  },
+  {
+    "atmovies_id": "fpen14197038",
+    "title_zh": "鬼吹簫",
+    "release_date": "2025/10/9",
+    "screen_count": 52,
+    "source_url": "https://www.atmovies.com.tw/movie/fpen14197038/",
+    "errorType": "notFoundID"
+  },
+  {
+    "atmovies_id": "feen15551346",
+    "title_zh": "世界就是這樣結束的",
+    "release_date": "2025/10/9",
+    "screen_count": 12,
+    "source_url": "https://www.atmovies.com.tw/movie/feen15551346/",
+    "errorType": "notFoundID"
+  },
+  {
+    "atmovies_id": "fbtw96355546",
+    "title_zh": "突破：三千米的泳氣",
+    "release_date": "2025/10/3",
+    "screen_count": 46,
+    "source_url": "https://www.atmovies.com.tw/movie/fbtw96355546/",
+    "errorType": "notFoundID"
+  },
+  {
+    "atmovies_id": "fgcn53656183",
+    "title_zh": "角頭-鬥陣欸",
+    "release_date": "2025/8/21",
+    "screen_count": 12,
+    "source_url": "https://www.atmovies.com.tw/movie/fgcn53656183/",
+    "errorType": "notFoundID"
+  },
+  {
+    "atmovies_id": "fdjp35891502",
+    "title_zh": "名偵探柯南：獨眼的殘像",
+    "release_date": "2025/6/25",
+    "screen_count": 3,
+    "source_url": "https://www.atmovies.com.tw/movie/fdjp35891502/",
+    "errorType": "notFoundID"
+  },
+  {
+    "atmovies_id": "ffjp14141970",
+    "title_zh": "FISHMANS",
+    "release_date": "2023/4/21",
+    "screen_count": 3,
+    "source_url": "https://www.atmovies.com.tw/movie/ffjp14141970/",
+    "errorType": "notFoundID"
+  },
+  {
+    "atmovies_id": "fako92197800",
+    "title_zh": "ATEEZ演唱會電影",
+    "release_date": "2025/5/9",
+    "screen_count": 1,
+    "source_url": "https://www.atmovies.com.tw/movie/fako92197800/",
+    "errorType": "notFoundID"
+  }
+]

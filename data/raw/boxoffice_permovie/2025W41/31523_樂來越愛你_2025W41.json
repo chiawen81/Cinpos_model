@@ -1,0 +1,96 @@
+{
+  "data": {
+    "movieId": "31523",
+    "name": "樂來越愛你",
+    "originalName": "La La Land",
+    "region": "英國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-09-12",
+    "publisher": "英屬蓋曼群島商威望國際娛樂股份有限公司台灣分公司",
+    "amountInThisWeek": 4698824.0,
+    "totalAmount": 4698824.0,
+    "filmClasses": null,
+    "filmLength": 7620,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 2172733.0,
+        "tickets": 5851,
+        "totalAmount": 2172733.0,
+        "totalTickets": 5851,
+        "rate": 0,
+        "theaterCount": 28
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 809021.0,
+        "tickets": 2170,
+        "totalAmount": 2981754.0,
+        "totalTickets": 8021,
+        "rate": -0.6276482200067841,
+        "theaterCount": 24
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 227937.0,
+        "tickets": 695,
+        "totalAmount": 3209691.0,
+        "totalTickets": 8716,
+        "rate": -0.7182557683916734,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 47893.0,
+        "tickets": 162,
+        "totalAmount": 3257584.0,
+        "totalTickets": 8878,
+        "rate": -0.7898849243431298,
+        "theaterCount": 4
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 2172733.0,
+        "tickets": 5851,
+        "totalAmount": 2172733.0,
+        "totalTickets": 5851,
+        "rate": 0,
+        "theaterCount": 28
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 1872490.0,
+        "tickets": 5366,
+        "totalAmount": 4045223.0,
+        "totalTickets": 11217,
+        "rate": -0.13818679055364833,
+        "theaterCount": 28
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 488142.0,
+        "tickets": 1484,
+        "totalAmount": 4533365.0,
+        "totalTickets": 12701,
+        "rate": -0.7393086211408338,
+        "theaterCount": 24
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 165459.0,
+        "tickets": 559,
+        "totalAmount": 4698824.0,
+        "totalTickets": 13260,
+        "rate": -0.6610433029733151,
+        "theaterCount": 10
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

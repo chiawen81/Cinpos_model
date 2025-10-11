@@ -1,0 +1,139 @@
+{
+  "data": {
+    "movieId": "31769",
+    "name": "大競走",
+    "originalName": "THE LONG WALK",
+    "region": "美國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-09-12",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 4924117.0,
+    "totalAmount": 4924117.0,
+    "filmClasses": null,
+    "filmLength": 6480,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 23890,
+        "typeName": "導演",
+        "name": "法蘭西斯勞倫斯",
+        "originalName": "Francis Lawrence"
+      },
+      {
+        "id": 82416,
+        "typeName": "演員",
+        "name": "約書亞奧吉克",
+        "originalName": "Joshua Odjick"
+      },
+      {
+        "id": 81940,
+        "typeName": "演員",
+        "name": "庫柏霍夫曼",
+        "originalName": "Cooper Hoffman"
+      },
+      {
+        "id": 12627,
+        "typeName": "演員",
+        "name": "馬克漢米爾",
+        "originalName": "Mark Hamill"
+      },
+      {
+        "id": 23604,
+        "typeName": "演員",
+        "name": "查理普拉瑪",
+        "originalName": "Charlie Plummer"
+      },
+      {
+        "id": 82140,
+        "typeName": "演員",
+        "name": "王班",
+        "originalName": "Ben Wang"
+      },
+      {
+        "id": 79989,
+        "typeName": "演員",
+        "name": "大衛榮松",
+        "originalName": "David Jonsson"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 2017935.0,
+        "tickets": 7805,
+        "totalAmount": 2017935.0,
+        "totalTickets": 7805,
+        "rate": 0,
+        "theaterCount": 81
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 827475.0,
+        "tickets": 3372,
+        "totalAmount": 2845410.0,
+        "totalTickets": 11177,
+        "rate": -0.5899397156003539,
+        "theaterCount": 78
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 315806.0,
+        "tickets": 1412,
+        "totalAmount": 3161216.0,
+        "totalTickets": 12589,
+        "rate": -0.6183497990875857,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 252130.0,
+        "tickets": 1142,
+        "totalAmount": 3413346.0,
+        "totalTickets": 13731,
+        "rate": -0.20163011469066452,
+        "theaterCount": 2
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 2017935.0,
+        "tickets": 7805,
+        "totalAmount": 2017935.0,
+        "totalTickets": 7805,
+        "rate": 0,
+        "theaterCount": 81
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 1901362.0,
+        "tickets": 7628,
+        "totalAmount": 3919297.0,
+        "totalTickets": 15433,
+        "rate": -0.05776846132308523,
+        "theaterCount": 81
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 596753.0,
+        "tickets": 2571,
+        "totalAmount": 4516050.0,
+        "totalTickets": 18004,
+        "rate": -0.6861444585512911,
+        "theaterCount": 78
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 408067.0,
+        "tickets": 1838,
+        "totalAmount": 4924117.0,
+        "totalTickets": 19842,
+        "rate": -0.31618776947916477,
+        "theaterCount": 12
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

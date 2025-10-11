@@ -1,0 +1,61 @@
+{
+  "data": {
+    "movieId": "31900",
+    "name": "一百公尺。",
+    "originalName": "100 METERS",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-03",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 2062269.0,
+    "totalAmount": 2062269.0,
+    "filmClasses": null,
+    "filmLength": 6360,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 15935,
+        "typeName": "演員",
+        "name": "松坂桃李",
+        "originalName": "Tori Matsuzaka"
+      },
+      {
+        "id": 18633,
+        "typeName": "演員",
+        "name": "染谷將太",
+        "originalName": "Shota Sometani"
+      },
+      {
+        "id": 79151,
+        "typeName": "導演",
+        "name": "岩井澤健治",
+        "originalName": "Kenji Iwaisawa"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 2062269.0,
+        "tickets": 7183,
+        "totalAmount": 2062269.0,
+        "totalTickets": 7183,
+        "rate": 0,
+        "theaterCount": 69
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 2062269.0,
+        "tickets": 7183,
+        "totalAmount": 2062269.0,
+        "totalTickets": 7183,
+        "rate": 0,
+        "theaterCount": 69
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

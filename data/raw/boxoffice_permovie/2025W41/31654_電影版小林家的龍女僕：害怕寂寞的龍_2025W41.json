@@ -1,0 +1,157 @@
+{
+  "data": {
+    "movieId": "31654",
+    "name": "電影版小林家的龍女僕：害怕寂寞的龍",
+    "originalName": "Miss Kobayashi's Dragon Maid: A lonely dragon wants to be loved",
+    "region": "日本",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-09-09",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 7045503.0,
+    "totalAmount": 7045503.0,
+    "filmClasses": null,
+    "filmLength": 6240,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 32908,
+        "typeName": "導演",
+        "name": "石原立也",
+        "originalName": "Tatsuya Ishihara"
+      },
+      {
+        "id": 82417,
+        "typeName": "演員",
+        "name": "高橋未奈美",
+        "originalName": ""
+      },
+      {
+        "id": 82419,
+        "typeName": "演員",
+        "name": "長繩麻理亞",
+        "originalName": "Maria Naganawa"
+      },
+      {
+        "id": 82420,
+        "typeName": "演員",
+        "name": "高田憂希",
+        "originalName": ""
+      },
+      {
+        "id": 82422,
+        "typeName": "編劇",
+        "name": "山田由香",
+        "originalName": ""
+      },
+      {
+        "id": 82422,
+        "typeName": "編劇",
+        "name": "山田由香",
+        "originalName": ""
+      },
+      {
+        "id": 82417,
+        "typeName": "演員",
+        "name": "高橋未奈美",
+        "originalName": ""
+      },
+      {
+        "id": 82427,
+        "typeName": "演員",
+        "name": "桑原由氣",
+        "originalName": "Yuki Kuwahara"
+      },
+      {
+        "id": 37818,
+        "typeName": "演員",
+        "name": "田村睦心",
+        "originalName": "Mutsumi Tamura"
+      },
+      {
+        "id": 82420,
+        "typeName": "演員",
+        "name": "高田憂希",
+        "originalName": ""
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 2911423.0,
+        "tickets": 10398,
+        "totalAmount": 2911423.0,
+        "totalTickets": 10398,
+        "rate": 0,
+        "theaterCount": 67
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 1150332.0,
+        "tickets": 4086,
+        "totalAmount": 4061755.0,
+        "totalTickets": 14484,
+        "rate": -0.6048901173068977,
+        "theaterCount": 65
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 836163.0,
+        "tickets": 3030,
+        "totalAmount": 4897918.0,
+        "totalTickets": 17514,
+        "rate": -0.2731115886544059,
+        "theaterCount": 39
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 246187.0,
+        "tickets": 838,
+        "totalAmount": 5144105.0,
+        "totalTickets": 18352,
+        "rate": -0.7055753483471524,
+        "theaterCount": 21
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 2985943.0,
+        "tickets": 10722,
+        "totalAmount": 2985943.0,
+        "totalTickets": 10722,
+        "rate": 0,
+        "theaterCount": 67
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 2179430.0,
+        "tickets": 7918,
+        "totalAmount": 5165373.0,
+        "totalTickets": 18640,
+        "rate": -0.27010328060515554,
+        "theaterCount": 67
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 1139675.0,
+        "tickets": 4158,
+        "totalAmount": 6305048.0,
+        "totalTickets": 22798,
+        "rate": -0.47707657506779294,
+        "theaterCount": 64
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 740455.0,
+        "tickets": 2647,
+        "totalAmount": 7045503.0,
+        "totalTickets": 25445,
+        "rate": -0.3502928466448768,
+        "theaterCount": 40
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -33,8 +33,8 @@ PROJECT_ROOT = find_project_root()
 DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 RAW_DIR = os.path.join(DATA_DIR, "raw")
 PROCESSED_DIR = os.path.join(DATA_DIR, "processed")
+MANUAL_FIX_DIR = os.path.join(DATA_DIR, "manual_fix")
 LOG_DIR = os.path.join(PROJECT_ROOT, "logs")
-
 
 # -----------------------------
 # 3. 各資料分類子資料夾
@@ -52,7 +52,7 @@ MOVIEINFO_GOV_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_gov")
 FIRSTRUN_RAW = os.path.join(RAW_DIR, "firstRunFilm_list")
 FIRSTRUN_PROCESSED = os.path.join(PROCESSED_DIR, "firstRunFilm_list")
 
-# OMDb / IMDb 電影資訊
+# OMDb電影資訊
 MOVIEINFO_OMDb_RAW = os.path.join(RAW_DIR, "movieInfo_omdb")
 MOVIEINFO_OMDb_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_omdb")
 

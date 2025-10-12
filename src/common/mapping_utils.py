@@ -7,35 +7,34 @@ mapping_utils.py
     統一管理跨資料來源的電影名稱與 ID 對照關係
     (政府票房資料 / 開眼電影網 / IMDb / OMDb)
 檔案位置：
-    data/mapping/manual_movie_mapping.json
+    data/MANUAL_FIX_DIR/fix_gov_mapping.json
 """
 
 import os
 import json
 from typing import Optional
-from common.path_utils import PROJECT_ROOT
+from common.path_utils import MANUAL_FIX_DIR
 
 
 # ==============================
 # 基本設定
 # ==============================
-MAPPING_DIR = os.path.join(PROJECT_ROOT, "data", "mapping")
-MAPPING_FILE = os.path.join(MAPPING_DIR, "manual_movie_mapping.json")
+FIX_MAPPING_FILE = os.path.join(MANUAL_FIX_DIR, "fix_gov_mapping.json")
 
 
 # ==============================
 # 基本操作函式
 # ==============================
 def ensure_mapping_dir():
-    os.makedirs(MAPPING_DIR, exist_ok=True)
+    os.makedirs(MANUAL_FIX_DIR, exist_ok=True)
 
 
 def load_manual_mapping() -> list[dict]:
     """讀取人工修正對照表（回傳陣列形式）"""
     ensure_mapping_dir()
-    if not os.path.exists(MAPPING_FILE):
+    if not os.path.exists(FIX_MAPPING_FILE):
         return {}
-    with open(MAPPING_FILE, "r", encoding="utf-8") as f:
+    with open(FIX_MAPPING_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -48,9 +47,9 @@ def load_manual_mapping_as_dict() -> dict:
 def save_manual_mapping(data: list[dict]):
     """儲存人工修正對照表（陣列形式）"""
     ensure_mapping_dir()
-    with open(MAPPING_FILE, "w", encoding="utf-8") as f:
+    with open(FIX_MAPPING_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"💾 已更新人工修正對照表：{MAPPING_FILE}")
+    print(f"💾 已更新人工修正對照表：{FIX_MAPPING_FILE}")
 
 
 def find_manual_mapping(title_zh: str, mappings: list[dict]) -> dict | None:

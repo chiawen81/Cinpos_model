@@ -28,27 +28,28 @@ WEEK_LABEL = get_current_week_label()
 
 # ========= 輔助工具 =========
 # 整理電影基本資訊
-def parse_movie_info(movie_data: dict) -> dict:
+def parse_movie_info(movie_data: dict,atmovies_id: str) -> dict:
     film_members = movie_data.get("filmMembers", [])
     directors = [m["name"] for m in film_members if m["typeName"] == "導演"]
     actors = [m["name"] for m in film_members if m["typeName"] == "演員"]
 
     return {
-        "movie_id": movie_data.get("movieId"),
-        "title_zh": movie_data.get("name"),
-        "title_en": movie_data.get("originalName"),
-        "region": movie_data.get("region"),
-        "rating": movie_data.get("rating"),
-        "release_date": movie_data.get("releaseDate"),
-        "publisher": movie_data.get("publisher"),
-        "film_length": movie_data.get("filmLength"),
+        "atmovies_id": atmovies_id,
+        "gov_id": movie_data.get("movieId", ""),
+        "title_zh": movie_data.get("name", ""),
+        "title_en": movie_data.get("originalName", ""),
+        "region": movie_data.get("region", ""),
+        "rating": movie_data.get("rating", ""),
+        "release_date": movie_data.get("releaseDate", ""),
+        "publisher": movie_data.get("publisher", ""),
+        "film_length": movie_data.get("filmLength", ""),
         "director": "; ".join(directors),
         "actor_list": "; ".join(actors),
     }
 
 
 # 將 weeks 區塊轉成 DataFrame
-def flatten_weekly_boxoffice(movie_data: dict) -> pd.DataFrame:
+def flatten_weekly_boxoffice(movie_data: dict, gov_id: str, atmovies_id: str) -> pd.DataFrame:
     weeks = movie_data.get("weeks", [])
     df = pd.DataFrame(weeks)
     if df.empty:
@@ -68,9 +69,16 @@ def flatten_weekly_boxoffice(movie_data: dict) -> pd.DataFrame:
         inplace=True,
     )
 
+    df["gov_id"] = gov_id
+    df["atmovies_id"] = atmovies_id
+    df["week_label"] = get_current_week_label()
     df["fetch_date"] = datetime.now().strftime("%Y-%m-%d")
+
     return df[
         [
+            "gov_id",
+            "atmovies_id",
+            "week_label",
             "week_range",
             "amount",
             "tickets",
@@ -129,28 +137,31 @@ def clean_boxoffice_permovie():
 
     for file in files:
         file_path = os.path.join(input_dir, file)
+        atmovies_id = file_path.split("_")[-1].replace(".json", "")
+        
         with open(file_path, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
 
-        movie_data = raw_data.get("data", {})
-        if not movie_data:
+        crawler_data = raw_data.get("data", {})
+        if not crawler_data:
             print(f"⚠️ {file} 無有效內容")
             continue
 
-        movie_info = parse_movie_info(movie_data)
-        safe_title = clean_filename(movie_info["title_zh"] or movie_info["title_en"] or "unknown")
+        processed_data_info = parse_movie_info(crawler_data, atmovies_id)
+        safe_title = clean_filename(processed_data_info["title_zh"] or processed_data_info["title_en"] or "unknown")
 
-        # Step 1️⃣：如果只有一週資料 → 存電影資訊
-        if len(movie_data.get("weeks", [])) == 1:
-            df_info = pd.DataFrame([movie_info])
-            info_filename = f"{movie_info['movie_id']}_{safe_title}.csv"
+        # Step 1️⃣：若僅有一週或尚未有票房紀錄 → 存電影資訊
+        weeks = crawler_data.get("weeks", [])
+        if len(weeks) <= 1:
+            df_info = pd.DataFrame([processed_data_info])
+            info_filename = f"{processed_data_info['gov_id']}_{safe_title}_{processed_data_info['atmovies_id']}.csv"
             save_csv(df_info, MOVIEINFO_GOV_PROCESSED, info_filename)
             print(f"🆕 儲存新電影資訊：{info_filename}")
 
         # Step 2️⃣：整理 weeks 票房資料
-        df_weeks = flatten_weekly_boxoffice(movie_data)
+        df_weeks = flatten_weekly_boxoffice(crawler_data,processed_data_info['gov_id'], atmovies_id)
         if not df_weeks.empty:
-            csv_filename = f"{movie_data["movieId"]}_{safe_title}_{WEEK_LABEL}.csv"
+            csv_filename = f"{processed_data_info['gov_id']}_{safe_title}_{WEEK_LABEL}_{processed_data_info['atmovies_id']}.csv"
             save_csv(df_weeks, output_dir, csv_filename)
             print(f"✅ 已清洗：{csv_filename}")
         else:

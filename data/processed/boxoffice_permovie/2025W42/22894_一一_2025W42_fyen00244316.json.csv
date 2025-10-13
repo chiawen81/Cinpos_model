@@ -1,0 +1,3 @@
+﻿gov_id,atmovies_id,week_label,week_range,amount,tickets,total_amount,total_tickets,rate,theater_count,fetch_date
+22894,fyen00244316.json,2025W42,2025-09-29~2025-10-05,575167.0,2124,575167.0,2124,0.0,23,2025-10-13
+22894,fyen00244316.json,2025W42,2025-10-06~2025-10-12,421047.0,1578,996214.0,3702,-0.26795695858767976,18,2025-10-13

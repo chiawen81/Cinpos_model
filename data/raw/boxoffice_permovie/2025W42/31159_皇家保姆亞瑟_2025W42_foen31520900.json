@@ -1,0 +1,85 @@
+{
+  "data": {
+    "movieId": "31159",
+    "name": "皇家保姆亞瑟",
+    "originalName": "OUT OF THE NEST",
+    "region": "泰國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-03",
+    "publisher": "可樂藝術文創股份有限公司",
+    "amountInThisWeek": 129950.0,
+    "totalAmount": 129950.0,
+    "filmClasses": null,
+    "filmLength": 5100,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82511,
+        "typeName": "導演",
+        "name": "阿圖羅a赫南德茲",
+        "originalName": "阿圖羅A赫南德茲 Arturo A. Hernandez"
+      },
+      {
+        "id": 82512,
+        "typeName": "導演",
+        "name": "安德魯戈登",
+        "originalName": "Andrew Gordon"
+      },
+      {
+        "id": 82514,
+        "typeName": "導演",
+        "name": "維拉帕特拉吉​​納納溫",
+        "originalName": "Veerapatra Jinanavin"
+      },
+      {
+        "id": 82515,
+        "typeName": "導演",
+        "name": "傑夫舒",
+        "originalName": "Jeff Schu"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 83803.0,
+        "tickets": 317,
+        "totalAmount": 83803.0,
+        "totalTickets": 317,
+        "rate": 0,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 83803.0,
+        "totalTickets": 317,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 83803.0,
+        "tickets": 317,
+        "totalAmount": 83803.0,
+        "totalTickets": 317,
+        "rate": 0,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 46147.0,
+        "tickets": 175,
+        "totalAmount": 129950.0,
+        "totalTickets": 492,
+        "rate": -0.4493395224514635,
+        "theaterCount": 18
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

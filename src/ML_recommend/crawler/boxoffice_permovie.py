@@ -210,9 +210,10 @@ def fetch_boxoffice_permovie() -> None:
     # 逐部整理電影資料
     for _, row in df_movies.iterrows():
         title = row["title_zh"]
+        id=row["atmovies_id"]
         safe_title = clean_filename(title)
         release_date = row.get("release_date", "")
-        print(f"🎬 處理中：{title}")
+        print(f"🎬 處理中：{title},{id}")
 
         # Step 1️⃣：先檢查人工對照表
         mapping = find_manual_mapping(title, manual_mappings)
@@ -236,7 +237,7 @@ def fetch_boxoffice_permovie() -> None:
             continue
 
         # Step 3: 儲存 JSON（每部電影一檔）
-        file_name = f"{film_id}_{safe_title}_{week_label}.json"
+        file_name = f"{film_id}_{safe_title}_{week_label}_{row["atmovies_id"]}.json"
         save_json(data, output_dir, file_name)
 
         print(f"✅ 已儲存：{file_name}")

@@ -9,7 +9,7 @@ import json
 import pandas as pd
 from common.path_utils import MOVIEINFO_OMDb_RAW, MOVIEINFO_OMDb_PROCESSED
 from common.file_utils import ensure_dir
-
+from datetime import date
 
 def extract_field(data: dict, *keys):
     """多層安全取值"""
@@ -35,9 +35,11 @@ def clean_omdb_json_to_csv():
         rows.append(
             {
                 "gov_id": extract_field(data, "crawl_note", "gov_id"),
-                "title_zh": extract_field(data, "crawl_note", "title_zh"),
-                "title_en": extract_field(data, "crawl_note", "title_en"),
+                "gov_title_zh": extract_field(data, "crawl_note", "gov_title_zh"),
+                "gov_title_en": extract_field(data, "crawl_note", "gov_title_en"),
                 "imdb_id": extract_field(data, "crawl_note", "imdb_id"),
+                "atmovies_id": extract_field(data, "crawl_note", "atmovies_id"),
+                "omdb_title_en": data.get("Title"),
                 "Year": data.get("Year"),
                 "Runtime": data.get("Runtime"),
                 "Genre": data.get("Genre"),
@@ -58,7 +60,8 @@ def clean_omdb_json_to_csv():
         )
 
     df = pd.DataFrame(rows)
-    output_path = os.path.join(MOVIEINFO_OMDb_PROCESSED, "movieInfo_omdb.csv")
+    today = date.today().strftime("%Y-%m-%d")
+    output_path = os.path.join(MOVIEINFO_OMDb_PROCESSED, f"movieInfo_omdb_{today}.csv")
     df.to_csv(output_path, index=False, encoding="utf-8-sig")
     print(f"✅ 已輸出 CSV：{output_path}")
 

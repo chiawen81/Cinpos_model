@@ -1,0 +1,109 @@
+{
+  "data": {
+    "movieId": "31745",
+    "name": "血怨",
+    "originalName": "PEREWANGAN",
+    "region": "印尼",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-09-26",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 1185930.0,
+    "totalAmount": 1185930.0,
+    "filmClasses": null,
+    "filmLength": 6540,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82479,
+        "typeName": "演員",
+        "name": "烏利特里亞尼",
+        "originalName": "Ully Triani"
+      },
+      {
+        "id": 82481,
+        "typeName": "演員",
+        "name": "珊蒂",
+        "originalName": "Shanty"
+      },
+      {
+        "id": 82487,
+        "typeName": "演員",
+        "name": "貝比伊芙琳",
+        "originalName": "Beby Evelyn"
+      },
+      {
+        "id": 31844,
+        "typeName": "導演",
+        "name": "艾文蘇亞迪",
+        "originalName": "Awi Suryadi"
+      },
+      {
+        "id": 82495,
+        "typeName": "演員",
+        "name": "達維娜卡拉莫伊",
+        "originalName": "Davina Karamoy"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 557642.0,
+        "tickets": 2071,
+        "totalAmount": 557642.0,
+        "totalTickets": 2071,
+        "rate": 0,
+        "theaterCount": 51
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 130893.0,
+        "tickets": 476,
+        "totalAmount": 688535.0,
+        "totalTickets": 2547,
+        "rate": -0.7652741364531366,
+        "theaterCount": 23
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 688535.0,
+        "totalTickets": 2547,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 557642.0,
+        "tickets": 2071,
+        "totalAmount": 557642.0,
+        "totalTickets": 2071,
+        "rate": 0,
+        "theaterCount": 51
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 537443.0,
+        "tickets": 2014,
+        "totalAmount": 1095085.0,
+        "totalTickets": 4085,
+        "rate": -0.03622216404072864,
+        "theaterCount": 51
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 90845.0,
+        "tickets": 331,
+        "totalAmount": 1185930.0,
+        "totalTickets": 4416,
+        "rate": -0.8309681212705348,
+        "theaterCount": 22
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -1,0 +1,42 @@
+{
+  "data": {
+    "movieId": "32087",
+    "name": "碰碰狐和貝貝彬歡唱電影：奇幻世界大冒險(國語版)",
+    "originalName": "Bebefinn Sing-Along Movie: Into the Pinkfong World",
+    "region": "韓國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-04",
+    "publisher": "香港商甲上娛樂有限公司台灣分公司",
+    "amountInThisWeek": 86655.0,
+    "totalAmount": 86655.0,
+    "filmClasses": null,
+    "filmLength": 3840,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 86655.0,
+        "tickets": 316,
+        "totalAmount": 86655.0,
+        "totalTickets": 316,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 86655.0,
+        "tickets": 316,
+        "totalAmount": 86655.0,
+        "totalTickets": 316,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

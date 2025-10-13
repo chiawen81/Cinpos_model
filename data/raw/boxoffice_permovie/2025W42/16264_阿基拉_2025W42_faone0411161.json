@@ -1,0 +1,4909 @@
+{
+  "data": {
+    "movieId": "16264",
+    "name": "阿基拉",
+    "originalName": "AKIRA",
+    "region": "日本",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2020-06-24",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 15270380.0,
+    "totalAmount": 15270380.0,
+    "filmClasses": null,
+    "filmLength": 7500,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 38787,
+        "typeName": "導演",
+        "name": "大友克洋",
+        "originalName": "Katsuhiro Otomo"
+      },
+      {
+        "id": 38787,
+        "typeName": "編劇",
+        "name": "大友克洋",
+        "originalName": "Katsuhiro Otomo"
+      },
+      {
+        "id": 38788,
+        "typeName": "編劇",
+        "name": "橋本以藏",
+        "originalName": "Izo Hashimoto"
+      },
+      {
+        "id": 38789,
+        "typeName": "演員",
+        "name": "岩田光央",
+        "originalName": "Mitsuo Iwata"
+      },
+      {
+        "id": 38790,
+        "typeName": "演員",
+        "name": "佐佐木望",
+        "originalName": "Nozomu Sasaki"
+      },
+      {
+        "id": 38791,
+        "typeName": "演員",
+        "name": "小山茉美",
+        "originalName": "Mami Koyama"
+      },
+      {
+        "id": 13332,
+        "typeName": "演員",
+        "name": "石田太郎",
+        "originalName": "石田太郎"
+      },
+      {
+        "id": 38792,
+        "typeName": "演員",
+        "name": "大倉正章",
+        "originalName": "大倉正章"
+      },
+      {
+        "id": 38793,
+        "typeName": "演員",
+        "name": "草尾毅",
+        "originalName": "草尾毅"
+      },
+      {
+        "id": 17388,
+        "typeName": "演員",
+        "name": "玄田哲章",
+        "originalName": "玄田哲章"
+      },
+      {
+        "id": 38794,
+        "typeName": "演員",
+        "name": "淵崎有里子",
+        "originalName": "淵崎有里子"
+      },
+      {
+        "id": 38795,
+        "typeName": "演員",
+        "name": "大竹宏",
+        "originalName": "大竹宏"
+      },
+      {
+        "id": 38796,
+        "typeName": "演員",
+        "name": "中村龍彥",
+        "originalName": "中村龍彥"
+      },
+      {
+        "id": 38797,
+        "typeName": "演員",
+        "name": "神藤一弘",
+        "originalName": "神藤一弘"
+      },
+      {
+        "id": 38798,
+        "typeName": "演員",
+        "name": "北村弘一",
+        "originalName": "北村弘一"
+      },
+      {
+        "id": 38799,
+        "typeName": "演員",
+        "name": "鈴木瑞穗",
+        "originalName": "鈴木瑞穗"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2020-06-26~2020-06-28",
+        "amount": 2465207.0,
+        "tickets": 8475,
+        "totalAmount": 2465207.0,
+        "totalTickets": 8475,
+        "rate": 0,
+        "theaterCount": 35
+      },
+      {
+        "date": "2020-07-03~2020-07-05",
+        "amount": 1871856.0,
+        "tickets": 6423,
+        "totalAmount": 4337063.0,
+        "totalTickets": 14898,
+        "rate": -0.2406901327150215,
+        "theaterCount": 36
+      },
+      {
+        "date": "2020-07-10~2020-07-12",
+        "amount": 1256852.0,
+        "tickets": 4202,
+        "totalAmount": 5593915.0,
+        "totalTickets": 19100,
+        "rate": -0.32855305108940003,
+        "theaterCount": 32
+      },
+      {
+        "date": "2020-07-17~2020-07-19",
+        "amount": 423322.0,
+        "tickets": 1629,
+        "totalAmount": 6017237.0,
+        "totalTickets": 20729,
+        "rate": -0.66318866501386,
+        "theaterCount": 16
+      },
+      {
+        "date": "2020-07-24~2020-07-26",
+        "amount": 266533.0,
+        "tickets": 1053,
+        "totalAmount": 6283770.0,
+        "totalTickets": 21782,
+        "rate": -0.37037763215708136,
+        "theaterCount": 12
+      },
+      {
+        "date": "2020-07-31~2020-08-02",
+        "amount": 339811.0,
+        "tickets": 1123,
+        "totalAmount": 6623581.0,
+        "totalTickets": 22905,
+        "rate": 0.2749303088172947,
+        "theaterCount": 18
+      },
+      {
+        "date": "2020-08-07~2020-08-09",
+        "amount": 103141.0,
+        "tickets": 339,
+        "totalAmount": 6726722.0,
+        "totalTickets": 23244,
+        "rate": -0.6964753936747192,
+        "theaterCount": 8
+      },
+      {
+        "date": "2020-08-14~2020-08-16",
+        "amount": 28643.0,
+        "tickets": 122,
+        "totalAmount": 6755365.0,
+        "totalTickets": 23366,
+        "rate": -0.7222927836650799,
+        "theaterCount": 3
+      },
+      {
+        "date": "2020-08-21~2020-08-23",
+        "amount": 11678.0,
+        "tickets": 50,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": -0.5922913102677793,
+        "theaterCount": 2
+      },
+      {
+        "date": "2020-08-28~2020-08-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-09-04~2020-09-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-09-11~2020-09-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-09-18~2020-09-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-09-25~2020-09-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-10-02~2020-10-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-10-09~2020-10-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-10-16~2020-10-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-10-23~2020-10-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-10-30~2020-11-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-11-06~2020-11-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-11-13~2020-11-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-11-20~2020-11-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-11-27~2020-11-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-12-04~2020-12-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-12-11~2020-12-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-12-18~2020-12-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-12-25~2020-12-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-01-01~2021-01-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-01-08~2021-01-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-01-15~2021-01-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-01-22~2021-01-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-01-29~2021-01-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-02-05~2021-02-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-02-12~2021-02-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-02-19~2021-02-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-02-26~2021-02-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-03-05~2021-03-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-03-12~2021-03-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-03-19~2021-03-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-03-26~2021-03-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-04-02~2021-04-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-04-09~2021-04-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-04-16~2021-04-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-04-23~2021-04-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-04-30~2021-05-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-05-07~2021-05-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-05-14~2021-05-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-05-21~2021-05-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-05-28~2021-05-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-06-04~2021-06-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-06-11~2021-06-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-06-18~2021-06-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-06-25~2021-06-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-07-02~2021-07-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-07-09~2021-07-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-07-16~2021-07-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-07-23~2021-07-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-07-30~2021-08-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-08-06~2021-08-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-08-13~2021-08-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-08-20~2021-08-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-08-27~2021-08-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-09-03~2021-09-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-09-10~2021-09-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-09-17~2021-09-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-09-24~2021-09-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-10-01~2021-10-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-10-08~2021-10-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-10-15~2021-10-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-10-22~2021-10-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-10-29~2021-10-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-11-05~2021-11-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-11-12~2021-11-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-11-19~2021-11-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-11-26~2021-11-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-12-03~2021-12-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-12-10~2021-12-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-12-17~2021-12-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-12-24~2021-12-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-12-31~2022-01-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-01-07~2022-01-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-01-14~2022-01-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-01-21~2022-01-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-01-28~2022-01-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-02-04~2022-02-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-02-11~2022-02-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-02-18~2022-02-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-02-25~2022-02-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-03-04~2022-03-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-03-11~2022-03-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-03-18~2022-03-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-03-25~2022-03-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-04-01~2022-04-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-04-08~2022-04-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-04-15~2022-04-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-04-22~2022-04-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-04-29~2022-05-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-05-06~2022-05-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-05-13~2022-05-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-05-20~2022-05-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-05-27~2022-05-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-06-03~2022-06-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-06-10~2022-06-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-06-17~2022-06-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-06-24~2022-06-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-07-01~2022-07-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-07-08~2022-07-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-07-15~2022-07-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-07-22~2022-07-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-07-29~2022-07-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-08-05~2022-08-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-08-12~2022-08-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-08-19~2022-08-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-08-26~2022-08-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-09-02~2022-09-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-09-09~2022-09-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-09-16~2022-09-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-09-23~2022-09-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-09-30~2022-10-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-10-07~2022-10-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-10-14~2022-10-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-10-21~2022-10-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-10-28~2022-10-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-11-04~2022-11-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-11-11~2022-11-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-11-18~2022-11-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-11-25~2022-11-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-12-02~2022-12-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-12-09~2022-12-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-12-16~2022-12-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-12-23~2022-12-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-12-30~2023-01-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-01-06~2023-01-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-01-13~2023-01-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-01-20~2023-01-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-01-27~2023-01-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-02-03~2023-02-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-02-10~2023-02-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-02-17~2023-02-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-02-24~2023-02-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-03-03~2023-03-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-03-10~2023-03-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-03-17~2023-03-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-03-24~2023-03-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-03-31~2023-04-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-04-07~2023-04-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-04-14~2023-04-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-04-21~2023-04-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-04-28~2023-04-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-05-05~2023-05-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-05-12~2023-05-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-05-19~2023-05-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-05-26~2023-05-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-06-02~2023-06-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-06-09~2023-06-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-06-16~2023-06-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-06-23~2023-06-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-06-30~2023-07-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-07-07~2023-07-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-07-14~2023-07-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-07-21~2023-07-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-07-28~2023-07-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-08-04~2023-08-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-08-11~2023-08-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-08-18~2023-08-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-08-25~2023-08-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-09-01~2023-09-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-09-08~2023-09-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-09-15~2023-09-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-09-22~2023-09-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-09-29~2023-10-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-10-06~2023-10-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-10-13~2023-10-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-10-20~2023-10-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-10-27~2023-10-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6767043.0,
+        "totalTickets": 23416,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-11-03~2023-11-05",
+        "amount": 2710.0,
+        "tickets": 12,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2023-11-10~2023-11-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-11-17~2023-11-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-11-24~2023-11-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-12-01~2023-12-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-12-08~2023-12-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-12-15~2023-12-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-12-22~2023-12-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-12-29~2023-12-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-01-05~2024-01-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-01-12~2024-01-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-01-19~2024-01-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-01-26~2024-01-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-02-02~2024-02-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-02-09~2024-02-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-02-16~2024-02-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-02-23~2024-02-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-03-01~2024-03-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-03-08~2024-03-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-03-15~2024-03-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-03-22~2024-03-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-03-29~2024-03-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-04-05~2024-04-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-04-12~2024-04-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-04-19~2024-04-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-04-26~2024-04-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-05-03~2024-05-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-05-10~2024-05-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-05-17~2024-05-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-05-24~2024-05-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-05-31~2024-06-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-06-07~2024-06-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-06-14~2024-06-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-06-21~2024-06-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-06-28~2024-06-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-07-05~2024-07-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-07-12~2024-07-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-07-19~2024-07-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-07-26~2024-07-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-08-02~2024-08-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-08-09~2024-08-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-08-16~2024-08-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-08-23~2024-08-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-08-30~2024-09-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-09-06~2024-09-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-09-13~2024-09-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-09-20~2024-09-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-09-27~2024-09-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-10-04~2024-10-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-10-11~2024-10-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-10-18~2024-10-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-10-25~2024-10-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-11-01~2024-11-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-11-08~2024-11-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-11-15~2024-11-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-11-22~2024-11-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-11-29~2024-12-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-12-06~2024-12-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-12-13~2024-12-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-12-20~2024-12-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-12-27~2024-12-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-01-03~2025-01-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-01-10~2025-01-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-01-17~2025-01-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-01-24~2025-01-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-01-31~2025-02-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-02-07~2025-02-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-02-14~2025-02-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-02-21~2025-02-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-02-28~2025-03-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6769753.0,
+        "totalTickets": 23428,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-03-07~2025-03-09",
+        "amount": 19161.0,
+        "tickets": 62,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-03-14~2025-03-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-03-21~2025-03-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-03-28~2025-03-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-04-04~2025-04-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-04-11~2025-04-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-04-18~2025-04-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-04-25~2025-04-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-05-02~2025-05-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-05-09~2025-05-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-05-16~2025-05-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-05-23~2025-05-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-05-30~2025-06-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-06~2025-06-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-13~2025-06-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-20~2025-06-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 6788914.0,
+        "totalTickets": 23490,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-27~2025-06-29",
+        "amount": 596290.0,
+        "tickets": 2204,
+        "totalAmount": 7385204.0,
+        "totalTickets": 25694,
+        "rate": 0,
+        "theaterCount": 52
+      },
+      {
+        "date": "2025-07-04~2025-07-06",
+        "amount": 208013.0,
+        "tickets": 778,
+        "totalAmount": 7593217.0,
+        "totalTickets": 26472,
+        "rate": -0.6511546395210385,
+        "theaterCount": 30
+      },
+      {
+        "date": "2025-07-11~2025-07-13",
+        "amount": 58683.0,
+        "tickets": 232,
+        "totalAmount": 7651900.0,
+        "totalTickets": 26704,
+        "rate": -0.7178878243186724,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-07-18~2025-07-20",
+        "amount": 25280.0,
+        "tickets": 93,
+        "totalAmount": 7677180.0,
+        "totalTickets": 26797,
+        "rate": -0.5692108447080074,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-07-25~2025-07-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 7677180.0,
+        "totalTickets": 26797,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2020-06-22~2020-06-28",
+        "amount": 3944362.0,
+        "tickets": 13561,
+        "totalAmount": 3944362.0,
+        "totalTickets": 13561,
+        "rate": 0,
+        "theaterCount": 35
+      },
+      {
+        "date": "2020-06-29~2020-07-05",
+        "amount": 3598493.0,
+        "tickets": 12467,
+        "totalAmount": 7542855.0,
+        "totalTickets": 26028,
+        "rate": -0.08768693137191769,
+        "theaterCount": 36
+      },
+      {
+        "date": "2020-07-06~2020-07-12",
+        "amount": 2540857.0,
+        "tickets": 8684,
+        "totalAmount": 10083712.0,
+        "totalTickets": 34712,
+        "rate": -0.29391081210940245,
+        "theaterCount": 36
+      },
+      {
+        "date": "2020-07-13~2020-07-19",
+        "amount": 1198918.0,
+        "tickets": 4339,
+        "totalAmount": 11282630.0,
+        "totalTickets": 39051,
+        "rate": -0.5281442442451504,
+        "theaterCount": 32
+      },
+      {
+        "date": "2020-07-20~2020-07-26",
+        "amount": 596668.0,
+        "tickets": 2349,
+        "totalAmount": 11879298.0,
+        "totalTickets": 41400,
+        "rate": -0.5023279323523376,
+        "theaterCount": 16
+      },
+      {
+        "date": "2020-07-27~2020-08-02",
+        "amount": 563208.0,
+        "tickets": 1949,
+        "totalAmount": 12442506.0,
+        "totalTickets": 43349,
+        "rate": -0.05607808697634195,
+        "theaterCount": 20
+      },
+      {
+        "date": "2020-08-03~2020-08-09",
+        "amount": 242476.0,
+        "tickets": 825,
+        "totalAmount": 12684982.0,
+        "totalTickets": 44174,
+        "rate": -0.5694734449794747,
+        "theaterCount": 18
+      },
+      {
+        "date": "2020-08-10~2020-08-16",
+        "amount": 76393.0,
+        "tickets": 295,
+        "totalAmount": 12761375.0,
+        "totalTickets": 44469,
+        "rate": -0.6849461389993237,
+        "theaterCount": 7
+      },
+      {
+        "date": "2020-08-17~2020-08-23",
+        "amount": 32488.0,
+        "tickets": 139,
+        "totalAmount": 12793863.0,
+        "totalTickets": 44608,
+        "rate": -0.5747254329585172,
+        "theaterCount": 3
+      },
+      {
+        "date": "2020-08-24~2020-08-30",
+        "amount": 6310.0,
+        "tickets": 27,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": -0.8057744397931544,
+        "theaterCount": 2
+      },
+      {
+        "date": "2020-08-31~2020-09-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-09-07~2020-09-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-09-14~2020-09-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-09-21~2020-09-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-09-28~2020-10-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-10-05~2020-10-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-10-12~2020-10-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-10-19~2020-10-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-10-26~2020-11-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-11-02~2020-11-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-11-09~2020-11-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-11-16~2020-11-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-11-23~2020-11-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-11-30~2020-12-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-12-07~2020-12-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-12-14~2020-12-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-12-21~2020-12-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2020-12-28~2021-01-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-01-04~2021-01-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-01-11~2021-01-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-01-18~2021-01-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-01-25~2021-01-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-02-01~2021-02-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-02-08~2021-02-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-02-15~2021-02-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-02-22~2021-02-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-03-01~2021-03-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-03-08~2021-03-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-03-15~2021-03-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-03-22~2021-03-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-03-29~2021-04-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-04-05~2021-04-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-04-12~2021-04-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-04-19~2021-04-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-04-26~2021-05-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-05-03~2021-05-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-05-10~2021-05-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-05-17~2021-05-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-05-24~2021-05-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-05-31~2021-06-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-06-07~2021-06-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-06-14~2021-06-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-06-21~2021-06-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-06-28~2021-07-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-07-05~2021-07-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-07-12~2021-07-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-07-19~2021-07-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-07-26~2021-08-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-08-02~2021-08-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-08-09~2021-08-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-08-16~2021-08-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-08-23~2021-08-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-08-30~2021-09-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-09-06~2021-09-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-09-13~2021-09-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-09-20~2021-09-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-09-27~2021-10-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-10-04~2021-10-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-10-11~2021-10-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-10-18~2021-10-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-10-25~2021-10-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-11-01~2021-11-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-11-08~2021-11-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-11-15~2021-11-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-11-22~2021-11-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-11-29~2021-12-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-12-06~2021-12-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-12-13~2021-12-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-12-20~2021-12-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2021-12-27~2022-01-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-01-03~2022-01-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-01-10~2022-01-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-01-17~2022-01-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-01-24~2022-01-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-01-31~2022-02-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-02-07~2022-02-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-02-14~2022-02-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-02-21~2022-02-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-02-28~2022-03-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-03-07~2022-03-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-03-14~2022-03-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-03-21~2022-03-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-03-28~2022-04-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-04-04~2022-04-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-04-11~2022-04-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-04-18~2022-04-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-04-25~2022-05-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-05-02~2022-05-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-05-09~2022-05-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-05-16~2022-05-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-05-23~2022-05-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-05-30~2022-06-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-06-06~2022-06-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-06-13~2022-06-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-06-20~2022-06-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-06-27~2022-07-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-07-04~2022-07-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-07-11~2022-07-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-07-18~2022-07-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-07-25~2022-07-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-08-01~2022-08-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-08-08~2022-08-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-08-15~2022-08-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-08-22~2022-08-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-08-29~2022-09-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-09-05~2022-09-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-09-12~2022-09-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-09-19~2022-09-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-09-26~2022-10-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-10-03~2022-10-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-10-10~2022-10-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-10-17~2022-10-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-10-24~2022-10-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-10-31~2022-11-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-11-07~2022-11-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-11-14~2022-11-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-11-21~2022-11-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-11-28~2022-12-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-12-05~2022-12-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-12-12~2022-12-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-12-19~2022-12-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2022-12-26~2023-01-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-01-02~2023-01-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-01-09~2023-01-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-01-16~2023-01-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-01-23~2023-01-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-01-30~2023-02-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-02-06~2023-02-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-02-13~2023-02-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-02-20~2023-02-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-02-27~2023-03-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-03-06~2023-03-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-03-13~2023-03-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-03-20~2023-03-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-03-27~2023-04-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-04-03~2023-04-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-04-10~2023-04-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-04-17~2023-04-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-04-24~2023-04-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-05-01~2023-05-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-05-08~2023-05-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-05-15~2023-05-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-05-22~2023-05-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-05-29~2023-06-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-06-05~2023-06-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-06-12~2023-06-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-06-19~2023-06-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-06-26~2023-07-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-07-03~2023-07-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-07-10~2023-07-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-07-17~2023-07-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-07-24~2023-07-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-07-31~2023-08-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-08-07~2023-08-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-08-14~2023-08-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-08-21~2023-08-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-08-28~2023-09-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-09-04~2023-09-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-09-11~2023-09-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-09-18~2023-09-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-09-25~2023-10-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-10-02~2023-10-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-10-09~2023-10-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12800173.0,
+        "totalTickets": 44635,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-10-16~2023-10-22",
+        "amount": 2625.0,
+        "tickets": 13,
+        "totalAmount": 12802798.0,
+        "totalTickets": 44648,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2023-10-23~2023-10-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12802798.0,
+        "totalTickets": 44648,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-10-30~2023-11-05",
+        "amount": 2710.0,
+        "tickets": 12,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2023-11-06~2023-11-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-11-13~2023-11-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-11-20~2023-11-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-11-27~2023-12-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-12-04~2023-12-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-12-11~2023-12-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-12-18~2023-12-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2023-12-25~2023-12-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-01-01~2024-01-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-01-08~2024-01-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-01-15~2024-01-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-01-22~2024-01-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-01-29~2024-02-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-02-05~2024-02-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-02-12~2024-02-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-02-19~2024-02-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-02-26~2024-03-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-03-04~2024-03-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-03-11~2024-03-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-03-18~2024-03-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-03-25~2024-03-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-04-01~2024-04-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-04-08~2024-04-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-04-15~2024-04-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-04-22~2024-04-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-04-29~2024-05-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-05-06~2024-05-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-05-13~2024-05-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-05-20~2024-05-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-05-27~2024-06-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-06-03~2024-06-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-06-10~2024-06-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-06-17~2024-06-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-06-24~2024-06-30",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-07-01~2024-07-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-07-08~2024-07-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-07-15~2024-07-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-07-22~2024-07-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-07-29~2024-08-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-08-05~2024-08-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-08-12~2024-08-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-08-19~2024-08-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-08-26~2024-09-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-09-02~2024-09-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-09-09~2024-09-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-09-16~2024-09-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-09-23~2024-09-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-09-30~2024-10-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-10-07~2024-10-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-10-14~2024-10-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-10-21~2024-10-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-10-28~2024-11-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-11-04~2024-11-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-11-11~2024-11-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-11-18~2024-11-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-11-25~2024-12-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-12-02~2024-12-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-12-09~2024-12-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-12-16~2024-12-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-12-23~2024-12-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2024-12-30~2025-01-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-01-06~2025-01-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-01-13~2025-01-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-01-20~2025-01-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-01-27~2025-02-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-02-03~2025-02-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-02-10~2025-02-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-02-17~2025-02-23",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-02-24~2025-03-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12805508.0,
+        "totalTickets": 44660,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-03-03~2025-03-09",
+        "amount": 19161.0,
+        "tickets": 62,
+        "totalAmount": 12824669.0,
+        "totalTickets": 44722,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-03-10~2025-03-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12824669.0,
+        "totalTickets": 44722,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-03-17~2025-03-23",
+        "amount": 30900.0,
+        "tickets": 105,
+        "totalAmount": 12855569.0,
+        "totalTickets": 44827,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-03-24~2025-03-30",
+        "amount": 44490.0,
+        "tickets": 154,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": 0.43980582524271844,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-03-31~2025-04-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-04-07~2025-04-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-04-14~2025-04-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-04-21~2025-04-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-04-28~2025-05-04",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-05-05~2025-05-11",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-05-12~2025-05-18",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-05-19~2025-05-25",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-05-26~2025-06-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-02~2025-06-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-09~2025-06-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-16~2025-06-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 12900059.0,
+        "totalTickets": 44981,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-23~2025-06-29",
+        "amount": 1471762.0,
+        "tickets": 5559,
+        "totalAmount": 14371821.0,
+        "totalTickets": 50540,
+        "rate": 0,
+        "theaterCount": 52
+      },
+      {
+        "date": "2025-06-30~2025-07-06",
+        "amount": 602801.0,
+        "tickets": 2285,
+        "totalAmount": 14974622.0,
+        "totalTickets": 52825,
+        "rate": -0.5904222285940254,
+        "theaterCount": 51
+      },
+      {
+        "date": "2025-07-07~2025-07-13",
+        "amount": 211400.0,
+        "tickets": 836,
+        "totalAmount": 15186022.0,
+        "totalTickets": 53661,
+        "rate": -0.6493038332716767,
+        "theaterCount": 34
+      },
+      {
+        "date": "2025-07-14~2025-07-20",
+        "amount": 64708.0,
+        "tickets": 247,
+        "totalAmount": 15250730.0,
+        "totalTickets": 53908,
+        "rate": -0.693907284768212,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-07-21~2025-07-27",
+        "amount": 19650.0,
+        "tickets": 74,
+        "totalAmount": 15270380.0,
+        "totalTickets": 53982,
+        "rate": -0.6963281201706126,
+        "theaterCount": 3
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

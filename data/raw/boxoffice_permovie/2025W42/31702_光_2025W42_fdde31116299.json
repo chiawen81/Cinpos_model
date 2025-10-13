@@ -1,0 +1,60 @@
+{
+  "data": {
+    "movieId": "31702",
+    "name": "光",
+    "originalName": "The light",
+    "region": "德國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-10-03",
+    "publisher": "聯影企業股份有限公司",
+    "amountInThisWeek": 109211.0,
+    "totalAmount": 109211.0,
+    "filmClasses": null,
+    "filmLength": 9720,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 56676.0,
+        "tickets": 241,
+        "totalAmount": 56676.0,
+        "totalTickets": 241,
+        "rate": 0,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 56676.0,
+        "totalTickets": 241,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 56676.0,
+        "tickets": 241,
+        "totalAmount": 56676.0,
+        "totalTickets": 241,
+        "rate": 0,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 52535.0,
+        "tickets": 222,
+        "totalAmount": 109211.0,
+        "totalTickets": 463,
+        "rate": -0.07306443644576187,
+        "theaterCount": 13
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

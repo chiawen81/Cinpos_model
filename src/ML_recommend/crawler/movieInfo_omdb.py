@@ -19,7 +19,6 @@
 # 套件匯入
 # -------------------------------------------------------
 import os
-import sys
 import json
 import time
 import logging
@@ -114,25 +113,35 @@ def crawl_omdb():
 
     for file_name in tqdm(gov_files, desc="OMDb Fetching", ncols=90):
         gov_path = os.path.join(MOVIEINFO_GOV_PROCESSED, file_name)
+        atmovies_id = gov_path.split("_")[-1].replace(".csv", "")
 
         try:
             df = pd.read_csv(gov_path)
+            # 檢查 data\processed\movieInfo_gov 下的 csv 有資料
             if df.empty:
                 logging.warning(f"[略過] 空 CSV：{file_name}")
                 continue
 
             row = df.iloc[0]
-            gov_id = str(row.get("movie_id") or row.get("id") or "")
+            gov_id = str(row.get("gov_id") or "")
             title_zh = clean_filename(str(row.get("title_zh", "未知")))
             title_en = str(row.get("title_en") or row.get("gov_title_en") or "").strip()
 
+            # 篩掉已爬取過的電影
+            existing_files = os.listdir(MOVIEINFO_OMDb_RAW)
+            already_exists = any(f.startswith(f"{gov_id}_") for f in existing_files)
+            if already_exists:
+                logging.info(f"[略過] 已存在檔案：{gov_id} {title_zh} ({title_en})")
+                continue
+            
+            # 不爬無英文片名的電影
             if not title_en:
                 logging.warning(f"[略過] 無英文片名：{gov_id} {title_zh}")
                 continue
 
-            imdb_id = find_manual_imdb_id(gov_id)
-
+            # ------------------ 開始爬取資料 ------------------
             # 優先使用人工 IMDb ID
+            imdb_id = find_manual_imdb_id(gov_id)
             if imdb_id:
                 data = fetch_omdb_data_by_imdb_id(imdb_id)
             else:
@@ -144,21 +153,15 @@ def crawl_omdb():
                 if imdb_id:
                     data = fetch_omdb_data_by_imdb_id(imdb_id)
 
-            # 檢查是否已存在檔案，避免重複爬取
-            existing_files = os.listdir(MOVIEINFO_OMDb_RAW)
-            already_exists = any(f.startswith(f"{gov_id}_") for f in existing_files)
-            if already_exists:
-                logging.info(f"[略過] 已存在檔案：{gov_id} {title_zh} ({title_en})")
-                continue
-
             # 若有成功找到 IMDb ID，就更新
             imdb_id = data.get("imdbID") or imdb_id or "no_imdb"
 
             # 🔸 加上爬取資訊區塊
             data["crawl_note"] = {
                 "gov_id": gov_id,
-                "title_zh": title_zh,
-                "title_en": title_en,
+                "atmovies_id": atmovies_id,
+                "gov_title_zh": title_zh,
+                "gov_title_en": title_en,
                 "imdb_id": imdb_id,
                 "source": "omdb",
                 "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),

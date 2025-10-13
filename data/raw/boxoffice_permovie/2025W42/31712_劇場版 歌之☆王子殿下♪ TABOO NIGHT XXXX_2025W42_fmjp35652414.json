@@ -1,0 +1,132 @@
+{
+  "data": {
+    "movieId": "31712",
+    "name": "劇場版 歌之☆王子殿下♪ TABOO NIGHT XXXX with Double Encore (QUARTET NIGHT version)",
+    "originalName": "Movie:Utano☆Princesama TABOO NIGHT XXXX with Double Encore (QUARTET NIGHT version)",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-09-05",
+    "publisher": "曼迪傳播股份有限公司",
+    "amountInThisWeek": 1918417.0,
+    "totalAmount": 1918417.0,
+    "filmClasses": null,
+    "filmLength": 4200,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 730.0,
+        "tickets": 3,
+        "totalAmount": 730.0,
+        "totalTickets": 3,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 473432.0,
+        "tickets": 1717,
+        "totalAmount": 474162.0,
+        "totalTickets": 1720,
+        "rate": 647.5369863013699,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 233780.0,
+        "tickets": 856,
+        "totalAmount": 707942.0,
+        "totalTickets": 2576,
+        "rate": -0.506201524189324,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 139596.0,
+        "tickets": 529,
+        "totalAmount": 847538.0,
+        "totalTickets": 3105,
+        "rate": -0.40287449739070924,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 46648.0,
+        "tickets": 171,
+        "totalAmount": 894186.0,
+        "totalTickets": 3276,
+        "rate": -0.6658356972979168,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 894186.0,
+        "totalTickets": 3276,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 730.0,
+        "tickets": 3,
+        "totalAmount": 730.0,
+        "totalTickets": 3,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 730722.0,
+        "tickets": 2700,
+        "totalAmount": 731452.0,
+        "totalTickets": 2703,
+        "rate": 999.9890410958905,
+        "theaterCount": 17
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 708575.0,
+        "tickets": 2678,
+        "totalAmount": 1440027.0,
+        "totalTickets": 5381,
+        "rate": -0.03030837993108186,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 297981.0,
+        "tickets": 1133,
+        "totalAmount": 1738008.0,
+        "totalTickets": 6514,
+        "rate": -0.5794644180220866,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 134295.0,
+        "tickets": 494,
+        "totalAmount": 1872303.0,
+        "totalTickets": 7008,
+        "rate": -0.5493169027555448,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 46114.0,
+        "tickets": 167,
+        "totalAmount": 1918417.0,
+        "totalTickets": 7175,
+        "rate": -0.6566216165903421,
+        "theaterCount": 7
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

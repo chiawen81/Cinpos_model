@@ -1,0 +1,157 @@
+{
+  "data": {
+    "movieId": "29380",
+    "name": "失明",
+    "originalName": "Blind Love",
+    "region": "中華民國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-09-11",
+    "publisher": "周子娛樂有限公司",
+    "amountInThisWeek": 2677354.0,
+    "totalAmount": 2677354.0,
+    "filmClasses": null,
+    "filmLength": 8520,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 70085,
+        "typeName": "演員",
+        "name": "王渝萱",
+        "originalName": "Yu-Xuan Wang"
+      },
+      {
+        "id": 70728,
+        "typeName": "演員",
+        "name": "李銘忠",
+        "originalName": "Frederick Ming Zhong Lee"
+      },
+      {
+        "id": 11150,
+        "typeName": "演員",
+        "name": "吳可熙",
+        "originalName": "Ke-Xi Wu"
+      },
+      {
+        "id": 17645,
+        "typeName": "演員",
+        "name": "林依晨",
+        "originalName": "Ariel Lin"
+      },
+      {
+        "id": 82438,
+        "typeName": "演員",
+        "name": "劉敬",
+        "originalName": "Jimmy Liu"
+      },
+      {
+        "id": 39390,
+        "typeName": "演員",
+        "name": "李沐",
+        "originalName": "Moon Lee (III)"
+      },
+      {
+        "id": 82440,
+        "typeName": "導演",
+        "name": "周美豫",
+        "originalName": "Mei-Yu Chou"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 210360.0,
+        "tickets": 795,
+        "totalAmount": 210360.0,
+        "totalTickets": 795,
+        "rate": 0,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 962298.0,
+        "tickets": 3809,
+        "totalAmount": 1172658.0,
+        "totalTickets": 4604,
+        "rate": 3.574529378208785,
+        "theaterCount": 71
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 336650.0,
+        "tickets": 1286,
+        "totalAmount": 1509308.0,
+        "totalTickets": 5890,
+        "rate": -0.650160345340009,
+        "theaterCount": 61
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 58451.0,
+        "tickets": 217,
+        "totalAmount": 1567759.0,
+        "totalTickets": 6107,
+        "rate": -0.8263745729986633,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 1567759.0,
+        "totalTickets": 6107,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 278995.0,
+        "tickets": 986,
+        "totalAmount": 278995.0,
+        "totalTickets": 986,
+        "rate": 0,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 1220588.0,
+        "tickets": 4654,
+        "totalAmount": 1499583.0,
+        "totalTickets": 5640,
+        "rate": 3.3749457875589166,
+        "theaterCount": 71
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 796644.0,
+        "tickets": 3173,
+        "totalAmount": 2296227.0,
+        "totalTickets": 8813,
+        "rate": -0.3473276814125651,
+        "theaterCount": 71
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 330969.0,
+        "tickets": 1295,
+        "totalAmount": 2627196.0,
+        "totalTickets": 10108,
+        "rate": -0.5845459201349662,
+        "theaterCount": 62
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 50158.0,
+        "tickets": 188,
+        "totalAmount": 2677354.0,
+        "totalTickets": 10296,
+        "rate": -0.848451063392644,
+        "theaterCount": 9
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

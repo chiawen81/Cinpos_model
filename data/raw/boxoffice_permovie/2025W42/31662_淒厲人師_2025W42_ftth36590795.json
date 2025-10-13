@@ -1,0 +1,115 @@
+{
+  "data": {
+    "movieId": "31662",
+    "name": "淒厲人師",
+    "originalName": "The Tutor",
+    "region": "泰國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-09-26",
+    "publisher": "原創娛樂股份有限公司",
+    "amountInThisWeek": 179489.0,
+    "totalAmount": 179489.0,
+    "filmClasses": null,
+    "filmLength": 6420,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 77958,
+        "typeName": "導演",
+        "name": "布蘭戴德斯德",
+        "originalName": "Bhandit Thongdee"
+      },
+      {
+        "id": 13864,
+        "typeName": "演員",
+        "name": "芽芽茵",
+        "originalName": "Yayaying Rhatha Phongam"
+      },
+      {
+        "id": 82483,
+        "typeName": "演員",
+        "name": "索蘭拉姆阿內拉普",
+        "originalName": "Sornram Aneklap"
+      },
+      {
+        "id": 82494,
+        "typeName": "演員",
+        "name": "尼措空卡瓊伯利叻",
+        "originalName": "Meen Nichakoon Khajornborirak"
+      },
+      {
+        "id": 82307,
+        "typeName": "演員",
+        "name": "鄭子忠",
+        "originalName": "Trinh Tu Trung"
+      },
+      {
+        "id": 82497,
+        "typeName": "演員",
+        "name": "因托楚克倥拉瑪蘇皖",
+        "originalName": "Intouch Kooramasuwan"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 99931.0,
+        "tickets": 400,
+        "totalAmount": 99931.0,
+        "totalTickets": 400,
+        "rate": 0,
+        "theaterCount": 17
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 7930.0,
+        "tickets": 33,
+        "totalAmount": 107861.0,
+        "totalTickets": 433,
+        "rate": -0.9206452452192012,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 107861.0,
+        "totalTickets": 433,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 99931.0,
+        "tickets": 400,
+        "totalAmount": 99931.0,
+        "totalTickets": 400,
+        "rate": 0,
+        "theaterCount": 17
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 77538.0,
+        "tickets": 318,
+        "totalAmount": 177469.0,
+        "totalTickets": 718,
+        "rate": -0.2240846183866868,
+        "theaterCount": 17
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 2020.0,
+        "tickets": 9,
+        "totalAmount": 179489.0,
+        "totalTickets": 727,
+        "rate": -0.9739482576285177,
+        "theaterCount": 2
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -1,0 +1,132 @@
+{
+  "data": {
+    "movieId": "31685",
+    "name": "劇場版 咒術迴戰 懷玉・玉折",
+    "originalName": "JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie",
+    "region": "日本",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-09-05",
+    "publisher": "薩摩亞商羚邦(亞洲)有限公司台灣分公司",
+    "amountInThisWeek": 29491816.0,
+    "totalAmount": 29491816.0,
+    "filmClasses": null,
+    "filmLength": 6600,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 8391405.0,
+        "tickets": 30572,
+        "totalAmount": 8391405.0,
+        "totalTickets": 30572,
+        "rate": 0,
+        "theaterCount": 86
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 6302080.0,
+        "tickets": 20817,
+        "totalAmount": 14693485.0,
+        "totalTickets": 51389,
+        "rate": -0.2489839305813508,
+        "theaterCount": 85
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 4040315.0,
+        "tickets": 12845,
+        "totalAmount": 18733800.0,
+        "totalTickets": 64234,
+        "rate": -0.35889182619071797,
+        "theaterCount": 85
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 2006695.0,
+        "tickets": 6688,
+        "totalAmount": 20740495.0,
+        "totalTickets": 70922,
+        "rate": -0.5033320421798796,
+        "theaterCount": 78
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 673282.0,
+        "tickets": 2176,
+        "totalAmount": 21413777.0,
+        "totalTickets": 73098,
+        "rate": -0.6644821460162107,
+        "theaterCount": 53
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 21413777.0,
+        "totalTickets": 73098,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 8391405.0,
+        "tickets": 30572,
+        "totalAmount": 8391405.0,
+        "totalTickets": 30572,
+        "rate": 0,
+        "theaterCount": 86
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 9439526.0,
+        "tickets": 32230,
+        "totalAmount": 17830931.0,
+        "totalTickets": 62802,
+        "rate": 0.12490411319677694,
+        "theaterCount": 86
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 5977842.0,
+        "tickets": 19927,
+        "totalAmount": 23808773.0,
+        "totalTickets": 82729,
+        "rate": -0.3667222273660775,
+        "theaterCount": 86
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 3210911.0,
+        "tickets": 10630,
+        "totalAmount": 27019684.0,
+        "totalTickets": 93359,
+        "rate": -0.4628645253588168,
+        "theaterCount": 86
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 2056522.0,
+        "tickets": 6759,
+        "totalAmount": 29076206.0,
+        "totalTickets": 100118,
+        "rate": -0.3595207092317414,
+        "theaterCount": 77
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 415610.0,
+        "tickets": 1372,
+        "totalAmount": 29491816.0,
+        "totalTickets": 101490,
+        "rate": -0.7979063681302704,
+        "theaterCount": 52
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

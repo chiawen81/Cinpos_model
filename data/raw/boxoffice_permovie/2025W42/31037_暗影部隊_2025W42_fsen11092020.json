@@ -1,0 +1,91 @@
+{
+  "data": {
+    "movieId": "31037",
+    "name": "暗影部隊",
+    "originalName": "SHADOW FORCE",
+    "region": "美國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-03",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 1179414.0,
+    "totalAmount": 1179414.0,
+    "filmClasses": null,
+    "filmLength": 6180,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 14234,
+        "typeName": "演員",
+        "name": "馬克史壯",
+        "originalName": "Mark Strong (Ⅱ)"
+      },
+      {
+        "id": 14768,
+        "typeName": "演員",
+        "name": "歐馬希",
+        "originalName": "Omar Sy"
+      },
+      {
+        "id": 25767,
+        "typeName": "導演",
+        "name": "喬卡納漢",
+        "originalName": "Joe Carnahan"
+      },
+      {
+        "id": 25767,
+        "typeName": "編劇",
+        "name": "喬卡納漢",
+        "originalName": "Joe Carnahan"
+      },
+      {
+        "id": 82523,
+        "typeName": "演員",
+        "name": "凱莉華盛頓",
+        "originalName": "Kerry Washington"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 704268.0,
+        "tickets": 2877,
+        "totalAmount": 704268.0,
+        "totalTickets": 2877,
+        "rate": 0,
+        "theaterCount": 62
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 704268.0,
+        "totalTickets": 2877,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 704268.0,
+        "tickets": 2877,
+        "totalAmount": 704268.0,
+        "totalTickets": 2877,
+        "rate": 0,
+        "theaterCount": 62
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 475146.0,
+        "tickets": 1964,
+        "totalAmount": 1179414.0,
+        "totalTickets": 4841,
+        "rate": -0.32533353780095076,
+        "theaterCount": 62
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

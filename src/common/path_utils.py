@@ -56,6 +56,10 @@ FIRSTRUN_PROCESSED = os.path.join(PROCESSED_DIR, "firstRunFilm_list")
 MOVIEINFO_OMDb_RAW = os.path.join(RAW_DIR, "movieInfo_omdb")
 MOVIEINFO_OMDb_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_omdb")
 
+# 評分相關資料
+RATING_WEEKLY_RAW= os.path.join(RAW_DIR, "rating_weekly")
+RATING_WEEKLY_PROCESSED = os.path.join(PROCESSED_DIR, "rating_weekly")
+
 
 # -----------------------------
 # 🧪 4. 測試執行 (僅限開發時)

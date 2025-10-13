@@ -28,7 +28,7 @@ WEEK_LABEL = get_current_week_label()
 
 # ========= 輔助工具 =========
 # 整理電影基本資訊
-def parse_movie_info(movie_data: dict,atmovies_id: str) -> dict:
+def parse_movie_info(movie_data: dict, atmovies_id: str) -> dict:
     film_members = movie_data.get("filmMembers", [])
     directors = [m["name"] for m in film_members if m["typeName"] == "導演"]
     actors = [m["name"] for m in film_members if m["typeName"] == "演員"]
@@ -138,7 +138,7 @@ def clean_boxoffice_permovie():
     for file in files:
         file_path = os.path.join(input_dir, file)
         atmovies_id = file_path.split("_")[-1].replace(".json", "")
-        
+
         with open(file_path, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
 
@@ -148,18 +148,21 @@ def clean_boxoffice_permovie():
             continue
 
         processed_data_info = parse_movie_info(crawler_data, atmovies_id)
-        safe_title = clean_filename(processed_data_info["gov_title_zh"] or processed_data_info["gov_title_en"] or "unknown")
+        safe_title = clean_filename(processed_data_info["gov_title_zh"] or "unknown")
 
         # Step 1️⃣：若僅有一週或尚未有票房紀錄 → 存電影資訊
         weeks = crawler_data.get("weeks", [])
         if len(weeks) <= 1:
+            # 此為新電影，需另存電影資訊
             df_info = pd.DataFrame([processed_data_info])
             info_filename = f"{processed_data_info['gov_id']}_{safe_title}_{processed_data_info['atmovies_id']}.csv"
             save_csv(df_info, MOVIEINFO_GOV_PROCESSED, info_filename)
             print(f"🆕 儲存新電影資訊：{info_filename}")
 
         # Step 2️⃣：整理 weeks 票房資料
-        df_weeks = flatten_weekly_boxoffice(crawler_data,processed_data_info['gov_id'], atmovies_id)
+        df_weeks = flatten_weekly_boxoffice(
+            crawler_data, processed_data_info["gov_id"], atmovies_id
+        )
         if not df_weeks.empty:
             csv_filename = f"{processed_data_info['gov_id']}_{safe_title}_{WEEK_LABEL}_{processed_data_info['atmovies_id']}.csv"
             save_csv(df_weeks, output_dir, csv_filename)

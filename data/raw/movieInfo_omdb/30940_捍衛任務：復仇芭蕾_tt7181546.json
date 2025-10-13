@@ -1,0 +1,45 @@
+{
+  "Title": "Ballerina",
+  "Year": "2025",
+  "Rated": "R",
+  "Released": "06 Jun 2025",
+  "Runtime": "124 min",
+  "Genre": "Action, Thriller",
+  "Director": "Len Wiseman",
+  "Writer": "Shay Hatten, Derek Kolstad",
+  "Actors": "Ana de Armas, Keanu Reeves, Ian McShane",
+  "Plot": "An assassin trained in the traditions of the Ruska Roma organization sets out to seek revenge after her father's death.",
+  "Language": "English, Russian, Spanish, German",
+  "Country": "United States, Hungary",
+  "Awards": "1 win & 3 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BNzdhZmY2OTQtYWI4OC00ZThkLTlhZjAtNzE2YzRjM2Q5YjJlXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.9/10"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "59/100"
+    }
+  ],
+  "Metascore": "59",
+  "imdbRating": "6.9",
+  "imdbVotes": "105,272",
+  "imdbID": "tt7181546",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$58,051,327",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "30940",
+    "atmovies_id": "fben87181546",
+    "gov_title_zh": "捍衛任務：復仇芭蕾",
+    "gov_title_en": "BALLERINA",
+    "imdb_id": "tt7181546",
+    "source": "omdb",
+    "fetched_at": "2025-10-13 18:34:40"
+  }
+}

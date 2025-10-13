@@ -1,0 +1,41 @@
+{
+  "Title": "Eel",
+  "Year": "2014",
+  "Rated": "N/A",
+  "Released": "16 Apr 2015",
+  "Runtime": "80 min",
+  "Genre": "Drama",
+  "Director": "James Kaelan",
+  "Writer": "James Kaelan",
+  "Actors": "Nathalie Biermanns, Ty Foster, Sina J. Henrie",
+  "Plot": "N/A",
+  "Language": "English",
+  "Country": "United States",
+  "Awards": "1 nomination",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMTIzYWZiMzktODU1MS00YTQxLThmMDItODZiMzQ5ZmI3YmY3XkEyXkFqcGdeQXVyOTkyOTE4MQ@@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.8/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "6.8",
+  "imdbVotes": "8",
+  "imdbID": "tt2546132",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "27106",
+    "atmovies_id": "fecn21718805",
+    "gov_title_zh": "河鰻",
+    "gov_title_en": "EEL",
+    "imdb_id": "tt2546132",
+    "source": "omdb",
+    "fetched_at": "2025-10-13 18:34:19"
+  }
+}

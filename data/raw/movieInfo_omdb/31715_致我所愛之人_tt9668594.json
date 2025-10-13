@@ -1,0 +1,41 @@
+{
+  "Title": "Belonging",
+  "Year": "2019",
+  "Rated": "N/A",
+  "Released": "04 Apr 2019",
+  "Runtime": "73 min",
+  "Genre": "Crime, Drama, Romance",
+  "Director": "Burak Cevik",
+  "Writer": "Burak Cevik",
+  "Actors": "Eylül Su Sapan, Çaglar Yalçinkaya",
+  "Plot": "A man recounts the murder of his future mother-in-law, how he met his lover, and what led up to the deadly crime.",
+  "Language": "Turkish",
+  "Country": "Turkey, Canada, France",
+  "Awards": "3 wins & 11 nominations",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BODlhMWRkNGEtNWE0Yi00MzdkLWJiY2MtNTBkY2UzYTNjZGVhXkEyXkFqcGdeQXVyNzM5NTI0NDk@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "5.7/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "5.7",
+  "imdbVotes": "954",
+  "imdbID": "tt9668594",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31715",
+    "atmovies_id": "fbjp34388944",
+    "gov_title_zh": "致我所愛之人",
+    "gov_title_en": "Belonging",
+    "imdb_id": "tt9668594",
+    "source": "omdb",
+    "fetched_at": "2025-10-13 18:35:30"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "Title": "One and Only",
+  "Year": "2023",
+  "Rated": "N/A",
+  "Released": "28 Jul 2023",
+  "Runtime": "124 min",
+  "Genre": "Comedy, Drama, Sport",
+  "Director": "Da Peng",
+  "Writer": "Da Peng, Biao Su",
+  "Actors": "Huang Bo, Yibo Wang, Mintao Liu",
+  "Plot": "Ding Lei, a street dance veteran, invites a young entertainer to join his club. However, they are faced with a series of challenges.",
+  "Language": "Mandarin",
+  "Country": "China",
+  "Awards": "21 wins & 21 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BY2M1MDRlMTItZDIxNS00YjJlLTg0ZGYtMjg4M2ExNTNiZWMzXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.8/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "6.8",
+  "imdbVotes": "3,189",
+  "imdbID": "tt20865078",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31541",
+    "atmovies_id": "focn20865078",
+    "gov_title_zh": "熱烈",
+    "gov_title_en": "One and Only",
+    "imdb_id": "tt20865078",
+    "source": "omdb",
+    "fetched_at": "2025-10-13 18:35:07"
+  }
+}

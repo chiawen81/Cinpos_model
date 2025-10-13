@@ -1,0 +1,41 @@
+{
+  "Title": "Exit 8",
+  "Year": "2016",
+  "Rated": "NOT RATED",
+  "Released": "29 Jul 2016",
+  "Runtime": "23 min",
+  "Genre": "Short, Thriller",
+  "Director": "Franklin Jones",
+  "Writer": "Franklin Jones",
+  "Actors": "Travis Bailey, Samantha Elkins, Hannah Lees, Evan Simmons",
+  "Plot": "A young woman flees through the summer night with child in tow, desperate to escape her past. As dawn approaches, all that stands between them and a new life are the mysteries lying ahead.",
+  "Language": "English",
+  "Country": "USA",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMDI0MzE1NmUtNWU3ZC00ZDQ3LWI1MWMtMDM1MGZhYjRjOTlhXkEyXkFqcGdeQXVyNjc2NDY0Mzk@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "4.2/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "4.2",
+  "imdbVotes": "5",
+  "imdbID": "tt5889974",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31836",
+    "atmovies_id": "fejp35222590",
+    "gov_title_zh": "8號出口",
+    "gov_title_en": "Exit 8",
+    "imdb_id": "tt5889974",
+    "source": "omdb",
+    "fetched_at": "2025-10-13 18:36:12"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "Title": "The Tutor",
+  "Year": "2023",
+  "Rated": "R",
+  "Released": "08 Jul 2023",
+  "Runtime": "92 min",
+  "Genre": "Mystery, Thriller",
+  "Director": "Jordan Ross",
+  "Writer": "Ryan King",
+  "Actors": "Garrett Hedlund, Noah Schnapp, Victoria Justice",
+  "Plot": "A tutor is being assigned an unexpected task at a mansion and finds himself struggling with the obsessions of his student, who threatens to expose his darkest secrets.",
+  "Language": "English",
+  "Country": "United States",
+  "Awards": "2 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMDJjZmIwMzgtNDBjZC00YWE3LWFlNzMtM2MyOTdiZWJhYWY3XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "4.8/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "19%"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "4.8",
+  "imdbVotes": "4,820",
+  "imdbID": "tt19637278",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31662",
+    "atmovies_id": "ftth36590795",
+    "gov_title_zh": "淒厲人師",
+    "gov_title_en": "The Tutor",
+    "imdb_id": "tt19637278",
+    "source": "omdb",
+    "fetched_at": "2025-10-13 18:35:15"
+  }
+}

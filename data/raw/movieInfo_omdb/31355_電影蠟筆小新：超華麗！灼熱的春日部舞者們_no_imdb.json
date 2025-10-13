@@ -1,0 +1,13 @@
+{
+  "Response": "False",
+  "Error": "Movie not found!",
+  "crawl_note": {
+    "gov_id": "31355",
+    "atmovies_id": "fcjp35009463",
+    "gov_title_zh": "電影蠟筆小新：超華麗！灼熱的春日部舞者們",
+    "gov_title_en": "CRAYON SHINCHAN THE MOVIE: SUPER HOT! THE SPICY KASUKABE DANCERS",
+    "imdb_id": "no_imdb",
+    "source": "omdb",
+    "fetched_at": "2025-10-13 18:34:53"
+  }
+}

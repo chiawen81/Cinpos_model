@@ -36,8 +36,8 @@ def parse_movie_info(movie_data: dict,atmovies_id: str) -> dict:
     return {
         "atmovies_id": atmovies_id,
         "gov_id": movie_data.get("movieId", ""),
-        "title_zh": movie_data.get("name", ""),
-        "title_en": movie_data.get("originalName", ""),
+        "gov_title_zh": movie_data.get("name", ""),
+        "gov_title_en": movie_data.get("originalName", ""),
         "region": movie_data.get("region", ""),
         "rating": movie_data.get("rating", ""),
         "release_date": movie_data.get("releaseDate", ""),
@@ -148,7 +148,7 @@ def clean_boxoffice_permovie():
             continue
 
         processed_data_info = parse_movie_info(crawler_data, atmovies_id)
-        safe_title = clean_filename(processed_data_info["title_zh"] or processed_data_info["title_en"] or "unknown")
+        safe_title = clean_filename(processed_data_info["gov_title_zh"] or processed_data_info["gov_title_en"] or "unknown")
 
         # Step 1️⃣：若僅有一週或尚未有票房紀錄 → 存電影資訊
         weeks = crawler_data.get("weeks", [])

@@ -8,12 +8,31 @@
     "classes": null,
     "releaseDate": "2025-10-02",
     "publisher": "美商台灣索尼影業發行股份有限公司台灣分公司",
-    "amountInThisWeek": 54000.0,
-    "totalAmount": 54000.0,
+    "amountInThisWeek": 1056765.0,
+    "totalAmount": 1056765.0,
     "filmClasses": null,
     "filmLength": 6540,
     "bannerStoredName": null,
-    "filmMembers": [],
+    "filmMembers": [
+      {
+        "id": 12185,
+        "typeName": "演員",
+        "name": "瑪格羅比",
+        "originalName": "Margot Robbie"
+      },
+      {
+        "id": 10568,
+        "typeName": "演員",
+        "name": "柯林法洛",
+        "originalName": "Colin Farrell (Ⅰ)"
+      },
+      {
+        "id": 82528,
+        "typeName": "導演",
+        "name": "名田高梧",
+        "originalName": "Kogonada"
+      }
+    ],
     "weekends": [
       {
         "date": "2025-10-03~2025-10-05",
@@ -23,6 +42,15 @@
         "totalTickets": 0,
         "rate": 0,
         "theaterCount": 0
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 828870.0,
+        "tickets": 3220,
+        "totalAmount": 828870.0,
+        "totalTickets": 3220,
+        "rate": 0,
+        "theaterCount": 76
       }
     ],
     "weeks": [
@@ -34,6 +62,15 @@
         "totalTickets": 180,
         "rate": 0,
         "theaterCount": 1
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 1002765.0,
+        "tickets": 3909,
+        "totalAmount": 1056765.0,
+        "totalTickets": 4089,
+        "rate": 17.56972222222222,
+        "theaterCount": 76
       }
     ]
   },

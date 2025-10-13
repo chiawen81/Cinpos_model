@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-09-05",
     "publisher": "曼迪傳播股份有限公司",
-    "amountInThisWeek": 1918417.0,
-    "totalAmount": 1918417.0,
+    "amountInThisWeek": 1961062.0,
+    "totalAmount": 1961062.0,
     "filmClasses": null,
     "filmLength": 4200,
     "bannerStoredName": null,
@@ -62,12 +62,12 @@
       },
       {
         "date": "2025-10-10~2025-10-12",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 894186.0,
-        "totalTickets": 3276,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 40300.0,
+        "tickets": 150,
+        "totalAmount": 934486.0,
+        "totalTickets": 3426,
+        "rate": -0.1360830046304236,
+        "theaterCount": 3
       }
     ],
     "weeks": [
@@ -118,11 +118,11 @@
       },
       {
         "date": "2025-10-06~2025-10-12",
-        "amount": 46114.0,
-        "tickets": 167,
-        "totalAmount": 1918417.0,
-        "totalTickets": 7175,
-        "rate": -0.6566216165903421,
+        "amount": 88759.0,
+        "tickets": 326,
+        "totalAmount": 1961062.0,
+        "totalTickets": 7334,
+        "rate": -0.33907442570460555,
         "theaterCount": 7
       }
     ]

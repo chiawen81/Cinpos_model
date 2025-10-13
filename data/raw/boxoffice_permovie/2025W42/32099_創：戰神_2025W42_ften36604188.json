@@ -8,32 +8,75 @@
     "classes": null,
     "releaseDate": "2025-10-08",
     "publisher": "台灣華特迪士尼股份有限公司",
-    "amountInThisWeek": 74200.0,
-    "totalAmount": 74200.0,
+    "amountInThisWeek": 19442221.0,
+    "totalAmount": 19442221.0,
     "filmClasses": null,
     "filmLength": 7080,
     "bannerStoredName": null,
-    "filmMembers": [],
+    "filmMembers": [
+      {
+        "id": 20477,
+        "typeName": "演員",
+        "name": "吉蓮安德森",
+        "originalName": "Gillian Anderson"
+      },
+      {
+        "id": 13514,
+        "typeName": "演員",
+        "name": "傑瑞德雷托",
+        "originalName": "Jared Leto"
+      },
+      {
+        "id": 10458,
+        "typeName": "演員",
+        "name": "伊凡彼得斯",
+        "originalName": "Evan Peters"
+      },
+      {
+        "id": 82526,
+        "typeName": "演員",
+        "name": "茱蒂透納史密斯",
+        "originalName": "Jodie Turner-Smith"
+      },
+      {
+        "id": 20737,
+        "typeName": "導演",
+        "name": "喬奇姆羅寧",
+        "originalName": "Joachim Ronning"
+      },
+      {
+        "id": 81485,
+        "typeName": "演員",
+        "name": "葛麗塔李",
+        "originalName": "Greta Lee"
+      },
+      {
+        "id": 14210,
+        "typeName": "演員",
+        "name": "傑夫布里吉",
+        "originalName": "Jeff Bridges"
+      }
+    ],
     "weekends": [
       {
         "date": "2025-10-10~2025-10-12",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 0,
-        "totalTickets": 0,
+        "amount": 15421399.0,
+        "tickets": 47528,
+        "totalAmount": 15421399.0,
+        "totalTickets": 47528,
         "rate": 0,
-        "theaterCount": 0
+        "theaterCount": 93
       }
     ],
     "weeks": [
       {
         "date": "2025-10-06~2025-10-12",
-        "amount": 74200.0,
-        "tickets": 140,
-        "totalAmount": 74200.0,
-        "totalTickets": 140,
+        "amount": 19442221.0,
+        "tickets": 59827,
+        "totalAmount": 19442221.0,
+        "totalTickets": 59827,
         "rate": 0,
-        "theaterCount": 1
+        "theaterCount": 93
       }
     ]
   },

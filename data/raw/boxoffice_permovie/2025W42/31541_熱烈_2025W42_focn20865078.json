@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-09-13",
     "publisher": "恆星多媒體股份有限公司",
-    "amountInThisWeek": 1892607.0,
-    "totalAmount": 1892607.0,
+    "amountInThisWeek": 2071214.0,
+    "totalAmount": 2071214.0,
     "filmClasses": null,
     "filmLength": 7380,
     "bannerStoredName": null,
@@ -78,12 +78,12 @@
       },
       {
         "date": "2025-10-10~2025-10-12",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 1409275.0,
-        "totalTickets": 5549,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 167437.0,
+        "tickets": 625,
+        "totalAmount": 1576712.0,
+        "totalTickets": 6174,
+        "rate": -0.47687380885431313,
+        "theaterCount": 7
       }
     ],
     "weeks": [
@@ -125,11 +125,11 @@
       },
       {
         "date": "2025-10-06~2025-10-12",
-        "amount": 166749.0,
-        "tickets": 648,
-        "totalAmount": 1892607.0,
-        "totalTickets": 7419,
-        "rate": -0.7380849536560733,
+        "amount": 345356.0,
+        "tickets": 1317,
+        "totalAmount": 2071214.0,
+        "totalTickets": 8088,
+        "rate": -0.4575443766070371,
         "theaterCount": 7
       }
     ]

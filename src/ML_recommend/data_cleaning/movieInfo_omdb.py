@@ -2,6 +2,9 @@
 目標：清洗 OMDb JSON 檔，整理為結構化 CSV
 輸入：data/raw/movieInfo_omdb/*.json
 輸出：data/processed/movieInfo_omdb/movieInfo_omdb.csv
+清洗動作：
+    - 轉日期格式
+    - 整理欄位資訊
 """
 
 import os

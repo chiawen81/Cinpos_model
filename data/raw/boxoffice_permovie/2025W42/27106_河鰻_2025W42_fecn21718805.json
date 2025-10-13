@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-09-25",
     "publisher": "底噪影像有限公司",
-    "amountInThisWeek": 645444.0,
-    "totalAmount": 645444.0,
+    "amountInThisWeek": 710297.0,
+    "totalAmount": 710297.0,
     "filmClasses": null,
     "filmLength": 6120,
     "bannerStoredName": null,
@@ -54,12 +54,12 @@
       },
       {
         "date": "2025-10-10~2025-10-12",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 105516.0,
-        "totalTickets": 401,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 50823.0,
+        "tickets": 196,
+        "totalAmount": 156339.0,
+        "totalTickets": 597,
+        "rate": -0.5183384510406005,
+        "theaterCount": 14
       }
     ],
     "weeks": [
@@ -83,11 +83,11 @@
       },
       {
         "date": "2025-10-06~2025-10-12",
-        "amount": 111608.0,
-        "tickets": 473,
-        "totalAmount": 645444.0,
-        "totalTickets": 2203,
-        "rate": -0.7332096687829879,
+        "amount": 176461.0,
+        "tickets": 726,
+        "totalAmount": 710297.0,
+        "totalTickets": 2456,
+        "rate": -0.5781835653637267,
         "theaterCount": 14
       }
     ]

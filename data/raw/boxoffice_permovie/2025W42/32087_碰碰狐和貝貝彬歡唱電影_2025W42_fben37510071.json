@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-10-04",
     "publisher": "香港商甲上娛樂有限公司台灣分公司",
-    "amountInThisWeek": 86655.0,
-    "totalAmount": 86655.0,
+    "amountInThisWeek": 4122804.0,
+    "totalAmount": 4122804.0,
     "filmClasses": null,
     "filmLength": 3840,
     "bannerStoredName": null,
@@ -23,6 +23,15 @@
         "totalTickets": 316,
         "rate": 0,
         "theaterCount": 1
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 3831094.0,
+        "tickets": 14161,
+        "totalAmount": 3917749.0,
+        "totalTickets": 14477,
+        "rate": 43.21088223414691,
+        "theaterCount": 44
       }
     ],
     "weeks": [
@@ -34,6 +43,15 @@
         "totalTickets": 316,
         "rate": 0,
         "theaterCount": 1
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 4036149.0,
+        "tickets": 14927,
+        "totalAmount": 4122804.0,
+        "totalTickets": 15243,
+        "rate": 45.577220010386014,
+        "theaterCount": 44
       }
     ]
   },

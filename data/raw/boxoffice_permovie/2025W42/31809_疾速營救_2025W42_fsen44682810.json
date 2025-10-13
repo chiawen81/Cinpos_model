@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-09-26",
     "publisher": "英屬維京群島商高捷全球開發有限公司 台灣分公司",
-    "amountInThisWeek": 1185378.0,
-    "totalAmount": 1185378.0,
+    "amountInThisWeek": 1195643.0,
+    "totalAmount": 1195643.0,
     "filmClasses": null,
     "filmLength": 6240,
     "bannerStoredName": null,
@@ -54,12 +54,12 @@
       },
       {
         "date": "2025-10-10~2025-10-12",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 670832.0,
-        "totalTickets": 2781,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 10005.0,
+        "tickets": 36,
+        "totalAmount": 680837.0,
+        "totalTickets": 2817,
+        "rate": -0.8757019331113651,
+        "theaterCount": 2
       }
     ],
     "weeks": [
@@ -83,11 +83,11 @@
       },
       {
         "date": "2025-10-06~2025-10-12",
-        "amount": 59633.0,
-        "tickets": 247,
-        "totalAmount": 1185378.0,
-        "totalTickets": 4893,
-        "rate": -0.8886207637209216,
+        "amount": 69898.0,
+        "tickets": 284,
+        "totalAmount": 1195643.0,
+        "totalTickets": 4930,
+        "rate": -0.8694483615207179,
         "theaterCount": 35
       }
     ]

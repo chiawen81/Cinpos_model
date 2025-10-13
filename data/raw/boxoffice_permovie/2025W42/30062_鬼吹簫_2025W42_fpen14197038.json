@@ -1,0 +1,67 @@
+{
+  "data": {
+    "movieId": "30062",
+    "name": "鬼吹簫",
+    "originalName": "THE PIPER",
+    "region": "美國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-09",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 263012.0,
+    "totalAmount": 263012.0,
+    "filmClasses": null,
+    "filmLength": 5700,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 17434,
+        "typeName": "演員",
+        "name": "朱利安山德斯",
+        "originalName": "Julian Sands"
+      },
+      {
+        "id": 15440,
+        "typeName": "演員",
+        "name": "夏綠蒂霍普",
+        "originalName": "Charlotte Hope"
+      },
+      {
+        "id": 82532,
+        "typeName": "編劇",
+        "name": "埃林格爾托羅森",
+        "originalName": "Erlingur Thoroddsen"
+      },
+      {
+        "id": 82532,
+        "typeName": "導演",
+        "name": "埃林格爾托羅森",
+        "originalName": "Erlingur Thoroddsen"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 231775.0,
+        "tickets": 894,
+        "totalAmount": 231775.0,
+        "totalTickets": 894,
+        "rate": 0,
+        "theaterCount": 52
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 263012.0,
+        "tickets": 1021,
+        "totalAmount": 263012.0,
+        "totalTickets": 1021,
+        "rate": 0,
+        "theaterCount": 52
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

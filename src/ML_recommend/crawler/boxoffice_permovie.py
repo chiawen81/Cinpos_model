@@ -204,12 +204,12 @@ def fetch_boxoffice_permovie() -> None:
         print(f"⚠️ 找不到本週首輪電影清單：{firstRunList_filePath}")
         return
 
-    df_movies = pd.read_csv(firstRunList_filePath)
-    print(f"📋 共 {len(df_movies)} 部電影待處理\n")
+    df_firstRunList_movies = pd.read_csv(firstRunList_filePath)
+    print(f"📋 共 {len(df_firstRunList_movies)} 部電影待處理\n")
 
     # 逐部整理電影資料
-    for _, row in df_movies.iterrows():
-        title = row["title_zh"]
+    for _, row in df_firstRunList_movies.iterrows():
+        title = row["atmovies_title_zh"]
         id=row["atmovies_id"]
         safe_title = clean_filename(title)
         release_date = row.get("release_date", "")
@@ -230,15 +230,15 @@ def fetch_boxoffice_permovie() -> None:
             continue
 
         # Step 3️⃣：抓票房資料
-        data = fetch_boxoffice_data(film_id)
+        gov_crawler_data = fetch_boxoffice_data(film_id)
         # 將未找到ID的資料加入 missing_rows
-        if not data:
+        if not gov_crawler_data:
             missing_rows.append(mark_errorType(row, "notFoundData"))
             continue
 
         # Step 3: 儲存 JSON（每部電影一檔）
         file_name = f"{film_id}_{safe_title}_{week_label}_{row["atmovies_id"]}.json"
-        save_json(data, output_dir, file_name)
+        save_json(gov_crawler_data, output_dir, file_name)
 
         print(f"✅ 已儲存：{file_name}")
         time.sleep(SLEEP_INTERVAL)

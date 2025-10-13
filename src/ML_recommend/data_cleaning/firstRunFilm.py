@@ -37,15 +37,15 @@ def clean_first_run_data():
 
     # === 建立 DataFrame ===
     df = pd.DataFrame(
-        data, columns=["title_zh", "atmovies_id", "release_date", "screen_count", "source_url"]
+        data, columns=["atmovies_title_zh", "atmovies_id", "release_date", "screen_count", "source_url"]
     )
 
     # === 清理資料 ===
-    df = df.dropna(subset=["title_zh"])  # 移除無片名資料列，確保欄位完整性
+    df = df.dropna(subset=["atmovies_title_zh"])  # 移除無片名資料列，確保欄位完整性
     df["release_date"] = df["release_date"].apply(normalize_date)  # 統一日期格式（YYYY-MM-DD）
-    df = df.drop_duplicates(subset=["title_zh", "release_date"], keep="first")  # 去除重複電影資料
+    df = df.drop_duplicates(subset=["atmovies_title_zh", "release_date"], keep="first")  # 去除重複電影資料
     df = df.sort_values(by="release_date", ascending=True)  # 按上映日期排序
-    df = df[["title_zh", "atmovies_id", "release_date", "screen_count", "source_url"]]  # 欄位排序統一
+    df = df[["atmovies_title_zh", "atmovies_id", "release_date", "screen_count", "source_url"]]  # 欄位排序統一
 
     # === 輸出結果 ===
     csv_filename = f"firstRun_{week_label}.csv"

@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-09-26",
     "publisher": "車庫娛樂股份有限公司",
-    "amountInThisWeek": 1185930.0,
-    "totalAmount": 1185930.0,
+    "amountInThisWeek": 1195280.0,
+    "totalAmount": 1195280.0,
     "filmClasses": null,
     "filmLength": 6540,
     "bannerStoredName": null,
@@ -66,12 +66,12 @@
       },
       {
         "date": "2025-10-10~2025-10-12",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 688535.0,
-        "totalTickets": 2547,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 8090.0,
+        "tickets": 35,
+        "totalAmount": 696625.0,
+        "totalTickets": 2582,
+        "rate": -0.938193791875807,
+        "theaterCount": 2
       }
     ],
     "weeks": [
@@ -95,11 +95,11 @@
       },
       {
         "date": "2025-10-06~2025-10-12",
-        "amount": 90845.0,
-        "tickets": 331,
-        "totalAmount": 1185930.0,
-        "totalTickets": 4416,
-        "rate": -0.8309681212705348,
+        "amount": 100195.0,
+        "tickets": 372,
+        "totalAmount": 1195280.0,
+        "totalTickets": 4457,
+        "rate": -0.8135709275216162,
         "theaterCount": 22
       }
     ]

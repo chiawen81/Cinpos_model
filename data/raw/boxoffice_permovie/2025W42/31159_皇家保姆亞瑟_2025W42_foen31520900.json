@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-10-03",
     "publisher": "可樂藝術文創股份有限公司",
-    "amountInThisWeek": 129950.0,
-    "totalAmount": 129950.0,
+    "amountInThisWeek": 150015.0,
+    "totalAmount": 150015.0,
     "filmClasses": null,
     "filmLength": 5100,
     "bannerStoredName": null,
@@ -51,12 +51,12 @@
       },
       {
         "date": "2025-10-10~2025-10-12",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 83803.0,
-        "totalTickets": 317,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 20065.0,
+        "tickets": 86,
+        "totalAmount": 103868.0,
+        "totalTickets": 403,
+        "rate": -0.7605694306886388,
+        "theaterCount": 6
       }
     ],
     "weeks": [
@@ -71,11 +71,11 @@
       },
       {
         "date": "2025-10-06~2025-10-12",
-        "amount": 46147.0,
-        "tickets": 175,
-        "totalAmount": 129950.0,
-        "totalTickets": 492,
-        "rate": -0.4493395224514635,
+        "amount": 66212.0,
+        "tickets": 261,
+        "totalAmount": 150015.0,
+        "totalTickets": 578,
+        "rate": -0.20990895314010238,
         "theaterCount": 18
       }
     ]

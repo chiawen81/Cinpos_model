@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-08-30",
     "publisher": "台灣幸福科學出版有限公司",
-    "amountInThisWeek": 4626381.0,
-    "totalAmount": 4626381.0,
+    "amountInThisWeek": 4717916.0,
+    "totalAmount": 4717916.0,
     "filmClasses": null,
     "filmLength": 7140,
     "bannerStoredName": null,
@@ -96,12 +96,12 @@
       },
       {
         "date": "2025-10-10~2025-10-12",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 2866642.0,
-        "totalTickets": 12640,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 83255.0,
+        "tickets": 367,
+        "totalAmount": 2949897.0,
+        "totalTickets": 13007,
+        "rate": -0.2523393861019811,
+        "theaterCount": 6
       }
     ],
     "weeks": [
@@ -161,12 +161,12 @@
       },
       {
         "date": "2025-10-06~2025-10-12",
-        "amount": 180144.0,
-        "tickets": 786,
-        "totalAmount": 4626381.0,
-        "totalTickets": 20395,
-        "rate": -0.700403632862068,
-        "theaterCount": 15
+        "amount": 271679.0,
+        "tickets": 1190,
+        "totalAmount": 4717916.0,
+        "totalTickets": 20799,
+        "rate": -0.5481723430829435,
+        "theaterCount": 16
       }
     ]
   },

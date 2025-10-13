@@ -45,7 +45,7 @@ def format_crawler_data(li):
 
     return {
         "atmovies_id": movie_id,
-        "title_zh": title,
+        "atmovies_title_zh": title,
         "release_date": release_date,
         "screen_count": theater_count,
         "source_url": f"{BASE_URL}/movie/{movie_id}/",

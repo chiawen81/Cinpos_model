@@ -1,0 +1,38 @@
+{
+  "Title": "Coyotes",
+  "Year": "2021–",
+  "Rated": "N/A",
+  "Released": "19 Mar 2021",
+  "Runtime": "N/A",
+  "Genre": "Drama",
+  "Director": "N/A",
+  "Writer": "Christophe Beaujean, Axel du Bus de Warnaffe, Vincent Lavachery",
+  "Actors": "Olivia Castanho, Louka Minnella, Andria Kozica",
+  "Plot": "A scout patrol stumbles upon diamonds during a camp. Torn between give them back, sharing them, or keeping them, each member questions his own morality. Meanwhile, there is a danger for the wasps: those who lost them are willing to do anything to find them.",
+  "Language": "French",
+  "Country": "Luxembourg, Belgium",
+  "Awards": "1 nomination total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BOTAwZWYxNGUtM2NhZS00OTJjLTkyNDAtYWE1MDk0MTM1Y2MwXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "5.2/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "5.2",
+  "imdbVotes": "382",
+  "imdbID": "tt13847924",
+  "Type": "series",
+  "totalSeasons": "1",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "32103",
+    "atmovies_id": "fcen34581826",
+    "gov_title_zh": "狼來了",
+    "gov_title_en": "COYOTES",
+    "imdb_id": "tt13847924",
+    "source": "omdb",
+    "fetched_at": "2025-10-13 16:21:17"
+  }
+}

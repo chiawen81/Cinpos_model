@@ -33,14 +33,14 @@ def clean_filename(name: str) -> str:
 # 儲存與讀取 JSON
 # --------------------------------------------------------
 # 儲存 JSON 檔
-def save_json(data: dict, dir_path: str, filename: str) -> str:
+def save_json(data: dict, dir_path: str, filename: str, topic: str = "") -> str:
     """儲存 JSON 檔，回傳實際儲存路徑。"""
     ensure_dir(dir_path)
     file_path = os.path.join(dir_path, filename)
     try:
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
-        print(f"✅ 已儲存 JSON：{file_path}")
+        print(f"✅ 已儲存 JSON{topic}：{file_path}")
     except Exception as e:
         print(f"❌ 儲存 JSON 失敗：{file_path}\n{e}")
     return file_path
@@ -87,9 +87,5 @@ def get_latest_file(dir_path: str, ext: str = "json") -> str | None:
 
 
 # --------------------------------------------------------
-# 其他輔助函式
+# 其他
 # --------------------------------------------------------
-def timestamped_filename(prefix: str, ext: str) -> str:
-    """建立自動時間戳檔名，例如：boxoffice_20251010.json"""
-    now = datetime.now()
-    return f"{prefix}_{now.strftime('%Y%m%d')}.{ext}"

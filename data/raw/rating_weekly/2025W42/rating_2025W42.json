@@ -19,11 +19,10 @@
     "crawl_note": {
       "gov_id": 22894.0,
       "atmovies_id": "fyen00244316",
-      "gov_title_zh": "一一",
-      "gov_title_en": "YIYI-A ONE AND A TWO",
+      "atmovies_title_zh": "一一",
       "imdb_id": "tt0244316",
       "source": "omdb",
-      "fetched_at": "2025-10-13 21:59:38"
+      "fetched_at": "2025-10-14 21:57:05"
     }
   },
   {
@@ -50,11 +49,10 @@
     "crawl_note": {
       "gov_id": 13460.0,
       "atmovies_id": "fmen38772262",
-      "gov_title_zh": "仲夏魘",
-      "gov_title_en": "MIDSOMMAR",
+      "atmovies_title_zh": "仲夏魘",
       "imdb_id": "tt8772262",
       "source": "omdb",
-      "fetched_at": "2025-10-13 21:59:42"
+      "fetched_at": "2025-10-14 21:57:07"
     }
   },
   {
@@ -81,11 +79,10 @@
     "crawl_note": {
       "gov_id": 31523.0,
       "atmovies_id": "flus43783958",
-      "gov_title_zh": "樂來越愛你",
-      "gov_title_en": "La La Land",
+      "atmovies_title_zh": "樂來越愛你",
       "imdb_id": "tt3783958",
       "source": "omdb",
-      "fetched_at": "2025-10-13 21:59:44"
+      "fetched_at": "2025-10-14 21:57:08"
     }
   },
   {
@@ -112,11 +109,10 @@
     "crawl_note": {
       "gov_id": 29513.0,
       "atmovies_id": "fhen28015403",
-      "gov_title_zh": "異教詭屋",
-      "gov_title_en": "HERETIC",
+      "atmovies_title_zh": "異教詭屋",
       "imdb_id": "tt28015403",
       "source": "omdb",
-      "fetched_at": "2025-10-13 21:59:46"
+      "fetched_at": "2025-10-14 21:57:10"
     }
   },
   {
@@ -139,11 +135,27 @@
     "crawl_note": {
       "gov_id": 30940.0,
       "atmovies_id": "fben87181546",
-      "gov_title_zh": "捍衛任務：復仇芭蕾",
-      "gov_title_en": "BALLERINA",
+      "atmovies_title_zh": "復仇芭蕾",
       "imdb_id": "tt7181546",
       "source": "omdb",
-      "fetched_at": "2025-10-13 21:59:48"
+      "fetched_at": "2025-10-14 21:57:11"
+    }
+  },
+  {
+    "title": "Zao shan zhe - Shi ji de du zhu",
+    "year": "2025",
+    "imdb_id": "tt37150285",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 30704.0,
+      "atmovies_id": "facn99839420",
+      "atmovies_title_zh": "造山者－世紀的賭注",
+      "imdb_id": "tt37150285",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:57:14"
     }
   },
   {
@@ -166,11 +178,10 @@
     "crawl_note": {
       "gov_id": 30008.0,
       "atmovies_id": "ficn28853268",
-      "gov_title_zh": "看不見的國家",
-      "gov_title_en": "Invisible Nation",
+      "atmovies_title_zh": "看不見的國家",
       "imdb_id": "tt28853268",
       "source": "omdb",
-      "fetched_at": "2025-10-13 21:59:53"
+      "fetched_at": "2025-10-14 21:57:15"
     }
   },
   {
@@ -197,11 +208,32 @@
     "crawl_note": {
       "gov_id": 16264.0,
       "atmovies_id": "faone0411161",
-      "gov_title_zh": "阿基拉",
-      "gov_title_en": "AKIRA",
+      "atmovies_title_zh": "阿基拉",
       "imdb_id": "tt0094625",
       "source": "omdb",
-      "fetched_at": "2025-10-13 21:59:54"
+      "fetched_at": "2025-10-14 21:57:17"
+    }
+  },
+  {
+    "title": "Detective Conan: One-Eyed Flashback",
+    "year": "2025",
+    "imdb_id": "tt35444710",
+    "imdb_rating": "6.9",
+    "imdb_votes": "622",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.9/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 30809.0,
+      "atmovies_id": "fdjp35891502",
+      "atmovies_title_zh": "名偵探柯南：獨眼的殘像",
+      "imdb_id": "tt35444710",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:57:19"
     }
   },
   {
@@ -228,11 +260,27 @@
     "crawl_note": {
       "gov_id": 31027.0,
       "atmovies_id": "ffen16311594",
-      "gov_title_zh": "F1電影",
-      "gov_title_en": "F1",
+      "atmovies_title_zh": "F1電影",
       "imdb_id": "tt16311594",
       "source": "omdb",
-      "fetched_at": "2025-10-13 21:59:57"
+      "fetched_at": "2025-10-14 21:57:20"
+    }
+  },
+  {
+    "title": "Doraemon: Nobita's Art World Tales",
+    "year": "2025",
+    "imdb_id": "tt33512868",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31190.0,
+      "atmovies_id": "fdjp33512868",
+      "atmovies_title_zh": "大雄的繪畫世界物語",
+      "imdb_id": "tt33512868",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:57:22"
     }
   },
   {
@@ -246,11 +294,57 @@
     "crawl_note": {
       "gov_id": 30560.0,
       "atmovies_id": "fajp33477504",
-      "gov_title_zh": "長椅小情歌",
-      "gov_title_en": "AT THE BENCH",
+      "atmovies_title_zh": "長椅小情歌",
       "imdb_id": "tt33477504",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:01"
+      "fetched_at": "2025-10-14 21:57:23"
+    }
+  },
+  {
+    "title": "Uta No Prince-Sama: Maji Love Taboo Night Xxxx",
+    "year": "2025",
+    "imdb_id": "tt35652414",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31712.0,
+      "atmovies_id": "fmjp35652414",
+      "atmovies_title_zh": "劇場版 歌之☆王子殿下♪ TABOO NIGHT XXXX",
+      "imdb_id": "tt35652414",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:57:25"
+    }
+  },
+  {
+    "title": "Demon Slayer: Kimetsu no Yaiba- The Movie - Infinity Castle",
+    "year": "2025",
+    "imdb_id": "tt32820897",
+    "imdb_rating": "8.5",
+    "imdb_votes": "43,310",
+    "metascore": "67",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.5/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "98%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "67/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31365.0,
+      "atmovies_id": "fdjp32820897",
+      "atmovies_title_zh": "「鬼滅之刃」 猗窩座再襲",
+      "imdb_id": "tt32820897",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:57:27"
     }
   },
   {
@@ -277,11 +371,61 @@
     "crawl_note": {
       "gov_id": 31364.0,
       "atmovies_id": "fwen26581740",
-      "gov_title_zh": "凶器",
-      "gov_title_en": "WEAPONS",
+      "atmovies_title_zh": "凶器",
       "imdb_id": "tt26581740",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:04"
+      "fetched_at": "2025-10-14 21:57:28"
+    }
+  },
+  {
+    "title": "Kak-thâu: Tàu-tin-ê",
+    "year": "2025",
+    "imdb_id": "tt37998920",
+    "imdb_rating": "N/A",
+    "imdb_votes": "11",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31474.0,
+      "atmovies_id": "fgcn53656183",
+      "atmovies_title_zh": "角頭-鬥陣欸",
+      "imdb_id": "tt37998920",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:57:30"
+    }
+  },
+  {
+    "title": "Crayon Shin-chan the Movie: Super Hot! The Spicy Kasukabe Dancers",
+    "year": "2025",
+    "imdb_id": "tt35009463",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31355.0,
+      "atmovies_id": "fcjp35009463",
+      "atmovies_title_zh": "電影蠟筆小新：超華麗",
+      "imdb_id": "tt35009463",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:57:32"
+    }
+  },
+  {
+    "title": "Jin xing qu",
+    "year": "2025",
+    "imdb_id": "tt37093338",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 29882.0,
+      "atmovies_id": "fmcn37093338",
+      "atmovies_title_zh": "進行曲",
+      "imdb_id": "tt37093338",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:57:33"
     }
   },
   {
@@ -308,11 +452,10 @@
     "crawl_note": {
       "gov_id": 31402.0,
       "atmovies_id": "fmen30253473",
-      "gov_title_zh": "天作之合",
-      "gov_title_en": "MATERIALISTS",
+      "atmovies_title_zh": "天作之合",
       "imdb_id": "tt30253473",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:09"
+      "fetched_at": "2025-10-14 21:57:35"
     }
   },
   {
@@ -335,11 +478,10 @@
     "crawl_note": {
       "gov_id": 31596.0,
       "atmovies_id": "fcen22898462",
-      "gov_title_zh": "厲陰宅：最終聖事",
-      "gov_title_en": "The Conjuring：Last Rites",
+      "atmovies_title_zh": "厲陰宅：最終聖事",
       "imdb_id": "tt22898462",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:10"
+      "fetched_at": "2025-10-14 21:57:37"
     }
   },
   {
@@ -358,11 +500,10 @@
     "crawl_note": {
       "gov_id": 31685.0,
       "atmovies_id": "fjjp36956670",
-      "gov_title_zh": "劇場版 咒術迴戰 懷玉・玉折",
-      "gov_title_en": "JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie",
+      "atmovies_title_zh": "劇場版 咒術迴戰 懷玉．玉折",
       "imdb_id": "tt36956670",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:12"
+      "fetched_at": "2025-10-14 21:57:38"
     }
   },
   {
@@ -381,11 +522,10 @@
     "crawl_note": {
       "gov_id": 31715.0,
       "atmovies_id": "fbjp34388944",
-      "gov_title_zh": "致我所愛之人",
-      "gov_title_en": "Belonging",
+      "atmovies_title_zh": "致我所愛之人",
       "imdb_id": "tt9668594",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:15"
+      "fetched_at": "2025-10-14 21:57:40"
     }
   },
   {
@@ -412,11 +552,44 @@
     "crawl_note": {
       "gov_id": 27899.0,
       "atmovies_id": "fmtw48244467",
-      "gov_title_zh": "96分鐘",
-      "gov_title_en": "96 MINUTES",
+      "atmovies_title_zh": "96分鐘",
       "imdb_id": "tt1641385",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:16"
+      "fetched_at": "2025-10-14 21:57:41"
+    }
+  },
+  {
+    "title": "Dragon Heart: Adventures Beyond This World",
+    "year": "2025",
+    "imdb_id": "tt36551651",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31520.0,
+      "atmovies_id": "fdjp36551651",
+      "atmovies_title_zh": "龍之心-靈界探訪記",
+      "imdb_id": "tt36551651",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:57:43"
+    }
+  },
+  {
+    "title": "Kobayashi-san Chi no Maid Dragon: Samishigariya no Ryu",
+    "year": "2025",
+    "imdb_id": "tt36592985",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31654.0,
+      "atmovies_id": "fmjp36592985",
+      "atmovies_title_zh": "電影版小林家的龍女僕：害怕寂寞的龍",
+      "imdb_id": "tt36592985",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:57:45"
     }
   },
   {
@@ -435,11 +608,10 @@
     "crawl_note": {
       "gov_id": 29378.0,
       "atmovies_id": "ffcn48566873",
-      "gov_title_zh": "我家的事",
-      "gov_title_en": "Family Matters",
+      "atmovies_title_zh": "我家的事",
       "imdb_id": "tt0096579",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:19"
+      "fetched_at": "2025-10-14 21:57:46"
     }
   },
   {
@@ -466,11 +638,32 @@
     "crawl_note": {
       "gov_id": 31769.0,
       "atmovies_id": "flen10374610",
-      "gov_title_zh": "大競走",
-      "gov_title_en": "THE LONG WALK",
+      "atmovies_title_zh": "大競走",
       "imdb_id": "tt10374610",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:21"
+      "fetched_at": "2025-10-14 21:57:48"
+    }
+  },
+  {
+    "title": "Sugar Mill",
+    "year": "2025",
+    "imdb_id": "tt33349807",
+    "imdb_rating": "5.8",
+    "imdb_votes": "2,678",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "5.8/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31801.0,
+      "atmovies_id": "fsin33349807",
+      "atmovies_title_zh": "鬼祭",
+      "imdb_id": "tt33349807",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:57:50"
     }
   },
   {
@@ -484,11 +677,10 @@
     "crawl_note": {
       "gov_id": 31713.0,
       "atmovies_id": "fsjp34459901",
-      "gov_title_zh": "捏造：史上最惡殺人教師",
-      "gov_title_en": "SHAM",
+      "atmovies_title_zh": "捏造：史上最惡殺人教師",
       "imdb_id": "tt12617682",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:23"
+      "fetched_at": "2025-10-14 21:57:51"
     }
   },
   {
@@ -507,11 +699,10 @@
     "crawl_note": {
       "gov_id": 29380.0,
       "atmovies_id": "fbcn35332631",
-      "gov_title_zh": "失明",
-      "gov_title_en": "Blind Love",
+      "atmovies_title_zh": "失明",
       "imdb_id": "tt1294728",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:25"
+      "fetched_at": "2025-10-14 21:57:53"
     }
   },
   {
@@ -530,11 +721,10 @@
     "crawl_note": {
       "gov_id": 31836.0,
       "atmovies_id": "fejp35222590",
-      "gov_title_zh": "8號出口",
-      "gov_title_en": "Exit 8",
+      "atmovies_title_zh": "8號出口",
       "imdb_id": "tt5889974",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:27"
+      "fetched_at": "2025-10-14 21:57:55"
     }
   },
   {
@@ -553,11 +743,10 @@
     "crawl_note": {
       "gov_id": 31794.0,
       "atmovies_id": "fcjp30472557",
-      "gov_title_zh": "劇場版『鏈鋸人 蕾潔篇』",
-      "gov_title_en": "Chainsaw Man – The Movie: Reze Arc",
+      "atmovies_title_zh": "劇場版『鏈鋸人 蕾潔篇』",
       "imdb_id": "tt30472557",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:28"
+      "fetched_at": "2025-10-14 21:57:56"
     }
   },
   {
@@ -584,11 +773,10 @@
     "crawl_note": {
       "gov_id": 31797.0,
       "atmovies_id": "foen30144839",
-      "gov_title_zh": "一戰再戰",
-      "gov_title_en": "One Battle After Another",
+      "atmovies_title_zh": "一戰再戰",
       "imdb_id": "tt30144839",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:30"
+      "fetched_at": "2025-10-14 21:57:58"
     }
   },
   {
@@ -607,11 +795,10 @@
     "crawl_note": {
       "gov_id": 31809.0,
       "atmovies_id": "fsen44682810",
-      "gov_title_zh": "疾速營救",
-      "gov_title_en": "Stolen Girl",
+      "atmovies_title_zh": "疾速營救",
       "imdb_id": "tt28228082",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:31"
+      "fetched_at": "2025-10-14 21:58:00"
     }
   },
   {
@@ -625,11 +812,10 @@
     "crawl_note": {
       "gov_id": 31704.0,
       "atmovies_id": "fren35231528",
-      "gov_title_zh": "陌路兄弟",
-      "gov_title_en": "Road's End in Taiwan",
+      "atmovies_title_zh": "陌路兄弟",
       "imdb_id": "tt35231528",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:33"
+      "fetched_at": "2025-10-14 21:58:01"
     }
   },
   {
@@ -643,11 +829,10 @@
     "crawl_note": {
       "gov_id": 31745.0,
       "atmovies_id": "fpin31434122",
-      "gov_title_zh": "血怨",
-      "gov_title_en": "PEREWANGAN",
+      "atmovies_title_zh": "血怨",
       "imdb_id": "tt31434122",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:35"
+      "fetched_at": "2025-10-14 21:58:03"
     }
   },
   {
@@ -670,11 +855,10 @@
     "crawl_note": {
       "gov_id": 31767.0,
       "atmovies_id": "fuko33514451",
-      "gov_title_zh": "醜得要命",
-      "gov_title_en": "THE UGLY",
+      "atmovies_title_zh": "醜得要命",
       "imdb_id": "tt0120401",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:36"
+      "fetched_at": "2025-10-14 21:58:04"
     }
   },
   {
@@ -697,11 +881,10 @@
     "crawl_note": {
       "gov_id": 31662.0,
       "atmovies_id": "ftth36590795",
-      "gov_title_zh": "淒厲人師",
-      "gov_title_en": "The Tutor",
+      "atmovies_title_zh": "淒厲人師",
       "imdb_id": "tt19637278",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:38"
+      "fetched_at": "2025-10-14 21:58:06"
     }
   },
   {
@@ -728,11 +911,10 @@
     "crawl_note": {
       "gov_id": 31651.0,
       "atmovies_id": "ften31184028",
-      "gov_title_zh": "永遠在一起",
-      "gov_title_en": "TOGETHER",
+      "atmovies_title_zh": "永遠在一起",
       "imdb_id": "tt31184028",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:40"
+      "fetched_at": "2025-10-14 21:58:08"
     }
   },
   {
@@ -751,11 +933,10 @@
     "crawl_note": {
       "gov_id": 31541.0,
       "atmovies_id": "focn20865078",
-      "gov_title_zh": "熱烈",
-      "gov_title_en": "One and Only",
+      "atmovies_title_zh": "熱烈",
       "imdb_id": "tt20865078",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:41"
+      "fetched_at": "2025-10-14 21:58:09"
     }
   },
   {
@@ -774,11 +955,10 @@
     "crawl_note": {
       "gov_id": 31796.0,
       "atmovies_id": "fpcz10996076",
-      "gov_title_zh": "傲嬌公主的奇幻冒險",
-      "gov_title_en": "The Proud Princess",
+      "atmovies_title_zh": "傲嬌公主的奇幻冒險",
       "imdb_id": "tt0191383",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:43"
+      "fetched_at": "2025-10-14 21:58:11"
     }
   },
   {
@@ -805,11 +985,27 @@
     "crawl_note": {
       "gov_id": 31835.0,
       "atmovies_id": "fren31973693",
-      "gov_title_zh": "沒好婚姻",
-      "gov_title_en": "The Roses",
+      "atmovies_title_zh": "沒好婚姻",
       "imdb_id": "tt31973693",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:45"
+      "fetched_at": "2025-10-14 21:58:13"
+    }
+  },
+  {
+    "title": "Fushigi Dagashiya Zenitendo",
+    "year": "2024",
+    "imdb_id": "tt33256912",
+    "imdb_rating": "N/A",
+    "imdb_votes": "7",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31799.0,
+      "atmovies_id": "fsjp33256912",
+      "atmovies_title_zh": "電影版 神奇柑仔店 錢天堂",
+      "imdb_id": "tt33256912",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:58:14"
     }
   },
   {
@@ -823,11 +1019,10 @@
     "crawl_note": {
       "gov_id": 31863.0,
       "atmovies_id": "fmcn47188718",
-      "gov_title_zh": "他年她日",
-      "gov_title_en": "MEASURE IN LOVE",
+      "atmovies_title_zh": "他年她日",
       "imdb_id": "tt33830021",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:50"
+      "fetched_at": "2025-10-14 21:58:16"
     }
   },
   {
@@ -846,11 +1041,10 @@
     "crawl_note": {
       "gov_id": 31900.0,
       "atmovies_id": "fmjp32600395",
-      "gov_title_zh": "一百公尺。",
-      "gov_title_en": "100 METERS",
+      "atmovies_title_zh": "一百公尺。",
       "imdb_id": "tt5089786",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:51"
+      "fetched_at": "2025-10-14 21:58:17"
     }
   },
   {
@@ -869,11 +1063,10 @@
     "crawl_note": {
       "gov_id": 31668.0,
       "atmovies_id": "fbtw96355546",
-      "gov_title_zh": "突破_三千米的泳氣",
-      "gov_title_en": "Second Life",
+      "atmovies_title_zh": "突破：三千米的泳氣",
       "imdb_id": "tt1285248",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:53"
+      "fetched_at": "2025-10-14 21:58:19"
     }
   },
   {
@@ -887,11 +1080,10 @@
     "crawl_note": {
       "gov_id": 31776.0,
       "atmovies_id": "fscn35724819",
-      "gov_title_zh": "搗破法蘭克",
-      "gov_title_en": "Smashing Frank",
+      "atmovies_title_zh": "搗破法蘭克",
       "imdb_id": "tt35724819",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:57"
+      "fetched_at": "2025-10-14 21:58:21"
     }
   },
   {
@@ -910,11 +1102,10 @@
     "crawl_note": {
       "gov_id": 31842.0,
       "atmovies_id": "fgen32214143",
-      "gov_title_zh": "蓋比的娃娃屋大電影",
-      "gov_title_en": "GABBY'S DOLLHOUSE: THE MOVIE",
+      "atmovies_title_zh": "蓋比的娃娃屋大電影",
       "imdb_id": "tt32214143",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:00:59"
+      "fetched_at": "2025-10-14 21:58:23"
     }
   },
   {
@@ -941,11 +1132,10 @@
     "crawl_note": {
       "gov_id": 31037.0,
       "atmovies_id": "fsen11092020",
-      "gov_title_zh": "暗影部隊",
-      "gov_title_en": "SHADOW FORCE",
+      "atmovies_title_zh": "暗影部隊",
       "imdb_id": "tt11092020",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:03"
+      "fetched_at": "2025-10-14 21:58:24"
     }
   },
   {
@@ -964,11 +1154,10 @@
     "crawl_note": {
       "gov_id": 27106.0,
       "atmovies_id": "fecn21718805",
-      "gov_title_zh": "河鰻",
-      "gov_title_en": "EEL",
+      "atmovies_title_zh": "河鰻",
       "imdb_id": "tt2546132",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:06"
+      "fetched_at": "2025-10-14 21:58:26"
     }
   },
   {
@@ -982,11 +1171,10 @@
     "crawl_note": {
       "gov_id": 31159.0,
       "atmovies_id": "foen31520900",
-      "gov_title_zh": "皇家保姆亞瑟",
-      "gov_title_en": "OUT OF THE NEST",
+      "atmovies_title_zh": "皇家保姆亞瑟",
       "imdb_id": "tt31520900",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:09"
+      "fetched_at": "2025-10-14 21:58:27"
     }
   },
   {
@@ -1005,11 +1193,10 @@
     "crawl_note": {
       "gov_id": 31904.0,
       "atmovies_id": "fgjp33829458",
-      "gov_title_zh": "陰陽眼見子",
-      "gov_title_en": "THE GIRL WHO SEES",
+      "atmovies_title_zh": "陰陽眼見子",
       "imdb_id": "tt4583316",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:10"
+      "fetched_at": "2025-10-14 21:58:29"
     }
   },
   {
@@ -1028,11 +1215,10 @@
     "crawl_note": {
       "gov_id": 31702.0,
       "atmovies_id": "fdde31116299",
-      "gov_title_zh": "光",
-      "gov_title_en": "The light",
+      "atmovies_title_zh": "光",
       "imdb_id": "tt0388562",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:14"
+      "fetched_at": "2025-10-14 21:58:31"
     }
   },
   {
@@ -1051,11 +1237,27 @@
     "crawl_note": {
       "gov_id": 31808.0,
       "atmovies_id": "fjin27433995",
-      "gov_title_zh": "夢想巨無霸",
-      "gov_title_en": "Jumbo",
+      "atmovies_title_zh": "夢想巨無霸",
       "imdb_id": "tt27433995",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:16"
+      "fetched_at": "2025-10-14 21:58:32"
+    }
+  },
+  {
+    "title": "Fung lam fo saan",
+    "year": "2024",
+    "imdb_id": "tt4968738",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 32112.0,
+      "atmovies_id": "fshk44968738",
+      "atmovies_title_zh": "風林火山",
+      "imdb_id": "tt4968738",
+      "source": "omdb",
+      "fetched_at": "2025-10-14 21:58:34"
     }
   },
   {
@@ -1082,11 +1284,10 @@
     "crawl_note": {
       "gov_id": 31777.0,
       "atmovies_id": "faen13650700",
-      "gov_title_zh": "奇幻導航",
-      "gov_title_en": "A BIG BOLD BEAUTIFUL JOURNEY",
+      "atmovies_title_zh": "奇幻導航",
       "imdb_id": "tt13650700",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:19"
+      "fetched_at": "2025-10-14 21:58:36"
     }
   },
   {
@@ -1105,11 +1306,10 @@
     "crawl_note": {
       "gov_id": 32111.0,
       "atmovies_id": "fnko41527793",
-      "gov_title_zh": "徵人啟弒",
-      "gov_title_en": "NO Other Choice",
+      "atmovies_title_zh": "徵人啟弒",
       "imdb_id": "tt1527793",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:21"
+      "fetched_at": "2025-10-14 21:58:37"
     }
   },
   {
@@ -1123,11 +1323,10 @@
     "crawl_note": {
       "gov_id": 32087.0,
       "atmovies_id": "fben37510071",
-      "gov_title_zh": "碰碰狐和貝貝彬歡唱電影：奇幻世界大冒險(國語版)",
-      "gov_title_en": "Bebefinn Sing-Along Movie: Into the Pinkfong World",
+      "atmovies_title_zh": "碰碰狐和貝貝彬歡唱電影",
       "imdb_id": "tt37510071",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:23"
+      "fetched_at": "2025-10-14 21:58:39"
     }
   },
   {
@@ -1146,11 +1345,10 @@
     "crawl_note": {
       "gov_id": 30062.0,
       "atmovies_id": "fpen14197038",
-      "gov_title_zh": "鬼吹簫",
-      "gov_title_en": "THE PIPER",
+      "atmovies_title_zh": "鬼吹簫",
       "imdb_id": "tt4718500",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:24"
+      "fetched_at": "2025-10-14 21:58:40"
     }
   },
   {
@@ -1169,11 +1367,10 @@
     "crawl_note": {
       "gov_id": 31748.0,
       "atmovies_id": "fgde27775137",
-      "gov_title_zh": "卡夫卡最後的愛",
-      "gov_title_en": "The Glory of Life",
+      "atmovies_title_zh": "卡夫卡最後的愛",
       "imdb_id": "tt27775137",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:26"
+      "fetched_at": "2025-10-14 21:58:42"
     }
   },
   {
@@ -1200,11 +1397,10 @@
     "crawl_note": {
       "gov_id": 30864.0,
       "atmovies_id": "feen15551346",
-      "gov_title_zh": "世界就是這樣結束的",
-      "gov_title_en": "The End",
+      "atmovies_title_zh": "世界就是這樣結束的",
       "imdb_id": "tt0077504",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:28"
+      "fetched_at": "2025-10-14 21:58:44"
     }
   },
   {
@@ -1223,11 +1419,10 @@
     "crawl_note": {
       "gov_id": 32103.0,
       "atmovies_id": "fcen34581826",
-      "gov_title_zh": "狼來了",
-      "gov_title_en": "COYOTES",
+      "atmovies_title_zh": "狼來了",
       "imdb_id": "tt13847924",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:30"
+      "fetched_at": "2025-10-14 21:58:45"
     }
   },
   {
@@ -1241,11 +1436,10 @@
     "crawl_note": {
       "gov_id": 32099.0,
       "atmovies_id": "ften36604188",
-      "gov_title_zh": "創：戰神",
-      "gov_title_en": "Tron: Ares",
+      "atmovies_title_zh": "創：戰神",
       "imdb_id": "tt6604188",
       "source": "omdb",
-      "fetched_at": "2025-10-13 22:01:32"
+      "fetched_at": "2025-10-14 21:58:47"
     }
   }
 ]

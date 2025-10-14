@@ -99,3 +99,13 @@ def normalize_date(date_str: str) -> str | None:
         return datetime.strptime(date_str, "%Y-%m-%d").strftime("%Y-%m-%d")
     except ValueError:
         return None
+
+
+# --------------------------------------------------------
+# 時間相關
+# --------------------------------------------------------
+def create_timestamped() -> str:
+    """建立自動時間戳，
+    可用於檔案命名，例如：boxoffice_20251010.json"""
+    now = datetime.now()
+    return f"{now.strftime('%Y%m%d')}"

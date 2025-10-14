@@ -20,26 +20,24 @@ IMDb / OMDb 評分資料爬取
     - 成功資料：data/raw/rating_weekly/<當週>/rating_<當週>.json
     - 錯誤紀錄：data/raw/rating_weekly/error/error_<timestamp>.json
 """
-# -------------------------------------------------------
-# 套件匯入
-# -------------------------------------------------------
+
+# ———————————————————————————————————— 套件匯入 ————————————————————————————————————
 import os
-import json
 import time
 import requests
 import pandas as pd
 from datetime import datetime
+from dotenv import load_dotenv
 
 # 共用模組
 from common.path_utils import RATING_WEEKLY_RAW, FIRSTRUN_PROCESSED, MOVIEINFO_OMDb_PROCESSED
-from common.file_utils import ensure_dir
-from common.date_utils import get_current_week_label
+from common.file_utils import ensure_dir, save_json
+from common.date_utils import get_current_week_label, create_timestamped
 
 
-# -------------------------------------------------------
-# 全域設定
-# -------------------------------------------------------
-OMDB_API_KEY = os.getenv("OMDB_API_KEY") or "<YOUR_API_KEY>"
+# ———————————————————————————————————— 全域設定 ————————————————————————————————————
+load_dotenv()
+OMDB_API_KEY = os.getenv("OMDB_API_KEY")
 WEEK_LABEL = get_current_week_label()
 OUTPUT_DIR = os.path.join(RATING_WEEKLY_RAW, WEEK_LABEL)
 ERROR_DIR = os.path.join(RATING_WEEKLY_RAW, "error")
@@ -47,12 +45,11 @@ ensure_dir(OUTPUT_DIR)
 ensure_dir(ERROR_DIR)
 
 
-# -------------------------------------------------------
-# 工具函式(檢查可抽共用)
-# -------------------------------------------------------
+# ———————————————————————————————————— 工具函式 ————————————————————————————————————
 def fetch_omdb_rating(imdb_id: str) -> dict:
     """打 OMDb API，取得電影評分資料"""
     url = f"https://www.omdbapi.com/?apikey={OMDB_API_KEY}&i={imdb_id}&plot=full"
+
     try:
         response = requests.get(url, timeout=10)
         data = response.json()
@@ -63,29 +60,26 @@ def fetch_omdb_rating(imdb_id: str) -> dict:
         return {"error": str(e)}
 
 
-def save_json(data: list, path: str):
-    """存成 JSON 檔"""
-    ensure_dir(os.path.dirname(path))
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-
-def log_error(errors: list):
+def create_error_record(errors: list):
     """輸出錯誤紀錄"""
-    if not errors:
-        return
-    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    err_path = os.path.join(ERROR_DIR, f"error_{ts}.json")
-    save_json(errors, err_path)
-    print(f"⚠️ 已輸出錯誤紀錄：{err_path}")
+    if errors:
+        fileName = f"error_{create_timestamped()}.json"
+
+        for row in errors:
+            print(f"  - {row['atmovies_title_zh']} (atmovies_id：{row['atmovies_id']})")
+        save_json(errors, ERROR_DIR, fileName, "<錯誤紀錄>")
 
 
-# ========= 主程式 =========
+# ———————————————————————————————————— 主程式 ————————————————————————————————————
 def fetch_weekly_ratings():
     print(f"🎬 開始撈取 IMDb / OMDb 評分資料（週次：{WEEK_LABEL}）")
+    errors_record = []  # 異常資料
 
-    # Step 1️⃣：讀取當週首輪電影清單
+    # --------------------------------------------
+    # Step 1：讀取當週首輪電影清單
+    # --------------------------------------------
     first_run_path = os.path.join(FIRSTRUN_PROCESSED, WEEK_LABEL, f"firstRun_{WEEK_LABEL}.csv")
+    ### 處理例外狀況1：無本周首輪電影清單
     if not os.path.exists(first_run_path):
         print(f"❌ 找不到首輪電影清單：{first_run_path}")
         return
@@ -93,89 +87,135 @@ def fetch_weekly_ratings():
     first_run_df = pd.read_csv(first_run_path, encoding="utf-8")
     print(f"📂 首輪電影筆數：{len(first_run_df)}")
 
-    # Step 2️⃣：讀取 OMDb 資料（用於對照 imdb_id）
+    # --------------------------------------------
+    # Step 2：讀取現有 OMDb 資料
+    # --------------------------------------------
     omdb_files = [f for f in os.listdir(MOVIEINFO_OMDb_PROCESSED) if f.endswith(".csv")]
+
+    ### 處理例外狀況2：無movieInfo_omdb_*.csv
     if not omdb_files:
         print(f"❌ 找不到 OMDb 對照資料：{MOVIEINFO_OMDb_PROCESSED}")
         return
 
-    omdb_latest = max(omdb_files, key=lambda x: os.path.getmtime(os.path.join(MOVIEINFO_OMDb_PROCESSED, x)))
-    omdb_path = os.path.join(MOVIEINFO_OMDb_PROCESSED, omdb_latest)
-    omdb_df = pd.read_csv(omdb_path, encoding="utf-8")
-    print(omdb_df)
-    print("====================================\n")
-    print(f"🔍 使用 OMDb 對照資料：{omdb_latest}")
-    print("====================================\n")
-    print(first_run_df)
-
-    # 合併 imdb_id
-    merged = first_run_df.merge(
-        omdb_df[["gov_title_zh", "atmovies_id", "imdb_id"]],
-        on="atmovies_id",
-        how="left"
+    # 取得最新的 movieInfo_omdb_*.csv
+    omdb_latest = max(
+        omdb_files, key=lambda x: os.path.getmtime(os.path.join(MOVIEINFO_OMDb_PROCESSED, x))
     )
 
-    missing = merged[merged["imdb_id"].isna()]
-    if not missing.empty:
-        print(f"⚠️ 找不到 IMDb ID 的電影：{len(missing)} 筆")
-        print("====================================")
-        print(merged)
-        for _, row in missing.iterrows():
-            print(f"  - {row['atmovies_title_zh']} ({row['atmovies_id']})")
+    # 讀取最新的 CSV 檔成為 pandas.DataFrame
+    omdb_path = os.path.join(MOVIEINFO_OMDb_PROCESSED, omdb_latest)
+    omdb_df = pd.read_csv(omdb_path, encoding="utf-8")
+    print("====================================")
+    print(f"🔍 使用 OMDb 對照資料：{omdb_latest}")
+    print("====================================\n")
 
-    # Step 3️⃣：撈取 IMDb 評分資料
-    results = []
-    errors = []
+    # --------------------------------------------
+    # Step 3：合併兩張資料表(本周首輪名單、omdb)
+    # --------------------------------------------
+    merged = first_run_df.merge(
+        omdb_df[["gov_id", "atmovies_id", "imdb_id", "omdb_title_en"]],
+        on="atmovies_id",
+        how="left",
+    )
+    """NOTE:
+        1. 鏈接欄位：用 atmovies_id 這個欄位做「左連接（left join）」：
+        2. 左右表：
+            - 左表是本週的首輪電影清單(first_run_df)
+            - 右表是 OMDb 的完整資料(omdb_df)
+        3. 挑出 omdb_df 中的相關欄位合併至 first_run_df：
+            => omdb_df[["gov_id", "imdb_id",......]],
+            => 鏈接欄位須包含在 omdb_df 中（atmovies_id）
+    """
+
+    # --------------------------------------------
+    # Step 4：重新爬 OMDB 資料 (取得最新評分資料)
+    # --------------------------------------------
+    omdb_rating_data = []
 
     for _, row in merged.iterrows():
-        atmovies_id = row["atmovies_id"]
-        imdb_id = row["imdb_id"]
-        gov_title_zh = row.get("gov_title_zh", "")
-        atmovies_title_zh = row.get("atmovies_title_zh", "")
+        imdb_id = row["imdb_id"] or ""
+        atmovies_title_zh = row.get("atmovies_title_zh") or ""
 
-        if not imdb_id or imdb_id == "N/A":
-            errors.append({
-                "atmovies_id": atmovies_id,
-                "atmovies_title_zh": atmovies_title_zh,
-                "error": "無 IMDb ID 對應"
-            })
+        ##### 寫入錯誤訊息：無gov_id/imdb/omdb資料
+        if not row["gov_id"] or pd.isna(row["gov_id"]):
+            errors_record.append(
+                {
+                    "atmovies_id": row["atmovies_id"],
+                    "atmovies_title_zh": row["atmovies_title_zh"],
+                    "gov_id": "",
+                    "imdb_id": "",
+                    "errorType": "without gov_id/imdb/omdb data",
+                    "errorMsg": "無資料(須看fix_omdb_mapping.json確認)",
+                }
+            )
             continue
 
-        data = fetch_omdb_rating(imdb_id)
-        if "error" in data:
-            errors.append({
-                "atmovies_id": atmovies_id,
-                "imdb_id": imdb_id,
-                "gov_title_zh": gov_title_zh,
-                "error": data["error"]
-            })
+        # 爬 OMDb 資料
+        omdb_crawler_data = fetch_omdb_rating(imdb_id)
+
+        ##### 寫入錯誤訊息：API錯誤
+        if "Error" in omdb_crawler_data:
+            print(f"❌ {atmovies_title_zh}- {omdb_crawler_data['error']}")
+            errors_record.append(
+                {
+                    "atmovies_id": row["atmovies_id"],
+                    "atmovies_title_zh": atmovies_title_zh,
+                    "gov_id": row["gov_id"],
+                    "imdb_id": imdb_id,
+                    "errorType": "API response error",
+                    "errorMsg": omdb_crawler_data["error"],
+                }
+            )
             continue
 
-        result = {
-            "atmovies_id": atmovies_id,
-            "gov_title_zh": gov_title_zh,
-            "title": data.get("Title"),
-            "year": data.get("Year"),
-            "imdb_id": data.get("imdbID"),
-            "imdb_rating": data.get("imdbRating"),
-            "imdb_votes": data.get("imdbVotes"),
-            "metascore": data.get("Metascore"),
-            "ratings": data.get("Ratings"),
+        # --------------------------------------------
+        # Step 5：整理資料
+        # --------------------------------------------
+        # 本次執行資訊
+        crawl_note = {
+            "gov_id": row["gov_id"],
+            "atmovies_id": row["atmovies_id"],
+            "atmovies_title_zh": atmovies_title_zh,
+            "imdb_id": imdb_id,
+            "source": "omdb",
             "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         }
 
-        results.append(result)
-        print(f"✅ {atmovies_title_zh} ({imdb_id}) - IMDb {result['imdb_rating']}")
+        # 整理撈回的資料
+        omdb_rating_data.append(
+            {
+                "title": omdb_crawler_data.get("Title"),
+                "year": omdb_crawler_data.get("Year"),
+                "imdb_id": omdb_crawler_data.get("imdbID"),
+                "imdb_rating": omdb_crawler_data.get("imdbRating"),
+                "imdb_votes": omdb_crawler_data.get("imdbVotes"),
+                "metascore": omdb_crawler_data.get("Metascore"),
+                "ratings": omdb_crawler_data.get("Ratings"),
+                "crawl_note": crawl_note,
+            }
+        )
+        print(f"✔️ 已取得資料：{atmovies_title_zh}")
         time.sleep(1)  # 避免 API 過載
 
-    # Step 4️⃣：輸出結果
-    output_path = os.path.join(OUTPUT_DIR, f"rating_{WEEK_LABEL}.json")
-    save_json(results, output_path)
-    print(f"\n🎉 IMDb 評分資料已完成，共 {len(results)} 筆\n👉 儲存位置：{output_path}")
+    # --------------------------------------------
+    # Step 6：輸出結果
+    # --------------------------------------------
+    fileName = f"rating_{WEEK_LABEL}.json"
 
-    # Step 5️⃣：輸出錯誤紀錄
-    log_error(errors)
+    # 輸出成功資料
+    save_json(omdb_rating_data, OUTPUT_DIR, fileName, "<成功資料>")
+    print(
+        f"""\n
+🎉 IMDb 評分資料已完成
+📂 首輪電影筆數：{len(first_run_df)}
+📂 成功資料，共 {len(omdb_rating_data)} 筆
+📂 異常資料，共 {len(errors_record)} 筆 """
+    )
+
+    # 輸出錯誤紀錄
+    create_error_record(errors_record)
 
 
+# ———————————————————————————————————— 主程式執行入口 ————————————————————————————————————
 if __name__ == "__main__":
     fetch_weekly_ratings()

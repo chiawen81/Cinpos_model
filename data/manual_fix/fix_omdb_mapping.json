@@ -5,7 +5,8 @@
         "gov_title_en": "YIYI-A ONE AND A TWO",
         "imdb_id": "tt0244316",
         "imdb_title_en": "Yi Yi",
-        "note": "片名不同(gov & imdb)"
+        "note": "片名不同(gov & imdb)",
+        "omdb_has_data": true
     },
     {
         "gov_id": "31863",
@@ -14,7 +15,8 @@
         "imdb_id": "tt33830021",
         "imdb_title_en": "Measure in Love",
         "omdb_title": "Ta Nian Ta Ri",
-        "note": "片名不同(omdb使用原文名)"
+        "note": "片名不同(omdb使用原文名)",
+        "omdb_has_data": true
     },
     {
         "gov_id": "31904",
@@ -22,16 +24,17 @@
         "gov_title_en": "THE GIRL WHO SEES",
         "imdb_id": "tt33829458",
         "imdb_title_en": "Mieruko-chan",
-        "note": "片名不同(gov & imdb)"
+        "note": "片名不同(gov & imdb)",
+        "omdb_has_data": true
     },
     {
-        "type": "Movie not found",
         "gov_id": "29882",
         "gov_title_zh": "進行曲",
         "gov_title_en": "Marching Boys",
         "imdb_id": "tt37093338",
         "imdb_title_en": "Jin xing qu",
-        "note": "片名不同(gov & imdb)(片名為羅馬拼音)"
+        "note": "片名不同(gov & imdb)(片名為羅馬拼音)",
+        "omdb_has_data": true
     },
     {
         "gov_id": "30704",
@@ -39,16 +42,17 @@
         "gov_title_en": "A Chip Odyssey",
         "imdb_id": "tt37150285",
         "imdb_title_en": "Zao shan zhe - Shi ji de du zhu",
-        "note": "片名不同(gov & imdb)(片名為羅馬拼音)"
+        "note": "片名不同(gov & imdb)(片名為羅馬拼音)",
+        "omdb_has_data": true
     },
     {
-        "type": "Movie not found",
         "gov_id": "30809",
         "gov_title_zh": "名偵探柯南 獨眼的殘像",
         "gov_title_en": "Detective Conan The Movie: One-Eyed Flashback",
         "imdb_id": "tt35444710",
         "imdb_title_en": "Detective Conan: One-Eyed Flashback",
-        "note": "片名不同(gov & imdb)"
+        "note": "片名不同(gov & imdb)",
+        "omdb_has_data": true
     },
     {
         "gov_id": "31190",
@@ -56,107 +60,108 @@
         "gov_title_en": "DORAEMON THE MOVIE: NOBITA'S ART WORLD TALES",
         "imdb_id": "tt33512868",
         "imdb_title_en": "Doraemon: Nobita's Art World Tales",
-        "note": "片名不同(gov & imdb)"
+        "note": "片名不同(gov & imdb)",
+        "omdb_has_data": true
     },
     {
-        "type": "Movie not found",
         "gov_id": "31301",
         "gov_title_zh": "我在荒野做了一場夢",
         "gov_title_en": "Seven Ages of a Man",
         "imdb_id": "tt38284699",
         "imdb_title_en": "Wo zai huang ye zuo le yi chang meng",
-        "note": "片名不同(gov & imdb)(片名為羅馬拼音)"
+        "note": "omdb暫無資料、片名不同(gov & imdb)(片名為羅馬拼音)",
+        "omdb_has_data": false
     },
     {
-        "type": "Movie not found",
         "gov_id": "31355",
         "gov_title_zh": "電影蠟筆小新：超華麗！灼熱的春日部舞者們",
         "gov_title_en": "CRAYON SHINCHAN THE MOVIE: SUPER HOT! THE SPICY KASUKABE DANCERS",
         "imdb_id": "tt35009463",
         "imdb_title_en": "Crayon Shin-chan the Movie: Super Hot! The Spicy Kasukabe Dancers",
-        "note": "片名不同(gov & imdb)"
+        "note": "片名不同(gov & imdb)",
+        "omdb_has_data": true
     },
     {
-        "type": "Movie not found",
         "gov_id": "31365",
         "gov_title_zh": "劇場版「鬼滅之刃」無限城篇 第一章 猗窩座再襲",
         "gov_title_en": "Demon Slayer：Kimetsu no Yaiba Infinity Castle",
         "imdb_id": "tt32820897",
         "imdb_title_en": "Demon Slayer: Kimetsu no Yaiba- The Movie - Infinity Castle",
-        "note": "片名不同(gov & imdb)"
+        "note": "片名不同(gov & imdb)",
+        "omdb_has_data": true
     },
     {
-        "type": "Movie not found",
         "gov_id": "31474",
         "gov_title_zh": "角頭－鬥陣欸",
         "gov_title_en": "GATAO: Big Brothers",
         "imdb_id": "tt37998920",
         "imdb_title_en": "Kak-thâu: Tàu-tin-ê",
-        "note": "片名不同(gov & imdb)(片名為羅馬拼音)"
+        "note": "片名不同(gov & imdb)(片名為羅馬拼音)",
+        "omdb_has_data": true
     },
     {
-        "type": "Movie not found",
         "gov_id": "31520",
         "gov_title_zh": "龍之心-靈界探訪記-",
         "gov_title_en": "ドラゴン・ハート-霊界探訪記-",
         "imdb_id": "tt36551651",
         "imdb_title_en": "Dragon Heart: Adventures Beyond This World",
-        "note": "例外狀況(用日文名去搜omdb)"
+        "note": "例外狀況(用日文名去搜omdb)",
+        "omdb_has_data": true
     },
     {
-        "type": "Movie not found",
         "gov_id": "31654",
         "gov_title_zh": "電影版小林家的龍女僕：害怕寂寞的龍",
         "gov_title_en": "Miss Kobayashi's Dragon Maid: A lonely dragon wants to be loved",
         "imdb_id": "tt36592985",
         "imdb_title_en": "Miss Kobayashi's Dragon Maid: A lonely dragon wants to be loved",
         "omdb_title": "Kobayashi-san Chi no Maid Dragon: Samishigariya no Ryu",
-        "note": "片名不同(omdb使用原文名)"
+        "note": "片名不同(omdb使用原文名)",
+        "omdb_has_data": true
     },
     {
-        "type": "Movie not found",
         "gov_id": "31712",
         "gov_title_zh": "劇場版 歌之☆王子殿下♪ TABOO NIGHT XXXX with Double Encore (QUARTET NIGHT version)",
         "gov_title_en": "Movie:Utano☆Princesama TABOO NIGHT XXXX with Double Encore (QUARTET NIGHT version)",
         "imdb_id": "tt35652414",
         "imdb_title_en": "Uta No Prince-Sama: Maji Love Taboo Night Xxxx",
-        "note": "片名不同(gov & imdb)"
+        "note": "片名不同(gov & imdb)",
+        "omdb_has_data": true
     },
     {
-        "type": "Movie not found",
         "gov_id": "31799",
         "gov_title_zh": "電影版 神奇柑仔店 錢天堂",
         "gov_title_en": "The Supernatural Sweet Shop The Movie",
         "imdb_id": "tt33256912",
         "imdb_title_en": "The Supernatural Sweet Shop: The Movie",
         "omdb_title": "Fushigi Dagashiya Zenitendo",
-        "note": "片名不同(omdb使用原文名)"
+        "note": "片名不同(omdb使用原文名)",
+        "omdb_has_data": true
     },
     {
-        "type": "Movie not found",
         "gov_id": "31801",
         "gov_title_zh": "鬼祭",
         "gov_title_en": "Pabrik Gula",
         "imdb_id": "tt33349807",
         "imdb_title_en": "Sugar Mill",
-        "note": "片名不同(omdb使用原文名)"
+        "note": "片名不同(omdb使用原文名)",
+        "omdb_has_data": true
     },
     {
-        "type": "Movie not found",
         "gov_id": "31807",
         "gov_title_zh": "泥娃娃",
         "gov_title_en": "Mudborn",
         "imdb_id": "tt38365045",
         "imdb_title_en": "Ni wa wa",
-        "note": "片名不同(gov & imdb)(片名為羅馬拼音)"
+        "note": "omdb暫無資料、片名不同(gov & imdb)(片名為羅馬拼音)",
+        "omdb_has_data": false
     },
     {
-        "type": "Movie not found",
         "gov_id": "32112",
         "gov_title_zh": "風林火山",
         "gov_title_en": "Sons of the Neon Night",
         "imdb_id": "tt4968738",
         "imdb_title_en": "Sons of the Neon Night",
-        "note": "片名不同(omdb使用原文名)"
+        "note": "片名不同(omdb使用原文名)",
+        "omdb_has_data": true
     }
 ]

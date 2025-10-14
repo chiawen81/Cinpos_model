@@ -1,1 +1,1251 @@
-[]
+[
+  {
+    "title": "Yi Yi",
+    "year": "2000",
+    "imdb_id": "tt0244316",
+    "imdb_rating": "8.1",
+    "imdb_votes": "31,921",
+    "metascore": "94",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.1/10"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "94/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 22894.0,
+      "atmovies_id": "fyen00244316",
+      "gov_title_zh": "一一",
+      "gov_title_en": "YIYI-A ONE AND A TWO",
+      "imdb_id": "tt0244316",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 21:59:38"
+    }
+  },
+  {
+    "title": "Midsommar",
+    "year": "2019",
+    "imdb_id": "tt8772262",
+    "imdb_rating": "7.1",
+    "imdb_votes": "457,462",
+    "metascore": "72",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.1/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "83%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "72/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 13460.0,
+      "atmovies_id": "fmen38772262",
+      "gov_title_zh": "仲夏魘",
+      "gov_title_en": "MIDSOMMAR",
+      "imdb_id": "tt8772262",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 21:59:42"
+    }
+  },
+  {
+    "title": "La La Land",
+    "year": "2016",
+    "imdb_id": "tt3783958",
+    "imdb_rating": "8.0",
+    "imdb_votes": "735,553",
+    "metascore": "94",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.0/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "91%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "94/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31523.0,
+      "atmovies_id": "flus43783958",
+      "gov_title_zh": "樂來越愛你",
+      "gov_title_en": "La La Land",
+      "imdb_id": "tt3783958",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 21:59:44"
+    }
+  },
+  {
+    "title": "Heretic",
+    "year": "2024",
+    "imdb_id": "tt28015403",
+    "imdb_rating": "7.0",
+    "imdb_votes": "194,544",
+    "metascore": "71",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.0/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "90%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "71/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 29513.0,
+      "atmovies_id": "fhen28015403",
+      "gov_title_zh": "異教詭屋",
+      "gov_title_en": "HERETIC",
+      "imdb_id": "tt28015403",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 21:59:46"
+    }
+  },
+  {
+    "title": "Ballerina",
+    "year": "2025",
+    "imdb_id": "tt7181546",
+    "imdb_rating": "6.9",
+    "imdb_votes": "105,272",
+    "metascore": "59",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.9/10"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "59/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 30940.0,
+      "atmovies_id": "fben87181546",
+      "gov_title_zh": "捍衛任務：復仇芭蕾",
+      "gov_title_en": "BALLERINA",
+      "imdb_id": "tt7181546",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 21:59:48"
+    }
+  },
+  {
+    "title": "Invisible Nation",
+    "year": "2023",
+    "imdb_id": "tt28853268",
+    "imdb_rating": "7.9",
+    "imdb_votes": "109",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.9/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "80%"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 30008.0,
+      "atmovies_id": "ficn28853268",
+      "gov_title_zh": "看不見的國家",
+      "gov_title_en": "Invisible Nation",
+      "imdb_id": "tt28853268",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 21:59:53"
+    }
+  },
+  {
+    "title": "Akira",
+    "year": "1988",
+    "imdb_id": "tt0094625",
+    "imdb_rating": "8.0",
+    "imdb_votes": "220,198",
+    "metascore": "68",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.0/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "91%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "68/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 16264.0,
+      "atmovies_id": "faone0411161",
+      "gov_title_zh": "阿基拉",
+      "gov_title_en": "AKIRA",
+      "imdb_id": "tt0094625",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 21:59:54"
+    }
+  },
+  {
+    "title": "F1: The Movie",
+    "year": "2025",
+    "imdb_id": "tt16311594",
+    "imdb_rating": "7.8",
+    "imdb_votes": "208,676",
+    "metascore": "68",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.8/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "82%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "68/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31027.0,
+      "atmovies_id": "ffen16311594",
+      "gov_title_zh": "F1電影",
+      "gov_title_en": "F1",
+      "imdb_id": "tt16311594",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 21:59:57"
+    }
+  },
+  {
+    "title": "At the Bench",
+    "year": "2024",
+    "imdb_id": "tt33477504",
+    "imdb_rating": "N/A",
+    "imdb_votes": "12",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 30560.0,
+      "atmovies_id": "fajp33477504",
+      "gov_title_zh": "長椅小情歌",
+      "gov_title_en": "AT THE BENCH",
+      "imdb_id": "tt33477504",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:01"
+    }
+  },
+  {
+    "title": "Weapons",
+    "year": "2025",
+    "imdb_id": "tt26581740",
+    "imdb_rating": "7.6",
+    "imdb_votes": "159,990",
+    "metascore": "81",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.6/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "94%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "81/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31364.0,
+      "atmovies_id": "fwen26581740",
+      "gov_title_zh": "凶器",
+      "gov_title_en": "WEAPONS",
+      "imdb_id": "tt26581740",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:04"
+    }
+  },
+  {
+    "title": "Materialists",
+    "year": "2025",
+    "imdb_id": "tt30253473",
+    "imdb_rating": "6.3",
+    "imdb_votes": "60,266",
+    "metascore": "70",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.3/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "79%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "70/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31402.0,
+      "atmovies_id": "fmen30253473",
+      "gov_title_zh": "天作之合",
+      "gov_title_en": "MATERIALISTS",
+      "imdb_id": "tt30253473",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:09"
+    }
+  },
+  {
+    "title": "The Conjuring: Last Rites",
+    "year": "2025",
+    "imdb_id": "tt22898462",
+    "imdb_rating": "6.3",
+    "imdb_votes": "45,087",
+    "metascore": "54",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.3/10"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "54/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31596.0,
+      "atmovies_id": "fcen22898462",
+      "gov_title_zh": "厲陰宅：最終聖事",
+      "gov_title_en": "The Conjuring：Last Rites",
+      "imdb_id": "tt22898462",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:10"
+    }
+  },
+  {
+    "title": "JUJUTSU KAISEN: Hidden Inventory/Premature Death - The Movie",
+    "year": "2025",
+    "imdb_id": "tt36956670",
+    "imdb_rating": "7.9",
+    "imdb_votes": "624",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.9/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31685.0,
+      "atmovies_id": "fjjp36956670",
+      "gov_title_zh": "劇場版 咒術迴戰 懷玉・玉折",
+      "gov_title_en": "JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie",
+      "imdb_id": "tt36956670",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:12"
+    }
+  },
+  {
+    "title": "Belonging",
+    "year": "2019",
+    "imdb_id": "tt9668594",
+    "imdb_rating": "5.7",
+    "imdb_votes": "954",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "5.7/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31715.0,
+      "atmovies_id": "fbjp34388944",
+      "gov_title_zh": "致我所愛之人",
+      "gov_title_en": "Belonging",
+      "imdb_id": "tt9668594",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:15"
+    }
+  },
+  {
+    "title": "96 Minutes",
+    "year": "2011",
+    "imdb_id": "tt1641385",
+    "imdb_rating": "5.7",
+    "imdb_votes": "3,428",
+    "metascore": "51",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "5.7/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "53%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "51/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 27899.0,
+      "atmovies_id": "fmtw48244467",
+      "gov_title_zh": "96分鐘",
+      "gov_title_en": "96 MINUTES",
+      "imdb_id": "tt1641385",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:16"
+    }
+  },
+  {
+    "title": "Family Matters",
+    "year": "1989–1998",
+    "imdb_id": "tt0096579",
+    "imdb_rating": "6.6",
+    "imdb_votes": "31,388",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.6/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 29378.0,
+      "atmovies_id": "ffcn48566873",
+      "gov_title_zh": "我家的事",
+      "gov_title_en": "Family Matters",
+      "imdb_id": "tt0096579",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:19"
+    }
+  },
+  {
+    "title": "The Long Walk",
+    "year": "2025",
+    "imdb_id": "tt10374610",
+    "imdb_rating": "7.3",
+    "imdb_votes": "28,536",
+    "metascore": "71",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.3/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "88%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "71/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31769.0,
+      "atmovies_id": "flen10374610",
+      "gov_title_zh": "大競走",
+      "gov_title_en": "THE LONG WALK",
+      "imdb_id": "tt10374610",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:21"
+    }
+  },
+  {
+    "title": "Sham",
+    "year": "2021–",
+    "imdb_id": "tt12617682",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31713.0,
+      "atmovies_id": "fsjp34459901",
+      "gov_title_zh": "捏造：史上最惡殺人教師",
+      "gov_title_en": "SHAM",
+      "imdb_id": "tt12617682",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:23"
+    }
+  },
+  {
+    "title": "Blind Love",
+    "year": "2005",
+    "imdb_id": "tt1294728",
+    "imdb_rating": "5.4",
+    "imdb_votes": "198",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "5.4/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 29380.0,
+      "atmovies_id": "fbcn35332631",
+      "gov_title_zh": "失明",
+      "gov_title_en": "Blind Love",
+      "imdb_id": "tt1294728",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:25"
+    }
+  },
+  {
+    "title": "Exit 8",
+    "year": "2016",
+    "imdb_id": "tt5889974",
+    "imdb_rating": "4.2",
+    "imdb_votes": "5",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "4.2/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31836.0,
+      "atmovies_id": "fejp35222590",
+      "gov_title_zh": "8號出口",
+      "gov_title_en": "Exit 8",
+      "imdb_id": "tt5889974",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:27"
+    }
+  },
+  {
+    "title": "Chainsaw Man - The Movie: Reze Arc",
+    "year": "2025",
+    "imdb_id": "tt30472557",
+    "imdb_rating": "8.5",
+    "imdb_votes": "3,800",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.5/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31794.0,
+      "atmovies_id": "fcjp30472557",
+      "gov_title_zh": "劇場版『鏈鋸人 蕾潔篇』",
+      "gov_title_en": "Chainsaw Man – The Movie: Reze Arc",
+      "imdb_id": "tt30472557",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:28"
+    }
+  },
+  {
+    "title": "One Battle After Another",
+    "year": "2025",
+    "imdb_id": "tt30144839",
+    "imdb_rating": "8.3",
+    "imdb_votes": "80,634",
+    "metascore": "95",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.3/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "96%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "95/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31797.0,
+      "atmovies_id": "foen30144839",
+      "gov_title_zh": "一戰再戰",
+      "gov_title_en": "One Battle After Another",
+      "imdb_id": "tt30144839",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:30"
+    }
+  },
+  {
+    "title": "The Stolen Girl",
+    "year": "2025–",
+    "imdb_id": "tt28228082",
+    "imdb_rating": "6.4",
+    "imdb_votes": "5,791",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.4/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31809.0,
+      "atmovies_id": "fsen44682810",
+      "gov_title_zh": "疾速營救",
+      "gov_title_en": "Stolen Girl",
+      "imdb_id": "tt28228082",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:31"
+    }
+  },
+  {
+    "title": "Road's End in Taiwan",
+    "year": "2025",
+    "imdb_id": "tt35231528",
+    "imdb_rating": "N/A",
+    "imdb_votes": "7",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31704.0,
+      "atmovies_id": "fren35231528",
+      "gov_title_zh": "陌路兄弟",
+      "gov_title_en": "Road's End in Taiwan",
+      "imdb_id": "tt35231528",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:33"
+    }
+  },
+  {
+    "title": "Perewangan",
+    "year": "2024",
+    "imdb_id": "tt31434122",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31745.0,
+      "atmovies_id": "fpin31434122",
+      "gov_title_zh": "血怨",
+      "gov_title_en": "PEREWANGAN",
+      "imdb_id": "tt31434122",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:35"
+    }
+  },
+  {
+    "title": "The Ugly",
+    "year": "1997",
+    "imdb_id": "tt0120401",
+    "imdb_rating": "6.0",
+    "imdb_votes": "3,152",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.0/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "40%"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31767.0,
+      "atmovies_id": "fuko33514451",
+      "gov_title_zh": "醜得要命",
+      "gov_title_en": "THE UGLY",
+      "imdb_id": "tt0120401",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:36"
+    }
+  },
+  {
+    "title": "The Tutor",
+    "year": "2023",
+    "imdb_id": "tt19637278",
+    "imdb_rating": "4.8",
+    "imdb_votes": "4,820",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "4.8/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "19%"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31662.0,
+      "atmovies_id": "ftth36590795",
+      "gov_title_zh": "淒厲人師",
+      "gov_title_en": "The Tutor",
+      "imdb_id": "tt19637278",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:38"
+    }
+  },
+  {
+    "title": "Together",
+    "year": "2025",
+    "imdb_id": "tt31184028",
+    "imdb_rating": "6.8",
+    "imdb_votes": "39,638",
+    "metascore": "75",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.8/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "90%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "75/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31651.0,
+      "atmovies_id": "ften31184028",
+      "gov_title_zh": "永遠在一起",
+      "gov_title_en": "TOGETHER",
+      "imdb_id": "tt31184028",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:40"
+    }
+  },
+  {
+    "title": "One and Only",
+    "year": "2023",
+    "imdb_id": "tt20865078",
+    "imdb_rating": "6.8",
+    "imdb_votes": "3,189",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.8/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31541.0,
+      "atmovies_id": "focn20865078",
+      "gov_title_zh": "熱烈",
+      "gov_title_en": "One and Only",
+      "imdb_id": "tt20865078",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:41"
+    }
+  },
+  {
+    "title": "The Proud Princess",
+    "year": "1952",
+    "imdb_id": "tt0191383",
+    "imdb_rating": "7.6",
+    "imdb_votes": "928",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.6/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31796.0,
+      "atmovies_id": "fpcz10996076",
+      "gov_title_zh": "傲嬌公主的奇幻冒險",
+      "gov_title_en": "The Proud Princess",
+      "imdb_id": "tt0191383",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:43"
+    }
+  },
+  {
+    "title": "The Roses",
+    "year": "2025",
+    "imdb_id": "tt31973693",
+    "imdb_rating": "7.0",
+    "imdb_votes": "12,365",
+    "metascore": "58",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.0/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "65%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "58/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31835.0,
+      "atmovies_id": "fren31973693",
+      "gov_title_zh": "沒好婚姻",
+      "gov_title_en": "The Roses",
+      "imdb_id": "tt31973693",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:45"
+    }
+  },
+  {
+    "title": "Ta Nian Ta Ri",
+    "year": "2025",
+    "imdb_id": "tt33830021",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31863.0,
+      "atmovies_id": "fmcn47188718",
+      "gov_title_zh": "他年她日",
+      "gov_title_en": "MEASURE IN LOVE",
+      "imdb_id": "tt33830021",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:50"
+    }
+  },
+  {
+    "title": "100 Meters",
+    "year": "2016",
+    "imdb_id": "tt5089786",
+    "imdb_rating": "7.5",
+    "imdb_votes": "7,138",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.5/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31900.0,
+      "atmovies_id": "fmjp32600395",
+      "gov_title_zh": "一百公尺。",
+      "gov_title_en": "100 METERS",
+      "imdb_id": "tt5089786",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:51"
+    }
+  },
+  {
+    "title": "Second Life",
+    "year": "2009",
+    "imdb_id": "tt1285248",
+    "imdb_rating": "4.1",
+    "imdb_votes": "779",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "4.1/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31668.0,
+      "atmovies_id": "fbtw96355546",
+      "gov_title_zh": "突破_三千米的泳氣",
+      "gov_title_en": "Second Life",
+      "imdb_id": "tt1285248",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:53"
+    }
+  },
+  {
+    "title": "Smashing Frank",
+    "year": "2025",
+    "imdb_id": "tt35724819",
+    "imdb_rating": "N/A",
+    "imdb_votes": "17",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31776.0,
+      "atmovies_id": "fscn35724819",
+      "gov_title_zh": "搗破法蘭克",
+      "gov_title_en": "Smashing Frank",
+      "imdb_id": "tt35724819",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:57"
+    }
+  },
+  {
+    "title": "Gabby's Dollhouse: The Movie",
+    "year": "2025",
+    "imdb_id": "tt32214143",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "82%"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31842.0,
+      "atmovies_id": "fgen32214143",
+      "gov_title_zh": "蓋比的娃娃屋大電影",
+      "gov_title_en": "GABBY'S DOLLHOUSE: THE MOVIE",
+      "imdb_id": "tt32214143",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:00:59"
+    }
+  },
+  {
+    "title": "Shadow Force",
+    "year": "2025",
+    "imdb_id": "tt11092020",
+    "imdb_rating": "4.7",
+    "imdb_votes": "3,482",
+    "metascore": "27",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "4.7/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "30%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "27/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31037.0,
+      "atmovies_id": "fsen11092020",
+      "gov_title_zh": "暗影部隊",
+      "gov_title_en": "SHADOW FORCE",
+      "imdb_id": "tt11092020",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:03"
+    }
+  },
+  {
+    "title": "Eel",
+    "year": "2014",
+    "imdb_id": "tt2546132",
+    "imdb_rating": "6.8",
+    "imdb_votes": "8",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.8/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 27106.0,
+      "atmovies_id": "fecn21718805",
+      "gov_title_zh": "河鰻",
+      "gov_title_en": "EEL",
+      "imdb_id": "tt2546132",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:06"
+    }
+  },
+  {
+    "title": "Out of the Nest",
+    "year": "2024",
+    "imdb_id": "tt31520900",
+    "imdb_rating": "N/A",
+    "imdb_votes": "69",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 31159.0,
+      "atmovies_id": "foen31520900",
+      "gov_title_zh": "皇家保姆亞瑟",
+      "gov_title_en": "OUT OF THE NEST",
+      "imdb_id": "tt31520900",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:09"
+    }
+  },
+  {
+    "title": "The Girl Who Sees Smells",
+    "year": "2015",
+    "imdb_id": "tt4583316",
+    "imdb_rating": "7.1",
+    "imdb_votes": "1,618",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.1/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31904.0,
+      "atmovies_id": "fgjp33829458",
+      "gov_title_zh": "陰陽眼見子",
+      "gov_title_en": "THE GIRL WHO SEES",
+      "imdb_id": "tt4583316",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:10"
+    }
+  },
+  {
+    "title": "The Light",
+    "year": "2004",
+    "imdb_id": "tt0388562",
+    "imdb_rating": "7.0",
+    "imdb_votes": "1,650",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.0/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31702.0,
+      "atmovies_id": "fdde31116299",
+      "gov_title_zh": "光",
+      "gov_title_en": "The light",
+      "imdb_id": "tt0388562",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:14"
+    }
+  },
+  {
+    "title": "Jumbo",
+    "year": "2025",
+    "imdb_id": "tt27433995",
+    "imdb_rating": "8.1",
+    "imdb_votes": "3,028",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.1/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31808.0,
+      "atmovies_id": "fjin27433995",
+      "gov_title_zh": "夢想巨無霸",
+      "gov_title_en": "Jumbo",
+      "imdb_id": "tt27433995",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:16"
+    }
+  },
+  {
+    "title": "A Big Bold Beautiful Journey",
+    "year": "2025",
+    "imdb_id": "tt13650700",
+    "imdb_rating": "6.2",
+    "imdb_votes": "6,588",
+    "metascore": "43",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.2/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "41%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "43/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31777.0,
+      "atmovies_id": "faen13650700",
+      "gov_title_zh": "奇幻導航",
+      "gov_title_en": "A BIG BOLD BEAUTIFUL JOURNEY",
+      "imdb_id": "tt13650700",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:19"
+    }
+  },
+  {
+    "title": "No Other Choice",
+    "year": "2025",
+    "imdb_id": "tt1527793",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "100%"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 32111.0,
+      "atmovies_id": "fnko41527793",
+      "gov_title_zh": "徵人啟弒",
+      "gov_title_en": "NO Other Choice",
+      "imdb_id": "tt1527793",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:21"
+    }
+  },
+  {
+    "title": "Bebefinn Sing-Along Movie: Into the Pinkfong World",
+    "year": "2025",
+    "imdb_id": "tt37510071",
+    "imdb_rating": "N/A",
+    "imdb_votes": "11",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 32087.0,
+      "atmovies_id": "fben37510071",
+      "gov_title_zh": "碰碰狐和貝貝彬歡唱電影：奇幻世界大冒險(國語版)",
+      "gov_title_en": "Bebefinn Sing-Along Movie: Into the Pinkfong World",
+      "imdb_id": "tt37510071",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:23"
+    }
+  },
+  {
+    "title": "The Piper",
+    "year": "2015",
+    "imdb_id": "tt4718500",
+    "imdb_rating": "6.4",
+    "imdb_votes": "2,035",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.4/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 30062.0,
+      "atmovies_id": "fpen14197038",
+      "gov_title_zh": "鬼吹簫",
+      "gov_title_en": "THE PIPER",
+      "imdb_id": "tt4718500",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:24"
+    }
+  },
+  {
+    "title": "The Glory of Life",
+    "year": "2024",
+    "imdb_id": "tt27775137",
+    "imdb_rating": "6.6",
+    "imdb_votes": "308",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.6/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 31748.0,
+      "atmovies_id": "fgde27775137",
+      "gov_title_zh": "卡夫卡最後的愛",
+      "gov_title_en": "The Glory of Life",
+      "imdb_id": "tt27775137",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:26"
+    }
+  },
+  {
+    "title": "The End",
+    "year": "1978",
+    "imdb_id": "tt0077504",
+    "imdb_rating": "6.1",
+    "imdb_votes": "4,561",
+    "metascore": "46",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.1/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "56%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "46/100"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 30864.0,
+      "atmovies_id": "feen15551346",
+      "gov_title_zh": "世界就是這樣結束的",
+      "gov_title_en": "The End",
+      "imdb_id": "tt0077504",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:28"
+    }
+  },
+  {
+    "title": "Coyotes",
+    "year": "2021–",
+    "imdb_id": "tt13847924",
+    "imdb_rating": "5.2",
+    "imdb_votes": "382",
+    "metascore": "N/A",
+    "ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "5.2/10"
+      }
+    ],
+    "crawl_note": {
+      "gov_id": 32103.0,
+      "atmovies_id": "fcen34581826",
+      "gov_title_zh": "狼來了",
+      "gov_title_en": "COYOTES",
+      "imdb_id": "tt13847924",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:30"
+    }
+  },
+  {
+    "title": "Tron: Ares",
+    "year": "2025",
+    "imdb_id": "tt6604188",
+    "imdb_rating": "N/A",
+    "imdb_votes": "N/A",
+    "metascore": "N/A",
+    "ratings": [],
+    "crawl_note": {
+      "gov_id": 32099.0,
+      "atmovies_id": "ften36604188",
+      "gov_title_zh": "創：戰神",
+      "gov_title_en": "Tron: Ares",
+      "imdb_id": "tt6604188",
+      "source": "omdb",
+      "fetched_at": "2025-10-13 22:01:32"
+    }
+  }
+]

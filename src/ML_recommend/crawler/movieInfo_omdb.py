@@ -21,7 +21,6 @@
 import os
 import json
 import time
-import logging
 import requests
 import pandas as pd
 from tqdm import tqdm
@@ -30,13 +29,9 @@ from dotenv import load_dotenv
 from datetime import datetime
 
 # 共用模組
-from common.file_utils import clean_filename, save_json, ensure_dir
-from common.path_utils import (
-    MANUAL_FIX_DIR,
-    MOVIEINFO_GOV_PROCESSED,
-    MOVIEINFO_OMDb_RAW,
-    LOG_DIR,
-)
+from common.file_utils import clean_filename, save_json, ensure_dir  # ✅ 已存在共用邏輯
+from common.path_utils import MANUAL_FIX_DIR, MOVIEINFO_GOV_PROCESSED, MOVIEINFO_OMDb_RAW, LOG_DIR
+
 
 # -------------------------------------------------------
 # 全域設定
@@ -45,56 +40,58 @@ load_dotenv()
 API_KEY = os.getenv("OMDB_API_KEY")
 LOG_PATH = os.path.join(LOG_DIR, "omdb.log")
 FIX_MAPPING_FILE = os.path.join(MANUAL_FIX_DIR, "fix_omdb_mapping.json")
-manual_mapping = []
+manual_mapping = (
+    json.load(open(FIX_MAPPING_FILE, "r", encoding="utf-8"))
+    if os.path.exists(FIX_MAPPING_FILE)
+    else []
+)
 error_records = []  # 儲存略過與異常資料
 
-if os.path.exists(FIX_MAPPING_FILE):
-    with open(FIX_MAPPING_FILE, "r", encoding="utf-8") as f:
-        manual_mapping = json.load(f)
-
-# 建立 logger
-logging.basicConfig(
-    filename=LOG_PATH,
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    encoding="utf-8",
-)
+# 確定目錄存在
 ensure_dir(MOVIEINFO_OMDb_RAW)
 
 
 # -------------------------------------------------------
 # 工具函式
 # -------------------------------------------------------
-def find_manual_imdb_id(gov_id):
+def save_error(error_type: str, reason: str, extra: dict = None):
+    """統一記錄錯誤與寫入 error_records"""
+    record = {
+        "type": error_type,
+        "reason": reason,
+        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    }
+    if extra:
+        record.update(extra)
+    error_records.append(record)
+
+
+def find_manual_imdb_id(gov_id: str) -> dict:
     """從人工 mapping 尋找對應 IMDb ID"""
     for item in manual_mapping:
         if str(item.get("gov_id")) == str(gov_id):
-            return {"imdb_id": item.get("imdb_id"), "gov_id": gov_id, "is_matched": True}
-    return {"imdb_id": "", "gov_id": gov_id, "is_matched": False}
+            return {"imdb_id": item.get("imdb_id"), "is_matched": True}
+    return {"imdb_id": "", "is_matched": False}
 
 
-def fetch_omdb_data(title_en: str) -> dict:
-    """以英文片名查詢 OMDb API"""
-    url = f"https://www.omdbapi.com/?apikey={API_KEY}&t={quote(title_en)}&plot=full"
+def fetch_omdb(api_param: str, by: str = "title") -> dict:
+    """統一封裝 OMDb API 請求邏輯"""
+    if by == "title":
+        url = f"https://www.omdbapi.com/?apikey={API_KEY}&t={quote(api_param)}&plot=full"
+    else:
+        url = f"https://www.omdbapi.com/?apikey={API_KEY}&i={api_param}&plot=full"
+
     try:
         response = requests.get(url, timeout=10)
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:
-        logging.error(f"❌ API 請求失敗：{title_en} | {e}")
         return {"Response": "False", "Error": str(e)}
 
 
-def fetch_omdb_data_by_imdb_id(imdb_id: str) -> dict:
-    """以 IMDb ID 查詢 OMDb API"""
-    url = f"https://www.omdbapi.com/?apikey={API_KEY}&i={imdb_id}&plot=full"
-    try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        return response.json()
-    except requests.exceptions.RequestException as e:
-        logging.error(f"❌ 以 IMDb ID 查詢失敗：{imdb_id} | {e}")
-        return {"Response": "False", "Error": str(e)}
+def should_skip_existing(gov_id: str, folder: str) -> bool:
+    """檢查電影是否已爬取過"""
+    return any(f.startswith(f"{gov_id}_") for f in os.listdir(folder))
 
 
 # -------------------------------------------------------
@@ -118,99 +115,72 @@ def crawl_omdb():
 
         try:
             df = pd.read_csv(gov_path)
+            # -------------------------------------------------
+            # 前置檢查
+            # -------------------------------------------------
             # 檢查 data\processed\movieInfo_gov 下的 csv 有資料
             if df.empty:
-                msg = f"[略過] 空 CSV：{file_name}"
-                print(msg)
-                logging.warning(msg)
-                error_records.append(
-                    {
-                        "type": "empty_csv",
-                        "file": file_name,
-                        "reason": "空 CSV",
-                        "gov_id": None,
-                        "gov_title_zh": None,
-                        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                    }
-                )
+                save_error("empty_csv", f"空 CSV：{file_name}", {"error_file": file_name})
                 continue
 
             row = df.iloc[0]
             gov_id = str(row.get("gov_id") or "")
-            gov_title_zh = clean_filename(str(row.get("gov_title_zh", "")))
+            gov_title_zh = clean_filename(str(row.get("gov_title_zh")))
             gov_title_en = str(row.get("gov_title_en") or "").strip()
+            gov_file_info = {
+                "gov_id": gov_id,
+                "gov_title_zh": gov_title_zh,
+                "gov_title_en": gov_title_en,
+            }
 
-            # 篩掉已爬取過的電影
-            existing_files = os.listdir(MOVIEINFO_OMDb_RAW)
-            already_exists = any(f.startswith(f"{gov_id}_") for f in existing_files)
-            if already_exists:
-                logging.info(f"[略過] 已存在檔案：{gov_id} {gov_title_zh} ({gov_title_en})")
+            # 檢查是否已存在
+            if should_skip_existing(gov_id, MOVIEINFO_OMDb_RAW):
                 print(f"[略過] 已存在檔案：{gov_id} {gov_title_zh} ({gov_title_en})")
                 continue
 
             # 不爬無英文片名的電影
             if not gov_title_en:
-                msg = f"[略過] 無英文片名：{gov_id} {gov_title_zh}"
-                print(msg)
-                error_records.append(
-                    {
-                        "type": "missing_en_title",
-                        "gov_id": gov_id,
-                        "gov_title_zh": gov_title_zh,
-                        "reason": "無英文片名",
-                        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                    }
+                save_error(
+                    "missing_en_title",
+                    "無英文片名",
+                    gov_file_info,
                 )
                 continue
 
-            # ------------------ 開始爬取資料 ------------------
-            # 優先使用人工對照表的 IMDb ID
-            manual_fix_result = find_manual_imdb_id(gov_id)
-            print("manual_fix_result", manual_fix_result)
-            imdb_id = manual_fix_result["imdb_id"]
-            print("imdb_id", imdb_id)
+            # -------------------------------------------------
+            # 開始爬取資料
+            # -------------------------------------------------
+            # 優先用人工 mapping
+            mapping = find_manual_imdb_id(gov_id)
+            imdb_id = mapping["imdb_id"]
 
             if imdb_id:
-                # 第二次爬取
-                # 已加入至人工對照表，直接用 IMDb ID 查
-                data = fetch_omdb_data_by_imdb_id(imdb_id)
+                # 第二次爬取：已加入至人工對照表，直接用 IMDb ID 查
+                data = fetch_omdb(imdb_id, by="id")
             else:
-                if manual_fix_result["is_matched"] == True:
-                    msg = f"[略過] omdb查不到資料(已記錄在人工對照表)：{gov_id} {gov_title_zh}"
-                    print(msg)
+                if mapping["is_matched"] == True:
+                    save_error(
+                        "omdb查不到資料(已記錄在人工對照表)", "OMDb 查不到資料", gov_file_info
+                    )
                     continue
                 else:
-                    # 第一次爬取
-                    # 以英文片名查詢
-                    data = fetch_omdb_data(gov_title_en)
+                    # 第一次爬取：以英文片名查詢
+                    data = fetch_omdb(gov_title_en, by="title")
 
                     if data.get("Response") == "False":
-                        msg = f"[略過] omdb查不到資料：{gov_id} {gov_title_zh}"
-                        print(msg)
-                        logging.warning(msg)
-                        error_records.append(
-                            {
-                                "type": "Movie not found",
-                                "gov_id": gov_id,
-                                "gov_title_zh": gov_title_zh,
-                                "gov_title_en": gov_title_en,
-                                "reason": "omdb查不到資料",
-                                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                            }
-                        )
+                        save_error("Movie not found", "OMDb 查不到資料", gov_file_info)
                         continue
 
-            # ------------------ 整理omdb資料 ------------------
-            imdb_id = data.get("imdbID", "")
-
-            if (data.get("Response") == "True") and imdb_id:
+            # -------------------------------------------------
+            # 儲存成功結果
+            # -------------------------------------------------
+            if data.get("Response") == "True" and data.get("imdbID"):
+                imdb_id = data["imdbID"]
                 rating = data.get("imdbRating", "")
                 votes = data.get("imdbVotes", "")
-                logging.info(
-                    f"[成功] {gov_id} {gov_title_zh} ({gov_title_en}) IMDb: {rating} ({votes})"
-                )
                 print(f"[成功] {gov_id} {gov_title_zh} ({gov_title_en}) IMDb: {rating} ({votes})")
-                # 🔸 加上爬取資訊區塊
+
+                # 加上爬取資訊區塊
                 data["crawl_note"] = {
                     "gov_id": gov_id,
                     "atmovies_id": atmovies_id,
@@ -221,36 +191,23 @@ def crawl_omdb():
                     "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                 }
 
-                # 🔸 儲存檔案
+                # 儲存檔案
                 filename = f"{gov_id}_{gov_title_zh}_{imdb_id}.json"
                 save_json(data, MOVIEINFO_OMDb_RAW, filename)
                 time.sleep(1.2)
 
             else:
-                error_msg = data.get("Error", "未知錯誤")
-                print("未知錯誤", error_msg)
-                error_records.append(
-                    {
-                        "type": "未知錯誤",
-                        "gov_id": gov_id,
-                        "gov_title_zh": gov_title_zh,
-                        "gov_title_en": gov_title_en,
-                        "reason": error_msg,
-                        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                    }
+                save_error(
+                    "未知錯誤",
+                    data.get("Error", "未知錯誤"),
+                    gov_file_info,
                 )
 
-        except:
-            print(f"==================[例外] {file_name} 發生錯誤：")
-            error_records.append(
-                {
-                    "type": "例外錯誤",
-                    "gov_id": gov_id,
-                    "gov_title_zh": gov_title_zh,
-                    "gov_title_en": gov_title_en,
-                    "reason": "例外錯誤 或 尚未加入人工對照表",
-                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                }
+        except Exception as e:
+            save_error(
+                "例外錯誤",
+                str(e),
+                gov_file_info,
             )
             continue
 
@@ -268,9 +225,7 @@ if __name__ == "__main__":
         error_dir = os.path.join(MOVIEINFO_OMDb_RAW, "error")
         ensure_dir(error_dir)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        error_file = os.path.join(error_dir, f"error_{timestamp}.json")
-
         save_json(error_records, error_dir, f"error_{timestamp}.json")
-        print(f"⚠️ 已輸出 {len(error_records)} 筆異常記錄至：{error_file}")
+        print(f"⚠️ 已輸出 {len(error_records)} 筆異常記錄至 error_{timestamp}.json")
     else:
         print("✅ 無異常記錄")

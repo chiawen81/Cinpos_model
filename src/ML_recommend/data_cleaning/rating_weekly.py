@@ -67,13 +67,17 @@ def clean_rating_weekly(raw_folder: str, week_label: str):
     with open(raw_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
+    total_count = len(data)
+    print(f"📦 本次預計清洗筆數：{total_count}")
+
+    # 轉成 DataFrame
     df = pd.DataFrame(data)
 
-    # ——— 展平 ratings 與 crawl_note ———
+    # 展平欄位
     df[["rating_imdb_src", "rating_rotten_src", "rating_meta_src"]] = df["ratings"].apply(extract_ratings)
     df[["gov_id", "atmovies_id", "atmovies_title_zh"]] = df["crawl_note"].apply(extract_note)
 
-    # ——— 數值轉換 ———
+    # 數值轉換
     if "imdbRating" in df.columns:
         df["imdbRating"] = pd.to_numeric(df["imdbRating"], errors="coerce")
     if "imdbVotes" in df.columns:
@@ -83,10 +87,12 @@ def clean_rating_weekly(raw_folder: str, week_label: str):
         df["imdbVotes"] = pd.to_numeric(df["imdbVotes"], errors="coerce")
 
     # 去重
-    if "imdb_id" in df.columns:
-        df.drop_duplicates(subset=["imdb_id"], inplace=True)
+    before_drop = len(df)
+    df.drop_duplicates(subset=["imdb_id"], inplace=True)
+    after_drop = len(df)
+    dropped = before_drop - after_drop
 
-    # ——— 統一欄位命名 ———
+    # 統一欄位
     df.rename(
         columns={
             "title": "omdb_title",
@@ -98,7 +104,7 @@ def clean_rating_weekly(raw_folder: str, week_label: str):
         inplace=True,
     )
 
-    # ——— 指定欄位順序 ———
+    # 欄位順序
     col_order = [
         "imdb_id",
         "atmovies_title_zh",
@@ -115,10 +121,9 @@ def clean_rating_weekly(raw_folder: str, week_label: str):
     for col in col_order:
         if col not in df.columns:
             df[col] = None
-
     df = df[col_order]
 
-    # ——— 輸出兩版本 ———
+    # 輸出兩版本
     cleaned_df = df[["imdb_id", "atmovies_title_zh", "omdb_title", "imdb_votes", "imdb_rating", "atmovies_id", "gov_id"]]
     cleaned_name = f"rating_weekly__{week_label}_cleaned.csv"
     full_name = f"rating_weekly__{week_label}_full.csv"
@@ -126,7 +131,15 @@ def clean_rating_weekly(raw_folder: str, week_label: str):
     save_csv(cleaned_df, RATING_WEEKLY_PROCESSED, cleaned_name)
     save_csv(df, RATING_WEEKLY_PROCESSED, full_name)
 
-    print(f"✅ 已輸出兩份檔案：\n ├─ {cleaned_name}\n └─ {full_name}")
+    # 統計輸出
+    success_count = len(df)
+    fail_count = total_count - success_count
+    print(f"✅ 清洗完成：")
+    print(f"　├─ 原始筆數：{total_count}")
+    print(f"　├─ 去除重複：{dropped} 筆")
+    print(f"　├─ 成功清洗：{success_count} 筆")
+    print(f"　└─ 清洗失敗：{fail_count} 筆 (可能為缺 imdb_id 或格式錯誤)")
+    print(f"\n📁 已輸出：\n ├─ {cleaned_name}\n └─ {full_name}")
 
 
 # ———————————————————————————————————— 主程式執行入口 ————————————————————————————————————

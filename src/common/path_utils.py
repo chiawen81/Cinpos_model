@@ -47,6 +47,7 @@ BOXOFFICE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_weekly")
 BOXOFFICE_PERMOVIE_RAW = os.path.join(RAW_DIR, "boxoffice_permovie")
 BOXOFFICE_PERMOVIE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_permovie")
 MOVIEINFO_GOV_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_gov")
+MOVIEINFO_GOV_COMBINED_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_gov_combined")
 
 # 開眼電影網 - 首輪電影名單
 FIRSTRUN_RAW = os.path.join(RAW_DIR, "firstRunFilm_list")

@@ -61,6 +61,11 @@ MOVIEINFO_OMDb_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_omdb")
 RATING_WEEKLY_RAW= os.path.join(RAW_DIR, "rating_weekly")
 RATING_WEEKLY_PROCESSED = os.path.join(PROCESSED_DIR, "rating_weekly")
 
+# # 資料彙總主檔與訓練資料主檔
+# MOVIE_MASTER_PROCESSED = os.path.join(PROCESSED_DIR, "movie_master")
+# MOVIE_MASTER_PROCESSED_ALL_FILE = os.path.join(MOVIE_MASTER_PROCESSED, "movie_master_all.csv")
+# MOVIE_MASTER_TRAIN_READY = os.path.join(MOVIE_MASTER_PROCESSED, "train_ready")
+
 
 # -----------------------------
 # 🧪 4. 測試執行 (僅限開發時)

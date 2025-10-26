@@ -1,0 +1,51 @@
+{
+  "Title": "Sing Sing",
+  "Year": "2023",
+  "Rated": "R",
+  "Released": "02 Aug 2024",
+  "Runtime": "107 min",
+  "Genre": "Drama",
+  "Director": "Greg Kwedar",
+  "Writer": "John H. Richardson, Brent Buell, Clint Bentley",
+  "Actors": "Colman Domingo, Clarence Maclin, Sean San Jose",
+  "Plot": "Divine G, imprisoned at Sing Sing for a crime he didn't commit, finds purpose by acting in a theatre group alongside other incarcerated men in this story of resilience, humanity, and the transformative power of art.",
+  "Language": "English",
+  "Country": "United States",
+  "Awards": "Nominated for 3 Oscars. 70 wins & 201 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMDMzODBlNmMtZmUxNC00NWEwLWE4NTktZWUwNmExNGRlMWEzXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.6/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "97%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "83/100"
+    }
+  ],
+  "Metascore": "83",
+  "imdbRating": "7.6",
+  "imdbVotes": "26,346",
+  "imdbID": "tt28479262",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$3,110,476",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "30021",
+    "gov_title_zh": "辛辛監獄劇團",
+    "gov_title_en": "Sing Sing",
+    "imdb_id": "tt28479262",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:22:48"
+  }
+}

@@ -10,9 +10,10 @@
 import os
 import json
 import pandas as pd
-from common.path_utils import MOVIEINFO_OMDb_RAW, MOVIEINFO_OMDb_PROCESSED
+from common.path_utils import MOVIEINFO_OMDB_RAW, MOVIEINFO_OMDB_PROCESSED
 from common.file_utils import ensure_dir
 from datetime import date
+
 
 def extract_field(data: dict, *keys):
     """多層安全取值"""
@@ -25,13 +26,13 @@ def extract_field(data: dict, *keys):
 
 
 def clean_omdb_json_to_csv():
-    ensure_dir(MOVIEINFO_OMDb_PROCESSED)
+    ensure_dir(MOVIEINFO_OMDB_PROCESSED)
     rows = []
 
-    for file in os.listdir(MOVIEINFO_OMDb_RAW):
+    for file in os.listdir(MOVIEINFO_OMDB_RAW):
         if not file.endswith(".json"):
             continue
-        path = os.path.join(MOVIEINFO_OMDb_RAW, file)
+        path = os.path.join(MOVIEINFO_OMDB_RAW, file)
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
@@ -64,7 +65,7 @@ def clean_omdb_json_to_csv():
 
     df = pd.DataFrame(rows)
     today = date.today().strftime("%Y-%m-%d")
-    output_path = os.path.join(MOVIEINFO_OMDb_PROCESSED, f"movieInfo_omdb_{today}.csv")
+    output_path = os.path.join(MOVIEINFO_OMDB_PROCESSED, f"movieInfo_omdb_{today}.csv")
     df.to_csv(output_path, index=False, encoding="utf-8-sig")
     print(f"✅ 已輸出 CSV：{output_path}")
 

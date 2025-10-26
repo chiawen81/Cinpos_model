@@ -1,0 +1,51 @@
+{
+  "Title": "Midsommar",
+  "Year": "2019",
+  "Rated": "R",
+  "Released": "03 Jul 2019",
+  "Runtime": "148 min",
+  "Genre": "Drama, Horror, Mystery",
+  "Director": "Ari Aster",
+  "Writer": "Ari Aster",
+  "Actors": "Florence Pugh, Jack Reynor, Vilhelm Blomgren",
+  "Plot": "Dani (Florence Pugh) and Christian (Jack Reynor) are a young American couple with a relationship on the brink of falling apart. But after a family tragedy keeps them together, Christian invites a grieving Dani to join him and his friends on a trip to a once-in-a-lifetime midsummer festival in a remote Swedish village. What begins as a carefree summer holiday in the North European land of eternal sunlight takes a sinister turn when the insular villagers invite their guests to partake in festivities that render the pastoral paradise increasingly unnerving and viscerally disturbing.",
+  "Language": "English, Swedish",
+  "Country": "United States, Sweden",
+  "Awards": "27 wins & 74 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMzQxNzQzOTQwM15BMl5BanBnXkFtZTgwMDQ2NTcwODM@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.1/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "83%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "72/100"
+    }
+  ],
+  "Metascore": "72",
+  "imdbRating": "7.1",
+  "imdbVotes": "465,353",
+  "imdbID": "tt8772262",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$27,426,361",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "13460",
+    "gov_title_zh": "仲夏魘",
+    "gov_title_en": "MIDSOMMAR",
+    "imdb_id": "tt8772262",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:22:17"
+  }
+}

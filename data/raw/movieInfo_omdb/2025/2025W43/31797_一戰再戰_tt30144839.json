@@ -1,0 +1,51 @@
+{
+  "Title": "One Battle After Another",
+  "Year": "2025",
+  "Rated": "R",
+  "Released": "26 Sep 2025",
+  "Runtime": "161 min",
+  "Genre": "Action, Crime, Drama",
+  "Director": "Paul Thomas Anderson",
+  "Writer": "Paul Thomas Anderson, Thomas Pynchon",
+  "Actors": "Leonardo DiCaprio, Sean Penn, Benicio Del Toro",
+  "Plot": "When their evil enemy resurfaces after 16 years, a group of ex-revolutionaries reunite to rescue the daughter of one of their own.",
+  "Language": "English, Spanish",
+  "Country": "United States",
+  "Awards": "3 wins & 2 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMzBkZmQ0NjMtNTZlMy00ZjdlLTg5ODUtYWFlNGM0YzE3MTg0XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "8.3/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "96%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "95/100"
+    }
+  ],
+  "Metascore": "95",
+  "imdbRating": "8.3",
+  "imdbVotes": "80,634",
+  "imdbID": "tt30144839",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$43,765,663",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31797",
+    "gov_title_zh": "一戰再戰",
+    "gov_title_en": "One Battle After Another",
+    "imdb_id": "tt30144839",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:24:35"
+  }
+}

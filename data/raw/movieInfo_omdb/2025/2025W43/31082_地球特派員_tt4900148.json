@@ -1,0 +1,51 @@
+{
+  "Title": "Elio",
+  "Year": "2025",
+  "Rated": "PG",
+  "Released": "20 Jun 2025",
+  "Runtime": "98 min",
+  "Genre": "Animation, Adventure, Comedy",
+  "Director": "Adrian Molina, Madeline Sharafian, Domee Shi",
+  "Writer": "Julia Cho, Mark Hammer, Mike Jones",
+  "Actors": "Yonas Kibreab, Zoe Saldaña, Remy Edgerly",
+  "Plot": "Elio, a space fanatic with an active imagination, finds himself on a cosmic misadventure where he must form new bonds with alien lifeforms, navigate a crisis of intergalactic proportions and somehow discover who he is truly meant ...",
+  "Language": "English",
+  "Country": "United States",
+  "Awards": "2 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BOWE5ZDMyMWEtOTZjMi00YzFhLWE4OTEtNDc3MDMzZjFmMmIzXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.7/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "83%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "66/100"
+    }
+  ],
+  "Metascore": "66",
+  "imdbRating": "6.7",
+  "imdbVotes": "29,631",
+  "imdbID": "tt4900148",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$72,987,454",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31082",
+    "gov_title_zh": "地球特派員",
+    "gov_title_en": "ELIO",
+    "imdb_id": "tt4900148",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:23:11"
+  }
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-26 22:22:25",
+    "gov_id": "24086",
+    "gov_title_zh": "Fishmans",
+    "gov_title_en": "The Fishmans Movie"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-26 22:22:39",
+    "gov_id": "29111",
+    "gov_title_zh": "台灣超人",
+    "gov_title_en": "Taiwan Unsung Hero"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-26 22:22:44",
+    "gov_id": "29653",
+    "gov_title_zh": "劇場版「進擊的巨人」完結篇THE LAST ATTACK",
+    "gov_title_en": "Attack on Titan: THE LAST ATTACK"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-26 22:22:53",
+    "gov_id": "30530",
+    "gov_title_zh": "守護我們的星球",
+    "gov_title_en": "Guardians of our planet"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-26 22:22:56",
+    "gov_id": "30676",
+    "gov_title_zh": "我們意外的勇氣",
+    "gov_title_en": "Unexpected Courage"
+  },
+  {
+    "type": "api_error",
+    "reason": "Incorrect IMDb ID.",
+    "timestamp": "2025-10-26 22:23:23",
+    "gov_id": "31301",
+    "gov_title_zh": "我在荒野做了一場夢",
+    "gov_title_en": "Seven Ages of a Man"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-26 22:23:24",
+    "gov_id": "31305",
+    "gov_title_zh": "世紀編舞大師",
+    "gov_title_en": "Cranko (John Cranko)"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-26 22:23:41",
+    "gov_id": "31507",
+    "gov_title_zh": "一兆$遊戲　劇場版",
+    "gov_title_en": "Trillion Game the Movie"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-26 22:23:48",
+    "gov_id": "31531",
+    "gov_title_zh": "詭鄉",
+    "gov_title_en": "Eerie Hometown"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-26 22:24:09",
+    "gov_id": "31701",
+    "gov_title_zh": "麵包超人電影版：小水滴的英雄！",
+    "gov_title_en": "ANPANMAN: Chapon's Hero！"
+  },
+  {
+    "type": "api_error",
+    "reason": "Incorrect IMDb ID.",
+    "timestamp": "2025-10-26 22:24:40",
+    "gov_id": "31807",
+    "gov_title_zh": "泥娃娃",
+    "gov_title_en": "Mudborn"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-26 22:24:57",
+    "gov_id": "32098",
+    "gov_title_zh": "藤本樹17-26：PART 1",
+    "gov_title_en": "Tatsuki Fujimoto 17‐21"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-26 22:25:04",
+    "gov_id": "32114",
+    "gov_title_zh": "藤本樹17-26：PART 2",
+    "gov_title_en": "Tatsuki Fujimoto 22-26"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-26 22:25:05",
+    "gov_id": "32116",
+    "gov_title_zh": "銀魂劇場版 2D 真選組動亂篇",
+    "gov_title_en": "GINTAMA ON THEATER 2D Shinsen-Gumi Doukan Arc"
+  }
+]

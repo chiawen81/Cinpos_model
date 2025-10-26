@@ -1,0 +1,51 @@
+{
+  "Title": "Porco Rosso",
+  "Year": "1992",
+  "Rated": "PG",
+  "Released": "16 Dec 1994",
+  "Runtime": "94 min",
+  "Genre": "Animation, Adventure, Comedy",
+  "Director": "Hayao Miyazaki",
+  "Writer": "Hayao Miyazaki",
+  "Actors": "Shûichirô Moriyama, Tokiko Katô, Bunshi Katsura VI",
+  "Plot": "In Early 1930's era Italy air pirates, bounty hunters and high fliers of all sorts rule the skies. The most cunning and skilled of these pilots is Porco Rosso. A former Ace, he now makes a living flying contract jobs, such as rescuing those kidnapped by air pirates. Donald Curtis, Porco's rival in the air and in catching the affections of women, provides a constant challenge to the hero, culminating in a hilarious, action packed finale.",
+  "Language": "Japanese",
+  "Country": "Japan",
+  "Awards": "4 wins total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BOGNjMDM1NWEtMzI4OC00YzdlLWJmMjktNmJiYTlkNTNlODM0XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.7/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "96%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "83/100"
+    }
+  ],
+  "Metascore": "83",
+  "imdbRating": "7.7",
+  "imdbVotes": "111,926",
+  "imdbID": "tt0104652",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$443,059",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "26514",
+    "gov_title_zh": "紅豬",
+    "gov_title_en": "Porco Rosso",
+    "imdb_id": "tt0104652",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:22:31"
+  }
+}

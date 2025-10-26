@@ -1,0 +1,43 @@
+{
+  "Title": "Pretty Crazy",
+  "Year": "2025",
+  "Rated": "N/A",
+  "Released": "13 Aug 2025",
+  "Runtime": "115 min",
+  "Genre": "Comedy, Mystery",
+  "Director": "Lee Sang-geun",
+  "Writer": "Lee Sang-geun",
+  "Actors": "Im Yoon-ah, Ahn Bo-hyun, Sung Dong-il",
+  "Plot": "A pastry chef apprentice lives unaware she becomes a wild she-devil nightly. Her family hires their neighbor to watch her night version, as he falls for her day self while seeking to break her curse.",
+  "Language": "Korean",
+  "Country": "South Korea",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BNTI2MDQwNDUtOTU4ZS00ZTY2LWEzYjgtZjc4NjViNzgxZWJhXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.6/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "6.6",
+  "imdbVotes": "186",
+  "imdbID": "tt35382678",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31679",
+    "gov_title_zh": "凌晨兩點的惡魔",
+    "gov_title_en": "PRETTY CRAZY",
+    "imdb_id": "tt35382678",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:24:06"
+  }
+}

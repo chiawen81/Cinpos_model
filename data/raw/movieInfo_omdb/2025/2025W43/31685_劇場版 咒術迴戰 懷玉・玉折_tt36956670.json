@@ -1,0 +1,43 @@
+{
+  "Title": "JUJUTSU KAISEN: Hidden Inventory/Premature Death - The Movie",
+  "Year": "2025",
+  "Rated": "N/A",
+  "Released": "16 Jul 2025",
+  "Runtime": "110 min",
+  "Genre": "Animation, Action, Fantasy",
+  "Director": "Shouta Goshozono",
+  "Writer": "Gege Akutami, Hiroshi Seko",
+  "Actors": "Aya Endô, Takehito Koyasu, Anna Nagase",
+  "Plot": "Once-friends Gojo and Geto must protect Riko Amanai, marked as the Star Plasma Vessel sacrifice. Hunted by cultists and curse users, these powerful sorcerers face a mission that will test their limits and shape their futures.",
+  "Language": "Japanese",
+  "Country": "Japan",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZmRlYzE5YTAtOTMyOS00MTY3LTg2MmYtMTU5Y2E2ODg5ZjNiXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.9/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "7.9",
+  "imdbVotes": "624",
+  "imdbID": "tt36956670",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$3,257,365",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31685",
+    "gov_title_zh": "劇場版 咒術迴戰 懷玉・玉折",
+    "gov_title_en": "JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie",
+    "imdb_id": "tt36956670",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:24:08"
+  }
+}

@@ -1,0 +1,100 @@
+[
+  {
+    "type": "api_error",
+    "reason": "Movie not found!",
+    "timestamp": "2025-10-26 21:44:13",
+    "gov_id": "24086",
+    "title": "Fishmans"
+  },
+  {
+    "type": "api_error",
+    "reason": "Movie not found!",
+    "timestamp": "2025-10-26 21:44:28",
+    "gov_id": "29111",
+    "title": "台灣超人"
+  },
+  {
+    "type": "api_error",
+    "reason": "Movie not found!",
+    "timestamp": "2025-10-26 21:44:35",
+    "gov_id": "29653",
+    "title": "劇場版「進擊的巨人」完結篇THE LAST ATTACK"
+  },
+  {
+    "type": "api_error",
+    "reason": "Movie not found!",
+    "timestamp": "2025-10-26 21:44:45",
+    "gov_id": "30530",
+    "title": "守護我們的星球"
+  },
+  {
+    "type": "api_error",
+    "reason": "Movie not found!",
+    "timestamp": "2025-10-26 21:44:48",
+    "gov_id": "30676",
+    "title": "我們意外的勇氣"
+  },
+  {
+    "type": "api_error",
+    "reason": "Incorrect IMDb ID.",
+    "timestamp": "2025-10-26 21:45:18",
+    "gov_id": "31301",
+    "title": "我在荒野做了一場夢"
+  },
+  {
+    "type": "api_error",
+    "reason": "Movie not found!",
+    "timestamp": "2025-10-26 21:45:20",
+    "gov_id": "31305",
+    "title": "世紀編舞大師"
+  },
+  {
+    "type": "api_error",
+    "reason": "Movie not found!",
+    "timestamp": "2025-10-26 21:45:34",
+    "gov_id": "31507",
+    "title": "一兆$遊戲　劇場版"
+  },
+  {
+    "type": "api_error",
+    "reason": "Movie not found!",
+    "timestamp": "2025-10-26 21:45:39",
+    "gov_id": "31531",
+    "title": "詭鄉"
+  },
+  {
+    "type": "api_error",
+    "reason": "Movie not found!",
+    "timestamp": "2025-10-26 21:45:58",
+    "gov_id": "31701",
+    "title": "麵包超人電影版：小水滴的英雄！"
+  },
+  {
+    "type": "api_error",
+    "reason": "Incorrect IMDb ID.",
+    "timestamp": "2025-10-26 21:46:30",
+    "gov_id": "31807",
+    "title": "泥娃娃"
+  },
+  {
+    "type": "api_error",
+    "reason": "Movie not found!",
+    "timestamp": "2025-10-26 21:46:50",
+    "gov_id": "32098",
+    "title": "藤本樹17-26：PART 1"
+  },
+  {
+    "type": "api_error",
+    "reason": "Movie not found!",
+    "timestamp": "2025-10-26 21:46:58",
+    "gov_id": "32114",
+    "title": "藤本樹17-26：PART 2"
+  },
+  {
+    "type": "api_error",
+    "reason": "Movie not found!",
+    "timestamp": "2025-10-26 21:47:00",
+    "gov_id": "32116",
+    "title": "銀魂劇場版 2D 真選組動亂篇"
+  }
+]

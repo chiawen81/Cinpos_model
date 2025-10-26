@@ -1,18 +1,18 @@
 """
-OMDb 整合爬蟲（Info + Rating）
--------------------------------------------------
-🎯 目標：
-    以政府《單部電影票房原始資料》為輸入，
-    撈取 OMDb 的電影資訊與 IMDb 評分，並整合為單一 JSON。
+目標：利用英文片名撈取OMDB的電影資料
+----------------------------------
+用途：
+    以政府公開資料中的英文片名，查詢 OMDb API 取得電影資料。
+    儲存於 data/raw/movieInfo_omdb 下的 JSON 檔。
 
-📂 資料流：
-    input  : data/raw/boxoffice_permovie/<year>/<week>/
-    output : data/raw/omdb/<year>/<week>/<gov_id>_<title_zh>_<imdb_id>.json
-    error  : data/raw/omdb/error/error_<timestamp>.json
+資料來源：
+    http://www.omdbapi.com/?apikey=<>&i=<IMDb參數&t=<>&plot=full
 
-📦 輔助資料：
-    - .env → OMDB_API_KEY
-    - data/manual_fix/fix_omdb_mapping.json （人工對照表）
+輸入來源：
+    data/processed/movieInfo_gov 內的 JSON 檔。
+
+輸出：
+    data/raw/movieInfo_omdb/<gov_id>_<中文名>_<英文名>.json
 """
 
 # -------------------------------------------------------
@@ -22,19 +22,15 @@ import os
 import json
 import time
 import requests
-from datetime import datetime
+import pandas as pd
+from tqdm import tqdm
 from urllib.parse import quote
 from dotenv import load_dotenv
-from tqdm import tqdm
+from datetime import datetime
 
 # 共用模組
-from common.path_utils import (
-    BOXOFFICE_PERMOVIE_RAW,
-    OMDB_RAW,
-    MANUAL_FIX_DIR,
-)
-from common.file_utils import ensure_dir, save_json, clean_filename, load_json
-from common.date_utils import get_current_year_label, get_current_week_label
+from common.file_utils import clean_filename, save_json, ensure_dir  # ✅ 已存在共用邏輯
+from common.path_utils import MANUAL_FIX_DIR, MOVIEINFO_GOV_PROCESSED, MOVIEINFO_OMDB_RAW, LOG_DIR
 
 
 # -------------------------------------------------------
@@ -42,34 +38,24 @@ from common.date_utils import get_current_year_label, get_current_week_label
 # -------------------------------------------------------
 load_dotenv()
 API_KEY = os.getenv("OMDB_API_KEY")
-
-YEAR_LABEL = get_current_year_label()
-WEEK_LABEL = get_current_week_label()
-
+LOG_PATH = os.path.join(LOG_DIR, "omdb.log")
 FIX_MAPPING_FILE = os.path.join(MANUAL_FIX_DIR, "fix_omdb_mapping.json")
 manual_mapping = (
     json.load(open(FIX_MAPPING_FILE, "r", encoding="utf-8"))
     if os.path.exists(FIX_MAPPING_FILE)
     else []
 )
-
 error_records = []  # 儲存略過與異常資料
-SLEEP_INTERVAL = 1.2
 
-# 資料夾目錄
-INPUT_DIR = os.path.join(BOXOFFICE_PERMOVIE_RAW, YEAR_LABEL, WEEK_LABEL)
-OUTPUT_DIR = os.path.join(OMDB_RAW, YEAR_LABEL, WEEK_LABEL)
-ERROR_DIR = os.path.join(OMDB_RAW, "error")
-# 確定資料夾存在
-ensure_dir(OUTPUT_DIR)
-ensure_dir(ERROR_DIR)
+# 確定目錄存在
+ensure_dir(MOVIEINFO_OMDB_RAW)
 
 
 # -------------------------------------------------------
 # 工具函式
 # -------------------------------------------------------
 def save_error(error_type: str, reason: str, extra: dict = None):
-    """統一記錄錯誤訊息"""
+    """統一記錄錯誤與寫入 error_records"""
     record = {
         "type": error_type,
         "reason": reason,
@@ -81,7 +67,7 @@ def save_error(error_type: str, reason: str, extra: dict = None):
 
 
 def find_manual_imdb_id(gov_id: str) -> dict:
-    """從人工對照表中尋找 IMDb ID"""
+    """從人工 mapping 尋找對應 IMDb ID"""
     for item in manual_mapping:
         if str(item.get("gov_id")) == str(gov_id):
             return {"imdb_id": item.get("imdb_id"), "is_matched": True}
@@ -89,7 +75,7 @@ def find_manual_imdb_id(gov_id: str) -> dict:
 
 
 def fetch_omdb(api_param: str, by: str = "title") -> dict:
-    """呼叫 OMDb API（可用 title 或 id 查詢）"""
+    """統一封裝 OMDb API 請求邏輯"""
     if by == "title":
         url = f"https://www.omdbapi.com/?apikey={API_KEY}&t={quote(api_param)}&plot=full"
     else:
@@ -103,52 +89,54 @@ def fetch_omdb(api_param: str, by: str = "title") -> dict:
         return {"Response": "False", "Error": str(e)}
 
 
+def should_skip_existing(gov_id: str, folder: str) -> bool:
+    """檢查電影是否已爬取過"""
+    return any(f.startswith(f"{gov_id}_") for f in os.listdir(folder))
+
+
 # -------------------------------------------------------
 # 主流程
 # -------------------------------------------------------
-def crawl_omdb_for_week():
-    """主函式：以本週票房電影為基準撈取 OMDb 資料"""
+def crawl_omdb():
+    """主函式：遍歷政府電影資料，呼叫 OMDb API 並儲存結果"""
     if not API_KEY:
-        raise ValueError("❌ 找不到 OMDB_API_KEY，請確認 .env 是否設定")
+        raise ValueError("❌ 無法取得 OMDB_API_KEY，請確認 .env 檔是否設定。")
 
-    if not os.path.exists(INPUT_DIR):
-        print(f"⚠️ 找不到本週票房原始資料夾：{INPUT_DIR}")
+    gov_files = [f for f in os.listdir(MOVIEINFO_GOV_PROCESSED) if f.endswith(".csv")]
+    if not gov_files:
+        print(f"⚠️ 找不到 movieInfo_gov 資料：{MOVIEINFO_GOV_PROCESSED}")
         return
 
-    json_files = [f for f in os.listdir(INPUT_DIR) if f.endswith(".json")]
-    if not json_files:
-        print(f"⚠️ 沒有可用的 JSON 檔案：{INPUT_DIR}")
-        return
+    print(f"🚀 開始爬取 OMDb 資料，共 {len(gov_files)} 部電影")
 
-    print(f"🎬 發現 {len(json_files)} 部電影待爬取 OMDb 資料")
-    print(f"📅 週期：{WEEK_LABEL}\n")
-
-    success_count = 0
-
-    # 2️⃣ 逐一處理電影
-    for file_name in tqdm(json_files, desc="OMDb Fetching", ncols=90):
-        file_path = os.path.join(INPUT_DIR, file_name)
+    for file_name in tqdm(gov_files, desc="OMDb Fetching", ncols=90):
+        gov_path = os.path.join(MOVIEINFO_GOV_PROCESSED, file_name)
+        atmovies_id = gov_path.split("_")[-1].replace(".csv", "")
 
         try:
-            raw_json = load_json(file_path)
-            movie_data = raw_json.get("data", {})
+            df = pd.read_csv(gov_path)
             # -------------------------------------------------
             # 前置檢查
             # -------------------------------------------------
-            # 確認 data/raw/boxoffice_permovie/<year>/<week> 有資料
-            if not movie_data:
-                save_error("empty_json", "無有效內容", {"file": file_name})
-                print(f"⚠️ 無有效內容：{file_name}")
+            # 檢查 data\processed\movieInfo_gov 下的 csv 有資料
+            if df.empty:
+                save_error("empty_csv", f"空 CSV：{file_name}", {"error_file": file_name})
                 continue
 
-            gov_id = str(movie_data.get("movieId") or "")
-            gov_title_zh = clean_filename(str(movie_data.get("name") or ""))
-            gov_title_en = str(movie_data.get("originalName") or "").strip()
+            row = df.iloc[0]
+            gov_id = str(row.get("gov_id") or "")
+            gov_title_zh = clean_filename(str(row.get("gov_title_zh")))
+            gov_title_en = str(row.get("gov_title_en") or "").strip()
             gov_file_info = {
                 "gov_id": gov_id,
                 "gov_title_zh": gov_title_zh,
                 "gov_title_en": gov_title_en,
             }
+
+            # 檢查是否已存在
+            if should_skip_existing(gov_id, MOVIEINFO_OMDB_RAW):
+                print(f"[略過] 已存在檔案：{gov_id} {gov_title_zh} ({gov_title_en})")
+                continue
 
             # 不爬無英文片名的電影
             if not gov_title_en:
@@ -169,7 +157,6 @@ def crawl_omdb_for_week():
             if imdb_id:
                 # 第二次爬取：已加入至人工對照表，直接用 IMDb ID 查
                 data = fetch_omdb(imdb_id, by="id")
-                fetch_mode = "by_imdb_id_from_manual_fix"
             else:
                 if mapping["is_matched"] == True:
                     save_error(
@@ -179,7 +166,6 @@ def crawl_omdb_for_week():
                 else:
                     # 第一次爬取：以英文片名查詢
                     data = fetch_omdb(gov_title_en, by="title")
-                    fetch_mode = "by_title_from_gov"
 
                     if data.get("Response") == "False":
                         save_error("Movie not found", "OMDb 查不到資料", gov_file_info)
@@ -192,60 +178,54 @@ def crawl_omdb_for_week():
                 imdb_id = data["imdbID"]
                 rating = data.get("imdbRating", "")
                 votes = data.get("imdbVotes", "")
-
-                print(
-                    f"[成功] {gov_title_zh} ({gov_title_en}) - IMDb {rating} ({votes}) [{fetch_mode}]"
-                )
+                print(f"[成功] {gov_id} {gov_title_zh} ({gov_title_en}) IMDb: {rating} ({votes})")
 
                 # 加上爬取資訊區塊
                 data["crawl_note"] = {
                     "gov_id": gov_id,
+                    "atmovies_id": atmovies_id,
                     "gov_title_zh": gov_title_zh,
                     "gov_title_en": gov_title_en,
                     "imdb_id": imdb_id,
                     "source": "omdb",
-                    "fetch_mode": fetch_mode,
-                    "week_label": WEEK_LABEL,
-                    "year_label": YEAR_LABEL,
                     "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                 }
 
                 # 儲存檔案
-                file_name_out = f"{gov_id}_{gov_title_zh}_{imdb_id}.json"
-                save_json(data, OUTPUT_DIR, file_name_out)
-                success_count += 1
+                filename = f"{gov_id}_{gov_title_zh}_{imdb_id}.json"
+                save_json(data, MOVIEINFO_OMDB_RAW, filename)
+                time.sleep(1.2)
 
             else:
-                save_error("api_error", data.get("Error", "OMDb 回傳失敗"), gov_file_info)
-                print(f"[失敗] {gov_title_zh} ({gov_title_en}) - {data.get('Error', '未知錯誤')}")
+                save_error(
+                    "未知錯誤",
+                    data.get("Error", "未知錯誤"),
+                    gov_file_info,
+                )
 
         except Exception as e:
-            save_error("exception", str(e), {"file": file_name})
-            print(f"[例外] {file_name} - {e}")
+            save_error(
+                "例外錯誤",
+                str(e),
+                gov_file_info,
+            )
             continue
 
-        time.sleep(SLEEP_INTERVAL)
-
-    # 4️⃣ 統計輸出
-    print("\n==============================")
-    print("🎉 本週 OMDb 資料抓取完成")
-    print(f"📅 週期：{WEEK_LABEL}")
-    print(f"✅ 成功：{success_count} 筆")
-    print(f"❌ 失敗：{len(error_records)} 筆")
-    print(f"📁 輸出資料夾：{OUTPUT_DIR}")
-    print("==============================\n")
-
-    # 5️⃣ 輸出錯誤紀錄
-    if error_records:
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        save_json(error_records, ERROR_DIR, f"error_{timestamp}.json")
-        print(f"⚠️ 已輸出錯誤紀錄 {len(error_records)} 筆 → error_{timestamp}.json")
-    else:
-        print("✅ 無異常紀錄")
+    print("✅ OMDb 資料抓取完成，已儲存於 data/raw/movieInfo_omdb/")
 
 
 # -------------------------------------------------------
-# 主程式執行入口
+# 執行區
 # -------------------------------------------------------
 if __name__ == "__main__":
-    crawl_omdb_for_week()
+    crawl_omdb()
+
+    # === 結尾：輸出異常紀錄 ===
+    if error_records:
+        error_dir = os.path.join(MOVIEINFO_OMDB_RAW, "error")
+        ensure_dir(error_dir)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        save_json(error_records, error_dir, f"error_{timestamp}.json")
+        print(f"⚠️ 已輸出 {len(error_records)} 筆異常記錄至 error_{timestamp}.json")
+    else:
+        print("✅ 無異常記錄")

@@ -1,0 +1,51 @@
+{
+  "Title": "How to Train Your Dragon",
+  "Year": "2025",
+  "Rated": "PG",
+  "Released": "13 Jun 2025",
+  "Runtime": "125 min",
+  "Genre": "Action, Adventure, Comedy",
+  "Director": "Dean DeBlois",
+  "Writer": "Dean DeBlois, Cressida Cowell, William Davies",
+  "Actors": "Mason Thames, Nico Parker, Gerard Butler",
+  "Plot": "As an ancient threat endangers both Vikings and dragons alike on the isle of Berk, the friendship between Hiccup, an inventive Viking, and Toothless, a Night Fury dragon, becomes the key to both species forging a new future together.",
+  "Language": "English",
+  "Country": "United States, United Kingdom, Ireland, Iceland, Canada",
+  "Awards": "1 win & 1 nomination total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BODA5Y2M0NjctNWQzMy00ODRhLWE0MzUtYmE1YTAzZjYyYmQyXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.8/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "76%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "61/100"
+    }
+  ],
+  "Metascore": "61",
+  "imdbRating": "7.8",
+  "imdbVotes": "98,367",
+  "imdbID": "tt26743210",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$262,958,100",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "30717",
+    "gov_title_zh": "馴龍高手",
+    "gov_title_en": "HOW TO TRAIN YOUR DRAGON",
+    "imdb_id": "tt26743210",
+    "source": "omdb",
+    "fetch_mode": "by_imdb_id_from_temp",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 23:14:29"
+  }
+}

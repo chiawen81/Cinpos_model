@@ -1,0 +1,43 @@
+{
+  "Title": "Wolfgang (extraordinari)",
+  "Year": "2025",
+  "Rated": "N/A",
+  "Released": "14 Mar 2025",
+  "Runtime": "110 min",
+  "Genre": "Drama, Family",
+  "Director": "Javier Ruiz Caldera",
+  "Writer": "Laia Aguilar, Carmen Marfà, Yago Alonso",
+  "Actors": "Miki Esparbé, Jordi Catalán, Àngels Gonyalons",
+  "Plot": "Wolfgang, a ten-year-old boy with an IQ of 152 and autism spectrum disorder, is forced to live with his father Carles, whom he has never seen, after the sudden death of his mother.",
+  "Language": "Catalan",
+  "Country": "Spain",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMGZhMWM3ZTMtMTFjYy00NzUwLTgzMDgtODQ5YjI0MTM0YjM1XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.8/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "6.8",
+  "imdbVotes": "197",
+  "imdbID": "tt32676674",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31714",
+    "gov_title_zh": "鋼琴之子",
+    "gov_title_en": "Wolfgang",
+    "imdb_id": "tt32676674",
+    "source": "omdb",
+    "fetch_mode": "by_imdb_id_from_temp",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 23:51:33"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "Title": "The Fantastic Four: First Steps",
+  "Year": "2025",
+  "Rated": "PG-13",
+  "Released": "25 Jul 2025",
+  "Runtime": "114 min",
+  "Genre": "Action, Adventure, Sci-Fi",
+  "Director": "Matt Shakman",
+  "Writer": "Josh Friedman, Eric Pearson, Jeff Kaplan",
+  "Actors": "Pedro Pascal, Vanessa Kirby, Ebon Moss-Bachrach",
+  "Plot": "Forced to balance their roles as heroes with the strength of their family bond, the Fantastic Four must defend Earth from a ravenous space god called Galactus and his enigmatic herald, the Silver Surfer.",
+  "Language": "English",
+  "Country": "United Kingdom, United States, Canada, New Zealand",
+  "Awards": "3 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BOGM5MzA3MDAtYmEwMi00ZDNiLTg4MDgtMTZjOTc0ZGMyNTIwXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.0/10"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "65/100"
+    }
+  ],
+  "Metascore": "65",
+  "imdbRating": "7.0",
+  "imdbVotes": "174,805",
+  "imdbID": "tt10676052",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$274,282,985",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31352",
+    "gov_title_zh": "驚奇4超人：第一步",
+    "gov_title_en": "The Fantastic Four: First Steps",
+    "imdb_id": "tt10676052",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:23:26"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "Title": "Sham",
+  "Year": "2025",
+  "Rated": "N/A",
+  "Released": "09 Jun 2025",
+  "Runtime": "129 min",
+  "Genre": "Crime, Drama, Thriller",
+  "Director": "Takashi Miike",
+  "Writer": "Masumi Fukuda, Hayashi Mori",
+  "Actors": "Kô Shibasaki, Gô Ayano",
+  "Plot": "A drama crime thriller based on a book about a court case where a teacher was falsely accused of bullying a student to suicide, exploring the moral complexities of the fabricated allegations and media frenzy.",
+  "Language": "Japanese",
+  "Country": "Japan",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BYWQzODkwYWQtZGFhNS00N2M2LWFmMDMtNzA4NGFiYzFkMGUzXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "80%"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "N/A",
+  "imdbVotes": "N/A",
+  "imdbID": "tt34459901",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31713",
+    "gov_title_zh": "捏造：史上最惡殺人教師",
+    "gov_title_en": "SHAM",
+    "imdb_id": "tt34459901",
+    "source": "omdb",
+    "fetch_mode": "by_imdb_id_from_temp",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 23:51:31"
+  }
+}

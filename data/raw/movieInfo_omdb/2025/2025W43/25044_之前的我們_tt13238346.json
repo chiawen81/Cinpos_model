@@ -1,0 +1,51 @@
+{
+  "Title": "Past Lives",
+  "Year": "2023",
+  "Rated": "PG-13",
+  "Released": "23 Jun 2023",
+  "Runtime": "105 min",
+  "Genre": "Drama, Romance",
+  "Director": "Celine Song",
+  "Writer": "Celine Song",
+  "Actors": "Greta Lee, Teo Yoo, John Magaro",
+  "Plot": "Nora and Hae Sung, two deeply connected childhood friends, are wrested apart after Nora's family emigrates from South Korea. Twenty years later, they are reunited for one fateful week as they confront notions of love and destiny.",
+  "Language": "Korean, English, Mandarin, French",
+  "Country": "United States, South Korea",
+  "Awards": "Nominated for 2 Oscars. 83 wins & 239 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BYjQyMTNhNjUtN2VmYy00NWRhLTkwOTctMGVmNTBmNDIxYjZhXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.8/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "95%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "94/100"
+    }
+  ],
+  "Metascore": "94",
+  "imdbRating": "7.8",
+  "imdbVotes": "162,588",
+  "imdbID": "tt13238346",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$11,331,983",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "25044",
+    "gov_title_zh": "之前的我們",
+    "gov_title_en": "PAST LIVES",
+    "imdb_id": "tt13238346",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:22:25"
+  }
+}

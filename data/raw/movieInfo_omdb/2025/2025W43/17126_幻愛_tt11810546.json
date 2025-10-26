@@ -1,0 +1,43 @@
+{
+  "Title": "Beyond the Dream",
+  "Year": "2019",
+  "Rated": "N/A",
+  "Released": "02 Jul 2020",
+  "Runtime": "119 min",
+  "Genre": "Drama, Romance",
+  "Director": "Kiwi Chow",
+  "Writer": "Kiwi Chow, Chun Wing Tsang",
+  "Actors": "Chun-Him Lau, Cecilia Choi, Hee Ching Paw",
+  "Plot": "Lok (Chun-Him Lau) is a recovering schizophrenic who yearns for love. One day, he encounters the young and beautiful Yan (Cecilia Choi) and quickly falls in love with her. Just when he struggles whether to tell her about his illness, he has a relapse and becomes delusional. Little does he know that she's a psychological counselor who has a hidden agenda. The pair develops a relationship that is beyond their wildest dreams.",
+  "Language": "Cantonese",
+  "Country": "Hong Kong",
+  "Awards": "5 wins & 12 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZTU2Y2U5MDEtMmM1Ny00MjlmLWE2YzQtZTQ5YWI1OGE2YTdlXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.1/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "7.1",
+  "imdbVotes": "1,062",
+  "imdbID": "tt11810546",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "17126",
+    "gov_title_zh": "幻愛",
+    "gov_title_en": "Beyond the Dream",
+    "imdb_id": "tt11810546",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:22:18"
+  }
+}

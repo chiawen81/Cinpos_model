@@ -1,0 +1,47 @@
+{
+  "Title": "Tron: Ares",
+  "Year": "2025",
+  "Rated": "PG-13",
+  "Released": "10 Oct 2025",
+  "Runtime": "119 min",
+  "Genre": "Action, Adventure, Sci-Fi",
+  "Director": "Joachim Rønning",
+  "Writer": "Jesse Wigutow, David DiGilio, Steven Lisberger",
+  "Actors": "Evan Peters, Jeff Bridges, Jared Leto",
+  "Plot": "A highly sophisticated program, Ares, is sent from the digital world into the real world on a dangerous mission.",
+  "Language": "English",
+  "Country": "United States, Canada, New Zealand",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BYzk0NjE4NzYtZjc5Ni00MTkxLTgyY2QtZjliOTA5N2U2YzM1XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.7/10"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "48/100"
+    }
+  ],
+  "Metascore": "48",
+  "imdbRating": "6.7",
+  "imdbVotes": "26,062",
+  "imdbID": "tt6604188",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$56,864,654",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "32099",
+    "gov_title_zh": "創：戰神",
+    "gov_title_en": "Tron: Ares",
+    "imdb_id": "tt6604188",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:24:58"
+  }
+}

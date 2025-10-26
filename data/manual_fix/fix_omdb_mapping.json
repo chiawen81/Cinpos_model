@@ -163,5 +163,185 @@
         "imdb_title_en": "Sons of the Neon Night",
         "note": "片名不同(omdb使用原文名)",
         "omdb_has_data": true
+    },
+    {
+        "gov_id": "27106",
+        "gov_title_zh": "河鰻",
+        "gov_title_en": "EEL",
+        "imdb_id": "tt35504309",
+        "imdb_title_en": "Eel",
+        "note": "片名不同(omdb使用羅馬拼音)",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "29378",
+        "gov_title_zh": "我家的事",
+        "gov_title_en": "Family Matters",
+        "imdb_id": "tt35834522",
+        "imdb_title_en": "Wo jia de shi",
+        "note": "片名不同(imdb使用羅馬拼音)",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "29380",
+        "gov_title_zh": "失明",
+        "gov_title_en": "Blind Love",
+        "imdb_id": "tt35332631",
+        "imdb_title_en": "Shi ming",
+        "note": "片名不同(imdb使用羅馬拼音)",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "29831",
+        "gov_title_zh": "乖女孩",
+        "gov_title_en": "BABY GIRL",
+        "imdb_id": "tt30057084",
+        "imdb_title_en": "Babygirl",
+        "note": "片名不同",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "30062",
+        "gov_title_zh": "鬼吹簫",
+        "gov_title_en": "THE PIPER",
+        "imdb_id": "tt14197038",
+        "imdb_title_en": "The Piper",
+        "note": "太多相似片名",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "30717",
+        "gov_title_zh": "馴龍高手",
+        "gov_title_en": "HOW TO TRAIN YOUR DRAGON",
+        "imdb_id": "tt26743210",
+        "imdb_title_en": "How to Train Your Dragon",
+        "note": "太多相似片名",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "30738",
+        "gov_title_zh": "星際寶貝：史迪奇",
+        "gov_title_en": "Lilo & Stitch",
+        "imdb_id": "tt11655566",
+        "imdb_title_en": "Lilo & Stitch",
+        "note": "太多相似片名",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "30864",
+        "gov_title_zh": "世界就是這樣結束的",
+        "gov_title_en": "The End",
+        "imdb_id": "tt15551346",
+        "imdb_title_en": "The End",
+        "note": "搜尋錯誤",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "31662",
+        "gov_title_zh": "淒厲人師",
+        "gov_title_en": "The Tutor",
+        "imdb_id": "tt36590795",
+        "imdb_title_en": "The Tutor",
+        "note": "片名不同(imdb使用羅馬拼音)",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "31668",
+        "gov_title_zh": "突破：三千米的泳氣",
+        "gov_title_en": "Second Life",
+        "imdb_id": "",
+        "imdb_title_en": "",
+        "note": "imdb無此電影",
+        "omdb_has_data": false
+    },
+    {
+        "gov_id": "31702",
+        "gov_title_zh": "光",
+        "gov_title_en": "The light",
+        "imdb_id": "tt31116299",
+        "imdb_title_en": "The Light",
+        "note": "太多同名電影",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "31713",
+        "gov_title_zh": "捏造：史上最惡殺人教師",
+        "gov_title_en": "SHAM",
+        "imdb_id": "tt34459901",
+        "imdb_title_en": "Sham",
+        "note": "比對錯誤",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "31714",
+        "gov_title_zh": "鋼琴之子",
+        "gov_title_en": "Wolfgang",
+        "imdb_id": "tt32676674",
+        "imdb_title_en": "Wolfgang",
+        "note": "比對錯誤",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "31715",
+        "gov_title_zh": "致我所愛之人",
+        "gov_title_en": "Belonging",
+        "imdb_id": "tt34388944",
+        "imdb_title_en": "Toritsukushima",
+        "note": "片名不同(imdb使用日文原名)",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "31767",
+        "gov_title_zh": "醜得要命",
+        "gov_title_en": "THE UGLY",
+        "imdb_id": "tt33514451",
+        "imdb_title_en": "The Ugly",
+        "note": "比對錯誤",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "31796",
+        "gov_title_zh": "傲嬌公主的奇幻冒險",
+        "gov_title_en": "The Proud Princess",
+        "imdb_id": "tt10996076",
+        "imdb_title_en": "The Proud Princess",
+        "note": "比對錯誤",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "31836",
+        "gov_title_zh": "8號出口",
+        "gov_title_en": "Exit 8",
+        "imdb_id": "tt35222590",
+        "imdb_title_en": "The Exit 8",
+        "note": "比對錯誤",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "31900",
+        "gov_title_zh": "一百公尺。",
+        "gov_title_en": "100 METERS",
+        "imdb_id": "tt32600395",
+        "imdb_title_en": "100 Meters",
+        "note": "比對錯誤",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "32103",
+        "gov_title_zh": "狼來了",
+        "gov_title_en": "COYOTES",
+        "imdb_id": "tt34581826",
+        "imdb_title_en": "Coyotes",
+        "note": "片名不同(imdb使用羅馬拼音)",
+        "omdb_has_data": true
+    },
+    {
+        "gov_id": "27899",
+        "gov_title_zh": "96分鐘",
+        "gov_title_en": "96 MINUTES",
+        "imdb_id": "tt34381460",
+        "imdb_title_en": "96 Minutes",
+        "note": "片名不同(imdb使用羅馬拼音)",
+        "omdb_has_data": true
     }
 ]

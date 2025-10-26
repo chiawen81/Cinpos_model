@@ -1,0 +1,43 @@
+{
+  "Title": "The Ugly",
+  "Year": "2024",
+  "Rated": "N/A",
+  "Released": "N/A",
+  "Runtime": "N/A",
+  "Genre": "Mystery, Thriller",
+  "Director": "Yeon Sang-ho",
+  "Writer": "Yeon Sang-ho",
+  "Actors": "Park Jeong-min, Kwon Hae-hyo",
+  "Plot": "A man investigates the truth behind his long-lost mother's death.",
+  "Language": "N/A",
+  "Country": "South Korea",
+  "Awards": "N/A",
+  "Poster": "N/A",
+  "Ratings": [
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "55%"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "N/A",
+  "imdbVotes": "N/A",
+  "imdbID": "tt33514451",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31767",
+    "gov_title_zh": "醜得要命",
+    "gov_title_en": "THE UGLY",
+    "imdb_id": "tt33514451",
+    "source": "omdb",
+    "fetch_mode": "by_imdb_id_from_temp",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 23:51:36"
+  }
+}

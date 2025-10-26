@@ -1,0 +1,163 @@
+{
+  "data": {
+    "movieId": "31715",
+    "name": "致我所愛之人",
+    "originalName": "Belonging",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-09-05",
+    "publisher": "中影股份有限公司",
+    "amountInThisWeek": 181974.0,
+    "totalAmount": 181974.0,
+    "filmClasses": null,
+    "filmLength": 5400,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82433,
+        "typeName": "導演",
+        "name": "東香織",
+        "originalName": "Kahori Higashi"
+      },
+      {
+        "id": 28983,
+        "typeName": "演員",
+        "name": "小泉今日子",
+        "originalName": "Kyoko Koizumi"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 51634.0,
+        "tickets": 230,
+        "totalAmount": 51634.0,
+        "totalTickets": 230,
+        "rate": 0,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 20000.0,
+        "tickets": 91,
+        "totalAmount": 71634.0,
+        "totalTickets": 321,
+        "rate": -0.6126583259092846,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 14700.0,
+        "tickets": 65,
+        "totalAmount": 86334.0,
+        "totalTickets": 386,
+        "rate": -0.265,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 16240.0,
+        "tickets": 69,
+        "totalAmount": 102574.0,
+        "totalTickets": 455,
+        "rate": 0.10476190476190476,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 5850.0,
+        "tickets": 25,
+        "totalAmount": 108424.0,
+        "totalTickets": 480,
+        "rate": -0.6397783251231527,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 4790.0,
+        "tickets": 21,
+        "totalAmount": 113214.0,
+        "totalTickets": 501,
+        "rate": -0.1811965811965812,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 3730.0,
+        "tickets": 16,
+        "totalAmount": 116944.0,
+        "totalTickets": 517,
+        "rate": -0.22129436325678498,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 51634.0,
+        "tickets": 230,
+        "totalAmount": 51634.0,
+        "totalTickets": 230,
+        "rate": 0,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 45890.0,
+        "tickets": 207,
+        "totalAmount": 97524.0,
+        "totalTickets": 437,
+        "rate": -0.11124452879885346,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 24890.0,
+        "tickets": 108,
+        "totalAmount": 122414.0,
+        "totalTickets": 545,
+        "rate": -0.45761603835258224,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 26610.0,
+        "tickets": 113,
+        "totalAmount": 149024.0,
+        "totalTickets": 658,
+        "rate": 0.06910405785456006,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 17280.0,
+        "tickets": 73,
+        "totalAmount": 166304.0,
+        "totalTickets": 731,
+        "rate": -0.3506200676437429,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 9950.0,
+        "tickets": 43,
+        "totalAmount": 176254.0,
+        "totalTickets": 774,
+        "rate": -0.4241898148148148,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 5720.0,
+        "tickets": 24,
+        "totalAmount": 181974.0,
+        "totalTickets": 798,
+        "rate": -0.42512562814070354,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

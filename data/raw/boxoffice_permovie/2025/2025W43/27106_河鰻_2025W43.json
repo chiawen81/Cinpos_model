@@ -1,0 +1,115 @@
+{
+  "data": {
+    "movieId": "27106",
+    "name": "河鰻",
+    "originalName": "EEL",
+    "region": "中華民國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-10-03",
+    "publisher": "底噪影像有限公司",
+    "amountInThisWeek": 843254.0,
+    "totalAmount": 843254.0,
+    "filmClasses": null,
+    "filmLength": 6120,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82503,
+        "typeName": "導演",
+        "name": "朱駿騰",
+        "originalName": "Chu Chun-Teng"
+      },
+      {
+        "id": 82504,
+        "typeName": "演員",
+        "name": "柯泯薰",
+        "originalName": "Misi Ke"
+      },
+      {
+        "id": 70086,
+        "typeName": "演員",
+        "name": "潘綱大",
+        "originalName": "Devin Pan"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 105516.0,
+        "tickets": 401,
+        "totalAmount": 105516.0,
+        "totalTickets": 401,
+        "rate": 0,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 50823.0,
+        "tickets": 196,
+        "totalAmount": 156339.0,
+        "totalTickets": 597,
+        "rate": -0.5183384510406005,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 38160.0,
+        "tickets": 162,
+        "totalAmount": 194499.0,
+        "totalTickets": 759,
+        "rate": -0.24915884540463965,
+        "theaterCount": 3
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 115500.0,
+        "tickets": 330,
+        "totalAmount": 115500.0,
+        "totalTickets": 330,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 418336.0,
+        "tickets": 1400,
+        "totalAmount": 533836.0,
+        "totalTickets": 1730,
+        "rate": 2.62195670995671,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 176461.0,
+        "tickets": 726,
+        "totalAmount": 710297.0,
+        "totalTickets": 2456,
+        "rate": -0.5781835653637267,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 132957.0,
+        "tickets": 546,
+        "totalAmount": 843254.0,
+        "totalTickets": 3002,
+        "rate": -0.24653606179269075,
+        "theaterCount": 14
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -6,6 +6,9 @@
 from datetime import datetime, timedelta
 import re
 
+# ========= 全域設定 =========
+TODAY_DATETIME = datetime.today()
+
 
 # -------------------------------
 # 取得上週起訖日期
@@ -46,10 +49,15 @@ def get_last_week_range(reference_date: datetime = None):
 # -------------------------------
 # 取得年份周次
 # -------------------------------
+def get_current_year_label() -> str:
+    """回傳像 2025 這樣的年標籤"""
+    year, week_num, _ = TODAY_DATETIME.isocalendar()
+    return f"{year}"
+
+
 def get_current_week_label():
     """回傳像 2025W41 這樣的週次標籤"""
-    today = datetime.today()
-    year, week_num, _ = today.isocalendar()
+    year, week_num, _ = TODAY_DATETIME.isocalendar()
     print(f"{year}W{week_num}")
     return f"{year}W{week_num}"
 

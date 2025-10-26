@@ -1,0 +1,78 @@
+{
+  "data": {
+    "movieId": "30676",
+    "name": "我們意外的勇氣",
+    "originalName": "Unexpected Courage",
+    "region": "中華民國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-02",
+    "publisher": "華文創股份有限公司",
+    "amountInThisWeek": 156200.0,
+    "totalAmount": 156200.0,
+    "filmClasses": null,
+    "filmLength": 6600,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 61560.0,
+        "tickets": 254,
+        "totalAmount": 61560.0,
+        "totalTickets": 254,
+        "rate": 0,
+        "theaterCount": 2
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 36920.0,
+        "tickets": 142,
+        "totalAmount": 36920.0,
+        "totalTickets": 142,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 36920.0,
+        "totalTickets": 142,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 119280.0,
+        "tickets": 476,
+        "totalAmount": 156200.0,
+        "totalTickets": 618,
+        "rate": 0,
+        "theaterCount": 2
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -1,0 +1,42 @@
+{
+  "data": {
+    "movieId": "32098",
+    "name": "藤本樹17-26：PART 1",
+    "originalName": "Tatsuki Fujimoto 17‐21",
+    "region": "日本",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-13",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 1785096.0,
+    "totalAmount": 1785096.0,
+    "filmClasses": null,
+    "filmLength": 4020,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 1652156.0,
+        "tickets": 5610,
+        "totalAmount": 1652156.0,
+        "totalTickets": 5610,
+        "rate": 0,
+        "theaterCount": 20
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 1785096.0,
+        "tickets": 6188,
+        "totalAmount": 1785096.0,
+        "totalTickets": 6188,
+        "rate": 0,
+        "theaterCount": 20
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

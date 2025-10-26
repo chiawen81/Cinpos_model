@@ -1,0 +1,175 @@
+{
+  "data": {
+    "movieId": "31305",
+    "name": "世紀編舞大師",
+    "originalName": "Cranko (John Cranko)",
+    "region": "德國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-09-05",
+    "publisher": "聯影企業股份有限公司",
+    "amountInThisWeek": 244826.0,
+    "totalAmount": 244826.0,
+    "filmClasses": null,
+    "filmLength": 8340,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82395,
+        "typeName": "導演",
+        "name": "約阿希姆朗",
+        "originalName": "Joachim Lang"
+      },
+      {
+        "id": 82395,
+        "typeName": "編劇",
+        "name": "約阿希姆朗",
+        "originalName": "Joachim Lang"
+      },
+      {
+        "id": 17823,
+        "typeName": "演員",
+        "name": "山姆萊利",
+        "originalName": "Sam Riley"
+      },
+      {
+        "id": 82395,
+        "typeName": "導演",
+        "name": "約阿希姆朗",
+        "originalName": "Joachim Lang"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 60312.0,
+        "tickets": 283,
+        "totalAmount": 60312.0,
+        "totalTickets": 283,
+        "rate": 0,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 44027.0,
+        "tickets": 207,
+        "totalAmount": 104339.0,
+        "totalTickets": 490,
+        "rate": -0.27001260114073483,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 11150.0,
+        "tickets": 53,
+        "totalAmount": 115489.0,
+        "totalTickets": 543,
+        "rate": -0.7467463147613964,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 6810.0,
+        "tickets": 32,
+        "totalAmount": 122299.0,
+        "totalTickets": 575,
+        "rate": -0.38923766816143496,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 2100.0,
+        "tickets": 11,
+        "totalAmount": 124399.0,
+        "totalTickets": 586,
+        "rate": -0.6916299559471366,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 124399.0,
+        "totalTickets": 586,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 2280.0,
+        "tickets": 11,
+        "totalAmount": 126679.0,
+        "totalTickets": 597,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 60312.0,
+        "tickets": 283,
+        "totalAmount": 60312.0,
+        "totalTickets": 283,
+        "rate": 0,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 107319.0,
+        "tickets": 510,
+        "totalAmount": 167631.0,
+        "totalTickets": 793,
+        "rate": 0.7793971348985277,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 36585.0,
+        "tickets": 185,
+        "totalAmount": 204216.0,
+        "totalTickets": 978,
+        "rate": -0.6591004388784838,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 22780.0,
+        "tickets": 108,
+        "totalAmount": 226996.0,
+        "totalTickets": 1086,
+        "rate": -0.3773404400710674,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 6930.0,
+        "tickets": 34,
+        "totalAmount": 233926.0,
+        "totalTickets": 1120,
+        "rate": -0.6957857769973661,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 8620.0,
+        "tickets": 38,
+        "totalAmount": 242546.0,
+        "totalTickets": 1158,
+        "rate": 0.24386724386724387,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 2280.0,
+        "tickets": 11,
+        "totalAmount": 244826.0,
+        "totalTickets": 1169,
+        "rate": -0.7354988399071926,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -1,0 +1,127 @@
+{
+  "data": {
+    "movieId": "31807",
+    "name": "泥娃娃",
+    "originalName": "Mudborn",
+    "region": "中華民國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-10-09",
+    "publisher": "威視股份有限公司",
+    "amountInThisWeek": 53118836.0,
+    "totalAmount": 53118836.0,
+    "filmClasses": null,
+    "filmLength": 6600,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 55488,
+        "typeName": "演員",
+        "name": "郭雪芙",
+        "originalName": "Hsueh-Fu Kuo"
+      },
+      {
+        "id": 19970,
+        "typeName": "演員",
+        "name": "蔡思韵",
+        "originalName": "Cecilia Choi"
+      },
+      {
+        "id": 30169,
+        "typeName": "演員",
+        "name": "張軒睿",
+        "originalName": "Derek Chang"
+      },
+      {
+        "id": 10918,
+        "typeName": "演員",
+        "name": "楊祐寧",
+        "originalName": "Tony Yo-ning Yang"
+      },
+      {
+        "id": 82505,
+        "typeName": "導演",
+        "name": "解孟儒",
+        "originalName": "Meng-Ju Shieh"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 57720.0,
+        "tickets": 222,
+        "totalAmount": 57720.0,
+        "totalTickets": 222,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 223740.0,
+        "tickets": 628,
+        "totalAmount": 281460.0,
+        "totalTickets": 850,
+        "rate": 2.8762993762993765,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 19291587.0,
+        "tickets": 70886,
+        "totalAmount": 19573047.0,
+        "totalTickets": 71736,
+        "rate": 85.22323679270582,
+        "theaterCount": 89
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 16797886.0,
+        "tickets": 60459,
+        "totalAmount": 36370933.0,
+        "totalTickets": 132195,
+        "rate": -0.12926365259633643,
+        "theaterCount": 91
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 57720.0,
+        "tickets": 222,
+        "totalAmount": 57720.0,
+        "totalTickets": 222,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 371230.0,
+        "tickets": 1229,
+        "totalAmount": 428950.0,
+        "totalTickets": 1451,
+        "rate": 5.431566181566182,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 23582348.0,
+        "tickets": 86748,
+        "totalAmount": 24011298.0,
+        "totalTickets": 88199,
+        "rate": 62.524898311020124,
+        "theaterCount": 89
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 29107538.0,
+        "tickets": 106482,
+        "totalAmount": 53118836.0,
+        "totalTickets": 194681,
+        "rate": 0.2342934639078348,
+        "theaterCount": 91
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

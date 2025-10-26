@@ -1,0 +1,109 @@
+{
+  "data": {
+    "movieId": "32111",
+    "name": "徵人啟弒",
+    "originalName": "NO Other Choice",
+    "region": "韓國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-10-09",
+    "publisher": "英屬維京群島商高捷全球開發有限公司 台灣分公司",
+    "amountInThisWeek": 5265665.0,
+    "totalAmount": 5265665.0,
+    "filmClasses": null,
+    "filmLength": 8280,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 14066,
+        "typeName": "演員",
+        "name": "車勝元",
+        "originalName": "Seung-won Cha"
+      },
+      {
+        "id": 12128,
+        "typeName": "導演",
+        "name": "朴贊郁",
+        "originalName": "Park Chan-wook"
+      },
+      {
+        "id": 12128,
+        "typeName": "編劇",
+        "name": "朴贊郁",
+        "originalName": "Park Chan-wook"
+      },
+      {
+        "id": 27382,
+        "typeName": "演員",
+        "name": "李星民",
+        "originalName": "Sung-min Lee"
+      },
+      {
+        "id": 21248,
+        "typeName": "演員",
+        "name": "朴喜洵",
+        "originalName": "Hee-soon Park"
+      },
+      {
+        "id": 28380,
+        "typeName": "演員",
+        "name": "孫藝真",
+        "originalName": "Ye-jin Son"
+      },
+      {
+        "id": 33703,
+        "typeName": "演員",
+        "name": "廉惠蘭",
+        "originalName": "Yeom Hye-ran"
+      },
+      {
+        "id": 25440,
+        "typeName": "演員",
+        "name": "李炳憲",
+        "originalName": "Byung-hun Lee (I)"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 2613320.0,
+        "tickets": 9988,
+        "totalAmount": 2613320.0,
+        "totalTickets": 9988,
+        "rate": 0,
+        "theaterCount": 69
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 888909.0,
+        "tickets": 3287,
+        "totalAmount": 3502229.0,
+        "totalTickets": 13275,
+        "rate": -0.6598545145638498,
+        "theaterCount": 69
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 3200102.0,
+        "tickets": 12296,
+        "totalAmount": 3200102.0,
+        "totalTickets": 12296,
+        "rate": 0,
+        "theaterCount": 72
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 2065563.0,
+        "tickets": 7961,
+        "totalAmount": 5265665.0,
+        "totalTickets": 20257,
+        "rate": -0.3545321367881399,
+        "theaterCount": 70
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

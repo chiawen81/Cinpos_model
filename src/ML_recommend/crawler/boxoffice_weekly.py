@@ -5,10 +5,12 @@
 
 import os
 import requests
-import pandas as pd
-import json
-from datetime import datetime, timedelta
-from common.date_utils import get_last_week_range, get_current_week_label, format_week_date_range
+from common.date_utils import (
+    get_last_week_range,
+    get_current_week_label,
+    format_week_date_range,
+    get_current_year_label,
+)
 from common.path_utils import BOXOFFICE_RAW
 from common.file_utils import save_json
 
@@ -44,14 +46,21 @@ def fetch_boxoffice_json(date_str: str = None):
     # print("data",data)
 
     # 設定儲存的檔名
-    fileName_week = get_current_week_label()
+    year_label = get_current_year_label()
+    week_label = get_current_week_label()
+    file_folder = os.path.join(BOXOFFICE_RAW, year_label)
     fileName_date = format_week_date_range(date_range)
-    filename = f"boxoffice_{fileName_week}_{fileName_date}.json"
+    filename = f"boxoffice_{week_label}_{fileName_date}.json"
 
     # 儲存成原始 JSON
-    save_json(data, BOXOFFICE_RAW, filename)
+    save_json(data, file_folder, filename)
 
-    print(f"已儲存原始資料：{BOXOFFICE_RAW}")
+    # ------------------------------------------------
+    # 統計輸出
+    # ------------------------------------------------
+    print("\n==============================")
+    print("🎉 本週票房資料 已抓取完成")
+    print("\n==============================")
 
 
 # 主程式

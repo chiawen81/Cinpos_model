@@ -1,0 +1,127 @@
+{
+  "data": {
+    "movieId": "31799",
+    "name": "電影版 神奇柑仔店 錢天堂",
+    "originalName": "The Supernatural Sweet Shop The Movie",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-09-26",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 3305220.0,
+    "totalAmount": 3305220.0,
+    "filmClasses": null,
+    "filmLength": 6180,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 16936,
+        "typeName": "演員",
+        "name": "上白石萌音",
+        "originalName": "Mone Kamishiraishi"
+      },
+      {
+        "id": 13232,
+        "typeName": "演員",
+        "name": "天海祐希",
+        "originalName": "Yuki Amami"
+      },
+      {
+        "id": 82488,
+        "typeName": "演員",
+        "name": "大橋和也",
+        "originalName": "Kazuya Ohashi"
+      },
+      {
+        "id": 82490,
+        "typeName": "演員",
+        "name": "伊原六花",
+        "originalName": "Rikka Ihara"
+      },
+      {
+        "id": 16899,
+        "typeName": "導演",
+        "name": "中田秀夫",
+        "originalName": "Hideo Nakata"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 1381388.0,
+        "tickets": 5288,
+        "totalAmount": 1381388.0,
+        "totalTickets": 5288,
+        "rate": 0,
+        "theaterCount": 67
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 457742.0,
+        "tickets": 1757,
+        "totalAmount": 1839130.0,
+        "totalTickets": 7045,
+        "rate": -0.6686361833170695,
+        "theaterCount": 60
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 202328.0,
+        "tickets": 766,
+        "totalAmount": 2041458.0,
+        "totalTickets": 7811,
+        "rate": -0.557986813532514,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 62620.0,
+        "tickets": 234,
+        "totalAmount": 2104078.0,
+        "totalTickets": 8045,
+        "rate": -0.690502550314341,
+        "theaterCount": 11
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 1381388.0,
+        "tickets": 5288,
+        "totalAmount": 1381388.0,
+        "totalTickets": 5288,
+        "rate": 0,
+        "theaterCount": 67
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 1347080.0,
+        "tickets": 5218,
+        "totalAmount": 2728468.0,
+        "totalTickets": 10506,
+        "rate": -0.024835889699345876,
+        "theaterCount": 67
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 495459.0,
+        "tickets": 1912,
+        "totalAmount": 3223927.0,
+        "totalTickets": 12418,
+        "rate": -0.6321977907770883,
+        "theaterCount": 60
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 81293.0,
+        "tickets": 304,
+        "totalAmount": 3305220.0,
+        "totalTickets": 12722,
+        "rate": -0.8359238605010707,
+        "theaterCount": 16
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

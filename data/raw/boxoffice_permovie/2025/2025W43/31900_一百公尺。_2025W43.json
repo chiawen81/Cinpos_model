@@ -1,0 +1,97 @@
+{
+  "data": {
+    "movieId": "31900",
+    "name": "一百公尺。",
+    "originalName": "100 METERS",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-03",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 8572089.0,
+    "totalAmount": 8572089.0,
+    "filmClasses": null,
+    "filmLength": 6360,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 15935,
+        "typeName": "演員",
+        "name": "松坂桃李",
+        "originalName": "Tori Matsuzaka"
+      },
+      {
+        "id": 18633,
+        "typeName": "演員",
+        "name": "染谷將太",
+        "originalName": "Shota Sometani"
+      },
+      {
+        "id": 79151,
+        "typeName": "導演",
+        "name": "岩井澤健治",
+        "originalName": "Kenji Iwaisawa"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 2057241.0,
+        "tickets": 7165,
+        "totalAmount": 2057241.0,
+        "totalTickets": 7165,
+        "rate": 0,
+        "theaterCount": 69
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 2125367.0,
+        "tickets": 7534,
+        "totalAmount": 4182608.0,
+        "totalTickets": 14699,
+        "rate": 0.033115225683330245,
+        "theaterCount": 63
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 2022691.0,
+        "tickets": 6442,
+        "totalAmount": 6205299.0,
+        "totalTickets": 21141,
+        "rate": -0.04830977426486814,
+        "theaterCount": 60
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 2057241.0,
+        "tickets": 7165,
+        "totalAmount": 2057241.0,
+        "totalTickets": 7165,
+        "rate": 0,
+        "theaterCount": 69
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 3672540.0,
+        "tickets": 13222,
+        "totalAmount": 5729781.0,
+        "totalTickets": 20387,
+        "rate": 0.7851773321647779,
+        "theaterCount": 69
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 2842308.0,
+        "tickets": 9446,
+        "totalAmount": 8572089.0,
+        "totalTickets": 29833,
+        "rate": -0.2260647943929814,
+        "theaterCount": 64
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

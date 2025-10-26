@@ -1,0 +1,42 @@
+{
+  "data": {
+    "movieId": "32114",
+    "name": "藤本樹17-26：PART 2",
+    "originalName": "Tatsuki Fujimoto 22-26",
+    "region": "日本",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-13",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 1443591.0,
+    "totalAmount": 1443591.0,
+    "filmClasses": null,
+    "filmLength": 4500,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 1385171.0,
+        "tickets": 4641,
+        "totalAmount": 1385171.0,
+        "totalTickets": 4641,
+        "rate": 0,
+        "theaterCount": 20
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 1443591.0,
+        "tickets": 4895,
+        "totalAmount": 1443591.0,
+        "totalTickets": 4895,
+        "rate": 0,
+        "theaterCount": 20
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

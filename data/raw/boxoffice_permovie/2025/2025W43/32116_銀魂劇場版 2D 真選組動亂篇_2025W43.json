@@ -1,0 +1,60 @@
+{
+  "data": {
+    "movieId": "32116",
+    "name": "銀魂劇場版 2D 真選組動亂篇",
+    "originalName": "GINTAMA ON THEATER 2D Shinsen-Gumi Doukan Arc",
+    "region": "日本",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-09",
+    "publisher": "薩摩亞商羚邦(亞洲)有限公司台灣分公司",
+    "amountInThisWeek": 1470185.0,
+    "totalAmount": 1470185.0,
+    "filmClasses": null,
+    "filmLength": 6060,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 825070.0,
+        "tickets": 2494,
+        "totalAmount": 825070.0,
+        "totalTickets": 2494,
+        "rate": 0,
+        "theaterCount": 10
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 245620.0,
+        "tickets": 844,
+        "totalAmount": 1070690.0,
+        "totalTickets": 3338,
+        "rate": -0.7023040469293514,
+        "theaterCount": 10
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 1009490.0,
+        "tickets": 3151,
+        "totalAmount": 1009490.0,
+        "totalTickets": 3151,
+        "rate": 0,
+        "theaterCount": 10
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 460695.0,
+        "tickets": 1632,
+        "totalAmount": 1470185.0,
+        "totalTickets": 4783,
+        "rate": -0.5436358953530991,
+        "theaterCount": 10
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

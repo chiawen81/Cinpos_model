@@ -30,7 +30,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 
 # 共用模組
-from common.path_utils import RATING_WEEKLY_RAW, FIRSTRUN_PROCESSED, MOVIEINFO_OMDB_PROCESSED
+from common.path_utils import RATING_WEEKLY_RAW, FIRSTRUN_PROCESSED, OMDB_PROCESSED
 from common.file_utils import ensure_dir, save_json
 from common.date_utils import get_current_week_label, create_timestamped
 
@@ -90,20 +90,18 @@ def fetch_weekly_ratings():
     # --------------------------------------------
     # Step 2：讀取現有 OMDb 資料
     # --------------------------------------------
-    omdb_files = [f for f in os.listdir(MOVIEINFO_OMDB_PROCESSED) if f.endswith(".csv")]
+    omdb_files = [f for f in os.listdir(OMDB_PROCESSED) if f.endswith(".csv")]
 
     ### 處理例外狀況2：無movieInfo_omdb_*.csv
     if not omdb_files:
-        print(f"❌ 找不到 OMDb 對照資料：{MOVIEINFO_OMDB_PROCESSED}")
+        print(f"❌ 找不到 OMDb 對照資料：{OMDB_PROCESSED}")
         return
 
     # 取得最新的 movieInfo_omdb_*.csv
-    omdb_latest = max(
-        omdb_files, key=lambda x: os.path.getmtime(os.path.join(MOVIEINFO_OMDB_PROCESSED, x))
-    )
+    omdb_latest = max(omdb_files, key=lambda x: os.path.getmtime(os.path.join(OMDB_PROCESSED, x)))
 
     # 讀取最新的 CSV 檔成為 pandas.DataFrame
-    omdb_path = os.path.join(MOVIEINFO_OMDB_PROCESSED, omdb_latest)
+    omdb_path = os.path.join(OMDB_PROCESSED, omdb_latest)
     omdb_df = pd.read_csv(omdb_path, encoding="utf-8")
     print("====================================")
     print(f"🔍 使用 OMDb 對照資料：{omdb_latest}")

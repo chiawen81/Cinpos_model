@@ -34,37 +34,25 @@ DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 RAW_DIR = os.path.join(DATA_DIR, "raw")
 PROCESSED_DIR = os.path.join(DATA_DIR, "processed")
 MANUAL_FIX_DIR = os.path.join(DATA_DIR, "manual_fix")
-LOG_DIR = os.path.join(PROJECT_ROOT, "logs")
 
 # -----------------------------
 # 3. 各資料分類子資料夾
 # -----------------------------
-# 票房資料
+# 票房資料（週次）
 BOXOFFICE_RAW = os.path.join(RAW_DIR, "boxoffice_weekly")
 BOXOFFICE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_weekly")
 
-# 單一電影票房資料
+# 政府公開票房資料（單一電影）
 BOXOFFICE_PERMOVIE_RAW = os.path.join(RAW_DIR, "boxoffice_permovie")
 BOXOFFICE_PERMOVIE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_permovie")
+
+# 政府公開電影資料（單一電影）
 MOVIEINFO_GOV_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_gov")
 MOVIEINFO_GOV_COMBINED_PROCESSED = os.path.join(MOVIEINFO_GOV_PROCESSED, "combined")  # 彙總單一電影
 
-# 開眼電影網 - 首輪電影名單
-FIRSTRUN_RAW = os.path.join(RAW_DIR, "firstRunFilm_list")
-FIRSTRUN_PROCESSED = os.path.join(PROCESSED_DIR, "firstRunFilm_list")
-
-# OMDb電影資訊
-OMDB_RAW = os.path.join(RAW_DIR, "movieInfo_omdb")
-OMDB_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_omdb")
-
-# <準備棄用>
-MOVIEINFO_OMDB_RAW = os.path.join(RAW_DIR, "movieInfo_omdb")
-MOVIEINFO_OMDB_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_omdb")
-
-
-# 評分相關資料
-RATING_WEEKLY_RAW = os.path.join(RAW_DIR, "rating_weekly")
-RATING_WEEKLY_PROCESSED = os.path.join(PROCESSED_DIR, "rating_weekly")
+# OMDb　電影資訊
+OMDB_RAW = os.path.join(RAW_DIR, "omdb")
+OMDB_PROCESSED = os.path.join(PROCESSED_DIR, "omdb")
 
 # 資料彙總- 資料庫主檔、模型訓練資料主檔
 MOVIE_MASTER_PROCESSED = os.path.join(PROCESSED_DIR, "movie_master")
@@ -82,6 +70,10 @@ MOVIE_MASTER_PROCESSED_ALL_FILE = os.path.join(
 # 🧪 4. 測試執行 (僅限開發時)
 # -----------------------------
 if __name__ == "__main__":
-    print("專案根目錄：", PROJECT_ROOT)
-    print("原始資料資料夾：", RAW_DIR)
-    print("處理後資料資料夾：", PROCESSED_DIR)
+    print("📂 RAW →", RAW_DIR)
+    print("📂 PROCESSED →", PROCESSED_DIR)
+    print("🎬 BOXOFFICE_RAW:", BOXOFFICE_RAW)
+    print("🎬 BOXOFFICE_PERMOVIE_RAW:", BOXOFFICE_PERMOVIE_RAW)
+    print("🏛️ GOV_PROCESSED:", MOVIEINFO_GOV_PROCESSED)
+    print("🌐 OMDB_PROCESSED:", OMDB_PROCESSED)
+    print("🧩 MOVIE_MASTER_PROCESSED:", MOVIE_MASTER_PROCESSED)

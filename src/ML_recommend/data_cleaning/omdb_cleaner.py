@@ -22,7 +22,7 @@ import pandas as pd
 from datetime import datetime
 
 # 共用模組
-from common.path_utils import OMDB_RAW, MOVIEINFO_OMDB_PROCESSED
+from common.path_utils import OMDB_RAW, OMDB_PROCESSED
 from common.file_utils import ensure_dir, save_csv, load_json, clean_filename
 from common.date_utils import get_current_year_label, get_current_week_label
 
@@ -34,8 +34,8 @@ YEAR_LABEL = get_current_year_label()
 WEEK_LABEL = get_current_week_label()
 
 RAW_DIR = os.path.join(OMDB_RAW, YEAR_LABEL, WEEK_LABEL)
-PROCESSED_DIR = os.path.join(MOVIEINFO_OMDB_PROCESSED, YEAR_LABEL, WEEK_LABEL)
-COMBINED_DIR = os.path.join(MOVIEINFO_OMDB_PROCESSED, "combined")
+PROCESSED_DIR = os.path.join(OMDB_PROCESSED, YEAR_LABEL, WEEK_LABEL)
+COMBINED_DIR = os.path.join(OMDB_PROCESSED, "combined")
 
 ensure_dir(PROCESSED_DIR)
 ensure_dir(COMBINED_DIR)

@@ -30,7 +30,7 @@ from datetime import datetime
 
 # 共用模組
 from common.file_utils import clean_filename, save_json, ensure_dir  # ✅ 已存在共用邏輯
-from common.path_utils import MANUAL_FIX_DIR, MOVIEINFO_GOV_PROCESSED, MOVIEINFO_OMDB_RAW, LOG_DIR
+from common.path_utils import MANUAL_FIX_DIR, MOVIEINFO_GOV_PROCESSED, OMDB_RAW, LOG_DIR
 
 
 # -------------------------------------------------------
@@ -48,7 +48,7 @@ manual_mapping = (
 error_records = []  # 儲存略過與異常資料
 
 # 確定目錄存在
-ensure_dir(MOVIEINFO_OMDB_RAW)
+ensure_dir(OMDB_RAW)
 
 
 # -------------------------------------------------------
@@ -134,7 +134,7 @@ def crawl_omdb():
             }
 
             # 檢查是否已存在
-            if should_skip_existing(gov_id, MOVIEINFO_OMDB_RAW):
+            if should_skip_existing(gov_id, OMDB_RAW):
                 print(f"[略過] 已存在檔案：{gov_id} {gov_title_zh} ({gov_title_en})")
                 continue
 
@@ -193,7 +193,7 @@ def crawl_omdb():
 
                 # 儲存檔案
                 filename = f"{gov_id}_{gov_title_zh}_{imdb_id}.json"
-                save_json(data, MOVIEINFO_OMDB_RAW, filename)
+                save_json(data, OMDB_RAW, filename)
                 time.sleep(1.2)
 
             else:
@@ -222,7 +222,7 @@ if __name__ == "__main__":
 
     # === 結尾：輸出異常紀錄 ===
     if error_records:
-        error_dir = os.path.join(MOVIEINFO_OMDB_RAW, "error")
+        error_dir = os.path.join(OMDB_RAW, "error")
         ensure_dir(error_dir)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         save_json(error_records, error_dir, f"error_{timestamp}.json")

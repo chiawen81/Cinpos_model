@@ -9,7 +9,7 @@
     data/processed/movieInfo_gov/*.csv
 
 輸出：
-    data/processed/movieInfo_gov_combined/movieInfo_gov_combined_<日期>.csv
+    data/processed/movieInfo_gov/combined/movieInfo_gov_combined_<日期>.csv
 """
 
 import os

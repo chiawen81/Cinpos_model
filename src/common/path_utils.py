@@ -47,7 +47,7 @@ BOXOFFICE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_weekly")
 BOXOFFICE_PERMOVIE_RAW = os.path.join(RAW_DIR, "boxoffice_permovie")
 BOXOFFICE_PERMOVIE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_permovie")
 MOVIEINFO_GOV_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_gov")
-MOVIEINFO_GOV_COMBINED_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_gov_combined")
+MOVIEINFO_GOV_COMBINED_PROCESSED = os.path.join(MOVIEINFO_GOV_PROCESSED, "combined") # 彙總單一電影
 
 # 開眼電影網 - 首輪電影名單
 FIRSTRUN_RAW = os.path.join(RAW_DIR, "firstRunFilm_list")
@@ -61,10 +61,13 @@ MOVIEINFO_OMDb_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_omdb")
 RATING_WEEKLY_RAW= os.path.join(RAW_DIR, "rating_weekly")
 RATING_WEEKLY_PROCESSED = os.path.join(PROCESSED_DIR, "rating_weekly")
 
-# # 資料彙總主檔與訓練資料主檔
-# MOVIE_MASTER_PROCESSED = os.path.join(PROCESSED_DIR, "movie_master")
-# MOVIE_MASTER_PROCESSED_ALL_FILE = os.path.join(MOVIE_MASTER_PROCESSED, "movie_master_all.csv")
-# MOVIE_MASTER_TRAIN_READY = os.path.join(MOVIE_MASTER_PROCESSED, "train_ready")
+# 資料彙總- 資料庫主檔、模型訓練資料主檔
+MOVIE_MASTER_PROCESSED = os.path.join(PROCESSED_DIR, "movie_master")
+MOVIE_MASTER_MERGE = os.path.join(MOVIE_MASTER_PROCESSED, "merge") # 初步合併
+MOVIE_MASTER_DATABASE_READY = os.path.join(MOVIE_MASTER_PROCESSED, "database_ready") # API資料庫資料
+MOVIE_MASTER_TRAIN_READY = os.path.join(MOVIE_MASTER_PROCESSED, "train_ready") # 訓練資料
+MOVIE_MASTER_PROCESSED_ALL_FILE = os.path.join(MOVIE_MASTER_TRAIN_READY, "movie_master_train_full.csv") # 訓練資料歷史檔案
+
 
 
 # -----------------------------

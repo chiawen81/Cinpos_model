@@ -33,6 +33,7 @@ PROJECT_ROOT = find_project_root()
 DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 RAW_DIR = os.path.join(DATA_DIR, "raw")
 PROCESSED_DIR = os.path.join(DATA_DIR, "processed")
+MASTER_DIR = os.path.join(DATA_DIR, "master")
 MANUAL_FIX_DIR = os.path.join(DATA_DIR, "manual_fix")
 
 # -----------------------------
@@ -55,15 +56,13 @@ OMDB_RAW = os.path.join(RAW_DIR, "omdb")
 OMDB_PROCESSED = os.path.join(PROCESSED_DIR, "omdb")
 
 # 資料彙總- 資料庫主檔、模型訓練資料主檔
-MOVIE_MASTER_PROCESSED = os.path.join(PROCESSED_DIR, "movie_master")
-MOVIE_MASTER_MERGE = os.path.join(MOVIE_MASTER_PROCESSED, "merge")  # 初步合併
-MOVIE_MASTER_DATABASE_READY = os.path.join(
-    MOVIE_MASTER_PROCESSED, "database_ready"
+# MOVIE_MASTER_PROCESSED = os.path.join(PROCESSED_DIR, "movie_master")
+MASTER_MERGE = os.path.join(MASTER_DIR, "merge")  # 初步合併
+MASTER_DB_READY = os.path.join(
+    MASTER_DIR, "db_ready"
 )  # API資料庫資料
-MOVIE_MASTER_TRAIN_READY = os.path.join(MOVIE_MASTER_PROCESSED, "train_ready")  # 訓練資料
-MOVIE_MASTER_PROCESSED_ALL_FILE = os.path.join(
-    MOVIE_MASTER_TRAIN_READY, "movie_master_train_full.csv"
-)  # 訓練資料歷史檔案
+MASTER_TRAIN_READY = os.path.join(MASTER_DIR, "train_ready")  # 訓練資料
+
 
 
 # -----------------------------

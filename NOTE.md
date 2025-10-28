@@ -8,6 +8,7 @@
   (4) 生成的檔案格式: boxoffice_agg_2025W43.csv
 
 
+<已完成>
 2. processed/boxoffice_permovie
   (1)資料夾結構改成跟movieInfo_gov一樣
     - 每個電影一隻檔案
@@ -15,6 +16,7 @@
   (2) 腳本boxoffice_permovie.py要改
 
 
+<已完成>
 3. processed/omdb結構調整
   (1)資料夾改成
     - data/processed/movieInfo_omdb
@@ -23,15 +25,11 @@
        => 結構與更新方式比照調整後的2.boxoffice_permovie
   (2) 腳本omdb_cleaner.py要改
  
-
-4. 標記- 電影性質(第一次/重新/復刻上映)
+ 
+<已完成>
+5. 電影長度film_length轉分鐘
   (1) 處理腳本: data_cleaning\boxoffice_permovie.py 
   (2) 生成在哪: data\processed\boxoffice_permovie下的單一電影
-
-
-5. 電影長度film_length轉分鐘
-  (1) 處理腳本: 同上 
-  (2) 生成在哪: 同上
 
 
 6. 生成movie_master_builder.py 
@@ -40,3 +38,16 @@
 
 
 ## 暫不處理
+
+
+
+## 放棄處理
+4. 標記- 電影性質(第一次/重新/復刻上映)
+  (1) 處理腳本: data_cleaning\boxoffice_permovie.py 
+  (2) 生成在哪: data\processed\boxoffice_permovie下的單一電影
+"""
+因為電影公開資料，發行日期只會顯示當下日期，因此無法判定復刻上映的情況
+舉例來說
+    1. 一一：這是2000初的電影，但現在發行日期是2025
+    2. 樂來樂愛你：這是2016的電影，但政府公開資料分成獨立的三筆資料(三個都叫做"樂來樂愛你")
+"""

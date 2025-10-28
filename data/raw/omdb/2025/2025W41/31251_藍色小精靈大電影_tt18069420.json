@@ -1,0 +1,51 @@
+{
+  "Title": "Smurfs",
+  "Year": "2025",
+  "Rated": "PG",
+  "Released": "18 Jul 2025",
+  "Runtime": "89 min",
+  "Genre": "Animation, Adventure, Comedy",
+  "Director": "Chris Miller",
+  "Writer": "Pam Brady, Peyo",
+  "Actors": "Rihanna, James Corden, Nick Offerman",
+  "Plot": "When Papa Smurf is taken by evil wizards Razamel and Gargamel, Smurfette leads the Smurfs on a mission to the real world to save him.",
+  "Language": "English",
+  "Country": "United States, Belgium, Italy",
+  "Awards": "1 nomination total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMDMyNDViNTMtMmQwYy00ZWUzLThjODYtZWNiOTMzMWFjMzg1XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "4.3/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "20%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "31/100"
+    }
+  ],
+  "Metascore": "31",
+  "imdbRating": "4.3",
+  "imdbVotes": "5,369",
+  "imdbID": "tt18069420",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$31,075,170",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31251",
+    "gov_title_zh": "藍色小精靈大電影",
+    "gov_title_en": "SMURFS",
+    "imdb_id": "tt18069420",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:23:21"
+  }
+}

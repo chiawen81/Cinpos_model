@@ -1,0 +1,51 @@
+{
+  "Title": "Queer",
+  "Year": "2024",
+  "Rated": "R",
+  "Released": "29 Mar 2025",
+  "Runtime": "137 min",
+  "Genre": "Biography, Drama, History",
+  "Director": "Luca Guadagnino",
+  "Writer": "William S. Burroughs, Justin Kuritzkes",
+  "Actors": "Daniel Craig, Daan de Wit, Jason Schwartzman",
+  "Plot": "In 1950s Mexico City, an American immigrant in his late forties leads a solitary life amidst a small American community. However, the arrival of a young student stirs the man into finally establishing a meaningful connection with ...",
+  "Language": "English, Spanish, French",
+  "Country": "Italy, United States",
+  "Awards": "4 wins & 60 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMjE5YjAyOWYtMDk2Zi00NjFmLWE3OGMtMjc0ZjNmYjQxMmEzXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.4/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "77%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "72/100"
+    }
+  ],
+  "Metascore": "72",
+  "imdbRating": "6.4",
+  "imdbVotes": "24,483",
+  "imdbID": "tt24176060",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$3,736,813",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "30155",
+    "gov_title_zh": "QUEER",
+    "gov_title_en": "QUEER",
+    "imdb_id": "tt24176060",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:22:52"
+  }
+}

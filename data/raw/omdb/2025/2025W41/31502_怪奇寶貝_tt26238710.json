@@ -1,0 +1,51 @@
+{
+  "Title": "Sketch",
+  "Year": "2024",
+  "Rated": "PG",
+  "Released": "06 Aug 2025",
+  "Runtime": "93 min",
+  "Genre": "Adventure, Comedy, Family",
+  "Director": "Seth Worley",
+  "Writer": "Seth Worley",
+  "Actors": "Tony Hale, D'Arcy Carden, Bianca Belle",
+  "Plot": "When a young girl's sketchbook falls into a strange pond, her drawings come to life-chaotic, real and on the loose. As the town descends into chaos, her family must reunite and stop the monsters they never meant to unleash.",
+  "Language": "English",
+  "Country": "United States",
+  "Awards": "1 win & 2 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMTk4OTkzNGEtYWU1Yy00ZGM5LWE0ZDMtYzY3NjU1NjIwOGY2XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.2/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "95%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "78/100"
+    }
+  ],
+  "Metascore": "78",
+  "imdbRating": "7.2",
+  "imdbVotes": "3,922",
+  "imdbID": "tt26238710",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$8,129,808",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31502",
+    "gov_title_zh": "怪奇寶貝",
+    "gov_title_en": "SKETCH",
+    "imdb_id": "tt26238710",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:23:37"
+  }
+}

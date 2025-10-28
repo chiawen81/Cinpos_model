@@ -1,0 +1,51 @@
+{
+  "Title": "Gabby's Dollhouse: The Movie",
+  "Year": "2025",
+  "Rated": "G",
+  "Released": "26 Sep 2025",
+  "Runtime": "98 min",
+  "Genre": "Animation, Adventure, Comedy",
+  "Director": "Ryan Crego",
+  "Writer": "Traci Paige Johnson, Jennifer Twomey, Ryan Crego",
+  "Actors": "Laila Lockhart Kraner, Kristen Wiig, Carla Tassara",
+  "Plot": "Gabby and Grandma Gigi's road trip takes an unexpected turn when Gabby's prized dollhouse ends up with eccentric cat lady Vera. Gabby embarks on a adventure to reunite the Gabby Cats and retrieve her beloved dollhouse before it's ...",
+  "Language": "English",
+  "Country": "Canada, United States",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMmUwNTg3ODMtZGQxZi00Y2VmLWJhMTEtZTc5ZGM1Nzc5MDViXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "5.7/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "82%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "46/100"
+    }
+  ],
+  "Metascore": "46",
+  "imdbRating": "5.7",
+  "imdbVotes": "1,418",
+  "imdbID": "tt32214143",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$30,042,375",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31842",
+    "gov_title_zh": "蓋比的娃娃屋大電影",
+    "gov_title_en": "GABBY'S DOLLHOUSE: THE MOVIE",
+    "imdb_id": "tt32214143",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:24:49"
+  }
+}

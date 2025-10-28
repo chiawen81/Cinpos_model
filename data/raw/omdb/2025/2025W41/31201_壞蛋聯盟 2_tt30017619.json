@@ -1,0 +1,51 @@
+{
+  "Title": "The Bad Guys 2",
+  "Year": "2025",
+  "Rated": "PG",
+  "Released": "01 Aug 2025",
+  "Runtime": "104 min",
+  "Genre": "Animation, Action, Adventure",
+  "Director": "JP Sans, Pierre Perifel",
+  "Writer": "Yoni Brenner, Etan Cohen, Aaron Blabey",
+  "Actors": "Sam Rockwell, Marc Maron, Awkwafina",
+  "Plot": "The Bad Guys are struggling to find trust and acceptance in their newly minted lives as Good Guys, when they are pulled out of retirement and forced to do \"one last job\" by an all-female squad of criminals.",
+  "Language": "English",
+  "Country": "United States",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BY2YwODhmODctMjE2OS00Y2EyLWEyZTEtOGU3ODk5MGIzYmU1XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.1/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "88%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "64/100"
+    }
+  ],
+  "Metascore": "64",
+  "imdbRating": "7.1",
+  "imdbVotes": "16,096",
+  "imdbID": "tt30017619",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$81,190,505",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31201",
+    "gov_title_zh": "壞蛋聯盟 2",
+    "gov_title_en": "THE BAD GUYS 2",
+    "imdb_id": "tt30017619",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:23:19"
+  }
+}

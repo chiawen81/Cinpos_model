@@ -1,0 +1,51 @@
+{
+  "Title": "Dream Scenario",
+  "Year": "2023",
+  "Rated": "R",
+  "Released": "22 Nov 2023",
+  "Runtime": "102 min",
+  "Genre": "Comedy, Drama, Fantasy",
+  "Director": "Kristoffer Borgli",
+  "Writer": "Kristoffer Borgli",
+  "Actors": "Lily Bird, Nicolas Cage, Julianne Nicholson",
+  "Plot": "An ordinary family man finds his life turned upside down when strangers suddenly start seeing him in their dreams.",
+  "Language": "English, French",
+  "Country": "United States, Canada",
+  "Awards": "3 wins & 18 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZTVhZjNhMzktOGQ2YS00OGVkLWExNGEtMjBlYWI3MjVmYmM1XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.8/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "91%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "74/100"
+    }
+  ],
+  "Metascore": "74",
+  "imdbRating": "6.8",
+  "imdbVotes": "87,750",
+  "imdbID": "tt21942866",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$5,742,193",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "26305",
+    "gov_title_zh": "夢行者保羅",
+    "gov_title_en": "DREAM SCENARIO",
+    "imdb_id": "tt21942866",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:22:27"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "Title": "Stolen Girl",
+  "Year": "2025",
+  "Rated": "R",
+  "Released": "29 Aug 2025",
+  "Runtime": "110 min",
+  "Genre": "Action, Adventure, Drama",
+  "Director": "Pete Travis",
+  "Writer": "Pete Travis",
+  "Actors": "Rachel Weisz",
+  "Plot": "An American woman spends more than ten years tracking down her daughter who was abducted and taken to the Middle East by the child's father.",
+  "Language": "English",
+  "Country": "United States, Italy",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMzdmOWE0ZDgtMjVhOS00ZTk5LThjZDYtN2U5OTU4OTFkNTA2XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "5.3/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "5.3",
+  "imdbVotes": "1,012",
+  "imdbID": "tt4682810",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31809",
+    "gov_title_zh": "疾速營救",
+    "gov_title_en": "Stolen Girl",
+    "imdb_id": "tt4682810",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:24:44"
+  }
+}

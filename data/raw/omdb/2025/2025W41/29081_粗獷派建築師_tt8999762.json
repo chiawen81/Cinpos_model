@@ -1,0 +1,51 @@
+{
+  "Title": "The Brutalist",
+  "Year": "2024",
+  "Rated": "R",
+  "Released": "24 Jan 2025",
+  "Runtime": "216 min",
+  "Genre": "Drama",
+  "Director": "Brady Corbet",
+  "Writer": "Brady Corbet, Mona Fastvold",
+  "Actors": "Adrien Brody, Felicity Jones, Guy Pearce",
+  "Plot": "A visionary architect flees post-war Europe in 1947 for a brighter future in the United States and finds his life forever changed by a wealthy client.",
+  "Language": "English, Hungarian, Italian, Hebrew, Yiddish, Russian, French",
+  "Country": "United States, United Kingdom, Canada",
+  "Awards": "Won 3 Oscars. 136 wins & 344 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BM2U0MWRjZTMtMDVhNC00MzY4LTgwOTktZGQ2MDdiYTI4OWMxXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.3/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "93%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "90/100"
+    }
+  ],
+  "Metascore": "90",
+  "imdbRating": "7.3",
+  "imdbVotes": "105,795",
+  "imdbID": "tt8999762",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$16,279,129",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "29081",
+    "gov_title_zh": "粗獷派建築師",
+    "gov_title_en": "THE BRUTALIST",
+    "imdb_id": "tt8999762",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:22:37"
+  }
+}

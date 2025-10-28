@@ -1,0 +1,51 @@
+{
+  "Title": "Jurassic World: Rebirth",
+  "Year": "2025",
+  "Rated": "PG-13",
+  "Released": "02 Jul 2025",
+  "Runtime": "133 min",
+  "Genre": "Action, Adventure, Sci-Fi",
+  "Director": "Gareth Edwards",
+  "Writer": "David Koepp, Michael Crichton",
+  "Actors": "Scarlett Johansson, Mahershala Ali, Jonathan Bailey",
+  "Plot": "Five years post-Jurassic World: Dominion (2022), an expedition braves isolated equatorial regions to extract DNA from three massive prehistoric creatures for a groundbreaking medical breakthrough.",
+  "Language": "English, French, Spanish",
+  "Country": "United States, United Kingdom, Malta, India, Taiwan",
+  "Awards": "1 win & 1 nomination total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMGM3ZmI3NzQtNzU5Yi00ZWI1LTg3YTAtNmNmNWIyMWFjZTBkXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "5.9/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "50%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "50/100"
+    }
+  ],
+  "Metascore": "50",
+  "imdbRating": "5.9",
+  "imdbVotes": "143,129",
+  "imdbID": "tt31036941",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$339,640,400",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31123",
+    "gov_title_zh": "侏羅紀世界：重生",
+    "gov_title_en": "JURASSIC WORLD REBIRTH",
+    "imdb_id": "tt31036941",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:23:13"
+  }
+}

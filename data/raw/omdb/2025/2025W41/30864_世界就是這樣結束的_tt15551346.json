@@ -1,0 +1,51 @@
+{
+  "Title": "The End",
+  "Year": "2024",
+  "Rated": "R",
+  "Released": "20 Feb 2025",
+  "Runtime": "148 min",
+  "Genre": "Drama, Fantasy, Musical",
+  "Director": "Joshua Oppenheimer",
+  "Writer": "Rasmus Heisterberg, Joshua Oppenheimer, Shusaku Harada",
+  "Actors": "Tilda Swinton, George MacKay, Moses Ingram",
+  "Plot": "After decades alone, a wealthy family living in a salt mine encounters a stranger.",
+  "Language": "English, French",
+  "Country": "Denmark, Germany, Ireland, Italy, United Kingdom, Sweden, United States",
+  "Awards": "3 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BOGE5NGJlYWYtZDY0Ni00MDNkLWE3ZmItNjg5NGVjMWNjYWJkXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "5.4/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "56%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "65/100"
+    }
+  ],
+  "Metascore": "65",
+  "imdbRating": "5.4",
+  "imdbVotes": "2,447",
+  "imdbID": "tt15551346",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$141,660",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "30864",
+    "gov_title_zh": "世界就是這樣結束的",
+    "gov_title_en": "The End",
+    "imdb_id": "tt15551346",
+    "source": "omdb",
+    "fetch_mode": "by_imdb_id_from_temp",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 23:51:25"
+  }
+}

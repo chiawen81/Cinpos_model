@@ -1,0 +1,51 @@
+{
+  "Title": "Materialists",
+  "Year": "2025",
+  "Rated": "R",
+  "Released": "13 Jun 2025",
+  "Runtime": "116 min",
+  "Genre": "Comedy, Romance",
+  "Director": "Celine Song",
+  "Writer": "Celine Song",
+  "Actors": "Dakota Johnson, Chris Evans, Pedro Pascal",
+  "Plot": "An ambitious young New York City matchmaker finds herself torn between the perfect match and her imperfect ex.",
+  "Language": "English",
+  "Country": "United States, Finland, United Kingdom",
+  "Awards": "6 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BNmQxMTI1YmEtOGY3Yi00NzVlLWEzMjAtYTI1NWZkNDFiMDg1XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.3/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "78%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "70/100"
+    }
+  ],
+  "Metascore": "70",
+  "imdbRating": "6.3",
+  "imdbVotes": "60,266",
+  "imdbID": "tt30253473",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$36,503,614",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31402",
+    "gov_title_zh": "天作之合",
+    "gov_title_en": "MATERIALISTS",
+    "imdb_id": "tt30253473",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:23:34"
+  }
+}

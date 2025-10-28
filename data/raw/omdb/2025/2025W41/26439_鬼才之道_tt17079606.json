@@ -1,0 +1,47 @@
+{
+  "Title": "Dead Talents Society",
+  "Year": "2024",
+  "Rated": "TV-MA",
+  "Released": "07 Aug 2024",
+  "Runtime": "111 min",
+  "Genre": "Comedy, Horror, Thriller",
+  "Director": "John Hsu",
+  "Writer": "John Hsu, Tsai Kun-Lin",
+  "Actors": "Sandrine Pinna, Gingle Wang, Chen Bolin",
+  "Plot": "Follows ghosts who want to become the spookiest of urban legends and most successful and famous stars in the underworld through their scare tactics and performances amongst the living.",
+  "Language": "Min Nan, Mandarin",
+  "Country": "Taiwan",
+  "Awards": "11 wins & 9 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BOTQ4NmIyMjAtZWMwMC00OGIyLWEzMmYtMzY3ZGRhYzUyNGE2XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.0/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "95%"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "7.0",
+  "imdbVotes": "2,464",
+  "imdbID": "tt17079606",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "26439",
+    "gov_title_zh": "鬼才之道",
+    "gov_title_en": "Dead Talents Society",
+    "imdb_id": "tt17079606",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 22:22:29"
+  }
+}

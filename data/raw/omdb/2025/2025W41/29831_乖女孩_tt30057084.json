@@ -1,0 +1,51 @@
+{
+  "Title": "Babygirl",
+  "Year": "2024",
+  "Rated": "R",
+  "Released": "25 Dec 2024",
+  "Runtime": "114 min",
+  "Genre": "Drama, Romance, Thriller",
+  "Director": "Halina Reijn",
+  "Writer": "Halina Reijn",
+  "Actors": "Nicole Kidman, Harris Dickinson, Antonio Banderas",
+  "Plot": "A high-powered CEO puts her career and family on the line when she begins a torrid affair with her much-younger intern.",
+  "Language": "English",
+  "Country": "Netherlands, United States",
+  "Awards": "9 wins & 23 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMmUwODYwODAtYWZkZS00YmUwLWFmMWEtOGNjMjE2NDk3OWIwXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "5.8/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "76%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "79/100"
+    }
+  ],
+  "Metascore": "79",
+  "imdbRating": "5.8",
+  "imdbVotes": "70,365",
+  "imdbID": "tt30057084",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$28,196,732",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "29831",
+    "gov_title_zh": "乖女孩",
+    "gov_title_en": "BABY GIRL",
+    "imdb_id": "tt30057084",
+    "source": "omdb",
+    "fetch_mode": "by_imdb_id_from_temp",
+    "week_label": "2025W43",
+    "year_label": "2025",
+    "fetched_at": "2025-10-26 23:14:26"
+  }
+}

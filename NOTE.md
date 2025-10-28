@@ -2,8 +2,8 @@
 
 ## 待處理清單
 1. 建立聚合檔 boxoffice_integrate.py、rating_integrate.py
-  (1) 腳本位置src\ML_recommend\data_aggregated
-  (2) 資料生成的位置data\integration
+  (1) 腳本位置src\ML_recommend\data_data_integration
+  (2) 資料生成的位置data\aggregated
   (3) 生成內容: 單一電影的票房(或評分) 的逐周資料合成一個row，再把所有電影row合併成一隻綁案
   (4) 生成的檔案格式: boxoffice_agg_2025W43.csv
 
@@ -25,7 +25,7 @@
        => 結構與更新方式比照調整後的2.boxoffice_permovie
   (2) 腳本omdb_cleaner.py要改
  
- 
+
 <已完成>
 5. 電影長度film_length轉分鐘
   (1) 處理腳本: data_cleaning\boxoffice_permovie.py 

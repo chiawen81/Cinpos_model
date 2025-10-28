@@ -71,13 +71,11 @@ def flatten_weekly_boxoffice(movie_data: dict, gov_id: str) -> pd.DataFrame:
     )
 
     df["gov_id"] = gov_id
-    df["week_label"] = WEEK_LABEL
     df["fetch_date"] = datetime.now().strftime("%Y-%m-%d")
 
     return df[
         [
             "gov_id",
-            "week_label",
             "week_range",
             "amount",
             "tickets",

@@ -1,2 +1,2 @@
-﻿gov_id,week_label,week_range,amount,tickets,total_amount,total_tickets,rate,theater_count,fetch_date
-32114,2025W43,2025-10-13~2025-10-19,1443591.0,4895,1443591.0,4895,0,20,2025-10-28
+﻿gov_id,week_range,amount,tickets,total_amount,total_tickets,rate,theater_count,fetch_date
+32114,2025-10-13~2025-10-19,1443591.0,4895,1443591.0,4895,0,20,2025-10-28

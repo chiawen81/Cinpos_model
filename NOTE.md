@@ -1,6 +1,12 @@
 # 目前開發階段: 彙總模型訓練資料
 
 ## 待處理清單
+<__boxoffice_integrate.py: 80%> 
+  - 去掉total_weeks不滿3周的round
+  - 過濾掉正式上映日(official_release_date)前的票房資料
+    - official_release_date 從爬蟲資料拿，非推定為 first round 的release_start
+    - 進行票房過濾
+<__rating_integrate.py:尚未開始>
 1. 建立聚合檔 boxoffice_integrate.py、rating_integrate.py
   (1) 腳本位置src\ML_recommend\data_data_integration
   (2) 資料生成的位置data\aggregated
@@ -36,6 +42,12 @@
 => 欄位引用不變，另外新增電影性質、上映狀態
 => 資料源會改變成四周檔按omdb/gov的電影資訊、聚合後的票房資訊/評分資訊
 
+
+7. 爬歷史資料
+   因應直接拿 gov_title_en 去打 omdb API 錯誤太多
+=> 改先從imdb拿到imdb_id，再去omdb拿資料
+=> 新生成檔案:人工對照表gov_title_en、gov_title_zh、gov_id、imdb_id
+(---未完成pipeline企劃---)
 
 ## 暫不處理
 

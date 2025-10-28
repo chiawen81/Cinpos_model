@@ -3,14 +3,13 @@ OMDb 資料清洗模組
 -------------------------------------------------
 🎯 目標：
     將 data/raw/omdb/<year>/<week> 下的原始 JSON
-    轉換為結構化 CSV（單支、週彙整、全域合併）。
+    清洗成單支 CSV，並最終整併成 omdb_full_<date>.csv。
 
 📂 資料流：
     input  : data/raw/omdb/<year>/<week>/
     output :
-        - data/processed/movieInfo_omdb/<year>/<week>/<gov_id>_<title_zh>_<imdb_id>.csv
-        - data/processed/movieInfo_omdb/<year>/<week>/omdb_<周次>.csv
-        - data/processed/movieInfo_omdb/combined/omdb_all.csv
+        - data/processed/movieInfo_omdb/<gov_id>_<title_zh>_<imdb_id>.csv
+        - data/processed/movieInfo_omdb/combined/omdb_full_<date>.csv
 """
 
 # -------------------------------------------------------
@@ -22,7 +21,7 @@ import pandas as pd
 from datetime import datetime
 
 # 共用模組
-from common.path_utils import OMDB_RAW, OMDB_PROCESSED
+from common.path_utils import OMDB_RAW, MOVIEINFO_OMDB_PROCESSED
 from common.file_utils import ensure_dir, save_csv, load_json, clean_filename
 from common.date_utils import get_current_year_label, get_current_week_label
 
@@ -34,11 +33,11 @@ YEAR_LABEL = get_current_year_label()
 WEEK_LABEL = get_current_week_label()
 
 RAW_DIR = os.path.join(OMDB_RAW, YEAR_LABEL, WEEK_LABEL)
-PROCESSED_DIR = os.path.join(OMDB_PROCESSED, YEAR_LABEL, WEEK_LABEL)
-COMBINED_DIR = os.path.join(OMDB_PROCESSED, "combined")
+MOVIEINFO_PROCESSED_DIR = MOVIEINFO_OMDB_PROCESSED
+MOVIEINFO_COMBINED_DIR = os.path.join(MOVIEINFO_PROCESSED_DIR, "combined")
 
-ensure_dir(PROCESSED_DIR)
-ensure_dir(COMBINED_DIR)
+ensure_dir(MOVIEINFO_PROCESSED_DIR)
+ensure_dir(MOVIEINFO_COMBINED_DIR)
 
 
 # -------------------------------------------------------
@@ -95,39 +94,26 @@ def flatten_omdb_json(data: dict) -> dict:
     }
 
 
-def combine_weekly_csv(output_dir: str, combined_dir: str, year_label: str, week_label: str):
-    """將當週所有 CSV 合併成一支 weekly combined"""
-    all_csv = [os.path.join(output_dir, f) for f in os.listdir(output_dir) if f.endswith(".csv")]
+def combine_all_csv(processed_dir: str, combined_dir: str):
+    """合併全部 processed/movieInfo_omdb 下的 CSV 成 omdb_full_<date>.csv"""
+    all_csv = [
+        os.path.join(processed_dir, f) for f in os.listdir(processed_dir) if f.endswith(".csv")
+    ]
     if not all_csv:
-        print("⚠️ 無可合併的 CSV。")
+        print("⚠️ 無可合併的 CSV 檔案。")
         return None
 
     dfs = [pd.read_csv(f, encoding="utf-8") for f in all_csv]
     combined_df = pd.concat(dfs, ignore_index=True)
+    combined_df.drop_duplicates(subset=["imdb_id"], inplace=True)
 
-    weekly_filename = f"omdb_combined_{week_label}.csv"
-    weekly_path = os.path.join(output_dir, weekly_filename)
-    save_csv(combined_df, output_dir, weekly_filename)
-    print(f"📁 已產生週彙整：{weekly_path}")
+    today_label = datetime.now().strftime("%Y-%m-%d")
+    full_filename = f"movieInfo_omdb_full_{today_label}.csv"
+    save_csv(combined_df, combined_dir, full_filename)
+    print(f"📁 已產生全域合併：{os.path.join(combined_dir, full_filename)}")
+    print(f"　共 {len(combined_df)} 筆資料")
 
     return combined_df
-
-
-def update_all_combined(combined_dir: str, new_df: pd.DataFrame):
-    """更新全域合併檔 (omdb_all_YYYY-MM-DD.csv)，自動排重"""
-    today_label = datetime.now().strftime("%Y-%m-%d")
-    all_filename = f"omdb_all_{today_label}.csv"
-    all_path = os.path.join(combined_dir, all_filename)
-
-    if os.path.exists(all_path):
-        old_df = pd.read_csv(all_path, encoding="utf-8")
-        merged = pd.concat([old_df, new_df], ignore_index=True)
-        merged.drop_duplicates(subset=["imdb_id"], inplace=True)
-    else:
-        merged = new_df
-
-    save_csv(merged, combined_dir, all_filename)
-    print(f"📁 已更新全域合併：{all_path}（共 {len(merged)} 筆）")
 
 
 # -------------------------------------------------------
@@ -158,15 +144,13 @@ def clean_omdb_data():
         csv_name = f"{flat_data['gov_id']}_{safe_title}_{flat_data['imdb_id']}.csv"
 
         df = pd.DataFrame([flat_data])
-        save_csv(df, PROCESSED_DIR, csv_name)
+        save_csv(df, MOVIEINFO_PROCESSED_DIR, csv_name)
         processed_count += 1
 
     print(f"✅ 清洗完成，共處理 {processed_count} 筆資料。")
 
-    # 合併當週資料
-    weekly_df = combine_weekly_csv(PROCESSED_DIR, COMBINED_DIR, YEAR_LABEL, WEEK_LABEL)
-    if weekly_df is not None:
-        update_all_combined(COMBINED_DIR, weekly_df)
+    # 生成全域合併檔
+    combine_all_csv(MOVIEINFO_PROCESSED_DIR, MOVIEINFO_COMBINED_DIR)
 
     print("🎉 OMDb 清洗流程完成！")
 

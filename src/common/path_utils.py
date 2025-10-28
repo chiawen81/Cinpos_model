@@ -49,20 +49,21 @@ BOXOFFICE_PERMOVIE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_permovie")
 
 # 政府公開電影資料（單一電影）
 MOVIEINFO_GOV_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_gov")
-MOVIEINFO_GOV_COMBINED_PROCESSED = os.path.join(MOVIEINFO_GOV_PROCESSED, "combined")  # 彙總單一電影
+MOVIEINFO_GOV_COMBINED_PROCESSED = os.path.join(MOVIEINFO_GOV_PROCESSED, "combined")
 
 # OMDb　電影資訊
 OMDB_RAW = os.path.join(RAW_DIR, "omdb")
-OMDB_PROCESSED = os.path.join(PROCESSED_DIR, "omdb")
+MOVIEINFO_OMDB_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_omdb")
+MOVIEINFO_OMDB_COMBINED_PROCESSED = os.path.join(MOVIEINFO_OMDB_PROCESSED, "combined")
+
+# OMDb　評分資料
+RATING_OMDB_PROCESSED = os.path.join(PROCESSED_DIR, "rating_omdb")
 
 # 資料彙總- 資料庫主檔、模型訓練資料主檔
 # MOVIE_MASTER_PROCESSED = os.path.join(PROCESSED_DIR, "movie_master")
 MASTER_MERGE = os.path.join(MASTER_DIR, "merge")  # 初步合併
-MASTER_DB_READY = os.path.join(
-    MASTER_DIR, "db_ready"
-)  # API資料庫資料
+MASTER_DB_READY = os.path.join(MASTER_DIR, "db_ready")  # API資料庫資料
 MASTER_TRAIN_READY = os.path.join(MASTER_DIR, "train_ready")  # 訓練資料
-
 
 
 # -----------------------------
@@ -74,5 +75,5 @@ if __name__ == "__main__":
     print("🎬 BOXOFFICE_RAW:", BOXOFFICE_RAW)
     print("🎬 BOXOFFICE_PERMOVIE_RAW:", BOXOFFICE_PERMOVIE_RAW)
     print("🏛️ GOV_PROCESSED:", MOVIEINFO_GOV_PROCESSED)
-    print("🌐 OMDB_PROCESSED:", OMDB_PROCESSED)
+    print("🌐 OMDB_PROCESSED:", MOVIEINFO_OMDB_PROCESSED)
     print("🧩 MOVIE_MASTER_PROCESSED:", MOVIE_MASTER_PROCESSED)

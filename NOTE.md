@@ -5,14 +5,12 @@
   (1) 腳本位置src\ML_recommend\data_aggregated
   (2) 資料生成的位置data\integration
   (3) 生成內容: 單一電影的票房(或評分) 的逐周資料合成一個row，再把所有電影row合併成一隻綁案
-  (4) 其他任務：處理標記-上映狀態
-  (5) 生成的檔案格式: boxoffice_agg_2025W43.csv
+  (4) 生成的檔案格式: boxoffice_agg_2025W43.csv
 
 
 2. processed/boxoffice_permovie
   (1)資料夾結構改成跟movieInfo_gov一樣
     - 每個電影一隻檔案
-    - 有一個combined彙整檔=> 這裡沒辦法直接combined，要轉成一組數字
     - 更新的時候直接覆蓋單一電影，再跑腳本生成combined檔
   (2) 腳本boxoffice_permovie.py要改
 

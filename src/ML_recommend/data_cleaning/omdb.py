@@ -1,30 +1,35 @@
 """
-OMDb 資料清洗模組
+OMDb 清洗 + 評分資料整併模組
 -------------------------------------------------
 🎯 目標：
-    將 data/raw/omdb/<year>/<week> 下的原始 JSON
-    清洗成單支 CSV，並最終整併成 omdb_full_<date>.csv。
+    讀取 data/raw/omdb/<year>/<week>/ 下的 JSON，
+    同步清洗出兩份資料：
+        (1) 電影完整資訊 → processed/movieInfo_omdb
+        (2) 評分歷史資料 → processed/rating_omdb
 
 📂 資料流：
     input  : data/raw/omdb/<year>/<week>/
     output :
         - data/processed/movieInfo_omdb/<gov_id>_<title_zh>_<imdb_id>.csv
-        - data/processed/movieInfo_omdb/combined/omdb_full_<date>.csv
+        - data/processed/movieInfo_omdb/combined/movieInfo_omdb_full_<date>.csv
+        - data/processed/rating_omdb/<gov_id>_<title_zh>_<imdb_id>.csv
 """
 
 # -------------------------------------------------------
 # 套件匯入
 # -------------------------------------------------------
 import os
-import json
 import pandas as pd
 from datetime import datetime
 
 # 共用模組
-from common.path_utils import OMDB_RAW, MOVIEINFO_OMDB_PROCESSED
-from common.file_utils import ensure_dir, save_csv, load_json, clean_filename
+from common.path_utils import (
+    OMDB_RAW,
+    MOVIEINFO_OMDB_PROCESSED,
+    RATING_OMDB_PROCESSED,
+)
+from common.file_utils import ensure_dir, load_json, save_csv, clean_filename
 from common.date_utils import get_current_year_label, get_current_week_label
-
 
 # -------------------------------------------------------
 # 全域設定
@@ -33,11 +38,13 @@ YEAR_LABEL = get_current_year_label()
 WEEK_LABEL = get_current_week_label()
 
 RAW_DIR = os.path.join(OMDB_RAW, YEAR_LABEL, WEEK_LABEL)
-MOVIEINFO_PROCESSED_DIR = MOVIEINFO_OMDB_PROCESSED
-MOVIEINFO_COMBINED_DIR = os.path.join(MOVIEINFO_PROCESSED_DIR, "combined")
+MOVIEINFO_DIR = MOVIEINFO_OMDB_PROCESSED
+MOVIEINFO_COMBINED_DIR = os.path.join(MOVIEINFO_DIR, "combined")
+RATING_DIR = RATING_OMDB_PROCESSED
 
-ensure_dir(MOVIEINFO_PROCESSED_DIR)
+ensure_dir(MOVIEINFO_DIR)
 ensure_dir(MOVIEINFO_COMBINED_DIR)
+ensure_dir(RATING_DIR)
 
 
 # -------------------------------------------------------
@@ -49,10 +56,8 @@ def extract_ratings(data: dict):
     tomatoes_rating = ""
     metacritic_rating = ""
 
-    ratings = data.get("Ratings", [])
-    for r in ratings:
-        src = r.get("Source", "")
-        val = r.get("Value", "")
+    for r in data.get("Ratings", []):
+        src, val = r.get("Source", ""), r.get("Value", "")
         if "Internet Movie Database" in src:
             imdb_rating = val
         elif "Rotten Tomatoes" in src:
@@ -63,10 +68,10 @@ def extract_ratings(data: dict):
     return imdb_rating, tomatoes_rating, metacritic_rating
 
 
+# ---------------- movieInfo_omdb ----------------
 def flatten_omdb_json(data: dict) -> dict:
     """將單支 OMDb JSON 攤平成結構化字典"""
     note = data.get("crawl_note", {})
-
     imdb_rating, tomatoes_rating, metacritic_rating = extract_ratings(data)
 
     return {
@@ -95,7 +100,7 @@ def flatten_omdb_json(data: dict) -> dict:
 
 
 def combine_all_csv(processed_dir: str, combined_dir: str):
-    """合併全部 processed/movieInfo_omdb 下的 CSV 成 omdb_full_<date>.csv"""
+    """合併全部 processed/movieInfo_omdb 下的 CSV 成 movieInfo_omdb_full_<date>.csv"""
     all_csv = [
         os.path.join(processed_dir, f) for f in os.listdir(processed_dir) if f.endswith(".csv")
     ]
@@ -108,18 +113,59 @@ def combine_all_csv(processed_dir: str, combined_dir: str):
     combined_df.drop_duplicates(subset=["imdb_id"], inplace=True)
 
     today_label = datetime.now().strftime("%Y-%m-%d")
-    full_filename = f"movieInfo_omdb_full_{today_label}.csv"
-    save_csv(combined_df, combined_dir, full_filename)
-    print(f"📁 已產生全域合併：{os.path.join(combined_dir, full_filename)}")
-    print(f"　共 {len(combined_df)} 筆資料")
+    filename = f"movieInfo_omdb_full_{today_label}.csv"
+    save_csv(combined_df, combined_dir, filename)
 
+    print(f"📁 已產生全域合併：{os.path.join(combined_dir, filename)}")
+    print(f"　共 {len(combined_df)} 筆資料")
     return combined_df
+
+
+# ---------------- rating_omdb ----------------
+def build_rating_row(data: dict) -> dict:
+    """從單支 OMDb JSON 提取評分資料"""
+    note = data.get("crawl_note", {})
+    imdb_rating, tomatoes_rating, metacritic_rating = extract_ratings(data)
+
+    crawl_date = note.get("fetched_at", "")  # 爬蟲撈資料的時間
+    update_at = datetime.now().strftime("%Y/%m/%d %H:%M")  # 寫入時間
+
+    return {
+        "gov_id": note.get("gov_id", ""),
+        "imdb_id": note.get("imdb_id", ""),
+        "week_label": note.get("week_label", ""),
+        "crawl_date": crawl_date,
+        "imdb_rating": imdb_rating,
+        "tomatoes_rating": tomatoes_rating,
+        "metacritic_rating": metacritic_rating,
+        "source": note.get("source", "omdb"),
+        "update_at": update_at,
+        "gov_title_zh": note.get("gov_title_zh", ""),
+    }
+
+
+def update_movie_rating_csv(row: dict, output_dir: str):
+    """若該電影已有歷史紀錄，則追加一行；若無則新建。"""
+    gov_id = row["gov_id"]
+    imdb_id = row["imdb_id"]
+    safe_title = clean_filename(row.get("gov_title_zh", "unknown"))
+    filename = f"{gov_id}_{safe_title}_{imdb_id}.csv"
+    file_path = os.path.join(output_dir, filename)
+
+    if os.path.exists(file_path):
+        old_df = pd.read_csv(file_path, encoding="utf-8")
+        merged_df = pd.concat([old_df, pd.DataFrame([row])], ignore_index=True)
+    else:
+        merged_df = pd.DataFrame([row])
+
+    save_csv(merged_df, output_dir, filename)
+    print(f"📄 已更新評分紀錄：{filename}（共 {len(merged_df)} 筆）")
 
 
 # -------------------------------------------------------
 # 主清洗流程
 # -------------------------------------------------------
-def clean_omdb_data():
+def clean_omdb_all():
     if not os.path.exists(RAW_DIR):
         print(f"⚠️ 找不到原始資料夾：{RAW_DIR}")
         return
@@ -131,7 +177,9 @@ def clean_omdb_data():
 
     print(f"🚀 開始清洗 OMDb 資料，共 {len(json_files)} 部電影")
 
-    processed_count = 0
+    count_movieinfo = 0
+    count_rating = 0
+
     for file_name in json_files:
         file_path = os.path.join(RAW_DIR, file_name)
         data = load_json(file_path)
@@ -139,24 +187,28 @@ def clean_omdb_data():
             print(f"⚠️ 無法讀取或內容空白：{file_name}")
             continue
 
+        # --- 輸出 movieInfo_omdb ---
         flat_data = flatten_omdb_json(data)
         safe_title = clean_filename(flat_data["gov_title_zh"] or "unknown")
-        csv_name = f"{flat_data['gov_id']}_{safe_title}_{flat_data['imdb_id']}.csv"
+        movie_filename = f"{flat_data['gov_id']}_{safe_title}_{flat_data['imdb_id']}.csv"
+        save_csv(pd.DataFrame([flat_data]), MOVIEINFO_DIR, movie_filename)
+        count_movieinfo += 1
 
-        df = pd.DataFrame([flat_data])
-        save_csv(df, MOVIEINFO_PROCESSED_DIR, csv_name)
-        processed_count += 1
+        # --- 輸出 rating_omdb ---
+        rating_row = build_rating_row(data)
+        update_movie_rating_csv(rating_row, RATING_DIR)
+        count_rating += 1
 
-    print(f"✅ 清洗完成，共處理 {processed_count} 筆資料。")
+    print(f"✅ 電影資料清洗完成，共 {count_movieinfo} 筆。")
+    print(f"✅ 評分資料清洗完成，共 {count_rating} 筆。")
 
-    # 生成全域合併檔
-    combine_all_csv(MOVIEINFO_PROCESSED_DIR, MOVIEINFO_COMBINED_DIR)
-
-    print("🎉 OMDb 清洗流程完成！")
+    # 整併全部 movieInfo_omdb
+    combine_all_csv(MOVIEINFO_DIR, MOVIEINFO_COMBINED_DIR)
+    print("🎉 OMDb 清洗與評分資料輸出完成！")
 
 
 # -------------------------------------------------------
 # 主程式執行區
 # -------------------------------------------------------
 if __name__ == "__main__":
-    clean_omdb_data()
+    clean_omdb_all()

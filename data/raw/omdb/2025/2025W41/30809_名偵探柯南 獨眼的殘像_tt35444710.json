@@ -1,0 +1,43 @@
+{
+  "Title": "Detective Conan: One-Eyed Flashback",
+  "Year": "2025",
+  "Rated": "N/A",
+  "Released": "18 Apr 2025",
+  "Runtime": "110 min",
+  "Genre": "Animation, Action, Mystery",
+  "Director": "Katsuya Shigehara",
+  "Writer": "Takeharu Sakurai, Gôshô Aoyama",
+  "Actors": "Show Hayami, Megumi Hayashibara, Hiroaki Hirata",
+  "Plot": "Detectives Conan and Kogoro Mouri are pulled into a mystery connected to the past of police inspector Kansuke Yamato.",
+  "Language": "Japanese",
+  "Country": "Japan",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZGRmMzYwOTEtMDI0Yi00MGJmLWJkNDEtYWQ4OWEyNjBiZTIwXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.9/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "6.9",
+  "imdbVotes": "622",
+  "imdbID": "tt35444710",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "30809",
+    "gov_title_zh": "名偵探柯南 獨眼的殘像",
+    "gov_title_en": "Detective Conan The Movie: One-Eyed Flashback",
+    "imdb_id": "tt35444710",
+    "source": "omdb",
+    "fetch_mode": "by_imdb_id_from_manual_fix",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:29:09"
+  }
+}

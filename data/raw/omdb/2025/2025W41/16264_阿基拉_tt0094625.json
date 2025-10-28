@@ -1,0 +1,51 @@
+{
+  "Title": "Akira",
+  "Year": "1988",
+  "Rated": "R",
+  "Released": "16 Jul 1988",
+  "Runtime": "124 min",
+  "Genre": "Animation, Action, Drama",
+  "Director": "Katsuhiro Ôtomo",
+  "Writer": "Katsuhiro Ôtomo, Izô Hashimoto",
+  "Actors": "Mitsuo Iwata, Nozomu Sasaki, Mami Koyama",
+  "Plot": "2019. 31 years after being destroyed during World War 3, Tokyo (now 'Neo-Tokyo') has been rebuilt and is a thriving metropolis. Shotaro Kaneda is the leader of a biker gang. His friend Tetsuo is injured in an accident and taken to a top-secret government facility. He develops telekinetic powers but decides to use them for evil rather than good. He has the same powers as Akira, the force that destroyed Tokyo in 1988, and now it appears that history will repeat itself.",
+  "Language": "Japanese",
+  "Country": "Japan",
+  "Awards": "1 win total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BYWUxMGRhZDQtMTBmMi00N2IxLWE5NmYtMDMyMWExODAwNWYzXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "8.0/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "91%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "68/100"
+    }
+  ],
+  "Metascore": "68",
+  "imdbRating": "8.0",
+  "imdbVotes": "220,198",
+  "imdbID": "tt0094625",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$553,171",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "16264",
+    "gov_title_zh": "阿基拉",
+    "gov_title_en": "AKIRA",
+    "imdb_id": "tt0094625",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:28:47"
+  }
+}

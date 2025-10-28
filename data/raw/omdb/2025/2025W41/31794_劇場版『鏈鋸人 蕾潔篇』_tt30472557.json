@@ -1,0 +1,43 @@
+{
+  "Title": "Chainsaw Man - The Movie: Reze Arc",
+  "Year": "2025",
+  "Rated": "R",
+  "Released": "24 Oct 2025",
+  "Runtime": "100 min",
+  "Genre": "Animation, Action, Adventure",
+  "Director": "Tatsuya Yoshihara",
+  "Writer": "Tatsuki Fujimoto, Hiroshi Seko",
+  "Actors": "Kikunosuke Toya, Tomori Kusunoki, Shôgo Sakata",
+  "Plot": "Denji encounters a new romantic interest, Reze, who works at a coffee café.",
+  "Language": "Japanese",
+  "Country": "Japan",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZmMzNGVhODktYmU5MS00MDg1LThlNTEtNTMyYTg5MDA0Njk4XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "8.5/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "8.5",
+  "imdbVotes": "3,800",
+  "imdbID": "tt30472557",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31794",
+    "gov_title_zh": "劇場版『鏈鋸人 蕾潔篇』",
+    "gov_title_en": "Chainsaw Man – The Movie: Reze Arc",
+    "imdb_id": "tt30472557",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:29:55"
+  }
+}

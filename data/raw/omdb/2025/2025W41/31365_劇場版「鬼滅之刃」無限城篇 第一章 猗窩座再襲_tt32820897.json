@@ -1,0 +1,51 @@
+{
+  "Title": "Demon Slayer: Kimetsu no Yaiba- The Movie - Infinity Castle",
+  "Year": "2025",
+  "Rated": "R",
+  "Released": "12 Sep 2025",
+  "Runtime": "155 min",
+  "Genre": "Animation, Action, Adventure",
+  "Director": "Haruo Sotozaki, Hikaru Kondô",
+  "Writer": "Koyoharu Gotouge, Hikaru Kondô",
+  "Actors": "Zach Aguilar, Ryan Bartley, Johnny Yong Bosch",
+  "Plot": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.",
+  "Language": "Japanese",
+  "Country": "Japan, United States",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BOGQ3YWUzYjEtMTJiYy00ZjQ0LWI0YjktYjhiNGVhNGExYTM3XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "8.5/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "98%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "67/100"
+    }
+  ],
+  "Metascore": "67",
+  "imdbRating": "8.5",
+  "imdbVotes": "43,310",
+  "imdbID": "tt32820897",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$125,097,757",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31365",
+    "gov_title_zh": "劇場版「鬼滅之刃」無限城篇 第一章 猗窩座再襲",
+    "gov_title_en": "Demon Slayer：Kimetsu no Yaiba Infinity Castle",
+    "imdb_id": "tt32820897",
+    "source": "omdb",
+    "fetch_mode": "by_imdb_id_from_manual_fix",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:29:24"
+  }
+}

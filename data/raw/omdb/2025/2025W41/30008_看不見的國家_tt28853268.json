@@ -1,0 +1,47 @@
+{
+  "Title": "Invisible Nation",
+  "Year": "2023",
+  "Rated": "N/A",
+  "Released": "29 Sep 2023",
+  "Runtime": "85 min",
+  "Genre": "Documentary",
+  "Director": "Vanessa Hope",
+  "Writer": "N/A",
+  "Actors": "Chu Chen, Yu-jie Chen, Bi-Khim Hsiao",
+  "Plot": "Taiwan's first female president, Tsai Ing-wen, centers this portrait of the constantly colonized island, as it struggles to preserve its hard-won democracy, autonomy and freedom from fear of authoritarian aggression.",
+  "Language": "English, Chinese",
+  "Country": "United States, Taiwan",
+  "Awards": "2 wins & 6 nominations",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BNWM0NWE0YjctOWFkNS00MzFlLWI2YzgtMzkwNGUyY2YxYjEwXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.9/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "80%"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "7.9",
+  "imdbVotes": "109",
+  "imdbID": "tt28853268",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "30008",
+    "gov_title_zh": "看不見的國家",
+    "gov_title_en": "Invisible Nation",
+    "imdb_id": "tt28853268",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:29:03"
+  }
+}

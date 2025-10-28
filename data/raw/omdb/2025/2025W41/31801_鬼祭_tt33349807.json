@@ -1,0 +1,43 @@
+{
+  "Title": "Sugar Mill",
+  "Year": "2025",
+  "Rated": "Not Rated",
+  "Released": "31 Mar 2025",
+  "Runtime": "133 min",
+  "Genre": "Horror, Thriller",
+  "Director": "Awi Suryadi",
+  "Writer": "Lele Laila, SimpleMan",
+  "Actors": "Arbani Yasiz, Ersya Aurelia, Erika Carlina",
+  "Plot": "Follows a group of seasonal laborers who come to an old sugar factory in the countryside to work during the harvest season.",
+  "Language": "Indonesian",
+  "Country": "Indonesia",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZjJjZDk1ZDAtZjA1Ny00ZWYzLTkwZTMtZDRhY2U2YjdmMzkyXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "5.8/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "5.8",
+  "imdbVotes": "2,678",
+  "imdbID": "tt33349807",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31801",
+    "gov_title_zh": "鬼祭",
+    "gov_title_en": "Pabrik Gula",
+    "imdb_id": "tt33349807",
+    "source": "omdb",
+    "fetch_mode": "by_imdb_id_from_manual_fix",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:30:02"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "Title": "Men",
+  "Year": "2022",
+  "Rated": "R",
+  "Released": "20 May 2022",
+  "Runtime": "100 min",
+  "Genre": "Drama, Fantasy, Horror",
+  "Director": "Alex Garland",
+  "Writer": "Alex Garland",
+  "Actors": "Jessie Buckley, Rory Kinnear, Paapa Essiedu",
+  "Plot": "A young woman goes on a solo vacation to the English countryside following the death of her ex-husband.",
+  "Language": "English",
+  "Country": "United Kingdom, United States",
+  "Awards": "2 wins & 36 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BNzQyNjY2MTItYzMwYi00NDg0LTk3NWItZTRmZmY5OTM5ZGU0XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.0/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "69%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "65/100"
+    }
+  ],
+  "Metascore": "65",
+  "imdbRating": "6.0",
+  "imdbVotes": "75,010",
+  "imdbID": "tt13841850",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$7,587,853",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "21389",
+    "gov_title_zh": "們",
+    "gov_title_en": "MEN",
+    "imdb_id": "tt13841850",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:28:49"
+  }
+}

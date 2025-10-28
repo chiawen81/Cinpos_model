@@ -1,0 +1,51 @@
+{
+  "Title": "A Separation",
+  "Year": "2011",
+  "Rated": "PG-13",
+  "Released": "16 Mar 2011",
+  "Runtime": "123 min",
+  "Genre": "Drama",
+  "Director": "Asghar Farhadi",
+  "Writer": "Asghar Farhadi",
+  "Actors": "Payman Maadi, Leila Hatami, Sareh Bayat",
+  "Plot": "Nader (Payman Maadi) and Simin (Leila Hatami) argue about living abroad. Simin prefers to live abroad to provide better opportunities for their only daughter, Termeh. However, Nader refuses to go because he thinks he must stay in Iran and take care of his father (Ali-Asghar Shahbazi), who suffers from Alzheimers. However, Simin is determined to get a divorce and leave the country with her daughter.",
+  "Language": "Persian",
+  "Country": "Iran, France, Australia",
+  "Awards": "Won 1 Oscar. 89 wins & 52 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMDM0ZWRmMzctM2M5ZS00ZjU0LWIxN2MtNWNlNGY1ZDhjMDVhXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "8.3/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "99%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "95/100"
+    }
+  ],
+  "Metascore": "95",
+  "imdbRating": "8.3",
+  "imdbVotes": "273,123",
+  "imdbID": "tt1832382",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$7,099,055",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "30269",
+    "gov_title_zh": "分居風暴(數位版)",
+    "gov_title_en": "A Separation",
+    "imdb_id": "tt1832382",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:29:05"
+  }
+}

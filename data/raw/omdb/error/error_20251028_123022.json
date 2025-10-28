@@ -1,0 +1,42 @@
+[
+  {
+    "type": "api_error",
+    "reason": "Incorrect IMDb ID.",
+    "timestamp": "2025-10-28 12:29:19",
+    "gov_id": "31301",
+    "gov_title_zh": "我在荒野做了一場夢",
+    "gov_title_en": "Seven Ages of a Man"
+  },
+  {
+    "type": "omdb查不到資料(已記錄在人工對照表)",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-28 12:29:39",
+    "gov_id": "31668",
+    "gov_title_zh": "突破_三千米的泳氣",
+    "gov_title_en": "Second Life"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-28 12:29:42",
+    "gov_id": "31701",
+    "gov_title_zh": "麵包超人電影版：小水滴的英雄！",
+    "gov_title_en": "ANPANMAN: Chapon's Hero！"
+  },
+  {
+    "type": "api_error",
+    "reason": "Incorrect IMDb ID.",
+    "timestamp": "2025-10-28 12:30:03",
+    "gov_id": "31807",
+    "gov_title_zh": "泥娃娃",
+    "gov_title_en": "Mudborn"
+  },
+  {
+    "type": "Movie not found",
+    "reason": "OMDb 查不到資料",
+    "timestamp": "2025-10-28 12:30:18",
+    "gov_id": "31988",
+    "gov_title_zh": "銀簪子",
+    "gov_title_en": "Grandma's Hairpin"
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "Title": "Still Walking",
+  "Year": "2008",
+  "Rated": "Not Rated",
+  "Released": "28 Jun 2008",
+  "Runtime": "115 min",
+  "Genre": "Drama",
+  "Director": "Hirokazu Koreeda",
+  "Writer": "Hirokazu Koreeda",
+  "Actors": "Hiroshi Abe, Yui Natsukawa, You",
+  "Plot": "A family gathers together for a commemorative ritual whose nature only gradually becomes clear.",
+  "Language": "Japanese",
+  "Country": "Japan",
+  "Awards": "11 wins & 9 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BOTFkZjE4ZGMtODc3MC00ZDllLTkxMTAtZTk0NTkzYTYyMTYwXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.9/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "100%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "89/100"
+    }
+  ],
+  "Metascore": "89",
+  "imdbRating": "7.9",
+  "imdbVotes": "20,145",
+  "imdbID": "tt1087578",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$167,047",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "8873",
+    "gov_title_zh": "橫山家之味",
+    "gov_title_en": "STILL WALKING",
+    "imdb_id": "tt1087578",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:30:20"
+  }
+}

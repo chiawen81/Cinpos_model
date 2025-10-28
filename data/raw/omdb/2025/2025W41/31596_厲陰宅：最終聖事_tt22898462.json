@@ -1,0 +1,47 @@
+{
+  "Title": "The Conjuring: Last Rites",
+  "Year": "2025",
+  "Rated": "R",
+  "Released": "05 Sep 2025",
+  "Runtime": "135 min",
+  "Genre": "Horror, Mystery, Thriller",
+  "Director": "Michael Chaves",
+  "Writer": "Ian Goldberg, Richard Naing, David Leslie Johnson-McGoldrick",
+  "Actors": "Vera Farmiga, Patrick Wilson, Elliot Cowan",
+  "Plot": "Paranormal investigators Ed and Lorraine Warren take on one last terrifying case involving mysterious entities they must confront.",
+  "Language": "English",
+  "Country": "United States, United Kingdom, Canada",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BM2VmMzRkYzgtMzg2ZC00OTFkLTkwMTYtNTMxNjM2YzI1MjgyXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.3/10"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "54/100"
+    }
+  ],
+  "Metascore": "54",
+  "imdbRating": "6.3",
+  "imdbVotes": "45,087",
+  "imdbID": "tt22898462",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$168,273,036",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31596",
+    "gov_title_zh": "厲陰宅：最終聖事",
+    "gov_title_en": "The Conjuring：Last Rites",
+    "imdb_id": "tt22898462",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:29:33"
+  }
+}

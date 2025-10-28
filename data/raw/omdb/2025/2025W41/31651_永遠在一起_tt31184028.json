@@ -1,0 +1,51 @@
+{
+  "Title": "Together",
+  "Year": "2025",
+  "Rated": "R",
+  "Released": "30 Jul 2025",
+  "Runtime": "102 min",
+  "Genre": "Horror, Romance",
+  "Director": "Michael Shanks",
+  "Writer": "Michael Shanks",
+  "Actors": "Dave Franco, Alison Brie, Damon Herriman",
+  "Plot": "Years into their relationship, Tim and Millie find themselves at a crossroads as they move to the country. With tensions already flaring, an encounter with an unnatural force threatens to corrupt their lives, their love and their ...",
+  "Language": "English",
+  "Country": "Australia, United States",
+  "Awards": "4 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BOWI1Mzg0OWUtNDYxYy00Mzk3LTgxMjMtYWYxZjJhMjI4NDcyXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.8/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "90%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "75/100"
+    }
+  ],
+  "Metascore": "75",
+  "imdbRating": "6.8",
+  "imdbVotes": "39,638",
+  "imdbID": "tt31184028",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$21,273,159",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31651",
+    "gov_title_zh": "永遠在一起",
+    "gov_title_en": "TOGETHER",
+    "imdb_id": "tt31184028",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:29:35"
+  }
+}

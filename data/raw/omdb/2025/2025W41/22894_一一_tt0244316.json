@@ -1,0 +1,47 @@
+{
+  "Title": "Yi Yi",
+  "Year": "2000",
+  "Rated": "Not Rated",
+  "Released": "16 Dec 2000",
+  "Runtime": "173 min",
+  "Genre": "Drama",
+  "Director": "Edward Yang",
+  "Writer": "Edward Yang",
+  "Actors": "Nien-Jen Wu, Elaine Jin, Issei Ogata",
+  "Plot": "Portrait of a middle-class family in Taipei. A man in his forties, his teenage daughter and his eight-year-old son experience life, navigating between remorse, hope and disappointment.",
+  "Language": "Mandarin, Min Nan, Hokkien, English, Japanese, French",
+  "Country": "Taiwan, Japan",
+  "Awards": "14 wins & 23 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BNTAyMDQ5Y2MtZDk0NC00N2IyLWE5OTgtZjJkZWNlMDBhMDhlXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "8.1/10"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "94/100"
+    }
+  ],
+  "Metascore": "94",
+  "imdbRating": "8.1",
+  "imdbVotes": "31,921",
+  "imdbID": "tt0244316",
+  "Type": "movie",
+  "DVD": "12 Jun 2007",
+  "BoxOffice": "$1,252,241",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "22894",
+    "gov_title_zh": "一一",
+    "gov_title_en": "YIYI-A ONE AND A TWO",
+    "imdb_id": "tt0244316",
+    "source": "omdb",
+    "fetch_mode": "by_imdb_id_from_manual_fix",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:28:50"
+  }
+}

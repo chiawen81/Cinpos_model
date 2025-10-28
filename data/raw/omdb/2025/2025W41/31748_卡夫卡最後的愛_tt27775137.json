@@ -1,0 +1,43 @@
+{
+  "Title": "The Glory of Life",
+  "Year": "2024",
+  "Rated": "N/A",
+  "Released": "14 Mar 2024",
+  "Runtime": "98 min",
+  "Genre": "Drama, Romance",
+  "Director": "Judith Kaufmann, Georg Maas",
+  "Writer": "Georg Maas, Michael Gutmann, Michael Kumpfmüller",
+  "Actors": "Henriette Confurius, Sabin Tambrea, Manuel Rubey",
+  "Plot": "The last year in Franz Kafka's life and its surprising love story.",
+  "Language": "German",
+  "Country": "Germany, Austria",
+  "Awards": "2 nominations",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BYWMzZmIwMmMtZTQyMi00MTM4LTgyNGUtNGRmNDBhMDc3OTI1XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.6/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "6.6",
+  "imdbVotes": "308",
+  "imdbID": "tt27775137",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31748",
+    "gov_title_zh": "卡夫卡最後的愛",
+    "gov_title_en": "The Glory of Life",
+    "imdb_id": "tt27775137",
+    "source": "omdb",
+    "fetch_mode": "by_title_from_gov",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:29:49"
+  }
+}

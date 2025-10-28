@@ -1,0 +1,43 @@
+{
+  "Title": "100 Meters",
+  "Year": "2025",
+  "Rated": "N/A",
+  "Released": "N/A",
+  "Runtime": "95 min",
+  "Genre": "Animation, Drama, Sport",
+  "Director": "Kenji Iwaisawa",
+  "Writer": "Uoto, Yasuyuki Muto",
+  "Actors": "Jun'ya Enoki, Hiiro Ishibashi, Haruki Ishiya",
+  "Plot": "Gifted runner Togashi dominates 100m races until transfer student Komiya arrives, motivating him to train harder. Years later, they compete as rivals on the racetrack.",
+  "Language": "N/A",
+  "Country": "N/A",
+  "Awards": "N/A",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZWE2NGRkOGItMTM1MS00MGI0LWE3ZmUtZWE0YWNmYzU2ZDI0XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "8.9/10"
+    }
+  ],
+  "Metascore": "N/A",
+  "imdbRating": "8.9",
+  "imdbVotes": "337",
+  "imdbID": "tt32600395",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "N/A",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True",
+  "crawl_note": {
+    "gov_id": "31900",
+    "gov_title_zh": "一百公尺。",
+    "gov_title_en": "100 METERS",
+    "imdb_id": "tt32600395",
+    "source": "omdb",
+    "fetch_mode": "by_imdb_id_from_manual_fix",
+    "week_label": "2025W41",
+    "year_label": "2025",
+    "fetched_at": "2025-10-28 12:30:15"
+  }
+}

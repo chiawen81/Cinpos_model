@@ -16,7 +16,7 @@ import os
 import pandas as pd
 from datetime import datetime
 from common.file_utils import save_csv  # 若你的 save_csv 能接受資料夾 + 檔名
-from common.path_utils import MOVIEINFO_GOV_PROCESSED,MOVIEINFO_GOV_COMBINED_PROCESSED
+from common.path_utils import MOVIEINFO_GOV_PROCESSED, MOVIEINFO_GOV_COMBINED_PROCESSED
 
 
 # -------------------------------------------------------
@@ -79,7 +79,7 @@ def merge_movieInfo_gov():
 
     # 輸出檔案
     today = datetime.now().strftime("%Y-%m-%d")
-    output_name = f"movieInfo_gov_combined_{today}.csv"
+    output_name = f"movieInfo_gov_full_{today}.csv"
     save_csv(merged_df, MOVIEINFO_GOV_COMBINED_PROCESSED, output_name)
 
     # 統計輸出

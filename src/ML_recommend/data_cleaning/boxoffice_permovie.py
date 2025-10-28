@@ -94,7 +94,7 @@ def flatten_weekly_boxoffice(movie_data: dict, gov_id: str) -> pd.DataFrame:
 def clean_boxoffice_permovie():
     # --- 設定路徑 ---
     input_dir = os.path.join(BOXOFFICE_PERMOVIE_RAW, YEAR_LABEL, WEEK_LABEL)
-    output_dir = os.path.join(BOXOFFICE_PERMOVIE_PROCESSED, YEAR_LABEL, WEEK_LABEL)
+    output_dir = os.path.join(BOXOFFICE_PERMOVIE_PROCESSED)
     ensure_dir(output_dir)
     ensure_dir(MOVIEINFO_GOV_PROCESSED)
 
@@ -133,7 +133,7 @@ def clean_boxoffice_permovie():
         # Step 2️⃣：整理週票房資料
         df_weeks = flatten_weekly_boxoffice(crawler_data, processed_data_info["gov_id"])
         if not df_weeks.empty:
-            csv_filename = f"{processed_data_info['gov_id']}_{safe_title}_{WEEK_LABEL}.csv"
+            csv_filename = f"{processed_data_info['gov_id']}_{safe_title}.csv"
             save_csv(df_weeks, output_dir, csv_filename)
             print(f"✅ 已清洗：{csv_filename}")
             success_count += 1

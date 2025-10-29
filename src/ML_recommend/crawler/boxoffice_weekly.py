@@ -13,6 +13,7 @@ from common.date_utils import (
 )
 from common.path_utils import BOXOFFICE_RAW
 from common.file_utils import save_json
+from datetime import datetime,date
 
 
 # 全國電影票房統計API- 每周電影票房
@@ -20,13 +21,13 @@ BASE_URL = "https://boxofficetw.tfai.org.tw/stat/qsl"
 
 
 ##### 取得<每周電影票房>票房 #####
-def fetch_boxoffice_json(date_str: str = None):
+def fetch_boxoffice_json(reference_date: date | datetime | None = None):
     """
     從官方 API 下載指定週的票房資料(JSON) 並存檔
     """
 
     # 設定查詢日期
-    date_range = get_last_week_range(date_str)
+    date_range = get_last_week_range(reference_date)
 
     # 整理API參數
     params = {
@@ -47,7 +48,7 @@ def fetch_boxoffice_json(date_str: str = None):
 
     # 設定儲存的檔名
     year_label = get_current_year_label()
-    week_label = get_current_week_label()
+    week_label = get_current_week_label(datetime.strptime(date_range["startDate"], "%Y-%m-%d").date())
     file_folder = os.path.join(BOXOFFICE_RAW, year_label)
     fileName_date = format_week_date_range(date_range)
     filename = f"boxoffice_{week_label}_{fileName_date}.json"
@@ -65,7 +66,7 @@ def fetch_boxoffice_json(date_str: str = None):
 
 # 主程式
 if __name__ == "__main__":
-    fetch_boxoffice_json()
+    fetch_boxoffice_json(date(2025, 10, 9))
 """NOTE:
      Python 會在執行檔案時自動設定內建變數 __name__。
      若此檔案是被「直接執行」，__name__ 會等於 "__main__"；

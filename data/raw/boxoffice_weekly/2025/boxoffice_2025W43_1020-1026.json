@@ -469,28 +469,8 @@
         "totalWeekendAmount": 61560.0
       },
       {
-        "movieId": "22894",
-        "rank": 24,
-        "region": "中華民國",
-        "name": "一一",
-        "releaseDate": "2025-10-01",
-        "publisher": "PONY CANYON",
-        "dayCount": 5,
-        "theaterCount": 4,
-        "amount": 167964.0,
-        "amountRate": -0.737543127156358,
-        "tickets": 657,
-        "ticketRate": -0.7281754240794374,
-        "marketShare": 0.037715269804822045,
-        "totalDayCount": 5,
-        "totalAmount": 4680888.0,
-        "totalTickets": 17420,
-        "firstWeekAmount": 415438.0,
-        "totalWeekendAmount": 2452341.0
-      },
-      {
         "movieId": "31904",
-        "rank": 25,
+        "rank": 24,
         "region": "日本",
         "name": "陰陽眼見子",
         "releaseDate": "2025-09-30",
@@ -510,7 +490,7 @@
       },
       {
         "movieId": "31863",
-        "rank": 26,
+        "rank": 25,
         "region": "香港",
         "name": "他年她日",
         "releaseDate": "2025-09-29",
@@ -530,7 +510,7 @@
       },
       {
         "movieId": "31748",
-        "rank": 27,
+        "rank": 26,
         "region": "德國",
         "name": "卡夫卡最後的愛",
         "releaseDate": "2025-09-27",
@@ -550,7 +530,7 @@
       },
       {
         "movieId": "31799",
-        "rank": 28,
+        "rank": 27,
         "region": "日本",
         "name": "電影版 神奇柑仔店 錢天堂",
         "releaseDate": "2025-09-26",
@@ -570,7 +550,7 @@
       },
       {
         "movieId": "31835",
-        "rank": 29,
+        "rank": 28,
         "region": "美國",
         "name": "沒好婚姻",
         "releaseDate": "2025-09-26",
@@ -590,7 +570,7 @@
       },
       {
         "movieId": "31651",
-        "rank": 30,
+        "rank": 29,
         "region": "美國",
         "name": "永遠在一起",
         "releaseDate": "2025-09-26",
@@ -610,7 +590,7 @@
       },
       {
         "movieId": "31745",
-        "rank": 31,
+        "rank": 30,
         "region": "印尼",
         "name": "血怨",
         "releaseDate": "2025-09-26",
@@ -630,7 +610,7 @@
       },
       {
         "movieId": "31809",
-        "rank": 32,
+        "rank": 31,
         "region": "美國",
         "name": "疾速營救",
         "releaseDate": "2025-09-26",
@@ -650,7 +630,7 @@
       },
       {
         "movieId": "31704",
-        "rank": 33,
+        "rank": 32,
         "region": "中華民國",
         "name": "陌路兄弟",
         "releaseDate": "2025-09-26",
@@ -670,7 +650,7 @@
       },
       {
         "movieId": "31662",
-        "rank": 34,
+        "rank": 33,
         "region": "泰國",
         "name": "淒厲人師",
         "releaseDate": "2025-09-26",
@@ -690,7 +670,7 @@
       },
       {
         "movieId": "31797",
-        "rank": 35,
+        "rank": 34,
         "region": "美國",
         "name": "一戰再戰",
         "releaseDate": "2025-09-25",
@@ -710,7 +690,7 @@
       },
       {
         "movieId": "31796",
-        "rank": 36,
+        "rank": 35,
         "region": "捷克",
         "name": "傲嬌公主的奇幻冒險",
         "releaseDate": "2025-09-20",
@@ -730,7 +710,7 @@
       },
       {
         "movieId": "31767",
-        "rank": 37,
+        "rank": 36,
         "region": "韓國",
         "name": "醜得要命",
         "releaseDate": "2025-09-20",
@@ -750,7 +730,7 @@
       },
       {
         "movieId": "31794",
-        "rank": 38,
+        "rank": 37,
         "region": "日本",
         "name": "劇場版『鏈鋸人 蕾潔篇』",
         "releaseDate": "2025-09-19",
@@ -770,7 +750,7 @@
       },
       {
         "movieId": "31836",
-        "rank": 39,
+        "rank": 38,
         "region": "日本",
         "name": "8號出口",
         "releaseDate": "2025-09-19",
@@ -787,6 +767,26 @@
         "totalTickets": 38435,
         "firstWeekAmount": 3447934.0,
         "totalWeekendAmount": 7638725.0
+      },
+      {
+        "movieId": "22894",
+        "rank": 39,
+        "region": "中華民國",
+        "name": "一一 25周年4K數位修復版",
+        "releaseDate": "2025-09-19",
+        "publisher": "PONY CANYON",
+        "dayCount": 5,
+        "theaterCount": 4,
+        "amount": 167964.0,
+        "amountRate": -0.737543127156358,
+        "tickets": 657,
+        "ticketRate": -0.7281754240794374,
+        "marketShare": 0.037715269804822045,
+        "totalDayCount": 5,
+        "totalAmount": 4680888.0,
+        "totalTickets": 17420,
+        "firstWeekAmount": 415438.0,
+        "totalWeekendAmount": 2452341.0
       },
       {
         "movieId": "31531",

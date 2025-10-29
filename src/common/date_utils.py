@@ -3,7 +3,7 @@
 ----------------------------------
 """
 
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 import re
 
 # ========= 全域設定 =========
@@ -13,37 +13,34 @@ TODAY_DATETIME = datetime.today()
 # -------------------------------
 # 取得上週起訖日期
 # -------------------------------
-def get_last_week_range(reference_date: datetime = None):
+def get_last_week_range(reference_date: date | None = None):
     """
     目標：取得上週一到日的起訖日期
+    參數：
+        reference_date (date | None):
+            - 可選，用來指定「參考日期」
+            - 若未提供，預設使用今日日期
     回傳：
-        {
+        dict: {
             "startDate": "YYYY-MM-DD",
-            "endDate":   "YYYY-MM-DD"
+            "endDate": "YYYY-MM-DD"
         }
     """
-    if reference_date is None:
-        today = datetime.today()
-    else:
-        today = reference_date
-
-    # 計算這週的週一
+    today = reference_date or date.today()
     this_monday = today - timedelta(days=today.weekday())
-    # 上週一
     last_monday = this_monday - timedelta(weeks=1)
-    # 上週日
     last_sunday = last_monday + timedelta(days=6)
 
-    return {
-        "startDate": f"{last_monday.year}-{str(last_monday.month).zfill(2)}-{str(last_monday.day).zfill(2)}",
-        "endDate": f"{last_sunday.year}-{str(last_sunday.month).zfill(2)}-{str(last_sunday.day).zfill(2)}",
+    week_range={
+        "startDate": last_monday.strftime("%Y-%m-%d"),
+        "endDate": last_sunday.strftime("%Y-%m-%d"),
     }
 
+    print(f'''<查上週起訖>
+          輸入的日期為: {reference_date} 
+          該日期的上週起訖為：{week_range}''')
+    return week_range
 
-"""測試範例
-    print(get_last_week_range(datetime(2025, 10, 8)))
-    結果：{'startDate': '2025-09-29', 'endDate': '2025-10-05'}
-"""
 
 
 # -------------------------------
@@ -55,12 +52,37 @@ def get_current_year_label() -> str:
     return f"{year}"
 
 
-def get_current_week_label():
-    """回傳像 2025W41 這樣的週次標籤"""
-    year, week_num, _ = TODAY_DATETIME.isocalendar()
-    print(f"{year}W{week_num}")
-    return f"{year}W{week_num}"
+def get_current_week_label(input_date: date | None = None) -> str:
+    """
+    回傳像 2025W41 這樣的週次標籤
+    
+    參數：
+        input_date (date | None): 
+            - 可選，用來指定要取得週次標籤的日期。
+            - 若未傳入，預設使用今日日期。
+            - 傳入格式範例：date(2025, 9, 30)
+    回傳：
+        str: 例如 "2025W41"
+    """
+    # 若未提供日期，預設使用今日
+    target_date = input_date or date.today()
 
+    # 取得 ISO 週次
+    year, week_num, _ = target_date.isocalendar()
+    
+    label = f"{year}W{week_num:02d}"
+    print(f'''<周次標籤>
+          輸入的日期為: {target_date} 
+          該日期的所屬週次為：{label}''')
+    
+    return label
+"""測試範例
+    get_current_week_label()
+    # → 傳入日期：2025-10-29 所屬週次為：2025W44
+
+    get_current_week_label(date(2025, 9, 30))
+    # → 傳入日期：2025-09-30 所屬週次為：2025W40
+"""
 
 # -------------------------------
 # 取得一周的起訖日期

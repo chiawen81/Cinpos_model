@@ -1,20 +1,9 @@
 """
 票房資料聚合模組（支援多輪上映 + 容忍小間斷）
 -------------------------------------------------
-🎯 目標：
-    將 data/processed/boxoffice_permovie 下的逐週票房資料，
-    聚合成兩層結果：
-        (1) 分輪聚合檔（每一輪上映一筆）
-          - 只保留「連續有票房」的活躍週期
-          - 中間連續無票房（或金額不變）的週期視為「下檔」
-          - 依每次活躍期產生 1 row（release_round）
-        (2) 最新輪整併檔（每部電影僅保留最新一輪）
-
-📂 資料流：
-    input  : data/processed/boxoffice_permovie/*.csv
-    output :
-        - data/aggregated/boxoffice/rounds/boxoffice_rounds_<日期時間>.csv
-        - data/aggregated/boxoffice/combined/boxoffice_latest_<日期時間>.csv
+🎯 改版重點：
+    1️⃣ 最短三週過濾（total_weeks < 3 的輪次略過）
+    2️⃣ 以正式上映日 (official_release_date) 為票房起算點，只計算上映後週期
 """
 
 # -------------------------------------------------------
@@ -41,6 +30,7 @@ ensure_dir(OUTPUT_COMBINED_DIR)
 
 # 允許票房中斷的最大週數（可調參數）
 MAX_GAP_WEEKS = 2  # 不超過 2 週無票房仍算同一輪
+MIN_VALID_WEEKS = 3  # 最短上映週數
 
 
 # -------------------------------------------------------
@@ -79,7 +69,7 @@ def detect_release_rounds(df: pd.DataFrame):
     """
     根據週票房資料偵測上映輪次（以「連續有票房」作為活躍期）
     規則：
-      - 當周有票房 (amount > 0) → 則計入活躍週(active_weeks)的周次統計
+      - 當周有票房 (amount > 0) → 計入活躍週(active_weeks)的周次統計
       - 若連續超過 MAX_GAP_WEEKS 週無票房 → 視為正式下檔 (目前暫定為2周)
       - 之後再出現票房 → 新一輪上映
     """
@@ -124,6 +114,7 @@ def aggregate_single_round(
     df["rate"] = pd.to_numeric(df["rate"], errors="coerce").fillna(0)
 
     # === 時間資訊 ===
+    official_release_date = df["official_release_date"].iloc[0]
     active_weeks = (df["amount"] > 0).sum()  # 實際有票房的週數
     first_week = df["week_range"].iloc[0]
     last_week = df["week_range"].iloc[-1]
@@ -131,6 +122,11 @@ def aggregate_single_round(
     _, end = parse_week_range(last_week)
     release_days = (end - start).days + 1 if start and end else ""
     total_weeks = int(round(release_days / 7))
+
+    # === 剔除不除三周的活躍週期(round) ===
+    if total_weeks < MIN_VALID_WEEKS:
+        print(f"⚠️  略過 {title_zh} 第{release_round}輪：僅 {total_weeks} 週")
+        return None
 
     # === 統計指標 ===
     total_amount = df["amount"].sum()
@@ -163,6 +159,7 @@ def aggregate_single_round(
         "release_round": release_round,  # 上映輪次（第幾次上映，首輪=1、再映=2...）
         "is_re_release": release_round > 1,  # 是否為再上映（布林值）
         # === 時間資訊 ===
+        "official_release_date":official_release_date,
         "release_start": start.strftime("%Y-%m-%d"),  # 本輪上映起始日期（週期起始日）
         "release_end": end.strftime("%Y-%m-%d"),  # 本輪上映結束日期（週期結束日）
         "release_days": release_days,  # 本輪上映天數（首尾日相減 +1）
@@ -209,13 +206,26 @@ def integrate_boxoffice():
             continue
 
         gov_id = str(df["gov_id"].iloc[0])
-        title_zh = file.split("_", 1)[1].replace(".csv", "")  # 從檔名取得中文
-        rounds = detect_release_rounds(df)  # 確認第幾次上映
+        title_zh = file.split("_", 1)[1].replace(".csv", "") # 從檔名取得電影中文名
 
+        # === 過濾正式上映日前的資料 ===
+        if "official_release_date" in df.columns:
+            try:
+                official_release_date = pd.to_datetime(df["official_release_date"].iloc[0])
+                df["week_start_date"] = df["week_range"].apply(lambda x: parse_week_range(x)[0])
+                before_count = len(df)
+                df = df[df["week_start_date"] >= official_release_date]
+                after_count = len(df)
+                if after_count < before_count:
+                    print(f"🔍 {title_zh}：已過濾 {before_count - after_count} 週（上映前週）")
+            except Exception:
+                pass
+
+        rounds = detect_release_rounds(df) # 確認第幾次上映
         if not rounds:
             continue
 
-        # 取最早上映日期（首輪首週）
+        # 取首輪首週日期作為 release_initial_date
         release_initial_date = ""
         if rounds and not rounds[0].empty:
             start, _ = parse_week_range(rounds[0]["week_range"].iloc[0])
@@ -223,7 +233,8 @@ def integrate_boxoffice():
 
         for idx, r_df in enumerate(rounds, start=1):
             agg = aggregate_single_round(r_df, gov_id, title_zh, idx, release_initial_date)
-            all_rounds.append(agg)
+            if agg:  # 若 total_weeks < 3 則會回傳 None
+                all_rounds.append(agg)
 
     # ----------------------
     # 生成分輪聚合檔

@@ -4,8 +4,8 @@
 <__boxoffice_integrate.py: 80%> 
   - 去掉total_weeks不滿3周的round
   - 過濾掉正式上映日(official_release_date)前的票房資料
-    - official_release_date 從爬蟲資料拿，非推定為 first round 的release_start
-    - 進行票房過濾
+    - official_release_date 從爬蟲資料拿，非推定為 first round 的release_start ok
+    - 進行票房過濾 
 <__rating_integrate.py:尚未開始>
 1. 建立聚合檔 boxoffice_integrate.py、rating_integrate.py
   (1) 腳本位置src\ML_recommend\data_data_integration

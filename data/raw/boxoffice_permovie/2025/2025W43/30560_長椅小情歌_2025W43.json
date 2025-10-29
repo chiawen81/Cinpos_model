@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-07-18",
     "publisher": "光年映畫有限公司",
-    "amountInThisWeek": 2160326.0,
-    "totalAmount": 2160326.0,
+    "amountInThisWeek": 2165856.0,
+    "totalAmount": 2165856.0,
     "filmClasses": null,
     "filmLength": 5160,
     "bannerStoredName": null,
@@ -183,6 +183,15 @@
         "totalTickets": 4636,
         "rate": -0.622478386167147,
         "theaterCount": 1
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 1190624.0,
+        "totalTickets": 4636,
+        "rate": -1,
+        "theaterCount": 0
       }
     ],
     "weeks": [
@@ -310,6 +319,15 @@
         "totalAmount": 2160326.0,
         "totalTickets": 8653,
         "rate": -0.6609538002980626,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 5530.0,
+        "tickets": 25,
+        "totalAmount": 2165856.0,
+        "totalTickets": 8678,
+        "rate": -0.5138461538461538,
         "theaterCount": 1
       }
     ]

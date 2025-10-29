@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-09-12",
     "publisher": "英屬蓋曼群島商威望國際娛樂股份有限公司台灣分公司",
-    "amountInThisWeek": 4768007.0,
-    "totalAmount": 4768007.0,
+    "amountInThisWeek": 4777799.0,
+    "totalAmount": 4777799.0,
     "filmClasses": null,
     "filmLength": 7620,
     "bannerStoredName": null,
@@ -68,6 +68,15 @@
         "totalTickets": 8990,
         "rate": -0.5943711947098907,
         "theaterCount": 2
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 3292445.0,
+        "totalTickets": 8990,
+        "rate": -1,
+        "theaterCount": 0
       }
     ],
     "weeks": [
@@ -124,6 +133,15 @@
         "totalTickets": 13501,
         "rate": -0.6720603478060578,
         "theaterCount": 3
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 9792.0,
+        "tickets": 28,
+        "totalAmount": 4777799.0,
+        "totalTickets": 13529,
+        "rate": -0.42686567164179107,
+        "theaterCount": 2
       }
     ]
   },

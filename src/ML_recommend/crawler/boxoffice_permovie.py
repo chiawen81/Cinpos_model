@@ -21,6 +21,7 @@ import time
 import requests
 import pandas as pd
 from pathlib import Path
+from datetime import date
 
 # 共用模組
 from common.path_utils import (
@@ -38,7 +39,7 @@ DETAIL_URL = "https://boxofficetw.tfai.org.tw/film/gfd/"
 HEADERS = get_default_headers()
 TIMEOUT = 10
 SLEEP_INTERVAL = 1.2  # 避免連續請求過快被限制
-WEEK_LABEL = get_week_label()
+WEEK_LABEL = get_week_label() # 可傳入日期參數，爬特定周次資料 ex: date(2025,10,30)
 YEAR_LABEL = get_year_label()
 
 

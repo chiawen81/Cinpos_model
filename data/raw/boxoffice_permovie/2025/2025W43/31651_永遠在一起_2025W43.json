@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-09-26",
     "publisher": "采昌國際多媒體股份有限公司",
-    "amountInThisWeek": 2381775.0,
-    "totalAmount": 2381775.0,
+    "amountInThisWeek": 2398633.0,
+    "totalAmount": 2398633.0,
     "filmClasses": null,
     "filmLength": 6060,
     "bannerStoredName": null,
@@ -75,6 +75,15 @@
         "totalTickets": 5431,
         "rate": -0.7338191454123882,
         "theaterCount": 5
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 2870.0,
+        "tickets": 11,
+        "totalAmount": 1429276.0,
+        "totalTickets": 5442,
+        "rate": -0.8809523809523809,
+        "theaterCount": 1
       }
     ],
     "weeks": [
@@ -113,6 +122,15 @@
         "totalTickets": 9109,
         "rate": -0.8392947488557612,
         "theaterCount": 8
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 16858.0,
+        "tickets": 64,
+        "totalAmount": 2398633.0,
+        "totalTickets": 9173,
+        "rate": -0.6914375663506241,
+        "theaterCount": 5
       }
     ]
   },

@@ -1,0 +1,121 @@
+{
+  "data": {
+    "movieId": "31191",
+    "name": "病毒",
+    "originalName": "VIRUS",
+    "region": "韓國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-09-19",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 783935.0,
+    "totalAmount": 783935.0,
+    "filmClasses": null,
+    "filmLength": 5880,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82443,
+        "typeName": "導演",
+        "name": "姜利官",
+        "originalName": "Yi-kwan Kang"
+      },
+      {
+        "id": 16200,
+        "typeName": "演員",
+        "name": "金倫奭",
+        "originalName": "Yun-seok Kim"
+      },
+      {
+        "id": 15043,
+        "typeName": "演員",
+        "name": "裴斗娜",
+        "originalName": "Doona Bae"
+      },
+      {
+        "id": 64201,
+        "typeName": "演員",
+        "name": "孫錫求",
+        "originalName": "Sukku Son"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 489419.0,
+        "tickets": 1992,
+        "totalAmount": 489419.0,
+        "totalTickets": 1992,
+        "rate": 0,
+        "theaterCount": 68
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 30378.0,
+        "tickets": 127,
+        "totalAmount": 519797.0,
+        "totalTickets": 2119,
+        "rate": -0.9379304849219177,
+        "theaterCount": 26
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 660.0,
+        "tickets": 3,
+        "totalAmount": 520457.0,
+        "totalTickets": 2122,
+        "rate": -0.9782737507406676,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 520457.0,
+        "totalTickets": 2122,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 489419.0,
+        "tickets": 1992,
+        "totalAmount": 489419.0,
+        "totalTickets": 1992,
+        "rate": 0,
+        "theaterCount": 68
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 265281.0,
+        "tickets": 1090,
+        "totalAmount": 754700.0,
+        "totalTickets": 3082,
+        "rate": -0.4579675084130367,
+        "theaterCount": 68
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 28875.0,
+        "tickets": 127,
+        "totalAmount": 783575.0,
+        "totalTickets": 3209,
+        "rate": -0.8911531545794836,
+        "theaterCount": 26
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 360.0,
+        "tickets": 2,
+        "totalAmount": 783935.0,
+        "totalTickets": 3211,
+        "rate": -0.9875324675324675,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

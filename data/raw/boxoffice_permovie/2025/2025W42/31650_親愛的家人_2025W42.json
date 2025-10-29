@@ -1,0 +1,175 @@
+{
+  "data": {
+    "movieId": "31650",
+    "name": "親愛的家人",
+    "originalName": "DEAR FAMILY",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-09-05",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 249194.0,
+    "totalAmount": 249194.0,
+    "filmClasses": null,
+    "filmLength": 6960,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 19189,
+        "typeName": "演員",
+        "name": "大泉洋",
+        "originalName": "Yo Oizumi"
+      },
+      {
+        "id": 17395,
+        "typeName": "導演",
+        "name": "月川翔",
+        "originalName": "Sho Tsukikawa"
+      },
+      {
+        "id": 18206,
+        "typeName": "演員",
+        "name": "菅野美穗",
+        "originalName": "Miho Kanno"
+      },
+      {
+        "id": 27883,
+        "typeName": "演員",
+        "name": "福本莉子",
+        "originalName": "Riko Fukumoto"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 130522.0,
+        "tickets": 557,
+        "totalAmount": 130522.0,
+        "totalTickets": 557,
+        "rate": 0,
+        "theaterCount": 49
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 6540.0,
+        "tickets": 30,
+        "totalAmount": 137062.0,
+        "totalTickets": 587,
+        "rate": -0.9498935045432954,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 137062.0,
+        "totalTickets": 587,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 137062.0,
+        "totalTickets": 587,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 137062.0,
+        "totalTickets": 587,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 137062.0,
+        "totalTickets": 587,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 25620.0,
+        "tickets": 122,
+        "totalAmount": 162682.0,
+        "totalTickets": 709,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 130522.0,
+        "tickets": 557,
+        "totalAmount": 130522.0,
+        "totalTickets": 557,
+        "rate": 0,
+        "theaterCount": 49
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 91312.0,
+        "tickets": 387,
+        "totalAmount": 221834.0,
+        "totalTickets": 944,
+        "rate": -0.30040912643079326,
+        "theaterCount": 48
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 1740.0,
+        "tickets": 8,
+        "totalAmount": 223574.0,
+        "totalTickets": 952,
+        "rate": -0.9809444541790783,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 223574.0,
+        "totalTickets": 952,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 223574.0,
+        "totalTickets": 952,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 223574.0,
+        "totalTickets": 952,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 25620.0,
+        "tickets": 122,
+        "totalAmount": 249194.0,
+        "totalTickets": 1074,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-09-20",
     "publisher": "希望影視行銷股份有限公司",
-    "amountInThisWeek": 784749.0,
-    "totalAmount": 784749.0,
+    "amountInThisWeek": 788439.0,
+    "totalAmount": 788439.0,
     "filmClasses": null,
     "filmLength": 5040,
     "bannerStoredName": null,
@@ -90,6 +90,15 @@
         "totalTickets": 1999,
         "rate": -0.4713787954206073,
         "theaterCount": 3
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 3250.0,
+        "tickets": 14,
+        "totalAmount": 494507.0,
+        "totalTickets": 2013,
+        "rate": -0.6939736346516008,
+        "theaterCount": 2
       }
     ],
     "weeks": [
@@ -137,6 +146,15 @@
         "totalTickets": 3202,
         "rate": -0.8267435302963845,
         "theaterCount": 5
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 3690.0,
+        "tickets": 16,
+        "totalAmount": 788439.0,
+        "totalTickets": 3218,
+        "rate": -0.666365280289331,
+        "theaterCount": 2
       }
     ]
   },

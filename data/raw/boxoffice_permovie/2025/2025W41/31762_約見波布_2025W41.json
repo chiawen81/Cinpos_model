@@ -1,0 +1,109 @@
+{
+  "data": {
+    "movieId": "31762",
+    "name": "約見波布",
+    "originalName": "Meeting with Pol Pot",
+    "region": "法國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-09-26",
+    "publisher": "海鵬影業有限公司",
+    "amountInThisWeek": 108045.0,
+    "totalAmount": 108045.0,
+    "filmClasses": null,
+    "filmLength": 6720,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82484,
+        "typeName": "演員",
+        "name": "葛雷哥瓦柯林",
+        "originalName": "Gregoire Colin"
+      },
+      {
+        "id": 82485,
+        "typeName": "編劇",
+        "name": "潘禮德",
+        "originalName": "Rithy Panh"
+      },
+      {
+        "id": 12914,
+        "typeName": "演員",
+        "name": "伊蓮雅各",
+        "originalName": "Irene Jacob"
+      },
+      {
+        "id": 82493,
+        "typeName": "演員",
+        "name": "希里爾桂伊",
+        "originalName": "Cyril Guei"
+      },
+      {
+        "id": 82485,
+        "typeName": "導演",
+        "name": "潘禮德",
+        "originalName": "Rithy Panh"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 47162.0,
+        "tickets": 219,
+        "totalAmount": 47162.0,
+        "totalTickets": 219,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 8425.0,
+        "tickets": 41,
+        "totalAmount": 55587.0,
+        "totalTickets": 260,
+        "rate": -0.8213604172851025,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 55587.0,
+        "totalTickets": 260,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 47162.0,
+        "tickets": 219,
+        "totalAmount": 47162.0,
+        "totalTickets": 219,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 50143.0,
+        "tickets": 235,
+        "totalAmount": 97305.0,
+        "totalTickets": 454,
+        "rate": 0.06320766718968661,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 10740.0,
+        "tickets": 52,
+        "totalAmount": 108045.0,
+        "totalTickets": 506,
+        "rate": -0.785812576032547,
+        "theaterCount": 6
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

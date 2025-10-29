@@ -4,6 +4,7 @@
 🎯 改版重點：
     1️⃣ 最短三週過濾（total_weeks < 3 的輪次略過）
     2️⃣ 以正式上映日 (official_release_date) 為票房起算點，只計算上映後週期
+    3️⃣ 修正 status 全為下檔（日期格式混用問題）
 """
 
 # -------------------------------------------------------
@@ -54,12 +55,10 @@ def get_latest_status(release_end: str, max_gap_weeks: int = 2) -> str:
         - 若距今天數 <= max_gap_weeks * 7 → 上映中
         - 否則 → 下檔
     """
-    try:
-        release_end_dt = datetime.strptime(release_end, "%Y-%m-%d")
-        gap_days = (datetime.now() - release_end_dt).days
-        return "上映中" if gap_days <= max_gap_weeks * 7 else "下檔"
-    except Exception:
-        return "下檔"
+    release_end_dt = datetime.strptime(release_end, "%Y-%m-%d")
+    gap_days = (datetime.now() - release_end_dt).days
+
+    return "上映中" if gap_days <= max_gap_weeks * 7 else "下檔"
 
 
 # -------------------------------------------------------
@@ -123,7 +122,7 @@ def aggregate_single_round(
     release_days = (end - start).days + 1 if start and end else ""
     total_weeks = int(round(release_days / 7))
 
-    # === 剔除不除三周的活躍週期(round) ===
+    # === 剔除不滿三週的活躍週期(round) ===
     if total_weeks < MIN_VALID_WEEKS:
         print(f"⚠️  略過 {title_zh} 第{release_round}輪：僅 {total_weeks} 週")
         return None
@@ -152,6 +151,11 @@ def aggregate_single_round(
     decline_rate_last = round(df["rate"].iloc[-1], 3) if len(df) > 1 else ""
     is_long_tail = total_weeks > 10
 
+    # --- 上映狀態判斷 ---
+    status=get_latest_status(
+            end.strftime("%Y-%m-%d"), max_gap_weeks=MAX_GAP_WEEKS
+        )
+
     return {
         # === 基本資料 ===
         "gov_id": gov_id,  # 政府電影代碼（唯一識別符）
@@ -159,7 +163,7 @@ def aggregate_single_round(
         "release_round": release_round,  # 上映輪次（第幾次上映，首輪=1、再映=2...）
         "is_re_release": release_round > 1,  # 是否為再上映（布林值）
         # === 時間資訊 ===
-        "official_release_date":official_release_date,
+        "official_release_date": official_release_date,  # 政府公告上映日（後續會過濾正式上映日前的票房資料）
         "release_start": start.strftime("%Y-%m-%d"),  # 本輪上映起始日期（週期起始日）
         "release_end": end.strftime("%Y-%m-%d"),  # 本輪上映結束日期（週期結束日）
         "release_days": release_days,  # 本輪上映天數（首尾日相減 +1）
@@ -181,7 +185,7 @@ def aggregate_single_round(
         "decline_rate_last": decline_rate_last,  # 最末週下降率（最後一週 rate）
         # === 標記 ===
         "is_long_tail": is_long_tail,  # 是否為長尾電影（上映週數 > 10）
-        "status": "下檔",  # 上映狀態：預設下檔（稍後由最新輪更新為「上映中」）
+        "status": status,  # 上映狀態
         "release_initial_date": release_initial_date,  # 該電影首輪起始日期（跨輪參考指標）
         # === 系統欄位 ===
         "update_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),  # 資料生成時間戳
@@ -225,13 +229,30 @@ def integrate_boxoffice():
         if not rounds:
             continue
 
+        # 過濾掉不足三週的輪次
+        valid_rounds = []
+        for r_df in rounds:
+            first_week = r_df["week_range"].iloc[0]
+            last_week = r_df["week_range"].iloc[-1]
+            start, _ = parse_week_range(first_week)
+            _, end = parse_week_range(last_week)
+            total_weeks = int(round((end - start).days / 7)) if start and end else 0
+            # 重排周次編號
+            if total_weeks >= MIN_VALID_WEEKS:
+                valid_rounds.append(r_df) 
+            else:
+                print(f"⚠️  略過 {title_zh} 的某輪（僅 {total_weeks} 週）")
+
+        if not valid_rounds:
+            continue
+
         # 取首輪首週日期作為 release_initial_date
         release_initial_date = ""
-        if rounds and not rounds[0].empty:
-            start, _ = parse_week_range(rounds[0]["week_range"].iloc[0])
+        if valid_rounds and not valid_rounds[0].empty:
+            start, _ = parse_week_range(valid_rounds[0]["week_range"].iloc[0])
             release_initial_date = start.strftime("%Y-%m-%d") if start else ""
 
-        for idx, r_df in enumerate(rounds, start=1):
+        for idx, r_df in enumerate(valid_rounds, start=1):
             agg = aggregate_single_round(r_df, gov_id, title_zh, idx, release_initial_date)
             if agg:  # 若 total_weeks < 3 則會回傳 None
                 all_rounds.append(agg)
@@ -284,10 +305,6 @@ def integrate_boxoffice():
             latest["re_release_gap_days"] = 0
             latest["previous_avg_amount"] = 0
 
-        # --- 狀態判斷（僅針對最新輪）---
-        latest["status"] = get_latest_status(
-            latest.get("release_end", ""), max_gap_weeks=MAX_GAP_WEEKS
-        )
         latest_records.append(latest)
 
     df_latest = pd.DataFrame(latest_records)

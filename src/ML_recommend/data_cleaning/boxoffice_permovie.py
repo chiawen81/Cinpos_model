@@ -85,6 +85,7 @@ def flatten_weekly_boxoffice(movie_data: dict, gov_id: str) -> pd.DataFrame:
     return df[
         [
             "gov_id",
+            "official_release_date"
             "week_range",
             "amount",
             "tickets",

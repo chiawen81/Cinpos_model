@@ -20,10 +20,10 @@ from common.path_utils import (
     MOVIEINFO_GOV_PROCESSED,
 )
 from common.file_utils import ensure_dir, save_csv, clean_filename
-from common.date_utils import get_current_week_label
+from common.date_utils import get_week_label
 
 # ========= 全域設定 =========
-WEEK_LABEL = get_current_week_label()
+WEEK_LABEL = get_week_label()
 
 
 # ========= 輔助工具 =========
@@ -71,7 +71,7 @@ def flatten_weekly_boxoffice(movie_data: dict, gov_id: str, atmovies_id: str) ->
 
     df["gov_id"] = gov_id
     df["atmovies_id"] = atmovies_id
-    df["week_label"] = get_current_week_label()
+    df["week_label"] = get_week_label()
     df["fetch_date"] = datetime.now().strftime("%Y-%m-%d")
 
     return df[

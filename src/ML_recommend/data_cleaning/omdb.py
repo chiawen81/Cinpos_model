@@ -29,13 +29,13 @@ from common.path_utils import (
     RATING_OMDB_PROCESSED,
 )
 from common.file_utils import ensure_dir, load_json, save_csv, clean_filename
-from common.date_utils import get_current_year_label, get_current_week_label
+from common.date_utils import get_year_label, get_week_label
 
 # -------------------------------------------------------
 # 全域設定
 # -------------------------------------------------------
-YEAR_LABEL = get_current_year_label()
-WEEK_LABEL = get_current_week_label()
+YEAR_LABEL = get_year_label()
+WEEK_LABEL = get_week_label()
 
 RAW_DIR = os.path.join(OMDB_RAW, YEAR_LABEL, WEEK_LABEL)
 MOVIEINFO_DIR = MOVIEINFO_OMDB_PROCESSED

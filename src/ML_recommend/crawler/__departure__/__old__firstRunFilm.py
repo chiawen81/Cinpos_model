@@ -12,7 +12,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # 共用模組
-from common.date_utils import get_current_week_label
+from common.date_utils import get_week_label
 from common.network_utils import get_default_headers
 from common.file_utils import save_json
 from common.path_utils import FIRSTRUN_RAW
@@ -79,7 +79,7 @@ def fetch_first_run_movies():
 # ========= 儲存邏輯 =========
 # 儲存原始 JSON 檔
 def save_raw_json(movies):
-    week_label = get_current_week_label()
+    week_label = get_week_label()
     json_filename = f"firstRun_{week_label}.json"
     save_json(movies, FIRSTRUN_RAW, json_filename)
     print(f"💾 已儲存 JSON：data/raw/firstRunFilm_list/{json_filename}")

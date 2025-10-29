@@ -21,7 +21,7 @@ import json
 import pandas as pd
 # 共用模組
 from common.file_utils import save_csv
-from common.date_utils import get_current_week_label
+from common.date_utils import get_week_label
 from common.path_utils import RATING_WEEKLY_PROCESSED
 
 
@@ -144,6 +144,6 @@ def clean_rating_weekly(raw_folder: str, week_label: str):
 
 # ———————————————————————————————————— 主程式執行入口 ————————————————————————————————————
 if __name__ == "__main__":
-    week_label = get_current_week_label()
+    week_label = get_week_label()
     raw_folder = f"data/raw/rating_weekly/{week_label}"
     clean_rating_weekly(raw_folder, week_label)

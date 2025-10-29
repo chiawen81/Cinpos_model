@@ -29,7 +29,7 @@ from common.path_utils import (
 )
 from common.network_utils import get_default_headers
 from common.file_utils import ensure_dir, save_json, clean_filename
-from common.date_utils import get_current_week_label, get_current_year_label
+from common.date_utils import get_week_label, get_year_label
 from common.mapping_utils import load_manual_mapping, find_manual_mapping
 
 # ========= 全域設定 =========
@@ -38,8 +38,8 @@ DETAIL_URL = "https://boxofficetw.tfai.org.tw/film/gfd/"
 HEADERS = get_default_headers()
 TIMEOUT = 10
 SLEEP_INTERVAL = 1.2  # 避免連續請求過快被限制
-WEEK_LABEL = get_current_week_label()
-YEAR_LABEL = get_current_year_label()
+WEEK_LABEL = get_week_label()
+YEAR_LABEL = get_year_label()
 
 
 # ========= 輔助函式 =========

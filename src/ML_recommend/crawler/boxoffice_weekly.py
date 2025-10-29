@@ -7,9 +7,9 @@ import os
 import requests
 from common.date_utils import (
     get_last_week_range,
-    get_current_week_label,
+    get_week_label,
     format_week_date_range,
-    get_current_year_label,
+    get_year_label,
 )
 from common.path_utils import BOXOFFICE_RAW
 from common.file_utils import save_json
@@ -47,8 +47,8 @@ def fetch_boxoffice_json(reference_date: date | datetime | None = None):
     # print("data",data)
 
     # 設定儲存的檔名
-    year_label = get_current_year_label()
-    week_label = get_current_week_label(datetime.strptime(date_range["startDate"], "%Y-%m-%d").date())
+    year_label = get_year_label()
+    week_label = get_week_label(datetime.strptime(date_range["startDate"], "%Y-%m-%d").date())
     file_folder = os.path.join(BOXOFFICE_RAW, year_label)
     fileName_date = format_week_date_range(date_range)
     filename = f"boxoffice_{week_label}_{fileName_date}.json"

@@ -32,13 +32,13 @@ from dotenv import load_dotenv
 # 共用模組
 from common.path_utils import RATING_WEEKLY_RAW, FIRSTRUN_PROCESSED, OMDB_PROCESSED
 from common.file_utils import ensure_dir, save_json
-from common.date_utils import get_current_week_label, create_timestamped
+from common.date_utils import get_week_label, create_timestamped
 
 
 # ———————————————————————————————————— 全域設定 ————————————————————————————————————
 load_dotenv()
 OMDB_API_KEY = os.getenv("OMDB_API_KEY")
-WEEK_LABEL = get_current_week_label()
+WEEK_LABEL = get_week_label()
 OUTPUT_DIR = os.path.join(RATING_WEEKLY_RAW, WEEK_LABEL)
 ERROR_DIR = os.path.join(RATING_WEEKLY_RAW, "error")
 ensure_dir(OUTPUT_DIR)

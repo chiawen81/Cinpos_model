@@ -20,11 +20,11 @@ from common.path_utils import (
     MOVIEINFO_GOV_PROCESSED,
 )
 from common.file_utils import ensure_dir, save_csv, clean_filename
-from common.date_utils import get_current_week_label, get_current_year_label
+from common.date_utils import get_week_label, get_year_label
 
 # ========= 全域設定 =========
-WEEK_LABEL = get_current_week_label()
-YEAR_LABEL = get_current_year_label()
+WEEK_LABEL = get_week_label()
+YEAR_LABEL = get_year_label()
 
 
 # ========= 輔助工具 =========
@@ -49,7 +49,7 @@ def parse_movie_info(movie_data: dict) -> dict:
         "gov_title_en": movie_data.get("originalName", ""),
         "region": movie_data.get("region", ""),
         "rating": movie_data.get("rating", ""),
-        "release_date": movie_data.get("releaseDate", ""),
+        "official_release_date": movie_data.get("releaseDate", ""),
         "publisher": movie_data.get("publisher", ""),
         "film_length_min": film_length_min,  # 原資料單位為「秒」，現改為「分鐘」
         "director": "; ".join(directors),
@@ -80,6 +80,7 @@ def flatten_weekly_boxoffice(movie_data: dict, gov_id: str) -> pd.DataFrame:
 
     df["gov_id"] = gov_id
     df["fetch_date"] = datetime.now().strftime("%Y-%m-%d")
+    df["official_release_date"] = movie_data.get("releaseDate", "")
 
     return df[
         [

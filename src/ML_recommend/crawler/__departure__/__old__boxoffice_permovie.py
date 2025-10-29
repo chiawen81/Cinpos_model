@@ -31,7 +31,7 @@ import math
 from common.path_utils import FIRSTRUN_PROCESSED, BOXOFFICE_PERMOVIE_RAW
 from common.network_utils import get_default_headers
 from common.file_utils import ensure_dir, save_json, clean_filename
-from common.date_utils import get_current_week_label
+from common.date_utils import get_week_label
 from common.mapping_utils import load_manual_mapping, find_manual_mapping
 
 # ========= 全域設定 =========
@@ -193,7 +193,7 @@ def mark_errorType(row: pd.Series, errorType: str) -> dict:
 # ========= 主爬蟲邏輯 =========
 ### 取得政府公開的票房資料
 def fetch_boxoffice_permovie() -> None:
-    week_label = get_current_week_label()
+    week_label = get_week_label()
     firstRunList_filePath = f"{FIRSTRUN_PROCESSED}\\{week_label}\\firstRun_{week_label}.csv"
     output_dir = os.path.join(BOXOFFICE_PERMOVIE_RAW, week_label)
     missing_rows: list[dict] = []  # 用來收集未找到電影 ID 的整列資料

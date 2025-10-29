@@ -16,7 +16,7 @@ import pandas as pd
 import os
 
 # 共用模組
-from common.date_utils import get_current_week_label, normalize_date
+from common.date_utils import get_week_label, normalize_date
 from common.file_utils import load_json, save_csv
 from common.path_utils import FIRSTRUN_RAW, FIRSTRUN_PROCESSED
 
@@ -24,7 +24,7 @@ from common.path_utils import FIRSTRUN_RAW, FIRSTRUN_PROCESSED
 # ========= 清洗邏輯 =========
 def clean_first_run_data():
     # 取得當前週次標籤與路徑
-    week_label = get_current_week_label()
+    week_label = get_week_label()
     json_filename = f"firstRun_{week_label}.json"
     json_path = os.path.join(FIRSTRUN_RAW, json_filename)
 

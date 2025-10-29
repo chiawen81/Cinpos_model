@@ -46,13 +46,43 @@ def get_last_week_range(reference_date: date | None = None):
 # -------------------------------
 # 取得年份周次
 # -------------------------------
-def get_current_year_label() -> str:
-    """回傳像 2025 這樣的年標籤"""
-    year, week_num, _ = TODAY_DATETIME.isocalendar()
-    return f"{year}"
+from datetime import date
+
+def get_year_label(input_date: date | None = None) -> str:
+    """
+    回傳像 2025 這樣的年標籤
+
+    參數：
+        input_date (date | None): 
+            - 可選，用來指定要取得年份標籤的日期。
+            - 若未傳入，預設使用今日日期。
+            - 傳入格式範例：date(2025, 9, 30)
+
+    回傳：
+        str: 例如 "2025"
+    """
+    # 若未提供日期，使用今日
+    target_date = input_date or date.today()
+
+    # 取得 ISO 年份（注意：有些跨年週會屬於隔年的 ISO 年份）
+    year, _, _ = target_date.isocalendar()
+
+    label = f"{year}"
+    print(f"傳入日期：{target_date} 所屬年份為：{label}")
+    return label
+"""測試範例
+    get_current_year_label()
+    # → 傳入日期：2025-10-29 所屬年份為：2025
+
+    get_current_year_label(date(2025, 1, 1))
+    # → 傳入日期：2025-01-01 所屬年份為：2025
+
+    get_current_year_label(date(2024, 12, 30))
+    # → 傳入日期：2024-12-30 所屬年份為：2025（因為 ISO 週制算進 2025 年）
+"""
 
 
-def get_current_week_label(input_date: date | None = None) -> str:
+def get_week_label(input_date: date | None = None) -> str:
     """
     回傳像 2025W41 這樣的週次標籤
     

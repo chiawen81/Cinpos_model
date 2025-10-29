@@ -55,12 +55,11 @@ def merge_movieInfo_gov():
     # 統一欄位順序
     col_order = [
         "gov_id",
-        "atmovies_id",
         "gov_title_zh",
         "gov_title_en",
         "region",
         "rating",
-        "release_date",
+        "official_release_date",
         "publisher",
         "film_length",
         "director",

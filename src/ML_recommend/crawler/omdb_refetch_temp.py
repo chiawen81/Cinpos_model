@@ -28,7 +28,7 @@ from tqdm import tqdm
 # 共用模組
 from common.path_utils import OMDB_RAW, MANUAL_FIX_DIR
 from common.file_utils import ensure_dir, save_json, clean_filename
-from common.date_utils import get_current_year_label, get_current_week_label
+from common.date_utils import get_year_label, get_week_label
 
 
 # -------------------------------------------------------
@@ -37,8 +37,8 @@ from common.date_utils import get_current_year_label, get_current_week_label
 load_dotenv()
 API_KEY = os.getenv("OMDB_API_KEY")
 
-YEAR_LABEL = get_current_year_label()
-WEEK_LABEL = get_current_week_label()
+YEAR_LABEL = get_year_label()
+WEEK_LABEL = get_week_label()
 
 FIX_MAPPING_TEMP = os.path.join(MANUAL_FIX_DIR, "fix_omdb_mapping_temp.json")
 

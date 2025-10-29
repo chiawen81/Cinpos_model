@@ -58,7 +58,7 @@ def parse_movie_info(movie_data: dict) -> dict:
 
 
 # 將 weeks 區塊轉成 DataFrame
-def flatten_weekly_boxoffice(movie_data: dict, gov_id: str) -> pd.DataFrame:
+def flatten_weekly_boxoffice(movie_data: dict, gov_id: str,releaseDate:str) -> pd.DataFrame:
     """將 weeks 區塊轉成 DataFrame"""
     weeks = movie_data.get("weeks", [])
     if not weeks:
@@ -80,12 +80,12 @@ def flatten_weekly_boxoffice(movie_data: dict, gov_id: str) -> pd.DataFrame:
 
     df["gov_id"] = gov_id
     df["fetch_date"] = datetime.now().strftime("%Y-%m-%d")
-    df["official_release_date"] = movie_data.get("releaseDate", "")
+    df["official_release_date"] = releaseDate
 
     return df[
         [
             "gov_id",
-            "official_release_date"
+            "official_release_date",
             "week_range",
             "amount",
             "tickets",
@@ -139,7 +139,7 @@ def clean_boxoffice_permovie():
         save_csv(df_info, MOVIEINFO_GOV_PROCESSED, info_filename)
 
         # Step 2️⃣：整理週票房資料
-        df_weeks = flatten_weekly_boxoffice(crawler_data, processed_data_info["gov_id"])
+        df_weeks = flatten_weekly_boxoffice(crawler_data, processed_data_info["gov_id"],processed_data_info["official_release_date"])
         if not df_weeks.empty:
             csv_filename = f"{processed_data_info['gov_id']}_{safe_title}.csv"
             save_csv(df_weeks, output_dir, csv_filename)

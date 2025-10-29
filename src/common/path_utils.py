@@ -60,8 +60,7 @@ MOVIEINFO_OMDB_COMBINED_PROCESSED = os.path.join(MOVIEINFO_OMDB_PROCESSED, "comb
 RATING_OMDB_PROCESSED = os.path.join(PROCESSED_DIR, "rating_omdb")
 
 # 資料彙總- 資料庫主檔、模型訓練資料主檔
-# MOVIE_MASTER_PROCESSED = os.path.join(PROCESSED_DIR, "movie_master")
-MASTER_MERGE = os.path.join(MASTER_DIR, "merge")  # 初步合併
+MASTER_FULL = os.path.join(MASTER_DIR, "full")  # 初步合併
 MASTER_DB_READY = os.path.join(MASTER_DIR, "db_ready")  # API資料庫資料
 MASTER_TRAIN_READY = os.path.join(MASTER_DIR, "train_ready")  # 訓練資料
 

@@ -292,7 +292,9 @@ def integrate_boxoffice():
                 official_release_date = pd.to_datetime(df["official_release_date"].iloc[0])
                 df["week_start_date"] = df["week_range"].apply(lambda x: parse_week_range(x)[0])
                 before_count = len(df)
-                df = df[df["week_start_date"] >= official_release_date - timedelta(days=7)]  # 保留上映日當週
+                df = df[df["week_start_date"] >= official_release_date - timedelta(days=7)]  
+                """NOTE:保留「正式上映日所在週」與之後的資料（避免週起始日早於上映日導致首週被排除）""" 
+
                 after_count = len(df)
                 if after_count < before_count:
                     print(f"🔍 {title_zh}：已過濾 {before_count - after_count} 週（上映前週）")

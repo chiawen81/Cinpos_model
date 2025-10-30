@@ -38,7 +38,6 @@
     - data/aggregated/boxoffice/combined/boxoffice_latest_<日期>.csv
 """
 
-
 # -------------------------------------------------------
 # 套件匯入
 # -------------------------------------------------------
@@ -107,7 +106,7 @@ def detect_release_rounds(df: pd.DataFrame, official_release_date: datetime):
     """
 
     # 整理週票房資料
-    df = df.copy().sort_values("week_range") # 建立副本做時間排序
+    df = df.copy().sort_values("week_range")  # 建立副本做時間排序
     df["amount"] = pd.to_numeric(df["amount"], errors="coerce").fillna(0)
 
     # === 時間欄位解析 ===
@@ -119,8 +118,8 @@ def detect_release_rounds(df: pd.DataFrame, official_release_date: datetime):
         df = df[(df["week_end"] >= official_release_date)]
 
     # === 初始化輪次偵測 ===
-    rounds = []                # 儲存每一輪上映的資料集
-    current_round = []         # 暫存目前活躍中的週資料
+    rounds = []  # 儲存每一輪上映的資料集
+    current_round = []  # 暫存目前活躍中的週資料
     inactive_streak_weeks = 0  # 連續無票房週數（用於偵測中斷）
 
     # === 逐週檢查票房連續性 ===
@@ -136,7 +135,7 @@ def detect_release_rounds(df: pd.DataFrame, official_release_date: datetime):
             inactive_streak_weeks += 1
 
             # 若連續無票房週數超過容忍週數 → 結束當前輪次
-            if inactive_streak_weeks > MAX_GAP_WEEKS and current_round:
+            if inactive_streak_weeks >= MAX_GAP_WEEKS and current_round:
                 rounds.append(pd.DataFrame(current_round))
                 current_round = []
                 inactive_streak_weeks = 0
@@ -170,11 +169,6 @@ def aggregate_single_round(
     _, end = parse_week_range(last_week)
     release_days = (end - start).days + 1 if start and end else ""
     total_weeks = int(round(release_days / 7))
-
-    # === 剔除不滿三週的活躍週期(round) ===
-    if total_weeks < MIN_VALID_WEEKS:
-        print(f"⚠️  略過 {title_zh} 第{release_round}輪：僅 {total_weeks} 週")
-        return None
 
     # === 統計指標 ===
     total_amount = df["amount"].sum()
@@ -220,7 +214,6 @@ def aggregate_single_round(
                     second_week_amount_growth_rate = round((second_avg - first_avg) / first_avg, 3)
             except Exception:
                 second_week_amount_growth_rate = ""
-
 
     decline_rate_mean = round(df["rate"].mean(), 3) if len(df) > 1 else ""
     decline_rate_last = round(df["rate"].iloc[-1], 3) if len(df) > 1 else ""
@@ -283,7 +276,7 @@ def integrate_boxoffice():
             continue
 
         gov_id = str(df["gov_id"].iloc[0])
-        title_zh = file.split("_", 1)[1].replace(".csv", "") # 從檔名取得電影中文名
+        title_zh = file.split("_", 1)[1].replace(".csv", "")  # 從檔名取得電影中文名
 
         # === 過濾正式上映日前的資料 ===
         official_release_date = None
@@ -292,8 +285,8 @@ def integrate_boxoffice():
                 official_release_date = pd.to_datetime(df["official_release_date"].iloc[0])
                 df["week_start_date"] = df["week_range"].apply(lambda x: parse_week_range(x)[0])
                 before_count = len(df)
-                df = df[df["week_start_date"] >= official_release_date - timedelta(days=7)]  
-                """NOTE:保留「正式上映日所在週」與之後的資料（避免週起始日早於上映日導致首週被排除）""" 
+                df = df[df["week_start_date"] >= official_release_date - timedelta(days=7)]
+                """NOTE:保留「正式上映日所在週」與之後的資料（避免週起始日早於上映日導致首週被排除）"""
 
                 after_count = len(df)
                 if after_count < before_count:
@@ -312,7 +305,8 @@ def integrate_boxoffice():
             last_week = r_df["week_range"].iloc[-1]
             start, _ = parse_week_range(first_week)
             _, end = parse_week_range(last_week)
-            total_weeks = (end - start).days // 7
+            release_days = (end - start).days + 1
+            total_weeks = int(release_days / 7)
 
             # 重排周次編號
             if total_weeks >= MIN_VALID_WEEKS:
@@ -329,10 +323,10 @@ def integrate_boxoffice():
             start, _ = parse_week_range(valid_rounds[0]["week_range"].iloc[0])
             release_initial_date = start.strftime("%Y-%m-%d") if start else ""
 
+        # 計算聚合統計
         for idx, r_df in enumerate(valid_rounds, start=1):
             agg = aggregate_single_round(r_df, gov_id, title_zh, idx, release_initial_date)
-            if agg:  # 若 total_weeks < 3 則會回傳 None
-                all_rounds.append(agg)
+            all_rounds.append(agg)
 
     # ----------------------
     # 生成分輪聚合檔

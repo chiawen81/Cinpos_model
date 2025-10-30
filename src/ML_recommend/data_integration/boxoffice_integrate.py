@@ -60,7 +60,7 @@ OUTPUT_COMBINED_DIR = os.path.join("data", "aggregated", "boxoffice", "combined"
 ensure_dir(OUTPUT_ROUND_DIR)
 ensure_dir(OUTPUT_COMBINED_DIR)
 
-# 允許票房中斷的最大週數（可調參數）
+# 票房相關條件參數（可調參數）
 MAX_GAP_WEEKS = 2  # 不超過 2 週無票房仍算同一輪
 MIN_VALID_WEEKS = 3  # 最短上映週數
 
@@ -90,6 +90,81 @@ def get_latest_status(release_end: str, max_gap_weeks: int = 2) -> str:
     gap_days = (datetime.now() - release_end_dt).days
 
     return "上映中" if gap_days <= max_gap_weeks * 7 else "下檔"
+
+
+# -------------------------------------------------------
+# 即時動態指標(for上映中電影)
+# -------------------------------------------------------
+def calc_momentum_score(df: pd.DataFrame) -> float:
+    """最近三週票房動能變化率（正=成長, 負=衰退）"""
+    df = df.copy()
+    df["amount"] = pd.to_numeric(df["amount"], errors="coerce").fillna(0)
+    if len(df) < 3:
+        return 0
+    last3 = df["amount"].tail(3).values
+    # 簡單線性動能（末週 / 首週 - 1）
+    if last3[0] > 0:
+        return round((last3[-1] / last3[0]) - 1, 3)
+    return 0
+
+
+def calc_promotion_urgency_score(df: pd.DataFrame) -> float:
+    """宣傳緊急指數：最後一週票房 vs 前三週平均差距"""
+    df = df.copy()
+    df["amount"] = pd.to_numeric(df["amount"], errors="coerce").fillna(0)
+    if len(df) < 4:
+        return 0
+    recent = df["amount"].iloc[-1]
+    base_avg = df["amount"].iloc[-4:-1].mean()
+    if base_avg > 0:
+        score = round(((base_avg - recent) / base_avg) * 10, 2)  # 差距越大分數越高
+        return max(score, 0)
+    return 0
+
+
+def count_decline_streak(df: pd.DataFrame) -> int:
+    """連續衰退週數"""
+    df = df.copy()
+    df["amount"] = pd.to_numeric(df["amount"], errors="coerce").fillna(0)
+    declines = 0
+    for i in range(1, len(df)):
+        if df["amount"].iloc[i] < df["amount"].iloc[i - 1]:
+            declines += 1
+        else:
+            declines = 0
+    return declines
+
+
+def count_long_tail_weeks(df: pd.DataFrame) -> int:
+    """維持在峰值50%以上的週數"""
+    df = df.copy()
+    df["amount"] = pd.to_numeric(df["amount"], errors="coerce").fillna(0)
+    if df["amount"].max() == 0:
+        return 0
+    threshold = df["amount"].max() * 0.5
+    return int((df["amount"] >= threshold).sum())
+
+
+def classify_momentum_status(score: float) -> str:
+    """動能等級分類"""
+    if score >= 0.2:
+        return "成長中"
+    elif score >= -0.2:
+        return "穩定"
+    else:
+        return "衰退"
+
+
+def classify_promotion_level(score: float) -> str:
+    """宣傳緊急程度分類"""
+    if score < 3:
+        return "正常"
+    elif score < 7:
+        return "注意"
+    elif score < 10:
+        return "需行動"
+    else:
+        return "緊急"
 
 
 # -------------------------------------------------------
@@ -222,6 +297,17 @@ def aggregate_single_round(
     # --- 上映狀態判斷 ---
     status = get_latest_status(end.strftime("%Y-%m-%d"), max_gap_weeks=MAX_GAP_WEEKS)
 
+    # ---------------------------------------------------
+    # 即時動態指標(for上映中電影)
+    # ---------------------------------------------------
+    momentum_score = calc_momentum_score(df)
+    promotion_urgency_score = calc_promotion_urgency_score(df)
+    early_decline_weeks = count_decline_streak(df)
+    long_tail_weeks = count_long_tail_weeks(df)
+    momentum_status = classify_momentum_status(momentum_score)
+    promotion_level = classify_promotion_level(promotion_urgency_score)
+    avg_ticket_price = round(total_amount / total_tickets, 2) if total_tickets > 0 else 0
+
     return {
         # === 基本資料 ===
         "gov_id": gov_id,  # 政府電影代碼（唯一識別符）
@@ -255,8 +341,21 @@ def aggregate_single_round(
         "release_initial_date": release_initial_date,  # 該電影首輪起始日期（跨輪參考指標）
         # === 系統欄位 ===
         "update_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),  # 資料生成時間戳
+        # === 即時動態指標(for上映中電影) ===
+        "momentum_score": momentum_score,
+        "promotion_urgency_score": promotion_urgency_score,
+        "early_decline_weeks": early_decline_weeks,
+        "long_tail_weeks": long_tail_weeks,
+        "momentum_status": momentum_status,
+        "promotion_level": promotion_level,
+        "avg_ticket_price": avg_ticket_price,
+        "update_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     }
     """NOTE: 這裡都是每一活躍週期(round)的指標，跨週期的指標會在生成最新輪整併檔(latest)時加入"""
+    """NOTE: 即時動態指標
+             暫定即使電影已下檔仍會保留，作為歷史特徵供後續分析或再上映模型使用；
+             如不需在「分輪聚合檔」中顯示，可於輸出前 drop 掉相關欄位
+    """
 
 
 # -------------------------------------------------------

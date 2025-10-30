@@ -44,7 +44,7 @@
 # -------------------------------------------------------
 import os
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # 共用模組
 from common.path_utils import BOXOFFICE_PERMOVIE_PROCESSED
@@ -96,16 +96,22 @@ def get_latest_status(release_end: str, max_gap_weeks: int = 2) -> str:
 # -------------------------------------------------------
 # 輪次偵測（容忍小間斷）
 # -------------------------------------------------------
-def detect_release_rounds(df: pd.DataFrame):
+def detect_release_rounds(df: pd.DataFrame, official_release_date: datetime):
     """
     根據週票房資料偵測上映輪次（以「連續有票房」作為活躍期）
-    規則：
-      - 當周有票房 (amount > 0) → 計入活躍週(active_weeks)的周次統計
-      - 若連續超過 MAX_GAP_WEEKS 週無票房 → 視為正式下檔 (目前暫定為2周)
-      - 之後再出現票房 → 新一輪上映
+    === 修改點 ===
+    修正首輪起算週錯位：
+        - 現在會從「包含正式上映日的那一週」開始第一輪，
+          而非從上映日的下一週開始。
     """
     df = df.copy().sort_values("week_range")
     df["amount"] = pd.to_numeric(df["amount"], errors="coerce").fillna(0)
+
+    # === 修改：若第一週涵蓋正式上映日，確保該週納入首輪 ===
+    df["week_start"] = df["week_range"].apply(lambda x: parse_week_range(x)[0])
+    df["week_end"] = df["week_range"].apply(lambda x: parse_week_range(x)[1])
+    if official_release_date is not None:
+        df = df[(df["week_end"] >= official_release_date)]  # 保留含上映日的週與之後的資料
 
     rounds = []
     current_round = []
@@ -119,7 +125,6 @@ def detect_release_rounds(df: pd.DataFrame):
             current_round.append(row)
         else:
             inactive_streak_weeks += 1
-            # 若中斷超過容忍週數 → 視為結束一輪
             if inactive_streak_weeks > MAX_GAP_WEEKS and current_round:
                 rounds.append(pd.DataFrame(current_round))
                 current_round = []
@@ -146,7 +151,7 @@ def aggregate_single_round(
 
     # === 時間資訊 ===
     official_release_date = df["official_release_date"].iloc[0]
-    active_weeks = (df["amount"] > 0).sum()  # 實際有票房的週數
+    active_weeks = (df["amount"] > 0).sum()
     first_week = df["week_range"].iloc[0]
     last_week = df["week_range"].iloc[-1]
     start, _ = parse_week_range(first_week)
@@ -154,7 +159,6 @@ def aggregate_single_round(
     release_days = (end - start).days + 1 if start and end else ""
     total_weeks = int(round(release_days / 7))
 
-    # === 剔除不滿三週的活躍週期(round) ===
     if total_weeks < MIN_VALID_WEEKS:
         print(f"⚠️  略過 {title_zh} 第{release_round}輪：僅 {total_weeks} 週")
         return None
@@ -172,57 +176,72 @@ def aggregate_single_round(
     peak_theater_count = df["theater_count"].max()
     avg_theater_count = round(df["theater_count"].mean(), 2)
 
-    # --- 首週→次週成長率 ---
-    amount_growth_rate = ""
-    if len(df) >= 2 and df["amount"].iloc[0] > 0:
-        amount_growth_rate = round(
-            (df["amount"].iloc[1] - df["amount"].iloc[0]) / df["amount"].iloc[0], 3
-        )
+    # === 修改點 ===
+    # --- 首週→次週成長率（改為平均日票房成長率，含正式上映日修正） ---
+    second_week_amount_growth_rate = ""
+    if len(df) >= 2:
+        first_start, first_end = parse_week_range(df["week_range"].iloc[0])
+        second_start, second_end = parse_week_range(df["week_range"].iloc[1])
+        if first_start and first_end and second_start and second_end:
+            try:
+                ### === 修改：首週平均日票房計算（含正式上映日） ===
+                # 取得正式上映日
+                release_date = pd.to_datetime(df["official_release_date"].iloc[0])
+
+                # 若正式上映日在該週內 → 實際天數 = (週結束日 - 上映日) + 1
+                # 若正式上映早於該週（如重映或跨年） → 實際天數 = 7
+                if release_date >= first_start and release_date <= first_end:
+                    first_days = (first_end - release_date).days + 1
+                else:
+                    first_days = (first_end - first_start).days + 1
+
+                # 第二週固定為 7 天
+                second_days = (second_end - second_start).days + 1
+
+                # 計算平均日票房
+                first_avg = df["amount"].iloc[0] / first_days if first_days > 0 else 0
+                second_avg = df["amount"].iloc[1] / second_days if second_days > 0 else 0
+
+                # 比較成長率
+                if first_avg > 0:
+                    second_week_amount_growth_rate = round((second_avg - first_avg) / first_avg, 3)
+            except Exception:
+                second_week_amount_growth_rate = ""
+
 
     decline_rate_mean = round(df["rate"].mean(), 3) if len(df) > 1 else ""
     decline_rate_last = round(df["rate"].iloc[-1], 3) if len(df) > 1 else ""
     is_long_tail = total_weeks > 10
 
-    # --- 上映狀態判斷 ---
-    status=get_latest_status(
-            end.strftime("%Y-%m-%d"), max_gap_weeks=MAX_GAP_WEEKS
-        )
+    status = get_latest_status(end.strftime("%Y-%m-%d"), max_gap_weeks=MAX_GAP_WEEKS)
 
     return {
-        # === 基本資料 ===
-        "gov_id": gov_id,  # 政府電影代碼（唯一識別符）
-        "title_zh": title_zh,  # 中文片名，用於識別與其他資料源對照
-        "release_round": release_round,  # 上映輪次（第幾次上映，首輪=1、再映=2...）
-        "is_re_release": release_round > 1,  # 是否為再上映（布林值）
-        # === 時間資訊 ===
-        "official_release_date": official_release_date,  # 政府公告上映日（後續會過濾正式上映日前的票房資料）
-        "release_start": start.strftime("%Y-%m-%d"),  # 本輪上映起始日期（週期起始日）
-        "release_end": end.strftime("%Y-%m-%d"),  # 本輪上映結束日期（週期結束日）
-        "release_days": release_days,  # 本輪上映天數（首尾日相減 +1）
-        "total_weeks": total_weeks,  # 本輪涵蓋的週數（含中斷週）
-        "active_weeks": active_weeks,  # 實際有票房的週數（活躍週數）
-        # === 統計指標 ===
-        "total_amount": total_amount,  # 本輪票房總金額（累積 amount）
-        "total_tickets": total_tickets,  # 本輪觀影總人次（累積 tickets）
-        "avg_amount_per_week": avg_amount_per_week,  # 平均每週票房（total_amount ÷ active_weeks）
-        "avg_tickets_per_week": avg_tickets_per_week,  # 平均每週觀影人次（total_tickets ÷ active_weeks）
-        # === 峰值指標 ===
-        "peak_amount": peak_amount,  # 單週最高票房金額
-        "peak_amount_week": peak_amount_week,  # 票房最高週的週期（例：2025-03-24~2025-03-30）
-        "peak_theater_count": peak_theater_count,  # 單週上映戲院數峰值
-        "avg_theater_count": avg_theater_count,  # 平均上映戲院數（整輪週期平均）
-        # === 動態變化 ===
-        "amount_growth_rate": amount_growth_rate,  # 首週→次週票房成長率 ((week2-week1)/week1)
-        "decline_rate_mean": decline_rate_mean,  # 平均下降率（所有週 rate 平均）
-        "decline_rate_last": decline_rate_last,  # 最末週下降率（最後一週 rate）
-        # === 標記 ===
-        "is_long_tail": is_long_tail,  # 是否為長尾電影（上映週數 > 10）
-        "status": status,  # 上映狀態
-        "release_initial_date": release_initial_date,  # 該電影首輪起始日期（跨輪參考指標）
-        # === 系統欄位 ===
-        "update_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),  # 資料生成時間戳
+        "gov_id": gov_id,
+        "title_zh": title_zh,
+        "release_round": release_round,
+        "is_re_release": release_round > 1,
+        "official_release_date": official_release_date,
+        "release_start": start.strftime("%Y-%m-%d"),
+        "release_end": end.strftime("%Y-%m-%d"),
+        "release_days": release_days,
+        "total_weeks": total_weeks,
+        "active_weeks": active_weeks,
+        "total_amount": total_amount,
+        "total_tickets": total_tickets,
+        "avg_amount_per_week": avg_amount_per_week,
+        "avg_tickets_per_week": avg_tickets_per_week,
+        "peak_amount": peak_amount,
+        "peak_amount_week": peak_amount_week,
+        "peak_theater_count": peak_theater_count,
+        "avg_theater_count": avg_theater_count,
+        "second_week_amount_growth_rate": second_week_amount_growth_rate,  # 已修正為平均日票房成長率
+        "decline_rate_mean": decline_rate_mean,
+        "decline_rate_last": decline_rate_last,
+        "is_long_tail": is_long_tail,
+        "status": status,
+        "release_initial_date": release_initial_date,
+        "update_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     }
-    """NOTE: 這裡都是每一活躍週期(round)的指標，跨週期的指標會在生成最新輪整併檔(latest)時加入"""
 
 
 # -------------------------------------------------------
@@ -230,11 +249,9 @@ def aggregate_single_round(
 # -------------------------------------------------------
 def integrate_boxoffice():
     print("🚀 開始進行票房聚合（多輪上映 + 容忍小間斷）...")
-    # 取得所有單一電影票房的"檔案名稱"
     files = [f for f in os.listdir(INPUT_DIR) if f.endswith(".csv")]
     all_rounds = []
 
-    # 遍歷 csv
     for file in files:
         file_path = os.path.join(INPUT_DIR, file)
         df = pd.read_csv(file_path)
@@ -242,26 +259,26 @@ def integrate_boxoffice():
             continue
 
         gov_id = str(df["gov_id"].iloc[0])
-        title_zh = file.split("_", 1)[1].replace(".csv", "") # 從檔名取得電影中文名
+        title_zh = file.split("_", 1)[1].replace(".csv", "")
 
         # === 過濾正式上映日前的資料 ===
+        official_release_date = None
         if "official_release_date" in df.columns:
             try:
                 official_release_date = pd.to_datetime(df["official_release_date"].iloc[0])
                 df["week_start_date"] = df["week_range"].apply(lambda x: parse_week_range(x)[0])
                 before_count = len(df)
-                df = df[df["week_start_date"] >= official_release_date]
+                df = df[df["week_start_date"] >= official_release_date - timedelta(days=7)]  # === 修改點 ===
                 after_count = len(df)
                 if after_count < before_count:
                     print(f"🔍 {title_zh}：已過濾 {before_count - after_count} 週（上映前週）")
             except Exception:
                 pass
 
-        rounds = detect_release_rounds(df) # 確認第幾次上映
+        rounds = detect_release_rounds(df, official_release_date)  # === 修改：加入上映日參數
         if not rounds:
             continue
 
-        # 過濾掉不足三週的輪次
         valid_rounds = []
         for r_df in rounds:
             first_week = r_df["week_range"].iloc[0]
@@ -269,17 +286,14 @@ def integrate_boxoffice():
             start, _ = parse_week_range(first_week)
             _, end = parse_week_range(last_week)
             total_weeks = (end - start).days // 7
-
-            # 重排周次編號
             if total_weeks >= MIN_VALID_WEEKS:
-                valid_rounds.append(r_df) 
+                valid_rounds.append(r_df)
             else:
                 print(f"⚠️  略過 {title_zh} 的某輪（僅 {total_weeks} 週）")
 
         if not valid_rounds:
             continue
 
-        # 取首輪首週日期作為 release_initial_date
         release_initial_date = ""
         if valid_rounds and not valid_rounds[0].empty:
             start, _ = parse_week_range(valid_rounds[0]["week_range"].iloc[0])
@@ -287,15 +301,10 @@ def integrate_boxoffice():
 
         for idx, r_df in enumerate(valid_rounds, start=1):
             agg = aggregate_single_round(r_df, gov_id, title_zh, idx, release_initial_date)
-            if agg:  # 若 total_weeks < 3 則會回傳 None
+            if agg:
                 all_rounds.append(agg)
 
-    # ----------------------
-    # 生成分輪聚合檔
-    # ----------------------
     df_rounds = pd.DataFrame(all_rounds)
-
-    # 確認有資料
     if df_rounds.empty:
         print("⚠️ 無有效電影資料可聚合，程式結束。")
         return
@@ -305,48 +314,29 @@ def integrate_boxoffice():
     print(f"✅ 分輪聚合完成，共 {len(df_rounds)} 筆")
     print(f"📁 已輸出：{output_round_path}")
 
-    # ----------------------
-    # 生成最新輪整併檔
-    # ----------------------
     latest_records = []
     for gov_id, group in df_rounds.groupby("gov_id"):
         group = group.sort_values("release_round")
         latest = group.iloc[-1].to_dict()
-
-        # --- 處理歷史統計資料 ---
         if len(group) > 1:
-            # 同一電影有多輪上映時
             prev = group.iloc[:-1]
-
-            # === 歷史統計欄位 ===
-            latest["previous_round_count"] = len(prev)  # 前輪次數量（例：第2輪上映則此欄為1）
-            latest["previous_total_amount"] = prev[
-                "total_amount"
-            ].sum()  # 前輪累積票房（所有前輪 total_amount 加總）
-
-            # 上一輪下檔與本輪開映之間的間隔天數
-            prev_end = pd.to_datetime(prev["release_end"].iloc[-1])  # 上一輪結束日期
-            curr_start = pd.to_datetime(latest["release_start"])  # 本輪開始日期
-            latest["re_release_gap_days"] = (curr_start - prev_end).days  # 本輪與前一輪的間隔天數
-
-            # 前一輪的平均票房表現（反映前期市場反應）
+            latest["previous_round_count"] = len(prev)
+            latest["previous_total_amount"] = prev["total_amount"].sum()
+            prev_end = pd.to_datetime(prev["release_end"].iloc[-1])
+            curr_start = pd.to_datetime(latest["release_start"])
+            latest["re_release_gap_days"] = (curr_start - prev_end).days
             latest["previous_avg_amount"] = round(prev["avg_amount_per_week"].mean(), 2)
         else:
-            # 第一次上映
             latest["previous_round_count"] = 0
             latest["previous_total_amount"] = 0
             latest["re_release_gap_days"] = 0
             latest["previous_avg_amount"] = 0
-
         latest_records.append(latest)
 
     df_latest = pd.DataFrame(latest_records)
     output_latest_path = os.path.join(OUTPUT_COMBINED_DIR, f"boxoffice_latest_{NOW_LABEL}.csv")
     df_latest.to_csv(output_latest_path, index=False, encoding="utf-8-sig")
 
-    # ----------------------
-    # 統計結果
-    # ----------------------
     print(f"✅ 最新輪整併完成，共 {len(df_latest)} 筆電影資料")
     print(f"📁 已輸出：{output_latest_path}")
     print("🎉 全部票房聚合流程完成！")

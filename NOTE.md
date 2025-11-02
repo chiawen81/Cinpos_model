@@ -17,6 +17,22 @@
   (3) market_heat_level	
       依 total_amount 或 avg_amount_per_week 的分位數切級（如 Q3 = 高熱、Q2 = 中熱）
 
+8. 要調整欄位
+  (1) 棄用same_class_amount_last_week =>現在全部都是0
+  (2) market_heat_level	改成
+    - 上映中: 用當周票房去比
+    - 下檔: 用該輪總票房去比
+
+9. 想新增的欄位
+  (1) momentum_current_3w
+      => 此為動態欄位，只以最近三周來統計票房動能(momentum_3w是逐周票房動能的平均)
+      => 修改腳本: boxoffice_integrate.py
+  (2) peak_week_index
+      => 該輪中，票房最好的周次
+      => 修改腳本: boxoffice_integrate.py
+  (3) 上週成績(amount/ticket/rate)
+      => 修改腳本: 要出報表的時候再併即可
+
 ## ------------------------------------ 暫不處理 ------------------------------------
 1. 建立聚合檔 rating_integrate.py
   (1) 腳本位置src\ML_recommend\data_data_integration

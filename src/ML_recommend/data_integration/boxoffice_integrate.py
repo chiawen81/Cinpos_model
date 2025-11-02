@@ -93,6 +93,48 @@ def get_latest_status(release_end: str, max_gap_weeks: int = 2) -> str:
 
 
 # -------------------------------------------------------
+# 🔹 新增：修正版 momentum_3w 計算邏輯（含首週日均修正）
+# -------------------------------------------------------
+def calc_momentum_3w(
+    df: pd.DataFrame, second_week_amount_growth_rate: float, official_release_date: datetime
+) -> float:
+    """
+    momentum_3w 修正版：
+    - 第1→2週成長率使用 second_week_amount_growth_rate（已考慮日均修正）
+    - 第2→3、第3→4週以實際週票房成長率計算
+    - 三者平均即為 momentum_3w
+    - 若週數 < 3 則回傳 0
+    """
+    df = df.copy()
+    df["amount"] = pd.to_numeric(df["amount"], errors="coerce").fillna(0)
+    weeks = len(df)
+    if weeks < 3:
+        return 0.0
+
+    growths = []
+
+    # 第一個成長率：用修正後的 second_week_amount_growth_rate
+    growths.append(
+        second_week_amount_growth_rate if pd.notna(second_week_amount_growth_rate) else 0
+    )
+
+    # 第二個成長率：第2→3週
+    if weeks >= 3 and df["amount"].iloc[1] > 0:
+        g23 = (df["amount"].iloc[2] - df["amount"].iloc[1]) / df["amount"].iloc[1]
+        growths.append(round(g23, 3))
+
+    # 第三個成長率：第3→4週（若有第4週）
+    if weeks >= 4 and df["amount"].iloc[2] > 0:
+        g34 = (df["amount"].iloc[3] - df["amount"].iloc[2]) / df["amount"].iloc[2]
+        growths.append(round(g34, 3))
+
+    if not growths:
+        return 0.0
+
+    return round(sum(growths) / len(growths), 3)
+
+
+# -------------------------------------------------------
 # 即時動態指標(for上映中電影)
 # -------------------------------------------------------
 def calc_momentum_score(df: pd.DataFrame) -> float:
@@ -297,6 +339,9 @@ def aggregate_single_round(
     # --- 上映狀態判斷 ---
     status = get_latest_status(end.strftime("%Y-%m-%d"), max_gap_weeks=MAX_GAP_WEEKS)
 
+    # === 🔹 新增 momentum_3w（依修正版邏輯） ===
+    momentum_3w = calc_momentum_3w(df, second_week_amount_growth_rate, official_release_date)
+
     # ---------------------------------------------------
     # 即時動態指標(for上映中電影)
     # ---------------------------------------------------
@@ -333,6 +378,7 @@ def aggregate_single_round(
         "avg_theater_count": avg_theater_count,  # 平均上映戲院數（整輪週期平均）
         # === 動態變化 ===
         "second_week_amount_growth_rate": second_week_amount_growth_rate,  # 首週→次週票房成長率 (以平均日票房計算)
+        "momentum_3w": momentum_3w,  # 🔹 新增
         "decline_rate_mean": decline_rate_mean,  # 平均下降率（所有週 rate 平均）
         "decline_rate_last": decline_rate_last,  # 最末週下降率（最後一週 rate）
         # === 標記 ===
@@ -478,6 +524,40 @@ def integrate_boxoffice():
         latest_records.append(latest)
 
     df_latest = pd.DataFrame(latest_records)
+    # ====================== 待處理 ======================
+    # 狀況: same_class_amount_last_week 現在出來都是0
+    # ---------------------------------------------------
+    # 🔹 同 region 平均票房 + 市場熱度分級
+    # ---------------------------------------------------
+    if not df_latest.empty:
+        if "region" in df_latest.columns and "avg_amount_per_week" in df_latest.columns:
+            df_latest["same_class_amount_last_week"] = df_latest.groupby("region")[
+                "avg_amount_per_week"
+            ].transform("mean")
+        else:
+            df_latest["same_class_amount_last_week"] = 0
+
+        if "total_amount" in df_latest.columns:
+            q = df_latest["total_amount"].quantile([0.2, 0.4, 0.6, 0.8])
+
+            def classify_heat(x):
+                if x >= q[0.8]:
+                    return "A"
+                elif x >= q[0.6]:
+                    return "B"
+                elif x >= q[0.4]:
+                    return "C"
+                elif x >= q[0.2]:
+                    return "D"
+                else:
+                    return "E"
+
+            df_latest["market_heat_level"] = df_latest["total_amount"].apply(classify_heat)
+        else:
+            df_latest["market_heat_level"] = "C"
+    # ====================================================
+
+    # 輸出
     output_latest_path = os.path.join(OUTPUT_COMBINED_DIR, f"boxoffice_latest_{NOW_LABEL}.csv")
     df_latest.to_csv(output_latest_path, index=False, encoding="utf-8-sig")
 

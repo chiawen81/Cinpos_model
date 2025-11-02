@@ -13,7 +13,7 @@ from common.date_utils import (
 )
 from common.path_utils import BOXOFFICE_RAW
 from common.file_utils import save_json
-from datetime import datetime,date
+from datetime import datetime, date
 
 
 # 全國電影票房統計API- 每周電影票房
@@ -21,18 +21,18 @@ BASE_URL = "https://boxofficetw.tfai.org.tw/stat/qsl"
 
 
 ##### 取得<每周電影票房>票房 #####
-def fetch_boxoffice_json(reference_date: date | datetime | None = None):
+def fetch_boxoffice_json(reference_date: date | None = None):
     """
     從官方 API 下載指定週的票房資料(JSON) 並存檔
     """
 
     # 設定查詢日期
-    date_range = get_last_week_range(reference_date)
+    last_week_date_range = get_last_week_range(reference_date)
 
     # 整理API參數
     params = {
         "mode": "Week",
-        "start": date_range["startDate"],
+        "start": last_week_date_range["startDate"],
         "ascending": "false",
         "orderedColumn": "ReleaseDate",
         "page": 0,
@@ -48,9 +48,11 @@ def fetch_boxoffice_json(reference_date: date | datetime | None = None):
 
     # 設定儲存的檔名
     year_label = get_year_label()
-    week_label = get_week_label(datetime.strptime(date_range["startDate"], "%Y-%m-%d").date())
+    week_label = get_week_label(
+        datetime.strptime(last_week_date_range["startDate"], "%Y-%m-%d").date()
+    )
     file_folder = os.path.join(BOXOFFICE_RAW, year_label)
-    fileName_date = format_week_date_range(date_range)
+    fileName_date = format_week_date_range(last_week_date_range)
     filename = f"boxoffice_{week_label}_{fileName_date}.json"
 
     # 儲存成原始 JSON
@@ -66,7 +68,7 @@ def fetch_boxoffice_json(reference_date: date | datetime | None = None):
 
 # 主程式
 if __name__ == "__main__":
-    fetch_boxoffice_json(date(2025, 10, 9))
+    fetch_boxoffice_json()  # 可傳入日期參數，爬特定周次資料 ex: date(2025,11,3)
 """NOTE:
      Python 會在執行檔案時自動設定內建變數 __name__。
      若此檔案是被「直接執行」，__name__ 會等於 "__main__"；

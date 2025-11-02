@@ -1,0 +1,121 @@
+{
+  "data": {
+    "movieId": "30062",
+    "name": "鬼吹簫",
+    "originalName": "THE PIPER",
+    "region": "美國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-09",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 401685.0,
+    "totalAmount": 401685.0,
+    "filmClasses": null,
+    "filmLength": 5700,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 17434,
+        "typeName": "演員",
+        "name": "朱利安山德斯",
+        "originalName": "Julian Sands"
+      },
+      {
+        "id": 15440,
+        "typeName": "演員",
+        "name": "夏綠蒂霍普",
+        "originalName": "Charlotte Hope"
+      },
+      {
+        "id": 82532,
+        "typeName": "編劇",
+        "name": "埃林格爾托羅森",
+        "originalName": "Erlingur Thoroddsen"
+      },
+      {
+        "id": 82532,
+        "typeName": "導演",
+        "name": "埃林格爾托羅森",
+        "originalName": "Erlingur Thoroddsen"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 231775.0,
+        "tickets": 894,
+        "totalAmount": 231775.0,
+        "totalTickets": 894,
+        "rate": 0,
+        "theaterCount": 52
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 13708.0,
+        "tickets": 58,
+        "totalAmount": 245483.0,
+        "totalTickets": 952,
+        "rate": -0.9408564340416352,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 1730.0,
+        "tickets": 7,
+        "totalAmount": 247213.0,
+        "totalTickets": 959,
+        "rate": -0.8737963233148527,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 247213.0,
+        "totalTickets": 959,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 263012.0,
+        "tickets": 1021,
+        "totalAmount": 263012.0,
+        "totalTickets": 1021,
+        "rate": 0,
+        "theaterCount": 52
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 127988.0,
+        "tickets": 523,
+        "totalAmount": 391000.0,
+        "totalTickets": 1544,
+        "rate": -0.5133758155521421,
+        "theaterCount": 51
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 8685.0,
+        "tickets": 35,
+        "totalAmount": 399685.0,
+        "totalTickets": 1579,
+        "rate": -0.9321420758196081,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 2000.0,
+        "tickets": 9,
+        "totalAmount": 401685.0,
+        "totalTickets": 1588,
+        "rate": -0.7697179044329303,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

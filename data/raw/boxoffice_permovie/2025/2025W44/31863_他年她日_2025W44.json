@@ -1,0 +1,139 @@
+{
+  "data": {
+    "movieId": "31863",
+    "name": "他年她日",
+    "originalName": "MEASURE IN LOVE",
+    "region": "香港",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-09-29",
+    "publisher": "香港商甲上娛樂有限公司台灣分公司",
+    "amountInThisWeek": 10523797.0,
+    "totalAmount": 10523797.0,
+    "filmClasses": null,
+    "filmLength": 6720,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 22473,
+        "typeName": "演員",
+        "name": "陳澤耀",
+        "originalName": "Jack Tan"
+      },
+      {
+        "id": 75321,
+        "typeName": "演員",
+        "name": "許光漢",
+        "originalName": "Greg Han Hsu"
+      },
+      {
+        "id": 32535,
+        "typeName": "演員",
+        "name": "袁澧林",
+        "originalName": "Angela Yuen"
+      },
+      {
+        "id": 82502,
+        "typeName": "導演",
+        "name": "龔兆平",
+        "originalName": "Siu-Ping Kung"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 3582341.0,
+        "tickets": 13537,
+        "totalAmount": 3582341.0,
+        "totalTickets": 13537,
+        "rate": 0,
+        "theaterCount": 98
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 1289969.0,
+        "tickets": 4879,
+        "totalAmount": 4872310.0,
+        "totalTickets": 18416,
+        "rate": -0.6399089310593269,
+        "theaterCount": 97
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 483642.0,
+        "tickets": 1765,
+        "totalAmount": 5355952.0,
+        "totalTickets": 20181,
+        "rate": -0.6250747110977085,
+        "theaterCount": 82
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 212189.0,
+        "tickets": 781,
+        "totalAmount": 5568141.0,
+        "totalTickets": 20962,
+        "rate": -0.5612684589014189,
+        "theaterCount": 36
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 5568141.0,
+        "totalTickets": 20962,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 5279145.0,
+        "tickets": 19274,
+        "totalAmount": 5279145.0,
+        "totalTickets": 19274,
+        "rate": 0,
+        "theaterCount": 98
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 3710807.0,
+        "tickets": 13890,
+        "totalAmount": 8989952.0,
+        "totalTickets": 33164,
+        "rate": -0.29708181912033105,
+        "theaterCount": 98
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 1015462.0,
+        "tickets": 3796,
+        "totalAmount": 10005414.0,
+        "totalTickets": 36960,
+        "rate": -0.7263500904250747,
+        "theaterCount": 97
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 425966.0,
+        "tickets": 1583,
+        "totalAmount": 10431380.0,
+        "totalTickets": 38543,
+        "rate": -0.5805199997636544,
+        "theaterCount": 82
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 92417.0,
+        "tickets": 391,
+        "totalAmount": 10523797.0,
+        "totalTickets": 38934,
+        "rate": -0.7830413694989741,
+        "theaterCount": 35
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

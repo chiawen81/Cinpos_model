@@ -21,7 +21,7 @@ import time
 import requests
 import pandas as pd
 from pathlib import Path
-from datetime import date
+from datetime import date, datetime
 
 # 共用模組
 from common.path_utils import (
@@ -30,8 +30,8 @@ from common.path_utils import (
 )
 from common.network_utils import get_default_headers
 from common.file_utils import ensure_dir, save_json, clean_filename
-from common.date_utils import get_week_label, get_year_label
-from common.mapping_utils import load_manual_mapping, find_manual_mapping
+from common.date_utils import get_week_label, get_year_label, get_last_week_range
+
 
 # ========= 全域設定 =========
 SEARCH_URL = "https://boxofficetw.tfai.org.tw/film/sf?keyword="
@@ -39,8 +39,6 @@ DETAIL_URL = "https://boxofficetw.tfai.org.tw/film/gfd/"
 HEADERS = get_default_headers()
 TIMEOUT = 10
 SLEEP_INTERVAL = 1.2  # 避免連續請求過快被限制
-WEEK_LABEL = get_week_label() # 可傳入日期參數，爬特定周次資料 ex: date(2025,10,30)
-YEAR_LABEL = get_year_label()
 
 
 # ========= 輔助函式 =========
@@ -58,10 +56,19 @@ def fetch_boxoffice_data(film_id: str) -> dict | None:
 
 
 # ========= 主爬蟲邏輯 =========
-def fetch_boxoffice_permovie_from_weekly() -> None:
+def fetch_boxoffice_permovie_from_weekly(reference_date: date | None = None) -> None:
     """
     以每週票房名單為基準，逐一抓取單部電影的票房統計資料。
     """
+
+    # 設定查詢日期
+    last_week_date_range = get_last_week_range(reference_date)
+    WEEK_LABEL = get_week_label(
+        datetime.strptime(last_week_date_range["startDate"], "%Y-%m-%d").date()
+    )
+    YEAR_LABEL = get_year_label()
+
+    print(f"📅 本次執行週期(最近一周)：{WEEK_LABEL}")
 
     # --- 前置 ---
     ready_crawler_num = 0  # 預計要撈取的電影數
@@ -138,5 +145,6 @@ def fetch_boxoffice_permovie_from_weekly() -> None:
 
 # ========= 主程式執行區 =========
 if __name__ == "__main__":
-    print(f"📅 本次執行週期(最近一周)：{WEEK_LABEL}")
-    fetch_boxoffice_permovie_from_weekly()
+    fetch_boxoffice_permovie_from_weekly(
+        date(2025, 11, 3)
+    )  # 可傳入日期參數，爬特定周次資料 ex: date(2025,10,30)

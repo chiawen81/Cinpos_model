@@ -1,0 +1,175 @@
+{
+  "data": {
+    "movieId": "31835",
+    "name": "沒好婚姻",
+    "originalName": "The Roses",
+    "region": "美國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-09-26",
+    "publisher": "台灣華特迪士尼股份有限公司",
+    "amountInThisWeek": 2959413.0,
+    "totalAmount": 2959413.0,
+    "filmClasses": null,
+    "filmLength": 6300,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 33730,
+        "typeName": "導演",
+        "name": "傑洛奇",
+        "originalName": "Jay Roach"
+      },
+      {
+        "id": 26463,
+        "typeName": "演員",
+        "name": "安迪山伯格",
+        "originalName": "Andy Samberg"
+      },
+      {
+        "id": 14319,
+        "typeName": "演員",
+        "name": "愛莉森珍妮",
+        "originalName": "Allison Janney"
+      },
+      {
+        "id": 19448,
+        "typeName": "演員",
+        "name": "班尼迪克康柏拜區",
+        "originalName": "Benedict Cumberbatch"
+      },
+      {
+        "id": 11771,
+        "typeName": "演員",
+        "name": "凱特麥金儂",
+        "originalName": "Kate McKinnon"
+      },
+      {
+        "id": 82496,
+        "typeName": "演員",
+        "name": "蘇尼塔馬尼",
+        "originalName": "Sunita Mani"
+      },
+      {
+        "id": 10575,
+        "typeName": "演員",
+        "name": "奧莉薇雅柯爾曼",
+        "originalName": "Olivia Colman"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 924274.0,
+        "tickets": 3394,
+        "totalAmount": 924274.0,
+        "totalTickets": 3394,
+        "rate": 0,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 440006.0,
+        "tickets": 1590,
+        "totalAmount": 1364280.0,
+        "totalTickets": 4984,
+        "rate": -0.5239441983654198,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 194263.0,
+        "tickets": 705,
+        "totalAmount": 1558543.0,
+        "totalTickets": 5689,
+        "rate": -0.5584992022836053,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 61785.0,
+        "tickets": 234,
+        "totalAmount": 1620328.0,
+        "totalTickets": 5923,
+        "rate": -0.6819517870103932,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 47668.0,
+        "tickets": 189,
+        "totalAmount": 1667996.0,
+        "totalTickets": 6112,
+        "rate": -0.22848587844946183,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 1667996.0,
+        "totalTickets": 6112,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 924274.0,
+        "tickets": 3394,
+        "totalAmount": 924274.0,
+        "totalTickets": 3394,
+        "rate": 0,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 1215205.0,
+        "tickets": 4535,
+        "totalAmount": 2139479.0,
+        "totalTickets": 7929,
+        "rate": 0.3147670495978465,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 571919.0,
+        "tickets": 2093,
+        "totalAmount": 2711398.0,
+        "totalTickets": 10022,
+        "rate": -0.5293641813521175,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 157806.0,
+        "tickets": 611,
+        "totalAmount": 2869204.0,
+        "totalTickets": 10633,
+        "rate": -0.7240763115056503,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 74880.0,
+        "tickets": 290,
+        "totalAmount": 2944084.0,
+        "totalTickets": 10923,
+        "rate": -0.5254933272499145,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 15329.0,
+        "tickets": 59,
+        "totalAmount": 2959413.0,
+        "totalTickets": 10982,
+        "rate": -0.7952857905982906,
+        "theaterCount": 6
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

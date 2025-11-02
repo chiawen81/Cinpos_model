@@ -11,7 +11,7 @@
 import os
 import json
 import pandas as pd
-from datetime import datetime,date
+from datetime import datetime, date
 
 # 共用模組
 from common.path_utils import (
@@ -20,11 +20,9 @@ from common.path_utils import (
     MOVIEINFO_GOV_PROCESSED,
 )
 from common.file_utils import ensure_dir, save_csv, clean_filename
-from common.date_utils import get_week_label, get_year_label
+from common.date_utils import get_week_label, get_year_label, get_last_week_range
 
 # ========= 全域設定 =========
-WEEK_LABEL = get_week_label() # 可傳入日期參數，清洗特定周次資料 ex: date(2025,10,30)
-YEAR_LABEL = get_year_label()
 
 
 # ========= 輔助工具 =========
@@ -58,7 +56,7 @@ def parse_movie_info(movie_data: dict) -> dict:
 
 
 # 將 weeks 區塊轉成 DataFrame
-def flatten_weekly_boxoffice(movie_data: dict, gov_id: str,releaseDate:str) -> pd.DataFrame:
+def flatten_weekly_boxoffice(movie_data: dict, gov_id: str, releaseDate: str) -> pd.DataFrame:
     """將 weeks 區塊轉成 DataFrame"""
     weeks = movie_data.get("weeks", [])
     if not weeks:
@@ -99,7 +97,15 @@ def flatten_weekly_boxoffice(movie_data: dict, gov_id: str,releaseDate:str) -> p
 
 
 # ========= 主程式 =========
-def clean_boxoffice_permovie():
+def clean_boxoffice_permovie(reference_date: date | None = None):
+
+    # --- 設定查詢日期 ---
+    last_week_date_range = get_last_week_range(reference_date)
+    WEEK_LABEL = get_week_label(
+        datetime.strptime(last_week_date_range["startDate"], "%Y-%m-%d").date()
+    )
+    YEAR_LABEL = get_year_label()
+
     # --- 設定路徑 ---
     input_dir = os.path.join(BOXOFFICE_PERMOVIE_RAW, YEAR_LABEL, WEEK_LABEL)
     output_dir = os.path.join(BOXOFFICE_PERMOVIE_PROCESSED)
@@ -139,7 +145,11 @@ def clean_boxoffice_permovie():
         save_csv(df_info, MOVIEINFO_GOV_PROCESSED, info_filename)
 
         # Step 2️⃣：整理週票房資料
-        df_weeks = flatten_weekly_boxoffice(crawler_data, processed_data_info["gov_id"],processed_data_info["official_release_date"])
+        df_weeks = flatten_weekly_boxoffice(
+            crawler_data,
+            processed_data_info["gov_id"],
+            processed_data_info["official_release_date"],
+        )
         if not df_weeks.empty:
             csv_filename = f"{processed_data_info['gov_id']}_{safe_title}.csv"
             save_csv(df_weeks, output_dir, csv_filename)
@@ -164,4 +174,6 @@ def clean_boxoffice_permovie():
 
 
 if __name__ == "__main__":
-    clean_boxoffice_permovie()
+    clean_boxoffice_permovie(
+        date(2025, 11, 3)
+    )  # 可傳入日期參數，爬特定周次資料 ex: date(2025,10,30)

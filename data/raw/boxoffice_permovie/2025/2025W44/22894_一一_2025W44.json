@@ -1,0 +1,150 @@
+{
+  "data": {
+    "movieId": "22894",
+    "name": "一一",
+    "originalName": "YIYI-A ONE AND A TWO",
+    "region": "中華民國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-01",
+    "publisher": "傳影互動股份有限公司",
+    "amountInThisWeek": 4779318.0,
+    "totalAmount": 4779318.0,
+    "filmClasses": null,
+    "filmLength": 10380,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 1260067.0,
+        "tickets": 4583,
+        "totalAmount": 1260067.0,
+        "totalTickets": 4583,
+        "rate": 0,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 592559.0,
+        "tickets": 2166,
+        "totalAmount": 1852626.0,
+        "totalTickets": 6749,
+        "rate": -0.5297400852494352,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 376844.0,
+        "tickets": 1372,
+        "totalAmount": 2229470.0,
+        "totalTickets": 8121,
+        "rate": -0.3640396990004371,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 174101.0,
+        "tickets": 663,
+        "totalAmount": 2403571.0,
+        "totalTickets": 8784,
+        "rate": -0.5380024625574509,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 48770.0,
+        "tickets": 189,
+        "totalAmount": 2452341.0,
+        "totalTickets": 8973,
+        "rate": -0.7198752448291509,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 32810.0,
+        "tickets": 125,
+        "totalAmount": 2485151.0,
+        "totalTickets": 9098,
+        "rate": -0.3272503588271478,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 2485151.0,
+        "totalTickets": 9098,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 1260067.0,
+        "tickets": 4583,
+        "totalAmount": 1260067.0,
+        "totalTickets": 4583,
+        "rate": 0,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 1623554.0,
+        "tickets": 6093,
+        "totalAmount": 2883621.0,
+        "totalTickets": 10676,
+        "rate": 0.2884664069450275,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 989335.0,
+        "tickets": 3670,
+        "totalAmount": 3872956.0,
+        "totalTickets": 14346,
+        "rate": -0.39063622152389144,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 639968.0,
+        "tickets": 2417,
+        "totalAmount": 4512924.0,
+        "totalTickets": 16763,
+        "rate": -0.35313316520693194,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 167964.0,
+        "tickets": 657,
+        "totalAmount": 4680888.0,
+        "totalTickets": 17420,
+        "rate": -0.7375431271563578,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 61770.0,
+        "tickets": 236,
+        "totalAmount": 4742658.0,
+        "totalTickets": 17656,
+        "rate": -0.6322426234193042,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 36660.0,
+        "tickets": 143,
+        "totalAmount": 4779318.0,
+        "totalTickets": 17799,
+        "rate": -0.4065080135988344,
+        "theaterCount": 3
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

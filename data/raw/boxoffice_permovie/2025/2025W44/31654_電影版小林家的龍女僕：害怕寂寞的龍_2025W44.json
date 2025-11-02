@@ -1,0 +1,229 @@
+{
+  "data": {
+    "movieId": "31654",
+    "name": "電影版小林家的龍女僕：害怕寂寞的龍",
+    "originalName": "Miss Kobayashi's Dragon Maid: A lonely dragon wants to be loved",
+    "region": "日本",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-09-09",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 7381903.0,
+    "totalAmount": 7381903.0,
+    "filmClasses": null,
+    "filmLength": 6240,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 32908,
+        "typeName": "導演",
+        "name": "石原立也",
+        "originalName": "Tatsuya Ishihara"
+      },
+      {
+        "id": 82417,
+        "typeName": "演員",
+        "name": "高橋未奈美",
+        "originalName": ""
+      },
+      {
+        "id": 82419,
+        "typeName": "演員",
+        "name": "長繩麻理亞",
+        "originalName": "Maria Naganawa"
+      },
+      {
+        "id": 82420,
+        "typeName": "演員",
+        "name": "高田憂希",
+        "originalName": ""
+      },
+      {
+        "id": 82422,
+        "typeName": "編劇",
+        "name": "山田由香",
+        "originalName": ""
+      },
+      {
+        "id": 82422,
+        "typeName": "編劇",
+        "name": "山田由香",
+        "originalName": ""
+      },
+      {
+        "id": 82417,
+        "typeName": "演員",
+        "name": "高橋未奈美",
+        "originalName": ""
+      },
+      {
+        "id": 82427,
+        "typeName": "演員",
+        "name": "桑原由氣",
+        "originalName": "Yuki Kuwahara"
+      },
+      {
+        "id": 37818,
+        "typeName": "演員",
+        "name": "田村睦心",
+        "originalName": "Mutsumi Tamura"
+      },
+      {
+        "id": 82420,
+        "typeName": "演員",
+        "name": "高田憂希",
+        "originalName": ""
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 2911423.0,
+        "tickets": 10398,
+        "totalAmount": 2911423.0,
+        "totalTickets": 10398,
+        "rate": 0,
+        "theaterCount": 67
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 1150332.0,
+        "tickets": 4086,
+        "totalAmount": 4061755.0,
+        "totalTickets": 14484,
+        "rate": -0.6048901173068977,
+        "theaterCount": 65
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 836163.0,
+        "tickets": 3030,
+        "totalAmount": 4897918.0,
+        "totalTickets": 17514,
+        "rate": -0.2731115886544059,
+        "theaterCount": 39
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 246187.0,
+        "tickets": 838,
+        "totalAmount": 5144105.0,
+        "totalTickets": 18352,
+        "rate": -0.7055753483471524,
+        "theaterCount": 21
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 97474.0,
+        "tickets": 335,
+        "totalAmount": 5241579.0,
+        "totalTickets": 18687,
+        "rate": -0.6040652024680426,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 30402.0,
+        "tickets": 104,
+        "totalAmount": 5271981.0,
+        "totalTickets": 18791,
+        "rate": -0.6881014424359316,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 11508.0,
+        "tickets": 44,
+        "totalAmount": 5283489.0,
+        "totalTickets": 18835,
+        "rate": -0.6214722715610815,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 5283489.0,
+        "totalTickets": 18835,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 2985943.0,
+        "tickets": 10722,
+        "totalAmount": 2985943.0,
+        "totalTickets": 10722,
+        "rate": 0,
+        "theaterCount": 67
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 2179430.0,
+        "tickets": 7918,
+        "totalAmount": 5165373.0,
+        "totalTickets": 18640,
+        "rate": -0.27010328060515554,
+        "theaterCount": 67
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 1139675.0,
+        "tickets": 4158,
+        "totalAmount": 6305048.0,
+        "totalTickets": 22798,
+        "rate": -0.47707657506779294,
+        "theaterCount": 64
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 740455.0,
+        "tickets": 2647,
+        "totalAmount": 7045503.0,
+        "totalTickets": 25445,
+        "rate": -0.3502928466448768,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 247880.0,
+        "tickets": 863,
+        "totalAmount": 7293383.0,
+        "totalTickets": 26308,
+        "rate": -0.6652328635771249,
+        "theaterCount": 21
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 59482.0,
+        "tickets": 205,
+        "totalAmount": 7352865.0,
+        "totalTickets": 26513,
+        "rate": -0.7600371147329353,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 25598.0,
+        "tickets": 97,
+        "totalAmount": 7378463.0,
+        "totalTickets": 26610,
+        "rate": -0.569651323089338,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 3440.0,
+        "tickets": 14,
+        "totalAmount": 7381903.0,
+        "totalTickets": 26624,
+        "rate": -0.8656145011329011,
+        "theaterCount": 2
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

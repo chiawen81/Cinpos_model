@@ -523,39 +523,8 @@ def integrate_boxoffice():
 
         latest_records.append(latest)
 
+    # 整理成 DataFrame
     df_latest = pd.DataFrame(latest_records)
-    # ====================== 待處理 ======================
-    # 狀況: same_class_amount_last_week 現在出來都是0
-    # ---------------------------------------------------
-    # 🔹 同 region 平均票房 + 市場熱度分級
-    # ---------------------------------------------------
-    if not df_latest.empty:
-        if "region" in df_latest.columns and "avg_amount_per_week" in df_latest.columns:
-            df_latest["same_class_amount_last_week"] = df_latest.groupby("region")[
-                "avg_amount_per_week"
-            ].transform("mean")
-        else:
-            df_latest["same_class_amount_last_week"] = 0
-
-        if "total_amount" in df_latest.columns:
-            q = df_latest["total_amount"].quantile([0.2, 0.4, 0.6, 0.8])
-
-            def classify_heat(x):
-                if x >= q[0.8]:
-                    return "A"
-                elif x >= q[0.6]:
-                    return "B"
-                elif x >= q[0.4]:
-                    return "C"
-                elif x >= q[0.2]:
-                    return "D"
-                else:
-                    return "E"
-
-            df_latest["market_heat_level"] = df_latest["total_amount"].apply(classify_heat)
-        else:
-            df_latest["market_heat_level"] = "C"
-    # ====================================================
 
     # 輸出
     output_latest_path = os.path.join(OUTPUT_COMBINED_DIR, f"boxoffice_latest_{NOW_LABEL}.csv")

@@ -10,27 +10,20 @@
 
 
 ## ------------------------------------ 待處理清單 ------------------------------------
-6. 生成movie_master_builder.py 
+6. 生成 master_data_builder.py
 => 欄位引用不變，另外新增電影性質、上映狀態
 => 資料源會改變成四周檔按omdb/gov的電影資訊、聚合後的票房資訊/評分資訊
 
-7. 修改boxoffice_integrate.py
-  新增以下欄位
-  (1) momentum_3w
-      近三週 second_week_amount_growth_rate 的平均值
-
+9. 在 master_data_builder.py 新增以下欄位
   (2) same_class_amount_last_week	
       mean(total_amount ÷ total_weeks) for all films with same region（若無逐週資料，則取整體平均週票房作為近似）
       ps. 若只有最新輪，無法取得「上週」	同樣可用「同區域電影平均週票房」作近似
 
   (3) market_heat_level	
       依 total_amount 或 avg_amount_per_week 的分位數切級（如 Q3 = 高熱、Q2 = 中熱）
-
-8. 要調整欄位
-  (1) 棄用same_class_amount_last_week =>現在全部都是0
-  (2) market_heat_level	改成
-    - 上映中: 用當周票房去比
-    - 下檔: 用該輪總票房去比
+      market_heat_level	改成
+        - 上映中: 用當周票房去比
+        - 下檔: 用該輪總票房去比
 
 
 

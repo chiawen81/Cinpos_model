@@ -1,9 +1,9 @@
 # 目前開發階段: 彙總模型訓練資料
 ## 1103 to do list
-1. 完成 7-8 調整欄位(boxoffice_integrate.py)
-   => ChatGPT: https://chatgpt.com/g/g-p-68b005c1aeb881919915454a65419b81/c/6907854c-fbc4-8321-bd21-ee506731bbad
 2. 完成 6 生成movie_master_builder.py => 產生full+三支模型訓練資料
    => ChatGPT: https://chatgpt.com/g/g-p-68b005c1aeb881919915454a65419b81/c/6907653f-ec7c-8323-a451-d7804640985e
+   => 檢查生成出來的報表
+   => 優化註解
 3. 訓練 M3 推薦模型、評估、調教
 4. 訓練 M1 票房模型、評估、調教
  (先跳過M2 再上映，之後再補)

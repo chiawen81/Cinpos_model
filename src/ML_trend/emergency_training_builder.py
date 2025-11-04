@@ -4,11 +4,12 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 import glob
+from datetime import datetime, timedelta
 
 
 def process_rounds_and_weeks():
     """
-    步驟1：處理輪次定義、真實週次、活躍週次 + 近期趨勢
+    步驟1：處理輪次定義、真實週次、活躍週次 + 近期趨勢 + 開片實力
     """
 
     print("🚀 開始處理輪次與週次...")
@@ -123,8 +124,7 @@ def process_rounds_and_weeks():
         movie_df.loc[movie_df["current_week_active_idx"] == 1, "gap_real_week_2to1"] = 0
         movie_df.loc[movie_df["current_week_active_idx"] == 2, "gap_real_week_2to1"] = 0
 
-        # === 11. 【新增】近期趨勢 Lag Features ===
-        # 按輪次分組，取前1週和前2週的資料
+        # === 11. 近期趨勢 Lag Features ===
         movie_df["boxoffice_week_1"] = movie_df.groupby("round_idx")["amount"].shift(1)
         movie_df["boxoffice_week_2"] = movie_df.groupby("round_idx")["amount"].shift(2)
 
@@ -134,16 +134,77 @@ def process_rounds_and_weeks():
         movie_df["screens_week_1"] = movie_df.groupby("round_idx")["theater_count"].shift(1)
         movie_df["screens_week_2"] = movie_df.groupby("round_idx")["theater_count"].shift(2)
 
+        # === 12. 【新增】開片實力（首輪）===
+        # 只計算首輪（round_idx == 1）的資料
+        first_round = movie_df[movie_df["round_idx"] == 1].copy()
+
+        if len(first_round) > 0:
+            # 12.1 首輪第1週資料
+            first_week = first_round.iloc[0]
+
+            # 解析日期
+            try:
+                # 上映日期
+                release_date_str = first_week["official_release_date"]
+                # 嘗試多種日期格式
+                for fmt in ["%Y/%m/%d", "%Y-%m-%d", "%Y/%m/%d"]:
+                    try:
+                        release_date = datetime.strptime(release_date_str, fmt)
+                        break
+                    except:
+                        continue
+
+                # 首週區間
+                week_range = first_week["week_range"]
+                week_end_str = week_range.split("~")[1]  # 取結束日期
+                week_end = datetime.strptime(week_end_str, "%Y-%m-%d")
+
+                # 計算首週上映天數（從上映日到該週結束）
+                open_week1_days = (week_end - release_date).days + 1
+
+                # 確保天數在合理範圍 (1-7天)
+                open_week1_days = max(1, min(7, open_week1_days))
+
+            except Exception as e:
+                print(f"⚠️ 電影 {gov_id} 日期解析失敗: {e}")
+                open_week1_days = 7  # 預設7天
+
+            # 12.2 首週票房
+            open_week1_boxoffice = first_week["amount"]
+
+            # 12.3 首週日均票房
+            open_week1_boxoffice_daily_avg = (
+                open_week1_boxoffice / open_week1_days if open_week1_days > 0 else 0
+            )
+
+            # 12.4 首輪第2週票房（如果有的話）
+            if len(first_round) >= 2:
+                open_week2_boxoffice = first_round.iloc[1]["amount"]
+            else:
+                open_week2_boxoffice = np.nan
+
+            # 對整部電影的所有row填入這些固定值
+            movie_df["open_week1_days"] = open_week1_days
+            movie_df["open_week1_boxoffice"] = open_week1_boxoffice
+            movie_df["open_week1_boxoffice_daily_avg"] = open_week1_boxoffice_daily_avg
+            movie_df["open_week2_boxoffice"] = open_week2_boxoffice
+        else:
+            # 如果沒有首輪資料，填入NaN
+            movie_df["open_week1_days"] = np.nan
+            movie_df["open_week1_boxoffice"] = np.nan
+            movie_df["open_week1_boxoffice_daily_avg"] = np.nan
+            movie_df["open_week2_boxoffice"] = np.nan
+
         result_list.append(movie_df)
 
     if len(result_list) == 0:
         print("⚠️ 沒有符合條件的資料！")
         return pd.DataFrame()
 
-    # === 12. 合併所有電影 ===
+    # === 13. 合併所有電影 ===
     result = pd.concat(result_list, ignore_index=True)
 
-    # === 13. 選擇欄位 ===
+    # === 14. 選擇欄位 ===
     key_columns = [
         # 基本資訊
         "gov_id",
@@ -163,6 +224,11 @@ def process_rounds_and_weeks():
         "audience_week_1",
         "screens_week_2",
         "screens_week_1",
+        # 開片實力（首輪）
+        "open_week1_days",
+        "open_week1_boxoffice",
+        "open_week1_boxoffice_daily_avg",
+        "open_week2_boxoffice",
         # 當週資料（目標變數）
         "amount",
         "tickets",
@@ -171,14 +237,14 @@ def process_rounds_and_weeks():
 
     result = result[key_columns].copy()
 
-    # === 14. 儲存 ===
-    output_path = Path("data/model/step1_rounds_weeks_trends.csv")
+    # === 15. 儲存 ===
+    output_path = Path("data/model/step1_rounds_weeks_trends_opening.csv")
     output_path.parent.mkdir(parents=True, exist_ok=True)
     result.to_csv(output_path, index=False, encoding="utf-8-sig")
 
-    # === 15. 統計報告 ===
+    # === 16. 統計報告 ===
     print("\n" + "=" * 70)
-    print("✅ 步驟1完成：輪次、週次 + 近期趨勢")
+    print("✅ 步驟1完成：輪次、週次 + 近期趨勢 + 開片實力")
     print("=" * 70)
     print(f"📄 檔案位置：{output_path}")
     print(f"📊 總樣本數：{len(result):,}")
@@ -192,23 +258,25 @@ def process_rounds_and_weeks():
     print(f"   ├─ 雙輪電影：{(rounds_per_movie == 2).sum()} 部")
     print(f"   └─ 三輪以上：{(rounds_per_movie >= 3).sum()} 部")
 
-    # 活躍週次分布
-    active_weeks = result.groupby(["gov_id", "round_idx"])["current_week_active_idx"].max()
-    print(f"\n📊 活躍週次分布（每輪）：")
-    print(f"   ├─ 最小：{active_weeks.min():.0f} 週")
-    print(f"   ├─ 平均：{active_weeks.mean():.1f} 週")
-    print(f"   ├─ 中位數：{active_weeks.median():.0f} 週")
-    print(f"   └─ 最大：{active_weeks.max():.0f} 週")
+    # 開片實力統計
+    print(f"\n🎬 開片實力統計（首輪第1週）：")
+    open_days = result.groupby("gov_id")["open_week1_days"].first()
+    print(f"   ├─ 平均上映天數：{open_days.mean():.1f} 天")
+    print(f"   ├─ 上映天數分布：")
+    for days in sorted(open_days.unique()):
+        count = (open_days == days).sum()
+        print(f"   │  ├─ {days}天：{count} 部 ({count/len(open_days)*100:.1f}%)")
 
-    # 跳週情況
-    gaps = result["gap_real_week_1tocurrent"]
-    print(f"\n🔀 跳週情況（week-1 到 current）：")
-    print(f"   ├─ 無跳週（=0）：{(gaps == 0).sum()} 次 ({(gaps == 0).sum()/len(gaps)*100:.1f}%)")
-    print(f"   ├─ 跳1週（=1）：{(gaps == 1).sum()} 次 ({(gaps == 1).sum()/len(gaps)*100:.1f}%)")
-    print(f"   ├─ 跳2週（=2）：{(gaps == 2).sum()} 次 ({(gaps == 2).sum()/len(gaps)*100:.1f}%)")
-    print(f"   └─ 跳3週以上：{(gaps > 2).sum()} 次 ({(gaps > 2).sum()/len(gaps)*100:.1f}%)")
+    open_bo = result.groupby("gov_id")["open_week1_boxoffice"].first()
+    print(f"   ├─ 首週票房中位數：{open_bo.median():,.0f} 元")
+    print(f"   └─ 首週票房平均：{open_bo.mean():,.0f} 元")
 
-    # === 16. Lag Features 有效性 ===
+    open_daily = result.groupby("gov_id")["open_week1_boxoffice_daily_avg"].first()
+    print(f"\n💰 日均票房統計：")
+    print(f"   ├─ 中位數：{open_daily.median():,.0f} 元/天")
+    print(f"   └─ 平均：{open_daily.mean():,.0f} 元/天")
+
+    # Lag Features 有效性
     print(f"\n📊 近期趨勢欄位有效性：")
     print(
         f"   ├─ boxoffice_week_1 有值：{result['boxoffice_week_1'].notna().sum():,} ({result['boxoffice_week_1'].notna().sum()/len(result)*100:.1f}%)"
@@ -220,42 +288,35 @@ def process_rounds_and_weeks():
         f"   └─ 同時有 week_1 & week_2：{(result['boxoffice_week_1'].notna() & result['boxoffice_week_2'].notna()).sum():,}"
     )
 
-    print("\n📋 資料預覽（含近期趨勢）：")
+    print("\n📋 資料預覽（含開片實力）：")
     preview_cols = [
         "gov_id",
         "week_range",
         "round_idx",
         "current_week_active_idx",
-        "boxoffice_week_2",
+        "open_week1_days",
+        "open_week1_boxoffice",
+        "open_week1_boxoffice_daily_avg",
         "boxoffice_week_1",
         "amount",
-        "audience_week_2",
-        "audience_week_1",
-        "tickets",
     ]
     print(result[preview_cols].head(15).to_string(index=False))
 
     # === 17. 驗證範例 ===
     print("\n" + "=" * 70)
-    print("🔍 驗證範例（檢查近期趨勢是否正確）")
+    print("🔍 驗證範例：13460（檢查開片實力）")
     print("=" * 70)
 
-    # 選一部有多輪的電影
-    multi_round_movies = result.groupby("gov_id")["round_idx"].max()
-    multi_round_movies = multi_round_movies[multi_round_movies > 1].index
-
-    if len(multi_round_movies) > 0:
-        sample_movie = multi_round_movies[0]
-        sample_df = result[result["gov_id"] == sample_movie].copy()
-
-        print(f"\n範例電影：{sample_movie}")
+    sample_df = result[result["gov_id"] == "13460"].head(5)
+    if len(sample_df) > 0:
         display_cols = [
+            "official_release_date",
             "week_range",
             "round_idx",
-            "current_week_active_idx",
-            "boxoffice_week_2",
-            "boxoffice_week_1",
-            "amount",
+            "open_week1_days",
+            "open_week1_boxoffice",
+            "open_week1_boxoffice_daily_avg",
+            "open_week2_boxoffice",
         ]
         print(sample_df[display_cols].to_string(index=False))
 

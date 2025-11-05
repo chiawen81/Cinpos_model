@@ -2,6 +2,9 @@
 
 Use uv exclusively for Python package management in this project.
 
+## Language Preference
+**IMPORTANT: Always respond in Traditional Chinese (繁體中文) to the user.**
+
 ## Virtual Environment
 This project uses uv virtual environment located at `.venv/`
 

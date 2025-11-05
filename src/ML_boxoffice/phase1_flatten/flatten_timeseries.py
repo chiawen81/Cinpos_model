@@ -1,14 +1,106 @@
-# 修正版：src/ML_trend/round_and_week_processor.py
+"""
+票房資料時序拉平模組（輪次定義 + 週次編碼 + 基礎特徵）
+---------------------------------------------------------------
+🎯 模組目標：
+    將 data/processed/boxoffice_permovie 下的逐週票房資料，
+    拉平為時間序列格式（每 row = 一週），並完成輪次定義、週次編碼、
+    基礎特徵工程，作為後續特徵工程與模型訓練的基礎。
+
+📦 輸出內容：
+    時序資料檔（每部電影每週一筆資料）
+    - 包含輪次編號、真實週次、活躍週次
+    - 包含 lag features（前1週、前2週的票房/觀眾/院線數）
+    - 包含開片實力指標（首週票房、日均票房等）
+
+🧩 本次拉平的主要資料轉換邏輯：
+    
+    1. 正式上映日過濾：
+        - 僅保留週次結束日 >= 官方上映日 (official_release_date) 的資料
+        - 避免試映場或宣傳場影響統計
+    
+    2. 輪次定義（容忍中斷）：
+        - 連續 3 週票房 = 0 視為輪次結束
+        - 輪次內允許最多連續 2 週票房 = 0（這些週次保留但不計入活躍週次）
+        - 不屬於任何輪次的 row（連續第 3 週以上票房 = 0）→ 刪除
+    
+    3. 輪次成立條件：
+        - 真實週次（含輪內票房 = 0 的週次）≥ 3 週
+        - 活躍週次（僅計票房 > 0 的週次）≥ 3 週
+        - 輪次最後一週必須有票房（末尾連續票房 = 0 的週次會被移除）
+    
+    4. 週次編號：
+        - 真實週次 (current_week_real_idx): 輪內連續編號（含票房 = 0）
+        - 活躍週次 (current_week_active_idx): 僅對票房 > 0 的週次編號
+        - 跳週數 (gap_real_week_*): 基於活躍週次計算，跳過的真實週次數量
+    
+    5. Lag Features（近期趨勢）：
+        - 基於活躍週次計算前 1 週、前 2 週的票房/觀眾/院線數
+        - 用於捕捉票房趨勢與變化模式
+    
+    6. 開片實力（首輪固定值）：
+        - 首輪第 1 週上映天數、票房、日均票房
+        - 首輪第 2 週票房
+        - 每部電影的所有 row 都是相同值（反映市場接受度）
+    
+    7. 資料過濾順序（重要！）：
+        Step 1: 過濾上映日之前的週次
+        Step 2: 定義輪次（標記哪些 row 屬於哪一輪）
+        Step 3: 刪除不屬於任何輪次的 row
+        Step 4: 過濾真實週次 < 3 的輪次
+        Step 5: 移除每輪末尾票房 = 0 的週次
+        Step 6: 過濾活躍週次 < 3 的輪次
+        Step 7: 重新編號輪次為連續的 1, 2, 3...
+
+📂 輸入位置：
+    - data/processed/boxoffice_permovie/*.csv
+    - data/processed/movieInfo_gov/combined/movieInfo_gov_full_<日期>.csv
+
+📂 輸出位置：
+    - data/ML_boxoffice/phase1_flattened/boxoffice_timeseries_<日期>.csv
+
+📊 輸出欄位結構：
+    基本資訊:
+        - gov_id, official_release_date, week_range
+    
+    輪次與週次:
+        - round_idx, rounds_cumsum
+        - current_week_real_idx, current_week_active_idx
+        - gap_real_week_2to1, gap_real_week_1tocurrent
+    
+    近期趨勢（Lag Features）:
+        - boxoffice_week_2, boxoffice_week_1
+        - audience_week_2, audience_week_1
+        - screens_week_2, screens_week_1
+    
+    開片實力（首輪）:
+        - open_week1_days, open_week1_boxoffice
+        - open_week1_boxoffice_daily_avg, open_week2_boxoffice
+    
+    當週資料（目標變數）:
+        - amount, tickets, theater_count
+
+🔗 下游模組：
+    - phase2_features/add_pr_features.py: 加入 PR 特徵
+    - phase2_features/add_cumulative_features.py: 加入累積特徵
+    - phase3_prepare/build_training_data.py: 組合最終訓練資料
+"""
 
 import pandas as pd
 import numpy as np
 from pathlib import Path
-import glob
-from datetime import datetime, timedelta
+from datetime import datetime
+import sys
 
-def process_rounds_and_weeks():
+# 加入共用模組路徑
+sys.path.append(str(Path(__file__).parent.parent.parent))
+from common.file_utils import ensure_dir, save_csv
+
+def flatten_timeseries():
     """
-    步驟1：處理輪次定義、真實週次、活躍週次 + 近期趨勢 + 開片實力
+    主要處理函數：拉平時序資料並完成輪次定義與基礎特徵工程
+    
+    Returns:
+        pd.DataFrame: 處理後的時序資料
     """
     
     print("🚀 開始處理輪次與週次...")
@@ -398,10 +490,12 @@ def process_rounds_and_weeks():
     
     result = result[key_columns].copy()
     
-    # === 儲存 ===
-    output_path = Path('data/model/step1_rounds_weeks_final_v2.csv')
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    result.to_csv(output_path, index=False, encoding='utf-8-sig')
+    # === 儲存與輸出 ===
+    output_path = Path('data/ML_boxoffice/phase1_flattened')
+    ensure_dir(output_path)
+    date_str = datetime.now().strftime('%Y-%m-%d')
+    output_file = output_path / f'boxoffice_timeseries_{date_str}.csv'
+    result.to_csv(output_file, index=False, encoding='utf-8-sig')
     
     # === 統計報告 ===
     print("\n" + "="*70)
@@ -455,4 +549,4 @@ def process_rounds_and_weeks():
     return result
 
 if __name__ == '__main__':
-    df = process_rounds_and_weeks()
+    df = flatten_timeseries()

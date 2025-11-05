@@ -104,8 +104,8 @@ def process_rounds_and_weeks():
     print(f"✅ 過濾完成：剔除 {filtered_count:,} 筆試映場資料")
     print(f"📊 剩餘：{len(df_all):,} 筆")
     
-    # === 4. 【Step 2-7】定義輪次並計算週次 ===
-    print("\n🔄 Step 2-7: 定義輪次並計算週次...")
+    # === 4. 【Step 2-4】定義輪次並過濾 ===
+    print("\n🔄 Step 2-4: 定義輪次並過濾...")
     
     result_list = []
     
@@ -163,11 +163,9 @@ def process_rounds_and_weeks():
         if len(movie_df) == 0:
             continue
         
-        # === Step 4: 計算真實週次（含票房=0的row）===
-        movie_df['current_week_real_idx'] = movie_df.groupby('round_idx').cumcount() + 1
-        
         # === Step 4: 過濾真實週次 < 3 的整輪刪除 ===
-        real_weeks_per_round = movie_df.groupby('round_idx')['current_week_real_idx'].max()
+        movie_df['temp_real_idx'] = movie_df.groupby('round_idx').cumcount() + 1
+        real_weeks_per_round = movie_df.groupby('round_idx')['temp_real_idx'].max()
         valid_rounds = real_weeks_per_round[real_weeks_per_round >= 3].index.tolist()
         
         movie_df = movie_df[movie_df['round_idx'].isin(valid_rounds)].copy()
@@ -175,11 +173,48 @@ def process_rounds_and_weeks():
         if len(movie_df) == 0:
             continue
         
-        # === Step 5: 重新編號輪次（刪除後可能有空號）===
+        # === 【新增】Step 4.5: 移除每輪末尾的0票房週次 ===
+        print(f"  處理電影 {gov_id}：移除末尾0票房週次...")
+        
+        rows_to_keep = []
+        for round_num in movie_df['round_idx'].unique():
+            round_data = movie_df[movie_df['round_idx'] == round_num].copy()
+            
+            # 從最後一筆往前找，移除末尾連續的0票房row
+            last_nonzero_idx = None
+            for i in range(len(round_data) - 1, -1, -1):
+                if round_data.iloc[i]['amount'] > 0:
+                    last_nonzero_idx = i
+                    break
+            
+            # 保留到最後一個有票房的週次
+            if last_nonzero_idx is not None:
+                rows_to_keep.append(round_data.iloc[:last_nonzero_idx + 1])
+        
+        if len(rows_to_keep) == 0:
+            continue
+        
+        movie_df = pd.concat(rows_to_keep, ignore_index=True)
+        
+        if len(movie_df) == 0:
+            continue
+        
+        # === 【新增】Step 4.6: 過濾活躍週次 < 3 的整輪刪除 ===
+        print(f"  處理電影 {gov_id}：過濾活躍週次<3的輪次...")
+        
+        active_weeks_per_round = movie_df[movie_df['amount'] > 0].groupby('round_idx').size()
+        valid_rounds = active_weeks_per_round[active_weeks_per_round >= 3].index.tolist()
+        
+        movie_df = movie_df[movie_df['round_idx'].isin(valid_rounds)].copy()
+        
+        if len(movie_df) == 0:
+            continue
+        
+        # === 【新增】Step 4.7: 重新編號輪次 ===
         round_mapping = {old: new for new, old in enumerate(sorted(movie_df['round_idx'].unique()), 1)}
         movie_df['round_idx'] = movie_df['round_idx'].map(round_mapping)
         
-        # === Step 6: 重新計算真實週次 ===
+        # === Step 5: 計算真實週次 ===
         movie_df['current_week_real_idx'] = movie_df.groupby('round_idx').cumcount() + 1
         
         # === Step 6: 計算活躍週次（僅對票房>0的row編號）===
@@ -206,9 +241,6 @@ def process_rounds_and_weeks():
         movie_df['rounds_cumsum'] = movie_df['round_idx']
         
         # === Step 7: 計算跳週數（基於活躍週次）===
-        # 為了計算跳週數，需要找到活躍週次的原始索引位置
-        
-        # 先為每個有票房的row建立映射
         movie_df['prev1_real_idx'] = np.nan
         movie_df['prev2_real_idx'] = np.nan
         movie_df['gap_real_week_1tocurrent'] = 0
@@ -224,7 +256,6 @@ def process_rounds_and_weeks():
             if len(active_rows) >= 2:
                 # 取得原始索引
                 active_indices_list = active_rows.index.tolist()
-                active_real_idx_list = active_rows['original_real_idx'].tolist()
                 
                 for i, idx in enumerate(active_indices_list):
                     if i >= 1:
@@ -368,7 +399,7 @@ def process_rounds_and_weeks():
     result = result[key_columns].copy()
     
     # === 儲存 ===
-    output_path = Path('data/model/step1_rounds_weeks_final.csv')
+    output_path = Path('data/model/step1_rounds_weeks_final_v2.csv')
     output_path.parent.mkdir(parents=True, exist_ok=True)
     result.to_csv(output_path, index=False, encoding='utf-8-sig')
     
@@ -395,6 +426,18 @@ def process_rounds_and_weeks():
     print(f"   ├─ 有票房的週次：{has_boxoffice:,} ({has_boxoffice/len(result)*100:.1f}%)")
     print(f"   └─ 無票房但保留（輪內中斷）：{no_boxoffice:,} ({no_boxoffice/len(result)*100:.1f}%)")
     
+    # 驗證：每輪最後一週是否都有票房
+    print(f"\n🔍 驗證：檢查每輪最後一週是否都有票房...")
+    last_week_per_round = result.groupby(['gov_id', 'round_idx']).tail(1)
+    last_week_zero = (last_week_per_round['amount'] == 0).sum()
+    print(f"   └─ 最後一週票房=0的輪次：{last_week_zero} 個 {'✅' if last_week_zero == 0 else '❌'}")
+    
+    # 驗證：每輪活躍週次是否都>=3
+    print(f"\n🔍 驗證：檢查每輪活躍週次是否都>=3...")
+    active_weeks_per_round = result[result['amount'] > 0].groupby(['gov_id', 'round_idx']).size()
+    rounds_less_than_3 = (active_weeks_per_round < 3).sum()
+    print(f"   └─ 活躍週次<3的輪次：{rounds_less_than_3} 個 {'✅' if rounds_less_than_3 == 0 else '❌'}")
+    
     # 開片實力統計
     print(f"\n🎬 開片實力統計：")
     open_days = result.groupby('gov_id')['open_week1_days'].first()
@@ -408,30 +451,6 @@ def process_rounds_and_weeks():
     preview_cols = ['gov_id', 'week_range', 'round_idx', 'current_week_real_idx', 
                     'current_week_active_idx', 'amount']
     print(result[preview_cols].head(20).to_string(index=False))
-    
-    # === 驗證：找一部有輪內中斷的電影 ===
-    print("\n" + "="*70)
-    print("🔍 驗證：尋找有輪內中斷（票房=0但保留）的電影")
-    print("="*70)
-    
-    # 找出有0票房但被保留的row
-    zero_but_kept = result[result['amount'] == 0]
-    if len(zero_but_kept) > 0:
-        sample_movie = zero_but_kept['gov_id'].iloc[0]
-        sample_round = zero_but_kept['round_idx'].iloc[0]
-        
-        sample_df = result[
-            (result['gov_id'] == sample_movie) & 
-            (result['round_idx'] == sample_round)
-        ].copy()
-        
-        print(f"\n範例：電影 {sample_movie}，輪次 {sample_round}")
-        display_cols = ['week_range', 'current_week_real_idx', 'current_week_active_idx', 
-                       'amount', 'boxoffice_week_1']
-        print(sample_df[display_cols].to_string(index=False))
-        print("\n✅ 注意：amount=0 的row有真實週次編號，但沒有活躍週次編號")
-    else:
-        print("⚠️ 沒有找到輪內中斷的範例（所有電影都沒有中斷）")
     
     return result
 

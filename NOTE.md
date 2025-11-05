@@ -73,7 +73,14 @@ previous_avg_amount => 計算有誤，阿凡達的上輪平均值報高
       => 修改腳本: boxoffice_integrate.py
   (3) 上週成績(amount/ticket/rate)
       => 修改腳本: 要出報表的時候再併即可
-
+      
+10. 未來再考慮納入的特徵欄位
+ - 首輪佔比: round1_cumsum_ratio = 
+	     boxoffice_round1_total / boxoffice_all_rounds_cumsum
+ - 當輪佔比: current_round_cumsum_ratio = 
+             boxoffice_current_round_cumsum / boxoffice_all_rounds_cumsum
+ - 首週日均PR open_week1_boxoffice_daily_avg_PR
+   => 要分組比較(按年分) 
 
 
 ## ------------------------------------ 放棄處理 ------------------------------------

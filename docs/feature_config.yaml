@@ -1,0 +1,161 @@
+# 電影票房預測 - 特徵配置
+# 此檔案供 AI Agent 和自動化工具讀取
+
+project:
+  name: "Movie Boxoffice Prediction"
+  version: "1.0"
+  target: "target_boxoffice"
+  task_type: "regression"
+
+data:
+  unit:
+    boxoffice: "萬元 (NTD)"
+    audience: "人次"
+    ticket_price: "元/張"
+  
+  time_range:
+    start_year: 2020
+    end_year: 2025
+  
+  sample_size:
+    movies: 500
+    avg_weeks_per_movie: 6
+    total_samples: ~1500-2000
+
+features:
+  groups:
+    basic_info:
+      description: "基本識別資訊"
+      features:
+        - name: "movie_id"
+          type: "string"
+          role: "identifier"
+          use_in_model: false
+        
+        - name: "round_idx"
+          type: "integer"
+          range: [1, 5]
+          role: "feature"
+          description: "當週輪次"
+          encoding: "ordinal"
+        
+        - name: "rounds_cumsum"
+          type: "integer"
+          range: [1, 5]
+          role: "feature"
+          description: "已知累計輪次"
+    
+    time_info:
+      description: "當週時間資訊"
+      features:
+        - name: "current_week_real_idx"
+          type: "integer"
+          range: [1, 52]
+          role: "feature"
+          description: "當輪真實週次"
+        
+        - name: "current_week_active_idx"
+          type: "integer"
+          range: [1, 52]
+          role: "feature"
+          description: "當輪活躍週次"
+        
+        - name: "gap_real_week_2to1"
+          type: "integer"
+          range: [0, 5]
+          role: "feature"
+          description: "week-2到week-1跳週數"
+        
+        - name: "gap_real_week_1tocurrent"
+          type: "integer"
+          range: [0, 5]
+          role: "feature"
+          description: "week-1到當週跳週數"
+    
+    recent_trend:
+      description: "近期趨勢（活躍週）"
+      features:
+        - name: "boxoffice_week_2"
+          type: "float"
+          unit: "元"
+          range: [0, 50000]
+          role: "feature"
+          missing_strategy: "drop"
+        
+        - name: "boxoffice_week_1"
+          type: "float"
+          unit: "元"
+          range: [0, 50000]
+          role: "feature"
+          importance: "high"
+        
+        - name: "boxoffice_week_1_PR"
+          type: "float"
+          range: [0, 100]
+          role: "feature"
+          calculation: "groupby(['release_year', 'round_idx']).rank(pct=True)*100"
+        
+        - name: "audience_week_2"
+          type: "integer"
+          unit: "人次"
+          role: "feature"
+        
+        - name: "audience_week_1"
+          type: "integer"
+          unit: "人次"
+          role: "feature"
+          importance: "high"
+        
+        - name: "audience_week_1_PR"
+          type: "float"
+          range: [0, 100]
+          role: "feature"
+        
+        - name: "screens_week_2"
+          type: "integer"
+          range: [0, 500]
+          role: "feature"
+        
+        - name: "screens_week_1"
+          type: "integer"
+          range: [0, 500]
+          role: "feature"
+        
+        - name: "screens_week_1_PR"
+          type: "float"
+          range: [0, 100]
+          role: "feature"
+    
+    cumulative:
+      description: "累積資訊（截至上週，不含當週）"
+      note: "CRITICAL: 所有累積欄位不包含當週"
+      features:
+        - name: "boxoffice_cumsum"
+          type: "float"
+          unit: "元"
+          range: [0, 100000]
+          role: "feature"
+          description: "跨輪累積票房"
+          importance: "high"
+        
+        - name: "boxoffice_round1_cumsum"
+          type: "float"
+          unit: "元"
+          role: "feature"
+          description: "首輪累積票房"
+        
+        - name: "boxoffice_current_round_cumsum"
+          type: "float"
+          unit: "元"
+          role: "feature"
+          description: "當輪累積票房"
+        
+        - name: "audience_cumsum"
+          type: "integer"
+          unit: "人次"
+          role: "feature"
+        
+        - name: "audience_round1_cumsum"
+          type: "integer"
+          unit: "人次"
+          role: "feature

@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-10-09",
     "publisher": "威視股份有限公司",
-    "amountInThisWeek": 79748301.0,
-    "totalAmount": 79748301.0,
+    "amountInThisWeek": 85597644.0,
+    "totalAmount": 85597644.0,
     "filmClasses": null,
     "filmLength": 6600,
     "bannerStoredName": null,
@@ -93,12 +93,12 @@
       },
       {
         "date": "2025-10-31~2025-11-02",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 50076472.0,
-        "totalTickets": 181164,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 5849343.0,
+        "tickets": 20890,
+        "totalAmount": 55925815.0,
+        "totalTickets": 202054,
+        "rate": -0.573213209637359,
+        "theaterCount": 90
       }
     ],
     "weeks": [
@@ -149,11 +149,11 @@
       },
       {
         "date": "2025-10-27~2025-11-02",
-        "amount": 4660023.0,
-        "tickets": 16978,
-        "totalAmount": 79748301.0,
-        "totalTickets": 290837,
-        "rate": -0.7878861465848791,
+        "amount": 10509366.0,
+        "tickets": 37868,
+        "totalAmount": 85597644.0,
+        "totalTickets": 311727,
+        "rate": -0.521637099385592,
         "theaterCount": 91
       }
     ]

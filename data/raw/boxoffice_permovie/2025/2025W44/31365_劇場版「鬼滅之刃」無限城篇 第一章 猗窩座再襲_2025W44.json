@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-08-06",
     "publisher": "木棉花國際股份有限公司",
-    "amountInThisWeek": 826692109.0,
-    "totalAmount": 826692109.0,
+    "amountInThisWeek": 831588120.0,
+    "totalAmount": 831588120.0,
     "filmClasses": null,
     "filmLength": 9240,
     "bannerStoredName": null,
@@ -125,12 +125,12 @@
       },
       {
         "date": "2025-10-31~2025-11-02",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 518671211.0,
-        "totalTickets": 1626083,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 4896011.0,
+        "tickets": 16149,
+        "totalAmount": 523567222.0,
+        "totalTickets": 1642232,
+        "rate": 0.31954009172076697,
+        "theaterCount": 89
       }
     ],
     "weeks": [
@@ -244,12 +244,12 @@
       },
       {
         "date": "2025-10-27~2025-11-02",
-        "amount": 1602801.0,
-        "tickets": 4933,
-        "totalAmount": 826692109.0,
-        "totalTickets": 2577614,
-        "rate": -0.7350026436892212,
-        "theaterCount": 88
+        "amount": 6498812.0,
+        "tickets": 21082,
+        "totalAmount": 831588120.0,
+        "totalTickets": 2593763,
+        "rate": 0.07447399843197319,
+        "theaterCount": 90
       }
     ]
   },

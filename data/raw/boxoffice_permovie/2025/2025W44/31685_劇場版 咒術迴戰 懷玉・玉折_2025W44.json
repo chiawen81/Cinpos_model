@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-09-05",
     "publisher": "薩摩亞商羚邦(亞洲)有限公司台灣分公司",
-    "amountInThisWeek": 30261330.0,
-    "totalAmount": 30261330.0,
+    "amountInThisWeek": 30296204.0,
+    "totalAmount": 30296204.0,
     "filmClasses": null,
     "filmLength": 6600,
     "bannerStoredName": null,
@@ -89,12 +89,12 @@
       },
       {
         "date": "2025-10-31~2025-11-02",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 21969964.0,
-        "totalTickets": 75025,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 34874.0,
+        "tickets": 116,
+        "totalAmount": 22004838.0,
+        "totalTickets": 75141,
+        "rate": -0.6637224461458353,
+        "theaterCount": 7
       }
     ],
     "weeks": [
@@ -172,11 +172,11 @@
       },
       {
         "date": "2025-10-27~2025-11-02",
-        "amount": 28841.0,
-        "tickets": 98,
-        "totalAmount": 30261330.0,
-        "totalTickets": 104207,
-        "rate": -0.8132011191999793,
+        "amount": 63715.0,
+        "tickets": 214,
+        "totalAmount": 30296204.0,
+        "totalTickets": 104323,
+        "rate": -0.5873273919013446,
         "theaterCount": 8
       }
     ]

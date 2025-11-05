@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-05-17",
     "publisher": "美商美國派拉蒙影片股份有限公司台灣分公司",
-    "amountInThisWeek": 453190315.0,
-    "totalAmount": 453190315.0,
+    "amountInThisWeek": 453199915.0,
+    "totalAmount": 453199915.0,
     "filmClasses": null,
     "filmLength": 10140,
     "bannerStoredName": null,
@@ -270,12 +270,12 @@
       },
       {
         "date": "2025-10-31~2025-11-02",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 302167159.0,
-        "totalTickets": 971022,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 9600.0,
+        "tickets": 128,
+        "totalAmount": 302176759.0,
+        "totalTickets": 971150,
+        "rate": -0.46887966804979253,
+        "theaterCount": 1
       }
     ],
     "weeks": [
@@ -497,11 +497,11 @@
       },
       {
         "date": "2025-10-27~2025-11-02",
-        "amount": 8625.0,
-        "tickets": 115,
-        "totalAmount": 453190315.0,
-        "totalTickets": 1465673,
-        "rate": -0.7386363636363636,
+        "amount": 18225.0,
+        "tickets": 243,
+        "totalAmount": 453199915.0,
+        "totalTickets": 1465801,
+        "rate": -0.44772727272727275,
         "theaterCount": 1
       }
     ]

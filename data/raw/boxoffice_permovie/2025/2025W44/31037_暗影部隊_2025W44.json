@@ -84,12 +84,12 @@
       },
       {
         "date": "2025-10-31~2025-11-02",
-        "amount": null,
-        "tickets": null,
+        "amount": 0.0,
+        "tickets": 0,
         "totalAmount": 744237.0,
         "totalTickets": 3046,
         "rate": -1,
-        "theaterCount": 0
+        "theaterCount": 1
       }
     ],
     "weeks": [

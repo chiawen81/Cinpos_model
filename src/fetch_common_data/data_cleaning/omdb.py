@@ -25,7 +25,7 @@ from datetime import datetime
 # 共用模組
 from common.path_utils import (
     OMDB_RAW,
-    MOVIEINFO_OMDB_PROCESSED,
+    RATING_OMDB_PROCESSED,
     RATING_OMDB_PROCESSED,
 )
 from common.file_utils import ensure_dir, load_json, save_csv, clean_filename
@@ -38,7 +38,7 @@ YEAR_LABEL = get_year_label()
 WEEK_LABEL = get_week_label()
 
 RAW_DIR = os.path.join(OMDB_RAW, YEAR_LABEL, WEEK_LABEL)
-MOVIEINFO_DIR = MOVIEINFO_OMDB_PROCESSED
+MOVIEINFO_DIR = RATING_OMDB_PROCESSED
 MOVIEINFO_COMBINED_DIR = os.path.join(MOVIEINFO_DIR, "combined")
 RATING_DIR = RATING_OMDB_PROCESSED
 

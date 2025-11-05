@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-09-26",
     "publisher": "台灣華特迪士尼股份有限公司",
-    "amountInThisWeek": 2959413.0,
-    "totalAmount": 2959413.0,
+    "amountInThisWeek": 2977490.0,
+    "totalAmount": 2977490.0,
     "filmClasses": null,
     "filmLength": 6300,
     "bannerStoredName": null,
@@ -105,12 +105,12 @@
       },
       {
         "date": "2025-10-31~2025-11-02",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 1667996.0,
-        "totalTickets": 6112,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 18077.0,
+        "tickets": 65,
+        "totalAmount": 1686073.0,
+        "totalTickets": 6177,
+        "rate": -0.6207728455148108,
+        "theaterCount": 6
       }
     ],
     "weeks": [
@@ -161,11 +161,11 @@
       },
       {
         "date": "2025-10-27~2025-11-02",
-        "amount": 15329.0,
-        "tickets": 59,
-        "totalAmount": 2959413.0,
-        "totalTickets": 10982,
-        "rate": -0.7952857905982906,
+        "amount": 33406.0,
+        "tickets": 124,
+        "totalAmount": 2977490.0,
+        "totalTickets": 11047,
+        "rate": -0.5538728632478632,
         "theaterCount": 6
       }
     ]

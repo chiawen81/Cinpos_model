@@ -33,12 +33,14 @@ PROJECT_ROOT = find_project_root()
 DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 RAW_DIR = os.path.join(DATA_DIR, "raw")
 PROCESSED_DIR = os.path.join(DATA_DIR, "processed")
-MASTER_DIR = os.path.join(DATA_DIR, "master")
 MANUAL_FIX_DIR = os.path.join(DATA_DIR, "manual_fix")
+ML_RECOMMEND_CUS_DATA_DIR = os.path.join(DATA_DIR, "ML_recommend")
+ML_BOXOFFICE_CUS_DATA_DIR = os.path.join(DATA_DIR, "ML_boxoffice")
 
 # -----------------------------
 # 3. 各資料分類子資料夾
 # -----------------------------
+# ----------------- 共用 -----------------
 # 票房資料（週次）
 BOXOFFICE_RAW = os.path.join(RAW_DIR, "boxoffice_weekly")
 BOXOFFICE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_weekly")
@@ -53,16 +55,20 @@ MOVIEINFO_GOV_COMBINED_PROCESSED = os.path.join(MOVIEINFO_GOV_PROCESSED, "combin
 
 # OMDb　電影資訊
 OMDB_RAW = os.path.join(RAW_DIR, "omdb")
-MOVIEINFO_OMDB_PROCESSED = os.path.join(PROCESSED_DIR, "movieInfo_omdb")
-MOVIEINFO_OMDB_COMBINED_PROCESSED = os.path.join(MOVIEINFO_OMDB_PROCESSED, "combined")
-
-# OMDb　評分資料
 RATING_OMDB_PROCESSED = os.path.join(PROCESSED_DIR, "rating_omdb")
+
+# ----------------- ML_recommend 專屬OUTPUT -----------------
+MASTER_DIR = os.path.join(ML_BOXOFFICE_CUS_DATA_DIR, "master")
 
 # 資料彙總- 資料庫主檔、模型訓練資料主檔
 MASTER_FULL = os.path.join(MASTER_DIR, "full")  # 初步合併
 MASTER_DB_READY = os.path.join(MASTER_DIR, "db_ready")  # API資料庫資料
 MASTER_TRAIN_READY = os.path.join(MASTER_DIR, "train_ready")  # 訓練資料
+
+
+# ----------------- ML_boxoffice 專屬OUTPUT-----------------
+
+
 
 
 # -----------------------------
@@ -75,4 +81,3 @@ if __name__ == "__main__":
     print("🎬 BOXOFFICE_PERMOVIE_RAW:", BOXOFFICE_PERMOVIE_RAW)
     print("🏛️ GOV_PROCESSED:", MOVIEINFO_GOV_PROCESSED)
     print("🌐 OMDB_PROCESSED:", MOVIEINFO_OMDB_PROCESSED)
-    print("🧩 MOVIE_MASTER_PROCESSED:", MOVIE_MASTER_PROCESSED)

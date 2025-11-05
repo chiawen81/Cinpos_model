@@ -8,8 +8,8 @@
     "classes": null,
     "releaseDate": "2025-06-25",
     "publisher": "普威爾國際股份有限公司",
-    "amountInThisWeek": 214891969.0,
-    "totalAmount": 214891969.0,
+    "amountInThisWeek": 214892829.0,
+    "totalAmount": 214892829.0,
     "filmClasses": null,
     "filmLength": 6540,
     "bannerStoredName": null,
@@ -179,12 +179,12 @@
       },
       {
         "date": "2025-10-31~2025-11-02",
-        "amount": null,
-        "tickets": null,
-        "totalAmount": 121855305.0,
-        "totalTickets": 440263,
-        "rate": -1,
-        "theaterCount": 0
+        "amount": 860.0,
+        "tickets": 4,
+        "totalAmount": 121856165.0,
+        "totalTickets": 440267,
+        "rate": -0.7440476190476191,
+        "theaterCount": 1
       }
     ],
     "weeks": [
@@ -352,11 +352,11 @@
       },
       {
         "date": "2025-10-27~2025-11-02",
-        "amount": 960.0,
-        "tickets": 3,
-        "totalAmount": 214891969.0,
-        "totalTickets": 781441,
-        "rate": -0.9885054718743265,
+        "amount": 1820.0,
+        "tickets": 7,
+        "totalAmount": 214892829.0,
+        "totalTickets": 781445,
+        "rate": -0.9782082904284106,
         "theaterCount": 1
       }
     ]

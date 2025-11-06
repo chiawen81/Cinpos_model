@@ -37,9 +37,9 @@ def parse_movie_info(movie_data: dict) -> dict:
     film_length = movie_data.get("filmLength", "")
     try:
         # 若為有效數值，四捨五入取整數分鐘
-        film_length_min = round(float(film_length) / 60)
+        film_length = round(float(film_length) / 60)
     except (ValueError, TypeError):
-        film_length_min = ""
+        film_length = ""
 
     return {
         "gov_id": movie_data.get("movieId", ""),
@@ -49,7 +49,7 @@ def parse_movie_info(movie_data: dict) -> dict:
         "rating": movie_data.get("rating", ""),
         "official_release_date": movie_data.get("releaseDate", ""),
         "publisher": movie_data.get("publisher", ""),
-        "film_length_min": film_length_min,  # 原資料單位為「秒」，現改為「分鐘」
+        "film_length": film_length,  # 原資料單位為「秒」，現改為「分鐘」
         "director": "; ".join(directors),
         "actor_list": "; ".join(actors),
     }

@@ -62,9 +62,10 @@
 **輸入**: `phase1_flattened/boxoffice_timeseries_*.csv`
 
 **輸出**:
-- `data/ML_boxoffice/phase2_features/with_pr/features_pr_*.csv`
-- `data/ML_boxoffice/phase2_features/with_cumulative/features_cumulative_*.csv`
-- `data/ML_boxoffice/phase2_features/full/features_full_*.csv`
+- `data/ML_boxoffice/phase2_features/with_pr/features_pr_*.csv` ← 原有欄位 + PR特徵
+- `data/ML_boxoffice/phase2_features/with_cumulative/features_cumulative_*.csv` ← 原有欄位 + 累積特徵
+- `data/ML_boxoffice/phase2_features/with_market/features_market_*.csv` ← 原有欄位 + 市場特徵
+- `data/ML_boxoffice/phase2_features/full/features_full_*.csv` ← 整合所有特徵
 
 **特徵類型**:
 - **PR特徵**: Percentile Rank（按年份×輪次分組）

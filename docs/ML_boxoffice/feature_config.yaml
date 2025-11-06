@@ -89,14 +89,14 @@ features:
       features:
         - name: "boxoffice_week_2"
           type: "float"
-          unit: "萬元"
+          unit: "元"
           range: [0, 50000]
           role: "feature"
           source: "前兩個活躍週"
 
         - name: "boxoffice_week_1"
           type: "float"
-          unit: "萬元"
+          unit: "元"
           range: [0, 50000]
           role: "feature"
           importance: "high"
@@ -145,7 +145,7 @@ features:
       features:
         - name: "boxoffice_cumsum"
           type: "float"
-          unit: "萬元"
+          unit: "元"
           range: [0, 100000]
           role: "feature"
           importance: "high"
@@ -153,13 +153,13 @@ features:
 
         - name: "boxoffice_round1_cumsum"
           type: "float"
-          unit: "萬元"
+          unit: "元"
           role: "feature"
           description: "首輪累積票房"
 
         - name: "boxoffice_current_round_cumsum"
           type: "float"
-          unit: "萬元"
+          unit: "元"
           role: "feature"
           description: "當輪累積票房"
 
@@ -190,13 +190,13 @@ features:
 
         - name: "open_week1_boxoffice"
           type: "float"
-          unit: "萬元"
+          unit: "元"
           role: "feature"
           description: "首輪首週票房"
 
         - name: "open_week1_boxoffice_daily_avg"
           type: "float"
-          unit: "萬元/天"
+          unit: "元/天"
           role: "feature"
           description: "首週日均票房"
 
@@ -208,7 +208,7 @@ features:
 
         - name: "open_week2_boxoffice"
           type: "float"
-          unit: "萬元"
+          unit: "元"
           role: "feature"
           description: "首輪第二週票房"
 
@@ -259,7 +259,7 @@ features:
 target:
   name: "target_boxoffice"
   type: "float"
-  unit: "萬元"
+  unit: "元"
   description: "當週票房（預測目標）"
   range: [0, 10000]
   train_phase: "known"

@@ -75,6 +75,7 @@ PHASE2_WITH_MARKET_DIR = os.path.join(PHASE2_FEATURES_DIR, "with_market")
 PHASE2_WITH_CUMSUM_DIR = os.path.join(PHASE2_FEATURES_DIR, "with_cumsum")
 PHASE2_WITH_PR_DIR = os.path.join(PHASE2_FEATURES_DIR, "with_pr")
 PHASE2_FULL_DIR = os.path.join(PHASE2_FEATURES_DIR, "full")
+PHASE2_FILTER_DIR = os.path.join(PHASE2_FEATURES_DIR, "filter")
 
 
 # -----------------------------
@@ -86,4 +87,4 @@ if __name__ == "__main__":
     print("🎬 BOXOFFICE_RAW:", BOXOFFICE_RAW)
     print("🎬 BOXOFFICE_PERMOVIE_RAW:", BOXOFFICE_PERMOVIE_RAW)
     print("🏛️ GOV_PROCESSED:", MOVIEINFO_GOV_PROCESSED)
-    print("🌐 OMDB_PROCESSED:", MOVIEINFO_OMDB_PROCESSED)
+    print("🌐 RATING_OMDB_PROCESSED:", RATING_OMDB_PROCESSED)

@@ -58,7 +58,7 @@ OMDB_RAW = os.path.join(RAW_DIR, "omdb")
 RATING_OMDB_PROCESSED = os.path.join(PROCESSED_DIR, "rating_omdb")
 
 # ----------------- ML_recommend 專屬OUTPUT -----------------
-MASTER_DIR = os.path.join(ML_BOXOFFICE_CUS_DATA_DIR, "master")
+MASTER_DIR = os.path.join(ML_RECOMMEND_CUS_DATA_DIR, "master")
 
 # 資料彙總- 資料庫主檔、模型訓練資料主檔
 MASTER_FULL = os.path.join(MASTER_DIR, "full")  # 初步合併
@@ -67,8 +67,14 @@ MASTER_TRAIN_READY = os.path.join(MASTER_DIR, "train_ready")  # 訓練資料
 
 
 # ----------------- ML_boxoffice 專屬OUTPUT-----------------
+PHASE1_FLATTENED_DIR = os.path.join(ML_BOXOFFICE_CUS_DATA_DIR, "phase1_flattened")
+PHASE2_FEATURES_DIR = os.path.join(ML_BOXOFFICE_CUS_DATA_DIR, "phase2_features")
 
-
+# Phase2 特徵子目錄
+PHASE2_WITH_MARKET_DIR = os.path.join(PHASE2_FEATURES_DIR, "with_market")
+PHASE2_WITH_CUMSUM_DIR = os.path.join(PHASE2_FEATURES_DIR, "with_cumsum")
+PHASE2_WITH_PR_DIR = os.path.join(PHASE2_FEATURES_DIR, "with_pr")
+PHASE2_FULL_DIR = os.path.join(PHASE2_FEATURES_DIR, "full")
 
 
 # -----------------------------

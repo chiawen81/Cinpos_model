@@ -36,14 +36,17 @@
 
 import pandas as pd
 from pathlib import Path
-import sys
 from datetime import date
 import argparse
 import re
 
-# 加入共用模組路徑
-sys.path.append(str(Path(__file__).parent.parent.parent))
 from common.file_utils import ensure_dir, save_csv
+from common.path_utils import (
+    PROJECT_ROOT,
+    PHASE1_FLATTENED_DIR,
+    MOVIEINFO_GOV_COMBINED_PROCESSED,
+    PHASE2_WITH_MARKET_DIR
+)
 
 
 def find_latest_file(directory, pattern):
@@ -282,17 +285,14 @@ def main(input_file=None, movie_info_file=None):
 
     Args:
         input_file: 票房時序資料檔案路徑 (Path 物件或 None)
-                   如果為 None，自動從 data/ML_boxoffice/phase1_flattened 找最新檔案
+                   如果為 None，自動從 PHASE1_FLATTENED_DIR 找最新檔案
         movie_info_file: 電影資訊檔案路徑 (Path 物件或 None)
-                        如果為 None，自動從 data/processed/movieInfo_gov/combined 找最新檔案
+                        如果為 None，自動從 MOVIEINFO_GOV_COMBINED_PROCESSED 找最新檔案
     """
-    # 定義路徑
-    project_root = Path(__file__).parent.parent.parent.parent
-
     # 如果沒有指定 input_file，自動找最新檔案
     if input_file is None:
         print("\n未指定 input_file，自動尋找最新的票房時序資料...")
-        input_dir = project_root / "data/ML_boxoffice/phase1_flattened"
+        input_dir = Path(PHASE1_FLATTENED_DIR)
         input_file = find_latest_file(input_dir, "boxoffice_timeseries_*.csv")
         if input_file is None:
             return
@@ -300,14 +300,14 @@ def main(input_file=None, movie_info_file=None):
     # 如果沒有指定 movie_info_file，自動找最新檔案
     if movie_info_file is None:
         print("\n未指定 movie_info_file，自動尋找最新的電影資訊...")
-        movie_info_dir = project_root / "data/processed/movieInfo_gov/combined"
+        movie_info_dir = Path(MOVIEINFO_GOV_COMBINED_PROCESSED)
         movie_info_file = find_latest_file(movie_info_dir, "movieInfo_gov_full_*.csv")
         if movie_info_file is None:
             return
 
     # 輸出檔案（使用當下日期）
     date_str = date.today().strftime("%Y-%m-%d")
-    output_file = project_root / f"data/ML_boxoffice/phase2_features/with_market/features_market_{date_str}.csv"
+    output_file = Path(PHASE2_WITH_MARKET_DIR) / f"features_market_{date_str}.csv"
 
     # 檢查輸入檔案是否存在
     if not input_file.exists():
@@ -361,16 +361,14 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    # 處理檔案路徑
-    project_root = Path(__file__).parent.parent.parent.parent
-
+    # 處理檔案路徑（使用共用的 PROJECT_ROOT）
     input_file = None
     if args.input:
-        input_file = project_root / args.input
+        input_file = Path(PROJECT_ROOT) / args.input
 
     movie_info_file = None
     if args.movie_info:
-        movie_info_file = project_root / args.movie_info
+        movie_info_file = Path(PROJECT_ROOT) / args.movie_info
 
     # 執行
     main(input_file=input_file, movie_info_file=movie_info_file)

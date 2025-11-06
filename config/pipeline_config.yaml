@@ -24,6 +24,10 @@ add_cumsum_features:
 # ------------------------------------------------------------
 # 市場特徵 (add_market_features.py)
 # ------------------------------------------------------------
+############# 待修復 ############# 
+# input file、output file皆須指定
+# 請先打指令  uv run src/ML_boxoffice/phase2_features/add_cumsum_features.py ^ data\ML_boxoffice\phase1_flattened\boxoffice_timeseries_2025-11-06.csv ^ data\ML_boxoffice\phase2_features\with_cumsum\features_cumsum_2025-11-07.csv
+################################## 
 add_market_features:
   enabled: false
   # 欲新增<市場特徵欄位>的 csv

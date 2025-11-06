@@ -140,6 +140,9 @@ $env:ANTHROPIC_API_KEY
 # 1. 檢查當前模式
   - 方法一：在終端機輸入 `docs\set_claude_use_mode\check-mode.bat`
   - 方法二：啟用claude後，輸入 `echo $ANTHROPIC_API_KEY` 查看環境變數是否存在(存在則為API Key模式，不存在則為訂閱身分模式)
+  - 方法三：啟用claude後，歡迎訊息會寫
+    - 使用訂閱方案者會顯示：Sonnet 4.5 · Claude Pro   
+    - 使用API額度者會顯示: API Billing
 # 2. 切換模式（如果需要）
   - 方法一：在終端機輸入 `docs\set_claude_use_mode\use-api.bat` 或 `docs\set_claude_use_mode\use-subscription.bat`
   - 方法二：

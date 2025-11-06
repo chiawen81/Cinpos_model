@@ -99,12 +99,20 @@ def calculate_cumsum_features(df):
         for idx in movie_indices:
             current_round = result_df.loc[idx, 'round_idx']
             current_week = result_df.loc[idx, 'current_week_active_idx']
-            
+            current_order = result_df.loc[idx, '_original_order']
+
             # 取得當前電影、當前輪次、當前週次之前的所有資料
-            previous_data = movie_group[
-                ((movie_group['round_idx'] == current_round) & 
-                 (movie_group['current_week_active_idx'] < current_week))
-            ]
+            # 如果 current_week 是 NaN（amount=0 的情況），使用原始順序來判斷「之前」
+            if pd.isna(current_week):
+                previous_data = movie_group[
+                    (movie_group['round_idx'] == current_round) &
+                    (movie_group['_original_order'] < current_order)
+                ]
+            else:
+                previous_data = movie_group[
+                    (movie_group['round_idx'] == current_round) &
+                    (movie_group['current_week_active_idx'] < current_week)
+                ]
             
             # === 計算當輪累積（截至上週） ===
             current_round_boxoffice_cumsum = previous_data['amount'].sum()

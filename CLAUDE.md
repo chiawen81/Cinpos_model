@@ -177,6 +177,47 @@ echo $ANTHROPIC_API_KEY
 
 ---
 
+## 📋 文件維護規則
+
+### 欄位定義文件（同步更新）
+當修改特徵欄位時，必須同時更新以下兩個文件：
+
+1. **docs/ML_boxoffice/data_dictionary.md**
+   - 人類可讀的欄位說明
+   - 包含範例、計算邏輯
+
+2. **docs/ML_boxoffice/feature_config.yaml**
+   - 機器可讀的欄位定義
+   - 供 AI Agent 和自動化工具讀取
+
+**更新流程**:
+```bash
+# 1. 先更新 data_dictionary.md（人工編輯）
+# 2. 再更新 feature_config.yaml（保持一致）
+# 3. 驗證兩者欄位列表相同
+```
+
+### Pipeline 文件
+- **docs/ML_boxoffice/pipeline.md**: Pipeline 流程、建模策略
+- **docs/ML_boxoffice/data_processing_rules.md**: 資料處理規則
+
+### 避免重複文件
+- ❌ 不要在 `src/` 下放 Pipeline 說明文件
+- ✅ 所有文檔統一放在 `docs/` 下
+
+---
+
+## 📦 最終文件結構
+```
+docs/
+└── ML_boxoffice/
+    ├── pipeline.md              # Pipeline 流程 + 建模策略（整合版）
+    ├── data_dictionary.md       # 欄位定義（人類可讀）
+    ├── feature_config.yaml      # 欄位定義（機器可讀）
+    └── data_processing_rules.md # 資料處理規則
+    
+---
+
 ## 常見問題
 
 ### Q: 為什麼切換後 Claude Code 還是使用舊的身分？

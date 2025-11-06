@@ -13,43 +13,49 @@
 Cinpos_model/
 │
 ├── .venv/                      # 虛擬環境 (由 uv 自動管理)
-│
-├── data/
-│   ├── raw/                    # 原始爬下來的資料 (JSON/CSV)
-│   └── processed/              # 清理後、可用於模型訓練或展示的資料
-│
-├── src/
-│   ├── movie_recommendation/   # 🎯 推薦模型模組
-│   │   ├── __init__.py
-│   │   ├── crawler/
-│   │   │   ├── imdb_crawler.py     # IMDb 資料爬取
-│   │   │   ├── tw_boxoffice.py     # 台灣票房資料
-│   │   │   └── now_showing.py      # 目前上映清單
-│   │   ├── compute_score.py        # 計算推薦分數
-│   │   ├── data_cleaning.py        # 整理與標準化資料
-│   │   └── utils.py                # 共用函式
-│   │
-│   ├── trend/                  # 💬 話題風向模組
-│   │   ├── __init__.py
-│   │   ├── crawler/
-│   │   │   ├── ptt_crawler.py      # PTT 熱門關鍵字
-│   │   │   ├── dcard_crawler.py    # Dcard 熱門討論
-│   │   │   └── bahamut_crawler.py  # 巴哈姆特熱度追蹤
-│   │   ├── keyword_extract.py      # 關鍵詞抽取
-│   │   ├── topic_summary.py        # 熱門話題摘要
-│   │   └── utils.py
-│   │
-│   ├── __init__.py
-│   └── main.py                 # 專案執行入口（整合推薦＋話題模組）
-│
-├── config/
-│   └── settings.yaml           # 統一設定檔 (API key、爬蟲 URL、權重參數等)
-│
-├── logs/                       # 紀錄爬蟲或模型運行日誌
-│
-├── pyproject.toml              # uv 專案設定檔（取代 requirements.txt）
-├── .gitignore                  # 忽略不需追蹤的檔案
-└── README.md                   # 專案說明文件（本檔）
+├── .gitignore                  # Git 忽略規則
+├── CLAUDE.md                   # CLAUDE AI Agent 使用設定
+├── NOTE.md                     # 開發備註
+├── pyproject.toml              # uv 專案設定（依賴與腳本）
+├── uv.lock                     # 鎖定依賴版本
+├── .vscode/                    # VSCode 專案設定
+│   └── config/
+│       └── settings.yaml       # 編輯器設定（格式化、lint 等）
+├── config/                     # 專案設定檔（API keys、權重等）
+├── data/                       # 原始與處理後資料存放區
+│   ├── manual_fix/             # 人工修正與映射檔
+│   ├── ML_boxoffice/           # ML 用票房資料集
+│   ├── ML_recommend/           # ML 用推薦資料集
+│   ├── processed/              # 清理後可直接使用的資料
+│   └── raw/                    # 原始爬蟲輸出（JSON/CSV）
+├── docs/                       # 專案文件與說
+│    ├─── ML_boxoffice/
+│    │    ├── pipeline.md         Pipeline 流程 + 建模策略（整合版）
+│    │    ├── data_dictionary.md # 欄位定義（人類可讀）
+│    │    ├── feature_config.yaml# 欄位定義（機器可讀）
+│    │    └── data_processing_rules.md # 資料處理規則
+│    └─── set_claude_use_mode/    # 切換 Claude Code 使用模式
+├── logs/                       # 運行與爬蟲日誌
+└── src/                        # 程式碼主目錄
+    ├── __init__.py
+    ├── main.py                 # 執行入口（整合推薦 + 話題模組）
+    ├── cinpos_model.egg-info/  # 打包/建置相關資訊
+    ├── common/                 # 共用工具函式
+    │   ├── file_utils.py       # 檔案操作輔助
+    │   ├── path_utils.py       # 路徑與專案根處理
+    │   └── date_utils.py       # 日期時間相關工具
+    ├── fetch_common_data/      # 爬蟲與資料清理流程
+    │   ├── crawler/            # 爬蟲腳本
+    │   │   └── __departure__/  # 舊版爬蟲（保留參考）
+    │   └── data_cleaning/      # 資料清理 / 合併腳本
+    │       ├── __departure__/  # 舊版清理程式
+    │       ├── boxoffice_permovie.py   # 單片票房清理
+    │       ├── boxoffice_weekly.py     # 週票房清理
+    │       ├── omdb.py                 # OMDB/IMDb 資料整理
+    │       └── movieInfo_gov_merge.py  # 與政府資料合併
+    ├── ML_boxoffice/           # 票房預測模型與訓練程式
+    ├── ML_recommend/           # 推薦模型、評分與評估工具
+    └── ML_trend/               # 熱度 / 話題分析相關模型
 ```
 
 <br>
@@ -100,7 +106,7 @@ uv run python src/main.py
 | 階段 | 主功能 | 目標與內容 |
 |------|------|------|
 | Lv1 | 推薦分數模型 | 讓使用者得以評估「是否值得消費進場觀看電影」。<br>ps. 以自動化爬蟲抓取 IMDb + 台灣票房資料等資料 |
-| Lv2 | 儀表板展示 | 數據視覺化顯示「票房排行」、「推薦電影」 |
+| Lv2 | 儀表板展示 | 數據視覺化顯示「票房排行」、「推薦電影」、「票房走勢預測」 |
 | Lv3 | 社群熱度分析 | 讓使用者知道最近在夯什麼電影話題。<br>ps. 整合 PTT / Dcard / 巴哈姆特 |
 
 <br>

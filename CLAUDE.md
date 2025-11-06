@@ -42,6 +42,22 @@ deactivate
 
 ---
 
+## Pipeline 系統修改指南
+
+### 目的
+確保當 Pipeline 系統 有新增或修改腳本時，所有相關檔案都能保持同步和一致性
+
+### 原則
+修改 Pipeline 系統時，記住三個核心原則：
+   1. **同步性**：`pipeline_config.yaml`、`run_pipeline.py`、目標腳本三者參數介面必須一致
+   2. **測試性**：務必使用 dry-run 模式測試命令生成
+   3. **靈活性**：參數設為選填，提供合理的預設行為
+
+### 參考文件
+docs\shared\pipeline_modification_guide.md
+
+---
+
 ## 安全提醒
 
 ⚠️ **API Key 安全**
@@ -85,11 +101,14 @@ deactivate
 
 ```
 docs/
-└── ML_boxoffice/
-    ├── pipeline.md              # Pipeline 流程 + 建模策略
-    ├── data_dictionary.md       # 欄位定義（人類可讀）
-    ├── feature_config.yaml      # 欄位定義（機器可讀）
-    └── data_processing_rules.md # 資料處理規則
+├── ML_boxoffice/
+│   ├── pipeline.md              # Pipeline 流程 + 建模策略
+│   ├── data_dictionary.md       # 欄位定義（人類可讀）
+│   ├── data_processing_rules.md # 資料處理規則
+│   └── feature_config.yaml      # 欄位定義（機器可讀）
+├── shared/ (共用文件) 
+    ├── docs\shared\pipeline_config_usage.md   # Pipeline 配置系統使用說明
+    └── docs\shared\pipeline_modification_guide.md # Pipeline 系統的修改檢查清單
 ```
 
 ---

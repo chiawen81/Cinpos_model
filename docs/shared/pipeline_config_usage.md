@@ -62,16 +62,21 @@ script_name:
 ```yaml
 add_cumsum_features:
   enabled: true
-  input_file: "data/ML_boxoffice/phase1_flattened/boxoffice_timeseries_2025-11-06.csv"
-  output_file: "data/ML_boxoffice/phase2_features/with_cumsum/features_cumsum_2025-11-06.csv"
+  input_file: ""   # 留空會自動使用最新檔案
+  output_file: ""  # 留空會自動輸出到 with_cumsum 目錄
   description: "生成累積特徵（截至上週）"
 ```
 
 **參數說明:**
 - `enabled`: 是否執行此腳本
-- `input_file`: 輸入 CSV 檔案路徑
-- `output_file`: 輸出 CSV 檔案路徑
+- `input_file`: 輸入 CSV 檔案路徑（**留空則自動從 `data/ML_boxoffice/phase1_flattened` 找日期最新的檔案**）
+- `output_file`: 輸出 CSV 檔案路徑（**留空則自動輸出到 `data/ML_boxoffice/phase2_features/with_cumsum`**）
 - `description`: 腳本說明（可選）
+
+**自動檔案功能（NEW！）:**
+- ✅ 不指定 `input_file`：自動使用 `phase1_flattened` 中最新的時間戳記檔案
+- ✅ 不指定 `output_file`：自動輸出到 `with_cumsum` 目錄，檔名格式為 `features_cumsum_YYYY-MM-DD.csv`
+- ✅ 支援直接執行：`uv run src/ML_boxoffice/phase2_features/add_cumsum_features.py`（無需參數）
 
 #### 2. 資料過濾 (filter_data)
 

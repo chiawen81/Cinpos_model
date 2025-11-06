@@ -65,8 +65,16 @@ class PipelineRunner:
 
         # 顯示配置
         print(f"\n配置:")
-        print(f"  - 輸入檔案: {config.get('input_file')}")
-        print(f"  - 輸出檔案: {config.get('output_file')}")
+        if config.get("input_file"):
+            print(f"  - 輸入檔案: {config.get('input_file')}")
+        else:
+            print(f"  - 輸入檔案: (自動使用最新檔案)")
+
+        if config.get("output_file"):
+            print(f"  - 輸出檔案: {config.get('output_file')}")
+        else:
+            print(f"  - 輸出檔案: (自動生成)")
+
         print(f"  - 說明: {config.get('description', '無')}")
 
         # 構建命令
@@ -74,9 +82,61 @@ class PipelineRunner:
             "uv",
             "run",
             "src/ML_boxoffice/phase2_features/add_cumsum_features.py",
-            config["input_file"],
-            config["output_file"],
         ]
+
+        # 只有在有值時才加入參數
+        if config.get("input_file"):
+            cmd.append(config["input_file"])
+            if config.get("output_file"):
+                cmd.append(config["output_file"])
+
+        self._execute_command(cmd)
+
+    def run_add_market_features(self, config):
+        """執行市場特徵生成腳本"""
+        print("\n" + "-" * 70)
+        print("[n/n] 執行市場特徵生成腳本")
+        print("-" * 70)
+
+        if not config.get("enabled", False):
+            print("  [SKIP] 此腳本已停用（enabled: false）")
+            return
+
+        # 顯示配置
+        print(f"\n配置:")
+        if config.get("input_file"):
+            print(f"  - 輸入檔案: {config.get('input_file')}")
+        else:
+            print(f"  - 輸入檔案: (自動使用最新檔案)")
+
+        if config.get("movie_info_file"):
+            print(f"  - 電影資訊檔案: {config.get('movie_info_file')}")
+        else:
+            print(f"  - 電影資訊檔案: (自動使用最新檔案)")
+
+        if config.get("output_file"):
+            print(f"  - 輸出檔案: {config.get('output_file')}")
+        else:
+            print(f"  - 輸出檔案: (自動生成)")
+
+        print(f"  - 說明: {config.get('description', '無')}")
+
+        # 構建命令
+        cmd = [
+            "uv",
+            "run",
+            "src/ML_boxoffice/phase2_features/add_market_features.py",
+        ]
+
+        # 添加可選參數
+        if config.get("input_file"):
+            cmd.extend(["--input", config["input_file"]])
+
+        if config.get("movie_info_file"):
+            cmd.extend(["--movie-info", config["movie_info_file"]])
+
+        if config.get("output_file"):
+            cmd.extend(["--output", config["output_file"]])
 
         self._execute_command(cmd)
 
@@ -176,6 +236,8 @@ class PipelineRunner:
         enabled_scripts = []
         if self.config.get("add_cumsum_features", {}).get("enabled"):
             enabled_scripts.append("add_cumsum_features")
+        if self.config.get("add_market_features", {}).get("enabled"):
+            enabled_scripts.append("add_market_features")
         if self.config.get("filter_data", {}).get("enabled"):
             enabled_scripts.append("filter_data")
 
@@ -191,6 +253,9 @@ class PipelineRunner:
         # 執行各個腳本
         if "add_cumsum_features" in enabled_scripts:
             self.run_add_cumsum_features(self.config["add_cumsum_features"])
+
+        if "add_market_features" in enabled_scripts:
+            self.run_add_market_features(self.config["add_market_features"])
 
         if "filter_data" in enabled_scripts:
             self.run_filter_data(self.config["filter_data"])

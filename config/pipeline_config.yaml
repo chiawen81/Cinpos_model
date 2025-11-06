@@ -3,26 +3,46 @@
 # ============================================================
 # 用途：統一管理所有腳本的參數，避免打長長的命令列
 # 使用方式：
-#   1. 在下方填寫要執行的腳本及其參數
-#   2. 執行：uv run scripts/run_pipeline.py config/pipeline_config.yaml
+#   1. 在下方找到要執行的腳本，把enabled 改為 true
+#   2. 填寫該腳本的參數
+#   3. 執行：uv run scripts/run_pipeline.py config/pipeline_config.yaml      <<<<< 關鍵指令!!! >>>>>
 # ============================================================
 
 # ------------------------------------------------------------
-# 累積特徵生成腳本 (add_cumsum_features.py)
+# 累積特徵 (add_cumsum_features.py)
 # ------------------------------------------------------------
 add_cumsum_features:
-  enabled: true  # 是否執行此腳本
+  enabled: true
   # 欲新增<累計特徵欄位>的 csv
-  input_file: "data/ML_boxoffice/phase1_flattened/boxoffice_timeseries_2025-11-06.csv"
+  input_file: ""   # 留空會自動從 data/ML_boxoffice/phase1_flattened 找日期最新的檔案
   # 輸出位置
-  output_file: ""                              # 留空則自動生成帶時間戳記的檔名
-  description: "生成累積特徵（截至上週）"
+  output_file: ""  # 留空會自動輸出到 data/ML_boxoffice/phase2_features/with_cumsum
+  description: "生成累積特徵（截至上週）- 會自動找最新的 phase1 檔案並輸出到 with_cumsum"
+
+
 
 # ------------------------------------------------------------
-# 資料過濾腳本 (filter_data.py)
+# 市場特徵 (add_market_features.py)
+# ------------------------------------------------------------
+add_market_features:
+  enabled: false
+  # 欲新增<市場特徵欄位>的 csv
+  input_file: ""        # 留空會自動從 data/ML_boxoffice/phase1_flattened 找日期最新的檔案
+  # input_file: "data/ML_boxoffice/phase2_features/with_cumsum/features_cumsum_2025-11-06.csv"
+
+  # 電影資訊檔案
+  movie_info_file: ""   # 留空會自動從 data/processed/movieInfo_gov/combined 找日期最新的檔案
+  # 輸出位置
+  output_file: ""       # 留空會自動輸出到 data/ML_boxoffice/phase2_features/with_market
+  description: "生成市場特徵（票價、年份、月份、地區、發行商、分級、片長）- 會自動找最新的 phase1 檔案"
+
+
+
+# ------------------------------------------------------------
+# 資料過濾 (filter_data.py)
 # ------------------------------------------------------------
 filter_data:
-  enabled: false  # 是否執行此腳本
+  enabled: false
   # 欲刪減的 csv (必填)
   input_file: "data/ML_boxoffice/phase2_features/with_cumsum/features_cumsum_2025-11-06.csv"
 
@@ -101,6 +121,8 @@ filter_data:
   exclude_config: "config/exclude_movies.csv"  # 留空則使用預設
   # 備註說明
   description: "過濾資料：只保留第1輪，刪除指定欄位和無活躍編號的row"
+
+
 
 # ------------------------------------------------------------
 # 未來可以新增其他腳本

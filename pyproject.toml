@@ -20,6 +20,8 @@ dependencies = [
     "rapidfuzz>=3.14.1",
     "tqdm>=4.67.1",
     "dotenv>=0.9.9",
+    "scikit-learn>=1.7.2",
+    "lightgbm>=4.6.0",
 ]
 
 # 建置設定

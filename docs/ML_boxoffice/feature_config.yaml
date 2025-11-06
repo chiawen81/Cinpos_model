@@ -9,7 +9,7 @@ project:
 
 data:
   unit:
-    boxoffice: "萬元 (NTD)"
+    boxoffice: "元 (NTD)"
     audience: "人次"
     ticket_price: "元/張"
 
@@ -90,14 +90,12 @@ features:
         - name: "boxoffice_week_2"
           type: "float"
           unit: "元"
-          range: [0, 50000]
           role: "feature"
           source: "前兩個活躍週"
 
         - name: "boxoffice_week_1"
           type: "float"
           unit: "元"
-          range: [0, 50000]
           role: "feature"
           importance: "high"
           source: "前一個活躍週"
@@ -146,7 +144,6 @@ features:
         - name: "boxoffice_cumsum"
           type: "float"
           unit: "元"
-          range: [0, 100000]
           role: "feature"
           importance: "high"
           description: "跨輪累積票房"
@@ -261,7 +258,6 @@ target:
   type: "float"
   unit: "元"
   description: "當週票房（預測目標）"
-  range: [0, 10000]
   train_phase: "known"
   predict_phase: "unknown"
 

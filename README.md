@@ -118,26 +118,28 @@ uv run python src/main.py
 
 ### 1. 啟用 claude 
 ```
-      # 在終端機輸入指令
-      claude
+claude
 ```
+
 ### 2.檢查當前模式
-    啟用後會出現以下畫面，代表成功啟用:
-      (1) 使用訂閱模式
-        ```
+啟用後會出現以下畫面，代表成功啟用:
+#### (1) 使用訂閱模式
+      
+```
           ▛███▜▌   Claude Code v2.0.34
         ▝▜█████▛▘  Sonnet 4.5 · Claude Pro
           ▘▘ ▝▝    C:\Users\Projects\Cinpos_model
-        ```
-      (2) 使用 API 模式
-        ```
+```
+#### (2) 使用 API 模式
+```
           ▛███▜▌   Claude Code v2.0.34
         ▝▜█████▛▘  Sonnet 4.5 · API usage billing
           ▘▘ ▝▝    C:\Users\Projects\Cinpos_model
-        ```
+```
 ### 3. 切換模式
   - 啟用claude後，在終端機輸入 `/login`
-  - 會看到以下畫面，即可做切換
+  - 會看到以下畫面，即可移到上下鍵按 enter，完成切換
+    
     ```
       Claude Code can be used with your Claude subscription or billed based on API usage through your Console account.
       Select login method:

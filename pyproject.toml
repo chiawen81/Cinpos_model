@@ -22,6 +22,7 @@ dependencies = [
     "dotenv>=0.9.9",
     "scikit-learn>=1.7.2",
     "lightgbm>=4.6.0",
+    "matplotlib>=3.10.7",
 ]
 
 # 建置設定

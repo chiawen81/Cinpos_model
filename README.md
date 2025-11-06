@@ -5,6 +5,15 @@
 > 並整合社群輿情（PTT / Dcard / 巴哈姆特）作為話題熱度指標。
 
 ---
+
+## 📍 專案開發階段
+
+| 階段 | 主功能 | 目標與內容 |
+|------|------|------|
+| Lv1 | 推薦分數模型 | 讓使用者得以評估「是否值得消費進場觀看電影」。<br>ps. 以自動化爬蟲抓取 IMDb + 台灣票房資料等資料 |
+| Lv2 | 儀表板展示 | 數據視覺化顯示「票房排行」、「推薦電影」、「票房走勢預測」 |
+| Lv3 | 社群熱度分析 | 讓使用者知道最近在夯什麼電影話題。<br>ps. 整合 PTT / Dcard / 巴哈姆特 |
+
 <br>
 
 ## 📁 專案結構說明
@@ -60,7 +69,7 @@ Cinpos_model/
 
 <br>
 
-## ⚙️ 專案初始化與環境設定
+## 🚀 專案初始化與環境設定
 ### 1️⃣ 建立虛擬環境（自動生成 .venv/）
 ```
 python -m venv .venv
@@ -87,7 +96,7 @@ uv run python src/main.py
 
 <br>
 
-## 🧩 常用開發指令
+## 🚀 常用開發指令
 
 | 功能 | 指令 |
 |------|------|
@@ -97,19 +106,43 @@ uv run python src/main.py
 | 移除套件 | `uv remove <package>` |
 | 查看套件 | `uv tree` |
 | 匯出依賴清單 | `uv export > requirements.txt` |
-| 執行主程式 | `uv run python src/main.py` |
+| 執行主程式 | `uv run <腳本的相對路徑>` |
+| 安裝　AI Anent- Claude code | `npm i -g @anthropic-ai/claude-code` |
+| 啟用　AI Anent- Claude code | `claude` |
 
 <br>
 
-## 🧠 專案開發階段
+## 🚀 AI Aagent- Claude使用說明
 
-| 階段 | 主功能 | 目標與內容 |
-|------|------|------|
-| Lv1 | 推薦分數模型 | 讓使用者得以評估「是否值得消費進場觀看電影」。<br>ps. 以自動化爬蟲抓取 IMDb + 台灣票房資料等資料 |
-| Lv2 | 儀表板展示 | 數據視覺化顯示「票房排行」、「推薦電影」、「票房走勢預測」 |
-| Lv3 | 社群熱度分析 | 讓使用者知道最近在夯什麼電影話題。<br>ps. 整合 PTT / Dcard / 巴哈姆特 |
+### 1. 啟用 claude 
+    ```bash
+      # 在終端機輸入指令
+      claude
+    ```
+### 2.檢查當前模式
+    啟用後會出現以下畫面，代表成功啟用:
+      (1) 使用訂閱模式
+        ```
+          ▛███▜▌   Claude Code v2.0.34
+        ▝▜█████▛▘  Sonnet 4.5 · Claude Pro
+          ▘▘ ▝▝    C:\Users\Projects\Cinpos_model
+        ```
+      (2) 使用 API 模式
+        ```
+          ▛███▜▌   Claude Code v2.0.34
+        ▝▜█████▛▘  Sonnet 4.5 · API usage billing
+          ▘▘ ▝▝    C:\Users\Projects\Cinpos_model
+        ```
+### 3. 切換模式
+  - 啟用claude後，在終端機輸入 `/login`
+  - 會看到以下畫面，即可做切換
+    ```
+      Claude Code can be used with your Claude subscription or billed based on API usage through your Console account.
+      Select login method:
+      ❯ 1. Claude account with subscription · Pro, Max, Team, or Enterprise
+        2. Anthropic Console account · API usage billing
 
-<br>
+---
 
 ## 📜 License
 

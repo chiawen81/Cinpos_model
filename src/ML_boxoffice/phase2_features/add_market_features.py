@@ -37,10 +37,58 @@
 import pandas as pd
 from pathlib import Path
 import sys
+from datetime import date
+import argparse
+import re
 
 # 加入共用模組路徑
 sys.path.append(str(Path(__file__).parent.parent.parent))
 from common.file_utils import ensure_dir, save_csv
+
+
+def find_latest_file(directory, pattern):
+    """
+    在指定目錄下找符合 pattern 的最新檔案（根據檔名中的日期字串）
+
+    Args:
+        directory: 要搜尋的目錄 (Path 物件)
+        pattern: 檔案名稱模式（例如: "boxoffice_timeseries_*.csv"）
+
+    Returns:
+        Path: 找到的最新檔案路徑，如果找不到則返回 None
+    """
+    if not directory.exists():
+        print(f"錯誤: 目錄不存在 {directory}")
+        return None
+
+    # 找所有符合模式的檔案
+    files = list(directory.glob(pattern))
+
+    if not files:
+        print(f"錯誤: 在 {directory} 中找不到符合 {pattern} 的檔案")
+        return None
+
+    # 從檔名中提取日期（格式: YYYY-MM-DD）
+    date_pattern = r'(\d{4}-\d{2}-\d{2})'
+
+    files_with_dates = []
+    for file in files:
+        match = re.search(date_pattern, file.name)
+        if match:
+            date_str = match.group(1)
+            files_with_dates.append((file, date_str))
+
+    if not files_with_dates:
+        print(f"錯誤: 檔案名稱中找不到日期格式 (YYYY-MM-DD)")
+        return None
+
+    # 根據日期字串排序，取最新的
+    files_with_dates.sort(key=lambda x: x[1], reverse=True)
+    latest_file = files_with_dates[0][0]
+    latest_date = files_with_dates[0][1]
+
+    print(f"  找到最新檔案 (日期: {latest_date}): {latest_file.name}")
+    return latest_file
 
 
 def extract_date_features(df):
@@ -228,19 +276,37 @@ def add_market_features(input_csv_path, movie_info_csv_path, output_csv_path):
     return df
 
 
-def main():
-    """執行腳本"""
+def main(input_file=None, movie_info_file=None):
+    """
+    執行腳本
+
+    Args:
+        input_file: 票房時序資料檔案路徑 (Path 物件或 None)
+                   如果為 None，自動從 data/ML_boxoffice/phase1_flattened 找最新檔案
+        movie_info_file: 電影資訊檔案路徑 (Path 物件或 None)
+                        如果為 None，自動從 data/processed/movieInfo_gov/combined 找最新檔案
+    """
     # 定義路徑
     project_root = Path(__file__).parent.parent.parent.parent
 
-    # 使用固定日期或最新檔案
-    # 這裡使用固定日期，你也可以改成自動找最新檔案
-    date_str = "2025-11-06"  # 可以改成參數或自動偵測
+    # 如果沒有指定 input_file，自動找最新檔案
+    if input_file is None:
+        print("\n未指定 input_file，自動尋找最新的票房時序資料...")
+        input_dir = project_root / "data/ML_boxoffice/phase1_flattened"
+        input_file = find_latest_file(input_dir, "boxoffice_timeseries_*.csv")
+        if input_file is None:
+            return
 
-    input_file = project_root / f"data/ML_boxoffice/phase1_flattened/boxoffice_timeseries_{date_str}.csv"
-    movie_info_file = project_root / f"data/processed/movieInfo_gov/combined/movieInfo_gov_full_{date_str}.csv"
+    # 如果沒有指定 movie_info_file，自動找最新檔案
+    if movie_info_file is None:
+        print("\n未指定 movie_info_file，自動尋找最新的電影資訊...")
+        movie_info_dir = project_root / "data/processed/movieInfo_gov/combined"
+        movie_info_file = find_latest_file(movie_info_dir, "movieInfo_gov_full_*.csv")
+        if movie_info_file is None:
+            return
 
-    # 輸出檔案
+    # 輸出檔案（使用當下日期）
+    date_str = date.today().strftime("%Y-%m-%d")
     output_file = project_root / f"data/ML_boxoffice/phase2_features/with_market/features_market_{date_str}.csv"
 
     # 檢查輸入檔案是否存在
@@ -261,4 +327,50 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # 設定命令列參數
+    parser = argparse.ArgumentParser(
+        description='市場特徵工程 - Phase 2',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=
+"""使用範例：
+  
+  # 自動使用最新檔案（推薦）
+  uv run src/ML_boxoffice/phase2_features/add_market_features.py
+
+  # 指定單一檔案(以市場資訊為例) input_file
+  uv run add_market_features.py --movie-info data/processed/movieInfo_gov/combined/movieInfo_gov_full_2025-11-06.csv
+
+  # 指定兩個檔案
+  uv run src/ML_boxoffice/phase2_features/add_market_features.py ^
+  --input data/ML_boxoffice/phase1_flattened/boxoffice_timeseries_2025-11-06.csv ^
+  --movie-info data/processed/movieInfo_gov/combined/movieInfo_gov_full_2025-11-06.csv
+"""
+    )
+
+    parser.add_argument(
+        '--input',
+        type=str,
+        help='票房時序資料檔案路徑（相對於專案根目錄）。若不指定，自動使用最新檔案。'
+    )
+
+    parser.add_argument(
+        '--movie-info',
+        type=str,
+        help='電影資訊檔案路徑（相對於專案根目錄）。若不指定，自動使用最新檔案。'
+    )
+
+    args = parser.parse_args()
+
+    # 處理檔案路徑
+    project_root = Path(__file__).parent.parent.parent.parent
+
+    input_file = None
+    if args.input:
+        input_file = project_root / args.input
+
+    movie_info_file = None
+    if args.movie_info:
+        movie_info_file = project_root / args.movie_info
+
+    # 執行
+    main(input_file=input_file, movie_info_file=movie_info_file)

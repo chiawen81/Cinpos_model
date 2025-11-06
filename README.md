@@ -32,7 +32,7 @@ Cinpos_model/
 │    ├─── ML_boxoffice/
 │    │    ├── pipeline.md         Pipeline 流程 + 建模策略（整合版）
 │    │    ├── data_dictionary.md # 欄位定義（人類可讀）
-│    │    ├── feature_config.yaml# 欄位定義（機器可讀）
+│    │    ├── feature_config.yaml# 欄位定義、資料處理規則（機器可讀）
 │    │    └── data_processing_rules.md # 資料處理規則
 │    └─── set_claude_use_mode/    # 切換 Claude Code 使用模式
 ├── logs/                       # 運行與爬蟲日誌

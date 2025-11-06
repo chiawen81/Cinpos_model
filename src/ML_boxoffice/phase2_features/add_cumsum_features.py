@@ -142,10 +142,12 @@ def main():
     
     # 解析命令列參數
     if len(sys.argv) < 2:
-        print("使用方式: python add_cumsum_features_v2.py <input_csv> [output_csv]")
-        print("範例: python add_cumsum_features_v2.py data/phase1_output.csv data/phase1_with_cumsum.csv")
+        print("使用方式: uv run add_cumsum_features_v2.py <input_csv> [output_csv]")
+        print("""範例: 
+        uv run src/ML_boxoffice/phase2_features/add_cumsum_features.py data\ML_boxoffice\phase1_flattened\boxoffice_timeseries_2025-11-06.csv data\ML_boxoffice\phase2_features\with_cumsum\features_cumsum_2025-11-06.csv
+        """)
         sys.exit(1)
-    
+
     input_path = Path(sys.argv[1])
     
     # 決定輸出路徑

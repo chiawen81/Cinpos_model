@@ -55,6 +55,12 @@ results/
 Thumbs.db
 desktop.ini
 
+# 環境變數
+.env
+.env*
+*.env
+/.env
+
 # ===============================
 # 📦 uv / build system
 # ===============================

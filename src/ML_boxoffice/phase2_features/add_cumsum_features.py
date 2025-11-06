@@ -61,8 +61,11 @@ def calculate_cumsum_features(df):
     
     # 複製資料框避免修改原始資料
     result_df = df.copy()
-    
-    # 確保資料按照 gov_id, round_idx, current_week_active_idx 排序
+
+    # 保留原始順序索引
+    result_df['_original_order'] = range(len(result_df))
+
+    # 確保資料按照 gov_id, round_idx, current_week_active_idx 排序（用於計算）
     result_df = result_df.sort_values(
         ['gov_id', 'round_idx', 'current_week_active_idx']
     ).reset_index(drop=True)
@@ -83,14 +86,15 @@ def calculate_cumsum_features(df):
     # 按電影分組計算
     for gov_id, movie_group in result_df.groupby('gov_id'):
         movie_indices = movie_group.index
-        
-        # 分離首輪和當輪資料
-        round1_data = movie_group[movie_group['round_idx'] == 1].copy()
-        
-        # 計算首輪總票房和總觀影人數（用於次輪的跨輪累積）
-        round1_total_boxoffice = round1_data['amount'].sum() if len(round1_data) > 0 else 0
-        round1_total_audience = round1_data['tickets'].sum() if len(round1_data) > 0 else 0
-        
+
+        # 計算每一輪的總計（用於跨輪累積）
+        round_totals_boxoffice = {}
+        round_totals_audience = {}
+        for round_idx in sorted(movie_group['round_idx'].unique()):
+            round_data = movie_group[movie_group['round_idx'] == round_idx]
+            round_totals_boxoffice[round_idx] = round_data['amount'].sum()
+            round_totals_audience[round_idx] = round_data['tickets'].sum()
+
         # 逐列計算累積值
         for idx in movie_indices:
             current_round = result_df.loc[idx, 'round_idx']
@@ -116,24 +120,30 @@ def calculate_cumsum_features(df):
                 result_df.loc[idx, 'audience_round1_cumsum'] = current_round_audience_cumsum
             else:
                 # 首輪已結束: 使用首輪總計（固定值）
-                result_df.loc[idx, 'boxoffice_round1_cumsum'] = round1_total_boxoffice
-                result_df.loc[idx, 'audience_round1_cumsum'] = round1_total_audience
-            
+                result_df.loc[idx, 'boxoffice_round1_cumsum'] = round_totals_boxoffice.get(1, 0)
+                result_df.loc[idx, 'audience_round1_cumsum'] = round_totals_audience.get(1, 0)
+
             # === 計算跨輪累積 ===
-            if current_round == 1:
-                # 首輪: 跨輪累積 = 當輪累積
-                result_df.loc[idx, 'boxoffice_cumsum'] = current_round_boxoffice_cumsum
-                result_df.loc[idx, 'audience_cumsum'] = current_round_audience_cumsum
-            else:
-                # 次輪: 跨輪累積 = 首輪總計 + 當輪累積
-                result_df.loc[idx, 'boxoffice_cumsum'] = round1_total_boxoffice + current_round_boxoffice_cumsum
-                result_df.loc[idx, 'audience_cumsum'] = round1_total_audience + current_round_audience_cumsum
+            # 累積所有之前輪次的總計 + 當輪截至上週
+            previous_rounds_boxoffice = sum(
+                round_totals_boxoffice[r] for r in round_totals_boxoffice if r < current_round
+            )
+            previous_rounds_audience = sum(
+                round_totals_audience[r] for r in round_totals_audience if r < current_round
+            )
+            result_df.loc[idx, 'boxoffice_cumsum'] = previous_rounds_boxoffice + current_round_boxoffice_cumsum
+            result_df.loc[idx, 'audience_cumsum'] = previous_rounds_audience + current_round_audience_cumsum
     
     # 轉換整數欄位
     integer_cols = ['audience_cumsum', 'audience_round1_cumsum', 'audience_current_round_cumsum']
     for col in integer_cols:
         result_df[col] = result_df[col].astype(int)
-    
+
+    # 恢復原始順序
+    result_df = result_df.sort_values('_original_order').reset_index(drop=True)
+    # 刪除臨時欄位
+    result_df = result_df.drop(columns=['_original_order'])
+
     return result_df
 
 

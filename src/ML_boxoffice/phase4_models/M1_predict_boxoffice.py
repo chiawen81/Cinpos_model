@@ -113,12 +113,13 @@ print(df.isnull().sum()[df.isnull().sum() > 0])
 # === 6. 存檔: 完整資料 (含 amount 和 gov_id) ===
 df.to_csv(output_prepare_dir / "preprocessed_full.csv", index=False, encoding="utf-8-sig")
 print(f"\n✅ 已存檔: {output_prepare_dir / 'preprocessed_full.csv'}")
+print("📍資料數量小計:")
 print(f"   欄位數: {len(df.columns)}")
 print(f"   資料筆數: {len(df)}")
 
 
 # === 7. 顯示最終欄位 ===
-print("\n=== 最終欄位清單 ===")
+print("\n=== 📍最終欄位清單 ===")
 for i, col in enumerate(df.columns, 1):
     print(f"{i:2d}. {col}")
 
@@ -140,7 +141,7 @@ print(f"✅ 已存檔: {output_prepare_dir / 'preprocessed_target.csv'}")
 
 
 # === 10. 統計摘要 ===
-print("\n=== 資料摘要 ===")
+print("\n=== 📍資料摘要 ===")
 print(df[["amount", "boxoffice_week_1", "current_week_active_idx"]].describe())
 
 
@@ -178,7 +179,8 @@ train_idx, test_idx = next(splitter.split(X, y, groups=X["gov_id"]))
 X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
 y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
 
-print(f"\n訓練集: {len(X_train)} 筆 ({len(X_train['gov_id'].unique())} 部電影)")
+print("\n📍 訓練集/測試集分割結果")
+print(f"訓練集: {len(X_train)} 筆 ({len(X_train['gov_id'].unique())} 部電影)")
 print(f"測試集: {len(X_test)} 筆 ({len(X_test['gov_id'].unique())} 部電影)")
 
 

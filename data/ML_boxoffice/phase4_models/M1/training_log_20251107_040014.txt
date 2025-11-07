@@ -7,10 +7,11 @@
 Series([], dtype: int64)
 
 ✅ 已存檔: data\ML_boxoffice\phase3_prepare\M1\preprocessed_full.csv
+📍資料數量小計:
    欄位數: 21
    資料筆數: 914
 
-=== 最終欄位清單 ===
+=== 📍最終欄位清單 ===
  1. gov_id
  2. round_idx
  3. current_week_active_idx
@@ -36,7 +37,7 @@ Series([], dtype: int64)
 ✅ 已存檔: data\ML_boxoffice\phase3_prepare\M1\preprocessed_features.csv
 ✅ 已存檔: data\ML_boxoffice\phase3_prepare\M1\preprocessed_target.csv
 
-=== 資料摘要 ===
+=== 📍資料摘要 ===
              amount  ...  current_week_active_idx
 count  9.140000e+02  ...               914.000000
 mean   2.989047e+06  ...                 8.986871
@@ -67,6 +68,7 @@ open_week1_boxoffice_daily_avg     0.436057
                 screens_week_2     0.376869
                    film_length     0.265461
 
+📍 訓練集/測試集分割結果
 訓練集: 751 筆 (103 部電影)
 測試集: 163 筆 (26 部電影)
 

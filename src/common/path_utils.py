@@ -69,6 +69,8 @@ MASTER_TRAIN_READY = os.path.join(MASTER_DIR, "train_ready")  # 訓練資料
 # ----------------- ML_boxoffice 專屬OUTPUT-----------------
 PHASE1_FLATTENED_DIR = os.path.join(ML_BOXOFFICE_CUS_DATA_DIR, "phase1_flattened")
 PHASE2_FEATURES_DIR = os.path.join(ML_BOXOFFICE_CUS_DATA_DIR, "phase2_features")
+PHASE3_PREPARE_DIR = os.path.join(ML_BOXOFFICE_CUS_DATA_DIR, "phase3_prepare")
+PHASE4_MODELS_DIR = os.path.join(ML_BOXOFFICE_CUS_DATA_DIR, "phase4_models")
 
 # Phase2 特徵子目錄
 PHASE2_WITH_MARKET_DIR = os.path.join(PHASE2_FEATURES_DIR, "with_market")

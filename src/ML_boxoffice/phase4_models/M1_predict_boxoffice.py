@@ -1,20 +1,31 @@
 import pandas as pd
 import numpy as np
 import sys
+from common.file_utils import ensure_dir, save_csv
 from pathlib import Path
 from io import StringIO
 from datetime import datetime
+from common.path_utils import PHASE3_PREPARE_DIR, PHASE4_MODELS_DIR
+
+# ===================================================================
+# 全域設定
+# ===================================================================
+# 時間戳記
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+# 建立輸出資料夾
+output_prepare_dir = Path(PHASE3_PREPARE_DIR) / f"M1_{timestamp}"
+output_model_dir = Path(PHASE4_MODELS_DIR) / f"M1_{timestamp}"
+log_file = output_model_dir / f"training_log_{timestamp}.txt"
+
+# 建立輸出資料夾
+ensure_dir(output_prepare_dir)
+ensure_dir(output_model_dir)
+
 
 # ===================================================================
 # 日誌系統設定
 # ===================================================================
-# 建立 log 檔案路徑
-output_model_dir = Path("data/ML_boxoffice/phase4_models/M1")
-output_model_dir.mkdir(parents=True, exist_ok=True)
-
-timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-log_file = output_model_dir / f"training_log_{timestamp}.txt"
-
 # 建立 log 緩衝區
 log_buffer = StringIO()
 
@@ -26,7 +37,13 @@ class Logger:
         self.log = log_buffer
 
     def write(self, message):
-        self.terminal.write(message)
+        # 處理 Windows 終端機編碼問題
+        try:
+            self.terminal.write(message)
+        except UnicodeEncodeError:
+            # 移除無法編碼的字符
+            clean_message = message.encode("ascii", "ignore").decode("ascii")
+            self.terminal.write(clean_message)
         self.log.write(message)
 
     def flush(self):
@@ -44,11 +61,6 @@ print("=" * 60)
 # ===================================================================
 # 資料預處理
 # ===================================================================
-# === 設定路徑 ===
-output_prepare_dir = Path("data/ML_boxoffice/phase3_prepare/M1")
-output_model_dir = Path("data/ML_boxoffice/phase4_models/M1")
-output_prepare_dir.mkdir(parents=True, exist_ok=True)
-
 # === 1. 讀取資料 ===
 df = pd.read_csv(
     "data/ML_boxoffice/phase2_features/with_market/features_market_2025-11-07.csv"
@@ -105,12 +117,39 @@ drop_columns = [
 df = df.drop(columns=drop_columns)
 
 
-# === 5. 檢查缺失值 ===
+# # === 5. 移除極端大片離群值 ===
+# print("\n=== 移除極端大片離群值 ===")
+# print(f"過濾前資料筆數: {len(df)}")
+
+# # 定義離群值閾值 (使用 boxoffice_week_1 的 99% 分位數)
+# threshold_week1 = df["boxoffice_week_1"].quantile(0.99)
+# threshold_week2 = df["boxoffice_week_2"].quantile(0.99)
+
+# print(f"boxoffice_week_1 的 99% 分位數閾值: {threshold_week1:,.0f}")
+# print(f"boxoffice_week_2 的 99% 分位數閾值: {threshold_week2:,.0f}")
+
+# # 標記離群值樣本
+# outlier_mask = (df["boxoffice_week_1"] > threshold_week1) | (
+#     df["boxoffice_week_2"] > threshold_week2
+# )
+# outlier_gov_ids = df[outlier_mask]["gov_id"].unique()
+
+# print(f"\n發現 {len(outlier_gov_ids)} 部極端大片電影:")
+# print(f"  gov_id: {list(outlier_gov_ids)}")
+
+# # 移除這些電影的所有樣本（整部電影移除，避免資料洩漏）
+# df = df[~df["gov_id"].isin(outlier_gov_ids)].copy()
+
+# print(f"過濾後資料筆數: {len(df)}")
+# print(f"過濾後電影數: {df['gov_id'].nunique()}")
+
+
+# === 6. 檢查缺失值 ===
 print("\n=== 缺失值檢查 ===")
 print(df.isnull().sum()[df.isnull().sum() > 0])
 
 
-# === 6. 存檔: 完整資料 (含 amount 和 gov_id) ===
+# === 7. 存檔: 完整資料 (含 amount 和 gov_id) ===
 df.to_csv(output_prepare_dir / "preprocessed_full.csv", index=False, encoding="utf-8-sig")
 print(f"\n✅ 已存檔: {output_prepare_dir / 'preprocessed_full.csv'}")
 print("📍資料數量小計:")
@@ -118,13 +157,13 @@ print(f"   欄位數: {len(df.columns)}")
 print(f"   資料筆數: {len(df)}")
 
 
-# === 7. 顯示最終欄位 ===
+# === 8. 顯示最終欄位 ===
 print("\n=== 📍最終欄位清單 ===")
 for i, col in enumerate(df.columns, 1):
     print(f"{i:2d}. {col}")
 
 
-# === 8. 存檔: 訓練用特徵 (移除 amount，保留 gov_id 用於分組) ===
+# === 9. 存檔: 訓練用特徵 (移除 amount，保留 gov_id 用於分組) ===
 feature_cols = [col for col in df.columns if col != "amount"]
 df_features = df[feature_cols]
 df_features.to_csv(
@@ -133,14 +172,14 @@ df_features.to_csv(
 print(f"\n✅ 已存檔: {output_prepare_dir / 'preprocessed_features.csv'}")
 
 
-# === 9. 存檔: 目標變數 ===
+# === 10. 存檔: 目標變數 ===
 df[["gov_id", "amount"]].to_csv(
     output_prepare_dir / "preprocessed_target.csv", index=False, encoding="utf-8-sig"
 )
 print(f"✅ 已存檔: {output_prepare_dir / 'preprocessed_target.csv'}")
 
 
-# === 10. 統計摘要 ===
+# === 11. 統計摘要 ===
 print("\n=== 📍資料摘要 ===")
 print(df[["amount", "boxoffice_week_1", "current_week_active_idx"]].describe())
 
@@ -148,7 +187,7 @@ print(df[["amount", "boxoffice_week_1", "current_week_active_idx"]].describe())
 # ===================================================================
 # 訓練模型
 # ===================================================================
-# === 11. 分離特徵與目標 ===
+# === 12. 分離特徵與目標 ===
 X = df.drop(columns=["amount"])
 y = df["amount"]
 
@@ -169,7 +208,7 @@ correlation = pd.DataFrame(
 print(correlation.head(10).to_string(index=False))
 
 
-# === 12. Group-based 切分資料集 ===
+# === 13. Group-based 切分資料集 ===
 from sklearn.model_selection import GroupShuffleSplit
 
 # 確保同一部電影的所有週次資料不會同時出現在訓練/測試集
@@ -184,14 +223,14 @@ print(f"訓練集: {len(X_train)} 筆 ({len(X_train['gov_id'].unique())} 部電�
 print(f"測試集: {len(X_test)} 筆 ({len(X_test['gov_id'].unique())} 部電影)")
 
 
-# === 13. 移除 gov_id (只用於分組,不參與訓練) ===
+# === 14. 移除 gov_id (只用於分組,不參與訓練) ===
 X_train_model = X_train.drop(columns=["gov_id"])
 X_test_model = X_test.drop(columns=["gov_id"])
 
 print(f"\n模型訓練特徵數: {X_train_model.shape[1]}")
 
 
-# === 13.5 檢查缺失值 ===
+# === 15. 檢查缺失值 ===
 print("\n" + "=" * 50)
 print("🔍 訓練集缺失值檢查")
 print("=" * 50)
@@ -207,7 +246,7 @@ else:
     print("✅ 無缺失值")
 
 
-# === 14. 訓練基準模型: Linear Regression ===
+# === 16. 訓練基準模型: Linear Regression ===
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
@@ -225,7 +264,7 @@ print(f"RMSE: {np.sqrt(mean_squared_error(y_test, y_pred_lr)):,.0f}")
 print(f"R²:   {r2_score(y_test, y_pred_lr):.4f}")
 
 
-# === 15. 訓練進階模型: LightGBM ===
+# === 17. 訓練進階模型: LightGBM ===
 import lightgbm as lgb
 
 print("\n" + "=" * 50)
@@ -252,7 +291,7 @@ print(f"R²:   {r2_score(y_test, y_pred_lgb):.4f}")
 # ===================================================================
 # 洞察模型分析結果
 # ===================================================================
-# === 16. 特徵重要性分析 ===
+# === 18. 特徵重要性分析 ===
 print("\n" + "=" * 50)
 print("📊 Top 10 重要特徵 (LightGBM)")
 print("=" * 50)
@@ -270,7 +309,7 @@ feature_importance.to_csv(
 print(f"\n✅ 特徵重要性已存檔: {output_model_dir / 'feature_importance.csv'}")
 
 
-# === 17. 視覺化: 預測 vs 實際 ===
+# === 19. 視覺化: 預測 vs 實際 ===
 import matplotlib.pyplot as plt
 
 plt.rcParams["font.sans-serif"] = ["Microsoft JhengHei"]  # 中文字型
@@ -303,7 +342,7 @@ plt.show()
 # ===================================================================
 # 儲存模型與分析結果
 # ===================================================================
-# === 18. 儲存模型 ===
+# === 20. 儲存模型 ===
 import joblib
 
 joblib.dump(lr_model, output_model_dir / "model_linear_regression.pkl")
@@ -313,7 +352,7 @@ print(f"   - {output_model_dir / 'model_linear_regression.pkl'}")
 print(f"   - {output_model_dir / 'model_lightgbm.pkl'}")
 
 
-# === 19. 儲存測試集預測結果 ===
+# === 21. 儲存測試集預測結果 ===
 results = pd.DataFrame(
     {
         "gov_id": X_test["gov_id"].values,
@@ -329,7 +368,7 @@ results.to_csv(output_model_dir / "test_predictions.csv", index=False, encoding=
 print(f"✅ 測試集預測結果已存檔: {output_model_dir / 'test_predictions.csv'}")
 
 
-# === 20. 紀錄本次執行過程log ===
+# === 22. 紀錄本次執行過程log ===
 print("\n" + "=" * 60)
 print(f"✅ 訓練完成: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print("=" * 60)

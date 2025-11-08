@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import sys
-from common.file_utils import ensure_dir, save_csv
+from common.file_utils import ensure_dir
 from pathlib import Path
 from io import StringIO
 from datetime import datetime
@@ -67,7 +67,37 @@ df = pd.read_csv(
 )  # 替換成你的檔案路徑
 
 
-# === 2. 篩選資料 ===
+# === 2-1. 排除指定的電影 ===
+# 排除清單路徑
+exclude_config_path = "config/exclude_movies.csv"
+
+try:
+    exclude_df = pd.read_csv(exclude_config_path, comment="#")
+    exclude_gov_ids = exclude_df["gov_id"].dropna().astype(int).tolist()
+
+    if len(exclude_gov_ids) > 0:
+        print(f"\n從 {exclude_config_path} 讀取排除清單:")
+        print(f"  發現 {len(exclude_gov_ids)} 部需要排除的電影")
+        print(f"  排除的 gov_id: {exclude_gov_ids}")
+
+        # 檢查有多少筆資料會被排除
+        exclude_count = df[df["gov_id"].isin(exclude_gov_ids)].shape[0]
+        exclude_movie_count = df[df["gov_id"].isin(exclude_gov_ids)]["gov_id"].nunique()
+        print(f"  將排除 {exclude_movie_count} 部電影，共 {exclude_count} 筆資料")
+
+        # 執行排除
+        df = df[~df["gov_id"].isin(exclude_gov_ids)].copy()
+        print(f"  排除後剩餘資料筆數: {len(df)}")
+    else:
+        print(f"\n{exclude_config_path} 中沒有需要排除的電影")
+
+except FileNotFoundError:
+    print(f"\n警告: 找不到排除清單檔案 {exclude_config_path}，跳過排除步驟")
+except Exception as e:
+    print(f"\n警告: 讀取排除清單時發生錯誤: {e}，跳過排除步驟")
+
+
+# === 2-2. 篩選資料 ===
 # 只保留首輪資料
 df = df[df["round_idx"] == 1].copy()
 # 只保留有活躍週次的資料
@@ -79,7 +109,7 @@ df = df[
     & (df["boxoffice_week_2"].notna())
     & (df["boxoffice_week_2"] > 0)
 ]
-print(f"篩選後資料筆數: {len(df)}")
+print(f"基本篩選後資料筆數: {len(df)}")
 
 
 # === 3. 月份週期性編碼 ===
@@ -117,39 +147,12 @@ drop_columns = [
 df = df.drop(columns=drop_columns)
 
 
-# # === 5. 移除極端大片離群值 ===
-# print("\n=== 移除極端大片離群值 ===")
-# print(f"過濾前資料筆數: {len(df)}")
-
-# # 定義離群值閾值 (使用 boxoffice_week_1 的 99% 分位數)
-# threshold_week1 = df["boxoffice_week_1"].quantile(0.99)
-# threshold_week2 = df["boxoffice_week_2"].quantile(0.99)
-
-# print(f"boxoffice_week_1 的 99% 分位數閾值: {threshold_week1:,.0f}")
-# print(f"boxoffice_week_2 的 99% 分位數閾值: {threshold_week2:,.0f}")
-
-# # 標記離群值樣本
-# outlier_mask = (df["boxoffice_week_1"] > threshold_week1) | (
-#     df["boxoffice_week_2"] > threshold_week2
-# )
-# outlier_gov_ids = df[outlier_mask]["gov_id"].unique()
-
-# print(f"\n發現 {len(outlier_gov_ids)} 部極端大片電影:")
-# print(f"  gov_id: {list(outlier_gov_ids)}")
-
-# # 移除這些電影的所有樣本（整部電影移除，避免資料洩漏）
-# df = df[~df["gov_id"].isin(outlier_gov_ids)].copy()
-
-# print(f"過濾後資料筆數: {len(df)}")
-# print(f"過濾後電影數: {df['gov_id'].nunique()}")
-
-
-# === 6. 檢查缺失值 ===
+# === 5. 檢查缺失值 ===
 print("\n=== 缺失值檢查 ===")
 print(df.isnull().sum()[df.isnull().sum() > 0])
 
 
-# === 7. 存檔: 完整資料 (含 amount 和 gov_id) ===
+# === 6. 存檔: 完整資料 (含 amount 和 gov_id) ===
 df.to_csv(output_prepare_dir / "preprocessed_full.csv", index=False, encoding="utf-8-sig")
 print(f"\n✅ 已存檔: {output_prepare_dir / 'preprocessed_full.csv'}")
 print("📍資料數量小計:")
@@ -157,13 +160,13 @@ print(f"   欄位數: {len(df.columns)}")
 print(f"   資料筆數: {len(df)}")
 
 
-# === 8. 顯示最終欄位 ===
+# === 7. 顯示最終欄位 ===
 print("\n=== 📍最終欄位清單 ===")
 for i, col in enumerate(df.columns, 1):
     print(f"{i:2d}. {col}")
 
 
-# === 9. 存檔: 訓練用特徵 (移除 amount，保留 gov_id 用於分組) ===
+# === 8. 存檔: 訓練用特徵 (移除 amount，保留 gov_id 用於分組) ===
 feature_cols = [col for col in df.columns if col != "amount"]
 df_features = df[feature_cols]
 df_features.to_csv(
@@ -172,14 +175,14 @@ df_features.to_csv(
 print(f"\n✅ 已存檔: {output_prepare_dir / 'preprocessed_features.csv'}")
 
 
-# === 10. 存檔: 目標變數 ===
+# === 9. 存檔: 目標變數 ===
 df[["gov_id", "amount"]].to_csv(
     output_prepare_dir / "preprocessed_target.csv", index=False, encoding="utf-8-sig"
 )
 print(f"✅ 已存檔: {output_prepare_dir / 'preprocessed_target.csv'}")
 
 
-# === 11. 統計摘要 ===
+# === 10. 統計摘要 ===
 print("\n=== 📍資料摘要 ===")
 print(df[["amount", "boxoffice_week_1", "current_week_active_idx"]].describe())
 
@@ -187,7 +190,7 @@ print(df[["amount", "boxoffice_week_1", "current_week_active_idx"]].describe())
 # ===================================================================
 # 訓練模型
 # ===================================================================
-# === 12. 分離特徵與目標 ===
+# === 11. 分離特徵與目標 ===
 X = df.drop(columns=["amount"])
 y = df["amount"]
 
@@ -208,7 +211,7 @@ correlation = pd.DataFrame(
 print(correlation.head(10).to_string(index=False))
 
 
-# === 13. Group-based 切分資料集 ===
+# === 12. Group-based 切分資料集 ===
 from sklearn.model_selection import GroupShuffleSplit
 
 # 確保同一部電影的所有週次資料不會同時出現在訓練/測試集
@@ -223,14 +226,14 @@ print(f"訓練集: {len(X_train)} 筆 ({len(X_train['gov_id'].unique())} 部電�
 print(f"測試集: {len(X_test)} 筆 ({len(X_test['gov_id'].unique())} 部電影)")
 
 
-# === 14. 移除 gov_id (只用於分組,不參與訓練) ===
+# === 13. 移除 gov_id (只用於分組,不參與訓練) ===
 X_train_model = X_train.drop(columns=["gov_id"])
 X_test_model = X_test.drop(columns=["gov_id"])
 
 print(f"\n模型訓練特徵數: {X_train_model.shape[1]}")
 
 
-# === 15. 檢查缺失值 ===
+# === 14. 檢查缺失值 ===
 print("\n" + "=" * 50)
 print("🔍 訓練集缺失值檢查")
 print("=" * 50)
@@ -246,7 +249,7 @@ else:
     print("✅ 無缺失值")
 
 
-# === 16. 訓練基準模型: Linear Regression ===
+# === 15. 訓練基準模型: Linear Regression ===
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 

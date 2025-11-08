@@ -1,0 +1,188 @@
+============================================================
+🚀 模型訓練開始 (M3 - 排除大片測試): 2025-11-09 03:07:37
+============================================================
+
+從 config/exclude_movies.csv 讀取排除清單:
+  發現 8 部需要排除的電影
+  排除的 gov_id: [31082, 22894, 23548, 30676, 31748, 31222, 31570, 26514]
+  將排除 8 部電影，共 104 筆資料
+  排除後剩餘資料筆數: 1235
+基本篩選後資料筆數: 854
+
+=== 缺失值檢查 ===
+Series([], dtype: int64)
+
+✅ 已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase3_prepare\M3_20251109_030737\preprocessed_full.csv
+📍資料數量小計:
+   欄位數: 21
+   資料筆數: 854
+
+=== 📍最終欄位清單 ===
+ 1. gov_id
+ 2. round_idx
+ 3. current_week_active_idx
+ 4. gap_real_week_2to1
+ 5. gap_real_week_1tocurrent
+ 6. boxoffice_week_2
+ 7. boxoffice_week_1
+ 8. audience_week_2
+ 9. audience_week_1
+10. screens_week_2
+11. screens_week_1
+12. open_week1_days
+13. open_week1_boxoffice
+14. open_week1_boxoffice_daily_avg
+15. open_week2_boxoffice
+16. amount
+17. release_year
+18. film_length
+19. is_restricted
+20. release_month_sin
+21. release_month_cos
+
+✅ 已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase3_prepare\M3_20251109_030737\preprocessed_features.csv
+✅ 已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase3_prepare\M3_20251109_030737\preprocessed_target.csv
+
+=== 📍資料摘要 ===
+             amount  boxoffice_week_1  current_week_active_idx
+count  8.540000e+02      8.540000e+02               854.000000
+mean   3.142877e+06      4.682172e+06                 9.064403
+std    1.206014e+07      1.707470e+07                 6.987970
+min    2.100000e+02      4.000000e+02                 3.000000
+25%    2.419875e+04      4.572175e+04                 4.000000
+50%    1.312670e+05      2.687765e+05                 7.000000
+75%    8.789920e+05      1.483940e+06                11.000000
+max    1.517199e+08      2.331174e+08                41.000000
+
+特徵矩陣 X: (854, 20)
+目標變數 y: (854,)
+
+==================================================
+🔍 特徵與目標相關性 (Top 10)
+==================================================
+                       feature  correlation
+              boxoffice_week_1     0.971231
+               audience_week_1     0.967181
+              boxoffice_week_2     0.879737
+               audience_week_2     0.874292
+          open_week2_boxoffice     0.528528
+          open_week1_boxoffice     0.482209
+                screens_week_1     0.445054
+open_week1_boxoffice_daily_avg     0.434114
+                screens_week_2     0.379351
+                   film_length     0.291081
+
+📍 訓練集/測試集分割結果 (原始)
+訓練集: 642 筆 (96 部電影)
+測試集: 212 筆 (25 部電影)
+
+============================================================
+🎬 [M3 特色] 測試集排除大片樣本
+============================================================
+
+過濾設定:
+  基準欄位: amount
+  閾值: 10,450,435 (第 95 百分位數 (排除前 5%))
+  刪除整部電影: 是
+
+測試集中要排除的電影:
+  電影數: 6 部
+  樣本數: 82 筆（包含該電影的所有週次）
+  gov_id: [29653, 30738, 30809, 31186, 31329, 31807]
+
+過濾後的測試集:
+  樣本數: 130 筆 (原始: 212, 減少 82 筆)
+  電影數: 19 部 (原始: 25)
+  保留比例: 61.3%
+
+過濾後的 amount 分布:
+  最小值: 1,350
+  最大值: 8,233,350
+  平均值: 589,047
+  中位數: 76,502
+
+模型訓練特徵數: 19
+
+==================================================
+🔍 訓練集缺失值檢查
+==================================================
+✅ 無缺失值
+
+==================================================
+🔵 模型 1: Linear Regression
+==================================================
+MAE:  369,320
+RMSE: 1,127,099
+R²:   0.0629
+
+==================================================
+🟢 模型 2: LightGBM
+==================================================
+MAE:  418,843
+RMSE: 1,054,331
+R²:   0.1800
+
+==================================================
+🟡 模型 3: Decision Tree Regressor
+==================================================
+MAE:  218,723
+RMSE: 644,208
+R²:   0.6939
+
+==================================================
+📊 Top 10 重要特徵 (LightGBM)
+==================================================
+                       feature  importance
+              boxoffice_week_1         146
+               audience_week_1         109
+          open_week1_boxoffice          75
+                   film_length          43
+open_week1_boxoffice_daily_avg          41
+               audience_week_2          37
+              boxoffice_week_2          34
+       current_week_active_idx          28
+                screens_week_2          27
+          open_week2_boxoffice          25
+
+✅ LightGBM特徵重要性已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M3_20251109_030737\feature_importance_lgb.csv
+
+==================================================
+📊 Top 10 重要特徵 (Decision Tree)
+==================================================
+                feature   importance
+       boxoffice_week_1 7.847635e-01
+        audience_week_1 2.151939e-01
+         screens_week_1 1.362849e-05
+         screens_week_2 1.295242e-05
+        audience_week_2 6.791519e-06
+        open_week1_days 3.333442e-06
+   open_week2_boxoffice 3.136440e-06
+current_week_active_idx 2.470593e-06
+       boxoffice_week_2 2.912206e-07
+     gap_real_week_2to1 0.000000e+00
+
+✅ Decision Tree特徵重要性已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M3_20251109_030737\feature_importance_dt.csv
+
+✅ 預測結果圖已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M3_20251109_030737\prediction_comparison.png
+
+✅ 模型已存檔:
+   - C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M3_20251109_030737\model_linear_regression.pkl
+   - C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M3_20251109_030737\model_lightgbm.pkl
+   - C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M3_20251109_030737\model_decision_tree.pkl
+✅ 測試集預測結果已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M3_20251109_030737\test_predictions.csv
+✅ 被排除的樣本已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M3_20251109_030737\excluded_samples.csv
+✅ 被排除的電影統計已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M3_20251109_030737\excluded_movies_summary.csv
+
+============================================================
+📊 M3 模型表現總結 (排除大片後)
+============================================================
+               模型           MAE         RMSE       R²
+Linear Regression 369320.446212 1.127099e+06 0.062897
+         LightGBM 418842.924461 1.054331e+06 0.179994
+    Decision Tree 218723.040169 6.442084e+05 0.693863
+
+✅ 模型總結已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M3_20251109_030737\model_summary.csv
+
+============================================================
+✅ 訓練完成: 2025-11-09 03:07:44
+============================================================

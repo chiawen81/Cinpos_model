@@ -1,0 +1,125 @@
+============================================================
+🚀 模型訓練開始: 2025-11-09 03:08:56
+============================================================
+
+從 config/exclude_movies.csv 讀取排除清單:
+  發現 5 部需要排除的電影
+  排除的 gov_id: [31082, 22894, 23548, 30676, 31748]
+  將排除 5 部電影，共 80 筆資料
+  排除後剩餘資料筆數: 1259
+基本篩選後資料筆數: 860
+
+=== 缺失值檢查 ===
+Series([], dtype: int64)
+
+✅ 已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase3_prepare\M1_20251109_030856\preprocessed_full.csv
+📍資料數量小計:
+   欄位數: 21
+   資料筆數: 860
+
+=== 📍最終欄位清單 ===
+ 1. gov_id
+ 2. round_idx
+ 3. current_week_active_idx
+ 4. gap_real_week_2to1
+ 5. gap_real_week_1tocurrent
+ 6. boxoffice_week_2
+ 7. boxoffice_week_1
+ 8. audience_week_2
+ 9. audience_week_1
+10. screens_week_2
+11. screens_week_1
+12. open_week1_days
+13. open_week1_boxoffice
+14. open_week1_boxoffice_daily_avg
+15. open_week2_boxoffice
+16. amount
+17. release_year
+18. film_length
+19. is_restricted
+20. release_month_sin
+21. release_month_cos
+
+✅ 已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase3_prepare\M1_20251109_030856\preprocessed_features.csv
+✅ 已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase3_prepare\M1_20251109_030856\preprocessed_target.csv
+
+=== 📍資料摘要 ===
+             amount  boxoffice_week_1  current_week_active_idx
+count  8.600000e+02      8.600000e+02               860.000000
+mean   3.121327e+06      4.650099e+06                 9.026744
+std    1.202070e+07      1.701927e+07                 6.978295
+min    2.100000e+02      4.000000e+02                 3.000000
+25%    2.446625e+04      4.544750e+04                 4.000000
+50%    1.273745e+05      2.598440e+05                 7.000000
+75%    8.495432e+05      1.470424e+06                11.000000
+max    1.517199e+08      2.331174e+08                41.000000
+
+特徵矩陣 X: (860, 20)
+目標變數 y: (860,)
+
+==================================================
+🔍 特徵與目標相關性 (Top 10)
+==================================================
+                       feature  correlation
+              boxoffice_week_1     0.971244
+               audience_week_1     0.967195
+              boxoffice_week_2     0.879796
+               audience_week_2     0.874353
+          open_week2_boxoffice     0.528840
+          open_week1_boxoffice     0.482571
+                screens_week_1     0.444845
+open_week1_boxoffice_daily_avg     0.434528
+                screens_week_2     0.379010
+                   film_length     0.291778
+
+📍 訓練集/測試集分割結果
+訓練集: 647 筆 (99 部電影)
+測試集: 213 筆 (25 部電影)
+
+模型訓練特徵數: 19
+
+==================================================
+🔍 訓練集缺失值檢查
+==================================================
+✅ 無缺失值
+
+==================================================
+🔵 模型 1: Linear Regression
+==================================================
+MAE:  967,188
+RMSE: 2,160,924
+R²:   0.9560
+
+==================================================
+🟢 模型 2: LightGBM
+==================================================
+MAE:  1,276,380
+RMSE: 4,260,668
+R²:   0.8289
+
+==================================================
+📊 Top 10 重要特徵 (LightGBM)
+==================================================
+                       feature  importance
+              boxoffice_week_1         148
+               audience_week_1         132
+          open_week1_boxoffice          70
+              boxoffice_week_2          69
+                   film_length          53
+               audience_week_2          53
+          open_week2_boxoffice          35
+                screens_week_2          28
+open_week1_boxoffice_daily_avg          23
+       current_week_active_idx          23
+
+✅ 特徵重要性已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1_20251109_030856\feature_importance.csv
+✅ 預測結果圖已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1_20251109_030856\prediction_comparison.png
+
+✅ 模型已存檔:
+   - C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1_20251109_030856\model_linear_regression.pkl
+   - C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1_20251109_030856\model_lightgbm.pkl
+✅ 測試集預測結果已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1_20251109_030856\test_predictions.csv
+
+============================================================
+✅ 訓練完成: 2025-11-09 03:09:07
+============================================================

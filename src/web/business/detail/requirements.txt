@@ -1,0 +1,23 @@
+# Flask 核心套件
+Flask==3.0.0
+flask-cors==4.0.0
+
+# 資料處理
+pandas==2.1.0
+numpy==1.24.3
+openpyxl==3.1.2
+
+# 機器學習
+scikit-learn==1.3.0
+lightgbm==4.0.0
+
+# 圖表與視覺化
+plotly==5.18.0
+
+# 環境變數
+python-dotenv==1.0.0
+
+# 開發工具（可選）
+pytest==7.4.0
+black==23.7.0
+flake8==6.1.0

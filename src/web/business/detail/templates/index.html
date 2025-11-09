@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}首頁 - 電影票房預測系統{% endblock %}
+
+{% block content %}
+<div class="mb-4">
+    <h1>電影票房預測儀表板</h1>
+    <p class="text-secondary">AI 驅動的票房預測與分析平台</p>
+</div>
+
+<!-- 快速統計卡片 -->
+<div class="stats-grid mb-4">
+    <div class="stat-card">
+        <div class="stat-label">本週上映電影</div>
+        <div class="stat-value">12</div>
+        <div class="stat-change positive">+3 較上週</div>
+    </div>
+    
+    <div class="stat-card">
+        <div class="stat-label">預測準確率</div>
+        <div class="stat-value">92%</div>
+        <div class="stat-change">R² = 0.96</div>
+    </div>
+    
+    <div class="stat-card">
+        <div class="stat-label">預警電影</div>
+        <div class="stat-value">3</div>
+        <div class="stat-change negative">需要關注</div>
+    </div>
+    
+    <div class="stat-card">
+        <div class="stat-label">總預測數</div>
+        <div class="stat-value">156</div>
+        <div class="stat-change">本月累計</div>
+    </div>
+</div>
+
+<!-- 快速連結 -->
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">快速開始</h3>
+    </div>
+    <div class="card-body">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <a href="{{ url_for('movie_detail', gov_id='MOV001') }}" class="btn btn-primary">
+                查看範例電影預測
+            </a>
+            <a href="{{ url_for('movies_list') }}" class="btn btn-secondary">
+                瀏覽所有電影
+            </a>
+            <a href="{{ url_for('predictions') }}" class="btn btn-secondary">
+                預測分析工具
+            </a>
+            <a href="{{ url_for('reports') }}" class="btn btn-secondary">
+                下載報表
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- 最新預測 -->
+<div class="card mt-4">
+    <div class="card-header">
+        <h3 class="card-title">最新預測結果</h3>
+    </div>
+    <div class="card-body">
+        <table>
+            <thead>
+                <tr>
+                    <th>電影名稱</th>
+                    <th>當前週次</th>
+                    <th>下週預測</th>
+                    <th>衰退率</th>
+                    <th>狀態</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>科技風暴</td>
+                    <td>第8週</td>
+                    <td>NT$850萬</td>
+                    <td style="color: #FFA500;">-28%</td>
+                    <td><span class="badge badge-warning">注意</span></td>
+                    <td><a href="{{ url_for('movie_detail', gov_id='MOV001') }}">查看詳情</a></td>
+                </tr>
+                <tr>
+                    <td>愛在深秋</td>
+                    <td>第10週</td>
+                    <td>NT$320萬</td>
+                    <td style="color: #51CF66;">-15%</td>
+                    <td><span class="badge badge-success">正常</span></td>
+                    <td><a href="{{ url_for('movie_detail', gov_id='MOV002') }}">查看詳情</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

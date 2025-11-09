@@ -23,6 +23,10 @@ dependencies = [
     "scikit-learn>=1.7.2",
     "lightgbm>=4.6.0",
     "matplotlib>=3.10.7",
+    "numpy>=1.24.0",
+    "plotly>=5.18.0",
+    "python-dotenv>=1.0.0",
+    "flask-cors>=4.0.0",
 ]
 
 # 建置設定
@@ -43,3 +47,11 @@ src_paths = ["src"]
 target-version = "py313"
 select = ["E", "F", "I"]
 ignore = ["E501"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.4.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+]
+

@@ -348,8 +348,13 @@ plt.show()
 # === 20. 儲存模型 ===
 import joblib
 
-joblib.dump(lr_model, output_model_dir / "model_linear_regression.pkl")
-joblib.dump(lgb_model, output_model_dir / "model_lightgbm.pkl")
+# joblib.dump(lr_model, output_model_dir / "model_linear_regression.pkl")
+joblib.dump(
+    (lr_model, X_train_model.columns.tolist()), output_model_dir / "model_linear_regression.pkl"
+)
+# joblib.dump(lgb_model, output_model_dir / "model_lightgbm.pkl")
+joblib.dump((lgb_model, X_train_model.columns.tolist()), output_model_dir / "model_lightgbm.pkl")
+
 print(f"\n✅ 模型已存檔:")
 print(f"   - {output_model_dir / 'model_linear_regression.pkl'}")
 print(f"   - {output_model_dir / 'model_lightgbm.pkl'}")

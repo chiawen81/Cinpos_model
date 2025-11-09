@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+
+{% block title %}{{ movie.title }} - 票房預測詳情{% endblock %}
+
+{% block content %}
+<!-- 頁面標題 -->
+<div class="mb-4">
+    <h1>{{ movie.title }}</h1>
+    <p class="text-secondary">票房預測與趨勢分析</p>
+</div>
+
+<!-- 預警提示 -->
+{% if warning.has_warning %}
+<div class="alert alert-warning">
+    <span class="alert-icon">⚠</span>
+    <div class="alert-content">
+        <div class="alert-title">票房衰退預警</div>
+        <div class="alert-message">{{ warning.message }}</div>
+    </div>
+</div>
+{% endif %}
+
+<!-- 基本資訊卡片 -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="card-title">電影基本資訊</h3>
+        <span class="badge badge-primary">{{ movie.rating }}</span>
+    </div>
+    <div class="card-body">
+        <div class="info-list">
+            <div class="info-item">
+                <span class="info-label">政府代號</span>
+                <span class="info-value">{{ movie.gov_id }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">片長</span>
+                <span class="info-value">{{ movie.duration }} 分鐘</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">導演</span>
+                <span class="info-value">{{ movie.director }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">演員</span>
+                <span class="info-value">{{ movie.actors | join(', ') }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">發行國家</span>
+                <span class="info-value">{{ movie.country }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">上映日期</span>
+                <span class="info-value">{{ movie.release_date.strftime('%Y年%m月%d日') }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">發行商</span>
+                <span class="info-value">{{ movie.distributor }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 統計數據卡片 -->
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-label">總票房</div>
+        <div class="stat-value">{{ statistics.total_boxoffice | format_currency }}</div>
+        <div class="stat-change positive">
+            累計 {{ statistics.weeks_released }} 週
+        </div>
+    </div>
+    
+    <div class="stat-card">
+        <div class="stat-label">總觀影人數</div>
+        <div class="stat-value">{{ statistics.total_audience | format_number }}</div>
+        <div class="stat-change">
+            平均票價 NT$300
+        </div>
+    </div>
+    
+    <div class="stat-card">
+        <div class="stat-label">最高週票房</div>
+        <div class="stat-value">{{ statistics.peak_boxoffice | format_currency }}</div>
+        <div class="stat-change">
+            第 {{ statistics.peak_week }} 週
+        </div>
+    </div>
+    
+    <div class="stat-card">
+        <div class="stat-label">平均衰退率</div>
+        <div class="stat-value">{{ statistics.avg_decline_rate | format_percentage }}</div>
+        <div class="stat-change {% if statistics.avg_decline_rate < -0.3 %}negative{% else %}positive{% endif %}">
+            {{ '正常衰退' if statistics.avg_decline_rate > -0.3 else '衰退較快' }}
+        </div>
+    </div>
+</div>
+
+<!-- 票房趨勢圖表 -->
+<div class="chart-container">
+    <div class="chart-header">
+        <h3 class="chart-title">票房趨勢與未來預測</h3>
+        <div class="chart-actions">
+            <button class="btn btn-secondary" onclick="chartUtils.exportChart('boxoffice-trend-chart', 'png')">
+                📥 下載圖表
+            </button>
+        </div>
+    </div>
+    <div class="chart-wrapper" id="boxoffice-trend-chart" 
+         data-chart="boxoffice-trend" 
+         data-chart-data='{{ chart_data | tojson }}'>
+    </div>
+</div>
+
+<!-- 預測數據表格 -->
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">票房預測詳細數據</h3>
+        <div>
+            <button class="btn btn-primary" data-export="excel" data-gov-id="{{ movie.gov_id }}">
+                📊 匯出 Excel
+            </button>
+            <button class="btn btn-secondary" data-export="csv" data-gov-id="{{ movie.gov_id }}">
+                📄 匯出 CSV
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <table>
+            <thead>
+                <tr>
+                    <th>週次</th>
+                    <th>類型</th>
+                    <th>票房</th>
+                    <th>觀影人數</th>
+                    <th>廳數</th>
+                    <th>衰退率</th>
+                    <th>信心區間</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 歷史數據 -->
+                {% for record in history %}
+                <tr>
+                    <td>第{{ record.week }}週</td>
+                    <td><span class="badge badge-success">實際</span></td>
+                    <td>{{ record.boxoffice | format_currency }}</td>
+                    <td>{{ record.audience | format_number }}</td>
+                    <td>{{ record.screens }}</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                {% endfor %}
+                
+                <!-- 預測數據 -->
+                {% for pred in predictions %}
+                <tr style="background: rgba(156, 109, 255, 0.05);">
+                    <td>第{{ pred.week }}週</td>
+                    <td><span class="badge badge-primary">預測</span></td>
+                    <td>{{ pred.predicted_boxoffice | format_currency }}</td>
+                    <td>{{ (pred.predicted_boxoffice / 300) | int | format_number }}</td>
+                    <td>-</td>
+                    <td>
+                        <span style="color: {{ pred.decline_rate | decline_color }}">
+                            {{ pred.decline_rate | format_percentage }}
+                        </span>
+                    </td>
+                    <td>
+                        {{ pred.confidence_lower | format_currency }} ~ 
+                        {{ pred.confidence_upper | format_currency }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- 衰退率分析圖表 -->
+<div class="chart-container mt-4">
+    <div class="chart-header">
+        <h3 class="chart-title">週衰退率分析</h3>
+    </div>
+    <div class="chart-wrapper" id="decline-rate-chart" 
+         data-chart="decline-rate" 
+         data-chart-data='{{ decline_data | tojson }}'>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // 初始化圖表
+    document.addEventListener('DOMContentLoaded', function() {
+        // 可以在此添加即時更新功能
+        // chartUtils.startRealtimeUpdate('{{ movie.gov_id }}', 60000);
+    });
+</script>
+{% endblock %}

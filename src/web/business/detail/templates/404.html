@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}404 - 頁面不存在{% endblock %}
+
+{% block content %}
+<div style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+    <h1 style="font-size: 6rem; margin-bottom: 1rem;">404</h1>
+    <h2>頁面不存在</h2>
+    <p class="text-secondary mb-4">
+        {{ message or '抱歉，您要找的頁面不存在或已被移除。' }}
+    </p>
+    <div>
+        <a href="{{ url_for('index') }}" class="btn btn-primary">返回首頁</a>
+    </div>
+</div>
+{% endblock %}

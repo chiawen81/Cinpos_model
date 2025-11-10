@@ -1,0 +1,65 @@
+============================================================
+🎬 IMDb Rating 雙模型訓練開始 (2025-11-10 09:45:05)
+============================================================
+📥 載入資料：
+Feature: data\ML_rating\ML_data_PART2\ML_add_extag\merged_full_dataset_full_extag_add_tree_feature.csv
+Target : data\ML_rating\ML_data_PART2\ML_add_extag\merged_full_dataset_extag_add_tree_target.csv
+🔠 偵測到文字欄位 1 個，執行 OneHot 編碼: ['region']
+✅ 清理後資料: X=804, y=804, 特徵數=34
+📚 訓練集: 643 筆, 測試集: 161 筆
+
+==================================================
+🟢 模型 1: LightGBM
+==================================================
+
+[LightGBM] 評估結果
+  MAE : 0.1639
+  RMSE: 0.3508
+  R²  : 0.9063
+
+🔍 LightGBM 前 10 重要特徵：
+ 1. open_week2_boxoffice                894.000
+ 2. open_week1_boxoffice_daily_avg      736.000
+ 3. film_length_x                       729.000
+ 4. open_week1_boxoffice                674.000
+ 5. release_month_cos                   349.000
+ 6. amount                              232.000
+ 7. release_month_sin                   232.000
+ 8. open_week1_days                     184.000
+ 9. is_restricted                       183.000
+10. screens_week_2                      172.000
+
+==================================================
+🌲 模型 2: Random Forest
+==================================================
+
+[RandomForest] 評估結果
+  MAE : 0.1762
+  RMSE: 0.3799
+  R²  : 0.8901
+
+🔍 RandomForest 前 10 重要特徵：
+ 1. open_week2_boxoffice                0.160
+ 2. film_length_y                       0.131
+ 3. film_length_x                       0.126
+ 4. open_week1_boxoffice_daily_avg      0.094
+ 5. release_month_sin                   0.090
+ 6. release_month_cos                   0.075
+ 7. region_日本                           0.070
+ 8. open_week1_boxoffice                0.063
+ 9. open_week1_days                     0.042
+10. is_restricted                       0.027
+
+============================================================
+📘 模型訓練摘要
+============================================================
+LightGBM → R²=0.9063, RMSE=0.3508
+RandomForest → R²=0.8901, RMSE=0.3799
+
+📂 模型輸出資料夾: data\ML_rating\2type_rating_models_v2
+🧾 Log 檔案: training_log_20251110_094505.txt
+📊 特徵重要性: feature_importance_2models.csv
+📈 圖像輸出: rating_prediction_2models.png
+📊 Top15 特徵圖: feature_importance_top15.png
+📑 測試結果: test_predictions_2models.csv
+============================================================

@@ -27,6 +27,3 @@ services:
 
     # 自動部署設定
     autoDeploy: true
-
-    # 靜態檔案設定（可選）
-    staticPublishPath: ./static

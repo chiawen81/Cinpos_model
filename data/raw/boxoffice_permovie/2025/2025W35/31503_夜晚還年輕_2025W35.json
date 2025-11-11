@@ -1,0 +1,132 @@
+{
+  "data": {
+    "movieId": "31503",
+    "name": "夜晚還年輕",
+    "originalName": "Tangerine",
+    "region": "美國",
+    "rating": "限制級",
+    "classes": null,
+    "releaseDate": "2025-08-15",
+    "publisher": "好威映象有限公司",
+    "amountInThisWeek": 605393.0,
+    "totalAmount": 605393.0,
+    "filmClasses": null,
+    "filmLength": 5220,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 181544.0,
+        "tickets": 770,
+        "totalAmount": 181544.0,
+        "totalTickets": 770,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 59440.0,
+        "tickets": 264,
+        "totalAmount": 240984.0,
+        "totalTickets": 1034,
+        "rate": -0.672586260080201,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 38675.0,
+        "tickets": 174,
+        "totalAmount": 279659.0,
+        "totalTickets": 1208,
+        "rate": -0.34934387617765816,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 15485.0,
+        "tickets": 69,
+        "totalAmount": 295144.0,
+        "totalTickets": 1277,
+        "rate": -0.599612152553329,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 3975.0,
+        "tickets": 17,
+        "totalAmount": 299119.0,
+        "totalTickets": 1294,
+        "rate": -0.7432999677106877,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 299119.0,
+        "totalTickets": 1294,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 181544.0,
+        "tickets": 770,
+        "totalAmount": 181544.0,
+        "totalTickets": 770,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 226404.0,
+        "tickets": 981,
+        "totalAmount": 407948.0,
+        "totalTickets": 1751,
+        "rate": 0.24710263076719693,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 96850.0,
+        "tickets": 432,
+        "totalAmount": 504798.0,
+        "totalTickets": 2183,
+        "rate": -0.5722248723520786,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 53145.0,
+        "tickets": 240,
+        "totalAmount": 557943.0,
+        "totalTickets": 2423,
+        "rate": -0.4512648425400103,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 43600.0,
+        "tickets": 191,
+        "totalAmount": 601543.0,
+        "totalTickets": 2614,
+        "rate": -0.1796029729984006,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 3850.0,
+        "tickets": 16,
+        "totalAmount": 605393.0,
+        "totalTickets": 2630,
+        "rate": -0.911697247706422,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

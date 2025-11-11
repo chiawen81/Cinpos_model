@@ -1,0 +1,157 @@
+{
+  "data": {
+    "movieId": "31158",
+    "name": "黑白線人",
+    "originalName": "Yadang: The Snitch",
+    "region": "韓國",
+    "rating": "限制級",
+    "classes": null,
+    "releaseDate": "2025-09-05",
+    "publisher": "可樂藝術文創股份有限公司",
+    "amountInThisWeek": 1129371.0,
+    "totalAmount": 1129371.0,
+    "filmClasses": null,
+    "filmLength": 7320,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82368,
+        "typeName": "導演",
+        "name": "黃炳國",
+        "originalName": "Hwang Byeng-Gug"
+      },
+      {
+        "id": 22467,
+        "typeName": "演員",
+        "name": "姜河那",
+        "originalName": "Ha-Neul Kang"
+      },
+      {
+        "id": 82376,
+        "typeName": "演員",
+        "name": "朴海俊",
+        "originalName": "Park Hae-joon"
+      },
+      {
+        "id": 16145,
+        "typeName": "演員",
+        "name": "柳海真",
+        "originalName": "Hae-jin Yoo"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 467552.0,
+        "tickets": 1758,
+        "totalAmount": 467552.0,
+        "totalTickets": 1758,
+        "rate": 0,
+        "theaterCount": 38
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 174140.0,
+        "tickets": 621,
+        "totalAmount": 641692.0,
+        "totalTickets": 2379,
+        "rate": -0.6275494490452399,
+        "theaterCount": 32
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 28731.0,
+        "tickets": 103,
+        "totalAmount": 670423.0,
+        "totalTickets": 2482,
+        "rate": -0.8350120592626622,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 2050.0,
+        "tickets": 8,
+        "totalAmount": 672473.0,
+        "totalTickets": 2490,
+        "rate": -0.9286484981378998,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 800.0,
+        "tickets": 3,
+        "totalAmount": 673273.0,
+        "totalTickets": 2493,
+        "rate": -0.6097560975609756,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 673273.0,
+        "totalTickets": 2493,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 467552.0,
+        "tickets": 1758,
+        "totalAmount": 467552.0,
+        "totalTickets": 1758,
+        "rate": 0,
+        "theaterCount": 38
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 503703.0,
+        "tickets": 1929,
+        "totalAmount": 971255.0,
+        "totalTickets": 3687,
+        "rate": 0.07731974197522415,
+        "theaterCount": 38
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 140018.0,
+        "tickets": 525,
+        "totalAmount": 1111273.0,
+        "totalTickets": 4212,
+        "rate": -0.7220226998846543,
+        "theaterCount": 31
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 16098.0,
+        "tickets": 66,
+        "totalAmount": 1127371.0,
+        "totalTickets": 4278,
+        "rate": -0.8850290676912969,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 2000.0,
+        "tickets": 8,
+        "totalAmount": 1129371.0,
+        "totalTickets": 4286,
+        "rate": -0.8757609640949187,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 1129371.0,
+        "totalTickets": 4286,
+        "rate": -1,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

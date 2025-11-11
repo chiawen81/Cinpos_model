@@ -1,0 +1,505 @@
+{
+  "data": {
+    "movieId": "29378",
+    "name": "我家的事",
+    "originalName": "Family Matters",
+    "region": "中華民國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-09-12",
+    "publisher": "酷映有影工作室有限公司",
+    "amountInThisWeek": 10233344.0,
+    "totalAmount": 10233344.0,
+    "filmClasses": null,
+    "filmLength": 5880,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 42693,
+        "typeName": "演員",
+        "name": "曾敬驊",
+        "originalName": "Chin-Hua Tseng"
+      },
+      {
+        "id": 82392,
+        "typeName": "演員",
+        "name": "高伊玲",
+        "originalName": "Iling Kao"
+      },
+      {
+        "id": 12141,
+        "typeName": "演員",
+        "name": "藍葦華",
+        "originalName": "Wei-Hua Lan"
+      },
+      {
+        "id": 82403,
+        "typeName": "導演",
+        "name": "潘客印",
+        "originalName": "Ke-Yin Pan"
+      },
+      {
+        "id": 82404,
+        "typeName": "演員",
+        "name": "黃珮琪",
+        "originalName": "Pei-Chi Huang"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-05-23~2025-05-25",
+        "amount": 25300.0,
+        "tickets": 110,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-05-30~2025-06-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-06~2025-06-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-13~2025-06-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-20~2025-06-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-27~2025-06-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-07-04~2025-07-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-07-11~2025-07-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-07-18~2025-07-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-07-25~2025-07-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-01~2025-08-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-08~2025-08-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 132327.0,
+        "tickets": 470,
+        "totalAmount": 157627.0,
+        "totalTickets": 580,
+        "rate": 0,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 2350397.0,
+        "tickets": 9029,
+        "totalAmount": 2508024.0,
+        "totalTickets": 9609,
+        "rate": 16.762036470259282,
+        "theaterCount": 66
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 1814944.0,
+        "tickets": 6912,
+        "totalAmount": 4322968.0,
+        "totalTickets": 16521,
+        "rate": -0.22781385442544388,
+        "theaterCount": 66
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 736660.0,
+        "tickets": 2872,
+        "totalAmount": 5059628.0,
+        "totalTickets": 19393,
+        "rate": -0.5941141985648042,
+        "theaterCount": 53
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 593376.0,
+        "tickets": 2307,
+        "totalAmount": 5653004.0,
+        "totalTickets": 21700,
+        "rate": -0.19450492764640404,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 386679.0,
+        "tickets": 1443,
+        "totalAmount": 6039683.0,
+        "totalTickets": 23143,
+        "rate": -0.34834068111955996,
+        "theaterCount": 27
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 194340.0,
+        "tickets": 751,
+        "totalAmount": 6234023.0,
+        "totalTickets": 23894,
+        "rate": -0.49741258252969517,
+        "theaterCount": 22
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 50063.0,
+        "tickets": 202,
+        "totalAmount": 6284086.0,
+        "totalTickets": 24096,
+        "rate": -0.7423947720489863,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 31630.0,
+        "tickets": 129,
+        "totalAmount": 6315716.0,
+        "totalTickets": 24225,
+        "rate": -0.36819607294808543,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 8710.0,
+        "tickets": 36,
+        "totalAmount": 6324426.0,
+        "totalTickets": 24261,
+        "rate": -0.7246285172304774,
+        "theaterCount": 2
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-05-19~2025-05-25",
+        "amount": 25300.0,
+        "tickets": 110,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-05-26~2025-06-01",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-02~2025-06-08",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-09~2025-06-15",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-16~2025-06-22",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-23~2025-06-29",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-06-30~2025-07-06",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-07-07~2025-07-13",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-07-14~2025-07-20",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-07-21~2025-07-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-07-28~2025-08-03",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-04~2025-08-10",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 25300.0,
+        "totalTickets": 110,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 39000.0,
+        "tickets": 150,
+        "totalAmount": 64300.0,
+        "totalTickets": 260,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 162457.0,
+        "tickets": 601,
+        "totalAmount": 226757.0,
+        "totalTickets": 861,
+        "rate": 3.1655641025641024,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 2643087.0,
+        "tickets": 9961,
+        "totalAmount": 2869844.0,
+        "totalTickets": 10822,
+        "rate": 15.269455917565878,
+        "theaterCount": 66
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 3264678.0,
+        "tickets": 12711,
+        "totalAmount": 6134522.0,
+        "totalTickets": 23533,
+        "rate": 0.235176140626472,
+        "theaterCount": 66
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 1522854.0,
+        "tickets": 5944,
+        "totalAmount": 7657376.0,
+        "totalTickets": 29477,
+        "rate": -0.533536232363498,
+        "theaterCount": 66
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 1144142.0,
+        "tickets": 4456,
+        "totalAmount": 8801518.0,
+        "totalTickets": 33933,
+        "rate": -0.2486856914714083,
+        "theaterCount": 53
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 822684.0,
+        "tickets": 3157,
+        "totalAmount": 9624202.0,
+        "totalTickets": 37090,
+        "rate": -0.28095988085394996,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 385607.0,
+        "tickets": 1508,
+        "totalAmount": 10009809.0,
+        "totalTickets": 38598,
+        "rate": -0.5312817558138969,
+        "theaterCount": 28
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 118060.0,
+        "tickets": 480,
+        "totalAmount": 10127869.0,
+        "totalTickets": 39078,
+        "rate": -0.6938333588342536,
+        "theaterCount": 22
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 58535.0,
+        "tickets": 243,
+        "totalAmount": 10186404.0,
+        "totalTickets": 39321,
+        "rate": -0.5041927833305099,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 46940.0,
+        "tickets": 205,
+        "totalAmount": 10233344.0,
+        "totalTickets": 39526,
+        "rate": -0.19808661484581874,
+        "theaterCount": 6
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

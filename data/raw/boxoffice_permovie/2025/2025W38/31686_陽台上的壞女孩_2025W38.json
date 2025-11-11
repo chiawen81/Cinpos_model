@@ -1,0 +1,157 @@
+{
+  "data": {
+    "movieId": "31686",
+    "name": "陽台上的壞女孩",
+    "originalName": "THE BALCONETTES",
+    "region": "法國",
+    "rating": "限制級",
+    "classes": null,
+    "releaseDate": "2025-09-05",
+    "publisher": "東昊影業有限公司",
+    "amountInThisWeek": 422666.0,
+    "totalAmount": 422666.0,
+    "filmClasses": null,
+    "filmLength": 6180,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 56830,
+        "typeName": "演員",
+        "name": "蘇海拉雅各布",
+        "originalName": "Souheila Yacoub"
+      },
+      {
+        "id": 25254,
+        "typeName": "導演",
+        "name": "諾耶米梅蘭特",
+        "originalName": "Noemie Merlant"
+      },
+      {
+        "id": 25254,
+        "typeName": "編劇",
+        "name": "諾耶米梅蘭特",
+        "originalName": "Noemie Merlant"
+      },
+      {
+        "id": 25254,
+        "typeName": "演員",
+        "name": "諾耶米梅蘭特",
+        "originalName": "Noemie Merlant"
+      },
+      {
+        "id": 82383,
+        "typeName": "演員",
+        "name": "娜德戈伯森迪亞涅",
+        "originalName": "Nadege Beausson-Diagne"
+      },
+      {
+        "id": 74369,
+        "typeName": "演員",
+        "name": "盧卡斯巴禾",
+        "originalName": "Lucas Bravo"
+      },
+      {
+        "id": 82401,
+        "typeName": "演員",
+        "name": "桑達科德雷努",
+        "originalName": "Sanda Codreanu"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 89115.0,
+        "tickets": 386,
+        "totalAmount": 89115.0,
+        "totalTickets": 386,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 14625.0,
+        "tickets": 66,
+        "totalAmount": 103740.0,
+        "totalTickets": 452,
+        "rate": -0.8358862144420132,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 3620.0,
+        "tickets": 15,
+        "totalAmount": 107360.0,
+        "totalTickets": 467,
+        "rate": -0.7524786324786324,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 107360.0,
+        "totalTickets": 467,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 107360.0,
+        "totalTickets": 467,
+        "rate": 0,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 89115.0,
+        "tickets": 386,
+        "totalAmount": 89115.0,
+        "totalTickets": 386,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 97872.0,
+        "tickets": 423,
+        "totalAmount": 186987.0,
+        "totalTickets": 809,
+        "rate": 0.09826628513718229,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 22310.0,
+        "tickets": 99,
+        "totalAmount": 209297.0,
+        "totalTickets": 908,
+        "rate": -0.772049207127677,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 1560.0,
+        "tickets": 7,
+        "totalAmount": 210857.0,
+        "totalTickets": 915,
+        "rate": -0.9300761990138952,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 211809.0,
+        "tickets": 596,
+        "totalAmount": 422666.0,
+        "totalTickets": 1511,
+        "rate": 134.775,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

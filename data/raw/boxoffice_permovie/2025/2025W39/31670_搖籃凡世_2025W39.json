@@ -1,0 +1,115 @@
+{
+  "data": {
+    "movieId": "31670",
+    "name": "搖籃凡世",
+    "originalName": "Pavane for an Infant",
+    "region": "馬來西亞",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-09-19",
+    "publisher": "海鵬影業有限公司",
+    "amountInThisWeek": 105506.0,
+    "totalAmount": 105506.0,
+    "filmClasses": null,
+    "filmLength": 6960,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 81825,
+        "typeName": "演員",
+        "name": "許恩怡",
+        "originalName": "Natalie Hsu"
+      },
+      {
+        "id": 18588,
+        "typeName": "演員",
+        "name": "廖子妤",
+        "originalName": "Fish Liew"
+      },
+      {
+        "id": 56678,
+        "typeName": "導演",
+        "name": "張吉安",
+        "originalName": "Keat Aun Chong"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 52061.0,
+        "tickets": 232,
+        "totalAmount": 52061.0,
+        "totalTickets": 232,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 2920.0,
+        "tickets": 12,
+        "totalAmount": 54981.0,
+        "totalTickets": 244,
+        "rate": -0.9439119494439215,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 260.0,
+        "tickets": 1,
+        "totalAmount": 55241.0,
+        "totalTickets": 245,
+        "rate": -0.910958904109589,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 55241.0,
+        "totalTickets": 245,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 52061.0,
+        "tickets": 232,
+        "totalAmount": 52061.0,
+        "totalTickets": 232,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 26985.0,
+        "tickets": 115,
+        "totalAmount": 79046.0,
+        "totalTickets": 347,
+        "rate": -0.48166573826856957,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 25940.0,
+        "tickets": 104,
+        "totalAmount": 104986.0,
+        "totalTickets": 451,
+        "rate": -0.03872521771354456,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 520.0,
+        "tickets": 2,
+        "totalAmount": 105506.0,
+        "totalTickets": 453,
+        "rate": -0.9799537393986122,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

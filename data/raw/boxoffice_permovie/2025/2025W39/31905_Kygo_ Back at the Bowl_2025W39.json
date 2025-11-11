@@ -1,0 +1,60 @@
+{
+  "data": {
+    "movieId": "31905",
+    "name": "Kygo: Back at the Bowl",
+    "originalName": "Kygo: Back at the Bowl",
+    "region": "美國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-09-26",
+    "publisher": "秀泰全球影城股份有限公司",
+    "amountInThisWeek": 141510.0,
+    "totalAmount": 141510.0,
+    "filmClasses": null,
+    "filmLength": 6000,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 86865.0,
+        "tickets": 124,
+        "totalAmount": 86865.0,
+        "totalTickets": 124,
+        "rate": 0,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 86865.0,
+        "totalTickets": 124,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 86865.0,
+        "tickets": 124,
+        "totalAmount": 86865.0,
+        "totalTickets": 124,
+        "rate": 0,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 54645.0,
+        "tickets": 80,
+        "totalAmount": 141510.0,
+        "totalTickets": 204,
+        "rate": -0.3709203937143844,
+        "theaterCount": 8
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -1,0 +1,114 @@
+{
+  "data": {
+    "movieId": "31556",
+    "name": "鬼 · 驅靈",
+    "originalName": "DOMINION OF DARKNESS",
+    "region": "印尼",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-08-15",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 2043141.0,
+    "totalAmount": 2043141.0,
+    "filmClasses": null,
+    "filmLength": 5700,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 949499.0,
+        "tickets": 3476,
+        "totalAmount": 949499.0,
+        "totalTickets": 3476,
+        "rate": 0,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 150825.0,
+        "tickets": 551,
+        "totalAmount": 1100324.0,
+        "totalTickets": 4027,
+        "rate": -0.8411530712512598,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 33390.0,
+        "tickets": 115,
+        "totalAmount": 1133714.0,
+        "totalTickets": 4142,
+        "rate": -0.7786176031824963,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 1370.0,
+        "tickets": 6,
+        "totalAmount": 1135084.0,
+        "totalTickets": 4148,
+        "rate": -0.9589697514225816,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 1135084.0,
+        "totalTickets": 4148,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 949499.0,
+        "tickets": 3476,
+        "totalAmount": 949499.0,
+        "totalTickets": 3476,
+        "rate": 0,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 890697.0,
+        "tickets": 3295,
+        "totalAmount": 1840196.0,
+        "totalTickets": 6771,
+        "rate": -0.06192950176882756,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 195565.0,
+        "tickets": 693,
+        "totalAmount": 2035761.0,
+        "totalTickets": 7464,
+        "rate": -0.7804359956303883,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 7380.0,
+        "tickets": 29,
+        "totalAmount": 2043141.0,
+        "totalTickets": 7493,
+        "rate": -0.9622631861529415,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 2043141.0,
+        "totalTickets": 7493,
+        "rate": -1,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

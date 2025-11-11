@@ -1,0 +1,163 @@
+{
+  "data": {
+    "movieId": "31760",
+    "name": "鬼巫",
+    "originalName": "WITCHBOARD",
+    "region": "美國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-09-12",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 1160569.0,
+    "totalAmount": 1160569.0,
+    "filmClasses": null,
+    "filmLength": 6720,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 28299,
+        "typeName": "演員",
+        "name": "麥蒂遜艾斯曼",
+        "originalName": "Madison Iseman"
+      },
+      {
+        "id": 82418,
+        "typeName": "演員",
+        "name": "梅蘭妮簡森",
+        "originalName": "Mel Jarnson"
+      },
+      {
+        "id": 82421,
+        "typeName": "演員",
+        "name": "亞倫多明格斯",
+        "originalName": "Aaron Dominguez"
+      },
+      {
+        "id": 20617,
+        "typeName": "演員",
+        "name": "傑米坎貝爾鮑爾",
+        "originalName": "Jamie Campbell Bower"
+      },
+      {
+        "id": 38000,
+        "typeName": "演員",
+        "name": "查理特翰",
+        "originalName": "Charlie Tahan"
+      },
+      {
+        "id": 82423,
+        "typeName": "演員",
+        "name": "安東妮亞戴斯培",
+        "originalName": "Antonia Desplat"
+      },
+      {
+        "id": 20099,
+        "typeName": "導演",
+        "name": "恰克羅素",
+        "originalName": "Chuck Russell"
+      },
+      {
+        "id": 20099,
+        "typeName": "編劇",
+        "name": "恰克羅素",
+        "originalName": "Chuck Russell"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 645419.0,
+        "tickets": 2549,
+        "totalAmount": 645419.0,
+        "totalTickets": 2549,
+        "rate": 0,
+        "theaterCount": 67
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 90737.0,
+        "tickets": 365,
+        "totalAmount": 736156.0,
+        "totalTickets": 2914,
+        "rate": -0.859413807154732,
+        "theaterCount": 33
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 5730.0,
+        "tickets": 28,
+        "totalAmount": 741886.0,
+        "totalTickets": 2942,
+        "rate": -0.9368504579168365,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 1210.0,
+        "tickets": 6,
+        "totalAmount": 743096.0,
+        "totalTickets": 2948,
+        "rate": -0.7888307155322862,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 743096.0,
+        "totalTickets": 2948,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 645419.0,
+        "tickets": 2549,
+        "totalAmount": 645419.0,
+        "totalTickets": 2549,
+        "rate": 0,
+        "theaterCount": 67
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 475081.0,
+        "tickets": 1915,
+        "totalAmount": 1120500.0,
+        "totalTickets": 4464,
+        "rate": -0.26391847776405714,
+        "theaterCount": 67
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 34679.0,
+        "tickets": 161,
+        "totalAmount": 1155179.0,
+        "totalTickets": 4625,
+        "rate": -0.9270040266817658,
+        "theaterCount": 29
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 4800.0,
+        "tickets": 23,
+        "totalAmount": 1159979.0,
+        "totalTickets": 4648,
+        "rate": -0.8615877043744052,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 590.0,
+        "tickets": 3,
+        "totalAmount": 1160569.0,
+        "totalTickets": 4651,
+        "rate": -0.8770833333333333,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

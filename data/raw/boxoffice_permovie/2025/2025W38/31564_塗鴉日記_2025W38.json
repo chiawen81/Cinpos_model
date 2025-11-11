@@ -1,0 +1,133 @@
+{
+  "data": {
+    "movieId": "31564",
+    "name": "塗鴉日記",
+    "originalName": "Kakukaku Shikajika",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-08-27",
+    "publisher": "天馬行空數位有限公司",
+    "amountInThisWeek": 222465.0,
+    "totalAmount": 222465.0,
+    "filmClasses": null,
+    "filmLength": 7560,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 19189,
+        "typeName": "演員",
+        "name": "大泉洋",
+        "originalName": "Yo Oizumi"
+      },
+      {
+        "id": 82399,
+        "typeName": "導演",
+        "name": "關和亮",
+        "originalName": "Kazuaki Seki"
+      },
+      {
+        "id": 18968,
+        "typeName": "演員",
+        "name": "永野芽郁",
+        "originalName": "Mei Nagano"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 58985.0,
+        "tickets": 243,
+        "totalAmount": 58985.0,
+        "totalTickets": 243,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 17687.0,
+        "tickets": 80,
+        "totalAmount": 76672.0,
+        "totalTickets": 323,
+        "rate": -0.7001441044333305,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 1400.0,
+        "tickets": 5,
+        "totalAmount": 78072.0,
+        "totalTickets": 328,
+        "rate": -0.9208458189630803,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 78072.0,
+        "totalTickets": 328,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 84500.0,
+        "tickets": 334,
+        "totalAmount": 84500.0,
+        "totalTickets": 334,
+        "rate": 0,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 58985.0,
+        "tickets": 243,
+        "totalAmount": 143485.0,
+        "totalTickets": 577,
+        "rate": -0.30195266272189347,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 59216.0,
+        "tickets": 257,
+        "totalAmount": 202701.0,
+        "totalTickets": 834,
+        "rate": 0.003916249894040858,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 18494.0,
+        "tickets": 79,
+        "totalAmount": 221195.0,
+        "totalTickets": 913,
+        "rate": -0.6876857606052418,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 1270.0,
+        "tickets": 5,
+        "totalAmount": 222465.0,
+        "totalTickets": 918,
+        "rate": -0.9313290797015248,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

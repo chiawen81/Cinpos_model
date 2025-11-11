@@ -1,0 +1,163 @@
+{
+  "data": {
+    "movieId": "31330",
+    "name": "醜繼妹",
+    "originalName": "The Ugly Stepsister",
+    "region": "挪威",
+    "rating": "限制級",
+    "classes": null,
+    "releaseDate": "2025-08-01",
+    "publisher": "傳影互動股份有限公司",
+    "amountInThisWeek": 913249.0,
+    "totalAmount": 913249.0,
+    "filmClasses": null,
+    "filmLength": 6540,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82337,
+        "typeName": "演員",
+        "name": "莉亞邁倫",
+        "originalName": "Lea Myren"
+      },
+      {
+        "id": 82338,
+        "typeName": "編劇",
+        "name": "艾蜜莉布利希費爾特",
+        "originalName": "Emilie Blichfeldt"
+      },
+      {
+        "id": 82338,
+        "typeName": "導演",
+        "name": "艾蜜莉布利希費爾特",
+        "originalName": "Emilie Blichfeldt"
+      },
+      {
+        "id": 82340,
+        "typeName": "演員",
+        "name": "忒亞蘇菲內斯",
+        "originalName": "Thea Sofie Loch Nass"
+      },
+      {
+        "id": 29082,
+        "typeName": "演員",
+        "name": "安達爾托普",
+        "originalName": "Ane Dahl Torp"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-01~2025-08-03",
+        "amount": 355054.0,
+        "tickets": 1370,
+        "totalAmount": 355054.0,
+        "totalTickets": 1370,
+        "rate": 0,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-08-08~2025-08-10",
+        "amount": 111388.0,
+        "tickets": 427,
+        "totalAmount": 466442.0,
+        "totalTickets": 1797,
+        "rate": -0.6862787069009221,
+        "theaterCount": 19
+      },
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 34022.0,
+        "tickets": 136,
+        "totalAmount": 500464.0,
+        "totalTickets": 1933,
+        "rate": -0.694563148633605,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 7550.0,
+        "tickets": 33,
+        "totalAmount": 508014.0,
+        "totalTickets": 1966,
+        "rate": -0.77808476867909,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 3000.0,
+        "tickets": 12,
+        "totalAmount": 511014.0,
+        "totalTickets": 1978,
+        "rate": -0.6026490066225165,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 511014.0,
+        "totalTickets": 1978,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-07-28~2025-08-03",
+        "amount": 355054.0,
+        "tickets": 1370,
+        "totalAmount": 355054.0,
+        "totalTickets": 1370,
+        "rate": 0,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-08-04~2025-08-10",
+        "amount": 374918.0,
+        "tickets": 1455,
+        "totalAmount": 729972.0,
+        "totalTickets": 2825,
+        "rate": 0.055946419417891365,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 125514.0,
+        "tickets": 499,
+        "totalAmount": 855486.0,
+        "totalTickets": 3324,
+        "rate": -0.6652227953845907,
+        "theaterCount": 19
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 39603.0,
+        "tickets": 161,
+        "totalAmount": 895089.0,
+        "totalTickets": 3485,
+        "rate": -0.6844734451933648,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 16345.0,
+        "tickets": 69,
+        "totalAmount": 911434.0,
+        "totalTickets": 3554,
+        "rate": -0.5872787415094816,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 1815.0,
+        "tickets": 8,
+        "totalAmount": 913249.0,
+        "totalTickets": 3562,
+        "rate": -0.8889568675435913,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

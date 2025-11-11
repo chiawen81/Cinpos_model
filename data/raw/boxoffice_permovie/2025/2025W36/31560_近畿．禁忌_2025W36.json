@@ -1,0 +1,114 @@
+{
+  "data": {
+    "movieId": "31560",
+    "name": "近畿．禁忌",
+    "originalName": "KINKI",
+    "region": "日本",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-08-22",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 1958309.0,
+    "totalAmount": 1958309.0,
+    "filmClasses": null,
+    "filmLength": 6180,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 869870.0,
+        "tickets": 3187,
+        "totalAmount": 869870.0,
+        "totalTickets": 3187,
+        "rate": 0,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 220214.0,
+        "tickets": 789,
+        "totalAmount": 1090084.0,
+        "totalTickets": 3976,
+        "rate": -0.746842631657604,
+        "theaterCount": 20
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 32934.0,
+        "tickets": 118,
+        "totalAmount": 1123018.0,
+        "totalTickets": 4094,
+        "rate": -0.8504454757644836,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 5100.0,
+        "tickets": 18,
+        "totalAmount": 1128118.0,
+        "totalTickets": 4112,
+        "rate": -0.845144835124795,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 1128118.0,
+        "totalTickets": 4112,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 869870.0,
+        "tickets": 3187,
+        "totalAmount": 869870.0,
+        "totalTickets": 3187,
+        "rate": 0,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 932180.0,
+        "tickets": 3459,
+        "totalAmount": 1802050.0,
+        "totalTickets": 6646,
+        "rate": 0.07163139319668456,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 123524.0,
+        "tickets": 452,
+        "totalAmount": 1925574.0,
+        "totalTickets": 7098,
+        "rate": -0.8674891115449805,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 28085.0,
+        "tickets": 104,
+        "totalAmount": 1953659.0,
+        "totalTickets": 7202,
+        "rate": -0.7726352773550079,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 4650.0,
+        "tickets": 18,
+        "totalAmount": 1958309.0,
+        "totalTickets": 7220,
+        "rate": -0.8344311910272387,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

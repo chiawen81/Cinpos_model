@@ -1,0 +1,42 @@
+{
+  "data": {
+    "movieId": "16739",
+    "name": "八月三十一日，我在奧斯陸",
+    "originalName": "Oslo, August 31st",
+    "region": "挪威",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2023-08-29",
+    "publisher": "好威映象有限公司",
+    "amountInThisWeek": 387414.0,
+    "totalAmount": 387414.0,
+    "filmClasses": null,
+    "filmLength": 5640,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 387414.0,
+        "tickets": 1407,
+        "totalAmount": 387414.0,
+        "totalTickets": 1407,
+        "rate": 0,
+        "theaterCount": 10
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 387414.0,
+        "tickets": 1407,
+        "totalAmount": 387414.0,
+        "totalTickets": 1407,
+        "rate": 0,
+        "theaterCount": 10
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

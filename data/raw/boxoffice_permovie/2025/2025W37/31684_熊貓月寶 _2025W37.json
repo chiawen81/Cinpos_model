@@ -1,0 +1,139 @@
+{
+  "data": {
+    "movieId": "31684",
+    "name": "熊貓月寶 ",
+    "originalName": "MOON THE PANDA",
+    "region": "法國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-08-29",
+    "publisher": "壹壹喜喜電影股份有限公司",
+    "amountInThisWeek": 223341.0,
+    "totalAmount": 223341.0,
+    "filmClasses": null,
+    "filmLength": 5940,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 26282,
+        "typeName": "演員",
+        "name": "亞歷珊卓蕾米",
+        "originalName": "Alexandra Lamy"
+      },
+      {
+        "id": 64232,
+        "typeName": "演員",
+        "name": "劉燁",
+        "originalName": "Ye Liu"
+      },
+      {
+        "id": 10715,
+        "typeName": "演員",
+        "name": "張艾嘉",
+        "originalName": "Sylvia Chang"
+      },
+      {
+        "id": 82434,
+        "typeName": "導演",
+        "name": "吉勒斯戴邁斯特",
+        "originalName": "Gilles de Maistre"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 172934.0,
+        "tickets": 658,
+        "totalAmount": 172934.0,
+        "totalTickets": 658,
+        "rate": 0,
+        "theaterCount": 23
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 8420.0,
+        "tickets": 36,
+        "totalAmount": 181354.0,
+        "totalTickets": 694,
+        "rate": -0.9513109047382239,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 4110.0,
+        "tickets": 17,
+        "totalAmount": 185464.0,
+        "totalTickets": 711,
+        "rate": -0.5118764845605701,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 1980.0,
+        "tickets": 9,
+        "totalAmount": 187444.0,
+        "totalTickets": 720,
+        "rate": -0.5182481751824818,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 187444.0,
+        "totalTickets": 720,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 172934.0,
+        "tickets": 658,
+        "totalAmount": 172934.0,
+        "totalTickets": 658,
+        "rate": 0,
+        "theaterCount": 23
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 41507.0,
+        "tickets": 166,
+        "totalAmount": 214441.0,
+        "totalTickets": 824,
+        "rate": -0.7599835775498167,
+        "theaterCount": 23
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 6500.0,
+        "tickets": 28,
+        "totalAmount": 220941.0,
+        "totalTickets": 852,
+        "rate": -0.8433999084491772,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 2180.0,
+        "tickets": 10,
+        "totalAmount": 223121.0,
+        "totalTickets": 862,
+        "rate": -0.6646153846153846,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 220.0,
+        "tickets": 1,
+        "totalAmount": 223341.0,
+        "totalTickets": 863,
+        "rate": -0.8990825688073395,
+        "theaterCount": 2
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

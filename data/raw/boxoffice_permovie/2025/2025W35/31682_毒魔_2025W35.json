@@ -1,0 +1,96 @@
+{
+  "data": {
+    "movieId": "31682",
+    "name": "毒魔",
+    "originalName": "THE TOXIC AVENGER",
+    "region": "美國",
+    "rating": "限制級",
+    "classes": null,
+    "releaseDate": "2025-08-29",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 884235.0,
+    "totalAmount": 884235.0,
+    "filmClasses": null,
+    "filmLength": 6120,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 552655.0,
+        "tickets": 2135,
+        "totalAmount": 552655.0,
+        "totalTickets": 2135,
+        "rate": 0,
+        "theaterCount": 63
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 11375.0,
+        "tickets": 46,
+        "totalAmount": 564030.0,
+        "totalTickets": 2181,
+        "rate": -0.9794175389709674,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 1650.0,
+        "tickets": 8,
+        "totalAmount": 565680.0,
+        "totalTickets": 2189,
+        "rate": -0.8549450549450549,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 565680.0,
+        "totalTickets": 2189,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 552655.0,
+        "tickets": 2135,
+        "totalAmount": 552655.0,
+        "totalTickets": 2135,
+        "rate": 0,
+        "theaterCount": 63
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 324040.0,
+        "tickets": 1309,
+        "totalAmount": 876695.0,
+        "totalTickets": 3444,
+        "rate": -0.41366675412327764,
+        "theaterCount": 62
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 7040.0,
+        "tickets": 32,
+        "totalAmount": 883735.0,
+        "totalTickets": 3476,
+        "rate": -0.9782742871250463,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 500.0,
+        "tickets": 2,
+        "totalAmount": 884235.0,
+        "totalTickets": 3478,
+        "rate": -0.9289772727272727,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -1,0 +1,60 @@
+{
+  "data": {
+    "movieId": "31862",
+    "name": "CHA EUN-WOO：MEMORIES IN CINEMAS",
+    "originalName": "CHA EUN-WOO：MEMORIES IN CINEMAS",
+    "region": "韓國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-09-24",
+    "publisher": "威秀影城股份有限公司",
+    "amountInThisWeek": 399375.0,
+    "totalAmount": 399375.0,
+    "filmClasses": null,
+    "filmLength": 2700,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 209325.0,
+        "tickets": 496,
+        "totalAmount": 209325.0,
+        "totalTickets": 496,
+        "rate": 0,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 209325.0,
+        "totalTickets": 496,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 285775.0,
+        "tickets": 679,
+        "totalAmount": 285775.0,
+        "totalTickets": 679,
+        "rate": 0,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 113600.0,
+        "tickets": 288,
+        "totalAmount": 399375.0,
+        "totalTickets": 967,
+        "rate": -0.6024844720496895,
+        "theaterCount": 16
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

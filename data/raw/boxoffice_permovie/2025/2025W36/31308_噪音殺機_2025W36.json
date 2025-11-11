@@ -1,0 +1,163 @@
+{
+  "data": {
+    "movieId": "31308",
+    "name": "噪音殺機",
+    "originalName": "Noise",
+    "region": "韓國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-08-29",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 787674.0,
+    "totalAmount": 787674.0,
+    "filmClasses": null,
+    "filmLength": 5580,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 64055,
+        "typeName": "演員",
+        "name": "金玟錫",
+        "originalName": "Kim Min-Suk"
+      },
+      {
+        "id": 82432,
+        "typeName": "演員",
+        "name": "韓秀娥",
+        "originalName": "Han Soo-a"
+      },
+      {
+        "id": 82436,
+        "typeName": "導演",
+        "name": "金秀珍",
+        "originalName": "Kim Soo-jin"
+      },
+      {
+        "id": 62902,
+        "typeName": "演員",
+        "name": "李先彬",
+        "originalName": "Sun-Bin Lee"
+      },
+      {
+        "id": 75677,
+        "typeName": "演員",
+        "name": "柳炅秀",
+        "originalName": "Ryu Kyung-Soo"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 512117.0,
+        "tickets": 1977,
+        "totalAmount": 512117.0,
+        "totalTickets": 1977,
+        "rate": 0,
+        "theaterCount": 38
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 27180.0,
+        "tickets": 113,
+        "totalAmount": 539297.0,
+        "totalTickets": 2090,
+        "rate": -0.9469261906947045,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 7650.0,
+        "tickets": 34,
+        "totalAmount": 546947.0,
+        "totalTickets": 2124,
+        "rate": -0.7185430463576159,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 880.0,
+        "tickets": 4,
+        "totalAmount": 547827.0,
+        "totalTickets": 2128,
+        "rate": -0.8849673202614379,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 1300.0,
+        "tickets": 5,
+        "totalAmount": 549127.0,
+        "totalTickets": 2133,
+        "rate": 0.4772727272727273,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 640.0,
+        "tickets": 2,
+        "totalAmount": 549767.0,
+        "totalTickets": 2135,
+        "rate": -0.5076923076923077,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 512117.0,
+        "tickets": 1977,
+        "totalAmount": 512117.0,
+        "totalTickets": 1977,
+        "rate": 0,
+        "theaterCount": 38
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 232244.0,
+        "tickets": 915,
+        "totalAmount": 744361.0,
+        "totalTickets": 2892,
+        "rate": -0.54650206886317,
+        "theaterCount": 39
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 32543.0,
+        "tickets": 132,
+        "totalAmount": 776904.0,
+        "totalTickets": 3024,
+        "rate": -0.8598758202580045,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 5750.0,
+        "tickets": 26,
+        "totalAmount": 782654.0,
+        "totalTickets": 3050,
+        "rate": -0.8233106966167839,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 2960.0,
+        "tickets": 12,
+        "totalAmount": 785614.0,
+        "totalTickets": 3062,
+        "rate": -0.4852173913043478,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 2060.0,
+        "tickets": 8,
+        "totalAmount": 787674.0,
+        "totalTickets": 3070,
+        "rate": -0.30405405405405406,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

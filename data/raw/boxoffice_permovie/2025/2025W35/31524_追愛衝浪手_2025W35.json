@@ -1,0 +1,103 @@
+{
+  "data": {
+    "movieId": "31524",
+    "name": "追愛衝浪手",
+    "originalName": "SILENT ROAR",
+    "region": "英國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-08-15",
+    "publisher": "東昊影業有限公司",
+    "amountInThisWeek": 57176.0,
+    "totalAmount": 57176.0,
+    "filmClasses": null,
+    "filmLength": 5400,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82363,
+        "typeName": "編劇",
+        "name": "強尼巴林頓",
+        "originalName": "Johnny Barrington"
+      },
+      {
+        "id": 82363,
+        "typeName": "導演",
+        "name": "強尼巴林頓",
+        "originalName": "Johnny Barrington"
+      },
+      {
+        "id": 82365,
+        "typeName": "演員",
+        "name": "艾拉莉莉海蘭",
+        "originalName": "Ella Lily Hyland"
+      },
+      {
+        "id": 82366,
+        "typeName": "演員",
+        "name": "路易斯麥卡尼",
+        "originalName": "Louis McCartney"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 28841.0,
+        "tickets": 133,
+        "totalAmount": 28841.0,
+        "totalTickets": 133,
+        "rate": 0,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 3680.0,
+        "tickets": 17,
+        "totalAmount": 32521.0,
+        "totalTickets": 150,
+        "rate": -0.8724038694913491,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 32521.0,
+        "totalTickets": 150,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 28841.0,
+        "tickets": 133,
+        "totalAmount": 28841.0,
+        "totalTickets": 133,
+        "rate": 0,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 23785.0,
+        "tickets": 106,
+        "totalAmount": 52626.0,
+        "totalTickets": 239,
+        "rate": -0.17530598800318992,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 4550.0,
+        "tickets": 21,
+        "totalAmount": 57176.0,
+        "totalTickets": 260,
+        "rate": -0.8087029640529746,
+        "theaterCount": 3
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -1,0 +1,181 @@
+{
+  "data": {
+    "movieId": "31579",
+    "name": "拉威爾：萬丈光芒",
+    "originalName": "Ravel in a thousand sparkles",
+    "region": "法國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-09-20",
+    "publisher": "佳映娛樂國際股份有限公司",
+    "amountInThisWeek": 201798.0,
+    "totalAmount": 201798.0,
+    "filmClasses": null,
+    "filmLength": 4620,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82456,
+        "typeName": "演員",
+        "name": "莫里斯拉威爾",
+        "originalName": "Maurice Ravel"
+      },
+      {
+        "id": 82457,
+        "typeName": "導演",
+        "name": "弗朗索瓦雷內馬丁",
+        "originalName": "Francois-Rene Martin"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 144675.0,
+        "tickets": 330,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 46313.0,
+        "tickets": 157,
+        "totalAmount": 190988.0,
+        "totalTickets": 487,
+        "rate": 0,
+        "theaterCount": 8
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 144675.0,
+        "tickets": 330,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 144675.0,
+        "totalTickets": 330,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 10810.0,
+        "tickets": 47,
+        "totalAmount": 155485.0,
+        "totalTickets": 377,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 46313.0,
+        "tickets": 157,
+        "totalAmount": 201798.0,
+        "totalTickets": 534,
+        "rate": 3.2842738205365403,
+        "theaterCount": 8
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -1,0 +1,133 @@
+{
+  "data": {
+    "movieId": "31234",
+    "name": "妮基的重生",
+    "originalName": "Niki",
+    "region": "法國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-09-12",
+    "publisher": "天馬行空數位有限公司",
+    "amountInThisWeek": 142519.0,
+    "totalAmount": 142519.0,
+    "filmClasses": null,
+    "filmLength": 5880,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 31392,
+        "typeName": "演員",
+        "name": "夏洛特勒彭",
+        "originalName": "Charlotte Le Bon"
+      },
+      {
+        "id": 13205,
+        "typeName": "演員",
+        "name": "茱蒂絲薛拉",
+        "originalName": "Judith Chemla"
+      },
+      {
+        "id": 74797,
+        "typeName": "演員",
+        "name": "約翰羅賓森",
+        "originalName": "John Robinson"
+      },
+      {
+        "id": 13131,
+        "typeName": "導演",
+        "name": "席琳薩萊特",
+        "originalName": "Celine Sallette"
+      },
+      {
+        "id": 13131,
+        "typeName": "編劇",
+        "name": "席琳薩萊特",
+        "originalName": "Celine Sallette"
+      },
+      {
+        "id": 15371,
+        "typeName": "演員",
+        "name": "達米安勃納爾",
+        "originalName": "Damien Bonnard"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 72444.0,
+        "tickets": 335,
+        "totalAmount": 72444.0,
+        "totalTickets": 335,
+        "rate": 0,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 8925.0,
+        "tickets": 47,
+        "totalAmount": 81369.0,
+        "totalTickets": 382,
+        "rate": -0.8768013914195792,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 660.0,
+        "tickets": 3,
+        "totalAmount": 82029.0,
+        "totalTickets": 385,
+        "rate": -0.9260504201680673,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 82029.0,
+        "totalTickets": 385,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 72444.0,
+        "tickets": 335,
+        "totalAmount": 72444.0,
+        "totalTickets": 335,
+        "rate": 0,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 56840.0,
+        "tickets": 262,
+        "totalAmount": 129284.0,
+        "totalTickets": 597,
+        "rate": -0.21539395947214401,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 11635.0,
+        "tickets": 59,
+        "totalAmount": 140919.0,
+        "totalTickets": 656,
+        "rate": -0.7953026038001407,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 1600.0,
+        "tickets": 5,
+        "totalAmount": 142519.0,
+        "totalTickets": 661,
+        "rate": -0.8624838848302535,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

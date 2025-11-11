@@ -1,0 +1,121 @@
+{
+  "data": {
+    "movieId": "31583",
+    "name": "十分鐘新鮮事",
+    "originalName": "DIECI MINUTI (TEN MINUTES)",
+    "region": "義大利",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-09-05",
+    "publisher": "海鵬影業有限公司",
+    "amountInThisWeek": 200749.0,
+    "totalAmount": 200749.0,
+    "filmClasses": null,
+    "filmLength": 6120,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 79870,
+        "typeName": "演員",
+        "name": "芭芭拉龍琪",
+        "originalName": "Barbara Ronchi"
+      },
+      {
+        "id": 82398,
+        "typeName": "演員",
+        "name": "佛媞妮派魯索",
+        "originalName": "Fotini Peluso"
+      },
+      {
+        "id": 13172,
+        "typeName": "演員",
+        "name": "瑪姬麗塔貝",
+        "originalName": "Margherita Buy"
+      },
+      {
+        "id": 13169,
+        "typeName": "導演",
+        "name": "瑪麗亞索雷托尼亞齊",
+        "originalName": "Maria Sole Tognazzi"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 79072.0,
+        "tickets": 362,
+        "totalAmount": 79072.0,
+        "totalTickets": 362,
+        "rate": 0,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 29655.0,
+        "tickets": 151,
+        "totalAmount": 108727.0,
+        "totalTickets": 513,
+        "rate": -0.6249620598947795,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 2780.0,
+        "tickets": 12,
+        "totalAmount": 111507.0,
+        "totalTickets": 525,
+        "rate": -0.9062552689259822,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 111507.0,
+        "totalTickets": 525,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 79072.0,
+        "tickets": 362,
+        "totalAmount": 79072.0,
+        "totalTickets": 362,
+        "rate": 0,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 95480.0,
+        "tickets": 451,
+        "totalAmount": 174552.0,
+        "totalTickets": 813,
+        "rate": 0.2075070821529745,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 23697.0,
+        "tickets": 109,
+        "totalAmount": 198249.0,
+        "totalTickets": 922,
+        "rate": -0.7518118977796397,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 2500.0,
+        "tickets": 11,
+        "totalAmount": 200749.0,
+        "totalTickets": 933,
+        "rate": -0.8945014136810566,
+        "theaterCount": 2
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

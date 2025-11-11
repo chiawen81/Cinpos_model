@@ -1,0 +1,96 @@
+{
+  "data": {
+    "movieId": "31750",
+    "name": "月光下的藍色男孩",
+    "originalName": "Moonlight",
+    "region": "美國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-09-12",
+    "publisher": "傳影互動股份有限公司",
+    "amountInThisWeek": 277417.0,
+    "totalAmount": 277417.0,
+    "filmClasses": null,
+    "filmLength": 6600,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 147247.0,
+        "tickets": 582,
+        "totalAmount": 147247.0,
+        "totalTickets": 582,
+        "rate": 0,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 14172.0,
+        "tickets": 59,
+        "totalAmount": 161419.0,
+        "totalTickets": 641,
+        "rate": -0.9037535569485287,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 1430.0,
+        "tickets": 6,
+        "totalAmount": 162849.0,
+        "totalTickets": 647,
+        "rate": -0.8990968106124753,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 162849.0,
+        "totalTickets": 647,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 147247.0,
+        "tickets": 582,
+        "totalAmount": 147247.0,
+        "totalTickets": 582,
+        "rate": 0,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 119526.0,
+        "tickets": 498,
+        "totalAmount": 266773.0,
+        "totalTickets": 1080,
+        "rate": -0.18826190007266702,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 8234.0,
+        "tickets": 37,
+        "totalAmount": 275007.0,
+        "totalTickets": 1117,
+        "rate": -0.9311112226628516,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 2410.0,
+        "tickets": 10,
+        "totalAmount": 277417.0,
+        "totalTickets": 1127,
+        "rate": -0.7073111488948264,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

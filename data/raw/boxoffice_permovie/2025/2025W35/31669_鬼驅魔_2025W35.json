@@ -1,0 +1,115 @@
+{
+  "data": {
+    "movieId": "31669",
+    "name": "鬼驅魔",
+    "originalName": "Tharae：the Exorcist",
+    "region": "泰國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-08-29",
+    "publisher": "英屬維京群島商高捷全球開發有限公司 台灣分公司",
+    "amountInThisWeek": 1395721.0,
+    "totalAmount": 1395721.0,
+    "filmClasses": null,
+    "filmLength": 7080,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82381,
+        "typeName": "演員",
+        "name": "吉拉宇唐思蘇克",
+        "originalName": "Jirayu Tangsrisuk"
+      },
+      {
+        "id": 38401,
+        "typeName": "演員",
+        "name": "洪天逸",
+        "originalName": "Phiravich Attachitsataporn"
+      },
+      {
+        "id": 79187,
+        "typeName": "導演",
+        "name": "塔偉華温泰",
+        "originalName": "Taweewat Wantha"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 895629.0,
+        "tickets": 3463,
+        "totalAmount": 895629.0,
+        "totalTickets": 3463,
+        "rate": 0,
+        "theaterCount": 48
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 70923.0,
+        "tickets": 284,
+        "totalAmount": 966552.0,
+        "totalTickets": 3747,
+        "rate": -0.9208120773221948,
+        "theaterCount": 33
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 2630.0,
+        "tickets": 11,
+        "totalAmount": 969182.0,
+        "totalTickets": 3758,
+        "rate": -0.962917530279317,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 969182.0,
+        "totalTickets": 3758,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 895629.0,
+        "tickets": 3463,
+        "totalAmount": 895629.0,
+        "totalTickets": 3463,
+        "rate": 0,
+        "theaterCount": 48
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 435650.0,
+        "tickets": 1698,
+        "totalAmount": 1331279.0,
+        "totalTickets": 5161,
+        "rate": -0.5135820747206712,
+        "theaterCount": 48
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 61177.0,
+        "tickets": 242,
+        "totalAmount": 1392456.0,
+        "totalTickets": 5403,
+        "rate": -0.8595730517617354,
+        "theaterCount": 33
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 3265.0,
+        "tickets": 13,
+        "totalAmount": 1395721.0,
+        "totalTickets": 5416,
+        "rate": -0.9466302695457444,
+        "theaterCount": 4
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

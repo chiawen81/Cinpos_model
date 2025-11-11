@@ -1,0 +1,133 @@
+{
+  "data": {
+    "movieId": "31809",
+    "name": "疾速營救",
+    "originalName": "Stolen Girl",
+    "region": "美國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-09-26",
+    "publisher": "英屬維京群島商高捷全球開發有限公司 台灣分公司",
+    "amountInThisWeek": 1201846.0,
+    "totalAmount": 1201846.0,
+    "filmClasses": null,
+    "filmLength": 6240,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 13521,
+        "typeName": "演員",
+        "name": "史考特伊斯威特",
+        "originalName": "Scott Eastwood"
+      },
+      {
+        "id": 30649,
+        "typeName": "導演",
+        "name": "詹姆斯肯特",
+        "originalName": "James Kent"
+      },
+      {
+        "id": 13048,
+        "typeName": "演員",
+        "name": "凱特貝琴薩",
+        "originalName": "Kate Beckinsale"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 590340.0,
+        "tickets": 2431,
+        "totalAmount": 590340.0,
+        "totalTickets": 2431,
+        "rate": 0,
+        "theaterCount": 48
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 80492.0,
+        "tickets": 350,
+        "totalAmount": 670832.0,
+        "totalTickets": 2781,
+        "rate": -0.8636514550936748,
+        "theaterCount": 36
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 10005.0,
+        "tickets": 36,
+        "totalAmount": 680837.0,
+        "totalTickets": 2817,
+        "rate": -0.8757019331113651,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 220.0,
+        "tickets": 1,
+        "totalAmount": 681057.0,
+        "totalTickets": 2818,
+        "rate": -0.9780109945027486,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 681057.0,
+        "totalTickets": 2818,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 590340.0,
+        "tickets": 2431,
+        "totalAmount": 590340.0,
+        "totalTickets": 2431,
+        "rate": 0,
+        "theaterCount": 48
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 535405.0,
+        "tickets": 2215,
+        "totalAmount": 1125745.0,
+        "totalTickets": 4646,
+        "rate": -0.09305654368668903,
+        "theaterCount": 48
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 69898.0,
+        "tickets": 284,
+        "totalAmount": 1195643.0,
+        "totalTickets": 4930,
+        "rate": -0.8694483615207179,
+        "theaterCount": 35
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 3530.0,
+        "tickets": 14,
+        "totalAmount": 1199173.0,
+        "totalTickets": 4944,
+        "rate": -0.9494978397092907,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 2673.0,
+        "tickets": 11,
+        "totalAmount": 1201846.0,
+        "totalTickets": 4955,
+        "rate": -0.24277620396600566,
+        "theaterCount": 2
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

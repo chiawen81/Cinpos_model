@@ -1,0 +1,42 @@
+{
+  "data": {
+    "movieId": "31838",
+    "name": "BTS 2017 THE WINGS FINAL Remastered",
+    "originalName": "BTS 2017 THE WINGS FINAL Remastered",
+    "region": "韓國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-09-24",
+    "publisher": "威秀影城股份有限公司",
+    "amountInThisWeek": 1677165.0,
+    "totalAmount": 1677165.0,
+    "filmClasses": null,
+    "filmLength": 6360,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 1112565.0,
+        "tickets": 2192,
+        "totalAmount": 1112565.0,
+        "totalTickets": 2192,
+        "rate": 0,
+        "theaterCount": 12
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 1677165.0,
+        "tickets": 3305,
+        "totalAmount": 1677165.0,
+        "totalTickets": 3305,
+        "rate": 0,
+        "theaterCount": 12
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

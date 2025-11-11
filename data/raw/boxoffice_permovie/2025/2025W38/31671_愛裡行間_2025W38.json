@@ -1,0 +1,121 @@
+{
+  "data": {
+    "movieId": "31671",
+    "name": "愛裡行間",
+    "originalName": "Four letters of love",
+    "region": "英國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-09-12",
+    "publisher": "原創娛樂股份有限公司",
+    "amountInThisWeek": 119245.0,
+    "totalAmount": 119245.0,
+    "filmClasses": null,
+    "filmLength": 6540,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 14475,
+        "typeName": "演員",
+        "name": "海倫娜波漢卡特",
+        "originalName": "Helena Bonham Carter"
+      },
+      {
+        "id": 15144,
+        "typeName": "演員",
+        "name": "蓋布瑞拜恩",
+        "originalName": "Gabriel Byrne"
+      },
+      {
+        "id": 10958,
+        "typeName": "演員",
+        "name": "皮爾斯布洛斯南",
+        "originalName": "Pierce Brosnan"
+      },
+      {
+        "id": 82425,
+        "typeName": "導演",
+        "name": "波利斯蒂爾",
+        "originalName": "Polly Steele"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 65600.0,
+        "tickets": 289,
+        "totalAmount": 65600.0,
+        "totalTickets": 289,
+        "rate": 0,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 6440.0,
+        "tickets": 32,
+        "totalAmount": 72040.0,
+        "totalTickets": 321,
+        "rate": -0.901829268292683,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 440.0,
+        "tickets": 2,
+        "totalAmount": 72480.0,
+        "totalTickets": 323,
+        "rate": -0.9316770186335404,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 72480.0,
+        "totalTickets": 323,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 65600.0,
+        "tickets": 289,
+        "totalAmount": 65600.0,
+        "totalTickets": 289,
+        "rate": 0,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 46870.0,
+        "tickets": 228,
+        "totalAmount": 112470.0,
+        "totalTickets": 517,
+        "rate": -0.28551829268292683,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 6335.0,
+        "tickets": 34,
+        "totalAmount": 118805.0,
+        "totalTickets": 551,
+        "rate": -0.8648389161510561,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 440.0,
+        "tickets": 2,
+        "totalAmount": 119245.0,
+        "totalTickets": 553,
+        "rate": -0.930544593528019,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

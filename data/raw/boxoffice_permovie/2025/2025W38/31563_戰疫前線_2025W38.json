@@ -1,0 +1,187 @@
+{
+  "data": {
+    "movieId": "31563",
+    "name": "戰疫前線",
+    "originalName": "Frontline",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-08-23",
+    "publisher": "天馬行空數位有限公司",
+    "amountInThisWeek": 873697.0,
+    "totalAmount": 873697.0,
+    "filmClasses": null,
+    "filmLength": 7740,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 13200,
+        "typeName": "演員",
+        "name": "池松壯亮",
+        "originalName": "Sosuke Ikematsu"
+      },
+      {
+        "id": 32481,
+        "typeName": "演員",
+        "name": "森七菜",
+        "originalName": "Nana Mori"
+      },
+      {
+        "id": 15935,
+        "typeName": "演員",
+        "name": "松坂桃李",
+        "originalName": "Tori Matsuzaka"
+      },
+      {
+        "id": 37419,
+        "typeName": "演員",
+        "name": "窪塚洋介",
+        "originalName": "Yosuke Kubozuka"
+      },
+      {
+        "id": 80332,
+        "typeName": "導演",
+        "name": "關根光才",
+        "originalName": "Kosai Sekine"
+      },
+      {
+        "id": 11017,
+        "typeName": "演員",
+        "name": "小栗旬",
+        "originalName": "Shun Oguri"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 148651.0,
+        "tickets": 449,
+        "totalAmount": 148651.0,
+        "totalTickets": 449,
+        "rate": 0,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 286275.0,
+        "tickets": 1114,
+        "totalAmount": 434926.0,
+        "totalTickets": 1563,
+        "rate": 0.9258195370364142,
+        "theaterCount": 26
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 60437.0,
+        "tickets": 241,
+        "totalAmount": 495363.0,
+        "totalTickets": 1804,
+        "rate": -0.7888848135534015,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 17975.0,
+        "tickets": 77,
+        "totalAmount": 513338.0,
+        "totalTickets": 1881,
+        "rate": -0.7025828548736701,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 1855.0,
+        "tickets": 9,
+        "totalAmount": 515193.0,
+        "totalTickets": 1890,
+        "rate": -0.8968011126564673,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 35500.0,
+        "tickets": 169,
+        "totalAmount": 550693.0,
+        "totalTickets": 2059,
+        "rate": 18.137466307277627,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 550693.0,
+        "totalTickets": 2059,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 148651.0,
+        "tickets": 449,
+        "totalAmount": 148651.0,
+        "totalTickets": 449,
+        "rate": 0,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 286275.0,
+        "tickets": 1114,
+        "totalAmount": 434926.0,
+        "totalTickets": 1563,
+        "rate": 0.9258195370364142,
+        "theaterCount": 26
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 230151.0,
+        "tickets": 951,
+        "totalAmount": 665077.0,
+        "totalTickets": 2514,
+        "rate": -0.1960492533403196,
+        "theaterCount": 27
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 50830.0,
+        "tickets": 219,
+        "totalAmount": 715907.0,
+        "totalTickets": 2733,
+        "rate": -0.7791449961112487,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 13360.0,
+        "tickets": 66,
+        "totalAmount": 729267.0,
+        "totalTickets": 2799,
+        "rate": -0.7371630926618139,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 140110.0,
+        "tickets": 527,
+        "totalAmount": 869377.0,
+        "totalTickets": 3326,
+        "rate": 9.487275449101796,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 4320.0,
+        "tickets": 16,
+        "totalAmount": 873697.0,
+        "totalTickets": 3342,
+        "rate": -0.9691670830062095,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

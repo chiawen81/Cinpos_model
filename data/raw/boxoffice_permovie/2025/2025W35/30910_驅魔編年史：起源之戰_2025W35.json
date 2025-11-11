@@ -1,0 +1,85 @@
+{
+  "data": {
+    "movieId": "30910",
+    "name": "驅魔編年史：起源之戰",
+    "originalName": "Exorcism Chronicles：The Beginning",
+    "region": "韓國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-08-15",
+    "publisher": "可樂藝術文創股份有限公司",
+    "amountInThisWeek": 273743.0,
+    "totalAmount": 273743.0,
+    "filmClasses": null,
+    "filmLength": 5100,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82367,
+        "typeName": "導演",
+        "name": "金東澈",
+        "originalName": "Kim Dong-Chul"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 159784.0,
+        "tickets": 611,
+        "totalAmount": 159784.0,
+        "totalTickets": 611,
+        "rate": 0,
+        "theaterCount": 33
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 9700.0,
+        "tickets": 41,
+        "totalAmount": 169484.0,
+        "totalTickets": 652,
+        "rate": -0.9392930456115757,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 169484.0,
+        "totalTickets": 652,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 159784.0,
+        "tickets": 611,
+        "totalAmount": 159784.0,
+        "totalTickets": 611,
+        "rate": 0,
+        "theaterCount": 33
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 109979.0,
+        "tickets": 435,
+        "totalAmount": 269763.0,
+        "totalTickets": 1046,
+        "rate": -0.31170204776448207,
+        "theaterCount": 33
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 3980.0,
+        "tickets": 17,
+        "totalAmount": 273743.0,
+        "totalTickets": 1063,
+        "rate": -0.9638112730612208,
+        "theaterCount": 5
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

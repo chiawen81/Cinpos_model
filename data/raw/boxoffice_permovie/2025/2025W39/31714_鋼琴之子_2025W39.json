@@ -1,0 +1,169 @@
+{
+  "data": {
+    "movieId": "31714",
+    "name": "鋼琴之子",
+    "originalName": "Wolfgang",
+    "region": "西班牙",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-09-19",
+    "publisher": "仲業股份有限公司",
+    "amountInThisWeek": 170530.0,
+    "totalAmount": 170530.0,
+    "filmClasses": null,
+    "filmLength": 6600,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82441,
+        "typeName": "演員",
+        "name": "喬迪卡塔蘭",
+        "originalName": "Jordi Catalan"
+      },
+      {
+        "id": 14584,
+        "typeName": "演員",
+        "name": "安娜卡斯提洛",
+        "originalName": "Anna Castillo"
+      },
+      {
+        "id": 30375,
+        "typeName": "演員",
+        "name": "米奇艾斯帕貝",
+        "originalName": "Miki Esparbe"
+      },
+      {
+        "id": 82449,
+        "typeName": "演員",
+        "name": "安琪戈尼亞隆斯",
+        "originalName": "Angels Gonyalons"
+      },
+      {
+        "id": 82450,
+        "typeName": "演員",
+        "name": "貝爾托羅梅羅",
+        "originalName": "Berto Romero"
+      },
+      {
+        "id": 82455,
+        "typeName": "導演",
+        "name": "哈維爾魯伊斯卡德拉",
+        "originalName": "Javier Ruiz Caldera"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 60065.0,
+        "tickets": 272,
+        "totalAmount": 60065.0,
+        "totalTickets": 272,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 31430.0,
+        "tickets": 154,
+        "totalAmount": 91495.0,
+        "totalTickets": 426,
+        "rate": -0.4767335386664447,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 4310.0,
+        "tickets": 22,
+        "totalAmount": 95805.0,
+        "totalTickets": 448,
+        "rate": -0.862869869551384,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 95805.0,
+        "totalTickets": 448,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 2880.0,
+        "tickets": 14,
+        "totalAmount": 98685.0,
+        "totalTickets": 462,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 98685.0,
+        "totalTickets": 462,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 60065.0,
+        "tickets": 272,
+        "totalAmount": 60065.0,
+        "totalTickets": 272,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 80635.0,
+        "tickets": 379,
+        "totalAmount": 140700.0,
+        "totalTickets": 651,
+        "rate": 0.3424623324731541,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 17570.0,
+        "tickets": 84,
+        "totalAmount": 158270.0,
+        "totalTickets": 735,
+        "rate": -0.7821045451726918,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 6370.0,
+        "tickets": 33,
+        "totalAmount": 164640.0,
+        "totalTickets": 768,
+        "rate": -0.6374501992031872,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 2880.0,
+        "tickets": 14,
+        "totalAmount": 167520.0,
+        "totalTickets": 782,
+        "rate": -0.5478806907378336,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 3010.0,
+        "tickets": 16,
+        "totalAmount": 170530.0,
+        "totalTickets": 798,
+        "rate": 0.04513888888888889,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

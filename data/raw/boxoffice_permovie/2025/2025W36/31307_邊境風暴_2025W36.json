@@ -1,0 +1,96 @@
+{
+  "data": {
+    "movieId": "31307",
+    "name": "邊境風暴",
+    "originalName": "To a Land Unknown",
+    "region": "英國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-08-14",
+    "publisher": "佳映娛樂國際股份有限公司",
+    "amountInThisWeek": 207339.0,
+    "totalAmount": 207339.0,
+    "filmClasses": null,
+    "filmLength": 6300,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 84599.0,
+        "tickets": 364,
+        "totalAmount": 84599.0,
+        "totalTickets": 364,
+        "rate": 0,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 16130.0,
+        "tickets": 71,
+        "totalAmount": 100729.0,
+        "totalTickets": 435,
+        "rate": -0.8093358077518646,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 100729.0,
+        "totalTickets": 435,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 21620.0,
+        "tickets": 94,
+        "totalAmount": 21620.0,
+        "totalTickets": 94,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 84599.0,
+        "tickets": 364,
+        "totalAmount": 106219.0,
+        "totalTickets": 458,
+        "rate": 2.912997224791859,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 86405.0,
+        "tickets": 380,
+        "totalAmount": 192624.0,
+        "totalTickets": 838,
+        "rate": 0.021347770068204115,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 14715.0,
+        "tickets": 64,
+        "totalAmount": 207339.0,
+        "totalTickets": 902,
+        "rate": -0.8296973554771135,
+        "theaterCount": 5
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

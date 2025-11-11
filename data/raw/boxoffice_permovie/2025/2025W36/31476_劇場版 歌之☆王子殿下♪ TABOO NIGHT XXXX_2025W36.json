@@ -1,0 +1,151 @@
+{
+  "data": {
+    "movieId": "31476",
+    "name": "劇場版 歌之☆王子殿下♪ TABOO NIGHT XXXX",
+    "originalName": "Movie:Utano☆Princesama TABOO NIGHT XXXX",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-08-08",
+    "publisher": "曼迪傳播股份有限公司",
+    "amountInThisWeek": 3803435.0,
+    "totalAmount": 3803435.0,
+    "filmClasses": null,
+    "filmLength": 3540,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 19402,
+        "typeName": "演員",
+        "name": "前野智昭",
+        "originalName": "Tomoaki Maeno"
+      },
+      {
+        "id": 19404,
+        "typeName": "演員",
+        "name": "蒼井翔太",
+        "originalName": "Shouta Aoi"
+      },
+      {
+        "id": 82359,
+        "typeName": "導演",
+        "name": "古田丈司",
+        "originalName": "Joji Furuta"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-08~2025-08-10",
+        "amount": 506251.0,
+        "tickets": 1943,
+        "totalAmount": 506251.0,
+        "totalTickets": 1943,
+        "rate": 0,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 556877.0,
+        "tickets": 2161,
+        "totalAmount": 1063128.0,
+        "totalTickets": 4104,
+        "rate": 0.10000177777426612,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 274656.0,
+        "tickets": 1011,
+        "totalAmount": 1337784.0,
+        "totalTickets": 5115,
+        "rate": -0.506792343731201,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 752229.0,
+        "tickets": 2382,
+        "totalAmount": 2090013.0,
+        "totalTickets": 7497,
+        "rate": 1.7388041768612372,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 444402.0,
+        "tickets": 1604,
+        "totalAmount": 2534415.0,
+        "totalTickets": 9101,
+        "rate": -0.40921979875809095,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 2534415.0,
+        "totalTickets": 9101,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-04~2025-08-10",
+        "amount": 506251.0,
+        "tickets": 1943,
+        "totalAmount": 506251.0,
+        "totalTickets": 1943,
+        "rate": 0,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 733437.0,
+        "tickets": 2846,
+        "totalAmount": 1239688.0,
+        "totalTickets": 4789,
+        "rate": 0.44876158269317,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 619296.0,
+        "tickets": 2378,
+        "totalAmount": 1858984.0,
+        "totalTickets": 7167,
+        "rate": -0.15562481849156778,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 965089.0,
+        "tickets": 3219,
+        "totalAmount": 2824073.0,
+        "totalTickets": 10386,
+        "rate": 0.5583646592259598,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 745022.0,
+        "tickets": 2765,
+        "totalAmount": 3569095.0,
+        "totalTickets": 13151,
+        "rate": -0.2280276741316086,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 234340.0,
+        "tickets": 893,
+        "totalAmount": 3803435.0,
+        "totalTickets": 14044,
+        "rate": -0.6854589528899818,
+        "theaterCount": 15
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

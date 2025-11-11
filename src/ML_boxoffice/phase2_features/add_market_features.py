@@ -36,7 +36,7 @@
 
 import pandas as pd
 from pathlib import Path
-from datetime import date
+from datetime import date, datetime
 import argparse
 import re
 
@@ -279,7 +279,7 @@ def add_market_features(input_csv_path, movie_info_csv_path, output_csv_path):
     return df
 
 
-def main(input_file=None, movie_info_file=None):
+def main(input_file=None, movie_info_file=None, output_file=None):
     """
     執行腳本
 
@@ -288,6 +288,8 @@ def main(input_file=None, movie_info_file=None):
                    如果為 None，自動從 PHASE1_FLATTENED_DIR 找最新檔案
         movie_info_file: 電影資訊檔案路徑 (Path 物件或 None)
                         如果為 None，自動從 MOVIEINFO_GOV_COMBINED_PROCESSED 找最新檔案
+        output_file: 輸出檔案路徑 (Path 物件或 None)
+                    如果為 None，自動生成到 PHASE2_WITH_MARKET_DIR
     """
     # 如果沒有指定 input_file，自動找最新檔案
     if input_file is None:
@@ -305,9 +307,11 @@ def main(input_file=None, movie_info_file=None):
         if movie_info_file is None:
             return
 
-    # 輸出檔案（使用當下日期）
-    date_str = date.today().strftime("%Y-%m-%d")
-    output_file = Path(PHASE2_WITH_MARKET_DIR) / f"features_market_{date_str}.csv"
+    # 輸出檔案
+    if output_file is None:
+        # 使用當下日期時間生成預設檔名
+        date_str = datetime.now().strftime("%Y-%m-%d-%H%M")
+        output_file = Path(PHASE2_WITH_MARKET_DIR) / f"features_market_{date_str}.csv"
 
     # 檢查輸入檔案是否存在
     if not input_file.exists():
@@ -359,6 +363,12 @@ if __name__ == "__main__":
         help='電影資訊檔案路徑（相對於專案根目錄）。若不指定，自動使用最新檔案。'
     )
 
+    parser.add_argument(
+        '--output',
+        type=str,
+        help='輸出檔案路徑（相對於專案根目錄）。若不指定，自動生成到預設位置。'
+    )
+
     args = parser.parse_args()
 
     # 處理檔案路徑（使用共用的 PROJECT_ROOT）
@@ -370,5 +380,9 @@ if __name__ == "__main__":
     if args.movie_info:
         movie_info_file = Path(PROJECT_ROOT) / args.movie_info
 
+    output_file = None
+    if args.output:
+        output_file = Path(PROJECT_ROOT) / args.output
+
     # 執行
-    main(input_file=input_file, movie_info_file=movie_info_file)
+    main(input_file=input_file, movie_info_file=movie_info_file, output_file=output_file)

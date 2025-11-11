@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電影票房預測系統 - CinePredict</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
+            /* background: linear-gradient(135deg, #9C6DFF 0%, #71DDFF 100%); */
+            background: linear-gradient(135deg, #3b3b3b 0%, #0f272f 100%);
+            width: 210mm;
+            height: 297mm;
+            padding: 15mm 15mm;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* 科技感背景元素 */
+        .bg-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .bg-circle {
+            position: absolute;
+            border: 2px solid #fff;
+            border-radius: 50%;
+        }
+
+        .bg-circle-1 {
+            width: 300px;
+            height: 300px;
+            top: -100px;
+            right: -100px;
+        }
+
+        .bg-circle-2 {
+            width: 200px;
+            height: 200px;
+            bottom: 50px;
+            left: -50px;
+        }
+
+        .bg-line {
+            position: absolute;
+            height: 1px;
+            background: #fff;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 210mm;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 標題區 */
+        header {
+            text-align: center;
+            /* margin-bottom: 8mm; */
+        }
+
+        h1 {
+            font-size: 52px;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            letter-spacing: 3px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* 主要內容區 */
+        .main-content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 6mm;
+        }
+
+        .card-full-width {
+            grid-column: 1 / -1;
+        }
+
+        /* 卡片樣式 */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            backdrop-filter: blur(10px);
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2D3748;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid;
+            border-image: linear-gradient(90deg, #9C6DFF, #71DDFF) 1;
+        }
+
+        /* 數據指標區 */
+        .stats-bar {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .stat-item {
+            /* background: linear-gradient(135deg, rgba(156, 109, 255, 0.85), rgba(113, 221, 255, 0.85)); */
+            background: linear-gradient(301deg, rgb(194 164 255 / 75%), rgba(113, 221, 255, 0.95));
+            backdrop-filter: blur(12px);
+            padding: 18px 26px;
+            border-radius: 14px;
+            /* border: 2px solid rgba(255, 255, 255, 0.4); */
+            flex: 1;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2),
+                0 2px 8px rgba(255, 255, 255, 0.2) inset;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, rgba(156, 109, 255, 0.95), rgba(113, 221, 255, 0.95));
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25),
+                0 3px 12px rgba(255, 255, 255, 0.3) inset;
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 1);
+            margin-bottom: 8px;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-unit {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.95);
+            margin-left: 4px;
+            font-weight: 600;
+        }
+
+        /* 模型比較圖表 */
+        .model-chart {
+            margin-top: 16px;
+        }
+
+        .model-bar {
+            margin-bottom: 18px;
+        }
+
+        .model-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2D3748;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .model-r2 {
+            font-size: 19px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #9C6DFF, #71DDFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bar-container {
+            height: 28px;
+            background: rgba(226, 232, 240, 0.5);
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #9C6DFF, #71DDFF);
+            border-radius: 14px;
+            transition: width 0.6s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+        }
+
+        /* 特徵重要性圖表 */
+        .feature-chart {
+            margin-top: 12px;
+        }
+
+        .feature-bar {
+            margin-bottom: 10px;
+        }
+
+        .feature-name {
+            font-size: 12px;
+            color: #4A5568;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .feature-bar-container {
+            height: 18px;
+            background: rgba(226, 232, 240, 0.5);
+            border-radius: 9px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .feature-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #71DDFF, #9C6DFF);
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 6px;
+        }
+
+        .feature-value {
+            font-size: 10px;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* 應用場景區 */
+        .use-cases {
+            margin-top: 16px;
+        }
+
+        .use-case {
+            display: flex;
+            align-items: center;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, rgba(156, 109, 255, 0.08), rgba(113, 221, 255, 0.08));
+            border-radius: 12px;
+            border-left: 4px solid #71DDFF;
+        }
+
+        .use-case-icon {
+            width: 50px;
+            height: 50px;
+            /* background: rgba(255, 255, 255, 0); */
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            padding: 10px;
+        }
+
+        .use-case-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .use-case-text {
+            font-size: 16px;
+            color: #2D3748;
+            font-weight: 600;
+        }
+
+        /* 圖表區 */
+        .chart-image {
+            width: 100%;
+            height: auto;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+
+        /* 資料規模區 */
+        .data-specs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .spec-item {
+            background: linear-gradient(135deg, rgba(113, 221, 255, 0.12), rgba(156, 109, 255, 0.12));
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .spec-value {
+            font-size: 22px;
+            font-weight: 800;
+            color: #9C6DFF;
+            margin-bottom: 2px;
+        }
+
+        .spec-label {
+            font-size: 11px;
+            color: #718096;
+            font-weight: 500;
+        }
+
+        /* 底部標語 */
+        footer {
+            text-align: center;
+            margin-top: 10mm;
+            padding-top: 8mm;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 600;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            letter-spacing: 1px;
+        }
+
+        .tech-stack {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-top: 8px;
+            font-weight: 300;
+        }
+
+        /* 列印優化 */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 背景裝飾元素 -->
+    <div class="bg-elements">
+        <div class="bg-circle bg-circle-1"></div>
+        <div class="bg-circle bg-circle-2"></div>
+        <div class="bg-line" style="width: 40%; top: 30%; left: -10%; transform: rotate(-15deg);"></div>
+        <div class="bg-line" style="width: 50%; bottom: 25%; right: -10%; transform: rotate(20deg);"></div>
+    </div>
+
+    <div class="container">
+        <!-- 標題區 -->
+        <header>
+            <h1>電影票房預測系統</h1>
+            <div class="subtitle"
+                style="font-size: 26px; font-weight: 600; margin-top: 14px; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);">
+                以兩週數據預測未來一個月的票房</div>
+
+            <!-- 核心數據指標條 -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-label">訓練樣本數</div>
+                    <div class="stat-value">860<span class="stat-unit">筆</span></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">電影數量</div>
+                    <div class="stat-value">124<span class="stat-unit">部</span></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">特徵欄位</div>
+                    <div class="stat-value">19<span class="stat-unit">個</span></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">訓練/測試比</div>
+                    <div class="stat-value">8:2</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主要內容區 -->
+        <div class="main-content">
+            <!-- 左上：預測結果圖 -->
+            <div class="card">
+                <h2 class="card-title">模型精準度高</h2>
+                <img src="linear.png" alt="Linear Regression Prediction Chart" class="chart-image">
+                <!-- <img src="lightGBM.png" alt="Linear Regression Prediction Chart" class="chart-image"> -->
+                <div
+                    style="margin-top: 20px; padding: 16px; background: rgba(156, 109, 255, 0.08); border-radius: 12px; border-left: 4px solid #9C6DFF;">
+                    <div style="font-size: 13px; color: #718096; margin-bottom: 6px; font-weight: 500;">最佳模型</div>
+                    <div style="font-size: 17px; font-weight: 700; color: #2D3748;">
+                        線性迴歸模型解釋了 <span
+                            style="background: linear-gradient(135deg, #9C6DFF, #71DDFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 21px;">95.6%</span>
+                        的票房變異性
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 右上：模型表現 -->
+            <div class="card">
+                <h2 class="card-title">模型表現比較</h2>
+                <div class="model-chart">
+                    <div class="model-bar">
+                        <div class="model-name">
+                            <span>線性迴歸</span>
+                            <span class="model-r2">R² = 0.956</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 95.6%;"></div>
+                        </div>
+                    </div>
+                    <div class="model-bar">
+                        <div class="model-name">
+                            <span>決策樹迴歸</span>
+                            <span class="model-r2">R² = 0.877</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 87.7%;"></div>
+                        </div>
+                    </div>
+                    <div class="model-bar">
+                        <div class="model-name">
+                            <span>LightGBM</span>
+                            <span class="model-r2">R² = 0.829</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 82.9%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top: 20px; padding: 16px; background: rgba(156, 109, 255, 0.08); border-radius: 12px; border-left: 4px solid #9C6DFF;">
+                    <div style="font-size: 13px; color: #718096; margin-bottom: 6px; font-weight: 500;">模型選用策略</div>
+                    <div style="font-size: 17px; font-weight: 700; color: #2D3748;">
+                        線性迴歸模型學習票房的衰退
+
+                        輔以決策樹模型捕捉非線性的特徵
+                    </div>
+                </div>
+            </div>
+
+            <!-- 下方：應用場景 -->
+            <div class="card card-full-width">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+                    <div>
+                        <h2 class="card-title">商業應用場景</h2>
+                        <div class="use-cases">
+                            <div class="use-case">
+                                <div class="use-case-icon">
+                                    <img src="icon1.png" alt="商業決策">
+                                </div>
+                                <div class="use-case-text" style="font-size: 20px;">優化行銷策略</div>
+                            </div>
+                            <div class="use-case">
+                                <div class="use-case-icon">
+                                    <img src="icon2.png" alt="預警系統">
+                                </div>
+                                <div class="use-case-text" style="font-size: 20px;">提前預警票房異常</div>
+                            </div>
+                            <!-- <div class="use-case">
+                                <div class="use-case-icon">
+                                    <img src="icon3.png" alt="數據驅動">
+                                </div>
+                                <div class="use-case-text" style="font-size: 20px;">破除網路口碑假象</div>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="card-title">技術亮點</h2>
+                        <div style="margin-top: 16px;">
+                            <div
+                                style="padding: 14px 16px; margin-bottom: 12px; background: linear-gradient(135deg, rgba(113, 221, 255, 0.12), rgba(156, 109, 255, 0.12)); border-radius: 12px;">
+                                <div style="font-size: 20px; color: #2D3748; font-weight: 600;">
+                                    完整的資料 Pipeline 系統
+                                </div>
+                                <div style="font-size: 16px; color: #718096; margin-top: 6px;">
+                                    爬蟲 → 清洗 → 時序拉平 → 特徵工程
+                                </div>
+                            </div>
+                            <div
+                                style="padding: 14px 16px; margin-bottom: 12px; background: linear-gradient(135deg, rgba(113, 221, 255, 0.12), rgba(156, 109, 255, 0.12)); border-radius: 12px;">
+                                <div style="font-size: 20px; color: #2D3748; font-weight: 600;">
+                                    資料重用性高　利於多元應用
+                                </div>
+                                <div style="font-size: 16px; color: #718096; margin-top: 6px;">
+                                    自動化指令指定欄位執行腳本
+                                </div>
+                            </div>
+                            <!-- <div
+                                style="padding: 14px 16px; background: linear-gradient(135deg, rgba(113, 221, 255, 0.12), rgba(156, 109, 255, 0.12)); border-radius: 12px;">
+                                <div style="font-size: 20px; color: #2D3748; font-weight: 600;">
+                                    優質特徵設計　模型表現佳
+                                </div>
+                                <div style="font-size: 16px; color: #718096; margin-top: 6px;">
+                                    時序特徵、累積特徵、市場特徵
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部標語 -->
+        <footer>
+            <div class="tagline">用數據預見未來 | AI 驅動商業決策</div>
+            <div class="tech-stack">Python · Pandas · Scikit-learn · LightGBM · 機器學習</div>
+        </footer>
+    </div>
+</body>
+
+</html>

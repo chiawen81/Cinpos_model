@@ -8,15 +8,13 @@
 #   3. 執行：uv run scripts/run_pipeline.py config/pipeline_config.yaml      <<<<< 關鍵指令!!! >>>>>
 # ============================================================
 
+
+
 # ------------------------------------------------------------
 # 累積特徵 (add_cumsum_features.py)
 # ------------------------------------------------------------
-############# 待修復 ############# 
-# input file、output file皆須指定
-# 請先打指令  uv run src/ML_boxoffice/phase2_features/add_cumsum_features.py ^ data\ML_boxoffice\phase1_flattened\boxoffice_timeseries_2025-11-06.csv ^ data\ML_boxoffice\phase2_features\with_cumsum\features_cumsum_2025-11-07.csv
-################################## 
 add_cumsum_features:
-  enabled: false
+  enabled: true
   # 欲新增<累計特徵欄位>的 csv
   input_file: ""   # 留空會自動從 data/ML_boxoffice/phase1_flattened 找日期最新的檔案
   # 輸出位置

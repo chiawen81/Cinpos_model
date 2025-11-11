@@ -235,8 +235,8 @@ def main():
         # 假設檔名格式為: boxoffice_timeseries_YYYY-MM-DD.csv
         stem = input_path.stem
         if "boxoffice_timeseries_" in stem:
-            date_part = stem.replace("boxoffice_timeseries_", "")
-            output_filename = f"features_cumsum_{date_part}.csv"
+            date_str =  datetime.now().strftime('%Y-%m-%d-%H%M')
+            output_filename = f"features_cumsum_{date_str}.csv"
         else:
             # 如果檔名格式不符，使用原檔名加後綴
             output_filename = f"{stem}_with_cumsum.csv"

@@ -77,7 +77,7 @@ def merge_movieInfo_gov():
     os.makedirs(MOVIEINFO_GOV_COMBINED_PROCESSED, exist_ok=True)
 
     # 輸出檔案
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now().strftime('%Y-%m-%d-%H%M')
     output_name = f"movieInfo_gov_full_{today}.csv"
     save_csv(merged_df, MOVIEINFO_GOV_COMBINED_PROCESSED, output_name)
 

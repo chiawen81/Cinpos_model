@@ -29,11 +29,11 @@ add_cumsum_features:
 add_market_features:
   enabled: false
   # 欲新增<市場特徵欄位>的 csv
-  input_file: ""        # 留空會自動從 data/ML_boxoffice/phase1_flattened 找日期最新的檔案
+  input_file: ""        # 留空會自動從 data/ML_boxoffice/phase1_flattened 找最新的檔案
   # input_file: "data/ML_boxoffice/phase2_features/with_cumsum/features_cumsum_2025-11-06.csv"
 
   # 電影資訊檔案
-  movie_info_file: ""   # 留空會自動從 data/processed/movieInfo_gov/combined 找日期最新的檔案
+  movie_info_file: ""   # 留空會自動從 data/processed/movieInfo_gov/combined 找最新的檔案
   # 輸出位置
   output_file: ""       # 留空會自動輸出到 data/ML_boxoffice/phase2_features/with_market
   description: "生成市場特徵（票價、年份、月份、地區、發行商、分級、片長）- 會自動找最新的 phase1 檔案"

@@ -17,6 +17,7 @@
 
 # ========= 套件匯入 =========
 import os
+import argparse
 import time
 import requests
 import pandas as pd
@@ -63,10 +64,9 @@ def fetch_boxoffice_permovie_from_weekly(reference_date: date | None = None) -> 
 
     # 設定查詢日期
     last_week_date_range = get_last_week_range(reference_date)
-    WEEK_LABEL = get_week_label(
-        datetime.strptime(last_week_date_range["startDate"], "%Y-%m-%d").date()
-    )
-    YEAR_LABEL = get_year_label()
+    target_date=datetime.strptime(last_week_date_range["startDate"], "%Y-%m-%d").date()
+    WEEK_LABEL = get_week_label(target_date)
+    YEAR_LABEL = get_year_label(target_date)
 
     print(f"📅 本次執行週期(最近一周)：{WEEK_LABEL}")
 
@@ -145,6 +145,22 @@ def fetch_boxoffice_permovie_from_weekly(reference_date: date | None = None) -> 
 
 # ========= 主程式執行區 =========
 if __name__ == "__main__":
-    fetch_boxoffice_permovie_from_weekly(
-        date(2025, 11, 3)
-    )  # 可傳入日期參數，爬特定周次資料 ex: date(2025,10,30)
+    parser = argparse.ArgumentParser(description="抓取單部電影的累計票房資料")
+    parser.add_argument(
+        "--date",
+        type=str,
+        help="指定參考日期（格式：YYYY-MM-DD），預設為當天",
+    )
+
+    args = parser.parse_args()
+
+    # 解析日期參數
+    reference_date = None
+    if args.date:
+        try:
+            reference_date = datetime.strptime(args.date, "%Y-%m-%d").date()
+        except ValueError:
+            print("❌ 日期格式錯誤，請使用 YYYY-MM-DD 格式")
+            exit(1)
+
+    fetch_boxoffice_permovie_from_weekly(reference_date)

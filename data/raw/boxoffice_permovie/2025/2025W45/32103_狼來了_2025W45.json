@@ -1,0 +1,115 @@
+{
+  "data": {
+    "movieId": "32103",
+    "name": "狼來了",
+    "originalName": "COYOTES",
+    "region": "美國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-10-09",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 465913.0,
+    "totalAmount": 465913.0,
+    "filmClasses": null,
+    "filmLength": 5460,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 77527,
+        "typeName": "演員",
+        "name": "賈斯汀隆",
+        "originalName": "Justin Long (I)"
+      },
+      {
+        "id": 24082,
+        "typeName": "導演",
+        "name": "科林米尼漢",
+        "originalName": "Colin Minihan"
+      },
+      {
+        "id": 12233,
+        "typeName": "演員",
+        "name": "凱特柏絲沃",
+        "originalName": "Kate Bosworth"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 265642.0,
+        "tickets": 1050,
+        "totalAmount": 265642.0,
+        "totalTickets": 1050,
+        "rate": 0,
+        "theaterCount": 62
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 11868.0,
+        "tickets": 49,
+        "totalAmount": 277510.0,
+        "totalTickets": 1099,
+        "rate": -0.955323329895122,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 670.0,
+        "tickets": 4,
+        "totalAmount": 278180.0,
+        "totalTickets": 1103,
+        "rate": -0.9435456690259522,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 278180.0,
+        "totalTickets": 1103,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 306617.0,
+        "tickets": 1225,
+        "totalAmount": 306617.0,
+        "totalTickets": 1225,
+        "rate": 0,
+        "theaterCount": 62
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 150288.0,
+        "tickets": 654,
+        "totalAmount": 456905.0,
+        "totalTickets": 1879,
+        "rate": -0.5098510519638507,
+        "theaterCount": 62
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 8288.0,
+        "tickets": 37,
+        "totalAmount": 465193.0,
+        "totalTickets": 1916,
+        "rate": -0.9448525497711061,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 720.0,
+        "tickets": 3,
+        "totalAmount": 465913.0,
+        "totalTickets": 1919,
+        "rate": -0.9131274131274131,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

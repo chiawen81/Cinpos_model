@@ -1,0 +1,175 @@
+{
+  "data": {
+    "movieId": "31767",
+    "name": "醜得要命",
+    "originalName": "THE UGLY",
+    "region": "韓國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-09-20",
+    "publisher": "壹壹喜喜電影股份有限公司",
+    "amountInThisWeek": 536511.0,
+    "totalAmount": 536511.0,
+    "filmClasses": null,
+    "filmLength": 6120,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 23849,
+        "typeName": "演員",
+        "name": "朴正民",
+        "originalName": "Jung-min Park"
+      },
+      {
+        "id": 18272,
+        "typeName": "演員",
+        "name": "權海孝",
+        "originalName": "Hae-hyo Kwon"
+      },
+      {
+        "id": 13899,
+        "typeName": "導演",
+        "name": "延尚昊",
+        "originalName": "Sang-ho Yeon"
+      },
+      {
+        "id": 13899,
+        "typeName": "編劇",
+        "name": "延尚昊",
+        "originalName": "Sang-ho Yeon"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 94980.0,
+        "tickets": 312,
+        "totalAmount": 94980.0,
+        "totalTickets": 312,
+        "rate": 0,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 213938.0,
+        "tickets": 879,
+        "totalAmount": 308918.0,
+        "totalTickets": 1191,
+        "rate": 1.2524531480311645,
+        "theaterCount": 23
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 35251.0,
+        "tickets": 147,
+        "totalAmount": 344169.0,
+        "totalTickets": 1338,
+        "rate": -0.8352279632416868,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 2460.0,
+        "tickets": 10,
+        "totalAmount": 346629.0,
+        "totalTickets": 1348,
+        "rate": -0.9302147456809736,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 1730.0,
+        "tickets": 6,
+        "totalAmount": 348359.0,
+        "totalTickets": 1354,
+        "rate": -0.2967479674796748,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 540.0,
+        "tickets": 2,
+        "totalAmount": 348899.0,
+        "totalTickets": 1356,
+        "rate": -0.6878612716763006,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 348899.0,
+        "totalTickets": 1356,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 94980.0,
+        "tickets": 312,
+        "totalAmount": 94980.0,
+        "totalTickets": 312,
+        "rate": 0,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 213938.0,
+        "tickets": 879,
+        "totalAmount": 308918.0,
+        "totalTickets": 1191,
+        "rate": 1.2524531480311645,
+        "theaterCount": 23
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 184569.0,
+        "tickets": 788,
+        "totalAmount": 493487.0,
+        "totalTickets": 1979,
+        "rate": -0.13727808991390028,
+        "theaterCount": 23
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 36444.0,
+        "tickets": 155,
+        "totalAmount": 529931.0,
+        "totalTickets": 2134,
+        "rate": -0.8025453895291192,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 3980.0,
+        "tickets": 15,
+        "totalAmount": 533911.0,
+        "totalTickets": 2149,
+        "rate": -0.890791351114038,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 1740.0,
+        "tickets": 7,
+        "totalAmount": 535651.0,
+        "totalTickets": 2156,
+        "rate": -0.5628140703517588,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 860.0,
+        "tickets": 4,
+        "totalAmount": 536511.0,
+        "totalTickets": 2160,
+        "rate": -0.5057471264367817,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

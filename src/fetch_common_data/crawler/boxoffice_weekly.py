@@ -4,6 +4,7 @@
 """
 
 import os
+import argparse
 import requests
 from common.date_utils import (
     get_last_week_range,
@@ -28,6 +29,9 @@ def fetch_boxoffice_json(reference_date: date | None = None):
 
     # 設定查詢日期
     last_week_date_range = get_last_week_range(reference_date)
+    target_date=datetime.strptime(last_week_date_range["startDate"], "%Y-%m-%d").date()
+    WEEK_LABEL = get_week_label(target_date)
+    YEAR_LABEL = get_year_label(target_date)
 
     # 整理API參數
     params = {
@@ -47,13 +51,9 @@ def fetch_boxoffice_json(reference_date: date | None = None):
     # print("data",data)
 
     # 設定儲存的檔名
-    year_label = get_year_label()
-    week_label = get_week_label(
-        datetime.strptime(last_week_date_range["startDate"], "%Y-%m-%d").date()
-    )
-    file_folder = os.path.join(BOXOFFICE_RAW, year_label)
+    file_folder = os.path.join(BOXOFFICE_RAW, YEAR_LABEL)
     fileName_date = format_week_date_range(last_week_date_range)
-    filename = f"boxoffice_{week_label}_{fileName_date}.json"
+    filename = f"boxoffice_{WEEK_LABEL}_{fileName_date}.json"
 
     # 儲存成原始 JSON
     save_json(data, file_folder, filename)
@@ -68,7 +68,26 @@ def fetch_boxoffice_json(reference_date: date | None = None):
 
 # 主程式
 if __name__ == "__main__":
-    fetch_boxoffice_json()  # 可傳入日期參數，爬特定周次資料 ex: date(2025,11,3)
+    parser = argparse.ArgumentParser(description="抓取每周電影票房資料")
+    parser.add_argument(
+        "--date",
+        type=str,
+        help="指定參考日期（格式：YYYY-MM-DD），預設為當天",
+    )
+
+    args = parser.parse_args()
+
+    # 解析日期參數
+    reference_date = None
+    if args.date:
+        try:
+            reference_date = datetime.strptime(args.date, "%Y-%m-%d").date()
+        except ValueError:
+            print("❌ 日期格式錯誤，請使用 YYYY-MM-DD 格式")
+            exit(1)
+
+    fetch_boxoffice_json(reference_date)
+
 """NOTE:
      Python 會在執行檔案時自動設定內建變數 __name__。
      若此檔案是被「直接執行」，__name__ 會等於 "__main__"；

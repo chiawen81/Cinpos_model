@@ -20,7 +20,7 @@ services:
       - key: SECRET_KEY
         generateValue: true
       - key: PYTHON_VERSION
-        value: "3.13"
+        value: "3.11"
 
     # 健康檢查
     healthCheckPath: /

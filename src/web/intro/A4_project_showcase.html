@@ -352,6 +352,9 @@
             text-align: center;
             margin-top: 10mm;
             padding-top: 8mm;
+        }
+
+        .line {
             border-top: 2px solid rgba(255, 255, 255, 0.3);
         }
 
@@ -361,6 +364,7 @@
             font-weight: 600;
             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
             letter-spacing: 1px;
+            margin-top: 10px;
         }
 
         .tech-stack {
@@ -514,13 +518,13 @@
                             <div
                                 style="padding: 14px 16px; margin-bottom: 12px; background: linear-gradient(135deg, rgba(113, 221, 255, 0.12), rgba(156, 109, 255, 0.12)); border-radius: 12px;">
                                 <div style="font-size: 20px; color: #2D3748; font-weight: 600;">
-                                    完整的資料 Pipeline 系統
+                                    以自動化腳本建構完整資料流
                                 </div>
                                 <div style="font-size: 16px; color: #718096; margin-top: 6px;">
                                     爬蟲 → 清洗 → 時序拉平 → 特徵工程
                                 </div>
                             </div>
-                            <div
+                            <!-- <div
                                 style="padding: 14px 16px; margin-bottom: 12px; background: linear-gradient(135deg, rgba(113, 221, 255, 0.12), rgba(156, 109, 255, 0.12)); border-radius: 12px;">
                                 <div style="font-size: 20px; color: #2D3748; font-weight: 600;">
                                     資料重用性高　利於多元應用
@@ -528,16 +532,16 @@
                                 <div style="font-size: 16px; color: #718096; margin-top: 6px;">
                                     自動化指令指定欄位執行腳本
                                 </div>
-                            </div>
-                            <!-- <div
+                            </div> -->
+                            <div
                                 style="padding: 14px 16px; background: linear-gradient(135deg, rgba(113, 221, 255, 0.12), rgba(156, 109, 255, 0.12)); border-radius: 12px;">
                                 <div style="font-size: 20px; color: #2D3748; font-weight: 600;">
-                                    優質特徵設計　模型表現佳
+                                    特徵工程設計嚴謹　應用性強
                                 </div>
                                 <div style="font-size: 16px; color: #718096; margin-top: 6px;">
-                                    時序特徵、累積特徵、市場特徵
+                                    提供35個特徵欄位　靈活組合訓練集
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -546,6 +550,7 @@
 
         <!-- 底部標語 -->
         <footer>
+            <div class="line"></div>
             <div class="tagline">用數據預見未來 | AI 驅動商業決策</div>
             <div class="tech-stack">Python · Pandas · Scikit-learn · LightGBM · 機器學習</div>
         </footer>

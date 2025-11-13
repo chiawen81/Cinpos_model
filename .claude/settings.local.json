@@ -3,7 +3,11 @@
     "allow": [
       "Bash(uv run:*)",
       "Bash(gunicorn:*)",
-      "Bash(nul)"
+      "Bash(nul)",
+      "Bash(python:*)",
+      "Bash(uv add:*)",
+      "Bash(curl:*)",
+      "Bash(timeout 5 bash -c \"while ! curl -s http://127.0.0.1:5000 > /dev/null 2>&1; do sleep 0.5; done; echo ''Flask ready''\")"
     ],
     "deny": [],
     "ask": []

@@ -6,6 +6,7 @@ from pathlib import Path
 from io import StringIO
 from datetime import datetime
 from common.path_utils import PHASE3_PREPARE_DIR, PHASE4_MODELS_DIR
+from common.feature_engineering import BoxOfficeFeatureEngineer
 
 # ===================================================================
 # 全域設定
@@ -113,8 +114,8 @@ print(f"基本篩選後資料筆數: {len(df)}")
 
 
 # === 3. 月份週期性編碼 ===
-df["release_month_sin"] = np.sin(2 * np.pi * df["release_month"] / 12)
-df["release_month_cos"] = np.cos(2 * np.pi * df["release_month"] / 12)
+# 使用共用特徵工程模組進行編碼
+df = BoxOfficeFeatureEngineer.add_features_to_dataframe(df, group_by_col='gov_id')
 
 
 # === 4. 刪除不需要的欄位 ===

@@ -38,7 +38,12 @@
         <div id="selectedMovieInfo" class="selected-movie-info" style="display: none;">
             <div class="movie-info-header">
                 <h4 id="selectedMovieTitle"></h4>
-                <button class="btn btn-secondary btn-sm" id="clearSelection">清除選擇</button>
+                <div>
+                    <button class="btn btn-primary btn-sm" id="cleanDataButton">
+                        資料清洗
+                    </button>
+                    <button class="btn btn-secondary btn-sm" id="clearSelection">清除選擇</button>
+                </div>
             </div>
             <div class="movie-basic-info" id="movieBasicInfo"></div>
         </div>
@@ -57,15 +62,22 @@
         <div class="table-container">
             <div class="table-header">
                 <h4>週次資料</h4>
-                <button class="btn btn-primary" id="addWeekButton">
-                    + 新增一週
-                </button>
+                <div>
+                    <button class="btn btn-secondary" id="downloadPreprocessedButton">
+                        下載票房資料
+                    </button>
+                    <button class="btn btn-primary" id="addWeekButton">
+                        + 新增一週
+                    </button>
+                </div>
             </div>
             <div class="table-scroll">
                 <table>
                     <thead>
                         <tr>
-                            <th>週次</th>
+                            <th>真實週次</th>
+                            <th>活躍週次</th>
+                            <th>日期</th>
                             <th>票房（元）</th>
                             <th>觀影人次</th>
                             <th>院線數</th>
@@ -76,16 +88,20 @@
                         <tr data-week="1">
                             <td><input type="number" class="table-input integer-only" name="week" value="1" min="1">
                             </td>
+                            <td><span class="active-week-display">-</span></td>
+                            <td><span class="date-display">-</span></td>
                             <td><input type="number" class="table-input integer-only" name="boxoffice"
                                     placeholder="例: 12000000" min="0" step="1"></td>
                             <td><input type="number" class="table-input integer-only" name="audience"
                                     placeholder="例: 40000" min="0" step="1"></td>
                             <td><input type="number" class="table-input integer-only" name="screens"
                                     placeholder="例: 150" min="0" step="1"></td>
-                            <td><button class="btn btn-danger-dark btn-disabled">X</button></td>
+                            <td><button class="btn btn-danger-dark btn-disabled">刪除</button></td>
                         </tr>
                         <tr data-week="2">
                             <td><input type="number" class="table-input" name="week" value="2" min="1"></td>
+                            <td><span class="active-week-display">-</span></td>
+                            <td><span class="date-display">-</span></td>
                             <td><input type="number" class="table-input integer-only" name="boxoffice"
                                     placeholder="例: 10200000" min="0" step="1"></td>
                             <td><input type="number" class="table-input integer-only" name="audience"
@@ -93,7 +109,7 @@
                             <td><input type="number" class="table-input integer-only" name="screens"
                                     placeholder="例: 140" min="0" step="1"></td>
                             <td>
-                                <button class="btn btn-danger-dark btn-sm">X</button>
+                                <button class="btn btn-danger-dark btn-sm">刪除</button>
                             </td>
                         </tr>
                     </tbody>

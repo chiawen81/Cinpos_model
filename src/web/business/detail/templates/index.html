@@ -66,10 +66,8 @@
                     <td style="color: #51CF66;">+7%</td>
                     <td><span class="badge badge-warning">注意</span></td>
                     <td>
-                        <button class="btn-track-mini" data-gov-id="MOV001">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 5v14M5 12h14"></path>
-                            </svg>
+                        <button class="btn-track-text" data-gov-id="MOV001">
+                            加入追蹤
                         </button>
                     </td>
                 </tr>
@@ -83,8 +81,8 @@
                     <td style="color: #51CF66;">+1%</td>
                     <td><span class="badge badge-success">正常</span></td>
                     <td>
-                        <button class="btn-track-mini tracked" data-gov-id="MOV002">
-                            ✓
+                        <button class="btn-track-text tracked" data-gov-id="MOV002">
+                            取消追蹤
                         </button>
                     </td>
                 </tr>
@@ -92,4 +90,8 @@
         </table>
     </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
 {% endblock %}

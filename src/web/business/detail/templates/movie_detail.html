@@ -9,8 +9,9 @@
         <h1>{{ movie.title }}</h1>
         <p class="text-secondary">票房預測與趨勢分析</p>
     </div>
-    <button class="btn-track" id="trackButton" data-gov-id="{{ movie.gov_id }}" data-title="{{ movie.title }}">
-        <svg class="track-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <button class="btn btn-primary" id="trackButton" data-gov-id="{{ movie.gov_id }}" data-title="{{ movie.title }}">
+        <svg class="track-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
             <path d="M12 5v14M5 12h14"></path>
         </svg>
         <span class="track-text">追蹤</span>
@@ -58,14 +59,14 @@
         <div class="stat-label">本周票房衰退率</div>
         <div class="stat-value">{{ statistics.current_decline_rate | format_percentage }}</div>
         <div class="stat-change">
-            觀影人次 {{ statistics.audience_decline_rate | format_percentage }} / 場次數 {{ statistics.screens_decline_rate | format_percentage }}
+            觀影人次 {{ statistics.audience_decline_rate | format_percentage }} / 場次數 {{ statistics.screens_decline_rate |
+            format_percentage }}
         </div>
     </div>
 </div>
 
 <!-- 數據備註 -->
 <div class="alert alert-info mb-4">
-    <span class="alert-icon">ℹ️</span>
     <div class="alert-content">
         <div class="alert-message">映後七日才會有真實數據，關於「本周」的統計會有異動</div>
     </div>
@@ -114,7 +115,8 @@
         </div>
         <button class="btn-collapse" id="toggleMoreInfo">
             <span class="collapse-text">展開更多</span>
-            <svg class="collapse-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="collapse-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
         </button>
@@ -126,14 +128,13 @@
     <div class="chart-header">
         <h3 class="chart-title">票房趨勢與未來預測</h3>
         <div class="chart-actions">
-            <button class="btn btn-secondary" onclick="chartUtils.exportChart('boxoffice-trend-chart', 'png')">
-                📥 下載圖表
+            <button class="btn btn-primary" onclick="chartUtils.exportChart('boxoffice-trend-chart', 'png')">
+                下載圖表
             </button>
         </div>
     </div>
-    <div class="chart-wrapper" id="boxoffice-trend-chart" 
-         data-chart="boxoffice-trend" 
-         data-chart-data='{{ chart_data | tojson }}'>
+    <div class="chart-wrapper" id="boxoffice-trend-chart" data-chart="boxoffice-trend"
+        data-chart-data='{{ chart_data | tojson }}'>
     </div>
 </div>
 
@@ -142,11 +143,11 @@
     <div class="card-header">
         <h3 class="card-title">票房預測詳細數據</h3>
         <div>
-            <button class="btn btn-primary" data-export="excel" data-gov-id="{{ movie.gov_id }}">
-                📊 匯出 Excel
+            <button class="btn btn-primary mr-xxs" data-export="excel" data-gov-id="{{ movie.gov_id }}">
+                匯出 Excel
             </button>
             <button class="btn btn-secondary" data-export="csv" data-gov-id="{{ movie.gov_id }}">
-                📄 匯出 CSV
+                匯出 CSV
             </button>
         </div>
     </div>
@@ -168,17 +169,17 @@
                 {% for record in history %}
                 <tr>
                     <td>第{{ record.week }}週</td>
-                    <td><span class="badge badge-success">實際</span></td>
+                    <td>實際票房</td>
                     <td>{{ record.boxoffice | format_currency }}</td>
                     <td>{{ record.audience | format_number }}</td>
                     <td>{{ record.screens }}</td>
                     <td>
                         {% if record.decline_rate %}
-                            <span style="color: {{ record.decline_rate | decline_color }}">
-                                {{ record.decline_rate | format_percentage }}
-                            </span>
+                        <span style="color: {{ record.decline_rate | decline_color }}">
+                            {{ record.decline_rate | format_percentage }}
+                        </span>
                         {% else %}
-                            -
+                        -
                         {% endif %}
                     </td>
                     <td>-</td>
@@ -199,7 +200,7 @@
                         </span>
                     </td>
                     <td>
-                        <span class="badge badge-success">✓ 正常</span>
+                        <span class="badge badge-success">正常</span>
                     </td>
                 </tr>
                 {% endfor %}
@@ -213,18 +214,18 @@
     <div class="chart-header">
         <h3 class="chart-title">週衰退率分析</h3>
     </div>
-    <div class="chart-wrapper" id="decline-rate-chart" 
-         data-chart="decline-rate" 
-         data-chart-data='{{ decline_data | tojson }}'>
+    <div class="chart-wrapper" id="decline-rate-chart" data-chart="decline-rate"
+        data-chart-data='{{ decline_data | tojson }}'>
     </div>
 </div>
 
 {% endblock %}
 
 {% block extra_js %}
+<script src="{{ url_for('static', filename='js/movie_detail.js') }}"></script>
 <script>
     // 初始化圖表
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         // 可以在此添加即時更新功能
         // chartUtils.startRealtimeUpdate('{{ movie.gov_id }}', 60000);
     });

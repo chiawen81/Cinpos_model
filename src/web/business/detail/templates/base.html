@@ -19,32 +19,37 @@
         <div class="main-layout">
             <!-- 側邊欄 -->
             <aside class="sidebar">
-                <div class="sidebar-logo">
-                    <h2 style="background: linear-gradient(135deg, #9C6DFF, #71DDFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                        🎬 CinePredict
-                    </h2>
+                <div class="sidebar-header">
+                    <div class="sidebar-logo">
+                        <img src="{{ url_for('static', filename='img/logo-w-gradient.svg') }}" alt="CinePredict" style="max-width: 150px; height: auto;">
+                    </div>
+                    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
                 </div>
-                
-                <nav>
+
+                <nav class="sidebar-nav-wrapper" id="sidebarNav">
                     <ul class="sidebar-nav">
                         <li class="sidebar-nav-item">
                             <a href="{{ url_for('index') }}" class="sidebar-nav-link {% if request.endpoint == 'index' %}active{% endif %}">
-                                📊 總覽
+                                總覽
                             </a>
                         </li>
                         <li class="sidebar-nav-item">
                             <a href="{{ url_for('movies_list') }}" class="sidebar-nav-link {% if request.endpoint == 'movies_list' %}active{% endif %}">
-                                🎥 電影列表
+                                電影列表
                             </a>
                         </li>
                         <li class="sidebar-nav-item">
-                            <a href="{{ url_for('predictions') }}" class="sidebar-nav-link {% if request.endpoint == 'predictions' %}active{% endif %}">
-                                🔮 預測分析
+                            <a href="{{ url_for('predict_new') }}" class="sidebar-nav-link {% if request.endpoint == 'predict_new' %}active{% endif %}">
+                                新電影預測
                             </a>
                         </li>
                         <li class="sidebar-nav-item">
                             <a href="{{ url_for('reports') }}" class="sidebar-nav-link {% if request.endpoint == 'reports' %}active{% endif %}">
-                                📈 報表中心
+                                報表中心
                             </a>
                         </li>
                     </ul>

@@ -29,29 +29,33 @@ function initializeTooltips() {
 
 // ============= 側邊欄切換（手機版）=============
 function initializeSidebarToggle() {
-    const sidebar = document.querySelector('.sidebar');
-    const toggleBtn = document.createElement('button');
-    toggleBtn.className = 'sidebar-toggle btn btn-primary';
-    toggleBtn.innerHTML = '☰';
-    toggleBtn.style.display = 'none';
-    
-    // 只在手機版顯示
-    if (window.innerWidth <= 768) {
-        toggleBtn.style.display = 'block';
-        document.body.appendChild(toggleBtn);
-        
-        toggleBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('sidebar-open');
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const sidebarNav = document.getElementById('sidebarNav');
+
+    if (!toggleBtn || !sidebarNav) return;
+
+    // 漢堡按鈕點擊事件
+    toggleBtn.addEventListener('click', () => {
+        toggleBtn.classList.toggle('active');
+        sidebarNav.classList.toggle('open');
+    });
+
+    // 點擊選單項目後自動關閉（手機版）
+    const navLinks = sidebarNav.querySelectorAll('.sidebar-nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                toggleBtn.classList.remove('active');
+                sidebarNav.classList.remove('open');
+            }
         });
-    }
-    
-    // 監聽視窗大小變化
+    });
+
+    // 視窗大小變化時，如果切換到桌面版，自動關閉選單
     window.addEventListener('resize', () => {
-        if (window.innerWidth <= 768) {
-            toggleBtn.style.display = 'block';
-        } else {
-            toggleBtn.style.display = 'none';
-            sidebar.classList.remove('sidebar-open');
+        if (window.innerWidth > 768) {
+            toggleBtn.classList.remove('active');
+            sidebarNav.classList.remove('open');
         }
     });
 }

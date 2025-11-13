@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(uv run:*)",
-      "Bash(gunicorn:*)"
+      "Bash(gunicorn:*)",
+      "Bash(nul)"
     ],
     "deny": [],
     "ask": []

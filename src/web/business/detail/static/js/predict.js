@@ -139,15 +139,15 @@ addWeekButton.addEventListener('click', () => {
     const newRow = document.createElement('tr');
     newRow.setAttribute('data-week', nextWeek);
     newRow.innerHTML = `
-        <td><input type="number" class="table-input week-input" name="week" value="${nextWeek}" min="1"></td>
+        <td><input type="number" class="table-input integer-only" name="week" value="${nextWeek}" min="1"></td>
         <td><input type="number" class="table-input integer-only" name="boxoffice" placeholder="例: 12000000" min="0" step="1"></td>
         <td><input type="number" class="table-input integer-only" name="audience" placeholder="例: 40000" min="0" step="1"></td>
         <td><input type="number" class="table-input integer-only" name="screens" placeholder="例: 150" min="0" step="1"></td>
-        <td><button class="btn-delete-row">❌</button></td>
+        <td><button class="btn btn-danger-dark btn-sm">X</button></td>
     `;
 
     // 綁定刪除事件
-    const deleteBtn = newRow.querySelector('.btn-delete-row');
+    const deleteBtn = newRow.querySelector('.btn');
     deleteBtn.addEventListener('click', () => deleteRow(newRow));
 
     // 綁定驗證事件
@@ -169,10 +169,12 @@ function updateDeleteButtons() {
     const rows = tbody.querySelectorAll('tr');
 
     rows.forEach((row, index) => {
-        const deleteBtn = row.querySelector('.btn-delete-row');
-        if (index === 0) {
+        const deleteBtn = row.querySelector('.btn');
+        if (deleteBtn && index === 0) {
+            deleteBtn.classList.add('btn-disabled');
             deleteBtn.disabled = true;
-        } else {
+        } else if (deleteBtn) {
+            deleteBtn.classList.remove('btn-disabled');
             deleteBtn.disabled = false;
         }
     });
@@ -203,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rows = tbody.querySelectorAll('tr');
 
     rows.forEach((row) => {
-        const deleteBtn = row.querySelector('.btn-delete-row');
+        const deleteBtn = row.querySelector('.btn');
         if (deleteBtn && !deleteBtn.disabled) {
             deleteBtn.addEventListener('click', () => deleteRow(row));
         }

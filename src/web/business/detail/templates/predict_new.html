@@ -15,11 +15,7 @@
     </div>
     <div class="card-body">
         <div class="search-container">
-            <input type="text"
-                   id="movieSearchInput"
-                   class="search-input"
-                   placeholder="輸入電影名稱搜尋..."
-                   autocomplete="off">
+            <input type="text" id="movieSearchInput" class="search-input" placeholder="輸入電影名稱搜尋..." autocomplete="off">
             <button class="btn btn-primary" id="searchButton">
                 搜尋
             </button>
@@ -61,35 +57,44 @@
         <div class="table-container">
             <div class="table-header">
                 <h4>週次資料</h4>
-                <button class="btn-add-week" id="addWeekButton">
+                <button class="btn btn-primary" id="addWeekButton">
                     + 新增一週
                 </button>
             </div>
             <div class="table-scroll">
-                <table class="editable-table">
+                <table>
                     <thead>
                         <tr>
                             <th>週次</th>
                             <th>票房（元）</th>
                             <th>觀影人次</th>
                             <th>院線數</th>
-                            <th>操作</th>
+                            <th>編輯</th>
                         </tr>
                     </thead>
                     <tbody id="weekDataTable">
                         <tr data-week="1">
-                            <td><input type="number" class="table-input week-input" name="week" value="1" min="1"></td>
-                            <td><input type="number" class="table-input integer-only" name="boxoffice" placeholder="例: 12000000" min="0" step="1"></td>
-                            <td><input type="number" class="table-input integer-only" name="audience" placeholder="例: 40000" min="0" step="1"></td>
-                            <td><input type="number" class="table-input integer-only" name="screens" placeholder="例: 150" min="0" step="1"></td>
-                            <td><button class="btn-delete-row" disabled>❌</button></td>
+                            <td><input type="number" class="table-input integer-only" name="week" value="1" min="1">
+                            </td>
+                            <td><input type="number" class="table-input integer-only" name="boxoffice"
+                                    placeholder="例: 12000000" min="0" step="1"></td>
+                            <td><input type="number" class="table-input integer-only" name="audience"
+                                    placeholder="例: 40000" min="0" step="1"></td>
+                            <td><input type="number" class="table-input integer-only" name="screens"
+                                    placeholder="例: 150" min="0" step="1"></td>
+                            <td><button class="btn btn-danger-dark btn-disabled">X</button></td>
                         </tr>
                         <tr data-week="2">
-                            <td><input type="number" class="table-input week-input" name="week" value="2" min="1"></td>
-                            <td><input type="number" class="table-input integer-only" name="boxoffice" placeholder="例: 10200000" min="0" step="1"></td>
-                            <td><input type="number" class="table-input integer-only" name="audience" placeholder="例: 34000" min="0" step="1"></td>
-                            <td><input type="number" class="table-input integer-only" name="screens" placeholder="例: 140" min="0" step="1"></td>
-                            <td><button class="btn-delete-row">❌</button></td>
+                            <td><input type="number" class="table-input" name="week" value="2" min="1"></td>
+                            <td><input type="number" class="table-input integer-only" name="boxoffice"
+                                    placeholder="例: 10200000" min="0" step="1"></td>
+                            <td><input type="number" class="table-input integer-only" name="audience"
+                                    placeholder="例: 34000" min="0" step="1"></td>
+                            <td><input type="number" class="table-input integer-only" name="screens"
+                                    placeholder="例: 140" min="0" step="1"></td>
+                            <td>
+                                <button class="btn btn-danger-dark btn-sm">X</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -112,10 +117,10 @@
         <h3 class="card-title">預測結果</h3>
         <div>
             <button class="btn btn-primary" id="exportExcel">
-                📊 匯出 Excel
+                匯出 Excel
             </button>
             <button class="btn btn-secondary" id="exportCSV">
-                📄 匯出 CSV
+                匯出 CSV
             </button>
         </div>
     </div>

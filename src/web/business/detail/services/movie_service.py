@@ -161,39 +161,63 @@ class MovieService:
     def calculate_statistics(self, gov_id: str) -> Dict:
         """
         計算統計資訊
-        
+
         Args:
             gov_id: 政府代號
-            
+
         Returns:
             統計資訊字典
         """
         history = self.get_boxoffice_history(gov_id)
-        
+
         if not history:
             return {}
-        
+
         # 計算總票房
         total_boxoffice = sum(r.boxoffice for r in history)
         total_audience = sum(r.audience for r in history)
-        
+
         # 計算平均衰退率
         decline_rates = []
         for i in range(1, len(history)):
             if history[i-1].boxoffice > 0:
                 rate = (history[i].boxoffice - history[i-1].boxoffice) / history[i-1].boxoffice
                 decline_rates.append(rate)
-        
+
         avg_decline_rate = sum(decline_rates) / len(decline_rates) if decline_rates else 0
-        
+
         # 找出最高票房週
         peak_week = max(history, key=lambda r: r.boxoffice)
-        
+
+        # 計算本週衰退率（最新一週的衰退率）====待調整====
+        current_decline_rate = 0
+        audience_decline_rate = 0
+        screens_decline_rate = 0
+
+        if len(history) >= 2:
+            latest = history[-1]
+            previous = history[-2]
+
+            if previous.boxoffice > 0:
+                current_decline_rate = (latest.boxoffice - previous.boxoffice) / previous.boxoffice
+
+            if previous.audience > 0:
+                audience_decline_rate = (latest.audience - previous.audience) / previous.audience
+
+            if previous.screens > 0:
+                screens_decline_rate = (latest.screens - previous.screens) / previous.screens
+
         return {
             'total_boxoffice': total_boxoffice,
             'total_audience': total_audience,
             'avg_decline_rate': avg_decline_rate,
             'peak_week': peak_week.week,
             'peak_boxoffice': peak_week.boxoffice,
-            'weeks_released': len(history)
+            'weeks_released': len(history),
+            # 新增欄位
+            'cross_round_total_boxoffice': total_boxoffice * 1.25,  # 模擬跨輪累計（當輪 * 1.25）
+            'cross_round_total_audience': int(total_audience * 1.25),  # 模擬跨輪累計
+            'current_decline_rate': current_decline_rate,
+            'audience_decline_rate': audience_decline_rate,
+            'screens_decline_rate': screens_decline_rate
         }

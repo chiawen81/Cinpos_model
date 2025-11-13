@@ -15,53 +15,30 @@
         <div class="stat-value">12</div>
         <div class="stat-change positive">+3 較上週</div>
     </div>
-    
+
     <div class="stat-card">
-        <div class="stat-label">預測準確率</div>
-        <div class="stat-value">92%</div>
-        <div class="stat-change">R² = 0.96</div>
+        <div class="stat-label">追蹤中電影</div>
+        <div class="stat-value">5</div>
+        <div class="stat-change">個人追蹤</div>
     </div>
-    
+
     <div class="stat-card">
         <div class="stat-label">預警電影</div>
         <div class="stat-value">3</div>
         <div class="stat-change negative">需要關注</div>
     </div>
-    
-    <div class="stat-card">
-        <div class="stat-label">總預測數</div>
-        <div class="stat-value">156</div>
-        <div class="stat-change">本月累計</div>
-    </div>
 </div>
 
-<!-- 快速連結 -->
-<div class="card">
-    <div class="card-header">
-        <h3 class="card-title">快速開始</h3>
-    </div>
-    <div class="card-body">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-            <a href="{{ url_for('movie_detail', gov_id='MOV001') }}" class="btn btn-primary">
-                查看範例電影預測
-            </a>
-            <a href="{{ url_for('movies_list') }}" class="btn btn-secondary">
-                瀏覽所有電影
-            </a>
-            <a href="{{ url_for('predictions') }}" class="btn btn-secondary">
-                預測分析工具
-            </a>
-            <a href="{{ url_for('reports') }}" class="btn btn-secondary">
-                下載報表
-            </a>
-        </div>
-    </div>
-</div>
 
-<!-- 最新預測 -->
+<!-- 票房預測結果 -->
 <div class="card mt-4">
     <div class="card-header">
-        <h3 class="card-title">最新預測結果</h3>
+        <h3 class="card-title">票房預測結果</h3>
+        <div class="filter-tabs" id="movieFilter">
+            <button class="filter-tab active" data-filter="all">所有電影</button>
+            <button class="filter-tab" data-filter="now-showing">現正上映</button>
+            <button class="filter-tab" data-filter="tracked">我的追蹤</button>
+        </div>
     </div>
     <div class="card-body">
         <table>
@@ -69,28 +46,47 @@
                 <tr>
                     <th>電影名稱</th>
                     <th>當前週次</th>
-                    <th>下週預測</th>
-                    <th>衰退率</th>
+                    <th>當週預測</th>
+                    <th>上週預測</th>
+                    <th>上週實際</th>
+                    <th>上週衰退率</th>
+                    <th>預測差距%</th>
                     <th>狀態</th>
-                    <th>操作</th>
+                    <th>追蹤</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>科技風暴</td>
+            <tbody id="movieTableBody">
+                <tr data-filter-type="now-showing">
+                    <td><a href="{{ url_for('movie_detail', gov_id='MOV001') }}" class="movie-link">科技風暴</a></td>
                     <td>第8週</td>
                     <td>NT$850萬</td>
+                    <td>NT$1,050萬</td>
+                    <td>NT$980萬</td>
                     <td style="color: #FFA500;">-28%</td>
+                    <td style="color: #51CF66;">+7%</td>
                     <td><span class="badge badge-warning">注意</span></td>
-                    <td><a href="{{ url_for('movie_detail', gov_id='MOV001') }}">查看詳情</a></td>
+                    <td>
+                        <button class="btn-track-mini" data-gov-id="MOV001">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 5v14M5 12h14"></path>
+                            </svg>
+                        </button>
+                    </td>
                 </tr>
-                <tr>
-                    <td>愛在深秋</td>
+                <tr data-filter-type="now-showing">
+                    <td><a href="{{ url_for('movie_detail', gov_id='MOV002') }}" class="movie-link">愛在深秋</a></td>
                     <td>第10週</td>
                     <td>NT$320萬</td>
+                    <td>NT$380萬</td>
+                    <td>NT$375萬</td>
                     <td style="color: #51CF66;">-15%</td>
+                    <td style="color: #51CF66;">+1%</td>
                     <td><span class="badge badge-success">正常</span></td>
-                    <td><a href="{{ url_for('movie_detail', gov_id='MOV002') }}">查看詳情</a></td>
+                    <td>
+                        <button class="btn-track-mini tracked" data-gov-id="MOV002">
+                            ✓
+                        </button>
+                    </td>
                 </tr>
             </tbody>
         </table>

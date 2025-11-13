@@ -120,6 +120,11 @@ def predictions():
     """預測分析頁面"""
     return render_template('predictions.html')
 
+@app.route('/predict-new')
+def predict_new():
+    """新電影預測頁面"""
+    return render_template('predict_new.html')
+
 @app.route('/reports')
 def reports():
     """報表中心頁面"""

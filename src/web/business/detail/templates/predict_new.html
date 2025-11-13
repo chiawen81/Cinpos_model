@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}新電影預測 - 電影票房預測系統{% endblock %}
+
+{% block content %}
+<div class="mb-4">
+    <h1>新電影預測</h1>
+    <p class="text-secondary">輸入電影資料，預測未來票房表現</p>
+</div>
+
+<!-- 搜尋區塊 -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="card-title">搜尋電影</h3>
+    </div>
+    <div class="card-body">
+        <div class="search-container">
+            <input type="text"
+                   id="movieSearchInput"
+                   class="search-input"
+                   placeholder="輸入電影名稱搜尋..."
+                   autocomplete="off">
+            <button class="btn btn-primary" id="searchButton">
+                搜尋
+            </button>
+        </div>
+
+        <!-- 搜尋結果下拉 -->
+        <div id="searchDropdown" class="search-dropdown" style="display: none;">
+            <!-- 動態產生搜尋結果 -->
+        </div>
+    </div>
+</div>
+
+<!-- 預測設定區塊 -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="card-title">預測設定</h3>
+    </div>
+    <div class="card-body">
+        <!-- 電影資訊顯示 -->
+        <div id="selectedMovieInfo" class="selected-movie-info" style="display: none;">
+            <div class="movie-info-header">
+                <h4 id="selectedMovieTitle"></h4>
+                <button class="btn btn-secondary btn-sm" id="clearSelection">清除選擇</button>
+            </div>
+            <div class="movie-basic-info" id="movieBasicInfo"></div>
+        </div>
+
+        <!-- 模型選擇 -->
+        <div class="form-group">
+            <label for="modelSelect">選擇預測模型</label>
+            <select id="modelSelect" class="form-select">
+                <option value="M1" selected>M1 線性回歸模型</option>
+                <option value="M2" disabled>M2 隨機森林（即將推出）</option>
+                <option value="M3" disabled>M3 XGBoost（即將推出）</option>
+            </select>
+        </div>
+
+        <!-- 週次資料表格 -->
+        <div class="table-container">
+            <div class="table-header">
+                <h4>週次資料</h4>
+                <button class="btn-add-week" id="addWeekButton">
+                    + 新增一週
+                </button>
+            </div>
+            <div class="table-scroll">
+                <table class="editable-table">
+                    <thead>
+                        <tr>
+                            <th>週次</th>
+                            <th>票房（元）</th>
+                            <th>觀影人次</th>
+                            <th>院線數</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="weekDataTable">
+                        <tr data-week="1">
+                            <td><input type="number" class="table-input week-input" name="week" value="1" min="1"></td>
+                            <td><input type="number" class="table-input integer-only" name="boxoffice" placeholder="例: 12000000" min="0" step="1"></td>
+                            <td><input type="number" class="table-input integer-only" name="audience" placeholder="例: 40000" min="0" step="1"></td>
+                            <td><input type="number" class="table-input integer-only" name="screens" placeholder="例: 150" min="0" step="1"></td>
+                            <td><button class="btn-delete-row" disabled>❌</button></td>
+                        </tr>
+                        <tr data-week="2">
+                            <td><input type="number" class="table-input week-input" name="week" value="2" min="1"></td>
+                            <td><input type="number" class="table-input integer-only" name="boxoffice" placeholder="例: 10200000" min="0" step="1"></td>
+                            <td><input type="number" class="table-input integer-only" name="audience" placeholder="例: 34000" min="0" step="1"></td>
+                            <td><input type="number" class="table-input integer-only" name="screens" placeholder="例: 140" min="0" step="1"></td>
+                            <td><button class="btn-delete-row">❌</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 驗證提示 -->
+        <div id="validationMessage" class="validation-message"></div>
+
+        <!-- 開始預測按鈕 -->
+        <button class="btn btn-primary btn-lg" id="predictButton">
+            開始預測
+        </button>
+    </div>
+</div>
+
+<!-- 預測結果區塊 -->
+<div class="card" id="predictionResults" style="display: none;">
+    <div class="card-header">
+        <h3 class="card-title">預測結果</h3>
+        <div>
+            <button class="btn btn-primary" id="exportExcel">
+                📊 匯出 Excel
+            </button>
+            <button class="btn btn-secondary" id="exportCSV">
+                📄 匯出 CSV
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <table>
+            <thead>
+                <tr>
+                    <th>週次</th>
+                    <th>類型</th>
+                    <th>票房</th>
+                    <th>觀影人數</th>
+                    <th>廳數</th>
+                    <th>衰退率</th>
+                    <th>異常警示</th>
+                </tr>
+            </thead>
+            <tbody id="predictionTableBody">
+                <!-- 動態生成 -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- 票房趨勢圖表 -->
+<div class="chart-container" id="predictionChart" style="display: none;">
+    <div class="chart-header">
+        <h3 class="chart-title">票房趨勢預測</h3>
+    </div>
+    <div class="chart-wrapper" id="prediction-trend-chart"></div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/predict.js') }}"></script>
+{% endblock %}

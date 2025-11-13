@@ -1,0 +1,21 @@
+{
+    "data": {
+        "keyword": "\u6C34\u4E4B",
+        "results": [
+            {
+                "movieId": "24308",
+                "name": "\u91D1\u4E4B\u570B\u6C34\u4E4B\u570B",
+                "originalName": "GOLD KINGDOM AND WATER KINGDOM",
+                "releaseDate": "2023-05-12"
+            },
+            {
+                "movieId": "23322",
+                "name": "\u963F\u51E1\u9054\uFF1A\u6C34\u4E4B\u9053",
+                "originalName": "AVATAR: THE WAY OF WATER",
+                "releaseDate": "2022-12-14"
+            }
+        ]
+    },
+    "success": true,
+    "message": ""
+}

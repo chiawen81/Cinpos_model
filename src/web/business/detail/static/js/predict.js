@@ -138,6 +138,9 @@ async function selectMovie(movie) {
     searchDropdown.style.display = 'none';
     searchInput.value = movie.name;
 
+    // 清空上一部電影的預測結果
+    clearPredictionResults();
+
     // 顯示載入中
     selectedMovieTitle.textContent = movie.name;
     movieBasicInfo.innerHTML = '<div>載入中...</div>';
@@ -357,12 +360,38 @@ function populateWeekData(weeks) {
     updateDeleteButtons();
 }
 
+// 清空預測結果
+function clearPredictionResults() {
+    const predictionResults = document.getElementById('predictionResults');
+    const predictionChart = document.getElementById('predictionChart');
+    const predictionTableBody = document.getElementById('predictionTableBody');
+
+    // 隱藏預測結果區塊和圖表
+    if (predictionResults) {
+        predictionResults.style.display = 'none';
+    }
+    if (predictionChart) {
+        predictionChart.style.display = 'none';
+    }
+
+    // 清空表格內容
+    if (predictionTableBody) {
+        predictionTableBody.innerHTML = '';
+    }
+
+    // 清空全域預測結果
+    currentPredictionResult = null;
+}
+
 // 清除選擇
 clearSelection.addEventListener('click', () => {
     currentSelectedMovie = null;
     searchInput.value = '';
     selectedMovieInfo.style.display = 'none';
     searchDropdown.style.display = 'none';
+
+    // 清空預測結果
+    clearPredictionResults();
 
     // 重置表格為預設的 2 週空白資料
     const tbody = document.getElementById('weekDataTable');
@@ -697,15 +726,27 @@ function displayPredictionResults(result) {
     predictionTableBody.innerHTML = '';
 
     // 顯示歷史資料
-    result.history.forEach(item => {
+    result.history.forEach((item, index) => {
         const row = document.createElement('tr');
+
+        // 計算衰退率：(本週票房 - 上週票房) / 上週票房
+        let declineRateHtml = '-';
+        if (index > 0) {
+            const prevBoxoffice = result.history[index - 1].boxoffice;
+            if (prevBoxoffice > 0) {
+                const declineRate = (item.boxoffice - prevBoxoffice) / prevBoxoffice;
+                const declineColor = declineRate < -0.3 ? 'danger' : (declineRate < -0.15 ? 'warning' : 'success');
+                declineRateHtml = `<span class="badge badge-${declineColor}">${formatPercentage(declineRate)}</span>`;
+            }
+        }
+
         row.innerHTML = `
             <td>第 ${item.week} 週</td>
             <td><span class="badge badge-success">實際</span></td>
             <td>${formatCurrency(item.boxoffice)}</td>
             <td>${formatNumber(item.audience)}</td>
             <td>${item.screens || '-'}</td>
-            <td>-</td>
+            <td>${declineRateHtml}</td>
             <td>-</td>
         `;
         predictionTableBody.appendChild(row);

@@ -11,7 +11,11 @@
       "Bash(uv pip list:*)",
       "Bash(findstr:*)",
       "Bash(uv pip freeze:*)",
-      "WebFetch(domain:boxofficetw.tfai.org.tw)"
+      "WebFetch(domain:boxofficetw.tfai.org.tw)",
+      "Bash(timeout 5 uv run:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

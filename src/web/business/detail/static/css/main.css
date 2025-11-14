@@ -319,6 +319,11 @@ tbody tr:hover {
     margin-bottom: var(--spacing-lg);
 }
 
+.ml-1 {
+    margin-left: var(--spacing-xs);
+}
+
+
 .mr-xxs {
     margin-right: var(--spacing-xxs);
 }

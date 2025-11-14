@@ -21,7 +21,9 @@
             <aside class="sidebar">
                 <div class="sidebar-header">
                     <div class="sidebar-logo">
-                        <img src="{{ url_for('static', filename='img/logo-w-gradient.svg') }}" alt="CinePredict" style="max-width: 150px; height: auto;">
+                        <a href="{{ url_for('index') }}" style="display: block; cursor: pointer;">
+                            <img src="{{ url_for('static', filename='img/logo-w-gradient.svg') }}" alt="CinePredict" style="max-width: 150px; height: auto;">
+                        </a>
                     </div>
                     <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">
                         <span class="hamburger-line"></span>

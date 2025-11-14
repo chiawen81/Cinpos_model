@@ -289,15 +289,6 @@ def api_search_movie():
         JSON 格式的搜尋結果
     """
     import cloudscraper
-    import sys
-    from pathlib import Path
-
-    # 加入 common 路徑以匯入 network_utils
-    common_path = Path(__file__).parent.parent.parent.parent / 'common'
-    if str(common_path) not in sys.path:
-        sys.path.insert(0, str(common_path))
-
-    from network_utils import get_default_headers
 
     try:
         keyword = request.args.get('keyword', '').strip()
@@ -360,15 +351,6 @@ def api_movie_detail_by_id(movie_id):
         JSON 格式的電影詳細資料
     """
     import cloudscraper
-    import sys
-    from pathlib import Path
-
-    # 加入 common 路徑以匯入 network_utils
-    common_path = Path(__file__).parent.parent.parent.parent / 'common'
-    if str(common_path) not in sys.path:
-        sys.path.insert(0, str(common_path))
-
-    from network_utils import get_default_headers
 
     try:
         if not movie_id:

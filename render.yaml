@@ -6,12 +6,9 @@ services:
     region: singapore  # 選擇新加坡節點（離台灣較近）
     plan: free
 
-    # 指定 web 應用的目錄
-    rootDir: src/web/business/detail
-
     # 建置設定
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn -w 4 -b 0.0.0.0:$PORT app:app
+    buildCommand: pip install -r src/web/business/detail/requirements.txt
+    startCommand: cd src/web/business/detail && gunicorn -w 4 -b 0.0.0.0:$PORT app:app
 
     # 環境變數
     envVars:

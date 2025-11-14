@@ -19,12 +19,13 @@ from common.feature_engineering import BoxOfficeFeatureEngineer
 class M1NewMoviePredictor:
     """M1 新電影預測器"""
 
-    def __init__(self, model_path: Optional[Path] = None):
+    def __init__(self, model_path: Optional[Path] = None, lazy_load: bool = False):
         """
         初始化預測器
 
         Args:
             model_path: 模型檔案路徑，若為 None 則使用預設路徑
+            lazy_load: 是否延遲載入模型（預設 False）
         """
         if model_path is None:
             # 使用專案根目錄的相對路徑
@@ -34,16 +35,29 @@ class M1NewMoviePredictor:
         self.model_path = model_path
         self.model = None
         self.feature_names = None
-        self._load_model()
+        self.model_loaded = False
+
+        # 只有非延遲載入模式才立即載入模型
+        if not lazy_load:
+            self._load_model()
 
     def _load_model(self):
         """載入模型"""
+        if self.model_loaded:
+            return  # 已經載入過了
+
         try:
             self.model, self.feature_names = joblib.load(self.model_path)
+            self.model_loaded = True
             print(f"[OK] 已載入模型: {self.model_path}")
         except Exception as e:
             print(f"[ERROR] 載入模型失敗: {e}")
             raise
+
+    def _ensure_model_loaded(self):
+        """確保模型已載入，如果未載入則嘗試載入"""
+        if not self.model_loaded:
+            self._load_model()
 
     def predict_single_week(self, movie_data: Dict) -> float:
         """
@@ -55,6 +69,9 @@ class M1NewMoviePredictor:
         Returns:
             預測的票房金額
         """
+        # 確保模型已載入
+        self._ensure_model_loaded()
+
         # 使用共用的特徵工程模組計算 sin/cos 特徵
         if "release_month" in movie_data and "release_month_sin" not in movie_data:
             sin_val, cos_val = BoxOfficeFeatureEngineer.encode_month_cyclical(movie_data["release_month"])
@@ -87,6 +104,9 @@ class M1NewMoviePredictor:
         Returns:
             預測結果列表
         """
+        # 確保模型已載入
+        self._ensure_model_loaded()
+
         # 檢查輸入資料（對應訓練時的篩選條件）
         if len(week_data) < 2:
             raise ValueError("至少需要 2 週的歷史資料")

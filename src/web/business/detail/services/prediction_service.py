@@ -37,8 +37,8 @@ class PredictionService:
         self.movie_service = MovieService()
         self.config = Config()
 
-        # 初始化新電影預測器
-        self.new_movie_predictor = M1NewMoviePredictor(model_path)
+        # 初始化新電影預測器（使用延遲載入模式，避免啟動時載入模型失敗）
+        self.new_movie_predictor = M1NewMoviePredictor(model_path, lazy_load=True)
 
     def predict_movie_boxoffice(self, gov_id: str, weeks: int = 3) -> List[BoxOfficePrediction]:
         """

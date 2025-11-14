@@ -32,25 +32,25 @@
 <div class="card mb-4">
     <div class="card-header">
         <h3 class="card-title">預測設定</h3>
+        <div>
+            <button class="btn btn-secondary" id="clearSelection">清除選擇</button>
+        </div>
     </div>
     <div class="card-body">
         <!-- 電影資訊顯示 -->
         <div id="selectedMovieInfo" class="selected-movie-info" style="display: none;">
             <div class="movie-info-header">
                 <h4 id="selectedMovieTitle"></h4>
-                <div>
-                    <button class="btn btn-primary btn-sm" id="cleanDataButton">
-                        資料清洗
-                    </button>
-                    <button class="btn btn-secondary btn-sm" id="clearSelection">清除選擇</button>
-                </div>
+                <!-- <div>
+                    <button class="btn btn-secondary" id="clearSelection">清除選擇</button>
+                </div> -->
             </div>
-            <div class="movie-basic-info" id="movieBasicInfo"></div>
+            <div class="movie-basic-info display-flex display-column" id="movieBasicInfo"></div>
         </div>
 
         <!-- 模型選擇 -->
         <div class="form-group">
-            <label for="modelSelect">選擇預測模型</label>
+            <h4 class="text-primary">選擇預測模型</h4>
             <select id="modelSelect" class="form-select">
                 <option value="M1" selected>M1 線性回歸模型</option>
                 <option value="M2" disabled>M2 模型（即將推出）</option>
@@ -60,14 +60,9 @@
         <!-- 週次資料表格 -->
         <div class="table-container">
             <div class="table-header">
-                <h4>週次資料</h4>
+                <h4 class="mb-0">週次資料</h4>
                 <div>
-                    <button class="btn btn-secondary" id="downloadPreprocessedButton">
-                        下載票房資料
-                    </button>
-                    <button class="btn btn-primary" id="addWeekButton">
-                        + 新增一週
-                    </button>
+                    <button class="btn btn-primary" id="addWeekButton">新增一週</button>
                 </div>
             </div>
             <div class="table-scroll">
@@ -108,7 +103,7 @@
                             <td><input type="number" class="table-input integer-only" name="screens"
                                     placeholder="例: 140" min="0" step="1"></td>
                             <td>
-                                <button class="btn btn-danger-dark btn-sm">刪除</button>
+                                <button class="btn btn-danger-dark">刪除</button>
                             </td>
                         </tr>
                     </tbody>
@@ -120,9 +115,13 @@
         <div id="validationMessage" class="validation-message"></div>
 
         <!-- 開始預測按鈕 -->
-        <button class="btn btn-primary btn-lg" id="predictButton">
-            開始預測
-        </button>
+        <div class="display-flex justify-end">
+            <button class="btn btn-primary btn-m" id="downloadPreprocessedButton">
+                下載CSV
+            </button>
+            <button class="btn btn-primary btn-m ml-1" id="cleanDataButton">資料清洗</button>
+            <button class="btn btn-primary btn-m ml-1" id="predictButton"> 開始預測</button>
+        </div>
     </div>
 </div>
 

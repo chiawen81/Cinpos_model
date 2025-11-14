@@ -339,6 +339,29 @@ tbody tr:hover {
     padding: var(--spacing-lg);
 }
 
+.w-100 {
+    width: 100%;
+}
+
+.text-brand-primary {
+    color: var(--brand-primary);
+}
+
+.text-brane-secondary {
+    color: var(--brand-secondary);
+}
+
+.text-danger-light {
+    color: var(--danger-light);
+}
+
+.report-divider {
+    background-color: var(--bg-light);
+    margin: 10px auto;
+    height: 1px;
+    border-radius: 12px;
+}
+
 /* ============= 動畫 ============= */
 @keyframes fadeIn {
     from {

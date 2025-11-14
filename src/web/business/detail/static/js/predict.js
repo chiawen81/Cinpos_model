@@ -1047,15 +1047,15 @@ function showCleaningReport(report) {
         <div class="report-item">- 中斷週次資料：${report.removed.interrupted} 筆</div>
     </div>
 
-    <div class="report-section mb-2">
-        <strong>✅ 最終資料：</strong>${report.finalCount} 筆
+    <div class="report-section mb-2 text-brane-secondary ">
+        <strong>最終資料：</strong>${report.finalCount} 筆
     </div>
 
     <div class="report-divider"></div>`;
 
     if (report.isNonFirstRound && report.interruptedWeekRange) {
         reportHtml += `
-    <div class="report-warning mb-4">
+    <div class="report-warning mb-4 text-danger-light">
         <strong>⚠️ 警告：此電影非首輪電影！</strong>
         <div class="report-item">中斷週次範圍：第 ${report.interruptedWeekRange.start}-${report.interruptedWeekRange.end} 週</div>
         <div class="report-item">連續 ${report.maxConsecutiveZeros} 週票房為 0</div>
@@ -1068,11 +1068,11 @@ function showCleaningReport(report) {
     // 顯示報告（可以用 alert 或自訂 modal）
     const reportContainer = document.createElement('div');
     reportContainer.innerHTML = reportHtml;
-    reportContainer.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10000; background: #222222; color: #e0e0e0; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); max-width: 500px; width: 90%;';
+    reportContainer.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10000; background: #222222; color: #e0e0e0; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);width: 400px;';
 
     const closeButton = document.createElement('button');
     closeButton.textContent = '關閉';
-    closeButton.className = 'btn btn-secondary';
+    closeButton.className = 'btn btn-secondary w-100';
     closeButton.style.marginTop = '20px';
     closeButton.onclick = () => document.body.removeChild(reportContainer);
     reportContainer.querySelector('.cleaning-report').appendChild(closeButton);

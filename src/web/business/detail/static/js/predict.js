@@ -783,7 +783,8 @@ function formatCurrency(value) {
     return new Intl.NumberFormat('zh-TW', {
         style: 'currency',
         currency: 'TWD',
-        minimumFractionDigits: 0
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
     }).format(value);
 }
 
@@ -1087,36 +1088,50 @@ function showCleaningReport(report) {
         <div class="report-item">- 中斷週次資料：${report.removed.interrupted} 筆</div>
     </div>
 
-    <div class="report-section mb-2">
-        <strong>✅ 最終資料：</strong>${report.finalCount} 筆
+    <div class="report-section mb-2 text-brane-secondary ">
+        <strong>最終資料：</strong>${report.finalCount} 筆
     </div>
-
-    <div class="report-divider"></div>`;
+    `;
 
     if (report.isNonFirstRound && report.interruptedWeekRange) {
         reportHtml += `
+    <div class="report-divider"></div>
     <div class="report-warning mb-4">
-        <strong>⚠️ 警告：此電影非首輪電影！</strong>
-        <div class="report-item">中斷週次範圍：第 ${report.interruptedWeekRange.start}-${report.interruptedWeekRange.end} 週</div>
-        <div class="report-item">連續 ${report.maxConsecutiveZeros} 週票房為 0</div>
-        <div class="report-item">無法進行預測</div>
+        <strong class="text-danger-light">⚠️ 警告：此電影非首輪電影！</strong>
+        <div class="report-item mt-1 ml-1">中斷週次範圍：第 ${report.interruptedWeekRange.start}-${report.interruptedWeekRange.end} 週</div>
+        <div class="report-item ml-1">連續 ${report.maxConsecutiveZeros} 週票房為 0</div>
+        <div class="report-item ml-1">無法進行預測</div>
     </div>`;
     }
 
     reportHtml += `</div>`;
 
+    // 創建遮罩層
+    const backdrop = document.createElement('div');
+    backdrop.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #151515E5; z-index: 9999; backdrop-filter: blur(4px);';
+
     // 顯示報告（可以用 alert 或自訂 modal）
     const reportContainer = document.createElement('div');
     reportContainer.innerHTML = reportHtml;
-    reportContainer.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10000; background: #222222; color: #e0e0e0; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); max-width: 500px; width: 90%;';
+    reportContainer.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10000; background: #222222; color: #e0e0e0; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);width: 400px;';
+
+    // 關閉函數：同時移除遮罩和彈窗
+    const closeModal = () => {
+        document.body.removeChild(backdrop);
+        document.body.removeChild(reportContainer);
+    };
 
     const closeButton = document.createElement('button');
     closeButton.textContent = '關閉';
-    closeButton.className = 'btn btn-secondary';
+    closeButton.className = 'btn btn-secondary w-100';
     closeButton.style.marginTop = '20px';
-    closeButton.onclick = () => document.body.removeChild(reportContainer);
+    closeButton.onclick = closeModal;
     reportContainer.querySelector('.cleaning-report').appendChild(closeButton);
 
+    // 點擊遮罩也能關閉
+    backdrop.onclick = closeModal;
+
+    document.body.appendChild(backdrop);
     document.body.appendChild(reportContainer);
 }
 

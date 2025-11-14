@@ -289,6 +289,7 @@ def api_search_movie():
         JSON 格式的搜尋結果
     """
     import cloudscraper
+    import time
 
     try:
         keyword = request.args.get('keyword', '').strip()
@@ -297,11 +298,55 @@ def api_search_movie():
             return jsonify({'error': '請輸入搜尋關鍵字'}), 400
 
         # 使用 cloudscraper 繞過 Cloudflare 防護
-        scraper = cloudscraper.create_scraper()
-        api_url = 'https://boxofficetw.tfai.org.tw/film/sf'
-        params = {'keyword': keyword}
+        scraper = cloudscraper.create_scraper(
+            browser={
+                'browser': 'chrome',
+                'platform': 'windows',
+                'mobile': False
+            },
+            delay=10  # 添加延遲以模擬真實用戶行為
+        )
 
-        response = scraper.get(api_url, params=params, timeout=10)
+        # 重試邏輯
+        max_retries = 2
+        for attempt in range(max_retries):
+            try:
+                # 第一次請求時先訪問主頁面建立 session
+                if attempt == 0:
+                    try:
+                        scraper.get('https://boxofficetw.tfai.org.tw/', timeout=10)
+                        time.sleep(1)  # 等待一下再發送 API 請求
+                    except:
+                        pass  # 如果主頁面訪問失敗也沒關係，繼續嘗試 API
+
+                api_url = 'https://boxofficetw.tfai.org.tw/film/sf'
+                params = {'keyword': keyword}
+
+                # 添加額外的 headers
+                headers = {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Accept-Language': 'zh-TW,zh;q=0.9,en;q=0.8',
+                    'Referer': 'https://boxofficetw.tfai.org.tw/',
+                    'Origin': 'https://boxofficetw.tfai.org.tw'
+                }
+
+                response = scraper.get(api_url, params=params, headers=headers, timeout=20)
+
+                if response.status_code == 200:
+                    break  # 成功，跳出重試循環
+                elif response.status_code == 403 and attempt < max_retries - 1:
+                    time.sleep(2)  # 等待後重試
+                    continue
+                else:
+                    response.raise_for_status()
+
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    time.sleep(2)
+                    continue
+                else:
+                    raise
+
         response.raise_for_status()
 
         # 解析回應
@@ -357,10 +402,26 @@ def api_movie_detail_by_id(movie_id):
             return jsonify({'error': '電影 ID 不可為空'}), 400
 
         # 使用 cloudscraper 繞過 Cloudflare 防護
-        scraper = cloudscraper.create_scraper()
+        # 使用更完整的瀏覽器模擬參數
+        scraper = cloudscraper.create_scraper(
+            browser={
+                'browser': 'chrome',
+                'platform': 'windows',
+                'mobile': False
+            }
+        )
+
         api_url = f'https://boxofficetw.tfai.org.tw/film/gfd/{movie_id}'
 
-        response = scraper.get(api_url, timeout=10)
+        # 添加額外的 headers
+        headers = {
+            'Accept': 'application/json, text/plain, */*',
+            'Accept-Language': 'zh-TW,zh;q=0.9,en;q=0.8',
+            'Referer': 'https://boxofficetw.tfai.org.tw/',
+            'Origin': 'https://boxofficetw.tfai.org.tw'
+        }
+
+        response = scraper.get(api_url, headers=headers, timeout=15)
         response.raise_for_status()
 
         # 解析回應

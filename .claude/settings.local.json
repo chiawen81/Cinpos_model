@@ -7,7 +7,11 @@
       "Bash(python:*)",
       "Bash(uv add:*)",
       "Bash(curl:*)",
-      "Bash(timeout 5 bash -c \"while ! curl -s http://127.0.0.1:5000 > /dev/null 2>&1; do sleep 0.5; done; echo ''Flask ready''\")"
+      "Bash(timeout 5 bash -c \"while ! curl -s http://127.0.0.1:5000 > /dev/null 2>&1; do sleep 0.5; done; echo ''Flask ready''\")",
+      "Bash(uv pip list:*)",
+      "Bash(findstr:*)",
+      "Bash(uv pip freeze:*)",
+      "WebFetch(domain:boxofficetw.tfai.org.tw)"
     ],
     "deny": [],
     "ask": []

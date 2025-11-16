@@ -66,29 +66,18 @@ async function performSearch() {
     searchDropdown.innerHTML = '<div class="search-loading">搜尋中...</div>';
     searchDropdown.style.display = 'block';
 
-    try {
-        // 呼叫後端代理 API（避免 CORS 問題）
-        const response = await fetch(`/api/search-movie?keyword=${encodeURIComponent(keyword)}`, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        const data = await response.json();
+    // 呼叫 service 層搜尋電影
+    const data = await movieService.searchMovie(keyword);
 
-        if (!data.success) {
-            showSearchError(data.error || '搜尋失敗，請稍後再試');
-            return;
-        }
+    if (!data.success) {
+        showSearchError(data.error || '搜尋失敗，請稍後再試');
+        return;
+    }
 
-        if (data.results && data.results.length > 0) {
-            showSearchResults(data.results);
-        } else {
-            showNoResults();
-        }
-    } catch (error) {
-        console.error('搜尋錯誤:', error);
-        showSearchError('搜尋失敗，請檢查網路連線');
+    if (data.results && data.results.length > 0) {
+        showSearchResults(data.results);
+    } else {
+        showNoResults();
     }
 }
 
@@ -144,14 +133,8 @@ async function selectMovie(movie) {
     selectedMovieInfo.style.display = 'block';
 
     try {
-        // 呼叫後端 API 取得電影詳細資料
-        const response = await fetch(`/api/movie-detail/${movie.movieId}`, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        const result = await response.json();
+        // 呼叫 service 層取得電影詳細資料
+        const result = await movieService.getMovieDetail(movie.movieId);
 
         if (!result.success) {
             // 若無法取得詳細資料，使用搜尋結果的基本資料
@@ -653,20 +636,12 @@ predictButton.addEventListener('click', async () => {
     predictButton.disabled = true;
 
     try {
-        // 呼叫預測 API
-        const response = await fetch('/api/predict-new', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                week_data: weekData,
-                movie_info: movieInfo,
-                predict_weeks: predictWeeks
-            })
+        // 呼叫 service 層進行預測
+        const result = await movieService.predictBoxOffice({
+            week_data: weekData,
+            movie_info: movieInfo,
+            predict_weeks: predictWeeks
         });
-
-        const result = await response.json();
 
         if (!result.success) {
             alert(`預測失敗: ${result.message || result.error}`);
@@ -775,23 +750,10 @@ async function exportPrediction(format) {
     }
 
     try {
-        const response = await fetch('/api/predict-new/export', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                prediction_result: currentPredictionResult,
-                format: format
-            })
-        });
-
-        if (!response.ok) {
-            throw new Error('匯出失敗');
-        }
+        // 呼叫 service 層匯出預測
+        const blob = await movieService.exportPrediction(currentPredictionResult, format);
 
         // 下載檔案
-        const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
@@ -1140,39 +1102,16 @@ downloadPreprocessedButton.addEventListener('click', async () => {
     downloadPreprocessedButton.disabled = true;
 
     try {
-        // 呼叫下載 API
-        const response = await fetch('/api/predict-new/download-preprocessed', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                week_data: weekData,
-                movie_info: movieInfo
-            })
+        // 呼叫 service 層下載預處理資料
+        const { blob, filename } = await movieService.downloadPreprocessed({
+            week_data: weekData,
+            movie_info: movieInfo
         });
 
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.error || '下載失敗');
-        }
-
         // 下載檔案
-        const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-
-        // 從 response headers 取得檔案名稱，或使用預設名稱
-        const contentDisposition = response.headers.get('Content-Disposition');
-        let filename = `preprocessed_${new Date().getTime()}.csv`;
-        if (contentDisposition) {
-            const filenameMatch = contentDisposition.match(/filename="?(.+)"?/);
-            if (filenameMatch) {
-                filename = filenameMatch[1];
-            }
-        }
-
         a.download = filename;
         document.body.appendChild(a);
         a.click();

@@ -114,6 +114,47 @@ body {
     }
 }
 
+/* ============= 位置控制 ============= */
+.display-flex {
+    display: flex;
+}
+
+.display-row {
+    flex-direction: row;
+}
+
+.display-column {
+    flex-direction: column;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
 /* ============= 文字樣式 ============= */
 h1,
 h2,
@@ -303,6 +344,10 @@ tbody tr:hover {
     margin-top: var(--spacing-lg);
 }
 
+.mb-0 {
+    margin-bottom: 0;
+}
+
 .mb-1 {
     margin-bottom: var(--spacing-xs);
 }
@@ -323,6 +368,9 @@ tbody tr:hover {
     margin-left: var(--spacing-xs);
 }
 
+.ml-2 {
+    margin-left: var(--spacing-sm);
+}
 
 .mr-xxs {
     margin-right: var(--spacing-xxs);
@@ -346,6 +394,14 @@ tbody tr:hover {
 
 .w-100 {
     width: 100%;
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
 }
 
 .text-brand-primary {

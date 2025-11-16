@@ -199,19 +199,25 @@ function updateMovieBasicInfo(movie, movieDetail) {
 
     // 取得電影 ID
     const movieId = (movieDetail && movieDetail.movieId) || movie.movieId || '-';
+    selectedMovieTitle.textContent += `｜${movie.originalName}｜ID:${movieId}`;
 
     // 首週相關指標初始顯示為 "-"，等待資料清洗後由 recalculateFirstWeekMetrics() 更新
     // 這樣可以確保顯示的是清洗後的真實週次第一週的資料
     movieBasicInfo.innerHTML = `
-        <div><strong>電影 ID：</strong>${movieId}</div>
-        <div><strong>原文片名：</strong>${movie.originalName || '-'}</div>
-        <div><strong>上映日期：</strong>${movie.releaseDate || '-'}</div>
-        <div><strong>片長：</strong>${filmLength} 分鐘</div>
-        <div><strong>分級：</strong>${rating}</div>
-        <div><strong>首週放映天數：</strong>-</div>
-        <div><strong>首週票房：</strong>-</div>
-        <div><strong>首週日均票房：</strong>-</div>
+        <div class="display-flex justify-start items-center"><strong>上映日期：</strong>${movie.releaseDate || '-'} | 片長：</strong>${filmLength} 分鐘 | 分級：</strong>${rating}</div>
+        <div class="display-flex justify-start items-center"><strong>首週放映天數：</strong>- | <strong>首週票房：</strong>- | 首週日均票房：</strong>-</div>
     `;
+
+    //     movieBasicInfo.innerHTML = `
+    //     <span><strong>電影 ID：</strong>${movieId}｜</span>
+    //     <span><strong>原文片名：</strong>${movie.originalName || '-'}｜</span>
+    //     <span><strong>上映日期：</strong>${movie.releaseDate || '-'}</span>
+    //     <div><strong>片長：</strong>${filmLength} 分鐘</div>
+    //     <div><strong>分級：</strong>${rating}</div>
+    //     <div><strong>首週放映天數：</strong>-</div>
+    //     <div><strong>首週票房：</strong>-</div>
+    //     <div><strong>首週日均票房：</strong>-</div>
+    // `;
 }
 
 // 重新計算首週指標（用於資料清洗後）

@@ -31,6 +31,7 @@
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-primary);
+    margin-bottom: 0;
 }
 
 .card-body {
@@ -682,9 +683,7 @@
 }
 
 .movie-basic-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
     font-size: 0.875rem;
     color: var(--text-secondary);
 }
@@ -803,10 +802,16 @@
     font-size: 0.75rem;
 }
 
-.btn-lg {
+.btn-m {
+    padding: 12px 24px;
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+}
+
+.btn-xl {
     width: 100%;
-    padding: 16px 24px;
+    padding: 12px 24px;
     font-size: 1rem;
     font-weight: 600;
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
 }

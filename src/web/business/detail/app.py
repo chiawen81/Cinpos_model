@@ -340,16 +340,33 @@ def api_search_movie():
             'priority': 'u=1, i',
         }
 
+        # Debug 日誌
+        print("=" * 80)
+        print("[DEBUG] 搜尋電影 API 請求資訊:")
+        print(f"[DEBUG] 請求 URL: {api_url}")
+        print(f"[DEBUG] 請求參數: {params}")
+        print(f"[DEBUG] Cookies: {dict(scraper.cookies)}")
+        print(f"[DEBUG] Headers:")
+        for key, value in headers.items():
+            print(f"  {key}: {value}")
+        print("=" * 80)
+
         response = scraper.get(
             api_url,
             params=params,
             headers=headers,
             timeout=15
         )
+
+        print(f"[DEBUG] 回應狀態碼: {response.status_code}")
+        print(f"[DEBUG] 回應 Headers: {dict(response.headers)}")
+
         response.raise_for_status()
 
         # 解析回應
         data = response.json()
+        print(f"[DEBUG] 回應成功，資料長度: {len(str(data))}")
+        print("=" * 80)
 
         # 檢查回應格式（API 回應格式為 {data: {results: [...]}, success: true}）
         if data.get('success') and 'data' in data and 'results' in data['data']:
@@ -372,6 +389,24 @@ def api_search_movie():
 
     except Exception as e:
         error_msg = str(e)
+
+        # Debug 錯誤資訊
+        print("=" * 80)
+        print("[ERROR] 搜尋電影 API 發生錯誤:")
+        print(f"[ERROR] 錯誤類型: {type(e).__name__}")
+        print(f"[ERROR] 錯誤訊息: {error_msg}")
+
+        # 如果是 HTTP 錯誤，顯示更多資訊
+        if hasattr(e, 'response') and e.response is not None:
+            print(f"[ERROR] 回應狀態碼: {e.response.status_code}")
+            print(f"[ERROR] 回應內容: {e.response.text[:500]}")  # 只顯示前 500 字元
+            print(f"[ERROR] 回應 Headers: {dict(e.response.headers)}")
+
+        import traceback
+        print(f"[ERROR] 完整錯誤堆疊:")
+        traceback.print_exc()
+        print("=" * 80)
+
         if 'timeout' in error_msg.lower():
             return jsonify({
                 'success': False,
@@ -441,16 +476,33 @@ def api_movie_detail_by_id(movie_id):
             'priority': 'u=1, i',
         }
 
+        # Debug 日誌
+        print("=" * 80)
+        print("[DEBUG] 取得電影詳細資料 API 請求資訊:")
+        print(f"[DEBUG] 請求 URL: {api_url}")
+        print(f"[DEBUG] 請求參數: {params}")
+        print(f"[DEBUG] Cookies: {dict(scraper.cookies)}")
+        print(f"[DEBUG] Headers:")
+        for key, value in headers.items():
+            print(f"  {key}: {value}")
+        print("=" * 80)
+
         response = scraper.get(
             api_url,
             params=params,
             headers=headers,
             timeout=15
         )
+
+        print(f"[DEBUG] 回應狀態碼: {response.status_code}")
+        print(f"[DEBUG] 回應 Headers: {dict(response.headers)}")
+
         response.raise_for_status()
 
         # 解析回應
         data = response.json()
+        print(f"[DEBUG] 回應成功，資料長度: {len(str(data))}")
+        print("=" * 80)
 
         # 檢查回應格式
         if data.get('success') and 'data' in data:
@@ -473,6 +525,24 @@ def api_movie_detail_by_id(movie_id):
 
     except Exception as e:
         error_msg = str(e)
+
+        # Debug 錯誤資訊
+        print("=" * 80)
+        print("[ERROR] 取得電影詳細資料 API 發生錯誤:")
+        print(f"[ERROR] 錯誤類型: {type(e).__name__}")
+        print(f"[ERROR] 錯誤訊息: {error_msg}")
+
+        # 如果是 HTTP 錯誤，顯示更多資訊
+        if hasattr(e, 'response') and e.response is not None:
+            print(f"[ERROR] 回應狀態碼: {e.response.status_code}")
+            print(f"[ERROR] 回應內容: {e.response.text[:500]}")  # 只顯示前 500 字元
+            print(f"[ERROR] 回應 Headers: {dict(e.response.headers)}")
+
+        import traceback
+        print(f"[ERROR] 完整錯誤堆疊:")
+        traceback.print_exc()
+        print("=" * 80)
+
         if 'timeout' in error_msg.lower():
             return jsonify({
                 'success': False,

@@ -306,7 +306,9 @@ def api_search_movie():
     Returns:
         JSON 格式的搜尋結果
     """
-    from curl_cffi import requests as curl_requests
+    import requests
+    import time
+    import random
 
     try:
         keyword = request.args.get("keyword", "").strip()
@@ -314,49 +316,54 @@ def api_search_movie():
         if not keyword:
             return jsonify({"error": "請輸入搜尋關鍵字"}), 400
 
-        # 使用 curl_cffi 完美模擬 Chrome 瀏覽器
-        session = curl_requests.Session()
+        # 使用 requests.Session() 保持 cookies
+        session = requests.Session()
 
         # 先訪問首頁以取得 cookies
-        session.get("https://boxofficetw.tfai.org.tw/", impersonate="chrome120", timeout=10)
+        print("[INFO] 訪問首頁以取得 cookies...")
+        session.get("https://boxofficetw.tfai.org.tw/", timeout=10)
+
+        # 添加隨機延遲,模擬人類行為
+        time.sleep(random.uniform(0.3, 0.8))
 
         api_url = "https://boxofficetw.tfai.org.tw/film/sf"
 
         # 添加時間戳參數防止快取
-        import time
-
         timestamp = int(time.time() * 1000)
         params = {"keyword": keyword, "_": timestamp}
 
         # 完整的瀏覽器 headers（參考實際瀏覽器請求）
         headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/120.0.0.0 Safari/537.36"
+            ),
             "Accept": "*/*",
             "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-            "Referer": "https://boxofficetw.tfai.org.tw/search/32462",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Referer": "https://boxofficetw.tfai.org.tw/",
+            "Origin": "https://boxofficetw.tfai.org.tw",
             "Content-Type": "application/json",
-            "sec-ch-ua": '"Chromium";v="120", "Google Chrome";v="120", "Not_A Brand";v="99"',
+            "sec-ch-ua": '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
             "sec-ch-ua-mobile": "?0",
             "sec-ch-ua-platform": '"Windows"',
             "sec-fetch-dest": "empty",
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "same-origin",
             "x-kl-saas-ajax-request": "Ajax_Request",  # 關鍵 header
+            "Connection": "keep-alive",
         }
 
         # Debug 日誌
         print("=" * 80)
-        print("[DEBUG] 搜尋電影 API 請求資訊 (使用 curl_cffi):")
+        print("[DEBUG] 搜尋電影 API 請求資訊:")
         print(f"[DEBUG] 請求 URL: {api_url}")
         print(f"[DEBUG] 請求參數: {params}")
-        print(f"[DEBUG] Headers:")
-        for key, value in headers.items():
-            print(f"  {key}: {value}")
+        print(f"[DEBUG] Cookies: {dict(session.cookies)}")
         print("=" * 80)
 
-        # 使用 impersonate="chrome120" 模擬 Chrome 瀏覽器的 TLS 指紋
-        response = session.get(
-            api_url, params=params, headers=headers, timeout=15, impersonate="chrome120"
-        )
+        response = session.get(api_url, params=params, headers=headers, timeout=15)
 
         print(f"[DEBUG] 回應狀態碼: {response.status_code}")
         print(f"[DEBUG] 回應 Headers: {dict(response.headers)}")
@@ -427,55 +434,62 @@ def api_movie_detail_by_id(movie_id):
     Returns:
         JSON 格式的電影詳細資料
     """
-    from curl_cffi import requests as curl_requests
+    import requests
+    import time
+    import random
 
     try:
         if not movie_id:
             return jsonify({"error": "電影 ID 不可為空"}), 400
 
-        # 使用 curl_cffi 完美模擬 Chrome 瀏覽器
-        session = curl_requests.Session()
+        # 使用 requests.Session() 保持 cookies
+        session = requests.Session()
 
         # 先訪問首頁以取得 cookies
-        session.get("https://boxofficetw.tfai.org.tw/", impersonate="chrome120", timeout=10)
+        print("[INFO] 訪問首頁以取得 cookies...")
+        session.get("https://boxofficetw.tfai.org.tw/", timeout=10)
+
+        # 添加隨機延遲,模擬人類行為
+        time.sleep(random.uniform(0.3, 0.8))
 
         api_url = f"https://boxofficetw.tfai.org.tw/film/gfd/{movie_id}"
 
         # 添加時間戳參數防止快取
-        import time
-
         timestamp = int(time.time() * 1000)
         params = {"_": timestamp}
 
         # 完整的瀏覽器 headers（參考實際瀏覽器請求）
         headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/120.0.0.0 Safari/537.36"
+            ),
             "Accept": "*/*",
             "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-            "Referer": "https://boxofficetw.tfai.org.tw/search/32462",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Referer": "https://boxofficetw.tfai.org.tw/",
+            "Origin": "https://boxofficetw.tfai.org.tw",
             "Content-Type": "application/json",
-            "sec-ch-ua": '"Chromium";v="120", "Google Chrome";v="120", "Not_A Brand";v="99"',
+            "sec-ch-ua": '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
             "sec-ch-ua-mobile": "?0",
             "sec-ch-ua-platform": '"Windows"',
             "sec-fetch-dest": "empty",
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "same-origin",
             "x-kl-saas-ajax-request": "Ajax_Request",  # 關鍵 header
+            "Connection": "keep-alive",
         }
 
         # Debug 日誌
         print("=" * 80)
-        print("[DEBUG] 取得電影詳細資料 API 請求資訊 (使用 curl_cffi):")
+        print("[DEBUG] 取得電影詳細資料 API 請求資訊:")
         print(f"[DEBUG] 請求 URL: {api_url}")
         print(f"[DEBUG] 請求參數: {params}")
-        print(f"[DEBUG] Headers:")
-        for key, value in headers.items():
-            print(f"  {key}: {value}")
+        print(f"[DEBUG] Cookies: {dict(session.cookies)}")
         print("=" * 80)
 
-        # 使用 impersonate="chrome120" 模擬 Chrome 瀏覽器的 TLS 指紋
-        response = session.get(
-            api_url, params=params, headers=headers, timeout=15, impersonate="chrome120"
-        )
+        response = session.get(api_url, params=params, headers=headers, timeout=15)
 
         print(f"[DEBUG] 回應狀態碼: {response.status_code}")
         print(f"[DEBUG] 回應 Headers: {dict(response.headers)}")

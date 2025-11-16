@@ -305,20 +305,39 @@ def api_search_movie():
             }
         )
 
-        api_url = 'https://boxofficetw.tfai.org.tw/film/sf'
-        params = {'keyword': keyword}
+        # 先訪問首頁以取得 cookies
+        scraper.get('https://boxofficetw.tfai.org.tw/', timeout=10)
 
-        # 設定瀏覽器 headers
+        api_url = 'https://boxofficetw.tfai.org.tw/film/sf'
+
+        # 添加時間戳參數防止快取
+        import time
+        timestamp = int(time.time() * 1000)
+        params = {
+            'keyword': keyword,
+            '_': timestamp
+        }
+
+        # 完整的瀏覽器 headers（參考實際瀏覽器請求）
         headers = {
             'User-Agent': (
                 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
                 'AppleWebKit/537.36 (KHTML, like Gecko) '
-                'Chrome/120.0.0.0 Safari/537.36'
+                'Chrome/142.0.0.0 Safari/537.36'
             ),
-            'Referer': 'https://boxofficetw.tfai.org.tw/',
-            'Origin': 'https://boxofficetw.tfai.org.tw',
-            'Accept': 'application/json, text/plain, */*',
-            'Accept-Language': 'zh-TW,zh;q=0.9,en;q=0.8',
+            'Accept': '*/*',
+            'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+            'Accept-Encoding': 'gzip, deflate, br, zstd',
+            'Referer': 'https://boxofficetw.tfai.org.tw/search/32462',
+            'Content-Type': 'application/json',
+            'sec-ch-ua': '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-origin',
+            'x-kl-saas-ajax-request': 'Ajax_Request',  # 關鍵 header
+            'priority': 'u=1, i',
         }
 
         response = scraper.get(
@@ -390,23 +409,41 @@ def api_movie_detail_by_id(movie_id):
             }
         )
 
+        # 先訪問首頁以取得 cookies
+        scraper.get('https://boxofficetw.tfai.org.tw/', timeout=10)
+
         api_url = f'https://boxofficetw.tfai.org.tw/film/gfd/{movie_id}'
 
-        # 設定瀏覽器 headers
+        # 添加時間戳參數防止快取
+        import time
+        timestamp = int(time.time() * 1000)
+        params = {'_': timestamp}
+
+        # 完整的瀏覽器 headers（參考實際瀏覽器請求）
         headers = {
             'User-Agent': (
                 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
                 'AppleWebKit/537.36 (KHTML, like Gecko) '
-                'Chrome/120.0.0.0 Safari/537.36'
+                'Chrome/142.0.0.0 Safari/537.36'
             ),
-            'Referer': 'https://boxofficetw.tfai.org.tw/',
-            'Origin': 'https://boxofficetw.tfai.org.tw',
-            'Accept': 'application/json, text/plain, */*',
-            'Accept-Language': 'zh-TW,zh;q=0.9,en;q=0.8',
+            'Accept': '*/*',
+            'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+            'Accept-Encoding': 'gzip, deflate, br, zstd',
+            'Referer': 'https://boxofficetw.tfai.org.tw/search/32462',
+            'Content-Type': 'application/json',
+            'sec-ch-ua': '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-origin',
+            'x-kl-saas-ajax-request': 'Ajax_Request',  # 關鍵 header
+            'priority': 'u=1, i',
         }
 
         response = scraper.get(
             api_url,
+            params=params,
             headers=headers,
             timeout=15
         )

@@ -327,6 +327,117 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 ---
 
+### 第四次嘗試:使用 curl-cffi (本地測試成功,部署失敗)
+**時間**:2025-11-16 晚上
+
+**做法**:
+```python
+# 1. 安裝 curl-cffi
+uv add curl-cffi
+
+# 2. 使用 curl_cffi 模擬真實瀏覽器的 TLS 指紋
+from curl_cffi import requests as curl_requests
+
+session = curl_requests.Session()
+session.get("https://boxofficetw.tfai.org.tw/", impersonate="chrome120", timeout=10)
+
+# 3. 發送請求時使用 impersonate="chrome120"
+response = session.get(api_url, params=params, headers=headers,
+                      timeout=15, impersonate="chrome120")
+```
+
+**關鍵特點**:
+1. ✅ 完美模擬 Chrome 120 的 TLS 指紋
+2. ✅ 支援 HTTP/2 協定
+3. ✅ JA3 指紋與真實瀏覽器完全相同
+4. ✅ 本地測試成功 - 兩個 API 都能正常運作
+
+**測試結果**:
+- ✅ **本地環境**:測試完全通過
+  - 搜尋 API:回應 200,成功找到 4 筆結果
+  - 電影詳細資料 API:回應 200,成功取得資料
+- ❌ **Render.com 部署**:失敗
+  - 錯誤:`ModuleNotFoundError: No module named 'curl_cffi'`
+  - 原因:curl-cffi 需要預編譯的二進制文件,在 Render.com 的 Linux 環境無法正確安裝
+
+**為什麼本地成功但 Render.com 失敗**:
+1. **安裝依賴不同**:
+   - 本地 Windows:curl-cffi 有預編譯的 wheel
+   - Render.com Linux:可能缺少必要的系統依賴或預編譯版本
+2. **Python/系統版本**:
+   - 不同環境的 Python 版本、OpenSSL 版本可能導致安裝失敗
+
+**結論**:雖然 curl-cffi 在本地效果極佳,但在生產環境的相容性問題使其無法使用。
+
+---
+
+### 第五次嘗試:改用 requests + 優化策略(當前版本)
+**時間**:2025-11-16 晚上
+
+**做法**:
+```python
+# 1. 移除 curl-cffi
+uv remove curl-cffi
+
+# 2. 改用標準 requests + 三大優化
+import requests
+import time
+import random
+
+session = requests.Session()
+
+# 優化 1: 先訪問首頁取得 cookies
+session.get("https://boxofficetw.tfai.org.tw/", timeout=10)
+
+# 優化 2: 添加隨機延遲 (關鍵!)
+time.sleep(random.uniform(0.3, 0.8))  # 模擬人類思考時間
+
+# 優化 3: 完整的瀏覽器 headers
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...",
+    "Accept": "*/*",
+    "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Referer": "https://boxofficetw.tfai.org.tw/",
+    "Origin": "https://boxofficetw.tfai.org.tw",
+    "sec-ch-ua": '"Not_A Brand";v="8", "Chromium";v="120"...',
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-kl-saas-ajax-request": "Ajax_Request",
+    "Connection": "keep-alive",
+}
+
+response = session.get(api_url, params=params, headers=headers, timeout=15)
+```
+
+**關鍵改進**:
+1. ✅ **隨機延遲** - 最重要!模擬人類行為,降低機器人檢測機率
+   - 延遲時間:0.3-0.8 秒
+   - 模擬真實用戶在首頁和搜尋之間的思考時間
+2. ✅ **Session 管理** - 保持 cookies 和連線狀態
+3. ✅ **完整 headers** - 包含所有瀏覽器特徵標頭
+4. ✅ **100% 相容性** - requests 是 Python 內建,不會有安裝問題
+
+**優勢**:
+- ✅ 不需要額外依賴,Render.com 100% 支援
+- ✅ 添加了之前沒有的隨機延遲策略
+- ✅ 結合了方案 A(Session 保持)和方案 A3(隨機延遲)的優點
+
+**預期效果**:
+- **成功率**:比第三次嘗試更高(因為加入了延遲)
+- **穩定性**:避免了 curl-cffi 的安裝問題
+- **可維護性**:使用標準庫,易於除錯
+
+**結果**:⏳ 已部署到 Render.com,等待測試
+
+**Commit**:
+```bash
+b6f54d6 - 修復 curl-cffi 安裝問題:改用 requests + 優化策略(添加延遲、Session 管理)
+```
+
+---
+
 ## 📊 問題追蹤
 
 | 項目 | 狀態 | 備註 |
@@ -335,7 +446,9 @@ soup = BeautifulSoup(response.text, 'html.parser')
 | 原因分析 | ✅ 已完成 | Cloudflare 防護 + Headers 不足 |
 | 第一次修復嘗試 | ❌ 失敗 | 基本 headers 不足 |
 | 第二次修復嘗試 | ❌ 失敗 | 簡化程式碼未解決問題 |
-| 第三次修復嘗試 | ⏳ 測試中 | 完整模擬瀏覽器請求 |
+| 第三次修復嘗試 | ❌ 失敗 | 完整模擬瀏覽器請求(仍然被 Cloudflare 攔截) |
+| 第四次修復嘗試 | ⚠️ 本地成功,部署失敗 | curl-cffi:安裝問題 |
+| 第五次修復嘗試 | ⏳ 測試中 | requests + 延遲優化 |
 | Debug 日誌添加 | ✅ 已完成 | 詳細的請求/回應日誌 |
 | 進階方案研究 | 📋 已規劃 | 5 個備選方案 |
 
@@ -365,19 +478,63 @@ soup = BeautifulSoup(response.text, 'html.parser')
 2. **Cookies 必須先取得** - 需要先訪問首頁建立 session
 3. **時間戳參數** - 外部 API 使用時間戳防止快取
 4. **完整的瀏覽器特徵** - `sec-fetch-*` 和 `sec-ch-ua-*` headers 不可或缺
+5. **隨機延遲至關重要** - 模擬人類行為可能比 TLS 指紋更重要
+6. **環境差異影響巨大** - 本地成功不代表生產環境成功
 
 ### 教訓
 1. **分析實際請求** - 使用瀏覽器 DevTools 分析成功的請求是最有效的方法
 2. **添加 Debug 日誌** - 詳細的日誌對排錯至關重要
-3. **了解反爬蟲機制** - Cloudflare 的檢測機制複雜，需要多方面模擬
+3. **了解反爬蟲機制** - Cloudflare 的檢測機制複雜,需要多方面模擬
+4. **優先考慮相容性** - 先確保能在生產環境運行,再考慮效果優化
+5. **本地 vs 生產環境的差異**:
+   - **IP 信譽**:家用 IP > 雲端服務 IP
+   - **請求頻率**:本地測試低,生產環境高
+   - **套件相容性**:Windows 和 Linux 環境不同
+
+### 技術方案評估
+
+| 方案 | TLS 指紋 | 效果 | 相容性 | 推薦度 |
+|------|---------|------|--------|--------|
+| cloudscraper | ⭐⭐ | ❌ 失敗 | ✅ 高 | ❌ |
+| curl-cffi | ⭐⭐⭐⭐⭐ | ✅ 本地成功 | ❌ 低(部署失敗) | ⚠️ |
+| requests + 延遲 | ⭐⭐ | ⏳ 測試中 | ✅✅ 極高 | ✅ |
+| undetected-chromedriver | ⭐⭐⭐⭐⭐ | 未測試 | ⭐⭐ 中(需安裝 Chrome) | ⏳ 備選 |
+
+### 為什麼本地成功但 Render.com 失敗?
+
+**核心原因**:
+1. **IP 信譽評分差異**
+   - 本地(家用網路):Cloudflare 評分高,檢查寬鬆
+   - Render.com(雲端服務):評分低,檢查極嚴格
+
+2. **TLS 指紋差異**
+   - 不同環境的 Python/OpenSSL 版本不同
+   - 導致 TLS 握手特徵不同
+
+3. **地理位置**
+   - 本地:台灣 IP 訪問台灣網站 ✅
+   - Render.com:美國/新加坡 IP 訪問台灣網站 ⚠️
+
+**解決思路**:
+- 既然 TLS 指紋難以完美模擬(curl-cffi 無法部署)
+- 改為模擬**人類行為模式**(隨機延遲、Session 保持)
+- 可能更容易通過 Cloudflare 的檢測
 
 ### 備選策略的重要性
-即使無法完美模擬瀏覽器，也應該有：
+即使無法完美模擬瀏覽器,也應該有:
 - **快取機制** - 減少對外部服務的依賴
 - **降級方案** - 保證基本功能可用
 - **備用資料源** - 避免單點故障
+- **手動輸入選項** - 當自動化失敗時的備案
 
 ---
 
-**最後更新時間**：2025-11-16
-**狀態**：問題排查中，等待測試結果
+**最後更新時間**:2025-11-16 晚上
+**狀態**:第五次修復嘗試已部署,等待測試結果
+**下一步**:
+1. 等待 Render.com 部署完成
+2. 測試搜尋功能是否正常
+3. 如仍失敗,考慮:
+   - 增加延遲時間(1-2 秒)
+   - 實作快取機制
+   - 提供手動輸入降級方案

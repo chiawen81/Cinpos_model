@@ -170,5 +170,8 @@
 {% endblock %}
 
 {% block extra_js %}
+<!-- 先載入 service 層 -->
+<script src="{{ url_for('static', filename='js/movieService.js') }}"></script>
+<!-- 再載入頁面邏輯 -->
 <script src="{{ url_for('static', filename='js/predict.js') }}"></script>
 {% endblock %}

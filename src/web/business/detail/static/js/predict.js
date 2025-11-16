@@ -66,29 +66,18 @@ async function performSearch() {
     searchDropdown.innerHTML = '<div class="search-loading">搜尋中...</div>';
     searchDropdown.style.display = 'block';
 
-    try {
-        // 呼叫後端代理 API（避免 CORS 問題）
-        const response = await fetch(`/api/search-movie?keyword=${encodeURIComponent(keyword)}`, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        const data = await response.json();
+    // 呼叫 service 層搜尋電影
+    const data = await movieService.searchMovie(keyword);
 
-        if (!data.success) {
-            showSearchError(data.error || '搜尋失敗，請稍後再試');
-            return;
-        }
+    if (!data.success) {
+        showSearchError(data.error || '搜尋失敗，請稍後再試');
+        return;
+    }
 
-        if (data.results && data.results.length > 0) {
-            showSearchResults(data.results);
-        } else {
-            showNoResults();
-        }
-    } catch (error) {
-        console.error('搜尋錯誤:', error);
-        showSearchError('搜尋失敗，請檢查網路連線');
+    if (data.results && data.results.length > 0) {
+        showSearchResults(data.results);
+    } else {
+        showNoResults();
     }
 }
 
@@ -147,14 +136,8 @@ async function selectMovie(movie) {
     selectedMovieInfo.style.display = 'block';
 
     try {
-        // 呼叫後端 API 取得電影詳細資料
-        const response = await fetch(`/api/movie-detail/${movie.movieId}`, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        const result = await response.json();
+        // 呼叫 service 層取得電影詳細資料
+        const result = await movieService.getMovieDetail(movie.movieId);
 
         if (!result.success) {
             // 若無法取得詳細資料，使用搜尋結果的基本資料
@@ -682,20 +665,12 @@ predictButton.addEventListener('click', async () => {
     predictButton.disabled = true;
 
     try {
-        // 呼叫預測 API
-        const response = await fetch('/api/predict-new', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                week_data: weekData,
-                movie_info: movieInfo,
-                predict_weeks: predictWeeks
-            })
+        // 呼叫 service 層進行預測
+        const result = await movieService.predictBoxOffice({
+            week_data: weekData,
+            movie_info: movieInfo,
+            predict_weeks: predictWeeks
         });
-
-        const result = await response.json();
 
         if (!result.success) {
             alert(`預測失敗: ${result.message || result.error}`);
@@ -783,7 +758,8 @@ function formatCurrency(value) {
     return new Intl.NumberFormat('zh-TW', {
         style: 'currency',
         currency: 'TWD',
-        minimumFractionDigits: 0
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
     }).format(value);
 }
 
@@ -815,23 +791,10 @@ async function exportPrediction(format) {
     }
 
     try {
-        const response = await fetch('/api/predict-new/export', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                prediction_result: currentPredictionResult,
-                format: format
-            })
-        });
-
-        if (!response.ok) {
-            throw new Error('匯出失敗');
-        }
+        // 呼叫 service 層匯出預測
+        const blob = await movieService.exportPrediction(currentPredictionResult, format);
 
         // 下載檔案
-        const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
@@ -1087,36 +1050,50 @@ function showCleaningReport(report) {
         <div class="report-item">- 中斷週次資料：${report.removed.interrupted} 筆</div>
     </div>
 
-    <div class="report-section mb-2">
-        <strong>✅ 最終資料：</strong>${report.finalCount} 筆
+    <div class="report-section mb-2 text-brane-secondary ">
+        <strong>最終資料：</strong>${report.finalCount} 筆
     </div>
-
-    <div class="report-divider"></div>`;
+    `;
 
     if (report.isNonFirstRound && report.interruptedWeekRange) {
         reportHtml += `
+    <div class="report-divider"></div>
     <div class="report-warning mb-4">
-        <strong>⚠️ 警告：此電影非首輪電影！</strong>
-        <div class="report-item">中斷週次範圍：第 ${report.interruptedWeekRange.start}-${report.interruptedWeekRange.end} 週</div>
-        <div class="report-item">連續 ${report.maxConsecutiveZeros} 週票房為 0</div>
-        <div class="report-item">無法進行預測</div>
+        <strong class="text-danger-light">⚠️ 警告：此電影非首輪電影！</strong>
+        <div class="report-item mt-1 ml-1">中斷週次範圍：第 ${report.interruptedWeekRange.start}-${report.interruptedWeekRange.end} 週</div>
+        <div class="report-item ml-1">連續 ${report.maxConsecutiveZeros} 週票房為 0</div>
+        <div class="report-item ml-1">無法進行預測</div>
     </div>`;
     }
 
     reportHtml += `</div>`;
 
+    // 創建遮罩層
+    const backdrop = document.createElement('div');
+    backdrop.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #151515E5; z-index: 9999; backdrop-filter: blur(4px);';
+
     // 顯示報告（可以用 alert 或自訂 modal）
     const reportContainer = document.createElement('div');
     reportContainer.innerHTML = reportHtml;
-    reportContainer.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10000; background: #222222; color: #e0e0e0; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); max-width: 500px; width: 90%;';
+    reportContainer.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10000; background: #222222; color: #e0e0e0; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);width: 400px;';
+
+    // 關閉函數：同時移除遮罩和彈窗
+    const closeModal = () => {
+        document.body.removeChild(backdrop);
+        document.body.removeChild(reportContainer);
+    };
 
     const closeButton = document.createElement('button');
     closeButton.textContent = '關閉';
-    closeButton.className = 'btn btn-secondary';
+    closeButton.className = 'btn btn-secondary w-100';
     closeButton.style.marginTop = '20px';
-    closeButton.onclick = () => document.body.removeChild(reportContainer);
+    closeButton.onclick = closeModal;
     reportContainer.querySelector('.cleaning-report').appendChild(closeButton);
 
+    // 點擊遮罩也能關閉
+    backdrop.onclick = closeModal;
+
+    document.body.appendChild(backdrop);
     document.body.appendChild(reportContainer);
 }
 
@@ -1166,39 +1143,16 @@ downloadPreprocessedButton.addEventListener('click', async () => {
     downloadPreprocessedButton.disabled = true;
 
     try {
-        // 呼叫下載 API
-        const response = await fetch('/api/predict-new/download-preprocessed', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                week_data: weekData,
-                movie_info: movieInfo
-            })
+        // 呼叫 service 層下載預處理資料
+        const { blob, filename } = await movieService.downloadPreprocessed({
+            week_data: weekData,
+            movie_info: movieInfo
         });
 
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.error || '下載失敗');
-        }
-
         // 下載檔案
-        const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-
-        // 從 response headers 取得檔案名稱，或使用預設名稱
-        const contentDisposition = response.headers.get('Content-Disposition');
-        let filename = `preprocessed_${new Date().getTime()}.csv`;
-        if (contentDisposition) {
-            const filenameMatch = contentDisposition.match(/filename="?(.+)"?/);
-            if (filenameMatch) {
-                filename = filenameMatch[1];
-            }
-        }
-
         a.download = filename;
         document.body.appendChild(a);
         a.click();

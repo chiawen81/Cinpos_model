@@ -54,13 +54,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: var(--spacing-lg);
-    padding-bottom: var(--spacing-md);
-    /* border-bottom: 1px solid rgba(218, 218, 255, 0.1); */
+    margin: 0 auto;
 }
 
 .sidebar-logo img {
-    max-width: 150px;
+    width: 150px;
     height: auto;
 }
 
@@ -140,9 +138,13 @@
     }
 
     .sidebar-logo {
-        margin-bottom: 0;
         padding-bottom: 0;
         border-bottom: none;
+        margin: 0 0;
+    }
+
+    .sidebar-logo img {
+        width: 30px;
     }
 
     /* 顯示漢堡按鈕 */

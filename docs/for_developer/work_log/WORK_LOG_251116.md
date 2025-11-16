@@ -1,0 +1,383 @@
+# 工作日誌 - 外部 API 調用問題除錯
+
+最後更新：2025-11-16
+
+---
+
+## 🔴 問題描述
+
+### 現況
+在 Web 端透過後端代理呼叫外部 API (`https://boxofficetw.tfai.org.tw/film/*`) 時遇到 **403 Forbidden** 錯誤。
+
+**影響範圍**：
+- `/api/search-movie` - 搜尋電影功能失敗
+- `/api/movie-detail/{id}` - 取得電影詳細資料失敗
+
+**環境差異**：
+- ✅ **本地爬蟲直接呼叫** - 成功
+- ⚠️ **本地 Web 端透過代理** - 常報錯（偶爾成功）
+- ❌ **Render.com 部署後** - 完全失敗
+
+**錯誤訊息**：
+```
+403 Client Error: Forbidden for url: https://boxofficetw.tfai.org.tw/film/sf?keyword=%E5%89%B5
+```
+
+---
+
+## 🔍 可能的原因分析
+
+### 1. Cloudflare 反爬蟲防護機制
+外部 API 有 **Cloudflare 防護**，可能的檢測點：
+- ❌ **缺少關鍵 Headers** - 瀏覽器特徵 headers 不完整
+- ❌ **缺少 Cookies** - 未先訪問網站取得 session cookies
+- ❌ **缺少自定義驗證 Header** - `x-kl-saas-ajax-request: Ajax_Request`
+- ❌ **IP 信譽問題** - Render.com 的 IP 可能被列入黑名單
+- ❌ **TLS 指紋識別** - Cloudflare 可能檢測到非真實瀏覽器
+
+### 2. 請求特徵不足
+與真實瀏覽器請求的差異：
+- User-Agent 版本過舊（Chrome 120 vs 142）
+- 缺少 `sec-fetch-*` 系列 headers
+- 缺少 `sec-ch-ua-*` 客戶端提示 headers
+- URL 缺少時間戳參數（`_=timestamp`）
+
+### 3. 環境差異
+- **本地爬蟲** - 可能使用了不同的請求方式或有效的 cookies
+- **Render.com** - IP 地址、網路環境、TLS 握手特徵都與本地不同
+
+---
+
+## 🔧 已嘗試的解決方法
+
+### 第一次嘗試：基本 Headers + 重試機制
+**時間**：初期版本
+
+**做法**：
+```python
+# 使用 cloudscraper
+scraper = cloudscraper.create_scraper()
+
+# 基本 headers
+headers = {
+    'User-Agent': '...',
+    'Referer': 'https://boxofficetw.tfai.org.tw/',
+    'Origin': 'https://boxofficetw.tfai.org.tw',
+    'Accept': 'application/json, text/plain, */*',
+}
+
+# 重試機制（最多 3 次）
+for attempt in range(3):
+    response = scraper.get(url, params=params, headers=headers)
+```
+
+**結果**：❌ 失敗（仍然 403）
+
+---
+
+### 第二次嘗試：移除重試，簡化程式碼
+**時間**：用戶要求
+
+**做法**：
+- 移除重試機制
+- 移除 `from network_utils import get_default_headers` 未使用的匯入
+- 直接在程式碼中定義 headers
+
+**結果**：❌ 失敗（問題未解決）
+
+---
+
+### 第三次嘗試：完整模擬瀏覽器請求（當前版本）
+**時間**：分析瀏覽器 DevTools 後
+
+**做法**：
+```python
+# 1. 強化 cloudscraper 配置
+scraper = cloudscraper.create_scraper(
+    browser={
+        'browser': 'chrome',
+        'platform': 'windows',
+        'desktop': True
+    }
+)
+
+# 2. 先訪問首頁取得 cookies
+scraper.get('https://boxofficetw.tfai.org.tw/', timeout=10)
+
+# 3. 添加時間戳參數
+timestamp = int(time.time() * 1000)
+params = {'keyword': keyword, '_': timestamp}
+
+# 4. 完整的瀏覽器 headers
+headers = {
+    'User-Agent': 'Mozilla/5.0 ... Chrome/142.0.0.0 ...',  # 更新版本
+    'Accept': '*/*',
+    'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Accept-Encoding': 'gzip, deflate, br, zstd',
+    'Referer': 'https://boxofficetw.tfai.org.tw/search/32462',
+    'Content-Type': 'application/json',
+    'sec-ch-ua': '"Chromium";v="142", "Google Chrome";v="142"...',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'x-kl-saas-ajax-request': 'Ajax_Request',  # 關鍵自定義 header
+    'priority': 'u=1, i',
+}
+```
+
+**關鍵改進**：
+1. ✅ 添加 `x-kl-saas-ajax-request: Ajax_Request` 自定義驗證 header
+2. ✅ 先訪問首頁取得 Google Analytics cookies (`_ga`, `_ga_YJ385WSQ1N`)
+3. ✅ 添加時間戳參數防止快取
+4. ✅ 添加完整的 `sec-fetch-*` 和 `sec-ch-ua-*` headers
+5. ✅ 更新 User-Agent 版本至 Chrome 142
+6. ✅ 模擬來自同網站的 Referer
+
+**結果**：⏳ 待測試
+
+---
+
+## 🧪 目前將進行的測試環節
+
+### 測試步驟
+1. **重啟服務**
+   ```bash
+   cd src/web/business/detail
+   uv run python app.py
+   ```
+
+2. **在前端測試搜尋功能**
+   - 嘗試搜尋關鍵字（例如：「創」、「阿凡」）
+   - 觀察是否成功取得結果
+
+3. **分析 Debug 日誌**
+   已在程式碼中添加詳細的 debug 日誌：
+
+   **成功時顯示**：
+   - 請求 URL 和參數
+   - 實際發送的 Cookies
+   - 完整的 Headers
+   - 回應狀態碼和內容
+
+   **失敗時顯示**：
+   - 錯誤類型和訊息
+   - HTTP 回應狀態碼
+   - HTTP 回應內容（前 500 字元）
+   - 完整的錯誤堆疊 (traceback)
+
+4. **比對與真實瀏覽器的差異**
+   - 檢查 Cookies 是否正確取得
+   - 檢查 Headers 是否完整
+   - 確認是否還有遺漏的關鍵資訊
+
+### Debug 日誌位置
+- **檔案**：`src/web/business/detail/app.py`
+- **API 1**：`@app.route('/api/search-movie')` (第 280 行起)
+- **API 2**：`@app.route('/api/movie-detail/<movie_id>')` (第 421 行起)
+
+---
+
+## 🚀 未來可能的排錯方向
+
+### 方案 A：進階請求模擬
+如果當前方法仍然失敗，可以嘗試：
+
+#### A1. 使用 Session 保持連線
+```python
+session = requests.Session()
+session.get('https://boxofficetw.tfai.org.tw/')  # 建立 session
+response = session.get(api_url, headers=headers)
+```
+
+#### A2. 手動設定完整的 Cookies
+從瀏覽器複製完整的 cookies 字串並手動設定：
+```python
+cookies = {
+    '_ga': 'GA1.1.1593581343.1759890847',
+    '_ga_YJ385WSQ1N': 'GS2.1.s1763291048$o39$g1$t1763291073$j35$l0$h0'
+}
+scraper.cookies.update(cookies)
+```
+
+#### A3. 添加隨機延遲
+模擬人類行為，避免被識別為機器人：
+```python
+import random
+time.sleep(random.uniform(0.5, 2.0))
+```
+
+#### A4. User-Agent 輪換
+使用多個不同的 User-Agent 輪流請求：
+```python
+user_agents = [
+    "Mozilla/5.0 ... Chrome/142.0.0.0 ...",
+    "Mozilla/5.0 ... Chrome/141.0.0.0 ...",
+    "Mozilla/5.0 ... Firefox/120.0 ...",
+]
+headers['User-Agent'] = random.choice(user_agents)
+```
+
+---
+
+### 方案 B：使用真實瀏覽器自動化
+如果模擬請求無法突破，考慮使用無頭瀏覽器：
+
+#### B1. Selenium + undetected-chromedriver
+```python
+import undetected_chromedriver as uc
+
+driver = uc.Chrome()
+driver.get('https://boxofficetw.tfai.org.tw/film/sf?keyword=...')
+data = driver.find_element(By.TAG_NAME, "pre").text
+```
+
+**優點**：
+- 完全模擬真實瀏覽器
+- 可以通過 JavaScript 挑戰
+
+**缺點**：
+- 啟動慢（2-5 秒）
+- 資源消耗大
+- 部署複雜（需要安裝 Chrome）
+
+#### B2. Playwright
+```python
+from playwright.sync_api import sync_playwright
+
+with sync_playwright() as p:
+    browser = p.chromium.launch()
+    page = browser.new_page()
+    page.goto('https://boxofficetw.tfai.org.tw/film/sf?keyword=...')
+    data = page.content()
+```
+
+---
+
+### 方案 C：快取與備援策略
+
+#### C1. 實作快取機制
+減少對外部 API 的依賴：
+```python
+# 使用 Redis 或記憶體快取
+cache_key = f"movie_search:{keyword}"
+if cache.exists(cache_key):
+    return cache.get(cache_key)
+
+# 快取搜尋結果 10 分鐘
+cache.set(cache_key, result, ex=600)
+```
+
+#### C2. 建立本地電影資料庫
+定期同步外部 API 的資料到自己的資料庫：
+- 使用排程任務（cron）每日同步
+- 減少即時請求外部 API 的需求
+- 提供穩定的服務
+
+#### C3. 降級方案
+當外部 API 失敗時，提供基本功能：
+```python
+try:
+    # 嘗試呼叫外部 API
+    response = scraper.get(api_url, ...)
+except Exception:
+    # 降級：使用本地快取或提示用戶手動輸入
+    return jsonify({
+        'success': False,
+        'error': '外部服務暫時無法使用，請手動輸入電影資料',
+        'fallback': True
+    })
+```
+
+---
+
+### 方案 D：更換外部資料來源
+如果 boxofficetw 的 API 持續無法使用：
+
+#### D1. 尋找替代 API
+- 研究是否有其他公開的票房資料 API
+- 考慮付費的資料服務
+
+#### D2. 直接爬取網頁
+如果 API 無法使用，改為爬取 HTML 頁面：
+```python
+# 爬取搜尋頁面
+response = scraper.get('https://boxofficetw.tfai.org.tw/search/...')
+soup = BeautifulSoup(response.text, 'html.parser')
+# 解析 HTML 提取資料
+```
+
+**注意**：需要定期維護（網頁結構可能改變）
+
+---
+
+### 方案 E：與外部 API 提供者溝通
+長期方案：
+
+#### E1. 申請官方 API Key
+- 聯繫 boxofficetw 管理者
+- 說明使用目的
+- 申請合法的 API 存取權限
+
+#### E2. 了解使用條款
+- 確認是否允許自動化存取
+- 是否有速率限制
+- 是否需要註明資料來源
+
+---
+
+## 📊 問題追蹤
+
+| 項目 | 狀態 | 備註 |
+|------|------|------|
+| 問題發現 | ✅ 已確認 | 403 Forbidden 錯誤 |
+| 原因分析 | ✅ 已完成 | Cloudflare 防護 + Headers 不足 |
+| 第一次修復嘗試 | ❌ 失敗 | 基本 headers 不足 |
+| 第二次修復嘗試 | ❌ 失敗 | 簡化程式碼未解決問題 |
+| 第三次修復嘗試 | ⏳ 測試中 | 完整模擬瀏覽器請求 |
+| Debug 日誌添加 | ✅ 已完成 | 詳細的請求/回應日誌 |
+| 進階方案研究 | 📋 已規劃 | 5 個備選方案 |
+
+---
+
+## 🔗 相關檔案
+
+- **後端 API**：`src/web/business/detail/app.py`
+- **前端 Service**：`src/web/business/detail/static/js/movieService.js`
+- **前端頁面邏輯**：`src/web/business/detail/static/js/predict.js`
+- **HTML 模板**：`src/web/business/detail/templates/predict_new.html`
+
+---
+
+## 📝 下一步行動
+
+1. ⏳ **執行測試** - 使用當前版本測試並收集 debug 日誌
+2. ⏳ **分析日誌** - 確認 cookies、headers 是否正確
+3. ⏳ **根據結果決定** - 如果仍然失敗，評估進階方案（A/B/C/D/E）
+
+---
+
+## 💡 經驗總結
+
+### 關鍵發現
+1. **自定義 Header 很重要** - `x-kl-saas-ajax-request: Ajax_Request` 可能是關鍵驗證機制
+2. **Cookies 必須先取得** - 需要先訪問首頁建立 session
+3. **時間戳參數** - 外部 API 使用時間戳防止快取
+4. **完整的瀏覽器特徵** - `sec-fetch-*` 和 `sec-ch-ua-*` headers 不可或缺
+
+### 教訓
+1. **分析實際請求** - 使用瀏覽器 DevTools 分析成功的請求是最有效的方法
+2. **添加 Debug 日誌** - 詳細的日誌對排錯至關重要
+3. **了解反爬蟲機制** - Cloudflare 的檢測機制複雜，需要多方面模擬
+
+### 備選策略的重要性
+即使無法完美模擬瀏覽器，也應該有：
+- **快取機制** - 減少對外部服務的依賴
+- **降級方案** - 保證基本功能可用
+- **備用資料源** - 避免單點故障
+
+---
+
+**最後更新時間**：2025-11-16
+**狀態**：問題排查中，等待測試結果

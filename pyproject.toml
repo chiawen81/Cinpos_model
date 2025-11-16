@@ -28,6 +28,7 @@ dependencies = [
     "python-dotenv>=1.0.0",
     "flask-cors>=4.0.0",
     "cloudscraper>=1.2.71",
+    "curl-cffi>=0.13.0",
 ]
 
 # 建置設定

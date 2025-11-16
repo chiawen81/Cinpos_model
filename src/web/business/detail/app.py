@@ -306,7 +306,7 @@ def api_search_movie():
     Returns:
         JSON 格式的搜尋結果
     """
-    import cloudscraper
+    from curl_cffi import requests as curl_requests
 
     try:
         keyword = request.args.get("keyword", "").strip()
@@ -314,13 +314,11 @@ def api_search_movie():
         if not keyword:
             return jsonify({"error": "請輸入搜尋關鍵字"}), 400
 
-        # 使用 cloudscraper 繞過 Cloudflare 防護
-        scraper = cloudscraper.create_scraper(
-            browser={"browser": "chrome", "platform": "windows", "desktop": True}
-        )
+        # 使用 curl_cffi 完美模擬 Chrome 瀏覽器
+        session = curl_requests.Session()
 
         # 先訪問首頁以取得 cookies
-        scraper.get("https://boxofficetw.tfai.org.tw/", timeout=10)
+        session.get("https://boxofficetw.tfai.org.tw/", impersonate="chrome120", timeout=10)
 
         api_url = "https://boxofficetw.tfai.org.tw/film/sf"
 
@@ -332,38 +330,33 @@ def api_search_movie():
 
         # 完整的瀏覽器 headers（參考實際瀏覽器請求）
         headers = {
-            "User-Agent": (
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/142.0.0.0 Safari/537.36"
-            ),
             "Accept": "*/*",
             "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-            "Accept-Encoding": "gzip, deflate, br, zstd",
             "Referer": "https://boxofficetw.tfai.org.tw/search/32462",
             "Content-Type": "application/json",
-            "sec-ch-ua": '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"',
+            "sec-ch-ua": '"Chromium";v="120", "Google Chrome";v="120", "Not_A Brand";v="99"',
             "sec-ch-ua-mobile": "?0",
             "sec-ch-ua-platform": '"Windows"',
             "sec-fetch-dest": "empty",
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "same-origin",
             "x-kl-saas-ajax-request": "Ajax_Request",  # 關鍵 header
-            "priority": "u=1, i",
         }
 
         # Debug 日誌
         print("=" * 80)
-        print("[DEBUG] 搜尋電影 API 請求資訊:")
+        print("[DEBUG] 搜尋電影 API 請求資訊 (使用 curl_cffi):")
         print(f"[DEBUG] 請求 URL: {api_url}")
         print(f"[DEBUG] 請求參數: {params}")
-        print(f"[DEBUG] Cookies: {dict(scraper.cookies)}")
         print(f"[DEBUG] Headers:")
         for key, value in headers.items():
             print(f"  {key}: {value}")
         print("=" * 80)
 
-        response = scraper.get(api_url, params=params, headers=headers, timeout=15)
+        # 使用 impersonate="chrome120" 模擬 Chrome 瀏覽器的 TLS 指紋
+        response = session.get(
+            api_url, params=params, headers=headers, timeout=15, impersonate="chrome120"
+        )
 
         print(f"[DEBUG] 回應狀態碼: {response.status_code}")
         print(f"[DEBUG] 回應 Headers: {dict(response.headers)}")
@@ -434,19 +427,17 @@ def api_movie_detail_by_id(movie_id):
     Returns:
         JSON 格式的電影詳細資料
     """
-    import cloudscraper
+    from curl_cffi import requests as curl_requests
 
     try:
         if not movie_id:
             return jsonify({"error": "電影 ID 不可為空"}), 400
 
-        # 使用 cloudscraper 繞過 Cloudflare 防護
-        scraper = cloudscraper.create_scraper(
-            browser={"browser": "chrome", "platform": "windows", "desktop": True}
-        )
+        # 使用 curl_cffi 完美模擬 Chrome 瀏覽器
+        session = curl_requests.Session()
 
         # 先訪問首頁以取得 cookies
-        scraper.get("https://boxofficetw.tfai.org.tw/", timeout=10)
+        session.get("https://boxofficetw.tfai.org.tw/", impersonate="chrome120", timeout=10)
 
         api_url = f"https://boxofficetw.tfai.org.tw/film/gfd/{movie_id}"
 
@@ -458,38 +449,33 @@ def api_movie_detail_by_id(movie_id):
 
         # 完整的瀏覽器 headers（參考實際瀏覽器請求）
         headers = {
-            "User-Agent": (
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/142.0.0.0 Safari/537.36"
-            ),
             "Accept": "*/*",
             "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-            "Accept-Encoding": "gzip, deflate, br, zstd",
             "Referer": "https://boxofficetw.tfai.org.tw/search/32462",
             "Content-Type": "application/json",
-            "sec-ch-ua": '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"',
+            "sec-ch-ua": '"Chromium";v="120", "Google Chrome";v="120", "Not_A Brand";v="99"',
             "sec-ch-ua-mobile": "?0",
             "sec-ch-ua-platform": '"Windows"',
             "sec-fetch-dest": "empty",
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "same-origin",
             "x-kl-saas-ajax-request": "Ajax_Request",  # 關鍵 header
-            "priority": "u=1, i",
         }
 
         # Debug 日誌
         print("=" * 80)
-        print("[DEBUG] 取得電影詳細資料 API 請求資訊:")
+        print("[DEBUG] 取得電影詳細資料 API 請求資訊 (使用 curl_cffi):")
         print(f"[DEBUG] 請求 URL: {api_url}")
         print(f"[DEBUG] 請求參數: {params}")
-        print(f"[DEBUG] Cookies: {dict(scraper.cookies)}")
         print(f"[DEBUG] Headers:")
         for key, value in headers.items():
             print(f"  {key}: {value}")
         print("=" * 80)
 
-        response = scraper.get(api_url, params=params, headers=headers, timeout=15)
+        # 使用 impersonate="chrome120" 模擬 Chrome 瀏覽器的 TLS 指紋
+        response = session.get(
+            api_url, params=params, headers=headers, timeout=15, impersonate="chrome120"
+        )
 
         print(f"[DEBUG] 回應狀態碼: {response.status_code}")
         print(f"[DEBUG] 回應 Headers: {dict(response.headers)}")

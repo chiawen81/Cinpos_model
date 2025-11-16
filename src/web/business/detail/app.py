@@ -289,15 +289,6 @@ def api_search_movie():
         JSON 格式的搜尋結果
     """
     import cloudscraper
-    import sys
-    from pathlib import Path
-
-    # 加入 common 路徑以匯入 network_utils
-    common_path = Path(__file__).parent.parent.parent.parent / 'common'
-    if str(common_path) not in sys.path:
-        sys.path.insert(0, str(common_path))
-
-    from network_utils import get_default_headers
 
     try:
         keyword = request.args.get('keyword', '').strip()
@@ -306,11 +297,36 @@ def api_search_movie():
             return jsonify({'error': '請輸入搜尋關鍵字'}), 400
 
         # 使用 cloudscraper 繞過 Cloudflare 防護
-        scraper = cloudscraper.create_scraper()
+        scraper = cloudscraper.create_scraper(
+            browser={
+                'browser': 'chrome',
+                'platform': 'windows',
+                'desktop': True
+            }
+        )
+
         api_url = 'https://boxofficetw.tfai.org.tw/film/sf'
         params = {'keyword': keyword}
 
-        response = scraper.get(api_url, params=params, timeout=10)
+        # 設定瀏覽器 headers
+        headers = {
+            'User-Agent': (
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                'AppleWebKit/537.36 (KHTML, like Gecko) '
+                'Chrome/120.0.0.0 Safari/537.36'
+            ),
+            'Referer': 'https://boxofficetw.tfai.org.tw/',
+            'Origin': 'https://boxofficetw.tfai.org.tw',
+            'Accept': 'application/json, text/plain, */*',
+            'Accept-Language': 'zh-TW,zh;q=0.9,en;q=0.8',
+        }
+
+        response = scraper.get(
+            api_url,
+            params=params,
+            headers=headers,
+            timeout=15
+        )
         response.raise_for_status()
 
         # 解析回應
@@ -360,25 +376,40 @@ def api_movie_detail_by_id(movie_id):
         JSON 格式的電影詳細資料
     """
     import cloudscraper
-    import sys
-    from pathlib import Path
-
-    # 加入 common 路徑以匯入 network_utils
-    common_path = Path(__file__).parent.parent.parent.parent / 'common'
-    if str(common_path) not in sys.path:
-        sys.path.insert(0, str(common_path))
-
-    from network_utils import get_default_headers
 
     try:
         if not movie_id:
             return jsonify({'error': '電影 ID 不可為空'}), 400
 
         # 使用 cloudscraper 繞過 Cloudflare 防護
-        scraper = cloudscraper.create_scraper()
+        scraper = cloudscraper.create_scraper(
+            browser={
+                'browser': 'chrome',
+                'platform': 'windows',
+                'desktop': True
+            }
+        )
+
         api_url = f'https://boxofficetw.tfai.org.tw/film/gfd/{movie_id}'
 
-        response = scraper.get(api_url, timeout=10)
+        # 設定瀏覽器 headers
+        headers = {
+            'User-Agent': (
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                'AppleWebKit/537.36 (KHTML, like Gecko) '
+                'Chrome/120.0.0.0 Safari/537.36'
+            ),
+            'Referer': 'https://boxofficetw.tfai.org.tw/',
+            'Origin': 'https://boxofficetw.tfai.org.tw',
+            'Accept': 'application/json, text/plain, */*',
+            'Accept-Language': 'zh-TW,zh;q=0.9,en;q=0.8',
+        }
+
+        response = scraper.get(
+            api_url,
+            headers=headers,
+            timeout=15
+        )
         response.raise_for_status()
 
         # 解析回應

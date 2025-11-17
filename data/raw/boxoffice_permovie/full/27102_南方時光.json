@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "27102",
+    "name": "南方時光",
+    "originalName": "Before the Bright Day",
+    "region": "中華民國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-28",
+    "publisher": "百景映畫股份有限公司",
+    "amountInThisWeek": 601610.0,
+    "totalAmount": 601610.0,
+    "filmClasses": null,
+    "filmLength": 6780,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 9570.0,
+        "tickets": 45,
+        "totalAmount": 9570.0,
+        "totalTickets": 45,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 415230.0,
+        "tickets": 1769,
+        "totalAmount": 424800.0,
+        "totalTickets": 1814,
+        "rate": 42.38871473354232,
+        "theaterCount": 28
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 46200.0,
+        "tickets": 210,
+        "totalAmount": 46200.0,
+        "totalTickets": 210,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 55770.0,
+        "tickets": 255,
+        "totalAmount": 101970.0,
+        "totalTickets": 465,
+        "rate": 0.20714285714285716,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 499640.0,
+        "tickets": 2136,
+        "totalAmount": 601610.0,
+        "totalTickets": 2601,
+        "rate": 7.958938497400036,
+        "theaterCount": 28
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:08"
+}

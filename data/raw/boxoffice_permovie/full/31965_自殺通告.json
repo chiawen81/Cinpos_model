@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "31965",
+    "name": "自殺通告",
+    "originalName": "Deadline",
+    "region": "中華民國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-11-07",
+    "publisher": "本萃電影有限公司",
+    "amountInThisWeek": 3300066.0,
+    "totalAmount": 3300066.0,
+    "filmClasses": null,
+    "filmLength": 7020,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 16800.0,
+        "tickets": 70,
+        "totalAmount": 16800.0,
+        "totalTickets": 70,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 1256640.0,
+        "tickets": 4523,
+        "totalAmount": 1273440.0,
+        "totalTickets": 4593,
+        "rate": 73.8,
+        "theaterCount": 59
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 850758.0,
+        "tickets": 3008,
+        "totalAmount": 2124198.0,
+        "totalTickets": 7601,
+        "rate": -0.32298987776928956,
+        "theaterCount": 59
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 16800.0,
+        "tickets": 70,
+        "totalAmount": 16800.0,
+        "totalTickets": 70,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 1603550.0,
+        "tickets": 5695,
+        "totalAmount": 1620350.0,
+        "totalTickets": 5765,
+        "rate": 94.44940476190476,
+        "theaterCount": 59
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 1679716.0,
+        "tickets": 6078,
+        "totalAmount": 3300066.0,
+        "totalTickets": 11843,
+        "rate": 0.04749836300707805,
+        "theaterCount": 59
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 17:01:02"
+}

@@ -1,0 +1,97 @@
+{
+  "data": {
+    "movieId": "32264",
+    "name": "ONE IN A MILL10N",
+    "originalName": "ONE IN A MILL10N",
+    "region": "韓國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-20",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 13461576.0,
+    "totalAmount": 13461576.0,
+    "filmClasses": null,
+    "filmLength": 7200,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 4002775.0,
+        "tickets": 8115,
+        "totalAmount": 4002775.0,
+        "totalTickets": 8115,
+        "rate": 0,
+        "theaterCount": 37
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 1557450.0,
+        "tickets": 3249,
+        "totalAmount": 5560225.0,
+        "totalTickets": 11364,
+        "rate": -0.6109074329683782,
+        "theaterCount": 37
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 966350.0,
+        "tickets": 1995,
+        "totalAmount": 6526575.0,
+        "totalTickets": 13359,
+        "rate": -0.3795306430382998,
+        "theaterCount": 28
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 275175.0,
+        "tickets": 588,
+        "totalAmount": 6801750.0,
+        "totalTickets": 13947,
+        "rate": -0.715242924406271,
+        "theaterCount": 21
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 8571686.0,
+        "tickets": 17548,
+        "totalAmount": 8571686.0,
+        "totalTickets": 17548,
+        "rate": 0,
+        "theaterCount": 37
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 2877520.0,
+        "tickets": 6058,
+        "totalAmount": 11449206.0,
+        "totalTickets": 23606,
+        "rate": -0.6642994155408866,
+        "theaterCount": 37
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 1462895.0,
+        "tickets": 3029,
+        "totalAmount": 12912101.0,
+        "totalTickets": 26635,
+        "rate": -0.49161256915677387,
+        "theaterCount": 35
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 549475.0,
+        "tickets": 1169,
+        "totalAmount": 13461576.0,
+        "totalTickets": 27804,
+        "rate": -0.6243920445418161,
+        "theaterCount": 26
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:25"
+}

@@ -1,0 +1,61 @@
+{
+  "data": {
+    "movieId": "32464",
+    "name": "鬼童伴",
+    "originalName": "MUSLIHAT",
+    "region": "印尼",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-11-07",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 1095241.0,
+    "totalAmount": 1095241.0,
+    "filmClasses": null,
+    "filmLength": 5340,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 599893.0,
+        "tickets": 2281,
+        "totalAmount": 599893.0,
+        "totalTickets": 2281,
+        "rate": 0,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 154043.0,
+        "tickets": 571,
+        "totalAmount": 753936.0,
+        "totalTickets": 2852,
+        "rate": -0.7432158734974403,
+        "theaterCount": 32
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 599893.0,
+        "tickets": 2281,
+        "totalAmount": 599893.0,
+        "totalTickets": 2281,
+        "rate": 0,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 495348.0,
+        "tickets": 1829,
+        "totalAmount": 1095241.0,
+        "totalTickets": 4110,
+        "rate": -0.17427274530624629,
+        "theaterCount": 55
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 17:01:05"
+}

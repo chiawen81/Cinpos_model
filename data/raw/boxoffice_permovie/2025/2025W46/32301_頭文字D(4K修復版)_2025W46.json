@@ -1,0 +1,97 @@
+{
+  "data": {
+    "movieId": "32301",
+    "name": "頭文字D(4K修復版)",
+    "originalName": "Initial D(4K Restored Version)",
+    "region": "香港",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-23",
+    "publisher": "英屬維京群島商高捷全球開發有限公司 台灣分公司",
+    "amountInThisWeek": 4334406.0,
+    "totalAmount": 4334406.0,
+    "filmClasses": null,
+    "filmLength": 6540,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 1445087.0,
+        "tickets": 5057,
+        "totalAmount": 1445087.0,
+        "totalTickets": 5057,
+        "rate": 0,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 874087.0,
+        "tickets": 3168,
+        "totalAmount": 2319174.0,
+        "totalTickets": 8225,
+        "rate": -0.39513191939308845,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 134721.0,
+        "tickets": 459,
+        "totalAmount": 2453895.0,
+        "totalTickets": 8684,
+        "rate": -0.8458723216338877,
+        "theaterCount": 27
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 26477.0,
+        "tickets": 88,
+        "totalAmount": 2480372.0,
+        "totalTickets": 8772,
+        "rate": -0.8034679077500909,
+        "theaterCount": 7
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 2203115.0,
+        "tickets": 7819,
+        "totalAmount": 2203115.0,
+        "totalTickets": 7819,
+        "rate": 0,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 1399189.0,
+        "tickets": 5164,
+        "totalAmount": 3602304.0,
+        "totalTickets": 12983,
+        "rate": -0.3649042378632073,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 503334.0,
+        "tickets": 1871,
+        "totalAmount": 4105638.0,
+        "totalTickets": 14854,
+        "rate": -0.6402673262868704,
+        "theaterCount": 40
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 228768.0,
+        "tickets": 852,
+        "totalAmount": 4334406.0,
+        "totalTickets": 15706,
+        "rate": -0.5454946417289513,
+        "theaterCount": 28
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:18"
+}

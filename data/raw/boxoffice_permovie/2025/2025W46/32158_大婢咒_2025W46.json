@@ -1,0 +1,97 @@
+{
+  "data": {
+    "movieId": "32158",
+    "name": "大婢咒",
+    "originalName": "Kitab Sijin & Illiyyin",
+    "region": "印尼",
+    "rating": "限制級",
+    "classes": null,
+    "releaseDate": "2025-10-23",
+    "publisher": "威視股份有限公司",
+    "amountInThisWeek": 3363190.0,
+    "totalAmount": 3363190.0,
+    "filmClasses": null,
+    "filmLength": 5880,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 1497055.0,
+        "tickets": 5611,
+        "totalAmount": 1497055.0,
+        "totalTickets": 5611,
+        "rate": 0,
+        "theaterCount": 58
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 349157.0,
+        "tickets": 1316,
+        "totalAmount": 1846212.0,
+        "totalTickets": 6927,
+        "rate": -0.7667707599253201,
+        "theaterCount": 52
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 62183.0,
+        "tickets": 239,
+        "totalAmount": 1908395.0,
+        "totalTickets": 7166,
+        "rate": -0.8219053319853247,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 15175.0,
+        "tickets": 59,
+        "totalAmount": 1923570.0,
+        "totalTickets": 7225,
+        "rate": -0.7559622404837335,
+        "theaterCount": 5
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 1854368.0,
+        "tickets": 7006,
+        "totalAmount": 1854368.0,
+        "totalTickets": 7006,
+        "rate": 0,
+        "theaterCount": 58
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 1150356.0,
+        "tickets": 4388,
+        "totalAmount": 3004724.0,
+        "totalTickets": 11394,
+        "rate": -0.3796506410809505,
+        "theaterCount": 58
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 302296.0,
+        "tickets": 1156,
+        "totalAmount": 3307020.0,
+        "totalTickets": 12550,
+        "rate": -0.7372152620580064,
+        "theaterCount": 52
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 56170.0,
+        "tickets": 222,
+        "totalAmount": 3363190.0,
+        "totalTickets": 12772,
+        "rate": -0.8141887421600021,
+        "theaterCount": 15
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:20"
+}

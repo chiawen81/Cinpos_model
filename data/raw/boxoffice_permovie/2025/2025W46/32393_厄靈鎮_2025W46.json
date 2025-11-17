@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "32393",
+    "name": "厄靈鎮",
+    "originalName": "Shelby Oaks",
+    "region": "美國",
+    "rating": "限制級",
+    "classes": null,
+    "releaseDate": "2025-10-31",
+    "publisher": "英屬蓋曼群島商威望國際娛樂股份有限公司台灣分公司",
+    "amountInThisWeek": 518665.0,
+    "totalAmount": 518665.0,
+    "filmClasses": null,
+    "filmLength": 5460,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 280058.0,
+        "tickets": 1026,
+        "totalAmount": 280058.0,
+        "totalTickets": 1026,
+        "rate": 0,
+        "theaterCount": 36
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 49055.0,
+        "tickets": 175,
+        "totalAmount": 329113.0,
+        "totalTickets": 1201,
+        "rate": -0.8248398546015469,
+        "theaterCount": 21
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 329113.0,
+        "totalTickets": 1201,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 280058.0,
+        "tickets": 1026,
+        "totalAmount": 280058.0,
+        "totalTickets": 1026,
+        "rate": 0,
+        "theaterCount": 36
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 213283.0,
+        "tickets": 802,
+        "totalAmount": 493341.0,
+        "totalTickets": 1828,
+        "rate": -0.23843275321540539,
+        "theaterCount": 36
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 25324.0,
+        "tickets": 95,
+        "totalAmount": 518665.0,
+        "totalTickets": 1923,
+        "rate": -0.8812657361346192,
+        "theaterCount": 20
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:02"
+}

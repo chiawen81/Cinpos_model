@@ -1,0 +1,97 @@
+{
+  "data": {
+    "movieId": "32089",
+    "name": "全力奔跑",
+    "originalName": "Run To You",
+    "region": "韓國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-24",
+    "publisher": "原創娛樂股份有限公司",
+    "amountInThisWeek": 828388.0,
+    "totalAmount": 828388.0,
+    "filmClasses": null,
+    "filmLength": 5820,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 500588.0,
+        "tickets": 1828,
+        "totalAmount": 500588.0,
+        "totalTickets": 1828,
+        "rate": 0,
+        "theaterCount": 36
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 79384.0,
+        "tickets": 312,
+        "totalAmount": 579972.0,
+        "totalTickets": 2140,
+        "rate": -0.8414184918535802,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 17286.0,
+        "tickets": 62,
+        "totalAmount": 597258.0,
+        "totalTickets": 2202,
+        "rate": -0.7822483120024186,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 14094.0,
+        "tickets": 64,
+        "totalAmount": 611352.0,
+        "totalTickets": 2266,
+        "rate": -0.18465810482471365,
+        "theaterCount": 2
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 500588.0,
+        "tickets": 1828,
+        "totalAmount": 500588.0,
+        "totalTickets": 1828,
+        "rate": 0,
+        "theaterCount": 36
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 245159.0,
+        "tickets": 990,
+        "totalAmount": 745747.0,
+        "totalTickets": 2818,
+        "rate": -0.5102579366664802,
+        "theaterCount": 35
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 61951.0,
+        "tickets": 239,
+        "totalAmount": 807698.0,
+        "totalTickets": 3057,
+        "rate": -0.747302770854833,
+        "theaterCount": 26
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 20690.0,
+        "tickets": 88,
+        "totalAmount": 828388.0,
+        "totalTickets": 3145,
+        "rate": -0.6660263756840084,
+        "theaterCount": 5
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:13"
+}

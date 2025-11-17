@@ -21,6 +21,7 @@ import argparse
 import time
 import requests
 import pandas as pd
+import cloudscraper  
 from pathlib import Path
 from datetime import date, datetime
 
@@ -41,14 +42,14 @@ DETAIL_URL = "https://boxofficetw.tfai.org.tw/film/gfd/"
 HEADERS = get_default_headers()
 TIMEOUT = 10
 SLEEP_INTERVAL = 1.2  # 避免連續請求過快被限制
-
+SCRAPER = cloudscraper.create_scraper() 
 
 # ========= 輔助函式 =========
 # 抓票房資料
 def fetch_boxoffice_data(film_id: str) -> dict | None:
     """根據電影 ID 抓取票房統計資料"""
     try:
-        res = requests.get(DETAIL_URL + film_id, headers=HEADERS, timeout=TIMEOUT)
+        res = SCRAPER.get(DETAIL_URL + film_id, headers=HEADERS, timeout=TIMEOUT)  
         res.encoding = "utf-8"
         data = res.json()
         return data

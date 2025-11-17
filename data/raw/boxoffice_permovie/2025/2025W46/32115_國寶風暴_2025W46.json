@@ -1,0 +1,134 @@
+{
+  "data": {
+    "movieId": "32115",
+    "name": "國寶風暴",
+    "originalName": "BIG DEAL",
+    "region": "韓國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-17",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 757945.0,
+    "totalAmount": 757945.0,
+    "filmClasses": null,
+    "filmLength": 6180,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82544,
+        "typeName": "導演",
+        "name": "崔倫鎮",
+        "originalName": "Yun-Jin Choi"
+      },
+      {
+        "id": 12823,
+        "typeName": "演員",
+        "name": "李帝勳",
+        "originalName": "Je-hoon Lee"
+      },
+      {
+        "id": 16145,
+        "typeName": "演員",
+        "name": "柳海真",
+        "originalName": "Hae-jin Yoo"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 387704.0,
+        "tickets": 1556,
+        "totalAmount": 387704.0,
+        "totalTickets": 1556,
+        "rate": 0,
+        "theaterCount": 63
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 67842.0,
+        "tickets": 281,
+        "totalAmount": 455546.0,
+        "totalTickets": 1837,
+        "rate": -0.8250159915812063,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 5160.0,
+        "tickets": 22,
+        "totalAmount": 460706.0,
+        "totalTickets": 1859,
+        "rate": -0.9239409215530202,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 480.0,
+        "tickets": 2,
+        "totalAmount": 461186.0,
+        "totalTickets": 1861,
+        "rate": -0.9069767441860465,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 461186.0,
+        "totalTickets": 1861,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 387704.0,
+        "tickets": 1556,
+        "totalAmount": 387704.0,
+        "totalTickets": 1556,
+        "rate": 0,
+        "theaterCount": 63
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 320080.0,
+        "tickets": 1346,
+        "totalAmount": 707784.0,
+        "totalTickets": 2902,
+        "rate": -0.17442172378928256,
+        "theaterCount": 63
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 45181.0,
+        "tickets": 182,
+        "totalAmount": 752965.0,
+        "totalTickets": 3084,
+        "rate": -0.8588446638340415,
+        "theaterCount": 17
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 4540.0,
+        "tickets": 20,
+        "totalAmount": 757505.0,
+        "totalTickets": 3104,
+        "rate": -0.8995152829729312,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 440.0,
+        "tickets": 2,
+        "totalAmount": 757945.0,
+        "totalTickets": 3106,
+        "rate": -0.9030837004405287,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:32"
+}

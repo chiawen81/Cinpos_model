@@ -1,0 +1,97 @@
+{
+  "data": {
+    "movieId": "32297",
+    "name": "吊鬼祭",
+    "originalName": "PULUNG GANTUNG: PATI NGENDAT",
+    "region": "印尼",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-10-23",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 1051227.0,
+    "totalAmount": 1051227.0,
+    "filmClasses": null,
+    "filmLength": 5340,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 626749.0,
+        "tickets": 2364,
+        "totalAmount": 626749.0,
+        "totalTickets": 2364,
+        "rate": 0,
+        "theaterCount": 53
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 42651.0,
+        "tickets": 161,
+        "totalAmount": 669400.0,
+        "totalTickets": 2525,
+        "rate": -0.9319488343818658,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 1590.0,
+        "tickets": 7,
+        "totalAmount": 670990.0,
+        "totalTickets": 2532,
+        "rate": -0.962720686502075,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 670990.0,
+        "totalTickets": 2532,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 732690.0,
+        "tickets": 2790,
+        "totalAmount": 732690.0,
+        "totalTickets": 2790,
+        "rate": 0,
+        "theaterCount": 53
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 287693.0,
+        "tickets": 1122,
+        "totalAmount": 1020383.0,
+        "totalTickets": 3912,
+        "rate": -0.6073468997802618,
+        "theaterCount": 53
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 30344.0,
+        "tickets": 119,
+        "totalAmount": 1050727.0,
+        "totalTickets": 4031,
+        "rate": -0.8945264570218948,
+        "theaterCount": 23
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 500.0,
+        "tickets": 2,
+        "totalAmount": 1051227.0,
+        "totalTickets": 4033,
+        "rate": -0.9835222778803058,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:22"
+}

@@ -1,0 +1,61 @@
+{
+  "data": {
+    "movieId": "31899",
+    "name": "跟著貓走遇見愛",
+    "originalName": "CAT KISS",
+    "region": "韓國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-11-07",
+    "publisher": "華映國際文創股份有限公司",
+    "amountInThisWeek": 133762.0,
+    "totalAmount": 133762.0,
+    "filmClasses": null,
+    "filmLength": 7200,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 64969.0,
+        "tickets": 248,
+        "totalAmount": 64969.0,
+        "totalTickets": 248,
+        "rate": 0,
+        "theaterCount": 22
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 18826.0,
+        "tickets": 74,
+        "totalAmount": 83795.0,
+        "totalTickets": 322,
+        "rate": -0.7102310332620173,
+        "theaterCount": 8
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 64969.0,
+        "tickets": 248,
+        "totalAmount": 64969.0,
+        "totalTickets": 248,
+        "rate": 0,
+        "theaterCount": 22
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 68793.0,
+        "tickets": 271,
+        "totalAmount": 133762.0,
+        "totalTickets": 519,
+        "rate": 0.058858840370022626,
+        "theaterCount": 22
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 17:01:12"
+}

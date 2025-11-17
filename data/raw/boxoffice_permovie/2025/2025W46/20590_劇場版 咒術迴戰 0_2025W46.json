@@ -1,0 +1,97 @@
+{
+  "data": {
+    "movieId": "20590",
+    "name": "劇場版 咒術迴戰 0",
+    "originalName": "JUJUTSU KAISEN: ZERO",
+    "region": "日本",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-24",
+    "publisher": "薩摩亞商羚邦(亞洲)有限公司台灣分公司",
+    "amountInThisWeek": 5922669.0,
+    "totalAmount": 5922669.0,
+    "filmClasses": null,
+    "filmLength": 6300,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 2931924.0,
+        "tickets": 8097,
+        "totalAmount": 2931924.0,
+        "totalTickets": 8097,
+        "rate": 0,
+        "theaterCount": 54
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 990187.0,
+        "tickets": 3123,
+        "totalAmount": 3922111.0,
+        "totalTickets": 11220,
+        "rate": -0.6622739880024175,
+        "theaterCount": 51
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 440201.0,
+        "tickets": 1418,
+        "totalAmount": 4362312.0,
+        "totalTickets": 12638,
+        "rate": -0.5554364983583909,
+        "theaterCount": 32
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 12555.0,
+        "tickets": 42,
+        "totalAmount": 4374867.0,
+        "totalTickets": 12680,
+        "rate": -0.9714789380305815,
+        "theaterCount": 5
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 2931924.0,
+        "tickets": 8097,
+        "totalAmount": 2931924.0,
+        "totalTickets": 8097,
+        "rate": 0,
+        "theaterCount": 54
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 1994479.0,
+        "tickets": 5867,
+        "totalAmount": 4926403.0,
+        "totalTickets": 13964,
+        "rate": -0.3197371418904446,
+        "theaterCount": 54
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 903045.0,
+        "tickets": 2983,
+        "totalAmount": 5829448.0,
+        "totalTickets": 16947,
+        "rate": -0.5472276218501172,
+        "theaterCount": 51
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 93221.0,
+        "tickets": 332,
+        "totalAmount": 5922669.0,
+        "totalTickets": 17279,
+        "rate": -0.8967703713546944,
+        "theaterCount": 33
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:11"
+}

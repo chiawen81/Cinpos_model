@@ -1,0 +1,97 @@
+{
+  "data": {
+    "movieId": "32156",
+    "name": "盛夏心動",
+    "originalName": "Young Hearts",
+    "region": "比利時",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-23",
+    "publisher": "晨曲電影藝術事業股份有限公司",
+    "amountInThisWeek": 152727.0,
+    "totalAmount": 152727.0,
+    "filmClasses": null,
+    "filmLength": 5940,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 66183.0,
+        "tickets": 261,
+        "totalAmount": 66183.0,
+        "totalTickets": 261,
+        "rate": 0,
+        "theaterCount": 19
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 7190.0,
+        "tickets": 30,
+        "totalAmount": 73373.0,
+        "totalTickets": 291,
+        "rate": -0.8913618300772101,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 3030.0,
+        "tickets": 14,
+        "totalAmount": 76403.0,
+        "totalTickets": 305,
+        "rate": -0.5785813630041725,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 240.0,
+        "tickets": 1,
+        "totalAmount": 76643.0,
+        "totalTickets": 306,
+        "rate": -0.9207920792079208,
+        "theaterCount": 2
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 80153.0,
+        "tickets": 319,
+        "totalAmount": 80153.0,
+        "totalTickets": 319,
+        "rate": 0,
+        "theaterCount": 19
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 60789.0,
+        "tickets": 250,
+        "totalAmount": 140942.0,
+        "totalTickets": 569,
+        "rate": -0.24158796302072286,
+        "theaterCount": 19
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 9895.0,
+        "tickets": 47,
+        "totalAmount": 150837.0,
+        "totalTickets": 616,
+        "rate": -0.8372238398394446,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 1890.0,
+        "tickets": 8,
+        "totalAmount": 152727.0,
+        "totalTickets": 624,
+        "rate": -0.8089944416371905,
+        "theaterCount": 2
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:23"
+}

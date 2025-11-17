@@ -1,0 +1,115 @@
+{
+  "data": {
+    "movieId": "31802",
+    "name": "普通的孩子",
+    "originalName": "How Dare You？",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-19",
+    "publisher": "天馬行空數位有限公司",
+    "amountInThisWeek": 102277.0,
+    "totalAmount": 102277.0,
+    "filmClasses": null,
+    "filmLength": 5820,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 41560.0,
+        "tickets": 157,
+        "totalAmount": 41560.0,
+        "totalTickets": 157,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 41560.0,
+        "totalTickets": 157,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 41560.0,
+        "totalTickets": 157,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 33737.0,
+        "tickets": 139,
+        "totalAmount": 75297.0,
+        "totalTickets": 296,
+        "rate": 0,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 2890.0,
+        "tickets": 13,
+        "totalAmount": 78187.0,
+        "totalTickets": 309,
+        "rate": -0.9143373743960637,
+        "theaterCount": 4
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 41560.0,
+        "tickets": 157,
+        "totalAmount": 41560.0,
+        "totalTickets": 157,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 41560.0,
+        "totalTickets": 157,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 41560.0,
+        "totalTickets": 157,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 33737.0,
+        "tickets": 139,
+        "totalAmount": 75297.0,
+        "totalTickets": 296,
+        "rate": 0,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 26980.0,
+        "tickets": 116,
+        "totalAmount": 102277.0,
+        "totalTickets": 412,
+        "rate": -0.20028455405044907,
+        "theaterCount": 13
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:27"
+}

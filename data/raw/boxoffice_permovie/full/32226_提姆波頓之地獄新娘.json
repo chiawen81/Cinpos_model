@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "32226",
+    "name": "提姆波頓之地獄新娘",
+    "originalName": "Tim Burton's Corpse Bride",
+    "region": "美國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-24",
+    "publisher": "美商華納兄弟（遠東）股份有限公司台灣分公司",
+    "amountInThisWeek": 550624.0,
+    "totalAmount": 550624.0,
+    "filmClasses": null,
+    "filmLength": 4620,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 311633.0,
+        "tickets": 1053,
+        "totalAmount": 311633.0,
+        "totalTickets": 1053,
+        "rate": 0,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 65946.0,
+        "tickets": 224,
+        "totalAmount": 377579.0,
+        "totalTickets": 1277,
+        "rate": -0.7883856972785296,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 377579.0,
+        "totalTickets": 1277,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 311633.0,
+        "tickets": 1053,
+        "totalAmount": 311633.0,
+        "totalTickets": 1053,
+        "rate": 0,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 205781.0,
+        "tickets": 732,
+        "totalAmount": 517414.0,
+        "totalTickets": 1785,
+        "rate": -0.33966877705506154,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 33210.0,
+        "tickets": 119,
+        "totalAmount": 550624.0,
+        "totalTickets": 1904,
+        "rate": -0.8386148381045869,
+        "theaterCount": 8
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:15"
+}

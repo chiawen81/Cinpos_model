@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "31759",
+    "name": "從前從前我的媽",
+    "originalName": "ONCE UPON MY MOTHER",
+    "region": "法國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-24",
+    "publisher": "捷傑有限公司",
+    "amountInThisWeek": 118119.0,
+    "totalAmount": 118119.0,
+    "filmClasses": null,
+    "filmLength": 6120,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 79099.0,
+        "tickets": 355,
+        "totalAmount": 79099.0,
+        "totalTickets": 355,
+        "rate": 0,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 4905.0,
+        "tickets": 26,
+        "totalAmount": 84004.0,
+        "totalTickets": 381,
+        "rate": -0.9379891022642511,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 160.0,
+        "tickets": 1,
+        "totalAmount": 84164.0,
+        "totalTickets": 382,
+        "rate": -0.9673802242609582,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 79099.0,
+        "tickets": 355,
+        "totalAmount": 79099.0,
+        "totalTickets": 355,
+        "rate": 0,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 33700.0,
+        "tickets": 156,
+        "totalAmount": 112799.0,
+        "totalTickets": 511,
+        "rate": -0.5739516302355276,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 5320.0,
+        "tickets": 29,
+        "totalAmount": 118119.0,
+        "totalTickets": 540,
+        "rate": -0.8421364985163204,
+        "theaterCount": 4
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:17"
+}

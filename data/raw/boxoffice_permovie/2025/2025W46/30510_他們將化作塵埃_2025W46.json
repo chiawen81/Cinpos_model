@@ -1,0 +1,140 @@
+{
+  "data": {
+    "movieId": "30510",
+    "name": "他們將化作塵埃",
+    "originalName": "They Will be Dust",
+    "region": "西班牙",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-17",
+    "publisher": "天馬行空數位有限公司",
+    "amountInThisWeek": 80512.0,
+    "totalAmount": 80512.0,
+    "filmClasses": null,
+    "filmLength": 6360,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82549,
+        "typeName": "編劇",
+        "name": "卡洛斯馬奎斯馬歇",
+        "originalName": "Carlos Marques-Marcet"
+      },
+      {
+        "id": 18841,
+        "typeName": "演員",
+        "name": "安琪拉摩琳娜",
+        "originalName": "Angela Molina"
+      },
+      {
+        "id": 11798,
+        "typeName": "演員",
+        "name": "阿爾佛萊德卡斯特羅",
+        "originalName": "Alfredo Castro (I)"
+      },
+      {
+        "id": 82549,
+        "typeName": "導演",
+        "name": "卡洛斯馬奎斯馬歇",
+        "originalName": "Carlos Marques-Marcet"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 36202.0,
+        "tickets": 163,
+        "totalAmount": 36202.0,
+        "totalTickets": 163,
+        "rate": 0,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 8020.0,
+        "tickets": 38,
+        "totalAmount": 44222.0,
+        "totalTickets": 201,
+        "rate": -0.7784652781614275,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 1940.0,
+        "tickets": 9,
+        "totalAmount": 46162.0,
+        "totalTickets": 210,
+        "rate": -0.7581047381546134,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 46162.0,
+        "totalTickets": 210,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 46162.0,
+        "totalTickets": 210,
+        "rate": 0,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 36202.0,
+        "tickets": 163,
+        "totalAmount": 36202.0,
+        "totalTickets": 163,
+        "rate": 0,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 33450.0,
+        "tickets": 164,
+        "totalAmount": 69652.0,
+        "totalTickets": 327,
+        "rate": -0.07601789956356002,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 9580.0,
+        "tickets": 46,
+        "totalAmount": 79232.0,
+        "totalTickets": 373,
+        "rate": -0.7136023916292975,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 1060.0,
+        "tickets": 4,
+        "totalAmount": 80292.0,
+        "totalTickets": 377,
+        "rate": -0.8893528183716075,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 220.0,
+        "tickets": 1,
+        "totalAmount": 80512.0,
+        "totalTickets": 378,
+        "rate": -0.7924528301886793,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:36"
+}

@@ -1,0 +1,116 @@
+{
+  "data": {
+    "movieId": "31522",
+    "name": "要不要來碗茶泡飯？",
+    "originalName": "Strangers in Kyoto",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-17",
+    "publisher": "輝洪開發股份有限公司",
+    "amountInThisWeek": 59660.0,
+    "totalAmount": 59660.0,
+    "filmClasses": null,
+    "filmLength": 5700,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 79178,
+        "typeName": "演員",
+        "name": "室井滋",
+        "originalName": "Shigeru Muroi"
+      },
+      {
+        "id": 46968,
+        "typeName": "演員",
+        "name": "深川麻衣",
+        "originalName": "Mai Fukagawa"
+      },
+      {
+        "id": 82548,
+        "typeName": "導演",
+        "name": "富永昌敬",
+        "originalName": "Masanori Tominaga"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 25420.0,
+        "tickets": 101,
+        "totalAmount": 25420.0,
+        "totalTickets": 101,
+        "rate": 0,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 5045.0,
+        "tickets": 23,
+        "totalAmount": 30465.0,
+        "totalTickets": 124,
+        "rate": -0.8015342250196695,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 30465.0,
+        "totalTickets": 124,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 30465.0,
+        "totalTickets": 124,
+        "rate": 0,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 25420.0,
+        "tickets": 101,
+        "totalAmount": 25420.0,
+        "totalTickets": 101,
+        "rate": 0,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 26735.0,
+        "tickets": 117,
+        "totalAmount": 52155.0,
+        "totalTickets": 218,
+        "rate": 0.0517309205350118,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 4345.0,
+        "tickets": 19,
+        "totalAmount": 56500.0,
+        "totalTickets": 237,
+        "rate": -0.8374789601645782,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 3160.0,
+        "tickets": 14,
+        "totalAmount": 59660.0,
+        "totalTickets": 251,
+        "rate": -0.2727272727272727,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:37"
+}

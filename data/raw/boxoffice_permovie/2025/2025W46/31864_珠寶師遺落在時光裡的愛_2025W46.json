@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "31864",
+    "name": "珠寶師遺落在時光裡的愛",
+    "originalName": "The Goldsmith's Secret",
+    "region": "西班牙",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-31",
+    "publisher": "聯影企業股份有限公司",
+    "amountInThisWeek": 86293.0,
+    "totalAmount": 86293.0,
+    "filmClasses": null,
+    "filmLength": 5940,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 37734.0,
+        "tickets": 173,
+        "totalAmount": 37734.0,
+        "totalTickets": 173,
+        "rate": 0,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 3865.0,
+        "tickets": 20,
+        "totalAmount": 41599.0,
+        "totalTickets": 193,
+        "rate": -0.8975724810515715,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 1080.0,
+        "tickets": 5,
+        "totalAmount": 42679.0,
+        "totalTickets": 198,
+        "rate": -0.720569210866753,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 37734.0,
+        "tickets": 173,
+        "totalAmount": 37734.0,
+        "totalTickets": 173,
+        "rate": 0,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 38035.0,
+        "tickets": 189,
+        "totalAmount": 75769.0,
+        "totalTickets": 362,
+        "rate": 0.007976890867652514,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 10524.0,
+        "tickets": 50,
+        "totalAmount": 86293.0,
+        "totalTickets": 412,
+        "rate": -0.7233074799526752,
+        "theaterCount": 4
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:05"
+}

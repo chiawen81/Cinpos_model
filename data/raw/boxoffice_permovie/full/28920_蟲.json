@@ -1,0 +1,61 @@
+{
+  "data": {
+    "movieId": "28920",
+    "name": "蟲",
+    "originalName": "LOCUST",
+    "region": "中華民國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-11-06",
+    "publisher": "目擊者文創有限公司",
+    "amountInThisWeek": 255031.0,
+    "totalAmount": 255031.0,
+    "filmClasses": null,
+    "filmLength": 8040,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 77323.0,
+        "tickets": 308,
+        "totalAmount": 77323.0,
+        "totalTickets": 308,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 39912.0,
+        "tickets": 144,
+        "totalAmount": 117235.0,
+        "totalTickets": 452,
+        "rate": -0.4838275804094513,
+        "theaterCount": 12
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 147323.0,
+        "tickets": 606,
+        "totalAmount": 147323.0,
+        "totalTickets": 606,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 107708.0,
+        "tickets": 425,
+        "totalAmount": 255031.0,
+        "totalTickets": 1031,
+        "rate": -0.2688989499263523,
+        "theaterCount": 15
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 17:01:14"
+}

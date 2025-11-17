@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "32347",
+    "name": "G-DRAGON IN CINEMA [Übermensch]",
+    "originalName": "G-DRAGON IN CINEMA [Übermensch]",
+    "region": "韓國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-28",
+    "publisher": "英屬維京群島商高捷全球開發有限公司 台灣分公司",
+    "amountInThisWeek": 33593564.0,
+    "totalAmount": 33593564.0,
+    "filmClasses": null,
+    "filmLength": 6420,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 11163260.0,
+        "tickets": 15786,
+        "totalAmount": 11163260.0,
+        "totalTickets": 15786,
+        "rate": 0,
+        "theaterCount": 47
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 5858715.0,
+        "tickets": 8429,
+        "totalAmount": 17021975.0,
+        "totalTickets": 24215,
+        "rate": -0.47517884560603263,
+        "theaterCount": 47
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 1728925.0,
+        "tickets": 2551,
+        "totalAmount": 18750900.0,
+        "totalTickets": 26766,
+        "rate": -0.7048968929193518,
+        "theaterCount": 41
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 18888535.0,
+        "tickets": 26485,
+        "totalAmount": 18888535.0,
+        "totalTickets": 26485,
+        "rate": 0,
+        "theaterCount": 47
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 11251615.0,
+        "tickets": 16048,
+        "totalAmount": 30140150.0,
+        "totalTickets": 42533,
+        "rate": -0.40431510437416135,
+        "theaterCount": 47
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 3453414.0,
+        "tickets": 5123,
+        "totalAmount": 33593564.0,
+        "totalTickets": 47656,
+        "rate": -0.6930739276095031,
+        "theaterCount": 47
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:06"
+}

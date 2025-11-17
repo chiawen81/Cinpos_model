@@ -1,0 +1,61 @@
+{
+  "data": {
+    "movieId": "32462",
+    "name": "終極戰士：殺戮星球",
+    "originalName": "Predator: Badlands",
+    "region": "美國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-11-06",
+    "publisher": "台灣華特迪士尼股份有限公司",
+    "amountInThisWeek": 38833830.0,
+    "totalAmount": 38833830.0,
+    "filmClasses": null,
+    "filmLength": 6420,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 17217837.0,
+        "tickets": 56621,
+        "totalAmount": 17217837.0,
+        "totalTickets": 56621,
+        "rate": 0,
+        "theaterCount": 94
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 8471969.0,
+        "tickets": 28886,
+        "totalAmount": 25689806.0,
+        "totalTickets": 85507,
+        "rate": -0.5079539317278936,
+        "theaterCount": 94
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 21491483.0,
+        "tickets": 71003,
+        "totalAmount": 21491483.0,
+        "totalTickets": 71003,
+        "rate": 0,
+        "theaterCount": 94
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 17342347.0,
+        "tickets": 59409,
+        "totalAmount": 38833830.0,
+        "totalTickets": 130412,
+        "rate": -0.19305954828710517,
+        "theaterCount": 94
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 17:01:13"
+}

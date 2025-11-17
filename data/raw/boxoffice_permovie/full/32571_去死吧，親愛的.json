@@ -1,0 +1,61 @@
+{
+  "data": {
+    "movieId": "32571",
+    "name": "去死吧，親愛的",
+    "originalName": "DIE MY LOVE",
+    "region": "美國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-11-07",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 2085793.0,
+    "totalAmount": 2085793.0,
+    "filmClasses": null,
+    "filmLength": 7080,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 1073659.0,
+        "tickets": 3884,
+        "totalAmount": 1073659.0,
+        "totalTickets": 3884,
+        "rate": 0,
+        "theaterCount": 75
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 345429.0,
+        "tickets": 1299,
+        "totalAmount": 1419088.0,
+        "totalTickets": 5183,
+        "rate": -0.6782693574030488,
+        "theaterCount": 66
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 1073659.0,
+        "tickets": 3884,
+        "totalAmount": 1073659.0,
+        "totalTickets": 3884,
+        "rate": 0,
+        "theaterCount": 75
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 1012134.0,
+        "tickets": 3957,
+        "totalAmount": 2085793.0,
+        "totalTickets": 7841,
+        "rate": -0.05730404159980031,
+        "theaterCount": 75
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 17:01:03"
+}

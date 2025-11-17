@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "32349",
+    "name": "暴蜂尼亞",
+    "originalName": "BUGONIA",
+    "region": "美國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-11-01",
+    "publisher": "美商美國環球影片股份有限公司台灣分公司",
+    "amountInThisWeek": 2539391.0,
+    "totalAmount": 2539391.0,
+    "filmClasses": null,
+    "filmLength": 7080,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 207075.0,
+        "tickets": 391,
+        "totalAmount": 207075.0,
+        "totalTickets": 391,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 1124782.0,
+        "tickets": 4184,
+        "totalAmount": 1331857.0,
+        "totalTickets": 4575,
+        "rate": 4.431761439092116,
+        "theaterCount": 59
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 501700.0,
+        "tickets": 1816,
+        "totalAmount": 1833557.0,
+        "totalTickets": 6391,
+        "rate": -0.5539580114191016,
+        "theaterCount": 59
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 207075.0,
+        "tickets": 391,
+        "totalAmount": 207075.0,
+        "totalTickets": 391,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 1124782.0,
+        "tickets": 4184,
+        "totalAmount": 1331857.0,
+        "totalTickets": 4575,
+        "rate": 4.431761439092116,
+        "theaterCount": 59
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 1207534.0,
+        "tickets": 4549,
+        "totalAmount": 2539391.0,
+        "totalTickets": 9124,
+        "rate": 0.0735715898725264,
+        "theaterCount": 59
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 17:01:17"
+}

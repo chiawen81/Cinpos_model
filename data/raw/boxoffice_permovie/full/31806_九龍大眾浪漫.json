@@ -1,0 +1,158 @@
+{
+  "data": {
+    "movieId": "31806",
+    "name": "九龍大眾浪漫",
+    "originalName": "Kowloon Generic Romance​ Live Action Movie",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-17",
+    "publisher": "薩摩亞商羚邦(亞洲)有限公司台灣分公司",
+    "amountInThisWeek": 293723.0,
+    "totalAmount": 293723.0,
+    "filmClasses": null,
+    "filmLength": 7080,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82541,
+        "typeName": "演員",
+        "name": "梅澤美波",
+        "originalName": "Minami Umezawa"
+      },
+      {
+        "id": 82542,
+        "typeName": "演員",
+        "name": "柳俊太郎",
+        "originalName": "Shuntaro Yanagi"
+      },
+      {
+        "id": 82543,
+        "typeName": "導演",
+        "name": "池田千尋",
+        "originalName": "Chihiro Ikeda"
+      },
+      {
+        "id": 79478,
+        "typeName": "演員",
+        "name": "水上恆司",
+        "originalName": "Koshi Mizukami"
+      },
+      {
+        "id": 32379,
+        "typeName": "演員",
+        "name": "吉岡里帆",
+        "originalName": "Riho Yoshioka"
+      },
+      {
+        "id": 82550,
+        "typeName": "演員",
+        "name": "花瀨琴音",
+        "originalName": "Kotone Hanase"
+      },
+      {
+        "id": 82543,
+        "typeName": "編劇",
+        "name": "池田千尋",
+        "originalName": "Chihiro Ikeda"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 149687.0,
+        "tickets": 564,
+        "totalAmount": 149687.0,
+        "totalTickets": 564,
+        "rate": 0,
+        "theaterCount": 17
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 44274.0,
+        "tickets": 183,
+        "totalAmount": 193961.0,
+        "totalTickets": 747,
+        "rate": -0.7042228116002057,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 3145.0,
+        "tickets": 12,
+        "totalAmount": 197106.0,
+        "totalTickets": 759,
+        "rate": -0.9289650810859647,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 900.0,
+        "tickets": 3,
+        "totalAmount": 198006.0,
+        "totalTickets": 762,
+        "rate": -0.7138314785373608,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 198006.0,
+        "totalTickets": 762,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 149687.0,
+        "tickets": 564,
+        "totalAmount": 149687.0,
+        "totalTickets": 564,
+        "rate": 0,
+        "theaterCount": 17
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 115714.0,
+        "tickets": 472,
+        "totalAmount": 265401.0,
+        "totalTickets": 1036,
+        "rate": -0.2269602570697522,
+        "theaterCount": 17
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 22372.0,
+        "tickets": 89,
+        "totalAmount": 287773.0,
+        "totalTickets": 1125,
+        "rate": -0.8066612510154346,
+        "theaterCount": 10
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 4870.0,
+        "tickets": 17,
+        "totalAmount": 292643.0,
+        "totalTickets": 1142,
+        "rate": -0.7823171821920257,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 1080.0,
+        "tickets": 4,
+        "totalAmount": 293723.0,
+        "totalTickets": 1146,
+        "rate": -0.7782340862422998,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:33"
+}

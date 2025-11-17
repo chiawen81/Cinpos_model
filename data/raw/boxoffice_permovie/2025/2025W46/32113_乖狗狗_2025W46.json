@@ -1,0 +1,134 @@
+{
+  "data": {
+    "movieId": "32113",
+    "name": "乖狗狗",
+    "originalName": "Good Boy",
+    "region": "美國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-17",
+    "publisher": "好威映象有限公司",
+    "amountInThisWeek": 2574575.0,
+    "totalAmount": 2574575.0,
+    "filmClasses": null,
+    "filmLength": 4380,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82546,
+        "typeName": "導演",
+        "name": "班利昂堡",
+        "originalName": "Ben Leonberg"
+      },
+      {
+        "id": 82551,
+        "typeName": "演員",
+        "name": "印第",
+        "originalName": "Indy"
+      },
+      {
+        "id": 82546,
+        "typeName": "編劇",
+        "name": "班利昂堡",
+        "originalName": "Ben Leonberg"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 1007827.0,
+        "tickets": 3817,
+        "totalAmount": 1007827.0,
+        "totalTickets": 3817,
+        "rate": 0,
+        "theaterCount": 51
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 609430.0,
+        "tickets": 2224,
+        "totalAmount": 1617257.0,
+        "totalTickets": 6041,
+        "rate": -0.39530296370309587,
+        "theaterCount": 50
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 187129.0,
+        "tickets": 676,
+        "totalAmount": 1804386.0,
+        "totalTickets": 6717,
+        "rate": -0.6929442265723709,
+        "theaterCount": 33
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 27799.0,
+        "tickets": 103,
+        "totalAmount": 1832185.0,
+        "totalTickets": 6820,
+        "rate": -0.8514447252964532,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 2930.0,
+        "tickets": 11,
+        "totalAmount": 1835115.0,
+        "totalTickets": 6831,
+        "rate": -0.8946005251987481,
+        "theaterCount": 3
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 1007827.0,
+        "tickets": 3817,
+        "totalAmount": 1007827.0,
+        "totalTickets": 3817,
+        "rate": 0,
+        "theaterCount": 51
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 1055999.0,
+        "tickets": 3965,
+        "totalAmount": 2063826.0,
+        "totalTickets": 7782,
+        "rate": 0.047797885946695214,
+        "theaterCount": 51
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 375889.0,
+        "tickets": 1408,
+        "totalAmount": 2439715.0,
+        "totalTickets": 9190,
+        "rate": -0.6440441704963735,
+        "theaterCount": 50
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 124695.0,
+        "tickets": 453,
+        "totalAmount": 2564410.0,
+        "totalTickets": 9643,
+        "rate": -0.6682664297172836,
+        "theaterCount": 33
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 10165.0,
+        "tickets": 39,
+        "totalAmount": 2574575.0,
+        "totalTickets": 9682,
+        "rate": -0.9184810938690404,
+        "theaterCount": 6
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:30"
+}

@@ -1,0 +1,146 @@
+{
+  "data": {
+    "movieId": "31571",
+    "name": "阿龍",
+    "originalName": "Atonement",
+    "region": "香港",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-10-17",
+    "publisher": "華映國際文創股份有限公司",
+    "amountInThisWeek": 147281.0,
+    "totalAmount": 147281.0,
+    "filmClasses": null,
+    "filmLength": 5700,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 23501,
+        "typeName": "導演",
+        "name": "鄭中基",
+        "originalName": "Ronald Cheng"
+      },
+      {
+        "id": 23501,
+        "typeName": "編劇",
+        "name": "鄭中基",
+        "originalName": "Ronald Cheng"
+      },
+      {
+        "id": 23501,
+        "typeName": "演員",
+        "name": "鄭中基",
+        "originalName": "Ronald Cheng"
+      },
+      {
+        "id": 12596,
+        "typeName": "演員",
+        "name": "姜皓文",
+        "originalName": "Philip Keung"
+      },
+      {
+        "id": 82554,
+        "typeName": "導演",
+        "name": "胡耀輝",
+        "originalName": "Mark Wu(II)"
+      },
+      {
+        "id": 82557,
+        "typeName": "演員",
+        "name": "傅舜盈",
+        "originalName": "Shun-ying Fu"
+      },
+      {
+        "id": 18593,
+        "typeName": "演員",
+        "name": "周秀娜",
+        "originalName": "Chrissie Chau"
+      },
+      {
+        "id": 82554,
+        "typeName": "編劇",
+        "name": "胡耀輝",
+        "originalName": "Mark Wu(II)"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 72672.0,
+        "tickets": 289,
+        "totalAmount": 72672.0,
+        "totalTickets": 289,
+        "rate": 0,
+        "theaterCount": 24
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 11848.0,
+        "tickets": 45,
+        "totalAmount": 84520.0,
+        "totalTickets": 334,
+        "rate": -0.836966094231616,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 84520.0,
+        "totalTickets": 334,
+        "rate": -1,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 84520.0,
+        "totalTickets": 334,
+        "rate": 0,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 72672.0,
+        "tickets": 289,
+        "totalAmount": 72672.0,
+        "totalTickets": 289,
+        "rate": 0,
+        "theaterCount": 24
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 67139.0,
+        "tickets": 267,
+        "totalAmount": 139811.0,
+        "totalTickets": 556,
+        "rate": -0.07613661382650815,
+        "theaterCount": 24
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 6430.0,
+        "tickets": 25,
+        "totalAmount": 146241.0,
+        "totalTickets": 581,
+        "rate": -0.9042285407885133,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 1040.0,
+        "tickets": 4,
+        "totalAmount": 147281.0,
+        "totalTickets": 585,
+        "rate": -0.838258164852255,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:35"
+}

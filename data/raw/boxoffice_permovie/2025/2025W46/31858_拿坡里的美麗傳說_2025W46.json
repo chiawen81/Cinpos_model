@@ -1,0 +1,97 @@
+{
+  "data": {
+    "movieId": "31858",
+    "name": "拿坡里的美麗傳說",
+    "originalName": "Parthenope",
+    "region": "義大利",
+    "rating": "限制級",
+    "classes": null,
+    "releaseDate": "2025-10-24",
+    "publisher": "海鵬影業有限公司",
+    "amountInThisWeek": 205557.0,
+    "totalAmount": 205557.0,
+    "filmClasses": null,
+    "filmLength": 8160,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 94897.0,
+        "tickets": 428,
+        "totalAmount": 94897.0,
+        "totalTickets": 428,
+        "rate": 0,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 14190.0,
+        "tickets": 67,
+        "totalAmount": 109087.0,
+        "totalTickets": 495,
+        "rate": -0.850469456357946,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 7220.0,
+        "tickets": 38,
+        "totalAmount": 116307.0,
+        "totalTickets": 533,
+        "rate": -0.49119097956307256,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 116307.0,
+        "totalTickets": 533,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 94897.0,
+        "tickets": 428,
+        "totalAmount": 94897.0,
+        "totalTickets": 428,
+        "rate": 0,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 82375.0,
+        "tickets": 372,
+        "totalAmount": 177272.0,
+        "totalTickets": 800,
+        "rate": -0.13195359178899227,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 23145.0,
+        "tickets": 110,
+        "totalAmount": 200417.0,
+        "totalTickets": 910,
+        "rate": -0.7190288315629743,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 5140.0,
+        "tickets": 26,
+        "totalAmount": 205557.0,
+        "totalTickets": 936,
+        "rate": -0.7779217973644416,
+        "theaterCount": 3
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:16"
+}

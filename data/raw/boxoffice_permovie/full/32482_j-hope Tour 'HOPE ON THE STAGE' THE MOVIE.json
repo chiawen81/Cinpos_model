@@ -1,0 +1,61 @@
+{
+  "data": {
+    "movieId": "32482",
+    "name": "j-hope Tour 'HOPE ON THE STAGE' THE MOVIE",
+    "originalName": "j-hope Tour 'HOPE ON THE STAGE' THE MOVIE",
+    "region": "韓國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-11-03",
+    "publisher": "美麗華娛樂股份有限公司",
+    "amountInThisWeek": 2026640.0,
+    "totalAmount": 2026640.0,
+    "filmClasses": null,
+    "filmLength": 5340,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 1195935.0,
+        "tickets": 2133,
+        "totalAmount": 1195935.0,
+        "totalTickets": 2133,
+        "rate": 0,
+        "theaterCount": 21
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 147700.0,
+        "tickets": 249,
+        "totalAmount": 147700.0,
+        "totalTickets": 249,
+        "rate": 0,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 1878940.0,
+        "tickets": 3368,
+        "totalAmount": 2026640.0,
+        "totalTickets": 3617,
+        "rate": 11.721327014218009,
+        "theaterCount": 21
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 17:01:15"
+}

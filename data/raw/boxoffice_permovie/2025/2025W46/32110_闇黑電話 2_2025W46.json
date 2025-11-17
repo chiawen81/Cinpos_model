@@ -1,0 +1,146 @@
+{
+  "data": {
+    "movieId": "32110",
+    "name": "闇黑電話 2",
+    "originalName": "BLACK PHONE 2",
+    "region": "美國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-10-17",
+    "publisher": "美商美國環球影片股份有限公司台灣分公司",
+    "amountInThisWeek": 2160311.0,
+    "totalAmount": 2160311.0,
+    "filmClasses": null,
+    "filmLength": 6780,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 14141,
+        "typeName": "演員",
+        "name": "伊森霍克",
+        "originalName": "Ethan Hawke"
+      },
+      {
+        "id": 73297,
+        "typeName": "演員",
+        "name": "瑪德琳麥克羅",
+        "originalName": "Madeleine McGraw"
+      },
+      {
+        "id": 73296,
+        "typeName": "演員",
+        "name": "梅森塔姆斯",
+        "originalName": "Mason Thames"
+      },
+      {
+        "id": 73294,
+        "typeName": "編劇",
+        "name": "史考特德瑞森",
+        "originalName": "Scott Derrickson"
+      },
+      {
+        "id": 73294,
+        "typeName": "導演",
+        "name": "史考特德瑞森",
+        "originalName": "Scott Derrickson"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 944270.0,
+        "tickets": 3626,
+        "totalAmount": 944270.0,
+        "totalTickets": 3626,
+        "rate": 0,
+        "theaterCount": 90
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 455637.0,
+        "tickets": 1636,
+        "totalAmount": 1399907.0,
+        "totalTickets": 5262,
+        "rate": -0.5174716977135777,
+        "theaterCount": 87
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 74179.0,
+        "tickets": 251,
+        "totalAmount": 1474086.0,
+        "totalTickets": 5513,
+        "rate": -0.8371971547525772,
+        "theaterCount": 37
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 3985.0,
+        "tickets": 16,
+        "totalAmount": 1478071.0,
+        "totalTickets": 5529,
+        "rate": -0.9462785963682444,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 1478071.0,
+        "totalTickets": 5529,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 944270.0,
+        "tickets": 3626,
+        "totalAmount": 944270.0,
+        "totalTickets": 3626,
+        "rate": 0,
+        "theaterCount": 90
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 939266.0,
+        "tickets": 3540,
+        "totalAmount": 1883536.0,
+        "totalTickets": 7166,
+        "rate": -0.005299331758924884,
+        "theaterCount": 90
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 241992.0,
+        "tickets": 924,
+        "totalAmount": 2125528.0,
+        "totalTickets": 8090,
+        "rate": -0.7423605240687942,
+        "theaterCount": 87
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 33958.0,
+        "tickets": 121,
+        "totalAmount": 2159486.0,
+        "totalTickets": 8211,
+        "rate": -0.8596730470428775,
+        "theaterCount": 31
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 825.0,
+        "tickets": 3,
+        "totalAmount": 2160311.0,
+        "totalTickets": 8214,
+        "rate": -0.9757052829966429,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:31"
+}

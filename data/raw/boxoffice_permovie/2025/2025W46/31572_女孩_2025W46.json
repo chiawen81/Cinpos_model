@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "31572",
+    "name": "女孩",
+    "originalName": "Girl",
+    "region": "中華民國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-27",
+    "publisher": "華文創股份有限公司",
+    "amountInThisWeek": 6674202.0,
+    "totalAmount": 6674202.0,
+    "filmClasses": null,
+    "filmLength": 7380,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 2066313.0,
+        "tickets": 7757,
+        "totalAmount": 2066313.0,
+        "totalTickets": 7757,
+        "rate": 0,
+        "theaterCount": 74
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 1252569.0,
+        "tickets": 4664,
+        "totalAmount": 3318882.0,
+        "totalTickets": 12421,
+        "rate": -0.3938144898667336,
+        "theaterCount": 74
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 435286.0,
+        "tickets": 1616,
+        "totalAmount": 3754168.0,
+        "totalTickets": 14037,
+        "rate": -0.6524854119812961,
+        "theaterCount": 59
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 3051973.0,
+        "tickets": 11197,
+        "totalAmount": 3051973.0,
+        "totalTickets": 11197,
+        "rate": 0,
+        "theaterCount": 74
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 2424443.0,
+        "tickets": 9290,
+        "totalAmount": 5476416.0,
+        "totalTickets": 20487,
+        "rate": -0.20561453197652796,
+        "theaterCount": 74
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 1197786.0,
+        "tickets": 4581,
+        "totalAmount": 6674202.0,
+        "totalTickets": 25068,
+        "rate": -0.5059541511184218,
+        "theaterCount": 74
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:10"
+}

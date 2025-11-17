@@ -1,0 +1,97 @@
+{
+  "data": {
+    "movieId": "31966",
+    "name": "魯邦三世 不死身的血族",
+    "originalName": "LUPIN THE IIIRD THE MOVIE : The Immortal Bloodline",
+    "region": "日本",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-24",
+    "publisher": "普威爾國際股份有限公司",
+    "amountInThisWeek": 856569.0,
+    "totalAmount": 856569.0,
+    "filmClasses": null,
+    "filmLength": 5520,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 468573.0,
+        "tickets": 1765,
+        "totalAmount": 468573.0,
+        "totalTickets": 1765,
+        "rate": 0,
+        "theaterCount": 44
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 111382.0,
+        "tickets": 407,
+        "totalAmount": 579955.0,
+        "totalTickets": 2172,
+        "rate": -0.7622953093754868,
+        "theaterCount": 33
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 14943.0,
+        "tickets": 56,
+        "totalAmount": 594898.0,
+        "totalTickets": 2228,
+        "rate": -0.8658400818803756,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 2470.0,
+        "tickets": 11,
+        "totalAmount": 597368.0,
+        "totalTickets": 2239,
+        "rate": -0.8347052131432778,
+        "theaterCount": 2
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 468573.0,
+        "tickets": 1765,
+        "totalAmount": 468573.0,
+        "totalTickets": 1765,
+        "rate": 0,
+        "theaterCount": 44
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 316627.0,
+        "tickets": 1211,
+        "totalAmount": 785200.0,
+        "totalTickets": 2976,
+        "rate": -0.32427391249602516,
+        "theaterCount": 44
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 57310.0,
+        "tickets": 225,
+        "totalAmount": 842510.0,
+        "totalTickets": 3201,
+        "rate": -0.8189983797970483,
+        "theaterCount": 33
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 14059.0,
+        "tickets": 56,
+        "totalAmount": 856569.0,
+        "totalTickets": 3257,
+        "rate": -0.7546850462397487,
+        "theaterCount": 9
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:12"
+}

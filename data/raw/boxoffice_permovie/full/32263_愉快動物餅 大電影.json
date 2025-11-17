@@ -1,0 +1,61 @@
+{
+  "data": {
+    "movieId": "32263",
+    "name": "愉快動物餅 大電影",
+    "originalName": "Dream Animals",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-11-07",
+    "publisher": "提恩傳媒實業有限公司",
+    "amountInThisWeek": 569914.0,
+    "totalAmount": 569914.0,
+    "filmClasses": null,
+    "filmLength": 5400,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 310218.0,
+        "tickets": 1250,
+        "totalAmount": 310218.0,
+        "totalTickets": 1250,
+        "rate": 0,
+        "theaterCount": 38
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 129833.0,
+        "tickets": 533,
+        "totalAmount": 440051.0,
+        "totalTickets": 1783,
+        "rate": -0.5814781863076933,
+        "theaterCount": 29
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 310218.0,
+        "tickets": 1250,
+        "totalAmount": 310218.0,
+        "totalTickets": 1250,
+        "rate": 0,
+        "theaterCount": 38
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 259696.0,
+        "tickets": 1051,
+        "totalAmount": 569914.0,
+        "totalTickets": 2301,
+        "rate": -0.16285966642812474,
+        "theaterCount": 37
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 17:01:09"
+}

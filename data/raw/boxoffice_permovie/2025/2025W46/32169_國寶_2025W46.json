@@ -1,0 +1,115 @@
+{
+  "data": {
+    "movieId": "32169",
+    "name": "國寶",
+    "originalName": "Kokuho",
+    "region": "日本",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-10-19",
+    "publisher": "傳影互動股份有限公司",
+    "amountInThisWeek": 24773429.0,
+    "totalAmount": 24773429.0,
+    "filmClasses": null,
+    "filmLength": 10440,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 179070.0,
+        "tickets": 390,
+        "totalAmount": 179070.0,
+        "totalTickets": 390,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 3827449.0,
+        "tickets": 12862,
+        "totalAmount": 4006519.0,
+        "totalTickets": 13252,
+        "rate": 20.374038085664825,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 4662586.0,
+        "tickets": 15523,
+        "totalAmount": 8669105.0,
+        "totalTickets": 28775,
+        "rate": 0.218196767612057,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 3908714.0,
+        "tickets": 13173,
+        "totalAmount": 12577819.0,
+        "totalTickets": 41948,
+        "rate": -0.1616853823178811,
+        "theaterCount": 54
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 2889039.0,
+        "tickets": 9673,
+        "totalAmount": 15466858.0,
+        "totalTickets": 51621,
+        "rate": -0.2608722459612036,
+        "theaterCount": 52
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 179070.0,
+        "tickets": 390,
+        "totalAmount": 179070.0,
+        "totalTickets": 390,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 4491043.0,
+        "tickets": 15232,
+        "totalAmount": 4670113.0,
+        "totalTickets": 15622,
+        "rate": 24.07981794828838,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 7632315.0,
+        "tickets": 26209,
+        "totalAmount": 12302428.0,
+        "totalTickets": 41831,
+        "rate": 0.6994526661178706,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 7202924.0,
+        "tickets": 24841,
+        "totalAmount": 19505352.0,
+        "totalTickets": 66672,
+        "rate": -0.056259601444646874,
+        "theaterCount": 55
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 5268077.0,
+        "tickets": 18226,
+        "totalAmount": 24773429.0,
+        "totalTickets": 84898,
+        "rate": -0.26861966057117914,
+        "theaterCount": 54
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:26"
+}

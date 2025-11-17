@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "32298",
+    "name": "IDOLiSH7-偶像星願- First BEAT! 劇場版總集篇 前篇",
+    "originalName": "IDOLiSH7 First BEAT! Movie Edition Part 1",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-31",
+    "publisher": "曼迪傳播股份有限公司",
+    "amountInThisWeek": 918826.0,
+    "totalAmount": 918826.0,
+    "filmClasses": null,
+    "filmLength": 6300,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 272284.0,
+        "tickets": 954,
+        "totalAmount": 272284.0,
+        "totalTickets": 954,
+        "rate": 0,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 235569.0,
+        "tickets": 851,
+        "totalAmount": 507853.0,
+        "totalTickets": 1805,
+        "rate": -0.13484082795904276,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 185553.0,
+        "tickets": 665,
+        "totalAmount": 693406.0,
+        "totalTickets": 2470,
+        "rate": -0.21231995720998942,
+        "theaterCount": 13
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 272284.0,
+        "tickets": 954,
+        "totalAmount": 272284.0,
+        "totalTickets": 954,
+        "rate": 0,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 342064.0,
+        "tickets": 1251,
+        "totalAmount": 614348.0,
+        "totalTickets": 2205,
+        "rate": 0.25627653479455276,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 304478.0,
+        "tickets": 1108,
+        "totalAmount": 918826.0,
+        "totalTickets": 3313,
+        "rate": -0.10988002245193881,
+        "theaterCount": 14
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:01"
+}

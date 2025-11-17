@@ -1,0 +1,97 @@
+{
+  "data": {
+    "movieId": "32237",
+    "name": "迷宮裡的魔術師",
+    "originalName": "BLACK SHOWMAN",
+    "region": "日本",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-23",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 2249358.0,
+    "totalAmount": 2249358.0,
+    "filmClasses": null,
+    "filmLength": 7560,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 1047634.0,
+        "tickets": 4033,
+        "totalAmount": 1047634.0,
+        "totalTickets": 4033,
+        "rate": 0,
+        "theaterCount": 44
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 323053.0,
+        "tickets": 1255,
+        "totalAmount": 1370687.0,
+        "totalTickets": 5288,
+        "rate": -0.6916356284733027,
+        "theaterCount": 42
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 62588.0,
+        "tickets": 246,
+        "totalAmount": 1433275.0,
+        "totalTickets": 5534,
+        "rate": -0.8062608921755873,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 9082.0,
+        "tickets": 39,
+        "totalAmount": 1442357.0,
+        "totalTickets": 5573,
+        "rate": -0.8548923116252317,
+        "theaterCount": 6
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 1292769.0,
+        "tickets": 5043,
+        "totalAmount": 1292769.0,
+        "totalTickets": 5043,
+        "rate": 0,
+        "theaterCount": 44
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 702332.0,
+        "tickets": 2792,
+        "totalAmount": 1995101.0,
+        "totalTickets": 7835,
+        "rate": -0.45672274010283354,
+        "theaterCount": 44
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 217438.0,
+        "tickets": 887,
+        "totalAmount": 2212539.0,
+        "totalTickets": 8722,
+        "rate": -0.6904056770871896,
+        "theaterCount": 42
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 36819.0,
+        "tickets": 152,
+        "totalAmount": 2249358.0,
+        "totalTickets": 8874,
+        "rate": -0.8306689723047489,
+        "theaterCount": 12
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:21"
+}

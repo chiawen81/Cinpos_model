@@ -1,0 +1,61 @@
+{
+  "data": {
+    "movieId": "32350",
+    "name": "電影版吸吸吸吸吸血鬼",
+    "originalName": "Babanbabanban Vampire",
+    "region": "日本",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-11-07",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 531224.0,
+    "totalAmount": 531224.0,
+    "filmClasses": null,
+    "filmLength": 6300,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 340764.0,
+        "tickets": 1385,
+        "totalAmount": 340764.0,
+        "totalTickets": 1385,
+        "rate": 0,
+        "theaterCount": 37
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 52690.0,
+        "tickets": 202,
+        "totalAmount": 393454.0,
+        "totalTickets": 1587,
+        "rate": -0.8453768590578817,
+        "theaterCount": 22
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 340764.0,
+        "tickets": 1385,
+        "totalAmount": 340764.0,
+        "totalTickets": 1385,
+        "rate": 0,
+        "theaterCount": 37
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 190460.0,
+        "tickets": 759,
+        "totalAmount": 531224.0,
+        "totalTickets": 2144,
+        "rate": -0.44107945675012616,
+        "theaterCount": 37
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 17:01:07"
+}

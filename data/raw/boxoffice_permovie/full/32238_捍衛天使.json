@@ -1,0 +1,158 @@
+{
+  "data": {
+    "movieId": "32238",
+    "name": "捍衛天使",
+    "originalName": "GOOD FORTUNE",
+    "region": "美國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-10-17",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 9965144.0,
+    "totalAmount": 9965144.0,
+    "filmClasses": null,
+    "filmLength": 5820,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 10624,
+        "typeName": "演員",
+        "name": "塞斯羅根",
+        "originalName": "Seth Rogen"
+      },
+      {
+        "id": 55393,
+        "typeName": "演員",
+        "name": "吳珊卓",
+        "originalName": "Sandra Oh"
+      },
+      {
+        "id": 82545,
+        "typeName": "編劇",
+        "name": "阿茲安薩里",
+        "originalName": "Aziz Ansari"
+      },
+      {
+        "id": 82545,
+        "typeName": "導演",
+        "name": "阿茲安薩里",
+        "originalName": "Aziz Ansari"
+      },
+      {
+        "id": 11871,
+        "typeName": "演員",
+        "name": "基努李維",
+        "originalName": "Keanu Reeves"
+      },
+      {
+        "id": 82545,
+        "typeName": "演員",
+        "name": "阿茲安薩里",
+        "originalName": "Aziz Ansari"
+      },
+      {
+        "id": 73186,
+        "typeName": "演員",
+        "name": "琪琪帕瑪",
+        "originalName": "Keke Palmer"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 3165900.0,
+        "tickets": 12220,
+        "totalAmount": 3165900.0,
+        "totalTickets": 12220,
+        "rate": 0,
+        "theaterCount": 83
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 2315833.0,
+        "tickets": 8780,
+        "totalAmount": 5481733.0,
+        "totalTickets": 21000,
+        "rate": -0.26850721753687734,
+        "theaterCount": 83
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 818651.0,
+        "tickets": 3075,
+        "totalAmount": 6300384.0,
+        "totalTickets": 24075,
+        "rate": -0.6464982578622898,
+        "theaterCount": 75
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 417054.0,
+        "tickets": 1762,
+        "totalAmount": 6717438.0,
+        "totalTickets": 25837,
+        "rate": -0.49055946917550947,
+        "theaterCount": 43
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 25813.0,
+        "tickets": 101,
+        "totalAmount": 6743251.0,
+        "totalTickets": 25938,
+        "rate": -0.9381063363497293,
+        "theaterCount": 12
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 3165900.0,
+        "tickets": 12220,
+        "totalAmount": 3165900.0,
+        "totalTickets": 12220,
+        "rate": 0,
+        "theaterCount": 83
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 4144526.0,
+        "tickets": 15990,
+        "totalAmount": 7310426.0,
+        "totalTickets": 28210,
+        "rate": 0.30911462775198206,
+        "theaterCount": 83
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 1736781.0,
+        "tickets": 6721,
+        "totalAmount": 9047207.0,
+        "totalTickets": 34931,
+        "rate": -0.5809458065892216,
+        "theaterCount": 83
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 802002.0,
+        "tickets": 3272,
+        "totalAmount": 9849209.0,
+        "totalTickets": 38203,
+        "rate": -0.5382250266441192,
+        "theaterCount": 75
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 115935.0,
+        "tickets": 455,
+        "totalAmount": 9965144.0,
+        "totalTickets": 38658,
+        "rate": -0.8554430038827834,
+        "theaterCount": 41
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:28"
+}

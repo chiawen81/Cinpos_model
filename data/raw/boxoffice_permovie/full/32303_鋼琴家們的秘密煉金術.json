@@ -1,0 +1,61 @@
+{
+  "data": {
+    "movieId": "32303",
+    "name": "鋼琴家們的秘密煉金術",
+    "originalName": "The Alchemy of the Piano",
+    "region": "英國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-11-07",
+    "publisher": "造次文化有限公司",
+    "amountInThisWeek": 923162.0,
+    "totalAmount": 923162.0,
+    "filmClasses": null,
+    "filmLength": 5400,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 268673.0,
+        "tickets": 1101,
+        "totalAmount": 268673.0,
+        "totalTickets": 1101,
+        "rate": 0,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 310878.0,
+        "tickets": 1218,
+        "totalAmount": 579551.0,
+        "totalTickets": 2319,
+        "rate": 0.1570868676792979,
+        "theaterCount": 12
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 268673.0,
+        "tickets": 1101,
+        "totalAmount": 268673.0,
+        "totalTickets": 1101,
+        "rate": 0,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 654489.0,
+        "tickets": 2613,
+        "totalAmount": 923162.0,
+        "totalTickets": 3714,
+        "rate": 1.436005850978699,
+        "theaterCount": 15
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 17:01:10"
+}

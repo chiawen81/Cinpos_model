@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "31800",
+    "name": "睡覺的笨蛋",
+    "originalName": "NEMURUBAKA -Hypnic jerks-",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-28",
+    "publisher": "天馬行空數位有限公司",
+    "amountInThisWeek": 311236.0,
+    "totalAmount": 311236.0,
+    "filmClasses": null,
+    "filmLength": 6360,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 115452.0,
+        "tickets": 455,
+        "totalAmount": 115452.0,
+        "totalTickets": 455,
+        "rate": 0,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 32612.0,
+        "tickets": 127,
+        "totalAmount": 148064.0,
+        "totalTickets": 582,
+        "rate": -0.7175276305304369,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 12500.0,
+        "tickets": 58,
+        "totalAmount": 160564.0,
+        "totalTickets": 640,
+        "rate": -0.616705507175273,
+        "theaterCount": 3
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 136032.0,
+        "tickets": 533,
+        "totalAmount": 136032.0,
+        "totalTickets": 533,
+        "rate": 0,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 135379.0,
+        "tickets": 536,
+        "totalAmount": 271411.0,
+        "totalTickets": 1069,
+        "rate": -0.0048003410962126555,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 39825.0,
+        "tickets": 164,
+        "totalAmount": 311236.0,
+        "totalTickets": 1233,
+        "rate": -0.7058258666410595,
+        "theaterCount": 9
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:07"
+}

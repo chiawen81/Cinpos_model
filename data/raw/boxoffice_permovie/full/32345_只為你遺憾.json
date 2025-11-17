@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "32345",
+    "name": "只為你遺憾",
+    "originalName": "REGRETTING YOU",
+    "region": "美國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-31",
+    "publisher": "美商美國派拉蒙影片股份有限公司台灣分公司",
+    "amountInThisWeek": 1674033.0,
+    "totalAmount": 1674033.0,
+    "filmClasses": null,
+    "filmLength": 6900,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 814309.0,
+        "tickets": 3062,
+        "totalAmount": 814309.0,
+        "totalTickets": 3062,
+        "rate": 0,
+        "theaterCount": 79
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 259932.0,
+        "tickets": 929,
+        "totalAmount": 1074241.0,
+        "totalTickets": 3991,
+        "rate": -0.6807943913182833,
+        "theaterCount": 78
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 28574.0,
+        "tickets": 104,
+        "totalAmount": 1102815.0,
+        "totalTickets": 4095,
+        "rate": -0.8900712494036902,
+        "theaterCount": 20
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 814309.0,
+        "tickets": 3062,
+        "totalAmount": 814309.0,
+        "totalTickets": 3062,
+        "rate": 0,
+        "theaterCount": 79
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 690391.0,
+        "tickets": 2631,
+        "totalAmount": 1504700.0,
+        "totalTickets": 5693,
+        "rate": -0.15217564831040797,
+        "theaterCount": 79
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 169333.0,
+        "tickets": 638,
+        "totalAmount": 1674033.0,
+        "totalTickets": 6331,
+        "rate": -0.754728842061962,
+        "theaterCount": 77
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:00"
+}

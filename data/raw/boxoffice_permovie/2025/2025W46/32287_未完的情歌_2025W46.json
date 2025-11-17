@@ -1,0 +1,61 @@
+{
+  "data": {
+    "movieId": "32287",
+    "name": "未完的情歌",
+    "originalName": "LOVE SONG",
+    "region": "日本",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-11-07",
+    "publisher": "仲業股份有限公司",
+    "amountInThisWeek": 529737.0,
+    "totalAmount": 529737.0,
+    "filmClasses": null,
+    "filmLength": 7140,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 312444.0,
+        "tickets": 1203,
+        "totalAmount": 312444.0,
+        "totalTickets": 1203,
+        "rate": 0,
+        "theaterCount": 21
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 90627.0,
+        "tickets": 340,
+        "totalAmount": 403071.0,
+        "totalTickets": 1543,
+        "rate": -0.7099416215385798,
+        "theaterCount": 15
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 312444.0,
+        "tickets": 1203,
+        "totalAmount": 312444.0,
+        "totalTickets": 1203,
+        "rate": 0,
+        "theaterCount": 21
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 217293.0,
+        "tickets": 817,
+        "totalAmount": 529737.0,
+        "totalTickets": 2020,
+        "rate": -0.30453777316895186,
+        "theaterCount": 21
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 17:01:08"
+}

@@ -1,0 +1,169 @@
+{
+  "data": {
+    "movieId": "31761",
+    "name": "新來的小朋友",
+    "originalName": "TUNED IN",
+    "region": "中華民國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-31",
+    "publisher": "藝英國際有限公司",
+    "amountInThisWeek": 186365.0,
+    "totalAmount": 186365.0,
+    "filmClasses": null,
+    "filmLength": 4800,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 29120.0,
+        "tickets": 112,
+        "totalAmount": 29120.0,
+        "totalTickets": 112,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 29120.0,
+        "totalTickets": 112,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 29120.0,
+        "totalTickets": 112,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 35000.0,
+        "tickets": 175,
+        "totalAmount": 64120.0,
+        "totalTickets": 287,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 35000.0,
+        "tickets": 175,
+        "totalAmount": 99120.0,
+        "totalTickets": 462,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 30078.0,
+        "tickets": 137,
+        "totalAmount": 129198.0,
+        "totalTickets": 599,
+        "rate": -0.14062857142857144,
+        "theaterCount": 17
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 16022.0,
+        "tickets": 67,
+        "totalAmount": 145220.0,
+        "totalTickets": 666,
+        "rate": -0.46731830573841343,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 1520.0,
+        "tickets": 6,
+        "totalAmount": 146740.0,
+        "totalTickets": 672,
+        "rate": -0.9051304456372488,
+        "theaterCount": 3
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 29120.0,
+        "tickets": 112,
+        "totalAmount": 29120.0,
+        "totalTickets": 112,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 29120.0,
+        "totalTickets": 112,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 29120.0,
+        "totalTickets": 112,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 35000.0,
+        "tickets": 175,
+        "totalAmount": 64120.0,
+        "totalTickets": 287,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 35000.0,
+        "tickets": 175,
+        "totalAmount": 99120.0,
+        "totalTickets": 462,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 51078.0,
+        "tickets": 227,
+        "totalAmount": 150198.0,
+        "totalTickets": 689,
+        "rate": 0.4593714285714286,
+        "theaterCount": 17
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 31477.0,
+        "tickets": 134,
+        "totalAmount": 181675.0,
+        "totalTickets": 823,
+        "rate": -0.38374642703316497,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 4690.0,
+        "tickets": 21,
+        "totalAmount": 186365.0,
+        "totalTickets": 844,
+        "rate": -0.8510023191536678,
+        "theaterCount": 7
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:43:03"
+}

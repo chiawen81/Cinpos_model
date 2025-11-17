@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "32155",
+    "name": "咒你",
+    "originalName": "THE CURSED: INSATIABLE DESIRES",
+    "region": "韓國",
+    "rating": "限制級",
+    "classes": null,
+    "releaseDate": "2025-10-31",
+    "publisher": "華映國際文創股份有限公司",
+    "amountInThisWeek": 2199382.0,
+    "totalAmount": 2199382.0,
+    "filmClasses": null,
+    "filmLength": 5760,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 1155688.0,
+        "tickets": 4281,
+        "totalAmount": 1155688.0,
+        "totalTickets": 4281,
+        "rate": 0,
+        "theaterCount": 65
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 300371.0,
+        "tickets": 1124,
+        "totalAmount": 1456059.0,
+        "totalTickets": 5405,
+        "rate": -0.7400933469933062,
+        "theaterCount": 54
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 48869.0,
+        "tickets": 184,
+        "totalAmount": 1504928.0,
+        "totalTickets": 5589,
+        "rate": -0.8373045333937031,
+        "theaterCount": 9
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 1155688.0,
+        "tickets": 4281,
+        "totalAmount": 1155688.0,
+        "totalTickets": 4281,
+        "rate": 0,
+        "theaterCount": 65
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 812584.0,
+        "tickets": 3086,
+        "totalAmount": 1968272.0,
+        "totalTickets": 7367,
+        "rate": -0.29688289572964327,
+        "theaterCount": 65
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 231110.0,
+        "tickets": 855,
+        "totalAmount": 2199382.0,
+        "totalTickets": 8222,
+        "rate": -0.7155863270751085,
+        "theaterCount": 53
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:42:58"
+}

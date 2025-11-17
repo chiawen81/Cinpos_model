@@ -1,0 +1,79 @@
+{
+  "data": {
+    "movieId": "32358",
+    "name": "鬼聲泣3",
+    "originalName": "TEE YOD 3",
+    "region": "泰國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-10-31",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 6446296.0,
+    "totalAmount": 6446296.0,
+    "filmClasses": null,
+    "filmLength": 6180,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 2958979.0,
+        "tickets": 11164,
+        "totalAmount": 2958979.0,
+        "totalTickets": 11164,
+        "rate": 0,
+        "theaterCount": 82
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 1134919.0,
+        "tickets": 4207,
+        "totalAmount": 4093898.0,
+        "totalTickets": 15371,
+        "rate": -0.6164491197808434,
+        "theaterCount": 80
+      },
+      {
+        "date": "2025-11-14~2025-11-16",
+        "amount": 502866.0,
+        "tickets": 1863,
+        "totalAmount": 4596764.0,
+        "totalTickets": 17234,
+        "rate": -0.5569146344364664,
+        "theaterCount": 51
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 2958979.0,
+        "tickets": 11164,
+        "totalAmount": 2958979.0,
+        "totalTickets": 11164,
+        "rate": 0,
+        "theaterCount": 82
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 2392671.0,
+        "tickets": 9040,
+        "totalAmount": 5351650.0,
+        "totalTickets": 20204,
+        "rate": -0.191386285607299,
+        "theaterCount": 82
+      },
+      {
+        "date": "2025-11-10~2025-11-16",
+        "amount": 1094646.0,
+        "tickets": 4089,
+        "totalAmount": 6446296.0,
+        "totalTickets": 24293,
+        "rate": -0.5425004106289582,
+        "theaterCount": 80
+      }
+    ]
+  },
+  "success": true,
+  "message": "",
+  "last_crawled_date": "2025-11-17 16:42:56"
+}

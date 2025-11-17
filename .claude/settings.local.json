@@ -18,7 +18,8 @@
       "Bash(git push:*)",
       "Bash(uv remove:*)",
       "Bash(mkdir:*)",
-      "Bash(dir \"C:\\Users\\User\\Desktop\\Projects\\Cinpos_model\\data\\raw\\boxoffice_permovie\\2025\" /B)"
+      "Bash(dir \"C:\\Users\\User\\Desktop\\Projects\\Cinpos_model\\data\\raw\\boxoffice_permovie\\2025\" /B)",
+      "Bash(timeout 30 bash:*)"
     ],
     "deny": [],
     "ask": []

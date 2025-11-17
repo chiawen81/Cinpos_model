@@ -5,7 +5,8 @@
 
 import os
 import argparse
-import requests
+import cloudscraper
+import time
 from common.date_utils import (
     get_last_week_range,
     get_week_label,
@@ -44,10 +45,31 @@ def fetch_boxoffice_json(reference_date: date | None = None):
         "region": "all",
     }
 
+    # 使用 cloudscraper 來繞過 Cloudflare 保護
+    scraper = cloudscraper.create_scraper(
+        browser={
+            'browser': 'chrome',
+            'platform': 'windows',
+            'desktop': True
+        }
+    )
+
+    print("正在取得票房資料...")
+
     # 取得每周資料
-    response = requests.get(BASE_URL, params=params)
+    response = scraper.get(BASE_URL, params=params, timeout=30)
     response.encoding = "utf-8"
-    data = response.json()
+
+    # 檢查回應是否為 JSON
+    try:
+        data = response.json()
+    except Exception as e:
+        print(f"\n[ERROR] API 回應不是有效的 JSON")
+        print(f"狀態碼: {response.status_code}")
+        print(f"回應內容前 500 字元:\n{response.text[:500]}")
+        if "cloudflare" in response.text.lower():
+            print("\n[WARNING] 請求被 Cloudflare 阻擋，請稍後再試或檢查網路連線")
+        raise
     # print("data",data)
 
     # 設定儲存的檔名

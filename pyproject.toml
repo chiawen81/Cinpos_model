@@ -27,6 +27,7 @@ dependencies = [
     "plotly>=5.18.0",
     "python-dotenv>=1.0.0",
     "flask-cors>=4.0.0",
+    "cloudscraper>=1.2.71",
 ]
 
 # 建置設定

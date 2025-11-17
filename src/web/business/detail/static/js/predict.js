@@ -98,9 +98,7 @@ function showSearchResults(results) {
         item.className = 'search-result-item';
         item.innerHTML = `
             <div class="search-result-title">${movie.name}</div>
-            <div class="search-result-meta">
-                ${movie.originalName} | 上映日期: ${movie.releaseDate}
-            </div>
+            <div class="search-result-meta">上映日期: ${movie.releaseDate}</div>
         `;
 
         item.addEventListener('click', () => selectMovie(movie));
@@ -120,6 +118,7 @@ function showNoResults() {
     searchDropdown.style.display = 'block';
 }
 
+// user選定電影
 async function selectMovie(movie) {
     currentSelectedMovie = movie;
 
@@ -204,20 +203,9 @@ function updateMovieBasicInfo(movie, movieDetail) {
     // 首週相關指標初始顯示為 "-"，等待資料清洗後由 recalculateFirstWeekMetrics() 更新
     // 這樣可以確保顯示的是清洗後的真實週次第一週的資料
     movieBasicInfo.innerHTML = `
-        <div class="display-flex justify-start items-center"><strong>上映日期：</strong>${movie.releaseDate || '-'} | 片長：</strong>${filmLength} 分鐘 | 分級：</strong>${rating}</div>
-        <div class="display-flex justify-start items-center"><strong>首週放映天數：</strong>- | <strong>首週票房：</strong>- | 首週日均票房：</strong>-</div>
+        <div class="display-flex justify-start items-center"><strong>上映日期：</strong>${movie.releaseDate || '-'}<span style="margin: 0 5px;">|</span><strong>片長：</strong>${filmLength} 分鐘<span style="margin: 0 5px;">|</span><strong>分級：</strong>${rating}</div>
+        <div class="display-flex justify-start items-center"><strong>首週放映天數：</strong><span class="first-week-days">-</span><span style="margin: 0 5px;">|</span><strong>首週票房：</strong><span class="first-week-boxoffice">-</span><span style="margin: 0 5px;">|</span><strong>首週日均票房：</strong><span class="first-week-daily-avg">-</span></div>
     `;
-
-    //     movieBasicInfo.innerHTML = `
-    //     <span><strong>電影 ID：</strong>${movieId}｜</span>
-    //     <span><strong>原文片名：</strong>${movie.originalName || '-'}｜</span>
-    //     <span><strong>上映日期：</strong>${movie.releaseDate || '-'}</span>
-    //     <div><strong>片長：</strong>${filmLength} 分鐘</div>
-    //     <div><strong>分級：</strong>${rating}</div>
-    //     <div><strong>首週放映天數：</strong>-</div>
-    //     <div><strong>首週票房：</strong>-</div>
-    //     <div><strong>首週日均票房：</strong>-</div>
-    // `;
 }
 
 // 重新計算首週指標（用於資料清洗後）
@@ -269,9 +257,9 @@ function recalculateFirstWeekMetrics(cleanedData) {
     // 更新顯示中的首週指標
     const currentHTML = movieBasicInfo.innerHTML;
     const updatedHTML = currentHTML
-        .replace(/(<div><strong>首週放映天數：<\/strong>).*?(<\/div>)/, `$1${firstWeekDays} 天$2`)
-        .replace(/(<div><strong>首週票房：<\/strong>).*?(<\/div>)/, `$1${firstWeekBoxoffice}$2`)
-        .replace(/(<div><strong>首週日均票房：<\/strong>).*?(<\/div>)/, `$1${firstWeekDailyAvg}$2`);
+        .replace(/(<span class="first-week-days">).*?(<\/span>)/, `$1${firstWeekDays} 天$2`)
+        .replace(/(<span class="first-week-boxoffice">).*?(<\/span>)/, `$1${firstWeekBoxoffice}$2`)
+        .replace(/(<span class="first-week-daily-avg">).*?(<\/span>)/, `$1${firstWeekDailyAvg}$2`);
 
     movieBasicInfo.innerHTML = updatedHTML;
 }

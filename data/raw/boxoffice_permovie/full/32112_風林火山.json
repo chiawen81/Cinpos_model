@@ -1,0 +1,157 @@
+{
+  "data": {
+    "movieId": "32112",
+    "name": "風林火山",
+    "originalName": "Sons of the Neon Night",
+    "region": "香港",
+    "rating": "限制級",
+    "classes": null,
+    "releaseDate": "2025-10-09",
+    "publisher": "壹壹喜喜電影股份有限公司",
+    "amountInThisWeek": 11606941.0,
+    "totalAmount": 11606941.0,
+    "filmClasses": null,
+    "filmLength": 7500,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 10734,
+        "typeName": "演員",
+        "name": "梁家輝",
+        "originalName": "Tony Ka Fai Leung"
+      },
+      {
+        "id": 12718,
+        "typeName": "演員",
+        "name": "劉青雲",
+        "originalName": "Ching Wan Lau"
+      },
+      {
+        "id": 82531,
+        "typeName": "演員",
+        "name": "高圓圓",
+        "originalName": "Yuanyuan Gao"
+      },
+      {
+        "id": 82533,
+        "typeName": "導演",
+        "name": "麥浚龍",
+        "originalName": "Juno Mak"
+      },
+      {
+        "id": 12576,
+        "typeName": "演員",
+        "name": "古天樂",
+        "originalName": "Louis Koo"
+      },
+      {
+        "id": 82533,
+        "typeName": "編劇",
+        "name": "麥浚龍",
+        "originalName": "Juno Mak"
+      },
+      {
+        "id": 15360,
+        "typeName": "演員",
+        "name": "金城武",
+        "originalName": "Takeshi Kaneshiro"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 4456372.0,
+        "tickets": 16884,
+        "totalAmount": 4456372.0,
+        "totalTickets": 16884,
+        "rate": 0,
+        "theaterCount": 82
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 1462658.0,
+        "tickets": 5476,
+        "totalAmount": 5919030.0,
+        "totalTickets": 22360,
+        "rate": -0.671782786535774,
+        "theaterCount": 83
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 879966.0,
+        "tickets": 3112,
+        "totalAmount": 6798996.0,
+        "totalTickets": 25472,
+        "rate": -0.3983788418071757,
+        "theaterCount": 74
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 185643.0,
+        "tickets": 686,
+        "totalAmount": 6984639.0,
+        "totalTickets": 26158,
+        "rate": -0.7890338944913781,
+        "theaterCount": 33
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 48723.0,
+        "tickets": 177,
+        "totalAmount": 7033362.0,
+        "totalTickets": 26335,
+        "rate": -0.7375446421357121,
+        "theaterCount": 15
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 5558047.0,
+        "tickets": 21167,
+        "totalAmount": 5558047.0,
+        "totalTickets": 21167,
+        "rate": 0,
+        "theaterCount": 82
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 3555285.0,
+        "tickets": 13616,
+        "totalAmount": 9113332.0,
+        "totalTickets": 34783,
+        "rate": -0.3603355639130076,
+        "theaterCount": 83
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 1735087.0,
+        "tickets": 6358,
+        "totalAmount": 10848419.0,
+        "totalTickets": 41141,
+        "rate": -0.5119696451901887,
+        "theaterCount": 83
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 594779.0,
+        "tickets": 2270,
+        "totalAmount": 11443198.0,
+        "totalTickets": 43411,
+        "rate": -0.6572050853934126,
+        "theaterCount": 74
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 163743.0,
+        "tickets": 604,
+        "totalAmount": 11606941.0,
+        "totalTickets": 44015,
+        "rate": -0.724699426173419,
+        "theaterCount": 32
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

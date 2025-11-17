@@ -1,0 +1,139 @@
+{
+  "data": {
+    "movieId": "31805",
+    "name": "阿蒙怎麼了？",
+    "originalName": "Armand",
+    "region": "挪威",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-09-19",
+    "publisher": "好威映象有限公司",
+    "amountInThisWeek": 100968.0,
+    "totalAmount": 100968.0,
+    "filmClasses": null,
+    "filmLength": 7020,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 22723,
+        "typeName": "演員",
+        "name": "艾倫多莉彼得森",
+        "originalName": "Ellen Dorrit Petersen"
+      },
+      {
+        "id": 82445,
+        "typeName": "導演",
+        "name": "哈爾夫登烏曼通德爾",
+        "originalName": "Halfdan Ullmann Tondel"
+      },
+      {
+        "id": 81904,
+        "typeName": "演員",
+        "name": "蕾娜特萊茵斯薇",
+        "originalName": "Renate Reinsve"
+      },
+      {
+        "id": 82451,
+        "typeName": "演員",
+        "name": "恩卓海勒斯魏特",
+        "originalName": "Endre Hellestveit"
+      },
+      {
+        "id": 82452,
+        "typeName": "演員",
+        "name": "西婭蘭布雷希茨沃倫",
+        "originalName": "Thea Lambrechts Vaulen"
+      },
+      {
+        "id": 82453,
+        "typeName": "演員",
+        "name": "奧伊斯坦羅格",
+        "originalName": "Oystein Roger"
+      },
+      {
+        "id": 82445,
+        "typeName": "編劇",
+        "name": "哈爾夫登烏曼通德爾",
+        "originalName": "Halfdan Ullmann Tondel"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": 46103.0,
+        "tickets": 194,
+        "totalAmount": 46103.0,
+        "totalTickets": 194,
+        "rate": 0,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 9335.0,
+        "tickets": 43,
+        "totalAmount": 55438.0,
+        "totalTickets": 237,
+        "rate": -0.7975185996572891,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 260.0,
+        "tickets": 1,
+        "totalAmount": 55698.0,
+        "totalTickets": 238,
+        "rate": -0.9721478307445099,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 55698.0,
+        "totalTickets": 238,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 46103.0,
+        "tickets": 194,
+        "totalAmount": 46103.0,
+        "totalTickets": 194,
+        "rate": 0,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 41940.0,
+        "tickets": 189,
+        "totalAmount": 88043.0,
+        "totalTickets": 383,
+        "rate": -0.09029781142225018,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 12605.0,
+        "tickets": 61,
+        "totalAmount": 100648.0,
+        "totalTickets": 444,
+        "rate": -0.6994515975202671,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 320.0,
+        "tickets": 2,
+        "totalAmount": 100968.0,
+        "totalTickets": 446,
+        "rate": -0.974613248710829,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -1,0 +1,199 @@
+{
+  "data": {
+    "movieId": "29696",
+    "name": "青春（苦）",
+    "originalName": "Youth (Hard Times)",
+    "region": "法國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-07-19",
+    "publisher": "前景娛樂有限公司",
+    "amountInThisWeek": 64900.0,
+    "totalAmount": 64900.0,
+    "filmClasses": null,
+    "filmLength": 13560,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 79040,
+        "typeName": "導演",
+        "name": "王兵",
+        "originalName": "Bing Wang"
+      },
+      {
+        "id": 79040,
+        "typeName": "編劇",
+        "name": "王兵",
+        "originalName": "Bing Wang"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-07-18~2025-07-20",
+        "amount": 19330.0,
+        "tickets": 77,
+        "totalAmount": 19330.0,
+        "totalTickets": 77,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-07-25~2025-07-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 19330.0,
+        "totalTickets": 77,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-01~2025-08-03",
+        "amount": 16445.0,
+        "tickets": 68,
+        "totalAmount": 35775.0,
+        "totalTickets": 145,
+        "rate": 0,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-08-08~2025-08-10",
+        "amount": 11660.0,
+        "tickets": 45,
+        "totalAmount": 47435.0,
+        "totalTickets": 190,
+        "rate": -0.2909698996655518,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 47435.0,
+        "totalTickets": 190,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 47435.0,
+        "totalTickets": 190,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 47435.0,
+        "totalTickets": 190,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 47435.0,
+        "totalTickets": 190,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 230.0,
+        "tickets": 1,
+        "totalAmount": 47665.0,
+        "totalTickets": 191,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-07-14~2025-07-20",
+        "amount": 19330.0,
+        "tickets": 77,
+        "totalAmount": 19330.0,
+        "totalTickets": 77,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-07-21~2025-07-27",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 19330.0,
+        "totalTickets": 77,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-07-28~2025-08-03",
+        "amount": 16445.0,
+        "tickets": 68,
+        "totalAmount": 35775.0,
+        "totalTickets": 145,
+        "rate": 0,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-08-04~2025-08-10",
+        "amount": 26465.0,
+        "tickets": 102,
+        "totalAmount": 62240.0,
+        "totalTickets": 247,
+        "rate": 0.6093037397385224,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 2430.0,
+        "tickets": 9,
+        "totalAmount": 64670.0,
+        "totalTickets": 256,
+        "rate": -0.9081806159078027,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 64670.0,
+        "totalTickets": 256,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 64670.0,
+        "totalTickets": 256,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 64670.0,
+        "totalTickets": 256,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 230.0,
+        "tickets": 1,
+        "totalAmount": 64900.0,
+        "totalTickets": 257,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

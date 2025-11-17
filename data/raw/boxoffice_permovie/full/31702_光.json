@@ -1,0 +1,96 @@
+{
+  "data": {
+    "movieId": "31702",
+    "name": "光",
+    "originalName": "The light",
+    "region": "德國",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-10-03",
+    "publisher": "聯影企業股份有限公司",
+    "amountInThisWeek": 137277.0,
+    "totalAmount": 137277.0,
+    "filmClasses": null,
+    "filmLength": 9720,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 56676.0,
+        "tickets": 241,
+        "totalAmount": 56676.0,
+        "totalTickets": 241,
+        "rate": 0,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 4640.0,
+        "tickets": 18,
+        "totalAmount": 61316.0,
+        "totalTickets": 259,
+        "rate": -0.9181311313430729,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 1405.0,
+        "tickets": 6,
+        "totalAmount": 62721.0,
+        "totalTickets": 265,
+        "rate": -0.697198275862069,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 62721.0,
+        "totalTickets": 265,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 56676.0,
+        "tickets": 241,
+        "totalAmount": 56676.0,
+        "totalTickets": 241,
+        "rate": 0,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 59615.0,
+        "tickets": 252,
+        "totalAmount": 116291.0,
+        "totalTickets": 493,
+        "rate": 0.05185616486696309,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 20576.0,
+        "tickets": 89,
+        "totalAmount": 136867.0,
+        "totalTickets": 582,
+        "rate": -0.6548519667868825,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 410.0,
+        "tickets": 2,
+        "totalAmount": 137277.0,
+        "totalTickets": 584,
+        "rate": -0.9800738724727839,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

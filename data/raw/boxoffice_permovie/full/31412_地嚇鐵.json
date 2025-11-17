@@ -1,0 +1,139 @@
+{
+  "data": {
+    "movieId": "31412",
+    "name": "地嚇鐵",
+    "originalName": "Ghost Train",
+    "region": "韓國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-08-01",
+    "publisher": "英屬維京群島商高捷全球開發有限公司 台灣分公司",
+    "amountInThisWeek": 3401159.0,
+    "totalAmount": 3401159.0,
+    "filmClasses": null,
+    "filmLength": 5640,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82325,
+        "typeName": "演員",
+        "name": "崔普閔",
+        "originalName": "Choi Bo-min"
+      },
+      {
+        "id": 82326,
+        "typeName": "導演",
+        "name": "卓世雄",
+        "originalName": "Se-woong Tak"
+      },
+      {
+        "id": 82327,
+        "typeName": "演員",
+        "name": "全裴修",
+        "originalName": "Jeon Bae-soo"
+      },
+      {
+        "id": 82328,
+        "typeName": "演員",
+        "name": "朱賢英",
+        "originalName": "Joo Hyun-young"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-01~2025-08-03",
+        "amount": 1389495.0,
+        "tickets": 5254,
+        "totalAmount": 1389495.0,
+        "totalTickets": 5254,
+        "rate": 0,
+        "theaterCount": 45
+      },
+      {
+        "date": "2025-08-08~2025-08-10",
+        "amount": 474669.0,
+        "tickets": 1797,
+        "totalAmount": 1864164.0,
+        "totalTickets": 7051,
+        "rate": -0.658387399738754,
+        "theaterCount": 41
+      },
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 90177.0,
+        "tickets": 353,
+        "totalAmount": 1954341.0,
+        "totalTickets": 7404,
+        "rate": -0.810021299052603,
+        "theaterCount": 20
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 760.0,
+        "tickets": 2,
+        "totalAmount": 1955101.0,
+        "totalTickets": 7406,
+        "rate": -0.991572130365836,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 1955101.0,
+        "totalTickets": 7406,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-07-28~2025-08-03",
+        "amount": 1389495.0,
+        "tickets": 5254,
+        "totalAmount": 1389495.0,
+        "totalTickets": 5254,
+        "rate": 0,
+        "theaterCount": 45
+      },
+      {
+        "date": "2025-08-04~2025-08-10",
+        "amount": 1506782.0,
+        "tickets": 5706,
+        "totalAmount": 2896277.0,
+        "totalTickets": 10960,
+        "rate": 0.08440980356172566,
+        "theaterCount": 45
+      },
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 438190.0,
+        "tickets": 1673,
+        "totalAmount": 3334467.0,
+        "totalTickets": 12633,
+        "rate": -0.7091881904615266,
+        "theaterCount": 41
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 65962.0,
+        "tickets": 253,
+        "totalAmount": 3400429.0,
+        "totalTickets": 12886,
+        "rate": -0.8494671261324996,
+        "theaterCount": 20
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 730.0,
+        "tickets": 3,
+        "totalAmount": 3401159.0,
+        "totalTickets": 12889,
+        "rate": -0.9889330220429945,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

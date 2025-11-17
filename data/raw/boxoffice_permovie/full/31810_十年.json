@@ -1,0 +1,78 @@
+{
+  "data": {
+    "movieId": "31810",
+    "name": "十年",
+    "originalName": "TEN YEARS",
+    "region": "香港",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-10",
+    "publisher": "佳映娛樂國際股份有限公司",
+    "amountInThisWeek": 73393.0,
+    "totalAmount": 73393.0,
+    "filmClasses": null,
+    "filmLength": 6240,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 52580.0,
+        "tickets": 213,
+        "totalAmount": 52580.0,
+        "totalTickets": 213,
+        "rate": 0,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 52580.0,
+        "totalTickets": 213,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 18043.0,
+        "tickets": 64,
+        "totalAmount": 70623.0,
+        "totalTickets": 277,
+        "rate": 0,
+        "theaterCount": 9
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 52580.0,
+        "tickets": 213,
+        "totalAmount": 52580.0,
+        "totalTickets": 213,
+        "rate": 0,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 52580.0,
+        "totalTickets": 213,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 20813.0,
+        "tickets": 73,
+        "totalAmount": 73393.0,
+        "totalTickets": 286,
+        "rate": 0,
+        "theaterCount": 9
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

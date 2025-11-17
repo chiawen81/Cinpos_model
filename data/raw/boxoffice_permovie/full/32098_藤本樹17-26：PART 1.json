@@ -1,0 +1,78 @@
+{
+  "data": {
+    "movieId": "32098",
+    "name": "藤本樹17-26：PART 1",
+    "originalName": "Tatsuki Fujimoto 17‐21",
+    "region": "日本",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-13",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 4392556.0,
+    "totalAmount": 4392556.0,
+    "filmClasses": null,
+    "filmLength": 4020,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 1652156.0,
+        "tickets": 5610,
+        "totalAmount": 1652156.0,
+        "totalTickets": 5610,
+        "rate": 0,
+        "theaterCount": 20
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 1126531.0,
+        "tickets": 3801,
+        "totalAmount": 2778687.0,
+        "totalTickets": 9411,
+        "rate": -0.3181448967288803,
+        "theaterCount": 20
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 2778687.0,
+        "totalTickets": 9411,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 1785096.0,
+        "tickets": 6188,
+        "totalAmount": 1785096.0,
+        "totalTickets": 6188,
+        "rate": 0,
+        "theaterCount": 20
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 1916841.0,
+        "tickets": 6621,
+        "totalAmount": 3701937.0,
+        "totalTickets": 12809,
+        "rate": 0.07380275346535985,
+        "theaterCount": 20
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 690619.0,
+        "tickets": 2502,
+        "totalAmount": 4392556.0,
+        "totalTickets": 15311,
+        "rate": -0.6397098142203761,
+        "theaterCount": 20
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

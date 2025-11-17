@@ -1,0 +1,157 @@
+{
+  "data": {
+    "movieId": "31122",
+    "name": "關於夢（性與愛）",
+    "originalName": "DREAMS",
+    "region": "挪威",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-07-25",
+    "publisher": "燕翼企業有限公司",
+    "amountInThisWeek": 511494.0,
+    "totalAmount": 511494.0,
+    "filmClasses": null,
+    "filmLength": 6600,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82251,
+        "typeName": "導演",
+        "name": "達格約翰豪格魯德",
+        "originalName": "Dag Johan Haugerud"
+      },
+      {
+        "id": 82251,
+        "typeName": "編劇",
+        "name": "達格約翰豪格魯德",
+        "originalName": "Dag Johan Haugerud"
+      },
+      {
+        "id": 82310,
+        "typeName": "演員",
+        "name": "艾拉奧弗伯耶",
+        "originalName": "Ella Overbye"
+      },
+      {
+        "id": 82311,
+        "typeName": "演員",
+        "name": "塞洛姆厄姆尼圖",
+        "originalName": "Selome Emnetu"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-07-25~2025-07-27",
+        "amount": 140490.0,
+        "tickets": 614,
+        "totalAmount": 140490.0,
+        "totalTickets": 614,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-08-01~2025-08-03",
+        "amount": 55565.0,
+        "tickets": 245,
+        "totalAmount": 196055.0,
+        "totalTickets": 859,
+        "rate": -0.6044914228770731,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-08-08~2025-08-10",
+        "amount": 12170.0,
+        "tickets": 53,
+        "totalAmount": 208225.0,
+        "totalTickets": 912,
+        "rate": -0.7809772338702421,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 19855.0,
+        "tickets": 88,
+        "totalAmount": 228080.0,
+        "totalTickets": 1000,
+        "rate": 0.6314708299096138,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 3300.0,
+        "tickets": 15,
+        "totalAmount": 231380.0,
+        "totalTickets": 1015,
+        "rate": -0.8337950138504155,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 231380.0,
+        "totalTickets": 1015,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-07-21~2025-07-27",
+        "amount": 140490.0,
+        "tickets": 614,
+        "totalAmount": 140490.0,
+        "totalTickets": 614,
+        "rate": 0,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-07-28~2025-08-03",
+        "amount": 198284.0,
+        "tickets": 885,
+        "totalAmount": 338774.0,
+        "totalTickets": 1499,
+        "rate": 0.41137447505160507,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-08-04~2025-08-10",
+        "amount": 81190.0,
+        "tickets": 360,
+        "totalAmount": 419964.0,
+        "totalTickets": 1859,
+        "rate": -0.59053680579371,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 56845.0,
+        "tickets": 255,
+        "totalAmount": 476809.0,
+        "totalTickets": 2114,
+        "rate": -0.29985219854661904,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 20690.0,
+        "tickets": 91,
+        "totalAmount": 497499.0,
+        "totalTickets": 2205,
+        "rate": -0.6360277948808163,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 13995.0,
+        "tickets": 61,
+        "totalAmount": 511494.0,
+        "totalTickets": 2266,
+        "rate": -0.3235862735621073,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

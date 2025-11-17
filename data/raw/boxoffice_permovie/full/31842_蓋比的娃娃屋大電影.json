@@ -1,0 +1,175 @@
+{
+  "data": {
+    "movieId": "31842",
+    "name": "蓋比的娃娃屋大電影",
+    "originalName": "GABBY'S DOLLHOUSE: THE MOVIE",
+    "region": "美國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-03",
+    "publisher": "美商美國環球影片股份有限公司台灣分公司",
+    "amountInThisWeek": 2466449.0,
+    "totalAmount": 2466449.0,
+    "filmClasses": null,
+    "filmLength": 5880,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82508,
+        "typeName": "演員",
+        "name": "瑪吉洛",
+        "originalName": "Maggie Lowe"
+      },
+      {
+        "id": 82509,
+        "typeName": "演員",
+        "name": "茱莉葉多南費爾德",
+        "originalName": "Juliet Donenfeld"
+      },
+      {
+        "id": 82513,
+        "typeName": "演員",
+        "name": "多諾萬巴頓",
+        "originalName": "Donovan Patton"
+      },
+      {
+        "id": 10607,
+        "typeName": "演員",
+        "name": "克莉絲汀薇格",
+        "originalName": "Kristen Wiig"
+      },
+      {
+        "id": 82517,
+        "typeName": "演員",
+        "name": "艾德華度法蘭科",
+        "originalName": "Eduardo Franco"
+      },
+      {
+        "id": 82518,
+        "typeName": "導演",
+        "name": "萊恩克雷戈",
+        "originalName": "Ryan Crego"
+      },
+      {
+        "id": 82524,
+        "typeName": "演員",
+        "name": "萊拉洛克哈特克雷納",
+        "originalName": "Laila Lockhart Kraner"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 797747.0,
+        "tickets": 2913,
+        "totalAmount": 797747.0,
+        "totalTickets": 2913,
+        "rate": 0,
+        "theaterCount": 75
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 751421.0,
+        "tickets": 2812,
+        "totalAmount": 1549168.0,
+        "totalTickets": 5725,
+        "rate": -0.058071042573648035,
+        "theaterCount": 72
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 192999.0,
+        "tickets": 719,
+        "totalAmount": 1742167.0,
+        "totalTickets": 6444,
+        "rate": -0.7431546363489975,
+        "theaterCount": 44
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 85814.0,
+        "tickets": 254,
+        "totalAmount": 1827981.0,
+        "totalTickets": 6698,
+        "rate": -0.5553655718423411,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 49436.0,
+        "tickets": 181,
+        "totalAmount": 1877417.0,
+        "totalTickets": 6879,
+        "rate": -0.42391684340550495,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 3150.0,
+        "tickets": 13,
+        "totalAmount": 1880567.0,
+        "totalTickets": 6892,
+        "rate": -0.9362812525285217,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 797747.0,
+        "tickets": 2913,
+        "totalAmount": 797747.0,
+        "totalTickets": 2913,
+        "rate": 0,
+        "theaterCount": 75
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 1228374.0,
+        "tickets": 4626,
+        "totalAmount": 2026121.0,
+        "totalTickets": 7539,
+        "rate": 0.5398039729387889,
+        "theaterCount": 75
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 250288.0,
+        "tickets": 945,
+        "totalAmount": 2276409.0,
+        "totalTickets": 8484,
+        "rate": -0.7962444662619039,
+        "theaterCount": 70
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 131759.0,
+        "tickets": 445,
+        "totalAmount": 2408168.0,
+        "totalTickets": 8929,
+        "rate": -0.4735704468452343,
+        "theaterCount": 39
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 54421.0,
+        "tickets": 195,
+        "totalAmount": 2462589.0,
+        "totalTickets": 9124,
+        "rate": -0.5869655962780531,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 3860.0,
+        "tickets": 16,
+        "totalAmount": 2466449.0,
+        "totalTickets": 9140,
+        "rate": -0.9290714981349112,
+        "theaterCount": 4
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

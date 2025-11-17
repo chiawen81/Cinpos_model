@@ -1,0 +1,42 @@
+{
+  "data": {
+    "movieId": "32086",
+    "name": "有用的鬼",
+    "originalName": "A Useful Ghost",
+    "region": "泰國",
+    "rating": "限制級",
+    "classes": null,
+    "releaseDate": "2025-10-12",
+    "publisher": "傳影互動股份有限公司",
+    "amountInThisWeek": 85275.0,
+    "totalAmount": 85275.0,
+    "filmClasses": null,
+    "filmLength": 7800,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 85275.0,
+        "tickets": 195,
+        "totalAmount": 85275.0,
+        "totalTickets": 195,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 85275.0,
+        "tickets": 195,
+        "totalAmount": 85275.0,
+        "totalTickets": 195,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -1,0 +1,96 @@
+{
+  "data": {
+    "movieId": "31565",
+    "name": "6DAYS",
+    "originalName": "6DAYS",
+    "region": "韓國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-08-22",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 3036046.0,
+    "totalAmount": 3036046.0,
+    "filmClasses": null,
+    "filmLength": 4800,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 2198851.0,
+        "tickets": 3498,
+        "totalAmount": 2198851.0,
+        "totalTickets": 3498,
+        "rate": 0,
+        "theaterCount": 30
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 155864.0,
+        "tickets": 304,
+        "totalAmount": 2354715.0,
+        "totalTickets": 3802,
+        "rate": -0.9291157063393564,
+        "theaterCount": 21
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 25070.0,
+        "tickets": 56,
+        "totalAmount": 2379785.0,
+        "totalTickets": 3858,
+        "rate": -0.8391546476415337,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 4655.0,
+        "tickets": 17,
+        "totalAmount": 2384440.0,
+        "totalTickets": 3875,
+        "rate": -0.8143199042680495,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 2198851.0,
+        "tickets": 3498,
+        "totalAmount": 2198851.0,
+        "totalTickets": 3498,
+        "rate": 0,
+        "theaterCount": 30
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 714473.0,
+        "tickets": 1240,
+        "totalAmount": 2913324.0,
+        "totalTickets": 4738,
+        "rate": -0.6750698432954302,
+        "theaterCount": 30
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 89662.0,
+        "tickets": 184,
+        "totalAmount": 3002986.0,
+        "totalTickets": 4922,
+        "rate": -0.8745061044994002,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 33060.0,
+        "tickets": 74,
+        "totalAmount": 3036046.0,
+        "totalTickets": 4996,
+        "rate": -0.6312819254533694,
+        "theaterCount": 3
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

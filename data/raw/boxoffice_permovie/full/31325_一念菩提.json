@@ -1,0 +1,151 @@
+{
+  "data": {
+    "movieId": "31325",
+    "name": "一念菩提",
+    "originalName": "The Seed of the Sacred Fig",
+    "region": "伊朗",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-08-01",
+    "publisher": "好威映象有限公司",
+    "amountInThisWeek": 536960.0,
+    "totalAmount": 536960.0,
+    "filmClasses": null,
+    "filmLength": 9960,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 38801,
+        "typeName": "導演",
+        "name": "穆罕默德拉素羅夫",
+        "originalName": "Mohammad Rasoulof"
+      },
+      {
+        "id": 38801,
+        "typeName": "編劇",
+        "name": "穆罕默德拉素羅夫",
+        "originalName": "Mohammad Rasoulof"
+      },
+      {
+        "id": 82319,
+        "typeName": "演員",
+        "name": "馬哈薩羅斯塔米",
+        "originalName": "Mahsa Rostami"
+      },
+      {
+        "id": 82320,
+        "typeName": "演員",
+        "name": "米薩查瑞赫",
+        "originalName": "Missagh Zareh"
+      },
+      {
+        "id": 82321,
+        "typeName": "演員",
+        "name": "賽塔蕾馬勒基",
+        "originalName": "Setareh Maleki"
+      },
+      {
+        "id": 82322,
+        "typeName": "演員",
+        "name": "索海拉戈萊斯塔尼",
+        "originalName": "Soheila Golestani"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-01~2025-08-03",
+        "amount": 188803.0,
+        "tickets": 735,
+        "totalAmount": 188803.0,
+        "totalTickets": 735,
+        "rate": 0,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-08-08~2025-08-10",
+        "amount": 52880.0,
+        "tickets": 213,
+        "totalAmount": 241683.0,
+        "totalTickets": 948,
+        "rate": -0.7199197046657098,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 20990.0,
+        "tickets": 90,
+        "totalAmount": 262673.0,
+        "totalTickets": 1038,
+        "rate": -0.6030635400907716,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 1590.0,
+        "tickets": 7,
+        "totalAmount": 264263.0,
+        "totalTickets": 1045,
+        "rate": -0.9242496426869938,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 264263.0,
+        "totalTickets": 1045,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-07-28~2025-08-03",
+        "amount": 188803.0,
+        "tickets": 735,
+        "totalAmount": 188803.0,
+        "totalTickets": 735,
+        "rate": 0,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-08-04~2025-08-10",
+        "amount": 225927.0,
+        "tickets": 902,
+        "totalAmount": 414730.0,
+        "totalTickets": 1637,
+        "rate": 0.196628231542931,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 83445.0,
+        "tickets": 364,
+        "totalAmount": 498175.0,
+        "totalTickets": 2001,
+        "rate": -0.6306550345908192,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 16720.0,
+        "tickets": 72,
+        "totalAmount": 514895.0,
+        "totalTickets": 2073,
+        "rate": -0.7996284978129307,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 22065.0,
+        "tickets": 89,
+        "totalAmount": 536960.0,
+        "totalTickets": 2162,
+        "rate": 0.31967703349282295,
+        "theaterCount": 2
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

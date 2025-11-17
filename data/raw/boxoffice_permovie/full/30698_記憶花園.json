@@ -1,0 +1,247 @@
+{
+  "data": {
+    "movieId": "30698",
+    "name": "記憶花園",
+    "originalName": "Garden of Remembrance",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-06-27",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 125120.0,
+    "totalAmount": 125120.0,
+    "filmClasses": null,
+    "filmLength": 1020,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 16675,
+        "typeName": "導演",
+        "name": "山田尚子",
+        "originalName": "Naoko Yamada"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-06-27~2025-06-29",
+        "amount": 43920.0,
+        "tickets": 288,
+        "totalAmount": 43920.0,
+        "totalTickets": 288,
+        "rate": 0,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-07-04~2025-07-06",
+        "amount": 16160.0,
+        "tickets": 101,
+        "totalAmount": 60080.0,
+        "totalTickets": 389,
+        "rate": -0.6320582877959927,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-07-11~2025-07-13",
+        "amount": 6880.0,
+        "tickets": 43,
+        "totalAmount": 66960.0,
+        "totalTickets": 432,
+        "rate": -0.5742574257425742,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-07-18~2025-07-20",
+        "amount": 2720.0,
+        "tickets": 17,
+        "totalAmount": 69680.0,
+        "totalTickets": 449,
+        "rate": -0.6046511627906976,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-07-25~2025-07-27",
+        "amount": 1200.0,
+        "tickets": 8,
+        "totalAmount": 70880.0,
+        "totalTickets": 457,
+        "rate": -0.5588235294117647,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-08-01~2025-08-03",
+        "amount": 160.0,
+        "tickets": 1,
+        "totalAmount": 71040.0,
+        "totalTickets": 458,
+        "rate": -0.8666666666666667,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-08~2025-08-10",
+        "amount": 160.0,
+        "tickets": 1,
+        "totalAmount": 71200.0,
+        "totalTickets": 459,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 71200.0,
+        "totalTickets": 459,
+        "rate": -1,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 71200.0,
+        "totalTickets": 459,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 71200.0,
+        "totalTickets": 459,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 71200.0,
+        "totalTickets": 459,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 71200.0,
+        "totalTickets": 459,
+        "rate": 0,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-06-23~2025-06-29",
+        "amount": 43920.0,
+        "tickets": 288,
+        "totalAmount": 43920.0,
+        "totalTickets": 288,
+        "rate": 0,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-06-30~2025-07-06",
+        "amount": 49280.0,
+        "tickets": 317,
+        "totalAmount": 93200.0,
+        "totalTickets": 605,
+        "rate": 0.122040072859745,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-07-07~2025-07-13",
+        "amount": 16640.0,
+        "tickets": 107,
+        "totalAmount": 109840.0,
+        "totalTickets": 712,
+        "rate": -0.6623376623376623,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-07-14~2025-07-20",
+        "amount": 9360.0,
+        "tickets": 60,
+        "totalAmount": 119200.0,
+        "totalTickets": 772,
+        "rate": -0.4375,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-07-21~2025-07-27",
+        "amount": 3920.0,
+        "tickets": 25,
+        "totalAmount": 123120.0,
+        "totalTickets": 797,
+        "rate": -0.5811965811965812,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-07-28~2025-08-03",
+        "amount": 1520.0,
+        "tickets": 12,
+        "totalAmount": 124640.0,
+        "totalTickets": 809,
+        "rate": -0.6122448979591837,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-08-04~2025-08-10",
+        "amount": 320.0,
+        "tickets": 2,
+        "totalAmount": 124960.0,
+        "totalTickets": 811,
+        "rate": -0.7894736842105263,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 124960.0,
+        "totalTickets": 811,
+        "rate": -1,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 124960.0,
+        "totalTickets": 811,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 124960.0,
+        "totalTickets": 811,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 124960.0,
+        "totalTickets": 811,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 160.0,
+        "tickets": 1,
+        "totalAmount": 125120.0,
+        "totalTickets": 812,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

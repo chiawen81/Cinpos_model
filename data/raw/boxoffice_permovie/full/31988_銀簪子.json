@@ -1,0 +1,67 @@
+{
+  "data": {
+    "movieId": "31988",
+    "name": "銀簪子",
+    "originalName": "Grandma's Hairpin",
+    "region": "中華民國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-02",
+    "publisher": "牽猴子股份有限公司",
+    "amountInThisWeek": 69095.0,
+    "totalAmount": 69095.0,
+    "filmClasses": null,
+    "filmLength": 5280,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82154,
+        "typeName": "導演",
+        "name": "蕭菊貞",
+        "originalName": "Chu-chen Hsiao"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 34505.0,
+        "tickets": 175,
+        "totalAmount": 34505.0,
+        "totalTickets": 175,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 34590.0,
+        "tickets": 175,
+        "totalAmount": 34590.0,
+        "totalTickets": 175,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 34505.0,
+        "tickets": 175,
+        "totalAmount": 69095.0,
+        "totalTickets": 350,
+        "rate": -0.0024573576178086153,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

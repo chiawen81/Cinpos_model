@@ -1,0 +1,151 @@
+{
+  "data": {
+    "movieId": "31777",
+    "name": "奇幻導航",
+    "originalName": "A BIG BOLD BEAUTIFUL JOURNEY",
+    "region": "美國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-02",
+    "publisher": "美商台灣索尼影業發行股份有限公司台灣分公司",
+    "amountInThisWeek": 1858526.0,
+    "totalAmount": 1858526.0,
+    "filmClasses": null,
+    "filmLength": 6540,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 12185,
+        "typeName": "演員",
+        "name": "瑪格羅比",
+        "originalName": "Margot Robbie"
+      },
+      {
+        "id": 10568,
+        "typeName": "演員",
+        "name": "柯林法洛",
+        "originalName": "Colin Farrell (Ⅰ)"
+      },
+      {
+        "id": 82528,
+        "typeName": "導演",
+        "name": "名田高梧",
+        "originalName": "Kogonada"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 828870.0,
+        "tickets": 3220,
+        "totalAmount": 828870.0,
+        "totalTickets": 3220,
+        "rate": 0,
+        "theaterCount": 76
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 258544.0,
+        "tickets": 963,
+        "totalAmount": 1087414.0,
+        "totalTickets": 4183,
+        "rate": -0.6880765379371916,
+        "theaterCount": 73
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 46917.0,
+        "tickets": 179,
+        "totalAmount": 1134331.0,
+        "totalTickets": 4362,
+        "rate": -0.8185337892196299,
+        "theaterCount": 13
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 1134331.0,
+        "totalTickets": 4362,
+        "rate": -1,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 1134331.0,
+        "totalTickets": 4362,
+        "rate": 0,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 54000.0,
+        "tickets": 180,
+        "totalAmount": 54000.0,
+        "totalTickets": 180,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 1002765.0,
+        "tickets": 3909,
+        "totalAmount": 1056765.0,
+        "totalTickets": 4089,
+        "rate": 17.56972222222222,
+        "theaterCount": 76
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 654733.0,
+        "tickets": 2564,
+        "totalAmount": 1711498.0,
+        "totalTickets": 6653,
+        "rate": -0.34707234496616857,
+        "theaterCount": 76
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 128177.0,
+        "tickets": 496,
+        "totalAmount": 1839675.0,
+        "totalTickets": 7149,
+        "rate": -0.8042301212860815,
+        "theaterCount": 71
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 18331.0,
+        "tickets": 61,
+        "totalAmount": 1858006.0,
+        "totalTickets": 7210,
+        "rate": -0.8569868229089462,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 520.0,
+        "tickets": 2,
+        "totalAmount": 1858526.0,
+        "totalTickets": 7212,
+        "rate": -0.9716327532595057,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

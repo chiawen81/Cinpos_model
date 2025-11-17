@@ -1,0 +1,42 @@
+{
+  "data": {
+    "movieId": "31843",
+    "name": "BTS 2016 HYYH On Stage：Epilogue Remastered",
+    "originalName": "BTS 2016 HYYH On Stage：Epilogue Remastered",
+    "region": "韓國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-09-24",
+    "publisher": "威秀影城股份有限公司",
+    "amountInThisWeek": 1706450.0,
+    "totalAmount": 1706450.0,
+    "filmClasses": null,
+    "filmLength": 6120,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": 1228590.0,
+        "tickets": 2420,
+        "totalAmount": 1228590.0,
+        "totalTickets": 2420,
+        "rate": 0,
+        "theaterCount": 12
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 1706450.0,
+        "tickets": 3374,
+        "totalAmount": 1706450.0,
+        "totalTickets": 3374,
+        "rate": 0,
+        "theaterCount": 12
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

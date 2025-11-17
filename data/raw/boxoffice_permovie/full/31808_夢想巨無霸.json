@@ -1,0 +1,169 @@
+{
+  "data": {
+    "movieId": "31808",
+    "name": "夢想巨無霸",
+    "originalName": "Jumbo",
+    "region": "印尼",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-03",
+    "publisher": "采昌國際多媒體股份有限公司",
+    "amountInThisWeek": 2545785.0,
+    "totalAmount": 2545785.0,
+    "filmClasses": null,
+    "filmLength": 6120,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82510,
+        "typeName": "導演",
+        "name": "瑞安阿德里安迪",
+        "originalName": "Ryan Adriandhy"
+      },
+      {
+        "id": 82510,
+        "typeName": "編劇",
+        "name": "瑞安阿德里安迪",
+        "originalName": "Ryan Adriandhy"
+      },
+      {
+        "id": 82519,
+        "typeName": "演員",
+        "name": "葛拉西艾拉艾比蓋兒",
+        "originalName": "Graciella Abigail"
+      },
+      {
+        "id": 82520,
+        "typeName": "演員",
+        "name": "尤素夫奧茲坎",
+        "originalName": "Yusuf Ozkan"
+      },
+      {
+        "id": 82521,
+        "typeName": "演員",
+        "name": "普林斯波艾提雷",
+        "originalName": "Prince Poetiray"
+      },
+      {
+        "id": 82522,
+        "typeName": "演員",
+        "name": "奎因薩爾曼",
+        "originalName": "Quinn Salman"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 724163.0,
+        "tickets": 2811,
+        "totalAmount": 724163.0,
+        "totalTickets": 2811,
+        "rate": 0,
+        "theaterCount": 42
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 546369.0,
+        "tickets": 2128,
+        "totalAmount": 1270532.0,
+        "totalTickets": 4939,
+        "rate": -0.24551654806997872,
+        "theaterCount": 38
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 277086.0,
+        "tickets": 1163,
+        "totalAmount": 1547618.0,
+        "totalTickets": 6102,
+        "rate": -0.4928592215151299,
+        "theaterCount": 26
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 257584.0,
+        "tickets": 1004,
+        "totalAmount": 1805202.0,
+        "totalTickets": 7106,
+        "rate": -0.0703824805295107,
+        "theaterCount": 15
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 78268.0,
+        "tickets": 421,
+        "totalAmount": 1883470.0,
+        "totalTickets": 7527,
+        "rate": -0.6961457233368532,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 81344.0,
+        "tickets": 343,
+        "totalAmount": 1964814.0,
+        "totalTickets": 7870,
+        "rate": 0.0393008636990852,
+        "theaterCount": 6
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 724163.0,
+        "tickets": 2811,
+        "totalAmount": 724163.0,
+        "totalTickets": 2811,
+        "rate": 0,
+        "theaterCount": 42
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 1011496.0,
+        "tickets": 3988,
+        "totalAmount": 1735659.0,
+        "totalTickets": 6799,
+        "rate": 0.3967794543493661,
+        "theaterCount": 42
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 356571.0,
+        "tickets": 1524,
+        "totalAmount": 2092230.0,
+        "totalTickets": 8323,
+        "rate": -0.6474815520773192,
+        "theaterCount": 37
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 281227.0,
+        "tickets": 1099,
+        "totalAmount": 2373457.0,
+        "totalTickets": 9422,
+        "rate": -0.21130153601947438,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 87254.0,
+        "tickets": 460,
+        "totalAmount": 2460711.0,
+        "totalTickets": 9882,
+        "rate": -0.6897381830336348,
+        "theaterCount": 17
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 85074.0,
+        "tickets": 359,
+        "totalAmount": 2545785.0,
+        "totalTickets": 10241,
+        "rate": -0.024984527929951636,
+        "theaterCount": 12
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

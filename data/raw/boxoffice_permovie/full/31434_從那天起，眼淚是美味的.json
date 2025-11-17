@@ -1,0 +1,96 @@
+{
+  "data": {
+    "movieId": "31434",
+    "name": "從那天起，眼淚是美味的",
+    "originalName": "Taste and Tears",
+    "region": "日本",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-08-22",
+    "publisher": "捷傑有限公司",
+    "amountInThisWeek": 332963.0,
+    "totalAmount": 332963.0,
+    "filmClasses": null,
+    "filmLength": 6480,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 154226.0,
+        "tickets": 619,
+        "totalAmount": 154226.0,
+        "totalTickets": 619,
+        "rate": 0,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 63782.0,
+        "tickets": 250,
+        "totalAmount": 218008.0,
+        "totalTickets": 869,
+        "rate": -0.5864380843696912,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 3148.0,
+        "tickets": 11,
+        "totalAmount": 221156.0,
+        "totalTickets": 880,
+        "rate": -0.9506443824276442,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 221156.0,
+        "totalTickets": 880,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 154226.0,
+        "tickets": 619,
+        "totalAmount": 154226.0,
+        "totalTickets": 619,
+        "rate": 0,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 164714.0,
+        "tickets": 630,
+        "totalAmount": 318940.0,
+        "totalTickets": 1249,
+        "rate": 0.06800409788232853,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 11383.0,
+        "tickets": 45,
+        "totalAmount": 330323.0,
+        "totalTickets": 1294,
+        "rate": -0.9308923345920809,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 2640.0,
+        "tickets": 11,
+        "totalAmount": 332963.0,
+        "totalTickets": 1305,
+        "rate": -0.7680751998594395,
+        "theaterCount": 3
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

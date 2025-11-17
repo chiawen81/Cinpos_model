@@ -1,0 +1,163 @@
+{
+  "data": {
+    "movieId": "31904",
+    "name": "陰陽眼見子",
+    "originalName": "THE GIRL WHO SEES",
+    "region": "日本",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-09-30",
+    "publisher": "天馬行空數位有限公司",
+    "amountInThisWeek": 292959.0,
+    "totalAmount": 292959.0,
+    "filmClasses": null,
+    "filmLength": 5820,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 79080,
+        "typeName": "演員",
+        "name": "久間田琳加",
+        "originalName": "Rinka Kumada"
+      },
+      {
+        "id": 82501,
+        "typeName": "演員",
+        "name": "奈葉",
+        "originalName": "Naenano"
+      },
+      {
+        "id": 14235,
+        "typeName": "導演",
+        "name": "中村義洋",
+        "originalName": "Yoshihiro Nakamura"
+      },
+      {
+        "id": 14235,
+        "typeName": "編劇",
+        "name": "中村義洋",
+        "originalName": "Yoshihiro Nakamura"
+      },
+      {
+        "id": 77933,
+        "typeName": "演員",
+        "name": "原菜乃華",
+        "originalName": "Nanoka Hara"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 134443.0,
+        "tickets": 527,
+        "totalAmount": 134443.0,
+        "totalTickets": 527,
+        "rate": 0,
+        "theaterCount": 20
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 15957.0,
+        "tickets": 68,
+        "totalAmount": 150400.0,
+        "totalTickets": 595,
+        "rate": -0.8813102950692858,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 4360.0,
+        "tickets": 18,
+        "totalAmount": 154760.0,
+        "totalTickets": 613,
+        "rate": -0.726765682772451,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 1440.0,
+        "tickets": 5,
+        "totalAmount": 156200.0,
+        "totalTickets": 618,
+        "rate": -0.6697247706422018,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 260.0,
+        "tickets": 1,
+        "totalAmount": 156460.0,
+        "totalTickets": 619,
+        "rate": -0.8194444444444444,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 156460.0,
+        "totalTickets": 619,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 168618.0,
+        "tickets": 668,
+        "totalAmount": 168618.0,
+        "totalTickets": 668,
+        "rate": 0,
+        "theaterCount": 20
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 106176.0,
+        "tickets": 421,
+        "totalAmount": 274794.0,
+        "totalTickets": 1089,
+        "rate": -0.3703163363341992,
+        "theaterCount": 20
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 13685.0,
+        "tickets": 59,
+        "totalAmount": 288479.0,
+        "totalTickets": 1148,
+        "rate": -0.8711102320675106,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 3340.0,
+        "tickets": 13,
+        "totalAmount": 291819.0,
+        "totalTickets": 1161,
+        "rate": -0.7559371574716843,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 700.0,
+        "tickets": 3,
+        "totalAmount": 292519.0,
+        "totalTickets": 1164,
+        "rate": -0.7904191616766467,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 440.0,
+        "tickets": 2,
+        "totalAmount": 292959.0,
+        "totalTickets": 1166,
+        "rate": -0.37142857142857144,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

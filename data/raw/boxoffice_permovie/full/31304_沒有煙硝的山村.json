@@ -1,0 +1,151 @@
+{
+  "data": {
+    "movieId": "31304",
+    "name": "沒有煙硝的山村",
+    "originalName": "Vermiglio",
+    "region": "法國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-08-08",
+    "publisher": "聯影企業股份有限公司",
+    "amountInThisWeek": 249537.0,
+    "totalAmount": 249537.0,
+    "filmClasses": null,
+    "filmLength": 7140,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82341,
+        "typeName": "編劇",
+        "name": "莫拉德佩洛",
+        "originalName": "Maura Delpero"
+      },
+      {
+        "id": 82342,
+        "typeName": "演員",
+        "name": "聖地亞哥馮德維拉",
+        "originalName": "Santiago Fondevila"
+      },
+      {
+        "id": 82343,
+        "typeName": "演員",
+        "name": "卡洛塔甘巴",
+        "originalName": "Carlotta Gamba"
+      },
+      {
+        "id": 82344,
+        "typeName": "演員",
+        "name": "瑪蒂娜斯克林齊",
+        "originalName": "Martina Scrinzi"
+      },
+      {
+        "id": 82341,
+        "typeName": "導演",
+        "name": "莫拉德佩洛",
+        "originalName": "Maura Delpero"
+      },
+      {
+        "id": 82346,
+        "typeName": "演員",
+        "name": "朱塞佩德多梅尼科",
+        "originalName": "Giuseppe De Domenico"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-08~2025-08-10",
+        "amount": 80547.0,
+        "tickets": 379,
+        "totalAmount": 80547.0,
+        "totalTickets": 379,
+        "rate": 0,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 28020.0,
+        "tickets": 140,
+        "totalAmount": 108567.0,
+        "totalTickets": 519,
+        "rate": -0.6521285708964952,
+        "theaterCount": 5
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 5970.0,
+        "tickets": 31,
+        "totalAmount": 114537.0,
+        "totalTickets": 550,
+        "rate": -0.7869379014989293,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 1280.0,
+        "tickets": 6,
+        "totalAmount": 115817.0,
+        "totalTickets": 556,
+        "rate": -0.7855946398659966,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 115817.0,
+        "totalTickets": 556,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-04~2025-08-10",
+        "amount": 80547.0,
+        "tickets": 379,
+        "totalAmount": 80547.0,
+        "totalTickets": 379,
+        "rate": 0,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 119385.0,
+        "tickets": 564,
+        "totalAmount": 199932.0,
+        "totalTickets": 943,
+        "rate": 0.4821781071920742,
+        "theaterCount": 12
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 32320.0,
+        "tickets": 166,
+        "totalAmount": 232252.0,
+        "totalTickets": 1109,
+        "rate": -0.7292792226829166,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 14475.0,
+        "tickets": 75,
+        "totalAmount": 246727.0,
+        "totalTickets": 1184,
+        "rate": -0.552134900990099,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 2810.0,
+        "tickets": 13,
+        "totalAmount": 249537.0,
+        "totalTickets": 1197,
+        "rate": -0.8058721934369603,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

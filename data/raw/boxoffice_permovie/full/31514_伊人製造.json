@@ -1,0 +1,139 @@
+{
+  "data": {
+    "movieId": "31514",
+    "name": "伊人製造",
+    "originalName": "MAKE A GIRL",
+    "region": "日本",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-08-29",
+    "publisher": "提恩傳媒實業有限公司",
+    "amountInThisWeek": 256684.0,
+    "totalAmount": 256684.0,
+    "filmClasses": null,
+    "filmLength": 5520,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 19403,
+        "typeName": "演員",
+        "name": "增田俊樹",
+        "originalName": "Toshiki Masuda"
+      },
+      {
+        "id": 82429,
+        "typeName": "導演",
+        "name": "安田現象",
+        "originalName": ""
+      },
+      {
+        "id": 82430,
+        "typeName": "演員",
+        "name": "堀江瞬",
+        "originalName": ""
+      },
+      {
+        "id": 82431,
+        "typeName": "演員",
+        "name": "上田燿司",
+        "originalName": ""
+      },
+      {
+        "id": 28063,
+        "typeName": "演員",
+        "name": "種崎敦美",
+        "originalName": "Atsumi Tanezaki"
+      },
+      {
+        "id": 19786,
+        "typeName": "演員",
+        "name": "花澤香菜",
+        "originalName": "Kana Hanazawa"
+      },
+      {
+        "id": 13556,
+        "typeName": "演員",
+        "name": "雨宮天",
+        "originalName": "Sora Amamiya"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 97735.0,
+        "tickets": 344,
+        "totalAmount": 97735.0,
+        "totalTickets": 344,
+        "rate": 0,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 27838.0,
+        "tickets": 100,
+        "totalAmount": 125573.0,
+        "totalTickets": 444,
+        "rate": -0.715168568066711,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 25296.0,
+        "tickets": 94,
+        "totalAmount": 150869.0,
+        "totalTickets": 538,
+        "rate": -0.09131403118040089,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 150869.0,
+        "totalTickets": 538,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 97735.0,
+        "tickets": 344,
+        "totalAmount": 97735.0,
+        "totalTickets": 344,
+        "rate": 0,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 85498.0,
+        "tickets": 313,
+        "totalAmount": 183233.0,
+        "totalTickets": 657,
+        "rate": -0.12520591395098993,
+        "theaterCount": 9
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 46376.0,
+        "tickets": 175,
+        "totalAmount": 229609.0,
+        "totalTickets": 832,
+        "rate": -0.45757795503988397,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 27075.0,
+        "tickets": 99,
+        "totalAmount": 256684.0,
+        "totalTickets": 931,
+        "rate": -0.41618509573917545,
+        "theaterCount": 6
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -1,0 +1,139 @@
+{
+  "data": {
+    "movieId": "31475",
+    "name": "詭妾",
+    "originalName": "GUNDIK",
+    "region": "印尼",
+    "rating": "輔15級",
+    "classes": null,
+    "releaseDate": "2025-08-08",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 1218856.0,
+    "totalAmount": 1218856.0,
+    "filmClasses": null,
+    "filmLength": 6720,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82347,
+        "typeName": "演員",
+        "name": "露娜馬雅",
+        "originalName": "Luna Maya"
+      },
+      {
+        "id": 74368,
+        "typeName": "演員",
+        "name": "馬克西姆布提爾",
+        "originalName": "Maxime Bouttier"
+      },
+      {
+        "id": 82348,
+        "typeName": "演員",
+        "name": "阿古斯昆佐羅",
+        "originalName": "Agus Kuncoro"
+      },
+      {
+        "id": 82349,
+        "typeName": "演員",
+        "name": "迪安西迪克",
+        "originalName": "Dian Sidik"
+      },
+      {
+        "id": 80162,
+        "typeName": "導演",
+        "name": "安吉烏巴拉",
+        "originalName": "Anggy Umbara"
+      },
+      {
+        "id": 80162,
+        "typeName": "編劇",
+        "name": "安吉烏巴拉",
+        "originalName": "Anggy Umbara"
+      },
+      {
+        "id": 82350,
+        "typeName": "演員",
+        "name": "阿里夫迪杜",
+        "originalName": "Arief Didu"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-08~2025-08-10",
+        "amount": 719566.0,
+        "tickets": 2655,
+        "totalAmount": 719566.0,
+        "totalTickets": 2655,
+        "rate": 0,
+        "theaterCount": 54
+      },
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 66330.0,
+        "tickets": 247,
+        "totalAmount": 785896.0,
+        "totalTickets": 2902,
+        "rate": -0.9078194356042392,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 6940.0,
+        "tickets": 27,
+        "totalAmount": 792836.0,
+        "totalTickets": 2929,
+        "rate": -0.8953716267149103,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 792836.0,
+        "totalTickets": 2929,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-04~2025-08-10",
+        "amount": 719566.0,
+        "tickets": 2655,
+        "totalAmount": 719566.0,
+        "totalTickets": 2655,
+        "rate": 0,
+        "theaterCount": 54
+      },
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 457239.0,
+        "tickets": 1707,
+        "totalAmount": 1176805.0,
+        "totalTickets": 4362,
+        "rate": -0.36456280591356455,
+        "theaterCount": 54
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 38731.0,
+        "tickets": 143,
+        "totalAmount": 1215536.0,
+        "totalTickets": 4505,
+        "rate": -0.915293752282723,
+        "theaterCount": 22
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 3320.0,
+        "tickets": 15,
+        "totalAmount": 1218856.0,
+        "totalTickets": 4520,
+        "rate": -0.914280550463453,
+        "theaterCount": 3
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

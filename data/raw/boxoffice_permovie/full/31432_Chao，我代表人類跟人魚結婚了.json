@@ -1,0 +1,114 @@
+{
+  "data": {
+    "movieId": "31432",
+    "name": "Chao，我代表人類跟人魚結婚了",
+    "originalName": "ChaO",
+    "region": "日本",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-08-13",
+    "publisher": "英屬蓋曼群島商威望國際娛樂股份有限公司台灣分公司",
+    "amountInThisWeek": 559338.0,
+    "totalAmount": 559338.0,
+    "filmClasses": null,
+    "filmLength": 5400,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 207371.0,
+        "tickets": 839,
+        "totalAmount": 207371.0,
+        "totalTickets": 839,
+        "rate": 0,
+        "theaterCount": 38
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 58851.0,
+        "tickets": 232,
+        "totalAmount": 266222.0,
+        "totalTickets": 1071,
+        "rate": -0.7162042908603421,
+        "theaterCount": 24
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 1200.0,
+        "tickets": 5,
+        "totalAmount": 267422.0,
+        "totalTickets": 1076,
+        "rate": -0.9796095223530611,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 267422.0,
+        "totalTickets": 1076,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 25760.0,
+        "tickets": 112,
+        "totalAmount": 25760.0,
+        "totalTickets": 112,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 256651.0,
+        "tickets": 1063,
+        "totalAmount": 282411.0,
+        "totalTickets": 1175,
+        "rate": 8.963159937888198,
+        "theaterCount": 38
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 233223.0,
+        "tickets": 931,
+        "totalAmount": 515634.0,
+        "totalTickets": 2106,
+        "rate": -0.09128349392755142,
+        "theaterCount": 38
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 33074.0,
+        "tickets": 132,
+        "totalAmount": 548708.0,
+        "totalTickets": 2238,
+        "rate": -0.8581872285323489,
+        "theaterCount": 23
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 10630.0,
+        "tickets": 47,
+        "totalAmount": 559338.0,
+        "totalTickets": 2285,
+        "rate": -0.6785995041422265,
+        "theaterCount": 2
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

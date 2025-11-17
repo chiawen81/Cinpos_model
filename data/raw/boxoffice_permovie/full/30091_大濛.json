@@ -1,0 +1,42 @@
+{
+  "data": {
+    "movieId": "30091",
+    "name": "大濛",
+    "originalName": "A Foggy Tale",
+    "region": "中華民國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-08",
+    "publisher": "華文創股份有限公司",
+    "amountInThisWeek": 25500.0,
+    "totalAmount": 25500.0,
+    "filmClasses": null,
+    "filmLength": 7980,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 25500.0,
+        "tickets": 85,
+        "totalAmount": 25500.0,
+        "totalTickets": 85,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

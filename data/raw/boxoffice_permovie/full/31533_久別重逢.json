@@ -1,0 +1,78 @@
+{
+  "data": {
+    "movieId": "31533",
+    "name": "久別重逢",
+    "originalName": "Last Song For You",
+    "region": "香港",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-09-05",
+    "publisher": "華映國際文創股份有限公司",
+    "amountInThisWeek": 152259.0,
+    "totalAmount": 152259.0,
+    "filmClasses": null,
+    "filmLength": 6360,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 96963.0,
+        "tickets": 399,
+        "totalAmount": 96963.0,
+        "totalTickets": 399,
+        "rate": 0,
+        "theaterCount": 22
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 5750.0,
+        "tickets": 25,
+        "totalAmount": 102713.0,
+        "totalTickets": 424,
+        "rate": -0.9406990295267267,
+        "theaterCount": 4
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 102713.0,
+        "totalTickets": 424,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 96963.0,
+        "tickets": 399,
+        "totalAmount": 96963.0,
+        "totalTickets": 399,
+        "rate": 0,
+        "theaterCount": 22
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 51156.0,
+        "tickets": 217,
+        "totalAmount": 148119.0,
+        "totalTickets": 616,
+        "rate": -0.47241731382073576,
+        "theaterCount": 22
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 4140.0,
+        "tickets": 19,
+        "totalAmount": 152259.0,
+        "totalTickets": 635,
+        "rate": -0.9190710767065446,
+        "theaterCount": 4
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

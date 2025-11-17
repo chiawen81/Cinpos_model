@@ -1,0 +1,114 @@
+{
+  "data": {
+    "movieId": "32116",
+    "name": "銀魂劇場版 2D 真選組動亂篇",
+    "originalName": "GINTAMA ON THEATER 2D Shinsen-Gumi Doukan Arc",
+    "region": "日本",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-09",
+    "publisher": "薩摩亞商羚邦(亞洲)有限公司台灣分公司",
+    "amountInThisWeek": 1709650.0,
+    "totalAmount": 1709650.0,
+    "filmClasses": null,
+    "filmLength": 6060,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 825070.0,
+        "tickets": 2494,
+        "totalAmount": 825070.0,
+        "totalTickets": 2494,
+        "rate": 0,
+        "theaterCount": 10
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 245620.0,
+        "tickets": 844,
+        "totalAmount": 1070690.0,
+        "totalTickets": 3338,
+        "rate": -0.7023040469293514,
+        "theaterCount": 10
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 88468.0,
+        "tickets": 311,
+        "totalAmount": 1159158.0,
+        "totalTickets": 3649,
+        "rate": -0.6398176044296067,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 9522.0,
+        "tickets": 35,
+        "totalAmount": 1168680.0,
+        "totalTickets": 3684,
+        "rate": -0.8923678618257449,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 16800.0,
+        "tickets": 70,
+        "totalAmount": 1185480.0,
+        "totalTickets": 3754,
+        "rate": 0.7643352236925016,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 1009490.0,
+        "tickets": 3151,
+        "totalAmount": 1009490.0,
+        "totalTickets": 3151,
+        "rate": 0,
+        "theaterCount": 10
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 460695.0,
+        "tickets": 1632,
+        "totalAmount": 1470185.0,
+        "totalTickets": 4783,
+        "rate": -0.5436358953530991,
+        "theaterCount": 10
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 181873.0,
+        "tickets": 648,
+        "totalAmount": 1652058.0,
+        "totalTickets": 5431,
+        "rate": -0.6052203735660252,
+        "theaterCount": 10
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 33202.0,
+        "tickets": 122,
+        "totalAmount": 1685260.0,
+        "totalTickets": 5553,
+        "rate": -0.8174440406217526,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 24390.0,
+        "tickets": 98,
+        "totalAmount": 1709650.0,
+        "totalTickets": 5651,
+        "rate": -0.2654056984519005,
+        "theaterCount": 2
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

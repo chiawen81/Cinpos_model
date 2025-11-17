@@ -1,0 +1,157 @@
+{
+  "data": {
+    "movieId": "32099",
+    "name": "創：戰神",
+    "originalName": "Tron: Ares",
+    "region": "美國",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-08",
+    "publisher": "台灣華特迪士尼股份有限公司",
+    "amountInThisWeek": 39561986.0,
+    "totalAmount": 39561986.0,
+    "filmClasses": null,
+    "filmLength": 7080,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 20477,
+        "typeName": "演員",
+        "name": "吉蓮安德森",
+        "originalName": "Gillian Anderson"
+      },
+      {
+        "id": 13514,
+        "typeName": "演員",
+        "name": "傑瑞德雷托",
+        "originalName": "Jared Leto"
+      },
+      {
+        "id": 10458,
+        "typeName": "演員",
+        "name": "伊凡彼得斯",
+        "originalName": "Evan Peters"
+      },
+      {
+        "id": 82526,
+        "typeName": "演員",
+        "name": "茱蒂透納史密斯",
+        "originalName": "Jodie Turner-Smith"
+      },
+      {
+        "id": 20737,
+        "typeName": "導演",
+        "name": "喬奇姆羅寧",
+        "originalName": "Joachim Ronning"
+      },
+      {
+        "id": 81485,
+        "typeName": "演員",
+        "name": "葛麗塔李",
+        "originalName": "Greta Lee"
+      },
+      {
+        "id": 14210,
+        "typeName": "演員",
+        "name": "傑夫布里吉",
+        "originalName": "Jeff Bridges"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 15421399.0,
+        "tickets": 47528,
+        "totalAmount": 15421399.0,
+        "totalTickets": 47528,
+        "rate": 0,
+        "theaterCount": 93
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 5941764.0,
+        "tickets": 17896,
+        "totalAmount": 21363163.0,
+        "totalTickets": 65424,
+        "rate": -0.6147065515910716,
+        "theaterCount": 94
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 3483143.0,
+        "tickets": 11583,
+        "totalAmount": 24846306.0,
+        "totalTickets": 77007,
+        "rate": -0.41378637724419887,
+        "theaterCount": 94
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 1159557.0,
+        "tickets": 3897,
+        "totalAmount": 26005863.0,
+        "totalTickets": 80904,
+        "rate": -0.6670946326349507,
+        "theaterCount": 82
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 360205.0,
+        "tickets": 1319,
+        "totalAmount": 26366068.0,
+        "totalTickets": 82223,
+        "rate": -0.6893598158607124,
+        "theaterCount": 56
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 19442221.0,
+        "tickets": 59827,
+        "totalAmount": 19442221.0,
+        "totalTickets": 59827,
+        "rate": 0,
+        "theaterCount": 93
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 10760922.0,
+        "tickets": 33219,
+        "totalAmount": 30203143.0,
+        "totalTickets": 93046,
+        "rate": -0.44651786439419655,
+        "theaterCount": 94
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 6069191.0,
+        "tickets": 19439,
+        "totalAmount": 36272334.0,
+        "totalTickets": 112485,
+        "rate": -0.4359971199493872,
+        "theaterCount": 95
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 2467073.0,
+        "tickets": 8175,
+        "totalAmount": 38739407.0,
+        "totalTickets": 120660,
+        "rate": -0.5935087559445732,
+        "theaterCount": 93
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 822579.0,
+        "tickets": 2907,
+        "totalAmount": 39561986.0,
+        "totalTickets": 123567,
+        "rate": -0.6665769517156566,
+        "theaterCount": 84
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

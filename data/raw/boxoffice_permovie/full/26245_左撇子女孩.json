@@ -1,0 +1,193 @@
+{
+  "data": {
+    "movieId": "26245",
+    "name": "左撇子女孩",
+    "originalName": "Left-Handed Girl",
+    "region": "中華民國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-31",
+    "publisher": "左撇子女孩電影製作有限公司",
+    "amountInThisWeek": 3865310.0,
+    "totalAmount": 3865310.0,
+    "filmClasses": null,
+    "filmLength": 6480,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82561,
+        "typeName": "演員",
+        "name": "馬士媛",
+        "originalName": "Shih-Yuan Ma"
+      },
+      {
+        "id": 35287,
+        "typeName": "演員",
+        "name": "蔡淑臻",
+        "originalName": "Janel Tsai"
+      },
+      {
+        "id": 82562,
+        "typeName": "演員",
+        "name": "葉子綺",
+        "originalName": "Nina Ye"
+      },
+      {
+        "id": 82563,
+        "typeName": "編劇",
+        "name": "鄒時擎",
+        "originalName": "Shih-Ching Tsou"
+      },
+      {
+        "id": 81359,
+        "typeName": "編劇",
+        "name": "西恩貝克",
+        "originalName": "Sean Baker"
+      },
+      {
+        "id": 82563,
+        "typeName": "導演",
+        "name": "鄒時擎",
+        "originalName": "Shih-Ching Tsou"
+      },
+      {
+        "id": 77930,
+        "typeName": "演員",
+        "name": "黃鐙輝",
+        "originalName": "Teng-Hui Huang"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-09-26~2025-09-28",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 14430.0,
+        "tickets": 70,
+        "totalAmount": 14430.0,
+        "totalTickets": 70,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 14430.0,
+        "totalTickets": 70,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 14430.0,
+        "totalTickets": 70,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 1505815.0,
+        "tickets": 6101,
+        "totalAmount": 1520245.0,
+        "totalTickets": 6171,
+        "rate": 0,
+        "theaterCount": 78
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 908215.0,
+        "tickets": 3617,
+        "totalAmount": 2428460.0,
+        "totalTickets": 9788,
+        "rate": -0.39686150025069483,
+        "theaterCount": 78
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-22~2025-09-28",
+        "amount": 95750.0,
+        "tickets": 383,
+        "totalAmount": 95750.0,
+        "totalTickets": 383,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 95750.0,
+        "totalTickets": 383,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 14430.0,
+        "tickets": 70,
+        "totalAmount": 110180.0,
+        "totalTickets": 453,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 110180.0,
+        "totalTickets": 453,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 110180.0,
+        "totalTickets": 453,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 1980285.0,
+        "tickets": 7773,
+        "totalAmount": 2090465.0,
+        "totalTickets": 8226,
+        "rate": 0,
+        "theaterCount": 78
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 1774845.0,
+        "tickets": 7159,
+        "totalAmount": 3865310.0,
+        "totalTickets": 15385,
+        "rate": -0.10374264310440164,
+        "theaterCount": 78
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

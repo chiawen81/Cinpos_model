@@ -1,0 +1,157 @@
+{
+  "data": {
+    "movieId": "31221",
+    "name": "那個人消失了",
+    "originalName": "Who’s gone",
+    "region": "日本",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-08-01",
+    "publisher": "中影股份有限公司",
+    "amountInThisWeek": 268997.0,
+    "totalAmount": 268997.0,
+    "filmClasses": null,
+    "filmLength": 6180,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82323,
+        "typeName": "編劇",
+        "name": "水野格",
+        "originalName": "Itaru Mizuno"
+      },
+      {
+        "id": 82323,
+        "typeName": "導演",
+        "name": "水野格",
+        "originalName": "Itaru Mizuno"
+      },
+      {
+        "id": 37785,
+        "typeName": "演員",
+        "name": "高橋文哉",
+        "originalName": "Fumiya Takahashi"
+      },
+      {
+        "id": 31152,
+        "typeName": "演員",
+        "name": "田中圭",
+        "originalName": "Kei Tanaka"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-08-01~2025-08-03",
+        "amount": 73247.0,
+        "tickets": 309,
+        "totalAmount": 73247.0,
+        "totalTickets": 309,
+        "rate": 0,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-08-08~2025-08-10",
+        "amount": 26880.0,
+        "tickets": 121,
+        "totalAmount": 100127.0,
+        "totalTickets": 430,
+        "rate": -0.6330225128674212,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-08-15~2025-08-17",
+        "amount": 17430.0,
+        "tickets": 75,
+        "totalAmount": 117557.0,
+        "totalTickets": 505,
+        "rate": -0.3515625,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-08-22~2025-08-24",
+        "amount": 16905.0,
+        "tickets": 73,
+        "totalAmount": 134462.0,
+        "totalTickets": 578,
+        "rate": -0.030120481927710843,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 15410.0,
+        "tickets": 65,
+        "totalAmount": 149872.0,
+        "totalTickets": 643,
+        "rate": -0.08843537414965986,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 149872.0,
+        "totalTickets": 643,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-07-28~2025-08-03",
+        "amount": 73247.0,
+        "tickets": 309,
+        "totalAmount": 73247.0,
+        "totalTickets": 309,
+        "rate": 0,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-08-04~2025-08-10",
+        "amount": 93905.0,
+        "tickets": 402,
+        "totalAmount": 167152.0,
+        "totalTickets": 711,
+        "rate": 0.2820320286155064,
+        "theaterCount": 11
+      },
+      {
+        "date": "2025-08-11~2025-08-17",
+        "amount": 32070.0,
+        "tickets": 142,
+        "totalAmount": 199222.0,
+        "totalTickets": 853,
+        "rate": -0.658484638730632,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-08-18~2025-08-24",
+        "amount": 30135.0,
+        "tickets": 134,
+        "totalAmount": 229357.0,
+        "totalTickets": 987,
+        "rate": -0.060336763330215155,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 29890.0,
+        "tickets": 127,
+        "totalAmount": 259247.0,
+        "totalTickets": 1114,
+        "rate": -0.008130081300813009,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 9750.0,
+        "tickets": 40,
+        "totalAmount": 268997.0,
+        "totalTickets": 1154,
+        "rate": -0.6738039478086316,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

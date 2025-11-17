@@ -1,0 +1,96 @@
+{
+  "data": {
+    "movieId": "27386",
+    "name": "人造天空",
+    "originalName": "White Plastic Sky",
+    "region": "匈牙利",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-08-29",
+    "publisher": "前景娛樂有限公司",
+    "amountInThisWeek": 250534.0,
+    "totalAmount": 250534.0,
+    "filmClasses": null,
+    "filmLength": 6720,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-08-29~2025-08-31",
+        "amount": 115809.0,
+        "tickets": 459,
+        "totalAmount": 115809.0,
+        "totalTickets": 459,
+        "rate": 0,
+        "theaterCount": 23
+      },
+      {
+        "date": "2025-09-05~2025-09-07",
+        "amount": 8800.0,
+        "tickets": 35,
+        "totalAmount": 124609.0,
+        "totalTickets": 494,
+        "rate": -0.9240128142026958,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-09-12~2025-09-14",
+        "amount": 1567.0,
+        "tickets": 5,
+        "totalAmount": 126176.0,
+        "totalTickets": 499,
+        "rate": -0.8219318181818182,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-09-19~2025-09-21",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 126176.0,
+        "totalTickets": 499,
+        "rate": -1,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-08-25~2025-08-31",
+        "amount": 115809.0,
+        "tickets": 459,
+        "totalAmount": 115809.0,
+        "totalTickets": 459,
+        "rate": 0,
+        "theaterCount": 23
+      },
+      {
+        "date": "2025-09-01~2025-09-07",
+        "amount": 120243.0,
+        "tickets": 467,
+        "totalAmount": 236052.0,
+        "totalTickets": 926,
+        "rate": 0.038287179752868945,
+        "theaterCount": 25
+      },
+      {
+        "date": "2025-09-08~2025-09-14",
+        "amount": 13757.0,
+        "tickets": 61,
+        "totalAmount": 249809.0,
+        "totalTickets": 987,
+        "rate": -0.8855900135558826,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-09-15~2025-09-21",
+        "amount": 725.0,
+        "tickets": 3,
+        "totalAmount": 250534.0,
+        "totalTickets": 990,
+        "rate": -0.9472995565893727,
+        "theaterCount": 2
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

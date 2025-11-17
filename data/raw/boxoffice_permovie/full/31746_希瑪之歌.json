@@ -1,0 +1,78 @@
+{
+  "data": {
+    "movieId": "31746",
+    "name": "希瑪之歌",
+    "originalName": "Sima's Song",
+    "region": "阿富汗",
+    "rating": "保護級",
+    "classes": null,
+    "releaseDate": "2025-10-13",
+    "publisher": "飛望影像有限公司",
+    "amountInThisWeek": 29210.0,
+    "totalAmount": 29210.0,
+    "filmClasses": null,
+    "filmLength": 5820,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 8790.0,
+        "tickets": 45,
+        "totalAmount": 8790.0,
+        "totalTickets": 45,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 16680.0,
+        "tickets": 86,
+        "totalAmount": 16680.0,
+        "totalTickets": 86,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 16680.0,
+        "totalTickets": 86,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 12530.0,
+        "tickets": 64,
+        "totalAmount": 29210.0,
+        "totalTickets": 150,
+        "rate": 0,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

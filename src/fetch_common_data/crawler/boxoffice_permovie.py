@@ -126,6 +126,10 @@ def fetch_boxoffice_permovie_from_weekly(reference_date: date | None = None) -> 
         # 抓取單部電影資料
         crawler_data = fetch_boxoffice_data(movie_id)
 
+        # 加入最新爬取日期
+        if crawler_data:
+            crawler_data["last_crawled_date"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
         # 1. 儲存到週次資料夾（含週次標籤）
         file_name_with_week = f"{movie_id}_{clean_movie_name}_{WEEK_LABEL}.json"
         save_json(crawler_data, output_dir, file_name_with_week)

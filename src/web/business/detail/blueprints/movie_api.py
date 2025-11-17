@@ -271,7 +271,8 @@ def movie_boxoffice(movid):
             'amountInThisWeek': movie_data.get('amountInThisWeek', 0),
             'totalAmount': movie_data.get('totalAmount', 0),
             'filmMembers': movie_data.get('filmMembers', []),  # 演員、導演等
-            'weekends': movie_data.get('weekends', [])  # 週末票房歷史
+            'weeks': movie_data.get('weeks', []),  # 每週票房歷史
+            'weekends': movie_data.get('weekends', [])  # 每週末票房歷史
         }
 
         return jsonify({'success': True, 'data': result})

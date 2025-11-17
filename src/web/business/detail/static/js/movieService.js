@@ -29,13 +29,19 @@ const movieService = {
     },
 
     /**
-     * 取得電影詳細資料
+     * 取得電影完整資料（票房 + 電影資訊）
      * @param {string} movieId - 電影 ID
      * @returns {Promise<{success: boolean, data?: Object, error?: string}>}
+     *
+     * 回傳資料包含：
+     * - 電影基本資訊：name, originalName, rating, filmLength, region, publisher
+     * - 票房資料：amountInThisWeek, totalAmount
+     * - 演員/導演：filmMembers (陣列)
+     * - 週末票房歷史：weekends (陣列)
      */
     async getMovieDetail(movieId) {
         try {
-            const response = await fetch(`/api/movie/info/${movieId}`, {
+            const response = await fetch(`/api/movie/boxoffice/${movieId}`, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json'

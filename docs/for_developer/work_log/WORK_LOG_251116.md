@@ -538,3 +538,115 @@ b6f54d6 - 修復 curl-cffi 安裝問題:改用 requests + 優化策略(添加延
    - 增加延遲時間(1-2 秒)
    - 實作快取機制
    - 提供手動輸入降級方案
+
+---
+
+## Cloudflare Worker 中繼（Relay）方案 — 設計與落地
+
+為提高成功率與穩定性，新增「Cloudflare Worker 代抓（中繼）」選項：後端不直接打 boxofficetw.tfai.org.tw，改請 Worker 代抓並轉發。Worker 與 Cloudflare 在同一側，較不易被阻擋。
+
+### 1) 建立 Worker（relay）
+在 Cloudflare Dashboard → Workers 建立一個 Worker，貼上以下 Module 語法程式碼：
+
+`js
+// workers/relay/index.js
+export default {
+  async fetch(request) {
+    const url = new URL(request.url);
+    const target = url.searchParams.get("target");
+    if (!target) {
+      return new Response(JSON.stringify({ error: "missing target" }), {
+        status: 400,
+        headers: { "content-type": "application/json" },
+      });
+    }
+
+    // 僅允許官方主機，避免被濫用
+    const allowedHost = "boxofficetw.tfai.org.tw";
+    let t;
+    try {
+      t = new URL(target);
+    } catch {
+      return new Response(JSON.stringify({ error: "invalid target" }), {
+        status: 400,
+        headers: { "content-type": "application/json" },
+      });
+    }
+    if (t.hostname !== allowedHost) {
+      return new Response("forbidden host", { status: 403 });
+    }
+
+    try {
+      const upstream = await fetch(t.toString(), {
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+          "Accept": "application/json, text/plain, */*",
+          "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+          "Referer": "https://boxofficetw.tfai.org.tw/",
+        },
+        cf: { cacheTtl: 0, cacheEverything: false },
+      });
+
+      const headers = new Headers(upstream.headers);
+      return new Response(upstream.body, {
+        status: upstream.status,
+        headers,
+      });
+    } catch (e) {
+      return new Response(JSON.stringify({ error: String(e) }), {
+        status: 502,
+        headers: { "content-type": "application/json" },
+      });
+    }
+  },
+};
+`
+
+部署完成後，會獲得 Worker URL，例如：https://your-relay.yourname.workers.dev。
+
+### 2) 後端整合（最小改動）
+在 src/web/business/detail/app.py 的兩個 API 中（搜尋與電影詳細），計算 pi_url 與 params 後，插入以下切換邏輯：
+
+`python
+import os
+from urllib.parse import urlencode, quote
+
+worker = os.environ.get("CF_WORKER_RELAY_URL", "").strip()
+if worker:
+    target = f"{api_url}?{urlencode(params)}"
+    api_url = worker.rstrip("/") + "/relay?target=" + quote(target, safe="")
+    params = None  # 查詢字串已拼入 relay 的 target
+`
+
+之後沿用原本的 equests.get(api_url, params=params, headers=headers, timeout=15) 即可；若設定了環境變數，就會改打 Worker。
+
+參考定位：
+- 搜尋 API：src/web/business/detail/app.py:339 附近（api_url 設定之後）
+- 詳細 API：src/web/business/detail/app.py:465 附近（api_url 設定之後）
+
+### 3) Render 環境變數
+- 名稱：CF_WORKER_RELAY_URL
+- 值：你的 Worker URL（例：https://your-relay.yourname.workers.dev）
+- 重新部署服務。
+
+### 4) 驗證與回退
+驗證：
+- 直接打 Worker：GET /relay?target=<encodeURIComponent(原始上游URL含參數)>，期待 200（不是 403）。
+- 後端 API：/api/search-movie?keyword=阿凡、/api/movie-detail/<id> 應恢復 200。
+
+回退：
+- 移除或清空 CF_WORKER_RELAY_URL，後端會回到直連（或保留 cloudscraper 作為備援）。
+
+### 5) 既有 CORS 與繞道備援
+- CORS 已限定到前端網域 https://cinpos-boxoffice-web.onrender.com，並暴露 Content-Disposition 供檔名讀取；保留本機 http://localhost:3000/127.0.0.1:3000。
+- 若 Worker 仍被擋，可啟用「真實瀏覽器繞道」：Playwright/Selenium（headless 瀏覽器），能通過 JS 挑戰，但維運成本較高。
+
+---
+
+## 喚醒語（貼到 ChatGPT 讓它延續處理）
+請延續：我已在 Flask 專案加入 Cloudflare Worker 中繼設計，環境變數名稱 CF_WORKER_RELAY_URL，兩個上游 API（搜尋與詳細）會把 pi_url+params 拼成 	arget 丟給 GET /relay?target=...。請協助：
+- 產出正式的 Worker 專案（wrangler.toml、部署腳本）
+- 在後端加入 403/429 → 502 的友善 JSON 映射（含 code）
+- 規劃 60–300 秒快取策略（Worker 或後端）
+- 若 Worker 仍 403，改用 Playwright/Selenium 實作最低可行範例（含部署建議）

@@ -26,7 +26,17 @@ from utils.validators import validate_gov_id, validate_export_format
 # 初始化 Flask 應用
 app = Flask(__name__)
 app.config.from_object(Config)
-CORS(app)
+# Restrict CORS to API routes and expose filename header for downloads
+CORS(
+    app,
+    resources={r"/api/*": {"origins": [
+        "https://cinpos-boxoffice-web.onrender.com",
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ]}},
+    expose_headers=["Content-Disposition"],
+    methods=["GET", "POST", "OPTIONS"],
+)
 
 # 初始化服務
 movie_service = MovieService()
@@ -760,3 +770,60 @@ if __name__ == "__main__":
 
     # 啟動應用
     app.run(host="0.0.0.0", port=5000, debug=app.config["DEBUG"])
+
+# ============= Upstream Fetch Helper =============
+# ????????? cloudscraper????? requests????????? cookies???????
+def fetch_with_workaround(api_url, params, headers):
+    import time, random
+    import requests
+    try:
+        import cloudscraper  # type: ignore
+        client = cloudscraper.create_scraper(
+            browser={"browser": "chrome", "platform": "windows", "desktop": True}
+        )
+        print("[INFO] cloudscraper ????????????? cookies...")
+        client.get("https://boxofficetw.tfai.org.tw/", timeout=10)
+    except Exception:
+        client = requests.Session()
+        print("[INFO] ?? requests.Session?????????? cookies...")
+        client.get("https://boxofficetw.tfai.org.tw/", timeout=10)
+
+    last_response = None
+    for attempt in range(2):
+        resp = client.get(api_url, params=params, headers=headers, timeout=15)
+        last_response = resp
+        print(f"[DEBUG] ???????: {resp.status_code}")
+        if resp.status_code in (403, 429):
+            time.sleep(random.uniform(0.6, 1.2))
+            continue
+        break
+
+    last_response.raise_for_status()
+    return last_response
+
+# Upstream fetch workaround helper
+# Prefer cloudscraper; fallback to requests. Visit homepage first; retry 403/429.
+
+def fetch_with_workaround(api_url, params, headers):
+    import time, random
+    import requests
+    try:
+        import cloudscraper  # type: ignore
+        client = cloudscraper.create_scraper(browser={"browser": "chrome", "platform": "windows", "desktop": True})
+        client.get("https://boxofficetw.tfai.org.tw/", timeout=10)
+    except Exception:
+        client = requests.Session()
+        client.get("https://boxofficetw.tfai.org.tw/", timeout=10)
+
+    last_response = None
+    for attempt in range(2):
+        resp = client.get(api_url, params=params, headers=headers, timeout=15)
+        last_response = resp
+        if resp.status_code in (403, 429):
+            time.sleep(random.uniform(0.6, 1.2))
+            continue
+        break
+
+    last_response.raise_for_status()
+    return last_response
+

@@ -47,6 +47,7 @@ BOXOFFICE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_weekly")
 
 # 政府公開票房資料（單一電影）
 BOXOFFICE_PERMOVIE_RAW = os.path.join(RAW_DIR, "boxoffice_permovie")
+BOXOFFICE_PERMOVIE_FULL = os.path.join(BOXOFFICE_PERMOVIE_RAW, "full")  # 完整資料（不含週次標籤，自動覆蓋）
 BOXOFFICE_PERMOVIE_PROCESSED = os.path.join(PROCESSED_DIR, "boxoffice_permovie")
 
 # 政府公開電影資料（單一電影）

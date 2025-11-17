@@ -1,0 +1,132 @@
+{
+  "data": {
+    "movieId": "30676",
+    "name": "我們意外的勇氣",
+    "originalName": "Unexpected Courage",
+    "region": "中華民國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-02",
+    "publisher": "華文創股份有限公司",
+    "amountInThisWeek": 5598231.0,
+    "totalAmount": 5598231.0,
+    "filmClasses": null,
+    "filmLength": 6600,
+    "bannerStoredName": null,
+    "filmMembers": [],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 0,
+        "totalTickets": 0,
+        "rate": 0,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 61560.0,
+        "tickets": 254,
+        "totalAmount": 61560.0,
+        "totalTickets": 254,
+        "rate": 0,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 1571915.0,
+        "tickets": 5929,
+        "totalAmount": 1633475.0,
+        "totalTickets": 6183,
+        "rate": 24.534681611435996,
+        "theaterCount": 78
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 973524.0,
+        "tickets": 3581,
+        "totalAmount": 2606999.0,
+        "totalTickets": 9764,
+        "rate": -0.38067643606683566,
+        "theaterCount": 78
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": 319563.0,
+        "tickets": 1197,
+        "totalAmount": 2926562.0,
+        "totalTickets": 10961,
+        "rate": -0.6717461510964291,
+        "theaterCount": 42
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 36920.0,
+        "tickets": 142,
+        "totalAmount": 36920.0,
+        "totalTickets": 142,
+        "rate": 0,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 36920.0,
+        "totalTickets": 142,
+        "rate": -1,
+        "theaterCount": 0
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 119280.0,
+        "tickets": 476,
+        "totalAmount": 156200.0,
+        "totalTickets": 618,
+        "rate": 0,
+        "theaterCount": 2
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 2183741.0,
+        "tickets": 8183,
+        "totalAmount": 2339941.0,
+        "totalTickets": 8801,
+        "rate": 17.30768779342723,
+        "theaterCount": 79
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 1882684.0,
+        "tickets": 7111,
+        "totalAmount": 4222625.0,
+        "totalTickets": 15912,
+        "rate": -0.13786296085479002,
+        "theaterCount": 78
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 1375606.0,
+        "tickets": 4765,
+        "totalAmount": 5598231.0,
+        "totalTickets": 20677,
+        "rate": -0.26933781771131005,
+        "theaterCount": 75
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

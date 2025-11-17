@@ -1,0 +1,157 @@
+{
+  "data": {
+    "movieId": "31159",
+    "name": "皇家保姆亞瑟",
+    "originalName": "OUT OF THE NEST",
+    "region": "泰國",
+    "rating": "普遍級",
+    "classes": null,
+    "releaseDate": "2025-10-03",
+    "publisher": "可樂藝術文創股份有限公司",
+    "amountInThisWeek": 165385.0,
+    "totalAmount": 165385.0,
+    "filmClasses": null,
+    "filmLength": 5100,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 82511,
+        "typeName": "導演",
+        "name": "阿圖羅a赫南德茲",
+        "originalName": "阿圖羅A赫南德茲 Arturo A. Hernandez"
+      },
+      {
+        "id": 82512,
+        "typeName": "導演",
+        "name": "安德魯戈登",
+        "originalName": "Andrew Gordon"
+      },
+      {
+        "id": 82514,
+        "typeName": "導演",
+        "name": "維拉帕特拉吉​​納納溫",
+        "originalName": "Veerapatra Jinanavin"
+      },
+      {
+        "id": 82515,
+        "typeName": "導演",
+        "name": "傑夫舒",
+        "originalName": "Jeff Schu"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 83803.0,
+        "tickets": 317,
+        "totalAmount": 83803.0,
+        "totalTickets": 317,
+        "rate": 0,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 20065.0,
+        "tickets": 86,
+        "totalAmount": 103868.0,
+        "totalTickets": 403,
+        "rate": -0.7605694306886388,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 5930.0,
+        "tickets": 26,
+        "totalAmount": 109798.0,
+        "totalTickets": 429,
+        "rate": -0.7044605033640667,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 6050.0,
+        "tickets": 26,
+        "totalAmount": 115848.0,
+        "totalTickets": 455,
+        "rate": 0.02023608768971332,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 115848.0,
+        "totalTickets": 455,
+        "rate": -1,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-07~2025-11-09",
+        "amount": null,
+        "tickets": null,
+        "totalAmount": 115848.0,
+        "totalTickets": 455,
+        "rate": 0,
+        "theaterCount": 0
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 83803.0,
+        "tickets": 317,
+        "totalAmount": 83803.0,
+        "totalTickets": 317,
+        "rate": 0,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 66212.0,
+        "tickets": 261,
+        "totalAmount": 150015.0,
+        "totalTickets": 578,
+        "rate": -0.20990895314010238,
+        "theaterCount": 18
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 7890.0,
+        "tickets": 36,
+        "totalAmount": 157905.0,
+        "totalTickets": 614,
+        "rate": -0.880837310457319,
+        "theaterCount": 6
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 6930.0,
+        "tickets": 30,
+        "totalAmount": 164835.0,
+        "totalTickets": 644,
+        "rate": -0.12167300380228137,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 550.0,
+        "tickets": 2,
+        "totalAmount": 165385.0,
+        "totalTickets": 646,
+        "rate": -0.9206349206349206,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-11-03~2025-11-09",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 165385.0,
+        "totalTickets": 646,
+        "rate": -1,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

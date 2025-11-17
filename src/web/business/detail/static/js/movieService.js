@@ -35,7 +35,7 @@ const movieService = {
      */
     async getMovieDetail(movieId) {
         try {
-            const response = await fetch(`/api/movie-detail/${movieId}`, {
+            const response = await fetch(`/api/movie/info/${movieId}`, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json'

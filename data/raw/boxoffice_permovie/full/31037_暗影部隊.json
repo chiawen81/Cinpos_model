@@ -1,0 +1,145 @@
+{
+  "data": {
+    "movieId": "31037",
+    "name": "暗影部隊",
+    "originalName": "SHADOW FORCE",
+    "region": "美國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-03",
+    "publisher": "車庫娛樂股份有限公司",
+    "amountInThisWeek": 1264642.0,
+    "totalAmount": 1264642.0,
+    "filmClasses": null,
+    "filmLength": 6180,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 14234,
+        "typeName": "演員",
+        "name": "馬克史壯",
+        "originalName": "Mark Strong (Ⅱ)"
+      },
+      {
+        "id": 14768,
+        "typeName": "演員",
+        "name": "歐馬希",
+        "originalName": "Omar Sy"
+      },
+      {
+        "id": 25767,
+        "typeName": "導演",
+        "name": "喬卡納漢",
+        "originalName": "Joe Carnahan"
+      },
+      {
+        "id": 25767,
+        "typeName": "編劇",
+        "name": "喬卡納漢",
+        "originalName": "Joe Carnahan"
+      },
+      {
+        "id": 82523,
+        "typeName": "演員",
+        "name": "凱莉華盛頓",
+        "originalName": "Kerry Washington"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-03~2025-10-05",
+        "amount": 700050.0,
+        "tickets": 2859,
+        "totalAmount": 700050.0,
+        "totalTickets": 2859,
+        "rate": 0,
+        "theaterCount": 62
+      },
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 39547.0,
+        "tickets": 164,
+        "totalAmount": 739597.0,
+        "totalTickets": 3023,
+        "rate": -0.9435083208342261,
+        "theaterCount": 26
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 3070.0,
+        "tickets": 16,
+        "totalAmount": 742667.0,
+        "totalTickets": 3039,
+        "rate": -0.9223708498748325,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 1570.0,
+        "tickets": 7,
+        "totalAmount": 744237.0,
+        "totalTickets": 3046,
+        "rate": -0.48859934853420195,
+        "theaterCount": 1
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 0.0,
+        "tickets": 0,
+        "totalAmount": 744237.0,
+        "totalTickets": 3046,
+        "rate": -1,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-09-29~2025-10-05",
+        "amount": 700050.0,
+        "tickets": 2859,
+        "totalAmount": 700050.0,
+        "totalTickets": 2859,
+        "rate": 0,
+        "theaterCount": 62
+      },
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 524963.0,
+        "tickets": 2175,
+        "totalAmount": 1225013.0,
+        "totalTickets": 5034,
+        "rate": -0.25010642096993074,
+        "theaterCount": 62
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 36739.0,
+        "tickets": 169,
+        "totalAmount": 1261752.0,
+        "totalTickets": 5203,
+        "rate": -0.9300160201766601,
+        "theaterCount": 27
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 2450.0,
+        "tickets": 11,
+        "totalAmount": 1264202.0,
+        "totalTickets": 5214,
+        "rate": -0.933313372710199,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 440.0,
+        "tickets": 2,
+        "totalAmount": 1264642.0,
+        "totalTickets": 5216,
+        "rate": -0.8204081632653061,
+        "theaterCount": 1
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

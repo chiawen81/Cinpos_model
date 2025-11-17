@@ -27,6 +27,7 @@ from datetime import date, datetime
 # 共用模組
 from common.path_utils import (
     BOXOFFICE_PERMOVIE_RAW,
+    BOXOFFICE_PERMOVIE_FULL,
     BOXOFFICE_PROCESSED,
 )
 from common.network_utils import get_default_headers
@@ -107,6 +108,9 @@ def fetch_boxoffice_permovie_from_weekly(reference_date: date | None = None) -> 
     output_dir = os.path.join(BOXOFFICE_PERMOVIE_RAW, YEAR_LABEL, WEEK_LABEL)
     ensure_dir(output_dir)
 
+    # 建立 full 資料夾（用於存放最新的完整資料，不含週次標籤）
+    ensure_dir(BOXOFFICE_PERMOVIE_FULL)
+
     # ------------------------------------------------
     # 開始逐部電影抓取
     # ------------------------------------------------
@@ -122,10 +126,15 @@ def fetch_boxoffice_permovie_from_weekly(reference_date: date | None = None) -> 
         # 抓取單部電影資料
         crawler_data = fetch_boxoffice_data(movie_id)
 
-        # 儲存成 JSON
-        file_name = f"{movie_id}_{clean_movie_name}_{WEEK_LABEL}.json"
-        save_json(crawler_data, output_dir, file_name)
-        print(f"✅ 已儲存：{file_name}")
+        # 1. 儲存到週次資料夾（含週次標籤）
+        file_name_with_week = f"{movie_id}_{clean_movie_name}_{WEEK_LABEL}.json"
+        save_json(crawler_data, output_dir, file_name_with_week)
+
+        # 2. 額外儲存到 full 資料夾（不含週次標籤，會自動覆蓋舊資料）
+        file_name_full = f"{movie_id}_{clean_movie_name}.json"
+        save_json(crawler_data, BOXOFFICE_PERMOVIE_FULL, file_name_full)
+
+        print(f"✅ 已儲存：{file_name_with_week} (週次) & {file_name_full} (full)")
         success_crawler_num += 1
 
         time.sleep(SLEEP_INTERVAL)

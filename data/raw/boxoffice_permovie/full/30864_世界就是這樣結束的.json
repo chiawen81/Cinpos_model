@@ -1,0 +1,139 @@
+{
+  "data": {
+    "movieId": "30864",
+    "name": "世界就是這樣結束的",
+    "originalName": "The End",
+    "region": "英國",
+    "rating": "輔12級",
+    "classes": null,
+    "releaseDate": "2025-10-09",
+    "publisher": "東昊影業有限公司",
+    "amountInThisWeek": 358813.0,
+    "totalAmount": 358813.0,
+    "filmClasses": null,
+    "filmLength": 8880,
+    "bannerStoredName": null,
+    "filmMembers": [
+      {
+        "id": 25735,
+        "typeName": "演員",
+        "name": "蒂妲絲雲頓",
+        "originalName": "Tilda Swinton"
+      },
+      {
+        "id": 16705,
+        "typeName": "演員",
+        "name": "喬治麥凱",
+        "originalName": "George MacKay"
+      },
+      {
+        "id": 82530,
+        "typeName": "演員",
+        "name": "tim mcinnerny",
+        "originalName": "Tim McInnerny"
+      },
+      {
+        "id": 82535,
+        "typeName": "編劇",
+        "name": "約書亞奧本海默",
+        "originalName": "Joshua Oppenheimer"
+      },
+      {
+        "id": 14834,
+        "typeName": "演員",
+        "name": "麥可夏儂",
+        "originalName": "Michael Shannon"
+      },
+      {
+        "id": 82539,
+        "typeName": "編劇",
+        "name": "雷斯蒙‧海斯德柏格",
+        "originalName": "Rasmus Heisterberg"
+      },
+      {
+        "id": 82535,
+        "typeName": "導演",
+        "name": "約書亞奧本海默",
+        "originalName": "Joshua Oppenheimer"
+      }
+    ],
+    "weekends": [
+      {
+        "date": "2025-10-10~2025-10-12",
+        "amount": 107233.0,
+        "tickets": 458,
+        "totalAmount": 107233.0,
+        "totalTickets": 458,
+        "rate": 0,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-10-17~2025-10-19",
+        "amount": 115800.0,
+        "tickets": 326,
+        "totalAmount": 223033.0,
+        "totalTickets": 784,
+        "rate": 0.07989145132561805,
+        "theaterCount": 8
+      },
+      {
+        "date": "2025-10-24~2025-10-26",
+        "amount": 3190.0,
+        "tickets": 13,
+        "totalAmount": 226223.0,
+        "totalTickets": 797,
+        "rate": -0.9724525043177893,
+        "theaterCount": 3
+      },
+      {
+        "date": "2025-10-31~2025-11-02",
+        "amount": 260.0,
+        "tickets": 1,
+        "totalAmount": 226483.0,
+        "totalTickets": 798,
+        "rate": -0.9184952978056427,
+        "theaterCount": 1
+      }
+    ],
+    "weeks": [
+      {
+        "date": "2025-10-06~2025-10-12",
+        "amount": 139838.0,
+        "tickets": 605,
+        "totalAmount": 139838.0,
+        "totalTickets": 605,
+        "rate": 0,
+        "theaterCount": 14
+      },
+      {
+        "date": "2025-10-13~2025-10-19",
+        "amount": 187235.0,
+        "tickets": 650,
+        "totalAmount": 327073.0,
+        "totalTickets": 1255,
+        "rate": 0.3389422045509804,
+        "theaterCount": 16
+      },
+      {
+        "date": "2025-10-20~2025-10-26",
+        "amount": 21985.0,
+        "tickets": 92,
+        "totalAmount": 349058.0,
+        "totalTickets": 1347,
+        "rate": -0.8825807140758939,
+        "theaterCount": 7
+      },
+      {
+        "date": "2025-10-27~2025-11-02",
+        "amount": 9755.0,
+        "tickets": 47,
+        "totalAmount": 358813.0,
+        "totalTickets": 1394,
+        "rate": -0.5562883784398454,
+        "theaterCount": 4
+      }
+    ]
+  },
+  "success": true,
+  "message": ""
+}

@@ -19,7 +19,11 @@
       "Bash(uv remove:*)",
       "Bash(mkdir:*)",
       "Bash(dir \"C:\\Users\\User\\Desktop\\Projects\\Cinpos_model\\data\\raw\\boxoffice_permovie\\2025\" /B)",
-      "Bash(timeout 30 bash:*)"
+      "Bash(timeout 30 bash:*)",
+      "Bash(dir:*)",
+      "Bash(git mv:*)",
+      "Bash(timeout 30 uv run python:*)",
+      "Bash(timeout 60 uv run:*)"
     ],
     "deny": [],
     "ask": []

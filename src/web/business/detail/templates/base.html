@@ -10,8 +10,14 @@
     <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/logo-w-gradient.svg') }}">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/variables.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/utilities.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ui-kits.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/form-table.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/package.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/others.css') }}">
 
     <!-- Plotly.js for charts -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -26,9 +32,8 @@
             <aside class="sidebar">
                 <div class="sidebar-header">
                     <div class="sidebar-logo">
-                        <a href="{{ url_for('web.index') }}" style="display: flex; cursor: pointer;">
-                            <img src="{{ url_for('static', filename='img/logo-w-gradient.svg') }}" alt="CinePredict"
-                                style="max-width: 150px; height: auto;">
+                        <a href="{{ url_for('web.index') }}" class="sidebar-logo-link">
+                            <img src="{{ url_for('static', filename='img/logo-w-gradient.svg') }}" alt="CinePredict">
                         </a>
                     </div>
                     <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">
@@ -67,8 +72,8 @@
                     </ul>
                 </nav>
 
-                <div style="margin-top: auto; padding-top: 2rem; border-top: 1px solid rgba(218, 218, 255, 0.1);">
-                    <p style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.5); text-align: center;">
+                <div class="sidebar-footer">
+                    <p class="sidebar-footer-text">
                         © 2025 CinePredict<br>
                         AI-Powered Box Office Prediction
                     </p>
@@ -83,8 +88,10 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+    <!-- 共用模組 -->
+    <script src="{{ url_for('static', filename='js/common/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/common/charts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/common/tracking.js') }}"></script>
 
     {% block extra_js %}{% endblock %}
 </body>

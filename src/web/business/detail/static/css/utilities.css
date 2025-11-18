@@ -1,0 +1,200 @@
+/*
+工具類別樣式表
+說明: 定義可重複使用的工具類別
+*/
+
+/* ============= 位置控制 ============= */
+.display-flex {
+    display: flex;
+}
+
+.display-row {
+    flex-direction: row;
+}
+
+.display-column {
+    flex-direction: column;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+/* ============= 文字工具類別 ============= */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-brand-primary {
+    color: var(--brand-primary);
+}
+
+.text-brane-secondary {
+    color: var(--brand-secondary);
+}
+
+.text-danger-light {
+    color: var(--danger-light);
+}
+
+.text-warning {
+    color: var(--warning);
+}
+
+.text-success {
+    color: var(--success);
+}
+
+/* ============= 間距工具類別 ============= */
+.mt-1 {
+    margin-top: var(--spacing-xs);
+}
+
+.mt-2 {
+    margin-top: var(--spacing-sm);
+}
+
+.mt-3 {
+    margin-top: var(--spacing-md);
+}
+
+.mt-4 {
+    margin-top: var(--spacing-lg);
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-1 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.mb-2 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mb-3 {
+    margin-bottom: var(--spacing-md);
+}
+
+.mb-4 {
+    margin-bottom: var(--spacing-lg);
+}
+
+.ml-1 {
+    margin-left: var(--spacing-xs);
+}
+
+.ml-2 {
+    margin-left: var(--spacing-sm);
+}
+
+.mr-xxs {
+    margin-right: var(--spacing-xxs);
+}
+
+.p-1 {
+    padding: var(--spacing-xs);
+}
+
+.p-2 {
+    padding: var(--spacing-sm);
+}
+
+.p-3 {
+    padding: var(--spacing-md);
+}
+
+.p-4 {
+    padding: var(--spacing-lg);
+}
+
+/* ============= 其他工具類別 ============= */
+.w-100 {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.report-divider {
+    background-color: var(--bg-light);
+    margin: 10px auto;
+    height: 1px;
+    border-radius: 12px;
+}
+
+/* ============= 動畫 ============= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}

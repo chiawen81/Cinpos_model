@@ -1,0 +1,84 @@
+/*
+基礎樣式表
+說明: 定義基礎重置、全域樣式、漸層背景
+*/
+
+/* ============= 基礎重置 ============= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC',
+        'Microsoft JhengHei', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ============= 漸層背景 ============= */
+.gradient-bg {
+    background: linear-gradient(135deg,
+            var(--bg-dark) 0%,
+            rgba(156, 109, 255, 0.1) 50%,
+            rgba(113, 221, 255, 0.1) 100%);
+    min-height: 100vh;
+}
+
+/* ============= 文字樣式 ============= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--brand-primary);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ============= 捲軸樣式 ============= */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-primary);
+}

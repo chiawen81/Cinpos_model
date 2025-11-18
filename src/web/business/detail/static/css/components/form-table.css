@@ -1,0 +1,237 @@
+/*
+表單與表格樣式表
+說明: 定義表單、搜尋、表格相關樣式
+*/
+
+/* ============= 輸入欄位 ============= */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--bg-medium);
+    border: 1px solid rgba(218, 218, 255, 0.2);
+    border-radius: var(--radius-small);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 10px rgba(156, 109, 255, 0.3);
+}
+
+/* ============= 表單元素 ============= */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+}
+
+.form-select {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-light);
+    border: 1px solid rgba(218, 218, 255, 0.2);
+    border-radius: var(--radius-small);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px rgba(156, 109, 255, 0.1);
+}
+
+.form-select option:disabled {
+    color: var(--text-muted);
+}
+
+/* ============= 搜尋容器 ============= */
+.search-container {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 16px;
+    background: var(--bg-light);
+    border: 1px solid rgba(218, 218, 255, 0.2);
+    border-radius: var(--radius-small);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px rgba(156, 109, 255, 0.1);
+}
+
+.search-dropdown {
+    position: relative;
+    margin-top: var(--spacing-sm);
+    background: var(--bg-light);
+    border: 1px solid rgba(218, 218, 255, 0.2);
+    border-radius: var(--radius-small);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.search-result-item {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid rgba(218, 218, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background: rgba(156, 109, 255, 0.1);
+}
+
+.search-result-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.search-result-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.search-no-result {
+    padding: var(--spacing-md);
+    text-align: center;
+    color: var(--text-muted);
+}
+
+/* ============= 選中的電影資訊 ============= */
+.selected-movie-info {
+    padding: var(--spacing-md);
+    background: rgba(156, 109, 255, 0.05);
+    border: 1px solid rgba(156, 109, 255, 0.2);
+    border-radius: var(--radius-small);
+    margin-bottom: var(--spacing-md);
+}
+
+.movie-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.movie-basic-info {
+    gap: var(--spacing-xs);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* ============= 表格 ============= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-medium);
+    border-radius: var(--radius-medium);
+    overflow: hidden;
+}
+
+thead {
+    background: var(--bg-light);
+}
+
+th {
+    padding: var(--spacing-sm);
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    border-bottom: 2px solid rgba(218, 218, 255, 0.2);
+}
+
+td {
+    padding: var(--spacing-sm);
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(218, 218, 255, 0.1);
+    font-size: 0.875rem;
+}
+
+tbody tr:hover {
+    background: var(--hover-bg);
+}
+
+/* 預測數據行 */
+.prediction-row {
+    background: rgba(156, 109, 255, 0.05);
+}
+
+/* ============= 可編輯表格 ============= */
+.table-container {
+    margin-top: var(--spacing-md);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.table-header h4 {
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+.table-input {
+    width: 100%;
+    padding: 8px 12px;
+    background: var(--bg-light);
+    border: 1px solid rgba(218, 218, 255, 0.2);
+    border-radius: var(--radius-small);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.table-input:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 2px rgba(156, 109, 255, 0.1);
+}
+
+/* 移除 number input 的上下箭頭 */
+.table-input.integer-only::-webkit-inner-spin-button,
+.table-input.integer-only::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.table-input.integer-only {
+    -moz-appearance: textfield;
+}

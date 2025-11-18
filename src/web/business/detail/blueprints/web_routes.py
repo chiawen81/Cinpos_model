@@ -92,7 +92,7 @@ def predictions():
 @web_bp.route('/predict-new')
 def predict_new():
     """新電影預測頁面"""
-    return render_template('predict_new.html')
+    return render_template('predict.html')
 
 
 @web_bp.route('/reports')

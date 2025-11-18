@@ -1,0 +1,215 @@
+/*
+其他元件樣式表
+說明: 定義警告、提示、載入動畫、收合區塊等元件
+*/
+
+/* ============= 警告提示 ============= */
+.alert {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-small);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    animation: slideInRight 0.5s ease;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg,
+            rgba(255, 165, 0, 0.1),
+            rgba(255, 165, 0, 0.2));
+    border: 1px solid var(--warning);
+    color: var(--warning);
+}
+
+.alert-danger {
+    background: linear-gradient(135deg,
+            rgba(255, 107, 107, 0.1),
+            rgba(255, 107, 107, 0.2));
+    border: 1px solid var(--danger);
+    color: var(--danger);
+}
+
+.alert-success {
+    background: linear-gradient(135deg,
+            rgba(81, 207, 102, 0.1),
+            rgba(81, 207, 102, 0.2));
+    border: 1px solid var(--success);
+    color: var(--success);
+}
+
+.alert-info {
+    background: linear-gradient(135deg,
+            rgba(113, 221, 255, 0.1),
+            rgba(113, 221, 255, 0.2));
+    border: 1px solid rgba(113, 221, 255, 0.5);
+    color: rgba(113, 221, 255, 0.9);
+}
+
+.alert-icon {
+    font-size: 1.5rem;
+}
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.alert-message {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+/* ============= 載入動畫 ============= */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(156, 109, 255, 0.2);
+    border-top-color: var(--brand-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ============= 進度條 ============= */
+.progress {
+    height: 8px;
+    background: rgba(218, 218, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: var(--spacing-xs) 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--brand-primary), var(--brand-secondary));
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+/* ============= 工具提示 ============= */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-content {
+    visibility: hidden;
+    background: var(--bg-light);
+    color: var(--text-primary);
+    text-align: center;
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-small);
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 0.875rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ============= 收合區塊 ============= */
+.collapsible-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.collapsible-section.open {
+    max-height: 500px;
+}
+
+.btn-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+    border: 1px solid rgba(218, 218, 255, 0.1);
+    background: transparent;
+    color: var(--text-muted);
+    border-radius: var(--radius-small);
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.btn-collapse:hover {
+    background: rgba(156, 109, 255, 0.1);
+    color: var(--text-secondary);
+    border-color: rgba(156, 109, 255, 0.3);
+}
+
+.btn-collapse .collapse-icon {
+    transition: transform 0.3s ease;
+}
+
+.btn-collapse.open .collapse-icon {
+    transform: rotate(180deg);
+}
+
+.btn-collapse.open .collapse-text::before {
+    content: '收合';
+}
+
+.btn-collapse:not(.open) .collapse-text::before {
+    content: '展開更多';
+}
+
+/* ============= 驗證訊息 ============= */
+.validation-message {
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-small);
+    font-size: 0.875rem;
+}
+
+.validation-message.error {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid var(--danger);
+    color: var(--danger);
+}
+
+.validation-message.success {
+    background: rgba(81, 207, 102, 0.1);
+    border: 1px solid var(--success);
+    color: var(--success);
+}

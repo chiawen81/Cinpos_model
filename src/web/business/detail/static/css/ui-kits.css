@@ -1,0 +1,317 @@
+/*
+UI 元件樣式表
+說明: 定義連結、篩選標籤、標籤、按鈕、卡片、統計卡片等 UI 元件
+*/
+
+/* ============= 連結 ============= */
+a {
+    color: var(--brand-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--brand-primary);
+    text-shadow: 0 0 10px rgba(156, 109, 255, 0.5);
+}
+
+.movie-link {
+    color: var(--brand-secondary);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.movie-link:hover,
+.movie-link:active {
+    color: var(--brand-secondary);
+}
+
+/* ============= 按鈕 ============= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    height: 42px;
+    border-radius: var(--radius-small);
+    border: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(156, 109, 255, 0.4);
+}
+
+.btn-secondary {
+    background: #8786FE1A;
+    border: 1px solid #8786FE;
+    color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(135, 134, 254, 0.4);
+}
+
+.btn-outline-primary {
+    background: transparent;
+}
+
+.btn-danger {
+    background: var(--danger-light);
+    color: var(--text-primary);
+}
+
+.btn-success {
+    background: var(--success);
+    color: var(--text-primary);
+}
+
+.btn-danger-dark {
+    background: var(--danger-dark);
+    color: var(--danger-light);
+}
+
+.btn-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* 按鈕尺寸 */
+.btn-sm {
+    height: 36px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+}
+
+.btn-m {
+    padding: 12px 24px;
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+}
+
+.btn-xl {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+}
+
+/* 追蹤按鈕（首頁表格專用） */
+.btn-track-text {
+    padding: 6px 12px;
+    background: transparent;
+    border: none;
+    color: var(--brand-primary);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-track-text:hover {
+    color: var(--brand-primary);
+    opacity: 0.8;
+}
+
+.btn-track-text.tracked {
+    color: var(--brand-primary);
+}
+
+/* ============= 卡片元件 ============= */
+.card {
+    background: var(--bg-medium);
+    border-radius: var(--radius-medium);
+    padding: var(--spacing-md);
+    border: 1px solid rgba(218, 218, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid rgba(218, 218, 255, 0.1);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0;
+}
+
+.card-body {
+    color: var(--text-secondary);
+}
+
+/* ============= 統計卡片 ============= */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--bg-medium), var(--bg-light));
+    border-radius: var(--radius-medium);
+    padding: var(--spacing-md);
+    border: 1px solid rgba(218, 218, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--brand-primary), var(--brand-secondary));
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+}
+
+.stat-change {
+    font-size: 0.875rem;
+    margin-top: var(--spacing-xs);
+}
+
+.stat-change.positive {
+    color: var(--success);
+}
+
+.stat-change.negative {
+    color: var(--danger);
+}
+
+/* ============= 資訊列表 ============= */
+.info-list {
+    list-style: none;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid rgba(218, 218, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background: rgba(218, 218, 255, 0.05);
+    padding-left: calc(var(--spacing-sm) + 4px);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.info-value {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* ============= 標籤 ============= */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-primary {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+    color: var(--text-primary);
+}
+
+.badge-success {
+    background: transparent;
+    color: var(--success);
+}
+
+.badge-warning {
+    background: transparent;
+    color: var(--warning);
+}
+
+.badge-danger {
+    background: transparent;
+    color: var(--danger-light);
+}
+
+/* ============= 篩選標籤 ============= */
+.filter-tabs {
+    display: flex;
+    gap: var(--spacing-xs);
+    background: rgba(218, 218, 255, 0.05);
+    padding: 4px;
+    border-radius: var(--radius-small);
+}
+
+.filter-tab {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: var(--radius-small);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-tab:hover {
+    background: var(--hover-bg);
+    color: var(--text-secondary);
+}
+
+.filter-tab.active {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+    color: var(--text-primary);
+    box-shadow: 0 2px 8px rgba(156, 109, 255, 0.3);
+}
+
+/* RWD - 手機版篩選標籤 */
+@media (max-width: 768px) {
+    .filter-tabs {
+        flex-wrap: wrap;
+    }
+
+    .filter-tab {
+        flex: 1;
+        min-width: fit-content;
+    }
+}

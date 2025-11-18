@@ -22,7 +22,7 @@
         </div>
 
         <!-- 搜尋結果下拉 -->
-        <div id="searchDropdown" class="search-dropdown" style="display: none;">
+        <div id="searchDropdown" class="search-dropdown hidden">
             <!-- 動態產生搜尋結果 -->
         </div>
     </div>
@@ -38,7 +38,7 @@
     </div>
     <div class="card-body">
         <!-- 電影資訊顯示 -->
-        <div id="selectedMovieInfo" class="selected-movie-info" style="display: none;">
+        <div id="selectedMovieInfo" class="selected-movie-info hidden">
             <div class="movie-info-header">
                 <h4 id="selectedMovieTitle"></h4>
                 <!-- <div>
@@ -126,7 +126,7 @@
 </div>
 
 <!-- 預測結果區塊 -->
-<div class="card" id="predictionResults" style="display: none;">
+<div class="card hidden" id="predictionResults">
     <div class="card-header">
         <h3 class="card-title">預測結果</h3>
         <div>
@@ -159,7 +159,7 @@
 </div>
 
 <!-- 票房趨勢圖表 -->
-<div class="chart-container" id="predictionChart" style="display: none;">
+<div class="chart-container hidden" id="predictionChart">
     <div class="chart-header">
         <h3 class="chart-title">票房趨勢預測</h3>
     </div>
@@ -169,8 +169,8 @@
 {% endblock %}
 
 {% block extra_js %}
-<!-- 先載入 service 層 -->
-<script src="{{ url_for('static', filename='js/movieService.js') }}"></script>
-<!-- 再載入頁面邏輯 -->
-<script src="{{ url_for('static', filename='js/predict.js') }}"></script>
+<!-- API Service 層 -->
+<script src="{{ url_for('static', filename='js/service/movieService.js') }}"></script>
+<!-- 預測頁專屬 -->
+<script src="{{ url_for('static', filename='js/pages/predict.js') }}"></script>
 {% endblock %}

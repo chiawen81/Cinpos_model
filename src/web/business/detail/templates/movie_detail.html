@@ -4,7 +4,7 @@
 
 {% block content %}
 <!-- 頁面標題 -->
-<div class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+<div class="mb-4 page-header">
     <div>
         <h1>{{ movie.title }}</h1>
         <p class="text-secondary">票房預測與趨勢分析</p>
@@ -188,7 +188,7 @@
 
                 <!-- 預測數據 -->
                 {% for pred in predictions %}
-                <tr style="background: rgba(156, 109, 255, 0.05);">
+                <tr class="prediction-row">
                     <td>第{{ pred.week }}週</td>
                     <td><span class="badge badge-primary">預測</span></td>
                     <td>{{ pred.predicted_boxoffice | format_currency }}</td>
@@ -222,7 +222,8 @@
 {% endblock %}
 
 {% block extra_js %}
-<script src="{{ url_for('static', filename='js/movie_detail.js') }}"></script>
+<!-- 電影詳細頁專屬 -->
+<script src="{{ url_for('static', filename='js/pages/movie_detail.js') }}"></script>
 <script>
     // 初始化圖表
     document.addEventListener('DOMContentLoaded', function () {

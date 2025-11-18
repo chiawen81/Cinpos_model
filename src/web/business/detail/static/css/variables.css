@@ -1,0 +1,50 @@
+/*
+CSS 變數定義
+說明: 定義專案中使用的色彩、尺寸、間距等變數
+*/
+
+:root {
+    /* 主要色彩 */
+    --brand-primary: #9C6DFF;
+    --brand-secondary: #71DDFF;
+    --accent-color: #DADAFF;
+
+    /* 背景色 */
+    --bg-dark: #1a1a1a;
+    --bg-medium: #2a2a2a;
+    --bg-light: #3a3a3a;
+
+    /* 文字顏色 */
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --text-muted: rgba(255, 255, 255, 0.6);
+
+    /* 狀態顏色 */
+    --success: #51CF66;
+    --warning: #FFA500;
+    --danger-light: #DD6A76;
+    --danger-dark: #36191E;
+    --info: var(--brand-secondary);
+
+    /* 互動效果 */
+    --hover-bg: rgba(155, 109, 255, 0.11);
+
+    /* 透明度 */
+    --opacity-low: 0.1;
+    --opacity-medium: 0.3;
+    --opacity-high: 0.8;
+    --opacity-full: 1.0;
+
+    /* 圓角 */
+    --radius-small: 12px;
+    --radius-medium: 16px;
+    --radius-large: 20px;
+
+    /* 間距 */
+    --spacing-xxs: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+}

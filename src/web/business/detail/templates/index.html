@@ -62,8 +62,8 @@
                     <td>NT$850萬</td>
                     <td>NT$1,050萬</td>
                     <td>NT$980萬</td>
-                    <td style="color: #FFA500;">-28%</td>
-                    <td style="color: #51CF66;">+7%</td>
+                    <td class="text-warning">-28%</td>
+                    <td class="text-success">+7%</td>
                     <td><span class="badge badge-warning">注意</span></td>
                     <td>
                         <button class="btn-track-text" data-gov-id="MOV001">
@@ -77,8 +77,8 @@
                     <td>NT$320萬</td>
                     <td>NT$380萬</td>
                     <td>NT$375萬</td>
-                    <td style="color: #51CF66;">-15%</td>
-                    <td style="color: #51CF66;">+1%</td>
+                    <td class="text-success">-15%</td>
+                    <td class="text-success">+1%</td>
                     <td><span class="badge badge-success">正常</span></td>
                     <td>
                         <button class="btn-track-text tracked" data-gov-id="MOV002">
@@ -93,5 +93,6 @@
 {% endblock %}
 
 {% block extra_js %}
-<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+<!-- 首頁專屬 -->
+<script src="{{ url_for('static', filename='js/pages/index.js') }}"></script>
 {% endblock %}

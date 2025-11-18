@@ -85,6 +85,12 @@
     color: var(--success);
 }
 
+/* ============= 容器尺寸類別 ============= */
+.w-100 {
+    width: 100px !important;
+}
+
+
 /* ============= 間距工具類別 ============= */
 .mt-1 {
     margin-top: var(--spacing-xs);

@@ -191,14 +191,14 @@ function updateMovieBasicInfo(movie, movieDetail) {
         filmLength = Math.round(movieDetail.filmLength / 60);
     } else if (movie.duration) {
         filmLength = movie.duration;
-    }
+    };
 
     // 取得分級
     const rating = (movieDetail && movieDetail.rating) || movie.rating || '-';
 
     // 取得電影 ID
     const movieId = (movieDetail && movieDetail.movieId) || movie.movieId || '-';
-    selectedMovieTitle.textContent += `｜${movie.originalName}｜ID:${movieId}`;
+    selectedMovieTitle.textContent += `｜${movieDetail.originalName}｜ID:${movieId}`;
 
     // 首週相關指標初始顯示為 "-"，等待資料清洗後由 recalculateFirstWeekMetrics() 更新
     // 這樣可以確保顯示的是清洗後的真實週次第一週的資料
@@ -314,13 +314,13 @@ function populateWeekData(weeks) {
         }
 
         newRow.innerHTML = `
-            <td><input type="number" class="table-input integer-only" name="week" value="${weekNumber}" min="1"></td>
-            <td><span class="active-week-display">${activeWeekDisplay}</span></td>
+            <td><input type="number" class="table-input integer-only text-center w-100 " name="week" value="${weekNumber}" min="1"></td>
+            <td><span class="active-week-display w-100 ">${activeWeekDisplay}</span></td>
             <td><span class="date-display">${dateDisplay}</span></td>
             <td><input type="number" class="table-input integer-only" name="boxoffice" placeholder="例: 12000000" value="${Math.round(boxoffice)}" min="0" step="1"></td>
             <td><input type="number" class="table-input integer-only" name="audience" placeholder="例: 40000" value="${Math.round(audience)}" min="0" step="1"></td>
             <td><input type="number" class="table-input integer-only" name="screens" placeholder="例: 150" value="${screens}" min="0" step="1"></td>
-            <td><button class="btn btn-danger-dark btn-sm">刪除</button></td>
+            <td><button class="btn btn-danger-dark">刪除</button></td>
         `;
 
         // 綁定刪除事件
@@ -378,8 +378,8 @@ clearSelection.addEventListener('click', () => {
         const newRow = document.createElement('tr');
         newRow.setAttribute('data-week', i);
         newRow.innerHTML = `
-            <td><input type="number" class="table-input integer-only" name="week" value="${i}" min="1"></td>
-            <td><span class="active-week-display">-</span></td>
+            <td><input type="number" class="table-input integer-only text-center w-100" name="week" value="${i}" min="1"></td>
+            <td><span class="active-week-display w-100">-</span></td>
             <td><span class="date-display">-</span></td>
             <td><input type="number" class="table-input integer-only" name="boxoffice" placeholder="例: 12000000" min="0" step="1"></td>
             <td><input type="number" class="table-input integer-only" name="audience" placeholder="例: 40000" min="0" step="1"></td>
@@ -409,8 +409,8 @@ addWeekButton.addEventListener('click', () => {
     const newRow = document.createElement('tr');
     newRow.setAttribute('data-week', nextWeek);
     newRow.innerHTML = `
-        <td><input type="number" class="table-input integer-only" name="week" value="${nextWeek}" min="1"></td>
-        <td><span class="active-week-display">-</span></td>
+        <td><input type="number" class="table-input integer-only text-center w-100 " name="week" value="${nextWeek}" min="1"></td>
+        <td><span class="active-week-display w-100 ">-</span></td>
         <td><span class="date-display">-</span></td>
         <td><input type="number" class="table-input integer-only" name="boxoffice" placeholder="例: 12000000" min="0" step="1"></td>
         <td><input type="number" class="table-input integer-only" name="audience" placeholder="例: 40000" min="0" step="1"></td>
@@ -435,14 +435,14 @@ function deleteRow(row) {
     updateDeleteButtons();
 }
 
-// 更新刪除按鈕狀態（第一列不可刪除）
+// 更新刪除按鈕狀態（前兩週不可刪除）
 function updateDeleteButtons() {
     const tbody = document.getElementById('weekDataTable');
     const rows = tbody.querySelectorAll('tr');
 
     rows.forEach((row, index) => {
         const deleteBtn = row.querySelector('.btn');
-        if (deleteBtn && index === 0) {
+        if (deleteBtn && (index === 0 || index === 1)) {
             deleteBtn.classList.add('btn-disabled');
             deleteBtn.disabled = true;
         } else if (deleteBtn) {

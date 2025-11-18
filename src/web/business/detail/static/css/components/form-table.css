@@ -164,7 +164,7 @@ thead {
 
 th {
     padding: var(--spacing-sm);
-    text-align: left;
+    text-align: center;
     font-weight: 600;
     color: var(--text-primary);
     font-size: 0.875rem;
@@ -176,10 +176,16 @@ td {
     color: var(--text-secondary);
     border-bottom: 1px solid rgba(218, 218, 255, 0.1);
     font-size: 0.875rem;
+    text-align: center;
 }
 
 tbody tr:hover {
     background: var(--hover-bg);
+}
+
+
+tbody tr td input {
+    text-align: right;
 }
 
 /* 預測數據行 */

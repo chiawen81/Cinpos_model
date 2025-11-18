@@ -25,7 +25,11 @@
       "Bash(timeout 30 uv run python:*)",
       "Bash(timeout 60 uv run:*)",
       "WebFetch(domain:cdn.plot.ly)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(if [ -f \"docs/for_developer/work_log/WORK_LOG_票房預測系統執行流程分析.md\" ])",
+      "Bash(then echo \"檔案存在\")",
+      "Bash(else echo \"檔案不存在\")",
+      "Bash(fi)"
     ],
     "deny": [],
     "ask": []

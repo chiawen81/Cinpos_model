@@ -143,6 +143,7 @@ class M1NewMoviePredictor:
                 predictions=predictions if i > 0 else None
             )
 
+            print("before特徵工程",week_data,movie_info,target_week,i)
             # 使用共用模組建立完整特徵字典
             features = BoxOfficeFeatureEngineer.build_prediction_features(
                 week_data=week_data,
@@ -151,16 +152,21 @@ class M1NewMoviePredictor:
                 use_predictions=(i > 0),
                 predictions=predictions if i > 0 else None
             )
+            print('after特徵工程- 準備餵給模型的預測資料:', features)
 
             # 進行預測
             predicted_boxoffice = self.predict_single_week(features)
 
+            # --------------------------------------------------
+            # TODO: 這裡改成用票房的衰退率去回推觀影人數、院線數
+            # --------------------------------------------------
             # 估算其他數值（觀影人數、院線數）
             predicted_audience = int(predicted_boxoffice / 300)  # 假設平均票價 300 元
 
             # 取得前一週的院線數
             prev_screens = lag_features.get('screens_week_1', 100)
             predicted_screens = max(int(prev_screens * 0.9), 20)  # 院線數衰退 10%
+            # ==================================================
 
             # 計算衰退率
             prev_boxoffice = lag_features.get('boxoffice_week_1', 0)

@@ -477,7 +477,7 @@ class PredictionService:
                 week_data=week_data[:i],  # 只使用到當前週之前的資料
                 movie_info=movie_info,
                 target_week=target_week,
-                use_predictions=False,
+                use_predictions=False,    # 下周以後的預測之後，會使用到預測值(即用預測得到的資料再進行預測)
                 predictions=None
             )
 

@@ -149,6 +149,9 @@ def search_movie():
                 print(f"Error reading {json_file}: {e}")
                 continue
 
+        # 載入電影詳細資料（用於取得片長、分級等資訊）
+        movieinfo_df = load_movieinfo_data()
+
         # 搜尋符合關鍵字的電影
         keyword_lower = keyword.lower()
         results = []
@@ -156,15 +159,36 @@ def search_movie():
         for movie_id, item in all_movies.items():
             name = item.get('name', '')
             if keyword_lower in name.lower():
+                # 預設值
+                film_length = 120
+                duration = 120
+                rating = ''
+                is_restricted = 0
+
+                # 嘗試從 movieInfo 中查詢詳細資訊
+                if movieinfo_df is not None:
+                    movie_row = movieinfo_df[movieinfo_df['gov_id'].astype(str) == str(movie_id)]
+                    if not movie_row.empty:
+                        movie = movie_row.iloc[0]
+                        # 取得片長（分鐘）
+                        if pd.notna(movie.get('film_length')):
+                            film_length = int(movie['film_length'])
+                            duration = film_length
+                        # 取得分級
+                        if pd.notna(movie.get('rating')):
+                            rating = str(movie['rating'])
+                            # 判斷是否為限制級
+                            is_restricted = 1 if '限制級' in rating or 'R' in rating else 0
+
                 results.append({
                     'movieId': movie_id,
                     'name': name,
                     'originalName': '',  # boxoffice_weekly 沒有原文片名
                     'releaseDate': item.get('releaseDate', ''),
-                    'duration': 120,  # 預設值，因為 boxoffice_weekly 沒有片長資訊
-                    'rating': '',  # boxoffice_weekly 沒有分級資訊
-                    'film_length': 120,
-                    'is_restricted': 0
+                    'duration': duration,
+                    'rating': rating,
+                    'film_length': film_length,
+                    'is_restricted': is_restricted
                 })
 
         return jsonify({'success': True, 'results': results})

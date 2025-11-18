@@ -5,8 +5,7 @@
  */
 
 // ============= 初始化 =============
-// 使用全域的 trackingManager 實例
-const trackingManager = window.trackingManager;
+// 使用全域的 trackingManager 實例（定義於 common/tracking.js）
 
 document.addEventListener('DOMContentLoaded', function() {
     initializeTrackingButtons();
@@ -36,7 +35,7 @@ function initializeTrackingButtons() {
  * 更新按鈕狀態
  */
 function updateButtonState(button, govId) {
-    const isTracked = trackingManager.isTracked(govId);
+    const isTracked = window.trackingManager.isTracked(govId);
 
     if (isTracked) {
         button.textContent = '取消追蹤';
@@ -57,7 +56,7 @@ function updateButtonState(button, govId) {
  * 處理追蹤切換
  */
 function handleTrackingToggle(button, govId) {
-    const newState = trackingManager.toggleTracking(govId);
+    const newState = window.trackingManager.toggleTracking(govId);
 
     // 更新按鈕狀態
     updateButtonState(button, govId);
@@ -84,7 +83,7 @@ function handleTrackingToggle(button, govId) {
  * 更新追蹤數量顯示
  */
 function updateTrackingCount() {
-    const trackingCount = trackingManager.trackedMovies.length;
+    const trackingCount = window.trackingManager.trackedMovies.length;
     const statValue = document.querySelector('.stats-grid .stat-card:nth-child(2) .stat-value');
     if (statValue) {
         statValue.textContent = trackingCount;
@@ -131,7 +130,7 @@ function filterMovies(filterType) {
 
             case 'tracked':
                 const govId = row.querySelector('.btn-track-text')?.getAttribute('data-gov-id');
-                shouldShow = govId && trackingManager.isTracked(govId);
+                shouldShow = govId && window.trackingManager.isTracked(govId);
                 break;
         }
 
@@ -191,7 +190,7 @@ function getNoResultsMessage(filterType) {
 
 // ============= 匯出功能 =============
 window.movieTracking = {
-    trackingManager,
+    trackingManager: window.trackingManager,
     updateButtonState,
     updateTrackingCount
 };

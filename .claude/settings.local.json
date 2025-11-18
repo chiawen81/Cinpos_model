@@ -23,7 +23,9 @@
       "Bash(dir:*)",
       "Bash(git mv:*)",
       "Bash(timeout 30 uv run python:*)",
-      "Bash(timeout 60 uv run:*)"
+      "Bash(timeout 60 uv run:*)",
+      "WebFetch(domain:cdn.plot.ly)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []

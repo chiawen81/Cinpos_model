@@ -21,7 +21,7 @@ from models.movie import BoxOfficePrediction
 from services.movie_service import MovieService
 from services.decline_warning_service import get_decline_warning_service
 from utils.box_office_utils import calculate_opening_strength
-from config import Config
+from config import Config, PREDICTION_MODEL_PATH
 
 
 class PredictionService:
@@ -32,8 +32,12 @@ class PredictionService:
         初始化預測服務
 
         Args:
-            model_path: 模型檔案路徑
+            model_path: 模型檔案路徑，若為 None 則使用 Config 中的預設路徑
         """
+        # 如果沒有指定模型路徑，使用 Config 中的預設路徑
+        if model_path is None:
+            model_path = PREDICTION_MODEL_PATH
+
         self.boxoffice_model = BoxOfficePredictionModel(model_path)
         self.audience_model = AudiencePredictionModel(model_path)
         self.movie_service = MovieService()

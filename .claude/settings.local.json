@@ -32,7 +32,9 @@
       "Bash(fi)",
       "Bash(timeout 60 bash:*)",
       "Bash(timeout 5 bash:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(if [ -f \"src/intro/專題一頁式介紹_C103第五組_v2.pdf\" ])",
+      "Bash(cp:*)"
     ],
     "deny": [],
     "ask": []

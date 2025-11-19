@@ -6,13 +6,17 @@
 import os
 from pathlib import Path
 
-# 專案根目錄
+# 專案根目錄（從 config.py -> detail/ -> business/ -> web/ -> src/ -> project_root/）
 BASE_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent
 
 # 資料路徑設定
 DATA_DIR = BASE_DIR / "data"
 MODEL_DIR = BASE_DIR / "saved_models"
 EXPORT_DIR = BASE_DIR / "exports"
+
+# 預測模型路徑（使用最新的模型）
+PREDICTION_MODEL_PATH = PROJECT_ROOT / "data" / "ML_boxoffice" / "phase4_models" / "M1" / "M1_20251119_111826"
 
 # Flask 設定
 class Config:

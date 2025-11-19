@@ -3,13 +3,14 @@
 說明: 封裝機器學習模型，提供預測功能
 """
 
-import pickle
+import joblib
 import numpy as np
 import pandas as pd
 from typing import List, Dict, Optional, Tuple
 from pathlib import Path
 import lightgbm as lgb
 from sklearn.linear_model import LinearRegression
+from utils.box_office_utils import calculate_decline_rate
 
 class BoxOfficePredictionModel:
     """票房預測模型封裝"""
@@ -31,31 +32,42 @@ class BoxOfficePredictionModel:
     def load_models(self, model_path: Path):
         """
         載入預先訓練的模型
-        
+
         Args:
             model_path: 模型檔案所在目錄
         """
         try:
-            # 載入線性迴歸模型
-            lr_path = model_path / 'linear_regression.pkl'
+            # 載入線性迴歸模型（模型是以 tuple 形式儲存：(model, feature_columns)）
+            lr_path = model_path / 'model_linear_regression.pkl'
             if lr_path.exists():
-                with open(lr_path, 'rb') as f:
-                    self.lr_model = pickle.load(f)
-            
-            # 載入 LightGBM 模型
-            lgb_path = model_path / 'lightgbm.pkl'
+                lr_model, lr_features = joblib.load(lr_path)
+                self.lr_model = lr_model
+                # 第一次載入時設定特徵欄位
+                if self.feature_columns is None:
+                    self.feature_columns = lr_features
+                print(f"[OK] 已載入線性迴歸模型: {lr_path}")
+            else:
+                print(f"[WARNING] 找不到線性迴歸模型: {lr_path}")
+
+            # 載入 LightGBM 模型（模型是以 tuple 形式儲存：(model, feature_columns)）
+            lgb_path = model_path / 'model_lightgbm.pkl'
             if lgb_path.exists():
-                with open(lgb_path, 'rb') as f:
-                    self.lgb_model = pickle.load(f)
-            
-            # 載入特徵欄位
-            feature_path = model_path / 'feature_columns.pkl'
-            if feature_path.exists():
-                with open(feature_path, 'rb') as f:
-                    self.feature_columns = pickle.load(f)
-                    
+                lgb_model, lgb_features = joblib.load(lgb_path)
+                self.lgb_model = lgb_model
+                # 第一次載入時設定特徵欄位
+                if self.feature_columns is None:
+                    self.feature_columns = lgb_features
+                print(f"[OK] 已載入 LightGBM 模型: {lgb_path}")
+            else:
+                print(f"[WARNING] 找不到 LightGBM 模型: {lgb_path}")
+
+            if self.feature_columns:
+                print(f"[OK] 已載入特徵欄位，共 {len(self.feature_columns)} 個特徵")
+
         except Exception as e:
-            print(f"載入模型時發生錯誤: {e}")
+            print(f"[ERROR] 載入模型時發生錯誤: {e}")
+            import traceback
+            traceback.print_exc()
     
     def prepare_features(self, movie_data: Dict) -> pd.DataFrame:
         """
@@ -150,10 +162,10 @@ class BoxOfficePredictionModel:
             
             # 預測
             pred_value, lower, upper = self.predict_single_week(features)
-            
-            # 計算衰退率
+
+            # 計算衰退率（使用共用工具函數）
             prev_boxoffice = current_data.get('boxoffice_week_1', pred_value)
-            decline_rate = (pred_value - prev_boxoffice) / prev_boxoffice if prev_boxoffice > 0 else 0
+            decline_rate = calculate_decline_rate(pred_value, prev_boxoffice)
             
             # 儲存預測結果
             predictions.append({

@@ -22,8 +22,8 @@ from ML_boxoffice.common.feature_engineering import BoxOfficeFeatureEngineer
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
 # 建立輸出資料夾
-output_model_dir = Path(PHASE4_MODELS_DIR) / "M2" / f"M2_{timestamp}"
-output_prepare_dir = Path(PHASE4_MODELS_DIR) / "M2" / f"M2_{timestamp}" / "prepared_data"
+output_model_dir = Path(PHASE4_MODELS_DIR) / "M3" / f"M3_{timestamp}"
+output_prepare_dir = Path(PHASE4_MODELS_DIR) / "M3" / f"M3_{timestamp}" / "prepared_data"
 log_file = output_model_dir / f"training_log_{timestamp}.txt"
 
 # 建立輸出資料夾
@@ -31,7 +31,7 @@ ensure_dir(output_prepare_dir)
 ensure_dir(output_model_dir)
 
 # 使用的訓練資料集
-input_data_path = Path(PHASE3_PREPARE_DIR) / "M2_train_dataset" / "features_market_2025-11-07.csv"
+input_data_path = Path(PHASE3_PREPARE_DIR) / "M3_train_dataset" / "features_market_2025-11-07.csv"
 
 # ===================================================================
 # 日誌系統設定
@@ -64,7 +64,7 @@ class Logger:
 sys.stdout = Logger(log_buffer)
 
 print("=" * 60)
-print(f"🚀 模型訓練開始 (M2 - LightGBM): {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+print(f"🚀 模型訓練開始 (M3 - Decision Tree): {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print("=" * 60)
 
 
@@ -257,29 +257,28 @@ else:
     print("✅ 無缺失值")
 
 
-# === 15. 訓練模型: LightGBM ===
-import lightgbm as lgb
+# === 15. 訓練模型: Decision Tree Regressor ===
+from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 print("\n" + "=" * 50)
-print("🟢 模型: LightGBM")
+print("🟢 模型: Decision Tree Regressor")
 print("=" * 50)
 
-lgb_model = lgb.LGBMRegressor(
-    n_estimators=100,
-    learning_rate=0.05,
-    max_depth=5,
+dt_model = DecisionTreeRegressor(
+    max_depth=10,  # 樹的最大深度
+    min_samples_split=20,  # 分裂節點所需最小樣本數
+    min_samples_leaf=10,  # 葉節點所需最小樣本數
     random_state=42,
-    verbose=-1,  # 關閉訓練過程輸出
 )
 
-lgb_model.fit(X_train_model, y_train)
+dt_model.fit(X_train_model, y_train)
 
-y_pred_lgb = lgb_model.predict(X_test_model)
+y_pred_dt = dt_model.predict(X_test_model)
 
-print(f"MAE:  {mean_absolute_error(y_test, y_pred_lgb):,.0f}")
-print(f"RMSE: {np.sqrt(mean_squared_error(y_test, y_pred_lgb)):,.0f}")
-print(f"R²:   {r2_score(y_test, y_pred_lgb):.4f}")
+print(f"MAE:  {mean_absolute_error(y_test, y_pred_dt):,.0f}")
+print(f"RMSE: {np.sqrt(mean_squared_error(y_test, y_pred_dt)):,.0f}")
+print(f"R²:   {r2_score(y_test, y_pred_dt):.4f}")
 
 
 # ===================================================================
@@ -287,11 +286,11 @@ print(f"R²:   {r2_score(y_test, y_pred_lgb):.4f}")
 # ===================================================================
 # === 16. 特徵重要性分析 ===
 print("\n" + "=" * 50)
-print("📊 Top 10 重要特徵 (LightGBM)")
+print("📊 Top 10 重要特徵 (Decision Tree)")
 print("=" * 50)
 
 feature_importance = pd.DataFrame(
-    {"feature": X_train_model.columns, "importance": lgb_model.feature_importances_}
+    {"feature": X_train_model.columns, "importance": dt_model.feature_importances_}
 ).sort_values("importance", ascending=False)
 
 print(feature_importance.head(10).to_string(index=False))
@@ -312,12 +311,12 @@ plt.rcParams["axes.unicode_minus"] = False
 
 fig, ax = plt.subplots(figsize=(8, 6))
 
-# LightGBM
-ax.scatter(y_test, y_pred_lgb, alpha=0.5, s=10)
+# Decision Tree
+ax.scatter(y_test, y_pred_dt, alpha=0.5, s=10)
 ax.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], "r--", lw=2)
 ax.set_xlabel("實際票房")
 ax.set_ylabel("預測票房")
-ax.set_title(f"LightGBM (R²={r2_score(y_test, y_pred_lgb):.3f})")
+ax.set_title(f"Decision Tree (R²={r2_score(y_test, y_pred_dt):.3f})")
 ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
@@ -396,9 +395,9 @@ else:
 # === 19. 儲存模型 ===
 import joblib
 
-joblib.dump((lgb_model, X_train_model.columns.tolist()), output_model_dir / "model_lightgbm.pkl")
+joblib.dump((dt_model, X_train_model.columns.tolist()), output_model_dir / "model_decision_tree.pkl")
 print(f"\n✅ 模型已存檔:")
-print(f"   - {output_model_dir / 'model_lightgbm.pkl'}")
+print(f"   - {output_model_dir / 'model_decision_tree.pkl'}")
 
 
 # === 20. 儲存測試集預測結果 ===
@@ -406,8 +405,8 @@ results = pd.DataFrame(
     {
         "gov_id": X_test["gov_id"].values,
         "actual": y_test.values,
-        "pred_lgb": y_pred_lgb,
-        "error_lgb": y_test.values - y_pred_lgb,
+        "pred_dt": y_pred_dt,
+        "error_dt": y_test.values - y_pred_dt,
     }
 )
 
@@ -438,7 +437,7 @@ print("\n🎉 訓練完成!")
 """
 ## 📦 最終會產生的檔案
 ```
-data/ML_boxoffice/phase4_models/M2/M2_YYYYMMDD_HHMMSS/
+data/ML_boxoffice/phase4_models/M3/M3_YYYYMMDD_HHMMSS/
 ├── prepared_data/
 │   ├── preprocessed_full.csv           # 完整預處理資料
 │   ├── preprocessed_features.csv       # 特徵矩陣 (X)
@@ -450,16 +449,16 @@ data/ML_boxoffice/phase4_models/M2/M2_YYYYMMDD_HHMMSS/
 ├── correlation_matrix.csv              # 相關性矩陣
 ├── high_correlation_pairs.csv          # 高相關特徵對（如有）
 ├── test_predictions.csv                # 測試集詳細預測結果
-└── model_lightgbm.pkl                  # 已訓練的 LightGBM 模型
+└── model_decision_tree.pkl             # 已訓練的 Decision Tree 模型
 ```
 
-## 🔍 M2 模型說明
-- **模型類型**: LightGBM（梯度提升樹）
+## 🔍 M3 模型說明
+- **模型類型**: Decision Tree Regressor（決策樹回歸）
 - **訓練資料**: features_market_2025-11-07.csv
 - **模型參數**:
-  - n_estimators=100
-  - learning_rate=0.05
-  - max_depth=5
+  - max_depth=10
+  - min_samples_split=20
+  - min_samples_leaf=10
 - **資料處理**:
   - 排除指定電影
   - 只保留首輪資料

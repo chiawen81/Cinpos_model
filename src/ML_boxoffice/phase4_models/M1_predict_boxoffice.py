@@ -65,7 +65,7 @@ class Logger:
 sys.stdout = Logger(log_buffer)
 
 print("=" * 60)
-print(f"🚀 模型訓練開始: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+print(f"🚀 模型訓練開始 (M1 - Linear Regression): {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print("=" * 60)
 
 
@@ -257,12 +257,12 @@ else:
     print("✅ 無缺失值")
 
 
-# === 15. 訓練基準模型: Linear Regression ===
+# === 15. 訓練模型: Linear Regression ===
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 print("\n" + "=" * 50)
-print("🔵 模型 1: Linear Regression")
+print("🔵 模型: Linear Regression")
 print("=" * 50)
 
 lr_model = LinearRegression()
@@ -315,83 +315,33 @@ for idx, row in coef_df.head(10).iterrows():
 print("    + ... (其他特徵)")
 
 
-# === 17. 訓練進階模型: LightGBM ===
-import lightgbm as lgb
-
-print("\n" + "=" * 50)
-print("🟢 模型 2: LightGBM")
-print("=" * 50)
-
-lgb_model = lgb.LGBMRegressor(
-    n_estimators=100,
-    learning_rate=0.05,
-    max_depth=5,
-    random_state=42,
-    verbose=-1,  # 關閉訓練過程輸出
-)
-
-lgb_model.fit(X_train_model, y_train)
-
-y_pred_lgb = lgb_model.predict(X_test_model)
-
-print(f"MAE:  {mean_absolute_error(y_test, y_pred_lgb):,.0f}")
-print(f"RMSE: {np.sqrt(mean_squared_error(y_test, y_pred_lgb)):,.0f}")
-print(f"R²:   {r2_score(y_test, y_pred_lgb):.4f}")
-
-
 # ===================================================================
 # 洞察模型分析結果
 # ===================================================================
-# === 18. 特徵重要性分析 ===
-print("\n" + "=" * 50)
-print("📊 Top 10 重要特徵 (LightGBM)")
-print("=" * 50)
-
-feature_importance = pd.DataFrame(
-    {"feature": X_train_model.columns, "importance": lgb_model.feature_importances_}
-).sort_values("importance", ascending=False)
-
-print(feature_importance.head(10).to_string(index=False))
-
-# 存檔特徵重要性
-feature_importance.to_csv(
-    output_model_dir / "feature_importance.csv", index=False, encoding="utf-8-sig"
-)
-print(f"\n✅ 特徵重要性已存檔: {output_model_dir / 'feature_importance.csv'}")
-
-
-# === 19. 視覺化: 預測 vs 實際 ===
+# === 17. 視覺化: 預測 vs 實際 ===
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 plt.rcParams["font.sans-serif"] = ["Microsoft JhengHei"]  # 中文字型
 plt.rcParams["axes.unicode_minus"] = False
 
-fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+fig, ax = plt.subplots(figsize=(8, 6))
 
 # Linear Regression
-axes[0].scatter(y_test, y_pred_lr, alpha=0.5, s=10)
-axes[0].plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], "r--", lw=2)
-axes[0].set_xlabel("實際票房")
-axes[0].set_ylabel("預測票房")
-axes[0].set_title(f"Linear Regression (R²={r2_score(y_test, y_pred_lr):.3f})")
-axes[0].grid(True, alpha=0.3)
-
-# LightGBM
-axes[1].scatter(y_test, y_pred_lgb, alpha=0.5, s=10)
-axes[1].plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], "r--", lw=2)
-axes[1].set_xlabel("實際票房")
-axes[1].set_ylabel("預測票房")
-axes[1].set_title(f"LightGBM (R²={r2_score(y_test, y_pred_lgb):.3f})")
-axes[1].grid(True, alpha=0.3)
+ax.scatter(y_test, y_pred_lr, alpha=0.5, s=10)
+ax.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], "r--", lw=2)
+ax.set_xlabel("實際票房")
+ax.set_ylabel("預測票房")
+ax.set_title(f"Linear Regression (R²={r2_score(y_test, y_pred_lr):.3f})")
+ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
 plt.savefig(output_model_dir / "prediction_comparison.png", dpi=150, bbox_inches="tight")
-print(f"✅ 預測結果圖已存檔: {output_model_dir / 'prediction_comparison.png'}")
+print(f"\n✅ 預測結果圖已存檔: {output_model_dir / 'prediction_comparison.png'}")
 plt.show()
 
 
-# === 20. 特徵相關性熱力圖 ===
+# === 18. 特徵相關性熱力圖 ===
 print("\n" + "=" * 50)
 print("🔥 特徵相關性熱力圖")
 print("=" * 50)
@@ -458,30 +408,24 @@ else:
 # ===================================================================
 # 儲存模型與分析結果
 # ===================================================================
-# === 21. 儲存模型 ===
+# === 19. 儲存模型 ===
 import joblib
 
-# joblib.dump(lr_model, output_model_dir / "model_linear_regression.pkl")
 joblib.dump(
     (lr_model, X_train_model.columns.tolist()), output_model_dir / "model_linear_regression.pkl"
 )
-# joblib.dump(lgb_model, output_model_dir / "model_lightgbm.pkl")
-joblib.dump((lgb_model, X_train_model.columns.tolist()), output_model_dir / "model_lightgbm.pkl")
 
 print(f"\n✅ 模型已存檔:")
 print(f"   - {output_model_dir / 'model_linear_regression.pkl'}")
-print(f"   - {output_model_dir / 'model_lightgbm.pkl'}")
 
 
-# === 22. 儲存測試集預測結果 ===
+# === 20. 儲存測試集預測結果 ===
 results = pd.DataFrame(
     {
         "gov_id": X_test["gov_id"].values,
         "actual": y_test.values,
         "pred_lr": y_pred_lr,
-        "pred_lgb": y_pred_lgb,
         "error_lr": y_test.values - y_pred_lr,
-        "error_lgb": y_test.values - y_pred_lgb,
     }
 )
 
@@ -489,7 +433,7 @@ results.to_csv(output_model_dir / "test_predictions.csv", index=False, encoding=
 print(f"✅ 測試集預測結果已存檔: {output_model_dir / 'test_predictions.csv'}")
 
 
-# === 23. 紀錄本次執行過程log ===
+# === 21. 紀錄本次執行過程log ===
 print("\n" + "=" * 60)
 print(f"✅ 訓練完成: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print("=" * 60)
@@ -512,13 +456,28 @@ print("\n🎉 訓練完成!")
 """
 ## 📦 最終會產生的檔案
 ```
-data/ML_boxoffice/phase3_prepare/
-├── preprocessed_full.csv           # 完整預處理資料
-├── preprocessed_features.csv       # 特徵矩陣 (X)
-├── preprocessed_target.csv         # 目標變數 (y)
-├── feature_importance.csv          # 特徵重要性排名
-├── prediction_comparison.png       # 預測 vs 實際散佈圖
-├── test_predictions.csv            # 測試集詳細預測結果
-├── model_linear_regression.pkl     # 已訓練的 LR 模型
-└── model_lightgbm.pkl              # 已訓練的 LightGBM 模型
+data/ML_boxoffice/phase4_models/M1/M1_YYYYMMDD_HHMMSS/
+├── prepared_data/
+│   ├── preprocessed_full.csv           # 完整預處理資料
+│   ├── preprocessed_features.csv       # 特徵矩陣 (X)
+│   └── preprocessed_target.csv         # 目標變數 (y)
+├── training_log_YYYYMMDD_HHMMSS.txt    # 訓練日誌
+├── linear_regression_coefficients.csv  # 線性回歸係數
+├── prediction_comparison.png           # 預測 vs 實際散佈圖
+├── correlation_heatmap.png             # 特徵相關性熱力圖
+├── correlation_matrix.csv              # 相關性矩陣
+├── high_correlation_pairs.csv          # 高相關特徵對（如有）
+├── test_predictions.csv                # 測試集詳細預測結果
+└── model_linear_regression.pkl         # 已訓練的 Linear Regression 模型
+```
+
+## 🔍 M1 模型說明
+- **模型類型**: Linear Regression（線性回歸）
+- **訓練資料**: features_market_2025-11-07.csv
+- **資料處理**:
+  - 排除指定電影
+  - 只保留首輪資料
+  - 月份週期性編碼
+  - 移除資料洩漏欄位
+- **評估指標**: MAE, RMSE, R²
 """

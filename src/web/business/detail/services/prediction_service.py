@@ -20,6 +20,7 @@ from models.prediction import BoxOfficePredictionModel, AudiencePredictionModel
 from models.movie import BoxOfficePrediction
 from services.movie_service import MovieService
 from services.decline_warning_service import get_decline_warning_service
+from utils.box_office_utils import calculate_opening_strength
 from config import Config
 
 
@@ -42,6 +43,8 @@ class PredictionService:
         # 初始化新電影預測器（使用延遲載入模式，避免啟動時載入模型失敗）
         self.new_movie_predictor = M1NewMoviePredictor(model_path, lazy_load=True)
 
+    # 注意：calculate_opening_strength 已移至 utils/box_office_utils.py
+    # 為了向後相容，保留此方法作為代理
     @staticmethod
     def calculate_opening_strength(
         week_1_boxoffice: float,
@@ -49,7 +52,9 @@ class PredictionService:
         week_1_days: int = 7
     ) -> float:
         """
-        計算開片實力（前兩周日均票房的平均值）
+        計算開片實力（前兩週日均票房的平均值）
+
+        此方法為了向後相容而保留，實際實作在 utils.box_office_utils
 
         Args:
             week_1_boxoffice: 第一週票房
@@ -59,7 +64,7 @@ class PredictionService:
         Returns:
             開片實力數值
         """
-        return (week_1_boxoffice / week_1_days + week_2_boxoffice) / 2
+        return calculate_opening_strength(week_1_boxoffice, week_2_boxoffice, week_1_days)
 
     def predict_movie_boxoffice(self, gov_id: str, weeks: int = 3) -> List[BoxOfficePrediction]:
         """

@@ -24,14 +24,14 @@ def index():
 
 @web_bp.route('/movies')
 def movies_list():
-    """電影列表頁面"""
-    # 這裡應該從資料庫取得電影列表
-    # 目前使用模擬資料
-    movies = [
-        {'gov_id': 'MOV001', 'title': '科技風暴', 'release_date': '2025-10-01'},
-        {'gov_id': 'MOV002', 'title': '愛在深秋', 'release_date': '2025-09-15'},
-    ]
-    return render_template('movies_list.html', movies=movies)
+    """
+    電影列表頁面
+
+    注意：此頁面目前未啟用
+    實際的電影列表在首頁（/）中透過 API 載入
+    """
+    # TODO: 如果需要獨立的電影列表頁面，從資料庫或檔案系統取得電影列表
+    return render_template('movies_list.html', movies=[])
 
 
 @web_bp.route('/movie/<gov_id>')
@@ -96,7 +96,7 @@ def movie_detail(gov_id):
     }
 
     # 準備衰退率圖表資料
-    decline_data = prepare_decline_chart_data(history)
+    decline_data = movie_service.prepare_decline_chart_data(history)
 
     return render_template('movie_detail.html',
                          movie=movie,
@@ -124,32 +124,3 @@ def predict_new():
 def reports():
     """報表中心頁面"""
     return render_template('reports.html')
-
-
-# ============= 輔助函數 =============
-def prepare_decline_chart_data(history):
-    """
-    準備衰退率圖表資料
-
-    Args:
-        history: 歷史票房記錄列表
-
-    Returns:
-        圖表資料字典
-    """
-    weeks = []
-    decline_rates = []
-
-    for i in range(1, len(history)):
-        if history[i-1].boxoffice > 0:
-            rate = (history[i].boxoffice - history[i-1].boxoffice) / history[i-1].boxoffice
-            weeks.append(history[i].week)
-            decline_rates.append(rate)
-
-    avg_decline_rate = sum(decline_rates) / len(decline_rates) if decline_rates else 0
-
-    return {
-        'weeks': weeks,
-        'decline_rates': decline_rates,
-        'avg_decline_rate': avg_decline_rate
-    }

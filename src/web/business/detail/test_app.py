@@ -44,13 +44,13 @@ def test_basic_functionality():
     """測試基本功能"""
     try:
         print("\n測試基本功能...")
-        
+
         from services.movie_service import MovieService
         from utils.formatters import format_currency
-        
-        # 測試電影服務
+
+        # 測試電影服務（使用真實的電影代號）
         service = MovieService()
-        movie = service.get_movie_by_id("MOV001")
+        movie = service.get_movie_by_id("13460")  # 仲夏魘
         if movie:
             print(f"✓ 成功取得電影: {movie.title}")
         
@@ -78,9 +78,9 @@ def test_flask_app():
             response = client.get('/')
             if response.status_code == 200:
                 print("✓ 首頁路由正常")
-            
-            # 測試 API
-            response = client.get('/api/movie/MOV001')
+
+            # 測試 API（使用真實的電影代號）
+            response = client.get('/api/movie/13460')  # 仲夏魘
             if response.status_code == 200:
                 print("✓ API 路由正常")
         

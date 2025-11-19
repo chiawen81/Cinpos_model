@@ -20,7 +20,7 @@ def validate_gov_id(gov_id: str) -> Tuple[bool, Optional[str]]:
         return False, "政府代號不能為空"
     
     # 假設格式為 MOV 開頭加數字
-    pattern = r'^MOV\d{3,}$'
+    pattern = r'^(MOV\d{3,}|\d{4,})$'
     if not re.match(pattern, gov_id):
         return False, "政府代號格式無效"
     

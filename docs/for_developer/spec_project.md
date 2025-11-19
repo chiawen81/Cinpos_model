@@ -356,6 +356,137 @@
 
 ## 單一電影頁
 
+### 概述
+
+單一電影詳細頁面 (`/movie/<gov_id>`) 提供完整的電影資訊和票房分析，包含關鍵指標、基本資訊、票房趨勢圖表、預測資料和衰退率分析。
+
+### 路由
+
+- **路徑**：`/movie/<gov_id>`
+- **方法**：`GET`
+- **實作檔案**：`src/web/business/detail/blueprints/web_routes.py:37-108`
+
+### 頁面結構
+
+單一電影詳細頁面包含以下區塊：
+
+1. **電影標題與基本資訊**
+   - 片名（中文/原文）
+   - 導演、演員
+   - 片長、分級、發行商
+   - 上映日期、發行國家
+
+2. **關鍵指標卡片（4個）**
+   - 累計票房（當輪/跨輪）
+   - 累計觀影人次（當輪/跨輪）
+   - 本週衰退率（票房/觀影人次/廳數）
+   - 預警狀態
+
+3. **票房趨勢與未來預測**
+   - 歷史票房折線圖
+   - 未來3週預測
+   - 信心區間顯示
+   - 預測結果表格（歷史+預測）
+
+4. **週衰退率分析**
+   - 衰退率趨勢折線圖
+   - 平均衰退率標線
+   - 每週衰退率數值
+
+### 資料來源
+
+#### 真實資料
+
+所有資料從 `data/raw/boxoffice_permovie/full/{movie_id}_{name}.json` 讀取。
+
+#### 服務層架構
+
+```
+web_routes.py (Controller)
+    ↓
+├─ MovieService (電影資料服務)
+│  ├─ get_movie_by_id()          → 電影基本資訊
+│  ├─ get_boxoffice_history()    → 歷史票房記錄
+│  ├─ calculate_statistics()     → 統計指標
+│  └─ prepare_decline_chart_data() → 衰退率圖表資料
+│
+└─ PredictionService (預測服務)
+   ├─ predict_movie_boxoffice()  → 未來票房預測
+   └─ check_decline_warning()    → 預警判斷
+```
+
+### API 端點
+
+頁面使用後端渲染，數據在模板中已準備好。如果需要 AJAX 更新，可使用以下 4 個 API：
+
+1. **關鍵指標**：`GET /api/movie/<gov_id>/key-metrics`
+2. **電影基本資訊**：`GET /api/movie/<gov_id>/basic-info`
+3. **票房趨勢與預測**：`GET /api/movie/<gov_id>/trend`
+4. **週衰退率分析**：`GET /api/movie/<gov_id>/decline-analysis`
+
+詳細的 API 規格請參考 [API 規格文件](spec_api.md#單一電影詳細頁-api)。
+
+### 關鍵計算邏輯
+
+#### 開片實力計算修正（2025-11-20）
+
+**重要**：使用 **第一週實際放映天數** 計算日均票房。
+
+**共用工具函數**：
+```python
+from utils.box_office_utils import (
+    calculate_decline_rate,
+    calculate_opening_strength,
+    calculate_first_week_daily_avg
+)
+```
+
+**第一週日均票房**：
+```python
+# 取得第一週的日期範圍和上映日期
+weeks_data = raw_data.get("weekends")
+first_week_date_range = weeks_data[0].get("date")  # "2019-07-12~2019-07-18"
+release_date = raw_data.get("releaseDate")          # "2019-07-12"
+
+# 計算第一週日均票房（使用實際放映天數）
+week_1_daily_avg = calculate_first_week_daily_avg(
+    history[0].boxoffice,
+    first_week_date_range,
+    release_date
+)
+```
+
+**計算範例**：
+- 上映日：2019-07-12（週五）
+- 第一週範圍：2019-07-12~2019-07-18
+- 實際放映天數：7 天
+- 第一週票房：890,052 元
+- 第一週日均票房：890,052 / 7 = 127,150 元
+
+### 實作檔案
+
+#### 後端
+
+- **路由**：`src/web/business/detail/blueprints/web_routes.py`
+- **服務**：
+  - `movie_service.py` - 電影資料服務
+  - `prediction_service.py` - 預測服務
+  - `decline_warning_service.py` - 預警服務
+- **共用工具**：
+  - `utils/box_office_utils.py` - 票房計算工具（包含所有核心計算函數）
+
+#### 前端
+
+- **模板**：`templates/movie_detail.html`
+- **JavaScript**：`static/js/pages/movie_detail.js`
+
+### 注意事項
+
+1. **第一週日均票房**：必須使用 `calculate_first_week_daily_avg()` 確保計算正確
+2. **衰退率計算**：統一使用 `calculate_decline_rate()` 確保一致性
+3. **導演與演員**：部分電影資料為空，前端應處理空值顯示
+4. **資料格式**：後端返回單位為「元」和小數形式，前端需適當轉換
+
 ---
 
 ## 預測頁

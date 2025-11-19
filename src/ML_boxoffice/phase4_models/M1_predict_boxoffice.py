@@ -1,12 +1,19 @@
+import sys
+from pathlib import Path
+
+# 將 src 目錄加入 Python 路徑，以便能夠 import common 模組
+project_root = Path(__file__).resolve().parent.parent.parent.parent
+src_path = project_root / "src"
+if str(src_path) not in sys.path:
+    sys.path.insert(0, str(src_path))
+
 import pandas as pd
 import numpy as np
-import sys
 from common.file_utils import ensure_dir
-from pathlib import Path
 from io import StringIO
 from datetime import datetime
 from common.path_utils import PHASE3_PREPARE_DIR, PHASE4_MODELS_DIR
-from common.feature_engineering import BoxOfficeFeatureEngineer
+from ML_boxoffice.common.feature_engineering import BoxOfficeFeatureEngineer
 
 # ===================================================================
 # 全域設定
@@ -268,6 +275,46 @@ print(f"RMSE: {np.sqrt(mean_squared_error(y_test, y_pred_lr)):,.0f}")
 print(f"R²:   {r2_score(y_test, y_pred_lr):.4f}")
 
 
+# === 16. 線性回歸公式 ===
+print("\n" + "=" * 50)
+print("📐 線性回歸模型公式")
+print("=" * 50)
+
+# 取得係數和截距
+coefficients = lr_model.coef_
+intercept = lr_model.intercept_
+
+print(f"\n截距 (Intercept): {intercept:,.2f}")
+print(f"\n特徵係數 (Coefficients):")
+
+# 建立係數 DataFrame
+coef_df = pd.DataFrame(
+    {"feature": X_train_model.columns, "coefficient": coefficients}
+).sort_values("coefficient", key=abs, ascending=False)
+
+print(coef_df.to_string(index=False))
+
+# 儲存係數
+coef_df.to_csv(
+    output_model_dir / "linear_regression_coefficients.csv", index=False, encoding="utf-8-sig"
+)
+print(f"\n✅ 線性回歸係數已存檔: {output_model_dir / 'linear_regression_coefficients.csv'}")
+
+# 顯示完整公式（只顯示前 10 個最重要的係數）
+print("\n" + "=" * 50)
+print("📝 線性回歸公式 (Top 10 重要特徵)")
+print("=" * 50)
+print(f"\ny = {intercept:,.2f}")
+
+for idx, row in coef_df.head(10).iterrows():
+    feature = row["feature"]
+    coef = row["coefficient"]
+    sign = "+" if coef >= 0 else "-"
+    print(f"    {sign} {abs(coef):,.2f} × {feature}")
+
+print("    + ... (其他特徵)")
+
+
 # === 17. 訓練進階模型: LightGBM ===
 import lightgbm as lgb
 
@@ -315,6 +362,7 @@ print(f"\n✅ 特徵重要性已存檔: {output_model_dir / 'feature_importance.
 
 # === 19. 視覺化: 預測 vs 實際 ===
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 plt.rcParams["font.sans-serif"] = ["Microsoft JhengHei"]  # 中文字型
 plt.rcParams["axes.unicode_minus"] = False
@@ -343,10 +391,74 @@ print(f"✅ 預測結果圖已存檔: {output_model_dir / 'prediction_comparison
 plt.show()
 
 
+# === 20. 特徵相關性熱力圖 ===
+print("\n" + "=" * 50)
+print("🔥 特徵相關性熱力圖")
+print("=" * 50)
+
+# 計算相關性矩陣（排除 gov_id）
+correlation_matrix = X_train_model.corr()
+
+# 建立熱力圖
+plt.figure(figsize=(20, 16))
+sns.heatmap(
+    correlation_matrix,
+    annot=False,  # 特徵太多時不顯示數字
+    cmap="coolwarm",
+    center=0,
+    square=True,
+    linewidths=0.5,
+    cbar_kws={"shrink": 0.8},
+    vmin=-1,
+    vmax=1,
+)
+plt.title("特徵相關性熱力圖", fontsize=16, pad=20)
+plt.tight_layout()
+plt.savefig(output_model_dir / "correlation_heatmap.png", dpi=150, bbox_inches="tight")
+print(f"✅ 相關性熱力圖已存檔: {output_model_dir / 'correlation_heatmap.png'}")
+plt.show()
+
+# 儲存相關性矩陣為 CSV
+correlation_matrix.to_csv(
+    output_model_dir / "correlation_matrix.csv", encoding="utf-8-sig"
+)
+print(f"✅ 相關性矩陣已存檔: {output_model_dir / 'correlation_matrix.csv'}")
+
+# 找出高度相關的特徵對（|r| > 0.8）
+print("\n" + "=" * 50)
+print("⚠️  高度相關的特徵對 (|r| > 0.8)")
+print("=" * 50)
+
+high_corr_pairs = []
+for i in range(len(correlation_matrix.columns)):
+    for j in range(i + 1, len(correlation_matrix.columns)):
+        corr_value = correlation_matrix.iloc[i, j]
+        if abs(corr_value) > 0.8:
+            high_corr_pairs.append(
+                {
+                    "feature_1": correlation_matrix.columns[i],
+                    "feature_2": correlation_matrix.columns[j],
+                    "correlation": corr_value,
+                }
+            )
+
+if len(high_corr_pairs) > 0:
+    high_corr_df = pd.DataFrame(high_corr_pairs).sort_values(
+        "correlation", key=abs, ascending=False
+    )
+    print(high_corr_df.to_string(index=False))
+    high_corr_df.to_csv(
+        output_model_dir / "high_correlation_pairs.csv", index=False, encoding="utf-8-sig"
+    )
+    print(f"\n✅ 高相關特徵對已存檔: {output_model_dir / 'high_correlation_pairs.csv'}")
+else:
+    print("✅ 沒有發現高度相關的特徵對")
+
+
 # ===================================================================
 # 儲存模型與分析結果
 # ===================================================================
-# === 20. 儲存模型 ===
+# === 21. 儲存模型 ===
 import joblib
 
 # joblib.dump(lr_model, output_model_dir / "model_linear_regression.pkl")
@@ -361,7 +473,7 @@ print(f"   - {output_model_dir / 'model_linear_regression.pkl'}")
 print(f"   - {output_model_dir / 'model_lightgbm.pkl'}")
 
 
-# === 21. 儲存測試集預測結果 ===
+# === 22. 儲存測試集預測結果 ===
 results = pd.DataFrame(
     {
         "gov_id": X_test["gov_id"].values,
@@ -377,7 +489,7 @@ results.to_csv(output_model_dir / "test_predictions.csv", index=False, encoding=
 print(f"✅ 測試集預測結果已存檔: {output_model_dir / 'test_predictions.csv'}")
 
 
-# === 22. 紀錄本次執行過程log ===
+# === 23. 紀錄本次執行過程log ===
 print("\n" + "=" * 60)
 print(f"✅ 訓練完成: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print("=" * 60)

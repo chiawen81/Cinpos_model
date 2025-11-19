@@ -1,0 +1,11 @@
+﻿feature_1,feature_2,correlation
+boxoffice_week_1,audience_week_1,0.9976969674797332
+boxoffice_week_2,audience_week_2,0.9975296474824854
+open_week1_boxoffice,open_week1_boxoffice_daily_avg,0.9909978123354648
+open_week1_boxoffice,open_week2_boxoffice,0.9708300388808386
+open_week1_boxoffice_daily_avg,open_week2_boxoffice,0.9688347311626698
+boxoffice_week_2,boxoffice_week_1,0.9456657351163232
+audience_week_2,audience_week_1,0.945359595004747
+boxoffice_week_1,audience_week_2,0.9435235499248188
+boxoffice_week_2,audience_week_1,0.9431415397136851
+screens_week_2,screens_week_1,0.9272476900635469

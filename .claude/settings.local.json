@@ -29,7 +29,8 @@
       "Bash(if [ -f \"docs/for_developer/work_log/WORK_LOG_票房預測系統執行流程分析.md\" ])",
       "Bash(then echo \"檔案存在\")",
       "Bash(else echo \"檔案不存在\")",
-      "Bash(fi)"
+      "Bash(fi)",
+      "Bash(timeout 60 bash:*)"
     ],
     "deny": [],
     "ask": []

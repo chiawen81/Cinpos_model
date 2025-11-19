@@ -83,14 +83,37 @@ class PredictionService:
         Returns:
             預測結果列表
         """
-        # 取得當前資料
-        current_data = self.movie_service.get_current_week_data(gov_id)
+        # 取得完整的歷史資料
+        history = self.movie_service.get_boxoffice_history(gov_id)
+        movie = self.movie_service.get_movie_by_id(gov_id)
 
-        if not current_data:
+        if not history or len(history) < 2:
             return []
 
+        # 將歷史資料轉換為 week_data 格式
+        week_data = [
+            {
+                'week': record.week,
+                'boxoffice': record.boxoffice,
+                'audience': record.audience,
+                'screens': record.screens
+            }
+            for record in history
+        ]
+
+        # 準備 movie_info
+        movie_info = {
+            'release_date': movie.release_date.strftime('%Y-%m-%d') if movie and movie.release_date else '2025-01-01',
+            'film_length': movie.duration if movie else 120,
+            'is_restricted': 1 if movie and movie.rating and "限" in movie.rating else 0,
+        }
+
         # 進行預測
-        predictions_raw = self.boxoffice_model.predict_multi_week(current_data, weeks)
+        predictions_raw = self.boxoffice_model.predict_multi_week_from_history(
+            week_data=week_data,
+            movie_info=movie_info,
+            predict_weeks=weeks
+        )
 
         # 轉換為 BoxOfficePrediction 物件
         predictions = []

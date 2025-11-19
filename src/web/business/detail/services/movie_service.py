@@ -185,8 +185,9 @@ class MovieService:
         open_week1 = history[0] if history else None
         open_week2 = history[1] if len(history) > 1 else None
 
-        # 計算第一週日均票房（修正：使用實際放映天數）
+        # 計算第一週日均票房和放映天數
         open_week1_daily_avg = 0
+        open_week1_days = 7
         if open_week1 and raw_data:
             # 取得第一週的日期範圍和上映日期
             weeks_data = raw_data.get("weeks") or raw_data.get("weekends") or []
@@ -194,6 +195,8 @@ class MovieService:
             release_date = raw_data.get("releaseDate")
 
             # 使用共用工具函數計算
+            from utils.box_office_utils import calculate_first_week_days
+            open_week1_days = calculate_first_week_days(first_week_date_range, release_date)
             open_week1_daily_avg = calculate_first_week_daily_avg(
                 open_week1.boxoffice,
                 first_week_date_range,
@@ -203,6 +206,10 @@ class MovieService:
         return {
             "gov_id": str(gov_id),
             "current_week": latest_week.week,
+            # 模型訓練時的欄位
+            "round_idx": 1,  # 輪次索引（預設為1）
+            "gap_real_week_2to1": 1,  # week_2 到 week_1 的週數間隔
+            "gap_real_week_1tocurrent": 1,  # week_1 到當前週的週數間隔
             # 最新兩週的票房資料
             "boxoffice_week_1": latest_week.boxoffice,
             "boxoffice_week_2": previous_week.boxoffice,
@@ -211,6 +218,7 @@ class MovieService:
             "screens_week_1": latest_week.screens,
             "screens_week_2": previous_week.screens,
             # 開片資訊
+            "open_week1_days": open_week1_days,
             "open_week1_boxoffice": open_week1.boxoffice if open_week1 else 0,
             "open_week1_boxoffice_daily_avg": open_week1_daily_avg,
             "open_week2_boxoffice": open_week2.boxoffice if open_week2 else 0,

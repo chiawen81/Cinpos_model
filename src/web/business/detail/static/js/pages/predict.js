@@ -772,13 +772,19 @@ function formatPercentage(value) {
 }
 
 // 匯出功能
-document.getElementById('exportExcel').addEventListener('click', () => {
-    exportPrediction('excel');
-});
+const exportExcelBtn = document.getElementById('exportExcel');
+if (exportExcelBtn) {
+    exportExcelBtn.addEventListener('click', () => {
+        exportPrediction('excel');
+    });
+}
 
-document.getElementById('exportCSV').addEventListener('click', () => {
-    exportPrediction('csv');
-});
+const exportCSVBtn = document.getElementById('exportCSV');
+if (exportCSVBtn) {
+    exportCSVBtn.addEventListener('click', () => {
+        exportPrediction('csv');
+    });
+}
 
 async function exportPrediction(format) {
     if (!currentPredictionResult) {

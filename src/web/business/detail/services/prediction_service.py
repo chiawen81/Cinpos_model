@@ -32,7 +32,7 @@ class PredictionService:
         初始化預測服務
 
         Args:
-            model_path: 模型檔案路徑，若為 None 則使用 Config 中的預設路徑
+            model_path: 模型目錄路徑，若為 None 則使用 Config 中的預設路徑
         """
         # 如果沒有指定模型路徑，使用 Config 中的預設路徑
         if model_path is None:
@@ -44,8 +44,10 @@ class PredictionService:
         self.config = Config()
         self.warning_service = get_decline_warning_service()
 
-        # 初始化新電影預測器（使用延遲載入模式，避免啟動時載入模型失敗）
-        self.new_movie_predictor = M1NewMoviePredictor(model_path, lazy_load=True)
+        # 初始化新電影預測器
+        # 注意：M1NewMoviePredictor 期望的是檔案路徑，而不是目錄路徑
+        m1_model_file = model_path / "model_linear_regression.pkl"
+        self.new_movie_predictor = M1NewMoviePredictor(m1_model_file, lazy_load=True)
 
     # 注意：calculate_opening_strength 已移至 utils/box_office_utils.py
     # 為了向後相容，保留此方法作為代理

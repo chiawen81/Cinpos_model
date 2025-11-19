@@ -72,35 +72,59 @@ class BoxOfficePredictionModel:
     def prepare_features(self, movie_data: Dict) -> pd.DataFrame:
         """
         準備預測所需的特徵
-        
+
         Args:
             movie_data: 包含電影資訊的字典
-            
+
         Returns:
-            準備好的特徵 DataFrame
+            準備好的特徵 DataFrame（按照模型期望的欄位順序）
         """
-        # 從之前的實作中提取特徵工程邏輯
+        # 按照模型訓練時的欄位順序準備特徵
         features = {
-            'boxoffice_week_1': movie_data.get('boxoffice_week_1', 0),
-            'boxoffice_week_2': movie_data.get('boxoffice_week_2', 0),
-            'audience_week_1': movie_data.get('audience_week_1', 0),
-            'audience_week_2': movie_data.get('audience_week_2', 0),
-            'screens_week_1': movie_data.get('screens_week_1', 0),
-            'screens_week_2': movie_data.get('screens_week_2', 0),
+            # 1. round_idx - 輪次索引（預設為1）
+            'round_idx': movie_data.get('round_idx', 1),
+
+            # 2. current_week_active_idx - 當前週次
             'current_week_active_idx': movie_data.get('current_week', 3),
+
+            # 3. gap_real_week_2to1 - week_2 到 week_1 的週數間隔（通常為1）
+            'gap_real_week_2to1': movie_data.get('gap_real_week_2to1', 1),
+
+            # 4. gap_real_week_1tocurrent - week_1 到當前週的週數間隔（通常為1）
+            'gap_real_week_1tocurrent': movie_data.get('gap_real_week_1tocurrent', 1),
+
+            # 5-10. 票房、觀影人數、廳數資料
+            'boxoffice_week_2': movie_data.get('boxoffice_week_2', 0),
+            'boxoffice_week_1': movie_data.get('boxoffice_week_1', 0),
+            'audience_week_2': movie_data.get('audience_week_2', 0),
+            'audience_week_1': movie_data.get('audience_week_1', 0),
+            'screens_week_2': movie_data.get('screens_week_2', 0),
+            'screens_week_1': movie_data.get('screens_week_1', 0),
+
+            # 11-14. 開片資訊
+            'open_week1_days': movie_data.get('open_week1_days', 7),
             'open_week1_boxoffice': movie_data.get('open_week1_boxoffice', 0),
             'open_week1_boxoffice_daily_avg': movie_data.get('open_week1_boxoffice_daily_avg', 0),
-            'film_length': movie_data.get('film_length', 120),
+            'open_week2_boxoffice': movie_data.get('open_week2_boxoffice', 0),
+
+            # 15-17. 電影屬性
             'release_year': movie_data.get('release_year', 2025),
+            'film_length': movie_data.get('film_length', 120),
             'is_restricted': movie_data.get('is_restricted', 0),
         }
-        
-        # 加入月份的 sin/cos 編碼
+
+        # 18-19. 加入月份的 sin/cos 編碼
         release_month = movie_data.get('release_month', 1)
         features['release_month_sin'] = np.sin(2 * np.pi * release_month / 12)
         features['release_month_cos'] = np.cos(2 * np.pi * release_month / 12)
-        
-        return pd.DataFrame([features])
+
+        # 建立 DataFrame（確保欄位順序與模型訓練時一致）
+        if self.feature_columns:
+            # 使用模型載入時的特徵欄位順序
+            return pd.DataFrame([features])[self.feature_columns]
+        else:
+            # 如果沒有載入模型，使用預設順序
+            return pd.DataFrame([features])
     
     def predict_single_week(self, features: pd.DataFrame) -> Tuple[float, float, float]:
         """

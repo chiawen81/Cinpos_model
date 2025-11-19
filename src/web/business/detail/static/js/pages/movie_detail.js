@@ -5,9 +5,6 @@
  */
 
 // ============= 初始化 =============
-// 使用全域的 trackingManager 實例
-const trackingManager = window.trackingManager;
-
 document.addEventListener('DOMContentLoaded', function() {
     initializeTrackButton();
     initializeCollapsibleSection();
@@ -26,7 +23,7 @@ function initializeTrackButton() {
 
     // 點擊事件
     trackButton.addEventListener('click', function() {
-        const newState = trackingManager.toggleTracking(govId);
+        const newState = window.trackingManager.toggleTracking(govId);
         updateTrackButtonState(trackButton, govId);
 
         // 顯示提示訊息
@@ -42,7 +39,7 @@ function initializeTrackButton() {
  * 更新追蹤按鈕狀態
  */
 function updateTrackButtonState(button, govId) {
-    const isTracked = trackingManager.isTracked(govId);
+    const isTracked = window.trackingManager.isTracked(govId);
     const iconSvg = button.querySelector('.track-icon');
     const textSpan = button.querySelector('.track-text');
 
@@ -51,11 +48,17 @@ function updateTrackButtonState(button, govId) {
         textSpan.textContent = '取消追蹤';
         // 更改圖示為勾選
         iconSvg.innerHTML = '<path d="M20 6L9 17l-5-5"></path>';
+        // 切換按鈕樣式為 secondary
+        button.classList.remove('btn-primary');
+        button.classList.add('btn-secondary');
     } else {
         // 未追蹤狀態 - 顯示追蹤
         textSpan.textContent = '追蹤';
         // 更改圖示為加號
         iconSvg.innerHTML = '<path d="M12 5v14M5 12h14"></path>';
+        // 切換按鈕樣式為 primary
+        button.classList.remove('btn-secondary');
+        button.classList.add('btn-primary');
     }
 }
 

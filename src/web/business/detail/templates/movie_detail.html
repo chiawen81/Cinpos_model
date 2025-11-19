@@ -18,12 +18,20 @@
     </button>
 </div>
 
-<!-- 預警提示 -->
-{% if warning.has_warning %}
+<!-- 衰退預警提示 -->
+{% if warning.level == '嚴重' %}
+<div class="alert alert-danger">
+    <span class="alert-icon">🚨</span>
+    <div class="alert-content">
+        <div class="alert-title">【嚴重】衰退預警</div>
+        <div class="alert-message">{{ warning.message }}</div>
+    </div>
+</div>
+{% elif warning.level == '注意' %}
 <div class="alert alert-warning">
     <span class="alert-icon">⚠</span>
     <div class="alert-content">
-        <div class="alert-title">票房衰退預警</div>
+        <div class="alert-title">【注意】衰退預警</div>
         <div class="alert-message">{{ warning.message }}</div>
     </div>
 </div>
@@ -114,7 +122,7 @@
             </div>
         </div>
         <button class="btn-collapse" id="toggleMoreInfo">
-            <span class="collapse-text">展開更多</span>
+            <span class="collapse-text"></span>
             <svg class="collapse-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
@@ -161,7 +169,7 @@
                     <th>觀影人數</th>
                     <th>廳數</th>
                     <th>衰退率</th>
-                    <th>異常警示</th>
+                    <th>衰退預警</th>
                 </tr>
             </thead>
             <tbody>
@@ -200,7 +208,17 @@
                         </span>
                     </td>
                     <td>
-                        <span class="badge badge-success">正常</span>
+                        {% if pred.warning %}
+                            {% if pred.warning.level == '嚴重' %}
+                                <span class="badge badge-danger">嚴重</span>
+                            {% elif pred.warning.level == '注意' %}
+                                <span class="badge badge-warning">注意</span>
+                            {% else %}
+                                <span class="badge badge-success">正常</span>
+                            {% endif %}
+                        {% else %}
+                            <span class="badge badge-success">正常</span>
+                        {% endif %}
                     </td>
                 </tr>
                 {% endfor %}

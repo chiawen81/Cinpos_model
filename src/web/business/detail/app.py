@@ -23,11 +23,13 @@ app.config.from_object(Config)
 CORS(app)
 
 # ============= 註冊 Blueprint =============
-from blueprints import web_bp, prediction_api_bp, movie_api_bp
+from blueprints import web_bp, prediction_api_bp, movie_api_bp, stats_api_bp, boxoffice_list_api_bp
 
 app.register_blueprint(web_bp)
 app.register_blueprint(prediction_api_bp)
 app.register_blueprint(movie_api_bp)
+app.register_blueprint(stats_api_bp)
+app.register_blueprint(boxoffice_list_api_bp)
 
 
 # ============= 自訂過濾器 =============

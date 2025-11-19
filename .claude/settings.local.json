@@ -30,7 +30,9 @@
       "Bash(then echo \"檔案存在\")",
       "Bash(else echo \"檔案不存在\")",
       "Bash(fi)",
-      "Bash(timeout 60 bash:*)"
+      "Bash(timeout 60 bash:*)",
+      "Bash(timeout 5 bash:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []

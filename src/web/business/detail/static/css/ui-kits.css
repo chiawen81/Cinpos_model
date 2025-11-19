@@ -315,3 +315,74 @@ a:hover {
         min-width: fit-content;
     }
 }
+
+/* ============= 分頁器 ============= */
+.card-footer {
+    border-top: 1px solid rgba(218, 218, 255, 0.1);
+    padding-top: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+}
+
+.pagination-btn {
+    padding: 8px 16px;
+    min-width: 80px;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.pagination-pages {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pagination-page {
+    padding: 8px 12px;
+    min-width: 40px;
+    height: 40px;
+    font-size: 0.875rem;
+}
+
+.pagination-page.active {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+    border-color: var(--brand-primary);
+    box-shadow: 0 2px 8px rgba(156, 109, 255, 0.3);
+}
+
+.pagination-ellipsis {
+    padding: 8px 4px;
+    color: var(--text-muted);
+    user-select: none;
+}
+
+/* RWD - 手機版分頁器 */
+@media (max-width: 768px) {
+    .pagination-container {
+        flex-wrap: wrap;
+    }
+
+    .pagination-btn {
+        min-width: 70px;
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+
+    .pagination-page {
+        min-width: 36px;
+        height: 36px;
+        padding: 6px 8px;
+        font-size: 0.75rem;
+    }
+}

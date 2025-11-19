@@ -11,21 +11,31 @@
 <!-- 快速統計卡片 -->
 <div class="stats-grid mb-4">
     <div class="stat-card">
-        <div class="stat-label">本週上映電影</div>
-        <div class="stat-value">12</div>
-        <div class="stat-change positive">+3 較上週</div>
+        <div class="stat-label">近一個月上映電影</div>
+        <div class="stat-value" id="recentMoviesCount">
+            <span class="loading-text">載入中...</span>
+        </div>
+        <div class="stat-change" id="recentMoviesChange">
+            <span class="loading-text">-</span>
+        </div>
     </div>
 
     <div class="stat-card">
         <div class="stat-label">追蹤中電影</div>
-        <div class="stat-value">5</div>
+        <div class="stat-value" id="trackedMoviesCount">
+            <span class="loading-text">載入中...</span>
+        </div>
         <div class="stat-change">個人追蹤</div>
     </div>
 
     <div class="stat-card">
         <div class="stat-label">預警電影</div>
-        <div class="stat-value">3</div>
-        <div class="stat-change negative">需要關注</div>
+        <div class="stat-value" id="warningMoviesCount">
+            <span class="loading-text">載入中...</span>
+        </div>
+        <div class="stat-change" id="warningMoviesDetail">
+            <span class="loading-text">-</span>
+        </div>
     </div>
 </div>
 
@@ -35,8 +45,8 @@
     <div class="card-header">
         <h3 class="card-title">票房預測結果</h3>
         <div class="filter-tabs" id="movieFilter">
-            <button class="filter-tab active" data-filter="all">所有電影</button>
-            <button class="filter-tab" data-filter="now-showing">近期上映</button>
+            <!-- <button class="filter-tab" data-filter="all">所有電影</button> -->
+            <button class="filter-tab active" data-filter="now-showing">近期上映</button>
             <button class="filter-tab" data-filter="tracked">我的追蹤</button>
         </div>
     </div>
@@ -51,43 +61,31 @@
                     <th>上週實際</th>
                     <th>上週衰退率</th>
                     <th>預測差距%</th>
-                    <th>狀態</th>
+                    <th>預警狀態</th>
                     <th>追蹤</th>
                 </tr>
             </thead>
             <tbody id="movieTableBody">
-                <tr data-filter-type="now-showing">
-                    <td><a href="{{ url_for('web.movie_detail', gov_id='MOV001') }}" class="movie-link">科技風暴</a></td>
-                    <td>第8週</td>
-                    <td>NT$850萬</td>
-                    <td>NT$1,050萬</td>
-                    <td>NT$980萬</td>
-                    <td class="text-warning">-28%</td>
-                    <td class="text-success">+7%</td>
-                    <td><span class="badge badge-warning">注意</span></td>
-                    <td>
-                        <button class="btn-track-text" data-gov-id="MOV001">
-                            加入追蹤
-                        </button>
-                    </td>
-                </tr>
-                <tr data-filter-type="now-showing">
-                    <td><a href="{{ url_for('web.movie_detail', gov_id='MOV002') }}" class="movie-link">愛在深秋</a></td>
-                    <td>第10週</td>
-                    <td>NT$320萬</td>
-                    <td>NT$380萬</td>
-                    <td>NT$375萬</td>
-                    <td class="text-success">-15%</td>
-                    <td class="text-success">+1%</td>
-                    <td><span class="badge badge-success">正常</span></td>
-                    <td>
-                        <button class="btn-track-text tracked" data-gov-id="MOV002">
-                            取消追蹤
-                        </button>
+                <tr>
+                    <td colspan="9" style="text-align: center; padding: 40px; color: var(--text-muted);">
+                        <span class="loading-text">載入中...</span>
                     </td>
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="card-footer">
+        <div class="pagination-container" id="paginationContainer">
+            <button class="btn btn-secondary pagination-btn" id="prevPageBtn" disabled>
+                上一頁
+            </button>
+            <div class="pagination-pages" id="paginationPages">
+                <!-- 頁碼按鈕將由 JavaScript 動態生成 -->
+            </div>
+            <button class="btn btn-secondary pagination-btn" id="nextPageBtn" disabled>
+                下一頁
+            </button>
+        </div>
     </div>
 </div>
 {% endblock %}

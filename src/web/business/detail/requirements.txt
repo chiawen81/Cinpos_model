@@ -14,8 +14,10 @@ lightgbm==4.6.0
 # 圖表與視覺化
 plotly==6.4.0
 matplotlib==3.10.7
+seaborn==0.13.2
 
 # 其他必要套件
+openpyxl==3.1.5
 beautifulsoup4==4.14.2
 lxml==6.0.2
 pyyaml==6.0.3

@@ -84,7 +84,3 @@ class BoxOfficePrediction:
             'confidence_upper': self.confidence_upper,
             'decline_rate': self.decline_rate
         }
-    
-    def is_declining_fast(self, threshold: float = -0.3) -> bool:
-        """檢查是否衰退過快"""
-        return self.decline_rate < threshold

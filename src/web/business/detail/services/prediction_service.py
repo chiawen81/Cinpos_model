@@ -19,6 +19,7 @@ from M1_predict_new_movie import M1NewMoviePredictor
 from models.prediction import BoxOfficePredictionModel, AudiencePredictionModel
 from models.movie import BoxOfficePrediction
 from services.movie_service import MovieService
+from services.decline_warning_service import get_decline_warning_service
 from config import Config
 
 
@@ -36,9 +37,29 @@ class PredictionService:
         self.audience_model = AudiencePredictionModel(model_path)
         self.movie_service = MovieService()
         self.config = Config()
+        self.warning_service = get_decline_warning_service()
 
         # 初始化新電影預測器（使用延遲載入模式，避免啟動時載入模型失敗）
         self.new_movie_predictor = M1NewMoviePredictor(model_path, lazy_load=True)
+
+    @staticmethod
+    def calculate_opening_strength(
+        week_1_boxoffice: float,
+        week_2_boxoffice: float,
+        week_1_days: int = 7
+    ) -> float:
+        """
+        計算開片實力（前兩周日均票房的平均值）
+
+        Args:
+            week_1_boxoffice: 第一週票房
+            week_2_boxoffice: 第二週票房
+            week_1_days: 第一週上映天數（預設 7 天）
+
+        Returns:
+            開片實力數值
+        """
+        return (week_1_boxoffice / week_1_days + week_2_boxoffice) / 2
 
     def predict_movie_boxoffice(self, gov_id: str, weeks: int = 3) -> List[BoxOfficePrediction]:
         """
@@ -77,7 +98,7 @@ class PredictionService:
 
     def check_decline_warning(self, gov_id: str) -> Dict:
         """
-        檢查票房衰退預警
+        檢查票房衰退預警（使用新的統一邏輯）
 
         Args:
             gov_id: 政府代號
@@ -85,41 +106,52 @@ class PredictionService:
         Returns:
             預警資訊字典
         """
-        # 取得歷史統計
-        stats = self.movie_service.calculate_statistics(gov_id)
-        avg_decline_rate = stats.get("avg_decline_rate", 0)
-
         # 取得預測
         predictions = self.predict_movie_boxoffice(gov_id, weeks=1)
 
         if not predictions:
-            return {"has_warning": False, "message": "無法計算預警資訊"}
+            return {
+                "level": "正常",
+                "has_warning": False,
+                "message": "無法計算預警資訊",
+            }
 
         next_week_decline = predictions[0].decline_rate
 
-        # 檢查是否低於平均或門檻
-        threshold = self.config.DECLINE_RATE_THRESHOLD
+        # 取得歷史資料以計算開片實力
+        history = self.movie_service.get_boxoffice_history(gov_id)
 
-        warning_info = {
-            "has_warning": False,
+        if len(history) < 2:
+            return {
+                "level": "正常",
+                "has_warning": False,
+                "message": "歷史資料不足，無法計算預警",
+            }
+
+        # 計算開片實力（前兩周日均票房）
+        week_1_boxoffice = history[0].boxoffice
+        week_2_boxoffice = history[1].boxoffice if len(history) > 1 else week_1_boxoffice
+        opening_strength = self.calculate_opening_strength(week_1_boxoffice, week_2_boxoffice)
+
+        # 取得當前週次
+        current_week = len(history) + 1
+
+        # 使用新的預警服務檢查
+        warning = self.warning_service.check_decline_warning(
+            opening_strength=opening_strength,
+            current_week=current_week,
+            predicted_decline_rate=next_week_decline,
+        )
+
+        # 相容舊的 API 格式
+        return {
+            "level": warning["level"],
+            "has_warning": warning["level"] != "正常",
+            "message": warning["message"],
             "next_week_decline": next_week_decline,
-            "avg_decline_rate": avg_decline_rate,
-            "threshold": threshold,
-            "message": "",
+            "average_decline_rate": warning["average_decline_rate"],
+            "tier": warning["tier"],
         }
-
-        if next_week_decline < threshold:
-            warning_info["has_warning"] = True
-            warning_info["message"] = (
-                f"預測下週票房衰退率 {next_week_decline:.1%}，超過門檻 {threshold:.0%}"
-            )
-        elif next_week_decline < avg_decline_rate * 1.5:  # 比平均衰退快50%
-            warning_info["has_warning"] = True
-            warning_info["message"] = (
-                f"預測下週票房衰退速度異常，比平均快 {abs(next_week_decline/avg_decline_rate - 1):.0%}"
-            )
-
-        return warning_info
 
     def generate_combined_data(self, gov_id: str) -> Dict:
         """
@@ -201,23 +233,32 @@ class PredictionService:
                 sum(p["decline_rate"] for p in predictions) / len(predictions) if predictions else 0
             )
 
-            # 檢查異常警示
+            # 計算開片實力（前兩周日均票房）
+            week_1_data = week_data[0] if len(week_data) > 0 else {"boxoffice": 0}
+            week_2_data = week_data[1] if len(week_data) > 1 else week_1_data
+            week_1_days = movie_info.get("open_week1_days", 7)
+
+            opening_strength = self.calculate_opening_strength(
+                week_1_data["boxoffice"],
+                week_2_data["boxoffice"],
+                week_1_days
+            )
+
+            # 使用新的預警服務檢查
             warnings = []
             for pred in predictions:
-                if pred["decline_rate"] < -0.5:  # 衰退超過 50%
+                warning_result = self.warning_service.check_decline_warning(
+                    opening_strength=opening_strength,
+                    current_week=pred["week"],
+                    predicted_decline_rate=pred["decline_rate"],
+                )
+
+                if warning_result["level"] != "正常":
                     warnings.append(
                         {
                             "week": pred["week"],
-                            "type": "high_decline",
-                            "message": f"第 {pred['week']} 週預測衰退率過高 ({pred['decline_rate']:.1%})",
-                        }
-                    )
-                elif pred["predicted_boxoffice"] < 1000000:  # 票房低於 100 萬
-                    warnings.append(
-                        {
-                            "week": pred["week"],
-                            "type": "low_boxoffice",
-                            "message": f"第 {pred['week']} 週預測票房過低 ({pred['predicted_boxoffice']:,.0f} 元)",
+                            "level": warning_result["level"],
+                            "message": warning_result["message"],
                         }
                     )
 
@@ -543,12 +584,8 @@ class PredictionService:
         df.to_csv(buffer, index=False, encoding='utf-8-sig')
 
         # 生成檔案名稱
-        movie_name = movie_info.get('name', 'unknown_movie')
-        # 清理檔名中的特殊字元，保留中文、英文、數字、底線、連字號
-        import re
-        safe_movie_name = re.sub(r'[^\w\s\-\u4e00-\u9fff]', '', movie_name)  # 保留中文字符
-        safe_movie_name = safe_movie_name.replace(' ', '_')  # 空格替換為底線
-        filename = f"cinpos_preprocessed_{safe_movie_name}.csv"
+        timestamp = datetime.now().strftime("%Y%m%d")
+        filename = f"cintech_preprocessed_{timestamp}.csv"
 
         buffer.seek(0)
         return buffer.read(), filename

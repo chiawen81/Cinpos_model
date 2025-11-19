@@ -726,17 +726,9 @@ function displayPredictionResults(result) {
         const row = document.createElement('tr');
         const declineColor = item.decline_rate < -0.3 ? 'danger' : (item.decline_rate < -0.15 ? 'warning' : 'success');
 
-        // 找到該週的預警資訊
+        // 找到該週的預警資訊並使用統一的工具函數生成徽章
         const warning = result.warnings.find(w => w.week === item.week);
-        let warningBadge = '<span class="badge badge-success">正常</span>';
-
-        if (warning) {
-            if (warning.level === '嚴重') {
-                warningBadge = '<span class="badge badge-danger">嚴重</span>';
-            } else if (warning.level === '注意') {
-                warningBadge = '<span class="badge badge-warning">注意</span>';
-            }
-        }
+        const warningBadge = window.warningUtils.getWarningBadge(warning);
 
         row.innerHTML = `
             <td>第 ${item.week} 週</td>

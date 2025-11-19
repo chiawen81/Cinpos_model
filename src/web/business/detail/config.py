@@ -25,7 +25,6 @@ class Config:
     
     # 預測模型設定
     PREDICTION_WEEKS = 3  # 預測未來幾週
-    DECLINE_RATE_THRESHOLD = -0.3  # 衰退率預警門檻 (30%)
     
     # UI 色彩設定
     UI_COLORS = {

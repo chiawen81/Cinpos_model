@@ -1,0 +1,51 @@
+{# 衰退預警徽章 macro #}
+{# 用於在模板中統一顯示預警徽章，避免重複程式碼 #}
+
+{% macro warning_badge(warning, show_icon=false) %}
+    {# 根據預警物件顯示對應的徽章 #}
+    {% if warning and warning.level %}
+        {% if warning.level == '嚴重' %}
+            <span class="badge badge-danger">{% if show_icon %}🚨 {% endif %}嚴重</span>
+        {% elif warning.level == '注意' %}
+            <span class="badge badge-warning">{% if show_icon %}⚠️ {% endif %}注意</span>
+        {% else %}
+            <span class="badge badge-success">正常</span>
+        {% endif %}
+    {% else %}
+        <span class="badge badge-success">正常</span>
+    {% endif %}
+{% endmacro %}
+
+{% macro warning_badge_by_level(level, show_icon=false) %}
+    {# 根據預警等級字串顯示對應的徽章 #}
+    {% if level == '嚴重' %}
+        <span class="badge badge-danger">{% if show_icon %}🚨 {% endif %}嚴重</span>
+    {% elif level == '注意' %}
+        <span class="badge badge-warning">{% if show_icon %}⚠️ {% endif %}注意</span>
+    {% else %}
+        <span class="badge badge-success">正常</span>
+    {% endif %}
+{% endmacro %}
+
+{% macro warning_alert(warning) %}
+    {# 根據預警等級顯示頂部提示框 #}
+    {% if warning and warning.level %}
+        {% if warning.level == '嚴重' %}
+            <div class="alert alert-danger">
+                <span class="alert-icon">🚨</span>
+                <div class="alert-content">
+                    <div class="alert-title">【嚴重】衰退預警</div>
+                    <div class="alert-message">{{ warning.message }}</div>
+                </div>
+            </div>
+        {% elif warning.level == '注意' %}
+            <div class="alert alert-warning">
+                <span class="alert-icon">⚠</span>
+                <div class="alert-content">
+                    <div class="alert-title">【注意】衰退預警</div>
+                    <div class="alert-message">{{ warning.message }}</div>
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endmacro %}

@@ -64,6 +64,31 @@ def movie_detail(gov_id):
     # 取得預警資訊
     warning = prediction_service.check_decline_warning(gov_id)
 
+    # 為每個預測加入預警資訊（用於表格顯示）
+    predictions_with_warnings = []
+    if len(history) >= 2:
+        # 使用統一的開片實力計算方法
+        week_1_boxoffice = history[0].boxoffice
+        week_2_boxoffice = history[1].boxoffice if len(history) > 1 else week_1_boxoffice
+        opening_strength = prediction_service.calculate_opening_strength(
+            week_1_boxoffice,
+            week_2_boxoffice
+        )
+
+        # 為每個預測加入預警
+        warning_service = prediction_service.warning_service
+        for pred in predictions:
+            pred_dict = pred.to_dict()
+            warning_info = warning_service.check_decline_warning(
+                opening_strength=opening_strength,
+                current_week=pred.week,
+                predicted_decline_rate=pred.decline_rate,
+            )
+            pred_dict['warning'] = warning_info
+            predictions_with_warnings.append(pred_dict)
+    else:
+        predictions_with_warnings = [pred.to_dict() for pred in predictions]
+
     # 準備圖表資料
     chart_data = {
         'history': [record.to_dict() for record in history],
@@ -76,7 +101,7 @@ def movie_detail(gov_id):
     return render_template('movie_detail.html',
                          movie=movie,
                          history=history,
-                         predictions=predictions,
+                         predictions=predictions_with_warnings,
                          statistics=statistics,
                          warning=warning,
                          chart_data=chart_data,

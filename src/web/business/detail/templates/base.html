@@ -58,15 +58,14 @@
                             </a>
                         </li>
                         <li class="sidebar-nav-item">
-                            <a href="{{ url_for('web.movies_list') }}"
-                                class="sidebar-nav-link {% if request.endpoint == 'web.movies_list' %}active{% endif %}">
-                                電影列表
+                            <a href="{{ url_for('static', filename='intro/專題一頁式介紹_C103第五組_v2.pdf') }}"
+                                class="sidebar-nav-link" target="_blank">
+                                專題介紹
                             </a>
                         </li>
                         <li class="sidebar-nav-item">
-                            <a href="{{ url_for('web.reports') }}"
-                                class="sidebar-nav-link {% if request.endpoint == 'web.reports' %}active{% endif %}">
-                                報表中心
+                            <a href="https://github.com/chiawen81" class="sidebar-nav-link" target="_blank">
+                                Github
                             </a>
                         </li>
                     </ul>

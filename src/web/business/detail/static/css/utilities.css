@@ -157,10 +157,6 @@
 }
 
 /* ============= 其他工具類別 ============= */
-.w-100 {
-    width: 100%;
-}
-
 .hidden {
     display: none;
 }
@@ -170,6 +166,10 @@
     margin: 10px auto;
     height: 1px;
     border-radius: 12px;
+}
+
+.border-none {
+    border: none !important;
 }
 
 /* ============= 動畫 ============= */

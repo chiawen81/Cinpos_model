@@ -69,32 +69,20 @@ docs/set_claude_use_mode/use-api.bat
 ~~~
 - 若 Agent 需要使用 API key：優先從 CI secret 或使用者環境變數讀取；勿把 key 寫入 repo。
 
-## 7. 專案目錄建議（快速參考）
-~~~
-docs/for_developer/
-├── spec_model.md              # 模型規格主索引
-├── spec_web.md                # 網站業務邏輯主索引
-├── spec_web_api.md            # API 規格主索引
-├── spec_guidelines.md         # 編寫規範
-├── model/                     # 模型詳細文件
-│   ├── pipeline.md
-│   ├── data_dictionary.md
-│   ├── data_processing_rules.md
-│   ├── feature_config.yaml
-│   └── filter_data_tool.md
-├── web/                       # 網站詳細文件
-├── shared/                    # 共用文件
-│   ├── pipeline_config_usage.md
-│   └── pipeline_modification_guide.md
-└── work_log/                  # 工作日誌
-src/
-  ├── ML_boxoffice/            # 模型相關程式碼
-  └── web/                     # 網站相關程式碼
-.venv/
-.pyproject.toml
-.python-version
-README.md
-~~~
+## 7. 專案目錄（快速參考）
+
+> **完整專案結構請參考**: [README.md - 專案結構說明](./README.md#-專案結構說明)
+
+**重點目錄**：
+- **docs/for_developer/** - 開發文件
+  - `spec_model.md`、`spec_web.md`、`spec_web_api.md` - 主索引文件
+  - `model/` - 模型詳細文件（Pipeline、資料字典、特徵工程等）
+  - `web/` - 網站詳細文件
+  - `shared/` - 共用文件（Pipeline 配置系統）
+- **src/ML_boxoffice/** - 模型相關程式碼
+- **src/web/** - 網站相關程式碼
+- **data/** - 原始與處理後資料存放區
+- **.venv/** - 虛擬環境（由 uv 管理）
 
 ## 8. 常見問題（Agent 指南版）
 - Q: 為何 Claude Code 使用舊身分／環境變數沒生效？  

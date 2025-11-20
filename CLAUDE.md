@@ -115,31 +115,22 @@ docs\shared\pipeline_modification_guide.md
 
 ---
 
-## 📦 專案文件結構
+## 📦 專案結構
 
-```
-docs/for_developer/
-├── spec_model.md              # 模型規格（主索引）
-├── spec_web.md                # 網站業務邏輯（主索引）
-├── spec_web_api.md            # API 規格（主索引）
-├── spec_guidelines.md         # 編寫規範
-│
-├── model/                     # 模型詳細文件
-│   ├── pipeline.md
-│   ├── data_dictionary.md
-│   ├── data_processing_rules.md
-│   ├── feature_engineering_refactoring.md
-│   ├── feature_config.yaml
-│   └── filter_data_tool.md
-│
-├── web/                       # 網站詳細文件
-│   ├── architecture.md
-│   └── download_preprocessed_data_guide.md
-│
-└── shared/                    # 共用文件
-    ├── pipeline_config_usage.md
-    └── pipeline_modification_guide.md
-```
+> **完整的專案結構請參考**: [README.md - 專案結構說明](./README.md#-專案結構說明)
+
+**開發文件位置**: `docs/for_developer/` 採用「主索引 + 詳細文件」架構
+
+**主索引文件** (spec_*.md)：
+- `spec_model.md` - 模型規格主索引
+- `spec_web.md` - 網站業務邏輯主索引
+- `spec_web_api.md` - API 規格主索引
+- `spec_guidelines.md` - 文件編寫規範
+
+**詳細文件分類**：
+- `model/` - 模型相關文件（Pipeline、資料字典、特徵工程等）
+- `web/` - 網站相關文件（架構、使用指南等）
+- `shared/` - 共用文件（Pipeline 配置系統等）
 
 ---
 

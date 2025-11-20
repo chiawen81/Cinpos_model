@@ -152,7 +152,7 @@
                     <th>類型</th>
                     <th>票房</th>
                     <th>觀影人數</th>
-                    <th>廳數</th>
+                    <!-- <th>廳數</th> -->
                     <th>衰退率</th>
                     <th>衰退預警</th>
                 </tr>
@@ -165,7 +165,7 @@
                     <td>實際票房</td>
                     <td>{{ record.boxoffice | format_currency }}</td>
                     <td>{{ record.audience | format_number }}</td>
-                    <td>{{ record.screens }}</td>
+                    <!-- <td>{{ record.screens }}</td> -->
                     <td>
                         {% if record.decline_rate %}
                         <span style="color: {{ record.decline_rate | decline_color }}">

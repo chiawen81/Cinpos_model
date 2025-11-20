@@ -134,10 +134,13 @@ class BoxOfficePredictionModel:
                 prev_boxoffice = predicted_boxoffice
             decline_rate = calculate_decline_rate(predicted_boxoffice, prev_boxoffice)
 
-            # 估算觀影人次和場次數
+            # 估算觀影人次
             predicted_audience = int(predicted_boxoffice / 300)  # 假設平均票價 300 元
-            prev_screens = week_data[-1].get('screens', 100) if week_data else 100
-            predicted_screens = max(int(prev_screens * 0.9), 20)  # 院線數衰退 10%
+
+            # TODO: 廳數預測暫時註解，待找到更合理的預測方式
+            # prev_screens = week_data[-1].get('screens', 100) if week_data else 100
+            # predicted_screens = max(int(prev_screens * 0.9), 20)  # 院線數衰退 10%
+            predicted_screens = None
 
             # 計算信心區間（簡化版本）
             confidence_margin = predicted_boxoffice * 0.15  # 15% 誤差範圍
@@ -161,7 +164,7 @@ class BoxOfficePredictionModel:
                 'week': target_week,
                 'boxoffice': predicted_boxoffice,
                 'audience': predicted_audience,
-                'screens': predicted_screens
+                'screens': predicted_screens if predicted_screens else 0  # 廳數暫時設為 0
             })
 
         return predictions
@@ -265,10 +268,13 @@ class BoxOfficePredictionModel:
             prev_boxoffice = week_data[-1].get('boxoffice', predicted_boxoffice)
             decline_rate = calculate_decline_rate(predicted_boxoffice, prev_boxoffice)
 
-            # 估算觀影人次和場次數
+            # 估算觀影人次
             predicted_audience = int(predicted_boxoffice / 300)  # 假設平均票價 300 元
-            prev_screens = week_data[-1].get('screens', 100)
-            predicted_screens = max(int(prev_screens * 0.9), 20)  # 院線數衰退 10%
+
+            # TODO: 廳數預測暫時註解，待找到更合理的預測方式
+            # prev_screens = week_data[-1].get('screens', 100)
+            # predicted_screens = max(int(prev_screens * 0.9), 20)  # 院線數衰退 10%
+            predicted_screens = None
 
             # 計算信心區間（簡化版本）
             confidence_margin = predicted_boxoffice * 0.15  # 15% 誤差範圍
@@ -292,7 +298,7 @@ class BoxOfficePredictionModel:
                 'week': target_week,
                 'boxoffice': predicted_boxoffice,
                 'audience': predicted_audience,
-                'screens': predicted_screens
+                'screens': predicted_screens if predicted_screens else 0  # 廳數暫時設為 0
             })
 
         return predictions

@@ -160,12 +160,13 @@ class M1NewMoviePredictor:
             # --------------------------------------------------
             # TODO: 這裡改成用票房的衰退率去回推觀影人數、院線數
             # --------------------------------------------------
-            # 估算其他數值（觀影人數、院線數）
+            # 估算觀影人數
             predicted_audience = int(predicted_boxoffice / 300)  # 假設平均票價 300 元
 
-            # 取得前一週的院線數
-            prev_screens = lag_features.get('screens_week_1', 100)
-            predicted_screens = max(int(prev_screens * 0.9), 20)  # 院線數衰退 10%
+            # TODO: 廳數預測暫時註解，待找到更合理的預測方式
+            # prev_screens = lag_features.get('screens_week_1', 100)
+            # predicted_screens = max(int(prev_screens * 0.9), 20)  # 院線數衰退 10%
+            predicted_screens = None
             # ==================================================
 
             # 計算衰退率

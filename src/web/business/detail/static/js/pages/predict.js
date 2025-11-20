@@ -714,7 +714,7 @@ function displayPredictionResults(result) {
             <td><span class="badge badge-success">實際</span></td>
             <td>${formatCurrency(item.boxoffice)}</td>
             <td>${formatNumber(item.audience)}</td>
-            <td>${item.screens || '-'}</td>
+            <!-- <td>${item.screens || '-'}</td> -->
             <td>${declineRateHtml}</td>
             <td>-</td>
         `;
@@ -735,7 +735,7 @@ function displayPredictionResults(result) {
             <td><span class="badge badge-primary">預測</span></td>
             <td>${formatCurrency(item.boxoffice)}</td>
             <td>${formatNumber(item.audience)}</td>
-            <td>${item.screens || '-'}</td>
+            <!-- <td>${item.screens || '-'}</td> -->
             <td><span class="badge badge-${declineColor}">${formatPercentage(item.decline_rate)}</span></td>
             <td>${warningBadge}</td>
         `;

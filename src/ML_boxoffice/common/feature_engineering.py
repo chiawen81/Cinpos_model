@@ -178,6 +178,14 @@ class BoxOfficeFeatureEngineer:
             if data is None:
                 return default
             value = data.get(key, default)
+            # 處理 None 值（避免 NaN 傳入模型）
+            if value is None:
+                if key == 'audience':
+                    return data.get('boxoffice', 0) / 300  # 假設平均票價 300 元
+                elif key == 'screens':
+                    return 100  # 預設院線數
+                else:
+                    return default
             # 如果是 audience 或 screens 為 0，用票房估算
             if key == 'audience' and value == 0:
                 return data.get('boxoffice', 0) / 300  # 假設平均票價 300 元

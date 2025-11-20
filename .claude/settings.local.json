@@ -34,7 +34,9 @@
       "Bash(timeout 5 bash:*)",
       "Bash(cat:*)",
       "Bash(if [ -f \"src/intro/專題一頁式介紹_C103第五組_v2.pdf\" ])",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(git rm:*)",
+      "Bash(powershell -Command \"Get-Content ''docs/for_developer/spec_model.md'' -Encoding UTF8 | Select-Object -Skip 494 -First 10\")"
     ],
     "deny": [],
     "ask": []

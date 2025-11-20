@@ -81,40 +81,64 @@ docs\shared\pipeline_modification_guide.md
 3. 若工作日誌的內容與現況差距太大時，請主動提醒(可能太久沒更新)
 
 
+### 開發規格文件
+
+專案的開發規格文件已統一整理至 `docs/for_developer/`：
+
+#### 主索引文件
+- **docs/for_developer/spec_model.md**: 模型規格主索引
+- **docs/for_developer/spec_web.md**: 網站業務邏輯主索引
+- **docs/for_developer/spec_web_api.md**: API 規格主索引
+- **docs/for_developer/spec_guidelines.md**: 規格文件編寫規範
+
+#### 詳細文件
+- **模型相關**: `docs/for_developer/model/` - 包含 Pipeline、資料欄位定義、資料處理規則等
+- **網站相關**: `docs/for_developer/web/` - 包含架構說明、使用指南等
+- **共用文件**: `docs/for_developer/shared/` - Pipeline 配置系統使用說明
+
 ### 欄位定義文件（同步更新）
 
 當修改特徵欄位時，必須同時更新：
 
-1. **docs/ML_boxoffice/data_dictionary.md**
+1. **docs/for_developer/model/data_dictionary.md**
    - 人類可讀的欄位說明
    - 包含範例、計算邏輯
 
-2. **docs/ML_boxoffice/feature_config.yaml**
+2. **docs/for_developer/model/feature_config.yaml**
    - 機器可讀的欄位定義
    - 供 AI Agent 和自動化工具讀取
 
-### Pipeline 文件
-- **docs/ML_boxoffice/pipeline.md**: Pipeline 流程、建模策略
-- **docs/ML_boxoffice/data_processing_rules.md**: 資料處理規則
-
 ### 文件組織原則
-- ✅ 所有文檔統一放在 `docs/` 下
-- ❌ 不要在 `src/` 下放 Pipeline 說明文件
+- ✅ 所有開發文檔統一放在 `docs/for_developer/` 下
+- ✅ 採用「主索引 + 詳細文件」的兩層架構
+- ❌ 不要在 `src/` 下放規格說明文件
 
 ---
 
 ## 📦 專案文件結構
 
 ```
-docs/
-├── ML_boxoffice/
-│   ├── pipeline.md              # Pipeline 流程 + 建模策略
-│   ├── data_dictionary.md       # 欄位定義（人類可讀）
-│   ├── data_processing_rules.md # 資料處理規則
-│   └── feature_config.yaml      # 欄位定義（機器可讀）
-├── shared/ (共用文件) 
-    ├── docs\shared\pipeline_config_usage.md   # Pipeline 配置系統使用說明
-    └── docs\shared\pipeline_modification_guide.md # Pipeline 系統的修改檢查清單
+docs/for_developer/
+├── spec_model.md              # 模型規格（主索引）
+├── spec_web.md                # 網站業務邏輯（主索引）
+├── spec_web_api.md            # API 規格（主索引）
+├── spec_guidelines.md         # 編寫規範
+│
+├── model/                     # 模型詳細文件
+│   ├── pipeline.md
+│   ├── data_dictionary.md
+│   ├── data_processing_rules.md
+│   ├── feature_engineering_refactoring.md
+│   ├── feature_config.yaml
+│   └── filter_data_tool.md
+│
+├── web/                       # 網站詳細文件
+│   ├── architecture.md
+│   └── download_preprocessed_data_guide.md
+│
+└── shared/                    # 共用文件
+    ├── pipeline_config_usage.md
+    └── pipeline_modification_guide.md
 ```
 
 ---

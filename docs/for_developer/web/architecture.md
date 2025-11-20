@@ -135,6 +135,7 @@ src/web/business/detail/
 
 ## 相關文件
 
-- [Pipeline 系統文件](../ML_boxoffice/pipeline.md)
-- [資料字典](../ML_boxoffice/data_dictionary.md)
-- [專案指引](../../CLAUDE.md)
+- [模型規格文件](../spec_model.md) - 模型規格主索引
+- [Pipeline 系統文件](../model/pipeline.md) - Pipeline 詳細流程
+- [資料字典](../model/data_dictionary.md) - 資料欄位定義
+- [專案指引](../../../CLAUDE.md) - 專案整體說明

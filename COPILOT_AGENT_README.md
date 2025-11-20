@@ -48,12 +48,15 @@ uv run python  # 需要互動 python 時
 
 ## 5. 文件同步規則（人類文件 vs 機器文件）
 - 每次新增或變動 feature 欄位，**必須同時更新**：
-  1. `docs/ML_boxoffice/data_dictionary.md` （人類可讀、含範例與計算邏輯）
-  2. `docs/ML_boxoffice/feature_config.yaml` （機器可讀、供 Agent/自動化工具使用）
+  1. `docs/for_developer/model/data_dictionary.md` （人類可讀、含範例與計算邏輯）
+  2. `docs/for_developer/model/feature_config.yaml` （機器可讀、供 Agent/自動化工具使用）
 - 其他重要 doc：
-  - `docs/ML_boxoffice/pipeline.md`
-  - `docs/ML_boxoffice/data_processing_rules.md`
-- 文件放置原則：所有文件放 `docs/`；**不要**把 pipeline 文件放在 `src/`。
+  - `docs/for_developer/spec_model.md` - 模型規格主索引
+  - `docs/for_developer/spec_web.md` - 網站業務邏輯主索引
+  - `docs/for_developer/spec_web_api.md` - API 規格主索引
+  - `docs/for_developer/model/pipeline.md` - Pipeline 詳細流程
+  - `docs/for_developer/model/data_processing_rules.md` - 資料處理規則
+- 文件放置原則：所有開發文件放 `docs/for_developer/`；採用「主索引 + 詳細文件」架構；**不要**把規格文件放在 `src/`。
 
 ## 6. 安全與敏感資訊
 - 絕對不要把 API keys 或敏感檔案提交到 Git。
@@ -68,20 +71,25 @@ docs/set_claude_use_mode/use-api.bat
 
 ## 7. 專案目錄建議（快速參考）
 ~~~
-docs/
-├── ML_boxoffice/
+docs/for_developer/
+├── spec_model.md              # 模型規格主索引
+├── spec_web.md                # 網站業務邏輯主索引
+├── spec_web_api.md            # API 規格主索引
+├── spec_guidelines.md         # 編寫規範
+├── model/                     # 模型詳細文件
 │   ├── pipeline.md
 │   ├── data_dictionary.md
 │   ├── data_processing_rules.md
-│   └── feature_config.yaml
-├── shared/
+│   ├── feature_config.yaml
+│   └── filter_data_tool.md
+├── web/                       # 網站詳細文件
+├── shared/                    # 共用文件
 │   ├── pipeline_config_usage.md
 │   └── pipeline_modification_guide.md
+└── work_log/                  # 工作日誌
 src/
-  └── ML_recommend/
-      ├── data_aggregated/
-      ├── data_integration/
-      └── ...
+  ├── ML_boxoffice/            # 模型相關程式碼
+  └── web/                     # 網站相關程式碼
 .venv/
 .pyproject.toml
 .python-version
@@ -111,5 +119,6 @@ uv sync
 ~~~
 
 ## 10. 建議放置檔名（方便 Agent / 人類辨識）
-- `docs/COPILOT_AGENT_README.md`（放在 repo，供 Copilot/GitHub action/Reviewer 讀取）
-- `docs/ML_boxoffice/feature_config.yaml`（機器用欄位定義）
+- `COPILOT_AGENT_README.md`（放在專案根目錄，供 Copilot/GitHub action/Reviewer 讀取）
+- `docs/for_developer/model/feature_config.yaml`（機器用欄位定義）
+- `docs/for_developer/spec_*.md`（開發規格主索引）

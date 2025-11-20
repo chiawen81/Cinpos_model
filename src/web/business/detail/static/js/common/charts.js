@@ -73,7 +73,7 @@ function initializeCharts() {
 function drawBoxOfficeTrendChart(container, data) {
     const history = data.history || [];
     const predictions = data.predictions || [];
-    
+
     // 準備歷史資料
     const historyTrace = {
         x: history.map(d => `第${d.week}週`),
@@ -90,11 +90,28 @@ function drawBoxOfficeTrendChart(container, data) {
             size: 8
         }
     };
-    
-    // 準備預測資料
+
+    // 準備預測資料 - 加入歷史最後一點以連接線段
+    let predictionX = [];
+    let predictionY = [];
+
+    if (predictions.length > 0 && history.length > 0) {
+        // 加入歷史最後一點作為預測線的起點
+        const lastHistory = history[history.length - 1];
+        predictionX.push(`第${lastHistory.week}週`);
+        predictionY.push(lastHistory.boxoffice);
+
+        // 加入所有預測點
+        predictions.forEach(d => {
+            predictionX.push(`第${d.week}週`);
+            // 預測資料使用 predicted_boxoffice 欄位
+            predictionY.push(d.predicted_boxoffice || d.boxoffice);
+        });
+    }
+
     const predictionTrace = {
-        x: predictions.map(d => `第${d.week}週`),
-        y: predictions.map(d => d.boxoffice),
+        x: predictionX,
+        y: predictionY,
         name: '預測票房',
         type: 'scatter',
         mode: 'lines+markers',
@@ -108,11 +125,31 @@ function drawBoxOfficeTrendChart(container, data) {
             size: 8
         }
     };
-    
-    // 信心區間
+
+    // 信心區間 - 同樣加入歷史最後一點
+    let confidenceX = [];
+    let confidenceUpper = [];
+    let confidenceLower = [];
+
+    if (predictions.length > 0 && history.length > 0) {
+        const lastHistory = history[history.length - 1];
+
+        // 對於起點（歷史最後一點），上下界都使用實際值
+        confidenceX.push(`第${lastHistory.week}週`);
+        confidenceUpper.push(lastHistory.boxoffice);
+        confidenceLower.push(lastHistory.boxoffice);
+
+        // 加入所有預測的信心區間
+        predictions.forEach(d => {
+            confidenceX.push(`第${d.week}週`);
+            confidenceUpper.push(d.confidence_upper);
+            confidenceLower.push(d.confidence_lower);
+        });
+    }
+
     const confidenceBand = {
-        x: [...predictions.map(d => `第${d.week}週`), ...predictions.map(d => `第${d.week}週`).reverse()],
-        y: [...predictions.map(d => d.confidence_upper), ...predictions.map(d => d.confidence_lower).reverse()],
+        x: [...confidenceX, ...confidenceX.slice().reverse()],
+        y: [...confidenceUpper, ...confidenceLower.slice().reverse()],
         fill: 'toself',
         fillcolor: 'rgba(156, 109, 255, 0.2)',
         line: { color: 'transparent' },
@@ -121,7 +158,7 @@ function drawBoxOfficeTrendChart(container, data) {
         type: 'scatter',
         mode: 'lines'
     };
-    
+
     const layout = {
         ...chartConfig.layout,
         title: '票房趨勢與預測',
@@ -135,7 +172,7 @@ function drawBoxOfficeTrendChart(container, data) {
             tickformat: ',.0f'
         }
     };
-    
+
     Plotly.newPlot(container, [historyTrace, confidenceBand, predictionTrace], layout, chartConfig.config);
 }
 

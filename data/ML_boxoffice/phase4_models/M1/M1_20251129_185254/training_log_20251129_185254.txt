@@ -1,0 +1,171 @@
+============================================================
+🚀 模型訓練開始 (M1 - Linear Regression): 2025-11-29 18:52:54
+============================================================
+
+從 config/exclude_movies.csv 讀取排除清單:
+  發現 5 部需要排除的電影
+  排除的 gov_id: [31082, 22894, 23548, 30676, 31748]
+  將排除 5 部電影，共 80 筆資料
+  排除後剩餘資料筆數: 1259
+基本篩選後資料筆數: 860
+
+=== 缺失值檢查 ===
+Series([], dtype: int64)
+
+✅ 已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1\M1_20251129_185254\prepared_data\preprocessed_full.csv
+📍資料數量小計:
+   欄位數: 21
+   資料筆數: 860
+
+=== 📍最終欄位清單 ===
+ 1. gov_id
+ 2. round_idx
+ 3. current_week_active_idx
+ 4. gap_real_week_2to1
+ 5. gap_real_week_1tocurrent
+ 6. boxoffice_week_2
+ 7. boxoffice_week_1
+ 8. audience_week_2
+ 9. audience_week_1
+10. screens_week_2
+11. screens_week_1
+12. open_week1_days
+13. open_week1_boxoffice
+14. open_week1_boxoffice_daily_avg
+15. open_week2_boxoffice
+16. amount
+17. release_year
+18. film_length
+19. is_restricted
+20. release_month_sin
+21. release_month_cos
+
+✅ 已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1\M1_20251129_185254\prepared_data\preprocessed_features.csv
+✅ 已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1\M1_20251129_185254\prepared_data\preprocessed_target.csv
+
+=== 📍資料摘要 ===
+             amount  boxoffice_week_1  current_week_active_idx
+count  8.600000e+02      8.600000e+02               860.000000
+mean   3.121327e+06      4.650099e+06                 9.026744
+std    1.202070e+07      1.701927e+07                 6.978295
+min    2.100000e+02      4.000000e+02                 3.000000
+25%    2.446625e+04      4.544750e+04                 4.000000
+50%    1.273745e+05      2.598440e+05                 7.000000
+75%    8.495432e+05      1.470424e+06                11.000000
+max    1.517199e+08      2.331174e+08                41.000000
+
+特徵矩陣 X: (860, 20)
+目標變數 y: (860,)
+
+==================================================
+🔍 特徵與目標相關性 (Top 10)
+==================================================
+                       feature  correlation
+              boxoffice_week_1     0.971244
+               audience_week_1     0.967195
+              boxoffice_week_2     0.879796
+               audience_week_2     0.874353
+          open_week2_boxoffice     0.528840
+          open_week1_boxoffice     0.482571
+                screens_week_1     0.444845
+open_week1_boxoffice_daily_avg     0.434528
+                screens_week_2     0.379010
+                   film_length     0.291778
+
+📍 訓練集/測試集分割結果
+訓練集: 647 筆 (99 部電影)
+測試集: 213 筆 (25 部電影)
+
+模型訓練特徵數: 19
+
+==================================================
+🔍 訓練集缺失值檢查
+==================================================
+✅ 無缺失值
+
+==================================================
+🔵 模型: Linear Regression
+==================================================
+MAE:  967,188
+RMSE: 2,160,924
+R²:   0.9560
+
+==================================================
+📐 線性回歸模型公式
+==================================================
+
+截距 (Intercept): -45,686,255.55
+
+特徵係數 (Coefficients):
+                       feature    coefficient
+                 is_restricted -335746.743619
+             release_month_sin  170268.296500
+             release_month_cos -165217.597462
+                  release_year   22341.777353
+               open_week1_days   20933.129531
+            gap_real_week_2to1  -15769.408138
+       current_week_active_idx   12850.967317
+      gap_real_week_1tocurrent  -11742.715942
+                screens_week_1    4782.036136
+                screens_week_2    3598.771774
+                   film_length    2491.445786
+               audience_week_2    -360.653099
+               audience_week_1     259.510435
+              boxoffice_week_2       1.064598
+open_week1_boxoffice_daily_avg      -0.129795
+              boxoffice_week_1      -0.044321
+          open_week1_boxoffice       0.010275
+          open_week2_boxoffice       0.009348
+                     round_idx       0.000000
+
+✅ 線性回歸係數已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1\M1_20251129_185254\linear_regression_coefficients.csv
+
+==================================================
+📝 線性回歸公式 (Top 10 重要特徵)
+==================================================
+
+y = -45,686,255.55
+    - 335,746.74 × is_restricted
+    + 170,268.30 × release_month_sin
+    - 165,217.60 × release_month_cos
+    + 22,341.78 × release_year
+    + 20,933.13 × open_week1_days
+    - 15,769.41 × gap_real_week_2to1
+    + 12,850.97 × current_week_active_idx
+    - 11,742.72 × gap_real_week_1tocurrent
+    + 4,782.04 × screens_week_1
+    + 3,598.77 × screens_week_2
+    + ... (其他特徵)
+
+✅ 預測結果圖已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1\M1_20251129_185254\prediction_comparison.png
+
+==================================================
+🔥 特徵相關性熱力圖
+==================================================
+✅ 相關性熱力圖已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1\M1_20251129_185254\correlation_heatmap.png
+✅ 相關性矩陣已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1\M1_20251129_185254\correlation_matrix.csv
+
+==================================================
+⚠️  高度相關的特徵對 (|r| > 0.8)
+==================================================
+                     feature_1                      feature_2  correlation
+              boxoffice_week_1                audience_week_1     0.997697
+              boxoffice_week_2                audience_week_2     0.997530
+          open_week1_boxoffice open_week1_boxoffice_daily_avg     0.990998
+          open_week1_boxoffice           open_week2_boxoffice     0.970830
+open_week1_boxoffice_daily_avg           open_week2_boxoffice     0.968835
+              boxoffice_week_2               boxoffice_week_1     0.945666
+               audience_week_2                audience_week_1     0.945360
+              boxoffice_week_1                audience_week_2     0.943524
+              boxoffice_week_2                audience_week_1     0.943142
+                screens_week_2                 screens_week_1     0.927248
+
+✅ 高相關特徵對已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1\M1_20251129_185254\high_correlation_pairs.csv
+
+✅ 模型已存檔:
+   - C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1\M1_20251129_185254\model_linear_regression.pkl
+✅ 測試集預測結果已存檔: C:\Users\Wen\Desktop\Projects\Cinpos_model\data\ML_boxoffice\phase4_models\M1\M1_20251129_185254\test_predictions.csv
+
+============================================================
+✅ 訓練完成: 2025-11-29 18:53:45
+============================================================

@@ -1136,7 +1136,7 @@ first_week_daily_avg = calculate_first_week_daily_avg(
 
 ### 模型相關
 - [模型規格文件](./spec_model.md) - 票房預測模型的完整說明
-- [資料欄位定義](./model/data_dictionary.md) - 模型特徵定義
+- [資料欄位定義](./model/data_資料欄位定義.md) - 模型特徵定義
 - [共用工具函數](./spec_web_api.md#共用工具函數) - box_office_utils.py 說明
 
 ### 開發規範

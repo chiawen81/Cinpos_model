@@ -44,19 +44,19 @@ uv run python  # 需要互動 python 時
   1. **同步性**：`pipeline_config.yaml`、`run_pipeline.py`、以及被呼叫腳本的 CLI 參數介面需一致。
   2. **測試性**：支援 dry-run / 模擬執行確認輸出路徑與參數。
   3. **靈活性**：所有參數預設為合理值（non-breaking），非必要參數設為 optional。
-- 參考文件位置：`docs/shared/pipeline_modification_guide.md`
+- 參考文件位置：`docs/shared/pipeline_修改指南.md`
 
 ## 5. 文件同步規則（人類文件 vs 機器文件）
 - 每次新增或變動 feature 欄位，**必須同時更新**：
-  1. `docs/for_developer/model/data_dictionary.md` （人類可讀、含範例與計算邏輯）
-  2. `docs/for_developer/model/feature_config.yaml` （機器可讀、供 Agent/自動化工具使用）
+  1. `docs/model/data_資料欄位定義.md` （人類可讀、含範例與計算邏輯）
+  2. `docs/model/ml_特徵配置.yaml` （機器可讀、供 Agent/自動化工具使用）
 - 其他重要 doc：
-  - `docs/for_developer/spec_model.md` - 模型規格主索引
-  - `docs/for_developer/spec_web.md` - 網站業務邏輯主索引
-  - `docs/for_developer/spec_web_api.md` - API 規格主索引
-  - `docs/for_developer/model/pipeline.md` - Pipeline 詳細流程
-  - `docs/for_developer/model/data_processing_rules.md` - 資料處理規則
-- 文件放置原則：所有開發文件放 `docs/for_developer/`；採用「主索引 + 詳細文件」架構；**不要**把規格文件放在 `src/`。
+  - `docs/spec_model.md` - 模型規格主索引
+  - `docs/spec_web.md` - 網站業務邏輯主索引
+  - `docs/spec_web_api.md` - API 規格主索引
+  - `docs/model/data_資料處理流程.md` - Pipeline 詳細流程
+  - `docs/model/data_資料處理規則.md` - 資料處理規則
+- 文件放置原則：所有開發文件放 `docs/`；採用「主索引 + 詳細文件」架構；**不要**把規格文件放在 `src/`。
 
 ## 6. 安全與敏感資訊
 - 絕對不要把 API keys 或敏感檔案提交到 Git。
@@ -74,7 +74,7 @@ docs/set_claude_use_mode/use-api.bat
 > **完整專案結構請參考**: [README.md - 專案結構說明](./README.md#-專案結構說明)
 
 **重點目錄**：
-- **docs/for_developer/** - 開發文件
+- **docs/** - 開發文件
   - `spec_model.md`、`spec_web.md`、`spec_web_api.md` - 主索引文件
   - `model/` - 模型詳細文件（Pipeline、資料字典、特徵工程等）
   - `web/` - 網站詳細文件
@@ -108,5 +108,5 @@ uv sync
 
 ## 10. 建議放置檔名（方便 Agent / 人類辨識）
 - `COPILOT_AGENT_README.md`（放在專案根目錄，供 Copilot/GitHub action/Reviewer 讀取）
-- `docs/for_developer/model/feature_config.yaml`（機器用欄位定義）
-- `docs/for_developer/spec_*.md`（開發規格主索引）
+- `docs/model/ml_特徵配置.yaml`（機器用欄位定義）
+- `docs/spec_*.md`（開發規格主索引）

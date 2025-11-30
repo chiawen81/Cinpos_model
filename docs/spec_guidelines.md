@@ -13,30 +13,34 @@
 本專案採用**「主索引 + 詳細文件」**的兩層架構：
 
 ```
-docs/for_developer/
+docs/
+├── WORK_LOG.md                     # 工作日誌主頁
 ├── spec_model.md                   # 模型規格（主索引）
 ├── spec_web.md                     # 網站業務邏輯規格（主索引）
 ├── spec_web_api.md                 # API 規格（主索引）
 ├── spec_guidelines.md              # 本文件：編寫規範
 │
 ├── model/                          # 模型詳細文件資料夾
-│   ├── pipeline.md
-│   ├── data_dictionary.md
-│   ├── data_processing_rules.md
-│   ├── feature_engineering.md
-│   └── feature_config.yaml
+│   ├── data_資料處理流程.md
+│   ├── data_資料欄位定義.md
+│   ├── data_資料處理規則.md
+│   ├── ml_特徵工程.md
+│   ├── data_資料過濾工具.md
+│   ├── ml_模型優化路線圖.md
+│   └── ml_特徵配置.yaml
 │
 ├── web/                            # 網站詳細文件資料夾
-│   ├── architecture.md
-│   └── download_preprocessed_data_guide.md
+│   ├── web_網站架構說明.md
+│   └── web_預處理資料下載指南.md
 │
 ├── shared/                         # 共用文件資料夾
-│   ├── pipeline_config_usage.md
-│   └── pipeline_modification_guide.md
+│   ├── pipeline_配置使用說明.md
+│   └── pipeline_修改指南.md
 │
 └── work_log/                       # 工作日誌資料夾
-    ├── WORK_LOG_251112.md
-    └── ...
+    ├── WORK_LOG_票房預測模型優化流程.md
+    ├── WORK_LOG_模型優化進度.md
+    └── WORK_LOG_模型評估與模型產出_20251119.md
 ```
 
 ### 層級定義
@@ -117,14 +121,14 @@ docs/for_developer/
 ## 相關文件索引
 
 ### 模型相關
-- [Pipeline 流程](./model/pipeline.md)
-- [資料欄位定義](./model/data_dictionary.md)
+- [Pipeline 流程](./model/data_資料處理流程.md)
+- [資料欄位定義](./model/data_資料欄位定義.md)
 
 ### 網站相關
-- [架構說明](./web/architecture.md)
+- [架構說明](./web/web_網站架構說明.md)
 
 ### 共用文件
-- [Pipeline 配置使用](./shared/pipeline_config_usage.md)
+- [Pipeline 配置使用](./shared/pipeline_配置使用說明.md)
 ```
 
 ### 詳細文件格式
@@ -171,7 +175,7 @@ docs/for_developer/
 
 - **相對路徑**: 使用相對路徑引用同一 docs 內的文件
   ```markdown
-  [Pipeline 流程](./model/pipeline.md)
+  [Pipeline 流程](./model/data_資料處理流程.md)
   [返回主索引](../spec_model.md)
   ```
 

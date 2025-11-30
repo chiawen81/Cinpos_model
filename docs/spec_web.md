@@ -129,7 +129,7 @@ src/web/business/detail/
     └── images/
 ```
 
-**詳細架構說明**: [網站架構](./web/architecture.md)
+**詳細架構說明**: [網站架構](./web/web_網站架構說明.md)
 
 ---
 
@@ -905,8 +905,8 @@ data/ML_boxoffice/phase4_models/M1/[最新版本]/prepared_data/preprocessed_ful
 
 ### 模型相關
 - [模型規格文件](./spec_model.md) - 票房預測模型的完整說明
-- [Pipeline 流程](./model/pipeline.md) - 資料處理 Pipeline
-- [資料欄位定義](./model/data_dictionary.md) - 模型特徵定義
+- [Pipeline 流程](./model/data_資料處理流程.md) - 資料處理 Pipeline
+- [資料欄位定義](./model/data_資料欄位定義.md) - 模型特徵定義
 
 ### API 規格
 - [API 規格文件](./spec_web_api.md) - 所有 API 端點的詳細規格
@@ -916,8 +916,8 @@ data/ML_boxoffice/phase4_models/M1/[最新版本]/prepared_data/preprocessed_ful
   - 預測 API
 
 ### 網站架構
-- [網站架構說明](./web/architecture.md) - 技術架構和專案結構
-- [下載預處理資料指南](./web/download_preprocessed_data_guide.md) - 預處理資料下載說明
+- [網站架構說明](./web/web_網站架構說明.md) - 技術架構和專案結構
+- [下載預處理資料指南](./web/web_預處理資料下載指南.md) - 預處理資料下載說明
 
 ### 開發規範
 - [規格文件編寫規範](./spec_guidelines.md) - 本系列規格文件的編寫規範

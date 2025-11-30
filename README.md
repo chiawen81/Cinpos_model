@@ -39,48 +39,79 @@ Cinpos_model/
 │   ├── ML_recommend/           # ML 用推薦資料集
 │   ├── processed/              # 清理後可直接使用的資料
 │   └── raw/                    # 原始爬蟲輸出（JSON/CSV）
-├── docs/                       # 專案文件
-│   ├── for_developer/          # 開發者文件（採用主索引+詳細文件架構）
-│   │   ├── spec_model.md              # 模型規格主索引
-│   │   ├── spec_web.md                # 網站業務邏輯主索引
-│   │   ├── spec_web_api.md            # API 規格主索引
-│   │   ├── spec_guidelines.md         # 文件編寫規範
-│   │   ├── model/                     # 模型詳細文件
-│   │   │   ├── pipeline.md            # Pipeline 流程
-│   │   │   ├── data_dictionary.md     # 欄位定義（人類可讀）
-│   │   │   ├── feature_config.yaml    # 欄位定義（機器可讀）
-│   │   │   ├── data_processing_rules.md # 資料處理規則
-│   │   │   ├── feature_engineering_refactoring.md # 特徵工程重構
-│   │   │   ├── filter_data_tool.md    # 資料過濾工具
-│   │   │   └── optimization_roadmap.md # 模型優化路線圖
-│   │   ├── web/                       # 網站詳細文件
-│   │   │   ├── architecture.md        # 網站架構說明
-│   │   │   └── download_preprocessed_data_guide.md # 預處理資料下載指南
-│   │   └── shared/                    # 共用文件
-│   │       ├── pipeline_config_usage.md # Pipeline 配置使用說明
-│   │       └── pipeline_modification_guide.md # Pipeline 修改指南
+├── docs/                       # 專案文件（採用主索引+詳細文件架構）
+│   ├── WORK_LOG.md             # 工作日誌主頁
+│   ├── spec_model.md           # 模型規格主索引
+│   ├── spec_web.md             # 網站業務邏輯主索引
+│   ├── spec_web_api.md         # API 規格主索引
+│   ├── spec_guidelines.md      # 文件編寫規範
+│   ├── model/                  # 模型詳細文件
+│   │   ├── data_資料處理流程.md         # Pipeline 流程
+│   │   ├── data_資料欄位定義.md  # 欄位定義（人類可讀）
+│   │   ├── ml_特徵配置.yaml # 欄位定義（機器可讀）
+│   │   ├── data_資料處理規則.md # 資料處理規則
+│   │   ├── ml_特徵工程.md # 特徵工程說明
+│   │   ├── data_資料過濾工具.md # 資料過濾工具
+│   │   └── ml_模型優化路線圖.md # 模型優化路線圖
+│   ├── web/                    # 網站詳細文件
+│   │   ├── web_網站架構說明.md     # 網站架構說明
+│   │   └── web_預處理資料下載指南.md # 預處理資料下載指南
+│   ├── shared/                 # 共用文件
+│   │   ├── pipeline_配置使用說明.md # Pipeline 配置使用說明
+│   │   └── pipeline_修改指南.md # Pipeline 修改指南
+│   ├── work_log/               # 工作日誌資料夾
+│   │   ├── WORK_LOG_票房預測模型優化流程.md
+│   │   ├── WORK_LOG_模型優化進度.md
+│   │   └── WORK_LOG_模型評估與模型產出_20251119.md
 │   └── set_claude_use_mode/    # 切換 Claude Code 使用模式
 ├── logs/                       # 運行與爬蟲日誌
+├── presentation/               # 專案簡報與展示資料
+│   ├── showcase.html           # 專案展示頁面
+│   ├── images/                 # 展示用圖片
+│   │   ├── qrcode/             # QR code 圖片
+│   │   ├── icons/              # Icon 圖片
+│   │   └── comparisons/        # 模型比較圖片
+│   └── models/                 # 展示用模型檔案
 └── src/                        # 程式碼主目錄
     ├── __init__.py
     ├── main.py                 # 執行入口（整合推薦 + 話題模組）
     ├── cinpos_model.egg-info/  # 打包/建置相關資訊
-    ├── common/                 # 共用工具函式
-    │   ├── file_utils.py       # 檔案操作輔助
-    │   ├── path_utils.py       # 路徑與專案根處理
-    │   └── date_utils.py       # 日期時間相關工具
-    ├── fetch_common_data/      # 爬蟲與資料清理流程
-    │   ├── crawler/            # 爬蟲腳本
-    │   │   └── __departure__/  # 舊版爬蟲（保留參考）
-    │   └── data_cleaning/      # 資料清理 / 合併腳本
-    │       ├── __departure__/  # 舊版清理程式
-    │       ├── boxoffice_permovie.py   # 單片票房清理
-    │       ├── boxoffice_weekly.py     # 週票房清理
-    │       ├── omdb.py                 # OMDB/IMDb 資料整理
-    │       └── movieInfo_gov_merge.py  # 與政府資料合併
-    ├── ML_boxoffice/           # 票房預測模型與訓練程式
-    ├── ML_recommend/           # 推薦模型、評分與評估工具
-    └── ML_trend/               # 熱度 / 話題分析相關模型
+    ├── ml/                     # 機器學習模組（統一管理所有 ML 相關功能）
+    │   ├── __init__.py
+    │   ├── boxoffice/          # 票房預測模型與訓練程式
+    │   │   ├── common/         # 票房預測專用工具（特徵工程等）
+    │   │   ├── phase1_flatten/ # 資料攤平處理
+    │   │   ├── phase2_features/# 特徵工程
+    │   │   ├── phase3_prepare/ # 資料準備
+    │   │   ├── phase4_models/  # 模型訓練與評估
+    │   │   └── phase5_apply/   # 模型應用與預測
+    │   ├── recommend/          # 推薦模型、評分與評估工具
+    │   ├── trend/              # 熱度 / 話題分析相關模型
+    │   ├── pipelines/          # 資料爬蟲與清理流程
+    │   │   ├── crawler/        # 爬蟲腳本
+    │   │   │   └── __departure__/  # 舊版爬蟲（保留參考）
+    │   │   └── data_cleaning/  # 資料清理 / 合併腳本
+    │   │       ├── __departure__/  # 舊版清理程式
+    │   │       ├── boxoffice_permovie.py   # 單片票房清理
+    │   │       ├── boxoffice_weekly.py     # 週票房清理
+    │   │       ├── omdb.py                 # OMDB/IMDb 資料整理
+    │   │       └── movieInfo_gov_merge.py  # 與政府資料合併
+    │   └── common/             # ML 共用工具函式
+    │       ├── file_utils.py   # 檔案操作輔助
+    │       ├── path_utils.py   # 路徑與專案根處理
+    │       ├── date_utils.py   # 日期時間相關工具
+    │       ├── mapping_utils.py# 資料映射工具
+    │       └── network_utils.py# 網路請求工具
+    └── web/                    # Web 應用程式
+        └── app/                # Flask 應用 (Application Factory Pattern)
+            ├── app.py          # 應用入口
+            ├── config.py       # 配置檔
+            ├── blueprints/     # 路由模組
+            ├── models/         # 資料模型
+            ├── services/       # 業務邏輯層
+            ├── utils/          # 工具函式
+            ├── templates/      # HTML 模板
+            └── static/         # 靜態資源 (CSS, JS, images)
 ```
 
 <br>
